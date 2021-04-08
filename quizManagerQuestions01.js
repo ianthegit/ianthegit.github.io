@@ -2,7 +2,7 @@ quests[++questIndexBuilder] = { //
 		name : "Test github",
 		hoverover : "Try out github hosting",
 		tags : "2021-4-10",
-		splash : {splashType : splashTypeText , splashText : "Test github" },
+		splash : {splashType : splashTypeText , splashText : "Test github hosting" },
 		questInfo: new Array()
 	};
 
