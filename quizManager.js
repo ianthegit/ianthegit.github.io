@@ -520,6 +520,15 @@ function SQGetQuestArea() {
 function SQGetQuestInfo() {
 	return document.getElementById("questNames").value;
 };
+//
+//window.onload= function () {
+//	SQInit();
+//};
 
-
+//
+//document.onreadystatechange = function () {
+//	  if (document.readyState == "complete") {
+//		  SQInit();
+//	  }
+//};
 
