@@ -11,8 +11,47 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	answer : "Yes"
 }) ;
 
+
 quests[++questIndexBuilder] = { //
-		name : "Phil",
+		name : "Prince",
+		hoverover : "Name the famous prince",
+		tags : "2021-4-10,InnerWheel,surfers,movies",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,	question : "Who is this?",
+	image : "https://www.gannett-cdn.com/media/USATODAY/test/2013/08/05/1375727104000-rhi-ks10p-1308051426_3_4.jpg?width=300&height=400&fit=crop&format=pjpg&auto=webp",
+	answer : "Prince John from Disney's Robin Hood"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,	question : "Who is this?",
+	image : "https://i.guim.co.uk/img/media/209763d826692571e26674b0596df319570adaf9/117_230_1601_2281/master/1601.jpg?width=445&quality=45&auto=format&fit=max&dpr=2&s=f11b0a350113c4ef7e61f4a83bee2762",
+	answerimage : "https://akns-images.eonline.com/eol_images/Entire_Site/2019319/rs_600x600-190419142808-600x600-prince-gj-4-19-19.jpg?fit=around%7C1080:1080&output-quality=90&crop=1080:1080;center,top",
+	answer : "Prince"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,	question : "Who is this (either his name or the film he was in)?",
+	image : "https://static3.srcdn.com/wordpress/wp-content/uploads/2020/04/Prince-Charming-from-Disney-Cinderella.jpg?q=50&fit=crop&w=740&h=370",
+	answer : "Prince Charming (or Prince Henry) from Cinderella"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,	question : "Who is this?",
+	image : "https://static3.srcdn.com/wordpress/wp-content/uploads/2020/04/The-Prince-from-Disney-Snow-White.jpg?q=50&fit=crop&w=740&h=370",
+	answer : "Prince Florian from Snow White and the 7 Dwarfs"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,	question : "Who is this (either his name or the film he was in)?",
+	image : "https://static1.srcdn.com/wordpress/wp-content/uploads/2020/04/Prince-Philip-from-Disney-Sleeping-Beauty.jpg?q=50&fit=crop&w=740&h=370",
+	answer : "Prince Phillip from Sleeping Beauty"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,	question : "Who is this (either his name or the film he was in)?",
+	image : "https://static2.srcdn.com/wordpress/wp-content/uploads/2020/04/Prince-Eric-Wedding-from-Disney-The-Little-Mermaid.jpg?q=50&fit=crop&w=740&h=370",
+	answer : "Prince Eric from the Little Mermaid"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,	question : "Who is this (either his name or the film he was in)?",
+	image : "https://static1.srcdn.com/wordpress/wp-content/uploads/2020/04/Beast-Blue-Suit-from-Disney-Beauty-and-the-Beast.jpg?q=50&fit=crop&w=740&h=370",
+	answer : "Prince Adam from Beauty and the Beast"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,	question : "Who is this (either his name or the film he was in)?",
+	image : "https://static3.srcdn.com/wordpress/wp-content/uploads/2020/04/Aladdin-Prince-Ali-from-Disney-Aladdin.jpg?q=50&fit=crop&w=740&h=370",
+	answer : "'Prince Ali' - after the genie grants his wish to be a Prince"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,	question : "What Prince is this?",
+	image : "https://img.17qq.com/images/hcmhgdmoopv.jpeg",
+	answer : "Princes Street in Edinburgh"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,	question : "Who is this?",
+	image : "https://m.media-amazon.com/images/M/MV5BNjg2NjlmNDItNmFiNi00YjdjLThmOGQtYmYwY2NhYzk5ZTVmXkEyXkFqcGdeQXVyMjc0ODQ0NzM@._V1_.jpg",
+	answer : "Prince Charming"}) ;
+
+quests[++questIndexBuilder] = { //
+		name : "Philippos Andreou",
 		hoverover : "Celebrate the life of Prince Philip",
 		tags : "2021-4-10,InnerWheel,surfers",
 		splash : {splashType : splashTypePictureAndText , splashText : "How much do you know about Prince Philip?" , splashImage : "https://media3.s-nbcnews.com/i/newscms/2021_14/3450776/210217-prince-philip-ew-337p_6a9135d14650a6f366ada2635850c39d.jpg"},
