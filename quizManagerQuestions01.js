@@ -61,7 +61,7 @@ quests[++questIndexBuilder] = { //
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
-	question : "Which of these surnames did Prince Philip never use?  " + Table4ColumnStart + "Saxe-Coburg-Gotha</td><td>Mountbatten-Windsor</td><td>Mountbatten</td><td>Schleswig-Holstein-Sonderburg-Glucksburg" + Table4ColumnEnd,
+	question : "Which one of these surnames did Prince Philip never use?  " + Table4ColumnStart + "Saxe-Coburg-Gotha</td><td>Mountbatten-Windsor</td><td>Mountbatten</td><td>Schleswig-Holstein-Sonderburg-Glucksburg" + Table4ColumnEnd,
 	answer : "Saxe-Coburg-Gotha - although his Great-Grandmother was Alice Saxe-Coburg-Gotha (Queen Victoria's daughter)"	,
 	answerimage : "https://cdn.images.express.co.uk/img/dynamic/106/590x/secondary/Prince-Philip-family-tree-1908624.jpg?r=1618004245639"});
 
@@ -84,7 +84,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	image : "https://i.guim.co.uk/img/media/aa6c3f0e6ecb6dc1dbe3895b552eaa7db6114dd3/168_111_4427_4321/master/4427.jpg?width=445&quality=45&auto=format&fit=max&dpr=2&s=a1d6f2b594c57ee0d0b994b297533595",
 	answer : "22.  4 children, 8 grandchildren and 10 great-grandchildren."}) ;
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
-	question : "Was Prince Philip awarded the Greek War Cross of Valour for his bravery during WII?",
+	question : "Was Prince Philip awarded the Greek War Cross of Valour for his bravery during WWII?",
 	image : "https://www.identifymedals.com/wp-content/uploads/2019/04/Military-Medals_Greece_Cross-of-Valour.jpg",
 	answer : "True, he was."}) ;
 
