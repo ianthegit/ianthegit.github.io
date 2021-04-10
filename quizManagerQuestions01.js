@@ -43,6 +43,9 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,	question : 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,	question : "Who is this (either his name or the film he was in)?",
 	image : "https://static3.srcdn.com/wordpress/wp-content/uploads/2020/04/Aladdin-Prince-Ali-from-Disney-Aladdin.jpg?q=50&fit=crop&w=740&h=370",
 	answer : "'Prince Ali' - after the genie grants his wish to be a Prince"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,	question : "Who is this?",
+	image : "https://upload.wikimedia.org/wikipedia/en/thumb/b/bd/Joffrey_Baratheon-Jack_Gleeson.jpg/220px-Joffrey_Baratheon-Jack_Gleeson.jpg",
+	answer : "Joffrey Baratheon"}) ;
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,	question : "What Prince is this?",
 	image : "https://img.17qq.com/images/hcmhgdmoopv.jpeg",
 	answer : "Princes Street in Edinburgh"}) ;
