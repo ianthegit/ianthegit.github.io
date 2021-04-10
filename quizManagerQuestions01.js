@@ -160,7 +160,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 quests[++questIndexBuilder] = { //
 		name : "Pictionary 11",
 		hoverover : "Pictionary on the Theme of Royals",
-		tags : "2021-4-11,pictionary",
+		tags : "2021-4-10,pictionary",
 		questInfo: new Array()
 	};
 
