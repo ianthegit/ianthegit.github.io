@@ -157,6 +157,35 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 
+quests[++questIndexBuilder] = { //
+		name : "Pictionary 11",
+		hoverover : "Pictionary on the Theme of Royals",
+		tags : "2021-4-10,pictionary",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // Corgi
+	image : "",
+	answerimage : "https://i.pinimg.com/474x/21/d7/3d/21d73d352034aa00ce91e9bd7eec5820.jpg", answer : "Corgi"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // Prince Charles
+	image : "",
+	answerimage : "https://www.hellomagazine.com/imagenes/royalty/2020071393229/royal-family-bored-the-queen-prince-charles-princess-diana/0-446-956/the-queen-and-prince-charles-z.jpg", answer : "Prince Charles"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", //  Prince Harry
+	image : "",
+	answerimage : "https://i.chzbgr.com/full/6552769536/h9C655020/royal-family-photo", answer : "Prince Harry"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // Prince William
+	image : "",
+	answerimage : "https://images.ctfassets.net/iyiurthvosft/featured-img-of-post-224963/f1d0de9d8f08755472c30c2e55c4eb1a/featured-img-of-post-224963.png?fm=jpg&fl=progressive&q=50&w=1200", answer : "Prince William"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // Bearskin Hat
+	image : "",
+	answerimage : "https://www.telegraph.co.uk/content/dam/royal-family/2020/01/08/TELEMMGLPICT000147124792_trans_NvBQzQNjv4BqiQMOxjH954gcPdYrTVLX17epv3SqZNe7yGWgRBSLBtk.jpeg?imwidth=450", answer : "Bearskin Hat"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // Tower of London
+	image : "",
+	answerimage : "https://www.factinate.com/wp-content/uploads/2018/11/Tower-of-London-Internal-1.jpg", answer : "Tower of London"}) ;
+
+
+
+
 /*
   addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 	question : "",
