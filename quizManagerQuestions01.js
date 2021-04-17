@@ -252,7 +252,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
 	answer : "False - The photo is doctored.  The real photo shows a gorilla holding a fake pinup of a soon-to-arrive mate for her",
 	answerimage : "http://i2.cdn.turner.com/cnn/2009/WORLD/europe/08/28/uk.london.zoo.gorilla/art.uk.gorillas.1.zsl.london.zoo.jpg"
 }) ;
-addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	question : "There is a link between the amount of chocolate a country consumes and the number of Nobel Laureates it has produced",
 	image : "https://i.insider.com/5353e29b6da8115322dd4816?width=700&format=jpeg&auto=webp",
 	answer : "True - There was a close, significant linear correlation (r=0.791, P<0.0001) between chocolate consumption per capita and the number of Nobel laureates per 10 million persons in a total of 23 countries.  Whilst causation does not automatically follow correlation, chocolate consumption has been documented to improve cognitive function."
