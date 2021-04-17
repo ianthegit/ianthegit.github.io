@@ -185,6 +185,140 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://www.factinate.com/wp-content/uploads/2018/11/Tower-of-London-Internal-1.jpg", answer : "Tower of London"}) ;
 
 
+quests[++questIndexBuilder] = { //
+		name : "Fake News!",
+		hoverover : "Can you tell the real from the fake?",
+		tags : "2021-4-17,InnerWheel,surfers,saturday",
+		splash : {splashType : splashTypePictureAndText , splashText : "Are the following Real or Fake news?", splashImage : "https://images.axios.com/DH3ame5PQvaOvGKa0WcSVk_2yfc=/0x637:5167x3543/1920x1080/2018/08/30/1535630063840.jpg" },
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "This Camel in Saudi Arabia had lost half it's body when it unfortunately wondered onto a land mine.  After losing the back portion of its body, surgeons worked tirelessly arranging the internal organs into a functioning system. They also created the Camel a new functioning anus. The Camel has made new friends with the local Ostrich family where they have adopted him as one of their own. The Camel is able to regurgitate water directly into the Ostrich's mouth when there is no other water source available.",
+	image : "https://i.redd.it/sgw8lm08hmn01.jpg",
+	answer : "Fake"
+}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Canadian zoo fined after taking bear out for ice-cream",
+	image : "https://i.guim.co.uk/img/media/1e44cbe5d4383c6d3e59984b81b5cb56403e92d3/0_222_6712_4029/master/6712.jpg?width=620&quality=85&auto=format&fit=max&s=bc40e62cd2539420a8997babbb025cda",
+	answer : 'True <br/> <iframe width="620" height="349" src="https://www.youtube.com/embed/ExoCwcA1ggg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>"'
+}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "Police in Germany rescue man chased by baby squirrel",
+	image : "https://i.guim.co.uk/img/media/ea9b0cfb36b0bc11ca0a346f9c66eb0adab95bc0/57_333_4709_2826/master/4709.jpg?width=620&quality=85&auto=format&fit=max&s=14a897c135fd3b923f448364353cae52",
+	answer : "True - Officers sent a patrol car out to investigate and arrived to find the chase still in full flow. But the drama ended suddenly when the squirrel, apparently exhausted by its exertions, lay down abruptly and fell asleep." , 
+	answerimage : "https://i.guim.co.uk/img/media/ae849d0e49b6de18f0849a1cfd70f5ab9b7a6ef4/0_429_2000_1200/master/2000.jpg?width=605&quality=85&auto=format&fit=max&s=678031d8a4b0260a0640bccad7368f1d"
+}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Teenager fined &#163;100 for feeding a chip to a pigeon",
+	image : "https://i.guim.co.uk/img/media/3569b8699ebf1a6550e1d5322abf96fd3767ff6f/0_130_3500_2100/master/3500.jpg?width=620&quality=85&auto=format&fit=max&s=a16d027054508f20b2742eac9bf62587",
+	answer : "True"
+}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Elderly woman trains 65 cats to steal from her neighbours",
+	image : "https://i.guim.co.uk/img/media/aa9f3fc3af369f49771ba736bcc790d247c7c41e/0_78_3103_1861/master/3103.jpg?width=620&quality=85&auto=format&fit=max&s=cae2ac685a1362414bff7e9ba36959bc",
+	answer : "Fake"
+}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Skittles used instead of salt to help clear ice and snow from roads in Canada",
+	image : "https://i.guim.co.uk/img/media/24c50df965057a413b4889841b59914891c14b30/0_0_4288_2848/master/4288.jpg?width=620&quality=85&auto=format&fit=max&s=da07f5e37c2b5e8deaae15838e7de048",
+	answer : "Fake"
+}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "Criminal farts so loudly he gives away his hiding place",
+	image : "https://images.fatherly.com/wp-content/uploads/2020/12/beans-fart.jpg?q=65&enable=upscale&w=600",
+	answerimage : "https://www.snopes.com/tachyon/2019/11/loud-fart-police.jpg",
+	answer : "True"
+}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Nasa is installing internet on the moon",
+	image : "https://i.guim.co.uk/img/media/3ebc4905c2a7d7b352bcbada01ace9d876aba97f/0_159_2372_1424/master/2372.jpg?width=620&quality=85&auto=format&fit=max&s=0491eb5cd4839afc2547dc74aab8b800",
+	answer : "True - it's so lunar robots can be remotely controlled"
+}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "Eight-year-old girl pulls medieval sword from lake",
+	image : "https://i.guim.co.uk/img/media/6897775bbe76a6f1fb3c09a7506de312c98a177d/0_346_5184_3110/master/5184.jpg?width=620&quality=85&auto=format&fit=max&s=b2ffd67c91aea2c79926ac4c937b90e1",
+	answer : "True",
+	answerimage : "https://ichef.bbci.co.uk/news/976/cpsprodpb/15902/production/_103722388_d0c23635-6379-4bf7-bac8-478493c2d1c7.jpg"
+}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "German street covered in chocolate after leak from chocolate factory",
+	image : "https://i.guim.co.uk/img/media/a2bc4e1d47552a71b70ba23e10fb0f3b8e7060f2/0_609_4897_2938/master/4897.jpg?width=620&quality=85&auto=format&fit=max&s=91b27fd8df4f93516b9fc0acb1fd706d",
+	answer : 'True - <iframe width="560" height="315" src="https://www.youtube.com/embed/mT7zLIYbgqA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "A Gorilla has learnt how to knit",
+	image : "https://www.snopes.com/tachyon/2019/04/gorilla-knitting.jpg",
+	answer : "False - The photo is doctored.  The real photo shows a gorilla holding a fake pinup of a soon-to-arrive mate for her",
+	answerimage : "http://i2.cdn.turner.com/cnn/2009/WORLD/europe/08/28/uk.london.zoo.gorilla/art.uk.gorillas.1.zsl.london.zoo.jpg"
+}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "There is a link between the amount of chocolate a country consumes and the number of Nobel Laureates it has produced",
+	image : "https://i.insider.com/5353e29b6da8115322dd4816?width=700&format=jpeg&auto=webp",
+	answer : "True - There was a close, significant linear correlation (r=0.791, P<0.0001) between chocolate consumption per capita and the number of Nobel laureates per 10 million persons in a total of 23 countries.  Whilst causation does not automatically follow correlation, chocolate consumption has been documented to improve cognitive function."
+}) ;
+
+quests[++questIndexBuilder] = { //
+		name : "Guess the movie",
+		hoverover : "Can you guess the real movie name?",
+		tags : "2021-4-17,InnerWheel,surfers,saturday,movies",
+		splash : {splashType : splashTypePictureAndText , splashText : "A word or two in the following movie titles has been replaced by Nora Batty - can you work out the real movie title?", splashImage : "https://i2-prod.mirror.co.uk/incoming/article365827.ece/ALTERNATES/s615b/3A3B5A71-AF8D-A058-05BCA2AD471C8654.jpg" },
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "For Nora Batty's Eyes Only",
+	answerimage : "https://m.media-amazon.com/images/M/MV5BMzQ4YzUzNGQtMDNkYS00NTk5LTkyMDgtNmVkMjg5MjIzNTdmXkEyXkFqcGdeQXVyNDY2MTk1ODk@._V1_UX182_CR0,0,182,268_AL_.jpg",
+	answer : "For Your Eyes Only"  } ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "50 shades of Nora Batty",
+	answerimage : "https://upload.wikimedia.org/wikipedia/en/7/73/Fifty_Shades_of_Grey_poster.jpg",
+	answer : "50 shades of Grey"  } ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "The Hitch-Hiker's Guide to Nora Batty",
+	answerimage : "https://upload.wikimedia.org/wikipedia/en/7/7a/Hitchhikers_guide_to_the_galaxy.jpg",
+	answer : "The Hitch-Hiker's Guide to The Galaxy"  } ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "Tinker, Tailor, Soldier, Nora Batty",
+	answerimage : "https://upload.wikimedia.org/wikipedia/en/thumb/0/09/Tinker_Tailor_Soldier_Spy_%28film%29.png/250px-Tinker_Tailor_Soldier_Spy_%28film%29.png",
+	answer : "Tinker, Tailor, Soldier, Spy"  } ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "Around Nora Batty in Eighty Days",
+	answerimage : "https://upload.wikimedia.org/wikipedia/en/thumb/5/5e/Around_the_World_in_80_Days_%281956_film%29_poster.jpg/220px-Around_the_World_in_80_Days_%281956_film%29_poster.jpg",
+	answer : "Around the World in Eighty Days"  } ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "Harry Potter and the Prisoner of Nora Batty",
+	answerimage : "https://upload.wikimedia.org/wikipedia/en/thumb/b/bc/Prisoner_of_azkaban_UK_poster.jpg/220px-Prisoner_of_azkaban_UK_poster.jpg",
+	answer : "Harry Potter and the Prisoner of Azkaban"  } ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "The Grapes of Nora Batty",
+	answerimage : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/The_Grapes_of_Wrath_%281940_poster%29.jpg/220px-The_Grapes_of_Wrath_%281940_poster%29.jpg",
+	answer : "The Grapes of Wrath"  } ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "The Importance of Being Nora Batty",
+	answerimage : "https://upload.wikimedia.org/wikipedia/en/c/c3/Importance_earnest_dvd.jpg",
+	answer : "The Importance of Being Earnest"  } ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "A Series of Unfortunate Nora Battys",
+	answerimage : "https://upload.wikimedia.org/wikipedia/en/thumb/c/cb/A_Series_Of_Unfortunate_Events_poster.jpg/220px-A_Series_Of_Unfortunate_Events_poster.jpg",
+	answer : "A Series of Unfortunate Events"  } ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "Last of the Nora Batty",
+	answerimage : "https://upload.wikimedia.org/wikipedia/en/thumb/6/65/LOTSW-title2.jpg/250px-LOTSW-title2.jpg",
+	answer : "Last of the Summer Wine"  } ); 
+
+quests[++questIndexBuilder] = { //
+		name : "Played Today",
+		hoverover : "Were these songs played for Philip?",
+		tags : "music,2021-4-17,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/7EH75xtu7h9SkVUOTQVRLR" width="500" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+	answer : ""}) ;
+
+
 
 
 
