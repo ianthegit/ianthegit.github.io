@@ -306,6 +306,50 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 	answerimage : "https://upload.wikimedia.org/wikipedia/en/thumb/6/65/LOTSW-title2.jpg/250px-LOTSW-title2.jpg",
 	answer : "Last of the Summer Wine"  } ); 
 
+
+quests[++questIndexBuilder] = { //
+		name : "ABBAout time",
+		hoverover : "Can you guess the next lyrics to these ABBA songs?",
+		tags : "2021-4-17,InnerWheel,surfers,saturday,movies",
+		splash : {splashType : splashTypePictureAndText , splashText : "Tell me the next lyrics for these ABBA songs, and for another point, can you guess the song titles?", splashImage : "https://live.staticflickr.com/2023/2391007470_4d665db4a6_b.jpg" },
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
+	question : "Where they play the right music, getting in the swing. You've come to?  " + Table4ColumnStart + "shake your thing</td><td>look for a king</td><td>dance and sing</td><td>learn a few things" + Table4ColumnEnd,
+	answer : "look for a king.   Dancing Queen"	, answerimage : "https://www.nme.com/wp-content/uploads/2018/10/may.jpg" });
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
+	question : "Just one look and I can hear a bell ring. One more look and I?  " + Table4ColumnStart + "forget how to sing</td><td>don't know what to bring</td><td>forget everything</td><td>lose everything" + Table4ColumnEnd,
+	answer : "forget everything/lose everything.  Mamma Mia", answerimage : "https://theboar.org/wp-content/uploads/2018/08/mamma-mia-compressed-1.jpg"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
+	question : "We can go dancing. We can go walking. As long as?  " + Table4ColumnStart + "you're beside me</td><td>you are with me</td><td>you act better</td><td>we're together" + Table4ColumnEnd,
+	answer : "we're together.   Take a Chance on Me", answerimage : "https://more-music-videos.icu/images/abba-take-a-chance-on-me_qozrbe4v/96.jpg"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
+	question : "I was defeated, you?  " + Table4ColumnStart + "won the war</td><td>lost it all</td><td>took control</td><td>conquered all" + Table4ColumnEnd,
+	answer : "won the war.   Waterloo", answerimage : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Battle_of_Waterloo_1815.PNG/1200px-Battle_of_Waterloo_1815.PNG"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
+	question : "In my dreams, I have a plan, if I got me a wealthy man. I wouldn't have to work at all. I'd fool around and?  " + Table4ColumnStart + "go to the mall</td><td>buy it all</td><td>make some calls</td><td>have a ball" + Table4ColumnEnd,
+	answer : "have a ball.   Money Money Money", answerimage : "https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F1203497834%2F0x0.jpg"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "They were shining there for you and me, ?  " + Table4ColumnStart + "tremendously</td><td>for liberty</td><td>for everything</td><td>indefinitely" + Table4ColumnEnd,
+	answer : "for liberty.   Fernando"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Walking through an empty house, tears in my eyes. This is where the story ends.?  " + Table4ColumnStart + "At least we tried</td><td>He said no goodbyes</td><td>This is goodbye</td><td>Now I must cry" + Table4ColumnEnd,
+	answer : "This is goodbye.   Knowing Me, Knowing You"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "There's not a soul out there! No one to?  " + Table4ColumnStart + "brush my hair</td><td>never share</td><td>hear my prayer</td><td>fill this chair" + Table4ColumnEnd,
+	answer : "hear my prayer.   Gimme! Gimme! Gimme! (A Man After Midnight) "	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "One of us is crying. One of us is lying in her lonely bed. Staring at the ceiling, wishing?  " + Table4ColumnStart + "he would come back home instead</td><td>she was somewhere else instead</td><td>she had never left his bed</td><td>he would get out of her head" + Table4ColumnEnd,
+	answer : "she was somewhere else instead.   One of Us"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
+	question : "Where are those happy days? They seem so hard to find. I tried to reach for you,?  " + Table4ColumnStart + "but you have lost your mind</td><td>but you have stopped being kind</td><td>but you have closed your mind</td><td>but you ignored the signs" + Table4ColumnEnd,
+	answer : "but you have closed your mind.   SOS"	, answerimage : "https://i1.sndcdn.com/artworks-LzJfO3HAljtEc6eJ-gH5GXg-t500x500.jpg"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
+	question : "There's a shimmer in your eyes, like the feelin' of a thousand butterflies. Please don't talk. Go on, play. Andante, Andante  " + Table4ColumnStart + "And let us run away</td><td>Watch me seize the day</td><td>And let me float away</td><td>Please convince me to stay" + Table4ColumnEnd,
+	answer : "And let me float away.   Andante, Andante", answerimage : "https://i1.wp.com/www.prepbowls.com/wp-content/uploads/2020/06/How-to-cook-pasta-Al-dente-1-CW-1.jpg?fit=1200%2C900&ssl=1"	});
+
+
 quests[++questIndexBuilder] = { //
 		name : "Played Today",
 		hoverover : "Were these songs played for Philip?",
