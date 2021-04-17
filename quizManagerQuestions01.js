@@ -194,7 +194,7 @@ quests[++questIndexBuilder] = { //
 	};
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
-	question : "This Camel in Saudi Arabia had lost half it's body when it unfortunately wondered onto a land mine.  After losing the back portion of its body, surgeons worked tirelessly arranging the internal organs into a functioning system. They also created the Camel a new functioning anus. The Camel has made new friends with the local Ostrich family where they have adopted him as one of their own. The Camel is able to regurgitate water directly into the Ostrich's mouth when there is no other water source available.",
+	question : "This Camel in Saudi Arabia had lost half it's body when it unfortunately wandered onto a land mine.  After losing the back portion of its body, surgeons worked tirelessly arranging the internal organs into a functioning system. They also created the Camel a new functioning anus. The Camel has made new friends with the local Ostrich family where they have adopted him as one of their own. The Camel is able to regurgitate water directly into the Ostrich's mouth when there is no other water source available.",
 	image : "https://i.redd.it/sgw8lm08hmn01.jpg",
 	answer : "Fake"
 }) ;
