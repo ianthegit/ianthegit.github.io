@@ -85,6 +85,7 @@ function tagsFromURI() {
 	if (!tagStringFromURI) {
 		tagStringFromURI = defaultTag;
 	}
+	console.log(tagStringFromURI);
 	//tagStringFromURI;
 	return tagStringFromURI.split(",");
 }
