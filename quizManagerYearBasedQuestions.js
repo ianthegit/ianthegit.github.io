@@ -1694,13 +1694,13 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,	question : 
 	answer : "Emile Heskey" }) ;
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,	question : "Who is this?",
 	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Myleene_Klass_--_Greatest_Britons.jpg/220px-Myleene_Klass_--_Greatest_Britons.jpg",
-	answer : "Myleene Klass" }) ;
+	answer : "Myleene Klass", answerSpeak : "Myleene Klass, phwoar" }) ;
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,	question : "Who is this?",
 	image : "https://cdn.flickeringmyth.com/wp-content/uploads/2020/06/corden-cats1-600x375.jpg",
 	answer : "James Corden" }) ;
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,	question : "Who is this?",
 	image : "https://upload.wikimedia.org/wikipedia/en/2/2f/Nancy_Spungen.jpg",
-	answer : "Nancy Spungen (Sid Vicious's girlfriend)" }) ;
+	answer : "Nancy Spungen (Sid Vicious's girlfriend)" , answerSpeak : "Nancy Spungen"}) ;
 
 
 quests[++questIndexBuilder] = {
