@@ -85,7 +85,6 @@ function tagsFromURI() {
 	if (!tagStringFromURI) {
 		tagStringFromURI = defaultTag;
 	}
-	console.log(tagStringFromURI);
 	//tagStringFromURI;
 	return tagStringFromURI.split(",");
 }
@@ -341,7 +340,13 @@ function SQAnswer(questionType) {
 		setTimeout(function(){sqInitPicture(answerimage);},3000 )
 	}
 	if (questStageData[currQuestStageIndex].hasOwnProperty('answer')) {
-		setTimeout(SQSpeakAnswer, 3000);
+		if (questStageData[currQuestStageIndex].hasOwnProperty('answerSpeak')) {
+			speakText=questStageData[currQuestStageIndex].answerSpeak;
+			setTimeout(SQSpeakAnswer, 3000);
+		} else {
+			speakText=fullAnswer;
+			setTimeout(SQSpeakAnswer, 3000);
+		}
 		setTimeout(SQWriteAnswer, 3000);
 	}
 	currQuestStageIndex++
@@ -351,9 +356,9 @@ function SQSpeakAnswer(){
 	if (!'speechSynthesis' in window) {
 		return;
 	}
-	if (!fullAnswer.includes("iframe")) {
+	if (!speakText.includes("iframe")) {
 		var msg = new SpeechSynthesisUtterance();
-		msg.text = fullAnswer;
+		msg.text = speakText;
 		window.speechSynthesis.speak(msg);
 	}
 }
@@ -521,6 +526,15 @@ function SQGetQuestArea() {
 function SQGetQuestInfo() {
 	return document.getElementById("questNames").value;
 };
+//
+//window.onload= function () {
+//	SQInit();
+//};
 
-
+//
+//document.onreadystatechange = function () {
+//	  if (document.readyState == "complete") {
+//		  SQInit();
+//	  }
+//};
 
