@@ -1563,6 +1563,156 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 		answer : "1976 number 1s"
 	});
 
+quests[++questIndexBuilder] = {
+		name : "1978",
+		hoverover : "How much do you know about 1978?",
+		tags : "2021-4-24,saturday,1978,year,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "who said that many Britons fear being 'swamped by people with a different culture'?"+ Table4ColumnStart + "The Australian PM</td><td>Margaret Thatcher</td><td>Enoch Powell</td><td>Lord Baden Powell" + Table4ColumnEnd,
+	answer : "Margaret Thatcher"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "who becomes the first female newsreader on ITN's News At 10?"+ Table4ColumnStart + "Angela Ripon</td><td>Anna Ford</td><td>Selina Scott</td><td>Moira Stewart" + Table4ColumnEnd,
+	answer : "Anna Ford", answerimage : "https://upload.wikimedia.org/wikipedia/en/7/7b/Anna_Ford_%28British_television_news_anchor%29_cropped.jpg"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : " The Hitchhiker's Guide to the Galaxy was first broadcast by BBC Radio 4.  Who wrote it?"+ Table4ColumnStart + "Adam Douglas</td><td>Nicholas Adams</td><td>Douglas Adams</td><td>Douglas Nichols" + Table4ColumnEnd,
+	answer : "Douglas Adams", answerimage : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Douglas_adams_portrait_cropped.jpg/220px-Douglas_adams_portrait_cropped.jpg"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "what was first legally unleashed at Fairlight Glen in Covehurst Bay near Hastings?"+ Table4ColumnStart + "Wild Hogs</td><td>Wyld Stallions</td><td>Wild Dogs</td><td>Boobies" + Table4ColumnEnd,
+	answer : "Boobies", answerSpeak : "Boobies.  It was Britains first naturist beach"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "Ipswich Town win the FA Cup for the first time by beating Arsenal 1-0 in the Wembley final.  Who was their manager?",
+	answer : "Bobby Robson"	, answerimage : "https://ichef.bbci.co.uk/news/976/cpsprodpb/04AA/production/_101049110_gettyimages-73310303.jpg"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "who becomes the first man in the history of cricket to score a century and take eight wickets in one innings of a Test match?"+ Table4ColumnStart + "Ian Botham</td><td>Geoffrey Boycott</td><td>Mike Gatting</td><td>Mike Batting" + Table4ColumnEnd,
+	answer : "Ian Botham", answerimage : "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2013/11/26/1385479393035/Ian-Botham-in-1985-006.jpg?width=605&quality=85&auto=format&fit=max&s=115a0c14ec0f47b01dfe1b5dc8447d19"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "who becomes the world's first human born from in vitro fertilisation, in Oldham?"+ Table4ColumnStart + "Louise Green</td><td>Louise Brown</td><td>Louise Black</td><td>Louise Mauve" + Table4ColumnEnd,
+	answer : "Louise Brown"	, answerimage : "https://cdn.babyology.com.au/wp-content/uploads/2019/03/louisebrown.jpg"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "how did U.S. Army Sergeant Walter Robinson cross the English Channel in 11 hours 30 minutes?"+ Table4ColumnStart + "Walking</td><td>Swimming</td><td>Pedalo</td><td>Cycling" + Table4ColumnEnd,
+	answer : 'Walked - using homemade water shoes </BR> <iframe width="560" height="315" src="https://www.youtube.com/embed/TQiParKK-8M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "Bulgarian dissident Georgi Markov is stabbed with what as he walks across Waterloo Bridge, London?",
+	answer : "A poison-tipped umbrella."	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "a ceremony marks the completion of Liverpool Cathedral, for which the foundation stone was laid when?"+ Table4ColumnStart + "1878</td><td>1904</td><td>1950</td><td>1976" + Table4ColumnEnd,
+	answer : "1904"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "which 22 year old became England's first black international footballer?"+ Table4ColumnStart + "Laurie Cunningham</td><td>Viv Anderson</td><td>Cyrille Regis</td><td>John Barnes" + Table4ColumnEnd,
+	answer : "Viv Anderson"	, answerimage : "https://www.telegraph.co.uk/content/dam/money/Spark/Liontrust/viv-anderson-forest-xlarge.jpg"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "not a lot happenned, but at some time in 1978 what was erected in a field in Milton Keynes?",
+	answer : "Concrete Cows", answerimage : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/DCFC0023.jpg/220px-DCFC0023.jpg"	});
+
+
+quests[++questIndexBuilder] = {
+		name : "1978 Movies",
+		hoverover : "1978 Movies",
+		tags : "saturday,1978,2021-4-24,movies,InnerWheel,surfers",
+		questInfo: new Array() };
+
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question : "What movie is this?",  // Superman
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3fvupC1P9JASnQkR_X5tPhD6nDOWfOkNwqAqnh9ADw2UVIvH00YM-y-bTkE82U3hVxmLzEeFuNDYnk_OQwFDEpPG5OUqSbvA2V4aBewM30zZxYIXXlRvBFW26rv22pBzGNJaddTucIikoqk-n_xXMb9mA=w360-h540-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3czYEYSSvFiHTe-enMNmcn7eFISWCMUG9RhTlhF5NRZ9jwS6tUNU8EL03L9ZJUoFSBV5UjOo22LPrz3KIpAHU8KZyaf6y6RftKBWYu2bqeETxucVem--_xIGt9EEwkEs5Egbjqpjazkqp4_6gPBcpLh3A=w360-h540-no?authuser=0"	}); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question : "What movie is this?",  // Piranha
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3dw7wTqkJTBgccNudg2M26JdpiQgiYBrrdNSqa6nQ--hontXXlI5wKffZpl4BukTEHTt4JNFaBQPADGSQPUPiH1ascOK-NeyiXDBPAMvTlnpdqWTQrk6Qo7bh-GtjxxLwuUI4avz84vgICWzKkqD0xCBA=w360-h540-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3dj4jIvRORfGLuL8Rco9XUVpqWUojvOoBpr6SwW7OF83KMTbneBuRnZefo-CkD8eQ-ZgARjd0NawGZwYmx-1RGDX365vQVs3GzKdlFX5FFjRuxwsAqnR2WwNnIv8mZ6gKf3nXpMQjpdEssUJgSZDTFzaw=w360-h540-no?authuser=0"	}); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question : "What movie is this?",  // Grease
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3cqkXpXueFIQNVtDtqj0dBRPFbK2GoehEP44IvvPgtKAdWKfS-Q9t-j-1B1AuSAsoAlWt_iRer3rrPaWhbYJTKu0x1upuOTKhw0kGQJoCHi5mw36YTbFUJBfCS3KbfsRoTGEw_y4xDujzmFDONVKy1gQg=w360-h540-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3c_Cab1nk-0Ifd3b6nhjLT2gZW9fNpRoNaUIX78iMzLXQmpZenBgl8TpCTPrqeoii7mSSp12uVLvFibAUU2HlSLw5VERHx_fQEMLcNLiEY3oMOOcc7cFiqgnEV1DKHbDGwCa-yXsY_ObulmcuTdLk_pvg=w360-h540-no?authuser=0"	}); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question : "What movie is this?",  // LOTR
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3cMHvMCdi-vA4NulyZ8qcQtmPpQQHIqGj1-VbvGgnwNJa9oKHFefrXyQLuYkMbcHoRa6lbi4m7e-hf3iTJVOxlisoySrAyiKjiEO7Cw8D1Th7x7qU9yJmwv7NNMQ2EpkOVYCh9lsWM_uzhhCGvgJVZHSQ=w360-h540-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3eDMn-Ka-gIINg3CKM2h-m1cITyvaQO5SCeZ3j7MO3OTiB0wrmt8zWO96OgZSwhIcErjulo7YtXrZmrR9TZR2q0V6wMJ9Dv-fVH5L1nj_vP2OVApk7Bn6H-Wmm46scOKXTvZcG21yIew8yj8xceOgsQeQ=w360-h540-no?authuser=0"	}); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question : "What movie is this?",  // Jaws 2
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3fiuXJZ-zH6jZEqFcmG2BeY5E2yAkYfNnVuwDNQE90RF42Q4gTz3M6n_0Zr_QX5Y0Av6jYIA4Ea3x4drcdoYYJg97EdB1IZPd8jMX_AyhYE9ZotljZcCCrITMLDDqSvitAS6FC6kqyA-qZiD8nB33X-OQ=w360-h540-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3eMAYnCGEQ_fWvO_Kv1rx4MPMyd0kUWUVjUm9kpZXvsWpaZgjC_YACoXgP-iDvrlhIgmW4fGyMl2rKWVRV3t3RCWJziS8lB33oVhEqbqjTiKrlyUjNvRdhJDw0o1idY6h9pzj5tvwWn-z8GPJZekNcVAQ=w360-h540-no?authuser=0"	}); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question : "What movie is this?",  // Death Nile
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3c7f8iVaAuYJKS0Z2U_TKIb7evzx_rgaz_QG9XmAj31vkOQMyom0GDjKPtBQl_5LWWA8FxQyQbUCfhA8o68JZXbuz9b9ee1TpytJXSYWJ4E9sIufDLDro_5el0XAi1-Qg5F_0XEZ-fTDph74JYfbswnCg=w360-h540-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3e8m0IHCkukb8aWP01AoriwacQpQHnDPgjJUVVu4mCHq9e-R0u23CIwZjsDNReKtzF1ZM--lfdk0Fw7NrSI1zPu5WCgT1Q3DYDd38K3TPSJi-u0iTf3dmEstn88BIvBQXSklTOFTLX_nI9wSI65Me-EQQ=w360-h540-no?authuser=0"	}); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question : "What movie is this?",  // Animal House
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3d9-xJ7XeswKjpM980w3meDGI8vNTzt-8gRKcWiSpbiFxrWWebmHbzf1kQH2tAj2G9OnrkTSgK3mNp6HAIDMYr0z7C4ZJWoQCM1CmS4BpRv_2pIZ6Uohpne23-N78Ot9F1xZCP-K7UghtUmDq6atLRUpQ=w360-h540-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3eLBSObrd-VQcLvajpLU20Gx_KIHmloSkzM1jZwdrUkxOhpMobhEMgRkYcDkaHCX61qtweLQemVvf8OSrcMl-dtP7Wg7HQMr9rIN5XLruzxfgR_SfGvXpeC2CbhGA3A2CilmPmCSnRbKPtZyV0Kh8uGgQ=w360-h540-no?authuser=0"	}); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question : "What movie is this?",  // Convoy
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3ec8VlUpidLanSImiAhlVJV_ffgOFYDs5uLbEuQ4fPyysS_UgxL68QiwzqHEQ4xOoDLjsw_XSqeKYTjLGYFLWQh8GE_kcr1usIkFRJjNjf-yVgyXwItdzUZ5S3m6YfW3p3hMAhO19jvkqgM5DcXyq_qMA=w360-h540-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3ddE-TTZ10_ubBJwa5M2Jo8JC4zj70_8x7EwX_znJgbf_thRgZMHCEdKvpnH194JIx-lDra2CIStBFF1bDLAdg8EMeenD59Ue_oe6pam2XEsr4TjR_R5PEURWC74274DR4Nf0KJwxjL38i_Tqnh56I4qQ=w360-h540-no?authuser=0"	}); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question : "What movie is this?",  // Every which way
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3e2pyaITPFP4d0WwVQZRhcvt9F4DZHQIt3ws6mE3LaKECwlY2YD7oaOiYkHP04IIqH3NA3fRbmDkHt5xTvodB7uShrKAzkaPdhscY604635GoAwKD9kDNlK7pdZLmvc1VfUoiRpnLtIxV8TUK9PGTJnIw=w360-h540-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3dTBq-HDtdbteCsPtblCYfOZNYEXm5YKvmcA5PEVSDIGkLmEcR0Fd7CkKFfHn2y7W8dnHtqTGm8A3Mt7eioCOxw70gMC5GTJDW_qv0eldm5RWh0RCFRIB-CNdneSCNaIGAY1165m9H2KZ57GRrVFUy4Wg=w360-h540-no?authuser=0"	}); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question : "What movie is this?",  // Watership
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3eCJy636N1-pBqwsl3aZegIRH_zyErDURcKnfu9afvtoYbRIqyODO8C1lCR9y2HthATUG6rKZWHAwFDKpi-JoT2vkMa6CCsxrXZmpMYMw7RwSEDb70vJmLVDE581vaCw0-8ZYaAWt1nd0oBEMn7IfVNIw=w360-h540-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3cS59hLrmR3SBN1tzLDCHBslXW5uxhpYV_2TRZ45Co35MrJHN63QLnKwIXeKLyZKOBb_MYzNnARGN-DIw0jAL4MRhVef9aA6k45uP-ZH85T3nNq9RcRfcN9i9vJl5bMRfkXvQPuBYUc-RhDrrnECM6AGg=w360-h540-no?authuser=0"	}); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question : "What movie is this?",  // Killer Toms
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3evPHTY5Wn_j2hzX4fECgxZl3rpqSyIUUY4oypvEzmgLBWFpM_sMyjhh_obbj8gL9_hKXuOvDqd3L2diszjsZAOzgBIoOR4A6krIJ14iqKAkWhr-M4eq0um4Csz0pup23XjEBAs-1DXoDuG81-auNYq0g=w360-h540-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3e3Kx_Ru0Cke1Hb6qh1RGYt6Djcpe8tqanVOFbNd9eg36zFj5CoXHyYXmCFKmMkjbZwjtbVbqWjZ4Ic9BShLLjN3KG1m0uQ7VbY1jQ-KKpWmHhz_8NXVVmJ4s77YqJxmuflwOQbDkw7W-ARJaDvdug--A=w360-h540-no?authuser=0"	}); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question : "What movie is this?",  // Coma
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3dR7J0F8ioEgC_PrNz1xDnM23diAvUOPozEa8mMEPEgxwSRzfEQMZdgyZ0YHcluNVCmJrTdrfAv_Iwt7dvTrLn1G2TImqQ3BHvDL8mqWbMwOovWNl4d2VVbDfclvsgopDALErF9Jqh47LJl_d-QNCOKmw=w360-h540-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3eAqsJB4f7JFfMrXW7paLycZuALA3j2malpH1eYCx793zrp-jwf1fQw7MHqBcBVg8TMXS-B9UDq-j6_boN9U0dI_srw8WY4tnV7NeloNScLcqjbLxIgEtEl2rgdGAU1zExcFKYVAO4qBnhGiCmsB0zAvQ=w360-h540-no?authuser=0"	}); 
+
+
+
+quests[++questIndexBuilder] = {
+		name : "1978 Ins and Outs",
+		hoverover : "Who died, who was born",
+		tags : "saturday,2021-4-24,1978,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,	question : "Who is this?",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Duncan_James_2011_cropped.jpg/100px-Duncan_James_2011_cropped.jpg",
+	answer : "Duncan James" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,	question : "Who is this?",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/James_Franco_4%2C_2013.jpg/100px-James_Franco_4%2C_2013.jpg",
+	answer : "James Franco" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,	question : "Who is this?",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Frank_Lampard_2017.jpg/100px-Frank_Lampard_2017.jpg",
+	answer : "Frank Lampard" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,	question : "Who is this?",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Nicole_Scherzinger_2012.jpg/100px-Nicole_Scherzinger_2012.jpg",
+	answer : "Nicole Scherzinger", answerSpeak : "Nicole Scherzinger, I bet you thought I couldn't pronounce her name" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,	question : "Who is this?",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Andy_Samberg.png/100px-Andy_Samberg.png",
+	answer : "Andy Samburg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,	question : "Who is this?",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Kobe_Bryant_2015_%28cropped%29.jpg/100px-Kobe_Bryant_2015_%28cropped%29.jpg",
+	answer : "Kobe Bryant" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,	question : "Who is this?",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Rachel_McAdams%2C_2016_%28cropped%29.jpg/100px-Rachel_McAdams%2C_2016_%28cropped%29.jpg",
+	answer : "Rachel McAdams" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,	question : "Who is this?",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/John_Legend_by_Sachyn_Mital.jpg/100px-John_Legend_by_Sachyn_Mital.jpg",
+	answer : "John Legend" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,	question : "Who is this?",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Keith_Moon_4_-_The_Who_-_1975-2.jpg/100px-Keith_Moon_4_-_The_Who_-_1975-2.jpg",
+	answer : "Keith Moon" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,	question : "Who is this?",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Ioannes_Paulus_I%2C_at_the_window%2C_1978_%28retouched%29_%28cropped%29.tif/lossy-page1-100px-Ioannes_Paulus_I%2C_at_the_window%2C_1978_%28retouched%29_%28cropped%29.tif.jpg",
+	answer : "Pope John Paul I" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,	question : "Who is this?",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Emile_Heskey_as_a_player_of_England_national_football_team.jpg/220px-Emile_Heskey_as_a_player_of_England_national_football_team.jpg",
+	answer : "Emile Heskey" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,	question : "Who is this?",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Myleene_Klass_--_Greatest_Britons.jpg/220px-Myleene_Klass_--_Greatest_Britons.jpg",
+	answer : "Myleene Klass" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,	question : "Who is this?",
+	image : "https://cdn.flickeringmyth.com/wp-content/uploads/2020/06/corden-cats1-600x375.jpg",
+	answer : "James Corden" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,	question : "Who is this?",
+	image : "https://upload.wikimedia.org/wikipedia/en/2/2f/Nancy_Spungen.jpg",
+	answer : "Nancy Spungen (Sid Vicious's girlfriend)" }) ;
+
+
+quests[++questIndexBuilder] = {
+		name : "1978 #1s",
+		hoverover : "What was number 1 over the year",
+		tags : "2021-4-24,saturday,1978,music",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "Name these #1s from 1978",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/2bNdOx9iReuscVvHgaToSU" width="500" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+}) ;
 
 quests[++questIndexBuilder] = {//quests[90] = {
 		name : "1980",
@@ -2669,3 +2819,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/4jt62cbsGdzPAtvyrrFvko" width="500" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
 	answer : "Walter Matthau, Mickey Rooney, Maureen O'Hara, Yul Brynner, Ravi Shankar, Charlie Parker, Monty Python (Terry Jones), Kenny Rogers, Bill Withers, Honor Blackman, Little Richard, Vera Lynn, Diana Rigg, Van Halen (Eddie Van Halen) "
 }) ;
+
+
+
+
