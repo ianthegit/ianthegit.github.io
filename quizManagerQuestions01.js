@@ -364,6 +364,141 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 
+quests[++questIndexBuilder] = { //
+		name : "You ll like this",
+		hoverover : "Not a lot",
+		tags : "2021-5-1,InnerWheel,surfers,saturday",
+		splash : {splashType : splashTypeText , splashText : "Tell me who uses (used) the following catchphrases" },
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "Jesus, Mary and Joseph and the wee donkey"+ Table4ColumnStart + "Carmichael</td><td>Ted Hastings</td><td>Steve Arnott</td><td>Joey" + Table4ColumnEnd,
+	answer : 'Ted Hastings   </BR>  <iframe width="560" height="315" src="https://www.youtube.com/embed/Oh8ihcTI77E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'} );
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "To me, to you"+ Table4ColumnStart + "Chris Whitty</td><td>The Chuckle Brothers</td><td>The Muppets</td><td>Joey" + Table4ColumnEnd,
+	answer : 'The Chuckle Brothers   </BR> <iframe width="560" height="315" src="https://www.youtube.com/embed/qGZU61k1ibw?start=7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'} );
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "I don't BELIEVE it"+ Table4ColumnStart + "Angus Deighton</td><td>Victor Meldrew</td><td>Prof Brian Cox</td><td>Joey" + Table4ColumnEnd,
+	answer : 'Victor Meldrew   </BR> <iframe width="560" height="315" src="https://www.youtube.com/embed/FVAX166QwrU?start=7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'} );
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "Lovely Jubbly!"+ Table4ColumnStart + "Uncle Albert</td><td>Trigger</td><td>Del-boy</td><td>Joey" + Table4ColumnEnd,
+	answer : 'Del-boy   </BR> <iframe width="560" height="315" src="https://www.youtube.com/embed/63rcdLeXiU8?start=31" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' } );
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "No, I am your father"+ Table4ColumnStart + "The postman</td><td>Luke Skywalker</td><td>Darth Vader</td><td>Joey" + Table4ColumnEnd, answerSpeak :"Nooooo",
+	answer : 'Darth Vader   </BR> <iframe width="560" height="315" src="https://www.youtube.com/embed/_lOT2p_FCvA?start=66" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', answerSpeak : "NOOOOOOOOOOOO"} );
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "Here's Our Graham With A Quick Recap"+ Table4ColumnStart + "Larry Grayson</td><td>Cilla Black</td><td>Alan Carr</td><td>Joey" + Table4ColumnEnd,
+	answer : 'Cilla Black', answerSpeak : "Our Cilla"} );
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "Such Fun!"+ Table4ColumnStart + "Miranda's Mum</td><td>Miranda</td><td>Stevie</td><td>Joey" + Table4ColumnEnd,
+	answer : 'Miranda and her Mum  '} );
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "I have a cunning plan"+ Table4ColumnStart + "Blackadder</td><td>Prof Brian Cox</td><td>Baldrick</td><td>Joey" + Table4ColumnEnd,
+	answer : 'Baldrick    '} );
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "Thank you very much, Jerry!"+ Table4ColumnStart + "Tom</td><td>Margo</td><td>Barbara</td><td>Joey" + Table4ColumnEnd,
+	answer : 'Margo   </BR> <iframe width="560" height="315" src="https://www.youtube.com/embed/ORvn-8buCA4?start=118" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'} );
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "How YOU doin?" + Table4ColumnStart + "Monica</td><td>Ross</td><td>Howard</td><td>Joey" + Table4ColumnEnd,
+	answer : 'Joey   </BR> <iframe width="560" height="315" src="https://www.youtube.com/embed/VZEI3K5q6iM?start=118" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', answerSpeak : "Joey.   How YOU doin?"} );
+
+quests[++questIndexBuilder] = { //
+		name : "You old fossil",
+		hoverover : "Fossil quiz",
+		splash : {splashType : splashTypePictureAndText  , splashText : "True or False quiz - based around my unfortunate fossil hunting experience this week", 
+			splashImage : "https://lh3.googleusercontent.com/RFHUnbGEEPX3O2X6XpcCRYn0Y2t62eRoAmvw6f0q1PBcXV0DOQndZz4D22Ur2hdxpiNh7WWaCRxV76WVORbHRTSdgWEc7ibPQA0Jr_jtEv6lgnhD8Qbzdqvq7gCSms8DMwXu5JUSs-k4fUAQ9M_U4VTKI5oZsOZ5cZOwdF_vMRde8-rbhM3OfobLvLERBArMKXy8zRA-50w1qQ7gFKfgZpRwRakhPs7ZhxBW2Y2KFiGW-gTskwddM1cjC3ao5K4wgNlk40OYYpbhEfS-ehpnvBXeUzqW-oteJgW0zLM_PkrnxFQMOehKJe4VM-d42ErLoBdrkdgbwICpPFns0WFWEsAkUheCIWlw3psjUIT4E9vsuhNbYsUOwhXDi1AAmljmj9n2iBM0Y-emngC01erQ-6OzO1e_6l8ZoPAYJ1Ixog0GqEBWUlBKWUUYLINMWjOEinUH6iKpT_DVj7ZHhN2S-Zm80Eo7tQKozYQrPvjwoSPtFCMOHtEH1UxpgLTolDUvwoj94vJDnRaODNNhLPDszjyLJRu4IwY8OydebU8NtMgUnkQYM5UH5dpUfXla29hX653ai7ptyXApUNj3y2lsbJd3spNB-BSeElCAkU3zZnjY5tJOhtYmMW7PGb3kfWQyXUWofaSF8WgqkvAyMSihrXjM-2zAApAJf0vDGJT7Th2RH0icWsRurmbNaRUYwGVl2JBmWK9f6C-qElVU01Lwdn66Wg=w1548-h871-no?authuser=0" },
+		tags : "2021-5-1,InnerWheel,surfers,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "Not all fossils were once living things",
+	answer : "True - some fossils are of footprints for example", answerSpeak : "True"} );
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "Most animal fossils include all the body parts",
+	answer : "False - soft tissue usually rots before a fossil is formed", answerSpeak : "False"} );
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "Scientists who study fossils are called archaeologists",
+	answer : "False - they are palaeontologists", answerSpeak : "False"} );
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "All fossils are dug up from underground",
+	answer : "False - most are found when rocks are worn away by wind or water", answerSpeak : "False"} );
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "Most fossils form in igneous (volcanic) rock",
+	answer : "False - most are in sedimentary rock", answerSpeak : "False"} );
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "Some modern animals are 'Living Fossils'",
+	answer : "True - animals which have not changed in millions of years are known as Living Fossils", answerSpeak : "True"} );
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "Fossils have to be cut open to study the insides",
+	answer : "False - modern methods like x-rays can be used ", answerSpeak : "False"} );
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "Fossils in ancient China were thought to be dragon bones",
+	answer : "True - and they were often ground up to be used as medicine", answerSpeak : "True"} );
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "Stony fossils usually take millions of years to form",
+	answer : "True - and the oldest found so far are more than 3 Billion years old", answerSpeak : "True"} );
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "Most dinosaur skeletons you see in museums are not real",
+	answer : "True - most are models, with the originals kept safely locked away, to stop them coming to life at night and terrorising the townfolk", answerSpeak : "True"} );
+
+quests[++questIndexBuilder] = { //
+		name : "Money Moves",
+		hoverover : "Do you know the movie about money?",
+		tags : "2021-5-1,InnerWheel,surfers,saturday,movies",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What movie is this", //Wolf
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3c5thqu5xBwZ7kQt7A5gclmyYq1QPSW3cnTaoFZ-pwt1swxKlONuE5YzhzjqmSZ2as0sfq8XIJqtRJcDA24qziGnCxiVI9mSEd2WuleIISEr9lhRyl78x6kusgTy_wixhKwknxO9c3-iPdxvbHN_ru5DQ=w140-h209-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3e1Gt8BJkR-IgiL38cvJyxd9A3Irn-o1rrRWc8T03xyp8zYMXLyQ5f23j0NIgGqmmLm_9KU7KQQB3sQYUkL5O-Bb6mDsC08RKWkzezB_j09pY4UeOEcyPGf8jsSww-H2zRbe2FRuw8nOzpwMtfy4iiaPQ=w140-h209-no?authuser=0"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What movie is this", // Wall St
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3cWcGYCFSVz6rMvZuz_1gbqCKWCoC4OPAI1Mr3Jl1gXLNIu19gunE9ymNdx-JVSOgx8LkG1PK53klevrXanE0UrYoM_wStKim_9w1252IHSs2q8DS6Kp6TyNV8Z7qt62muRkiYVj06rn2Y6QSS67OVkTw=w140-h209-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3ePIv0tkYWzEcowoWIyDTFYxrlzKSrXDM-C2S8sTU2Zumuyzf-OQhg0B1pY1kaexr9A2xdV_ALIfO6hOjuy9CN1GHgOcHz6XzUvOM08uCuLejmIgWdJ0HCa2pNtkHZtMgv1NgLpkebFRIcvRsnYp2BUYA=w140-h209-no?authuser=0"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What movie is this", // Oceans 11
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3e5M4qN7kPcz3PCoU23-QCLV_uIT9hyiCcE4KbQRlkSkigXjVvMxdT66MtUJgpHNvSFUQvFhjsbCli7wHvDIsa7EkNT9z5bYnvqhfk-5700_5avMZb1CpNYRzsNB4Yr2R4Nm1B65LggbwxYaqc4qMA38g=w140-h209-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3fQefSQYePSvG_0-KyJyqFi_B0Q_ZiyzBo_PMkM6OScmmxdTLgc3DfPrSlcLZJfPjDjJ-lmKNEPxxIDRhA8owR6N0woE2ciQhaFZVsfe2VOngrilHnokT3WKfvvtoGLPiTuxjgn0jYIsgUbXgFE1Q8ZFA=w140-h209-no?authuser=0"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What movie is this", //the big short
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3ftrlJq3KQ6wEKX1o34hbh8IRzb4K3phWUXBPhACFrp4RnAiPC6uokH-a5b1h-8Ufxfywmm4bPTlXnTUSS9FsenAnQzvFd89CUgdsUie2MioP6vRLa9t6YKtfKGvPp1eeMJKEHWzdqFvPdU-Ap6tG-RPw=w140-h209-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3eEFEyhvxoo0ah3TQLx80KI2Xbp-dUvL1tSjYXwXnKKWD0bvVvkZwi82aGuV1Vl552I98cdZoCNoqIWURRQMkhOD3j3Uv1R3nvpVMw2GGXBWF69jE_yvV04lGPkOZNfcMGSa9W3T2gbmhnxHnTojufbbA=w140-h209-no?authuser=0"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What movie is this", //a fistful of dollars
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3chaR_2x-nOV5yqauF7f4sx5R8Xn5jThYAVM_mUmqvUOUlx-u7LYBVjxXje7_fsZTaWqJMYmg6IeQk0O8q2dd6GXUks4bbV41Mz_nT8_L-R0zRJM3MHmGR0JHUe--4Cv3lEqon1QUdTxa39XloF918bSg=w182-h268-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3e_TrukkKL12eUgjVJ4jkLrD5TD50X4Ask7x_oB6DLuLmXj6SMrWJH4_oUpOmXGxJEJygHaCVPvzsFFB0fKte1BFdZXgUt-jxu4V38L_Fr05AyS1eKPhav4663dMVGVib7PSfb-2_TM0RAVupHFhlsaTg=w182-h268-no?authuser=0"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What movie is this", // Trading places
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3dKp5Lby08mFtCy489aFRlU8Os60diIliedEpbOk50Q4YLj5oLDVNU20tlHEYUQ-L7BkpCkZKNHxtfzk5xizOey6i9qWCU7aymMWeVdJ0LBnLgY1XsjNZqAui6FRoxmrHAymRj4CV76w_CoUqPM3rxQTA=w182-h268-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3eQ3y4NmcR99QPUu7LeZ1lcFmXRyupc631aV62mOyZXDt52ATON_GZ15hGe_z4fWBgIRDaDH1acJCIz6TkMkzoGZ5og4fnwkwb_L3RKczwRyUnFkl_0TCAv6Fcvs8J1L4sUUOqjPTkOSa4deDw6fMggmQ=w182-h268-no?authuser=0"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What movie is this", // color of money
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3eZQGSu7XuWT9onGjlOeCXL3rTWMfhDiydB8kiZ-5sQf1hnqPW1AGj_Bu8BY_nv-NO3Ccc0zm5wBaoD-ooe4kqla7IJVYUj8KkxxKuK2mY3ycBiNE1pwYBJcPICYX74A5m4JjcfGMokW-pja8sImXdMTQ=s160-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3eb-6lVFOseMQ8g7w9UnO3Qmd4Dv5LtUQbBK976wpq4p2jK8Pr97xUfJYTtxLCBTqsW4lti0fnc64uZ7QmUfZMVugxbY9Q7ScXQ52oSGMn_Dng2DAo5Bx12_z8WDT8ryniqB_bT7TbdEbkHUmkjX1KXig=s160-no?authuser=0"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What movie is this", // indecent
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3cZ8r1r7PdZIN0WZqF1OJkBx8LK6YJPFyo4ZKwyWa4e3M2WYdXQQk8PE9j_UlLEIVbvRgjighUdzmz_ZeOsw1lGVMpZj4tbjc20gnzP-5TJuoe3U190Wsb-lHDgvq7U5d9FAvW2uGDLOQfzUx2bsbRb1A=s160-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3fR3UjYLUwjCOwqdXKjzfhLRLmdrs85ffhgLxjLbgr34t-IiV6hxu3-P7ji85qe65npgPDqBfs5C13eHiJbcfGW85RRq1uXYX-EtUzLezUzJTuQoUFE_K7RhmFDt9dvnQG2Jv3LYBGyc5INwpv8MCcjww=s160-no?authuser=0"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What movie is this", // money pit
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3cnlH134zg-ho5qt9vmMEDnaYWRdBh-n1_4iahGsC3ftVAXXlnpZFWZiP3fNVtRvZpHvrvU5inuFQD01Ho9zgAebRF6njh6lUIkBsjBkApgViau64nWu9iemUl3nPwQ8hHq9CTQw955Y1QlLz6qL88Qvw=s160-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3dZ8Og4IfChPNI5Yfbnx4TR4FXhSiHAwDco9BWSsr7iF04xCiFQ13Qg3C7LTzWJfOdr1er0JRUCtbFWOv8dstBcOXCap9iG0tt3hQuvYGPMZCmPAMB1H0-30HEW_GTmbV5p1k5OFuzuo0Y5N9zp9zH0-A=s160-no?authuser=0"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What movie is this", // slumdog 
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3e9wQjp0hk8ChHKsT_515WCUlXdaLQFyDxSd2tCZ88zuhbDHT6EVk1t04fiH_f7Gxz0YcZXq57CZ6R54R_br0PjShNlbSLBbCk4CIaCYBuQ_t1chcL5gQVWWiJzv0QKjB9CJVv_n9XIc8F-5Lmsl80xwQ=s160-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3ewzsL8F_kJgM51bP5EIagC-FtYmQmkXHPUiVNjlDBj6O1gXm4RgvaP0kurmih-VQjyFi900jB96qOXbTRibxmFF6O76iWzTrGX-HJDQ-C7gweE8Nkdx73HsTtQInExKYbupGWkMJxKCWpU3FkogKx7tQ=s160-no?authuser=0"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What movie is this", // sting
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3e5eeNH79GeGCmgmp4GS86iKW_SIFVBpwaeXm76XeCmPyOFSPfLDlmLTHOjp-j1W4Qfi-7ZEc7otX1r5lJPPrU8AEOWqBVu7MTJI8KD8CzSFTWc4x9RHyGtHW1HLGsoySkQW5c8m13hYot0AtDBRxX0xQ=s160-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3eNwV7OW2-xvfDybVxw1BhCEXuUoqKxs3RSMzWg1s7-KJ6rC2UIwNZuWONvdhVPAx561IDiDBAnQlPMyHthRz9d6s_iPOzEUVA9T5pcmdbYrdtxdF77TpprS8MMaaNDELGZxQ9OsW5fz_M4cDzIc9xbnA=s160-no?authuser=0"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What movie is this", // scoundrels
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3eLuZ7LFVOGwQGUZRB4H8Qo9EpxvLKtR14luYdHpzNu6WUfY1ySVCcG_lMYUEeWEdaXxCELbrXhKNoSkkvHr7D21lcRIkXZVMBordsmYS0XRT-ThixswuiMBYgcebida99ri4XA8-bLVr2E4X_XWU6Zfw=w182-h268-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3ePOE8OmuoguYITuqA9dpuRUYdoavVPdOM1dkBj0x-99Doun5Oap9IcBY-pYxJn6A5YJrHmPkVjefrVHH2Pprc_q9euhKIrt93oudXDgQu2Np8WtPZRChaNzDmp-sWzun26EP0gfbVorlAXGklYkw7tdw=w182-h268-no?authuser=0"}) ;
+
+quests[++questIndexBuilder] = { //
+		name : "Bank",
+		hoverover : "Songs about money or banks etc",
+		tags : "music,2021-5-1,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/18NjaqeBIg7Wb4dicTWCSj" width="501" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+	answer : ""}) ;
+
+
 
 
 /*
