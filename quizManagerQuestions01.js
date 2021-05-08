@@ -11,11 +11,10 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	answer : "Yes"
 }) ;
 
-
 quests[++questIndexBuilder] = { //
 		name : "Prince",
 		hoverover : "Name the famous prince",
-		tags : "2021-4-10,InnerWheel,surfers,movies",
+		tags : "2021-4-10,InnerWheel,surfers,movies,saturday",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,	question : "Who is this?",
@@ -56,12 +55,12 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,	question : 
 quests[++questIndexBuilder] = { //
 		name : "Philippos Andreou",
 		hoverover : "Celebrate the life of Prince Philip",
-		tags : "2021-4-10,InnerWheel,surfers",
+		tags : "2021-4-10,InnerWheel,surfers,saturday",
 		splash : {splashType : splashTypePictureAndText , splashText : "How much do you know about Prince Philip?" , splashImage : "https://media3.s-nbcnews.com/i/newscms/2021_14/3450776/210217-prince-philip-ew-337p_6a9135d14650a6f366ada2635850c39d.jpg"},
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
-	question : "Which one of these surnames did Prince Philip never use?  " + Table4ColumnStart + "Saxe-Coburg-Gotha</td><td>Mountbatten-Windsor</td><td>Mountbatten</td><td>Schleswig-Holstein-Sonderburg-Glucksburg" + Table4ColumnEnd,
+	question : "Which of these surnames did Prince Philip never use?  " + Table4ColumnStart + "Saxe-Coburg-Gotha</td><td>Mountbatten-Windsor</td><td>Mountbatten</td><td>Schleswig-Holstein-Sonderburg-Glucksburg" + Table4ColumnEnd,
 	answer : "Saxe-Coburg-Gotha - although his Great-Grandmother was Alice Saxe-Coburg-Gotha (Queen Victoria's daughter)"	,
 	answerimage : "https://cdn.images.express.co.uk/img/dynamic/106/590x/secondary/Prince-Philip-family-tree-1908624.jpg?r=1618004245639"});
 
@@ -84,7 +83,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	image : "https://i.guim.co.uk/img/media/aa6c3f0e6ecb6dc1dbe3895b552eaa7db6114dd3/168_111_4427_4321/master/4427.jpg?width=445&quality=45&auto=format&fit=max&dpr=2&s=a1d6f2b594c57ee0d0b994b297533595",
 	answer : "22.  4 children, 8 grandchildren and 10 great-grandchildren."}) ;
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
-	question : "Was Prince Philip awarded the Greek War Cross of Valour for his bravery during WWII?",
+	question : "Was Prince Philip awarded the Greek War Cross of Valour for his bravery during WII?",
 	image : "https://www.identifymedals.com/wp-content/uploads/2019/04/Military-Medals_Greece_Cross-of-Valour.jpg",
 	answer : "True, he was."}) ;
 
@@ -102,10 +101,13 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	image : "https://i.guim.co.uk/img/media/82aeb2ea75aa29c01fb47dc127eef4f9ce5172c4/0_1505_2834_1701/master/2834.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=89d177b921f47f740009bf7ec74b8ade",
 	answer : "True"}) ;
 
+
+
+
 quests[++questIndexBuilder] = { //
 		name : "Royal Movies",
 		hoverover : "Movies with some royal connection",
-		tags : "2021-4-10,InnerWheel,surfers,movies",
+		tags : "2021-4-10,InnerWheel,surfers,movies,saturday",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What movie", // Cleopatra
@@ -146,7 +148,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 quests[++questIndexBuilder] = { //
 		name : "Royal sing-a-long",
 		hoverover : "Sing-a-long to the royals",
-		tags : "music,2021-4-10,InnerWheel",
+		tags : "music,2021-4-10,InnerWheel,saturday",
 		questInfo: new Array()
 	};
 
@@ -155,34 +157,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/7LEIxcT8KCfxiXHm0OMxmb" width="500" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
 	answer : ""}) ;
 
-
-
-quests[++questIndexBuilder] = { //
-		name : "Pictionary 11",
-		hoverover : "Pictionary on the Theme of Royals",
-		tags : "2021-4-10,pictionary",
-		questInfo: new Array()
-	};
-
-
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // Corgi
-	image : "https://lh3.googleusercontent.com/pw/ACtC-3dc4XAzrBWeMYDtE_ITbUXB0tenp4vZhdmluyn6GafQaQvXpCV-u9OVdpli_xvz6jRFYwg-R-Lx1uu-5W2vvyWwRdoftGOnLtawcKIarZAntwGs1n3xcICx2qBGrMGaFnzrnYC0Zb9MIeHiewvDwhU7vg=w432-h239-no?authuser=0",
-	answerimage : "https://i.pinimg.com/474x/21/d7/3d/21d73d352034aa00ce91e9bd7eec5820.jpg", answer : "Corgi"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // Prince Charles
-	image : "https://lh3.googleusercontent.com/pw/ACtC-3fh7L_DCdCyvSTZGWdGHUFW9Ifj2Zzg7WGE-CjxXNk-vnJt8w4k0nwdt49knxUCvlhf5BIleiXw1yamfFjbyVz-si5sVJ90El-KaB_Ty3bJX7I-Jk_K384o4_d8bdr5OVUIgP0ACWxlV5b43ZQ5C_3NGQ=w439-h298-no?authuser=0",
-	answerimage : "https://www.hellomagazine.com/imagenes/royalty/2020071393229/royal-family-bored-the-queen-prince-charles-princess-diana/0-446-956/the-queen-and-prince-charles-z.jpg", answer : "Prince Charles"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", //  Prince Harry
-	image : "https://lh3.googleusercontent.com/pw/ACtC-3cftbgw8bdgCDw_U1iQzGZ-zroDtuL_JlNEOwIkAT3BgrLrPt8qfv1kGGxSol2dtVQpm2OZKg69TIfsuSRSylNghzhzDOp6rEV4AGQ78lhcxOhV2_znyHjAeHOKsaTP4tcLa53r4ZDrlMTH4tBXA8Pf_g=w307-h329-no?authuser=0",
-	answerimage : "https://i.chzbgr.com/full/6552769536/h9C655020/royal-family-photo", answer : "Prince Harry"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // Prince William
-	image : "https://lh3.googleusercontent.com/pw/ACtC-3eXRERdNzZ0g3EmVJIc_lM_gaeidb3HZzi-NS8ANo-RmN8Eva4t79OUUPaQZ_bz5tZe0O9XF0vdA0vvUmA4d50Rd2MuOgfeA6BC5ZasU_zrYLeSdGNjtCIMj-cnJzpapzMCLK9IyoBAQI8hfA1aXpRtDA=w307-h270-no?authuser=0",
-	answerimage : "https://images.ctfassets.net/iyiurthvosft/featured-img-of-post-224963/f1d0de9d8f08755472c30c2e55c4eb1a/featured-img-of-post-224963.png?fm=jpg&fl=progressive&q=50&w=1200", answer : "Prince William"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // Bearskin Hat
-	image : "https://lh3.googleusercontent.com/pw/ACtC-3esH0H3busdXtf3tXjtcW04WvBibZBG0gqGQLbKKSbAekXmc0HfBVrCpnLkPbyaBx-Woo7WRIrcvl5KKX2cX8P2laQUCdH1klNPmMsCDYom-Sw4Y7Hlyh2R6MayizW1y4oY9ck42d5uu453vmMsx3el-A=w338-h362-no?authuser=0",
-	answerimage : "https://www.telegraph.co.uk/content/dam/royal-family/2020/01/08/TELEMMGLPICT000147124792_trans_NvBQzQNjv4BqiQMOxjH954gcPdYrTVLX17epv3SqZNe7yGWgRBSLBtk.jpeg?imwidth=450", answer : "Bearskin Hat"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // Tower of London
-	image : "https://lh3.googleusercontent.com/pw/ACtC-3f6wFO8J0Z6jOXTdD3yZ8tmuGn8hqjtMkM-mhfj4maURbc-72pQXdiSQzFe2ObDtZJTsAt02NaRIdtXs88SQo81qeeaDK9WHwKAXmTYmIyh2a7E4t8aOq3NtWauQ_2Chbz00SgyP1qpmss0WuwkuJaj7w=w857-h599-no?authuser=0",
-	answerimage : "https://www.factinate.com/wp-content/uploads/2018/11/Tower-of-London-Internal-1.jpg", answer : "Tower of London"}) ;
 
 
 quests[++questIndexBuilder] = { //
@@ -359,9 +333,8 @@ quests[++questIndexBuilder] = { //
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	question : "",
-	spotify : '<iframe src="https://open.spotify.com/embed/playlist/7EH75xtu7h9SkVUOTQVRLR" width="500" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/7EH75xtu7h9SkVUOTQVRLR" width="501" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
 	answer : ""}) ;
-
 
 
 quests[++questIndexBuilder] = { //
@@ -500,11 +473,24 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 
-
 /*
+quests[++questIndexBuilder] = { //
+		name : "Test Alt speak",
+		hoverover : "Pictionary on the Theme of household goods",
+		tags : "2021-4-17,pictionary",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "Test speach",
+	answer : "written answer", answerSpeak : "spoken answer"} );
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "Test speach",
+	answer : "written answer"} );
+
+
   addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 	question : "",
-	answer : ""} );
+	answer : "", answerSpeak : "spoken answer"} );
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	question : "?",
@@ -512,6 +498,19 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	answer : ""}) ;
  
  
+ quests[++questIndexBuilder] = { //
+		name : "Pictionary 12",
+		hoverover : "Pictionary on the Theme of ???",
+		tags : "2021-4-17,pictionary",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "", answer : "", answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "", answer : "", answerSpeak : ""}) ;
  
  
 quests[++questIndexBuilder] = { //
@@ -531,7 +530,7 @@ quests[++questIndexBuilder] = {  //
 	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : "?  " + Table4ColumnStart + "?</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd,
-	answer : "?"	});
+	answer : ""	});
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 	question : "",
