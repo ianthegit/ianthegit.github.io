@@ -1100,6 +1100,139 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 		answer : "No answers"
 	});
 
+
+
+quests[++questIndexBuilder] = {
+		name : "1969",
+		hoverover : "What happened",
+		tags : "saturday,2021-5-8,1969,year,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "what toy was introduced into Britain for the first time?"+ Table4ColumnStart + "The Space Hopper</td><td>The Chopper Bike</td><td>The Rubik's Cube</td><td>The 'My First Chainsaw'" + Table4ColumnEnd,
+	answer : "Space Hopper" , answerimage : "https://assets.considerable.com/wp-content/uploads/2019/01/09133213/hopper-8-1260x1890.jpg", answerSpeak : "Helen Archer jumping on a Space Hopper on a beach in Felixstowe, Suffolk" });
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "who married Maurice Gibb?"+ Table4ColumnStart + "Marrianne Faithful</td><td>Lulu</td><td>Sandy Shaw</td><td>the vicar" + Table4ColumnEnd,
+	answer : "Lulu", answerimage : "https://assets.smoothradio.com/2013/49/lulu-marries-maurice-gibb-1969-1386755802-view-1.jpg"   });
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "who married Linda Eastman at Marylebone register office in London?",
+	answer : "Paul McCartney"  , answerimage : "https://i.pinimg.com/originals/a3/9f/be/a39fbe97734dd367a58cc29257341732.jpg" });
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "what toy was introduced into Britain for the first time?"+ Table4ColumnStart + "The Space Hopper</td><td>The Chopper Bike</td><td>The Rubik's Cube</td><td>The 'My First Chainsaw'" + Table4ColumnEnd,
+	answer : "The Chopper Bike"  , answerimage : "https://upload.wikimedia.org/wikipedia/commons/3/3f/1969_Raleigh_Chopper.jpg" });
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "who released the concept album Tommy?",
+	answer : "The Who"   });
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "Patrick Troughton made his final appearance as the Second Doctor in Doctor Who in the final episode of The War Games, but was it the last episode filmed in black and white, or the first filmed in colour?",
+	answer : "The last filmed in black and white"   });
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "who was invested with his title at Caernarfon?",
+	answer : "Charles, Prince of Wales" , answerimage : "https://i2-prod.walesonline.co.uk/incoming/article7353495.ece/ALTERNATES/s1227b/JS40750542.jpg"  });
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "the second Isle of Wight Festival attracted 150,000 pop music fans.  Did Bob Dylan play?",
+	answer : "Yes"  , answerimage : "https://upload.wikimedia.org/wikipedia/en/7/7d/1969_Isle_of_Wight_Festival_poster.jpg" });
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "The Beatles released what would be the last album they recorded together - what was it called?"+ Table4ColumnStart + "Rubber Soul</td><td>Let It Be</td><td>Abbey Road</td><td>The White Album" + Table4ColumnEnd,
+	answer : "Abbey Road (Let It Be was released afterwards, but recorded before)" , answerimage : "https://upload.wikimedia.org/wikipedia/en/4/42/Beatles_-_Abbey_Road.jpg"  });
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "The first episode of what comedy show was broadcast on the BBC, announced with the words 'and now for something completely different'?",
+	answer : "Monty Python's Flying Circus " , answerimage : "https://upload.wikimedia.org/wikipedia/en/thumb/c/cd/Monty_Python%27s_Flying_Circus_Title_Card.png/250px-Monty_Python%27s_Flying_Circus_Title_Card.png"  });
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "BBC One first aired which children's television series, made by Oliver Postgate and Peter Firmin?"+ Table4ColumnStart + "Bagpuss</td><td>Finger-Bob</td><td>Clangers</td><td>The Magic Roundabout" + Table4ColumnEnd,
+	answer : "Clangers"   });
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "which Australian-born model played James Bond in On Her Majesty's Secret Service?",
+	answer : "George Lazenby"   });
+
+
+quests[++questIndexBuilder] = {
+		name : "1969 Movies",
+		hoverover : "What did you all watch",
+		tags : "saturday,2021-5-8,1969,movies,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question : "What movie is this the poster for?",  // Butch
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3dxA-3ZxZmNE_VVqYAk5q5M2jYIqYfKfVXnTuauIPQtaZB0KyiukTLcc819d0WVc_77bQa7c7a0-M9svYnqteq27XrbdTm2ejb5F-dMQnN_SkCGWSrx4sxFk8f6W4FxvOzjjq5-7a8bv_3GtF1WaAINOg=w220-h328-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3cziFpaqIGTMYZV4j_moIyBAt4d7pzUbE22Y1UKn5AgpU4169q4Y3povEDMtomPx7SNsSqT7vMzmEyWs-eSgJfTmM8sjgpCGja0et0YfLJ432qZXgcQfB7xj0faOXeChwKJlAtrNrbIhoVBV1l8r4Rrug=w220-h328-no?authuser=0"  }); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question : "What movie is this the poster for?",  // Love bug
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3cYemxKaqyWI6IL5ByOYz1Z7W3NIqdJSAV4UhGWVA4vpZpVWPUznCdqwrLZ_WXCha4-pyhGLiFOXMOoOaZR4v4AH58sTSfkDf6gwjUeYoE0-YhwwGCtGYUEM4SoihX1olR4i0ngVabTMjCp5JJmCKPGrg=w220-h332-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3fsawDaTecZFhbIY10G5KQBgh37X6wBRLE3e-ebkg5I-z0vWT_7HpT_LQT8QnbXJkGYRJAj6mG-gBV4TFf9beWHQmswLxSw2j4nTTNm53lZREwsDlcqxH4Fzs9hKA8z_IjOn2ZWTxkteal8VqX1utpHcw=w220-h332-no?authuser=0"  }); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question : "What movie is this the poster for?",  // Cowboy
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3fOxhfh90SGLXOgvUIhux_J2M3X_AMsKn07gvt5qxqDyOsT_wE48E9z_-Ru0QVEBFXfe9Gj2xTl0aS1lINYFRkqIhEgByyUnpQQqTJ97fbBMFZrI3qFwVW_zYLebAshthuL3CcQ4eUNV33VSB-1ewNNdg=w220-h353-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3dh5Zy6ctNedkoVjjGLwanh57kPfhxyaDFFZwtOoXFnDl_9K2kh9WCH1JAy1sQl5ByZxOazjc9X6zy1LopJ8usdsqXmoIdCUgySLgqwj4lmOPXtbAvKzgeOaQHwqnF-W7Xv8HTRI2Yit_ugzwIRVzjzGA=w220-h353-no?authuser=0"  }); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question : "What movie is this the poster for?",  // Easy Rider
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3d7iwcawCrc9wDhloiULY1wqdKxEW6mCzinY8h-4_G6IrcMhzD_KsVugFL_ZZuz2NWMm2s3C8xRjv0YgM7xORwNjLf2WkSpFN03bgZj7ct5JNE9yTI8gRMVK3MOtSrVTErsOSeaPaw1a7_r7cm-UVag9Q=w220-h341-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3dmaBfkApCJaA6fTNZOZHjj0L7vV6cFUMeEapUx_b-Rnxaoc7wusgd9VUCjCbvQJ7CkVUdd5KJ9Bp3peJOYlFGQ0WO5ZPxTs9-9L6oz9hbTNq42ZP5xFzVNbyInm9A8qa4VkeJ5QEhAFTC-e9Rv0EIycA=w220-h341-no?authuser=0"  }); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question : "What movie is this the poster for?",  // Dolly
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3dwmhmEnATdXQ3vRWwsNciOPa_lOwdlXtU0kDv2Bb802XNixHBE_sEmRi9TzdZ924-iLWmKFss-QSldUc-9Jksm9ECubyIbzVSZf4Nuhuw-oF4N935bPegwnYgoLwctfZ_-s_ejfq0w1VfZ-moDNqizqQ=w220-h330-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3crjjQIIULeXqkffMxjgZH5w2NtWgx0WDlFDBihBmNot0jMo-1IldSawvrBcr4atWJKqfaiE9gvFqZZiOJN8Z-8NHacK7520Qs6n4Kr1fLbG2nL0Odmrlf_Ab7-XyXNodYwzvFGCVvI2tph9OMLQsssFA=w220-h330-no?authuser=0"  }); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question : "What movie is this the poster for?",  // Wagon
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3fbhKJF-fBmuZCEsjwSRQDiG5ZDoPhlQ91Btmj9jNK_EHiaWGxg-dhFPRboV3Rdun760hjm1BzBH1TgSwxvqaH3qSbENH6UMFL3h9L0DESG5WUk-Qi2-LKJZlwv5XiiCaCtyysrOnMLi9wenoHx9-iTYg=w215-h331-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3fLmyhvLBHM_7SXBmyGuQru_-blYowEj3mPY8Cqia9p2W1ee-DEyQiGdC0QciFQa5VjbNZtweXsGEo5XryLXwT770fF-Vk63rgde3qIYGe0ctB3I1mdiv43ba01XL8-Bw_5iWw_H2R6QVTNOQVOMTz7-A=w215-h331-no?authuser=0"  }); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question : "What movie is this the poster for?",  // Grit
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3c0oBW3W6Qy6oMP0DqNl2XsHkQE4DjhYWKS2kAbZOZGnfwW3d1ZA_D1mfIO_V4b_vnYicT4ltm_vhBXW49_HsgmJ126u50cb82OJ_iS9QEuQVp-MFJktOotnTTfAXpj9czF7vixJWs6KIbb3ssJVC9h-A=w220-h337-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3fMkcNaoTYrhArSrYkNxuS560WLcY9rOcgrND_-YeAJ8YgjYrNn2u4SyK0GsTXy5JToQl809L9kZIXt0Sa3gZafNLsNjKskUHnFGgjHn7A2dNSlU5VkYdZYDHw7KFP_3O5Q_GeF2TQ0cUFpShLSbC4iYw=w220-h337-no?authuser=0"  }); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question : "What movie is this the poster for?",  // Kes
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3fzU3ziUXbsgOKYO-FqbfaH1M1-YRGb71t0WsPCbY_wg-U1MgCJWlbhSeKN1bTegWLHWhsnsx6JeKyF8eBbm1YSbQo5Mv53_0BInIG0FeLyep2oNHgJ9ez-iL7mt1Sofa-ixGViUPYdj_RcCOZvEtF6KA=w363-h274-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3cwrx1dKQ49AkzEU1OKzspwcXnYZkvtXMyySp1tShAWa5znw5s27XnXPX72XamwPf_eathEXjTGYu7zmnB-VSdrBmV3sJi1ioVuCKrTmA3bflRU5ZSfoZoTvc_J4Sk9zNxAgmB5Ly-ZYoUD9smmjKo4Pw=w363-h274-no?authuser=0"  }); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question : "What movie is this the poster for?",  // Italian Job
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3cj_wApkghiuLPqcloosgsZiaFpqUD3ZaykRpxpqA-IDbuY7a-0t9gzXxPhf1PqvfD3ELfMr-u14eW5EYLsrRtmAE6MzgQl2DhId7fE4tjNf_Ywlw2ZG6_LW1myw2YLpnbPWSwipxN1tj7ZSOjxlb947w=w220-h160-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3fuBNIBvYgL34s8_E67_OxrqeQb18bFx_rpm8hL4yhALi8VuIRYaohfvl9JY8wXPeOGx4oNpGav4XiSb7lQbJK2Cf28eJKt2cbxl79NDlH_NVhDfmFouAyaA4-D5nV2iKP_5pKT345XP8O-e50BdVOGbA=w220-h160-no?authuser=0"  }); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question : "What movie is this the poster for?",  // 007
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3cv3W7WAVVeSJHGe3vnsgnK1dgYE3kO1RDYXC8kKG-iY-5uE2Ybe0gaio8ueE-3qAYsf6TyovOdbkaJfcMD8EcwQ0n6m8TvGsvtTwzIqCHeeoqdKXHp2GEh1nbwf9qebrxchIqiKDgNse1qUOOYQaWoxQ=w220-h167-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3fJM0d2z8C3N8sJ2Y3znZsTsJtrDJlQJv4uiPGx1AvZQ6v6IM_PFfeqUBb2Uq8pUyUy7TtUELNfqoGJLC8HlHyChogF2kCLl13iATn4YJnMs4M9a9fJua5tVu4FCkRYr6vk-vuquqFpbpRldTlUEV12ew=w220-h167-no?authuser=0"  }); 
+
+
+quests[++questIndexBuilder] = {
+		name : "1969 Ins and Outs",
+		hoverover : "Who dies, who was born",
+		tags : "saturday,2021-5-8,1969,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,		question : "Who is this coming or going?",
+	answer : "Dave Grohl"	, image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Foo_Fighters_-_Rock_am_Ring_2018-5710.jpg/100px-Foo_Fighters_-_Rock_am_Ring_2018-5710.jpg"   }); 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,		question : "Who is this coming or going?",
+	answer : "Jennifer Aniston"	, image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/JenniferAnistonHWoFFeb2012.jpg/100px-JenniferAnistonHWoFFeb2012.jpg"   }); 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,		question : "Who is this coming or going?",
+	answer : "Mariah Carey"	, image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Mariah_Carey_WBLS_2018_Interview_2.jpg/100px-Mariah_Carey_WBLS_2018_Interview_2.jpg"   }); 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,		question : "Who is this coming or going?",
+	answer : "Paul Rudd"	, image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Paul_Rudd_2_SDCC_2014.jpg/100px-Paul_Rudd_2_SDCC_2014.jpg"   }); 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,		question : "Who is this coming or going?",
+	answer : "Renee Zellweger"	, image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Ren%C3%A9e_Zellweger_Berlinale_2010_%28cropped%29.jpg/100px-Ren%C3%A9e_Zellweger_Berlinale_2010_%28cropped%29.jpg"   }); 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,		question : "Who is this coming or going?",
+	answer : "Cate Blanchett"	, image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Cate_Blanchett_Cannes_2018_2_%28cropped%29.jpg/100px-Cate_Blanchett_Cannes_2018_2_%28cropped%29.jpg"   }); 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,		question : "Who is this coming or going?",
+	answer : "Peter Dinklage"	, image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Peter_Dinklage_by_Gage_Skidmore.jpg/100px-Peter_Dinklage_by_Gage_Skidmore.jpg"   }); 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,		question : "Who is this coming or going?",
+	answer : "Matthew Perry"	, image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Matthew_Perry_2013.jpg/100px-Matthew_Perry_2013.jpg"   }); 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,		question : "Who is this coming or going?",
+	answer : "Jack Black"	, image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/2016_RiP_Tenacious_D_-_Jack_Black_-_by_2eight_-_8SC8891.jpg/100px-2016_RiP_Tenacious_D_-_Jack_Black_-_by_2eight_-_8SC8891.jpg"   }); 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,		question : "Who is this coming or going?",
+	answer : "Catherine Zeta-Jones"	, image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Catherine_Zeta-Jones_VF_2012_Shankbone_2.jpg/100px-Catherine_Zeta-Jones_VF_2012_Shankbone_2.jpg"   }); 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,		question : "Who is this coming or going?",
+	answer : "Sajid Javid"	, image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Official_portrait_of_Rt_Hon_Sajid_Javid_MP_crop_2.jpg/100px-Official_portrait_of_Rt_Hon_Sajid_Javid_MP_crop_2.jpg"   }); 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,		question : "Who is this coming or going?",
+	answer : "Richard Hammond"	, image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Richard_Hammond_at_Bonhams_Charity_Auction_in_2013_%28cropped%29.jpg/100px-Richard_Hammond_at_Bonhams_Charity_Auction_in_2013_%28cropped%29.jpg"   }); 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,		question : "Who is this coming or going?",
+	answer : "Judy Garland"	, image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Judy_Garland_1943_publicity_photo.jpg/100px-Judy_Garland_1943_publicity_photo.jpg"   }); 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,		question : "Who is this coming or going?",
+	answer : "Brian Jones"	, image : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Brian_Jones%2C_Statesboro%2C_Georgia%2C_May_4%2C_1965_%28377872218%29.jpg/100px-Brian_Jones%2C_Statesboro%2C_Georgia%2C_May_4%2C_1965_%28377872218%29.jpg"   }); 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,		question : "This is Princess Alice of Battenberg - who's mother was she?",
+	answer : "Prince Philip's"	, image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/1885_Alice.jpg/220px-1885_Alice.jpg"   }); 
+
+quests[++questIndexBuilder] = {
+		name : "1969 #1s",
+		hoverover : "Were these playing in the nurseries",
+		tags : "saturday,music,2021-5-8,1969",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+		question : 'Name the song & artist',
+		spotify : '<iframe src="https://open.spotify.com/embed/playlist/5Y80Sfpzep6EtvFMM0lWIY"   width="500" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+		answer : ""
+});
+
 quests[++questIndexBuilder] = {//quests[97] = {
 		name : "1970",
 		hoverover : "What happened",
