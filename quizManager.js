@@ -364,6 +364,9 @@ function SQSpeakAnswer(){
 }
 
 function SQWriteAnswer() {
+	if (!fullAnswer) {
+		return;
+	}
 	if (fullAnswer.includes("iframe")) {
 		SQGetAnswerArea().innerHTML = // answerPreText +
 			"<p " + answerStyle + ">" + fullAnswer + "</p>";
