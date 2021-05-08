@@ -339,7 +339,7 @@ function SQAnswer(questionType) {
 		answerimage = questStageData[currQuestStageIndex].answerimage;
 		setTimeout(function(){sqInitPicture(answerimage);},3000 )
 	}
-	if (questStageData[currQuestStageIndex].hasOwnProperty('answer')) {
+	if (questStageData[currQuestStageIndex].hasOwnProperty('answer') || questStageData[currQuestStageIndex].hasOwnProperty('answerSpeak')) {
 		if (questStageData[currQuestStageIndex].hasOwnProperty('answerSpeak')) {
 			speakText=questStageData[currQuestStageIndex].answerSpeak;
 			setTimeout(SQSpeakAnswer, 3000);
