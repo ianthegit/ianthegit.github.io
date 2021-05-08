@@ -435,6 +435,33 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://1000logos.net/wp-content/uploads/2017/09/Santander-Logo-500x176.png", answer : "Santander", answerSpeak : "Santander"}) ;
 
 
+quests[++questIndexBuilder] = { //
+		name : "Pictionary 15",
+		hoverover : "Pictionary on the Theme of Fast Food",
+		tags : "2021-5-8,pictionary",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // Burger King
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3cMyARiuEdVVG95a90nPShzZ2_wDicN32FgwmzbY65Nxkt1IQIkCrkxKoleJsQGJqCYc2mxwoT72FK2C_sXVwwEyrRhbQKt1A0Rf5GYS40h2uklrwlTv1NghU7F3NDyn5LvCtyExYgt-VKeH0uHpXWQYg=w388-h332-no?authuser=0",
+	answerimage : "https://static.dezeen.com/uploads/2021/01/burger-king-logo-rebrand-bk-jkr_logo_dezeen_2364_col_0.jpg", answerSpeak : "Burger King"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // McDonalds
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3fQ0Gv0Vr4W9OrId9PwWEF54-74zt6mcy1CHkjsUdtuaFAZsrH4GX01KzXUeHq32JS6vc9bM1t_4c06yGRfu0IVb3qESe9a05LaZyPY-M1SkDkPxl_DF-7mn3rObfYGzb4etPe0r7Qp4pXhGdhNtXOFxg=w535-h406-no?authuser=0",
+	answerimage : "https://logos-world.net/wp-content/uploads/2020/04/McDonalds-Logo.png", answerSpeak : "McDonalds"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // Dominos
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3e8chggUu3B9vr6w23sckJ6UP4Sj33A4bZ-wMxYiq4MRkRjvy5V598XSLLIFQgVw-UpC2s6AnRTpAK_70F0AWkhvFFnQZLjS3X26-GlfHvDY3g0Q6yFdX5CcF69A3FP3XQafjyNO8hxsLSQPx_yht2LPg=w264-h299-no?authuser=0",
+	answerimage : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Domino%27s_pizza_logo.svg/120px-Domino%27s_pizza_logo.svg.png", answerSpeak : "Dominos"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // Pizza Hut
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3eEtXj0Hvv_1fBusOmelusrvQ4P267JPhmq163PQ0G1vZHRab4Z7pf7c7pKTV1CZDDFMG0nnhsDyrj90n2x_MOg9ygnNV0U2Ace5o-4bY_aAdYsU_oFVxhVesxEuCIe3gUBBiTtBW8i9opidvdTBtm0cQ=w684-h508-no?authuser=0",
+	answerimage : "https://cdn.worldvectorlogo.com/logos/pizza-hut-1.svg", answerSpeak : "Pizza Hut"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // Wendys
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3cz9Ztd1kFeN-pqpg9Wbd7pvL4_BwvAoaao1FlyxzVHW5O2BdsCSEMRf15ex95HPJLXJ83RiDXUzTSPVcWj-rhuHeru91pt8eJEeY2dSyVLp2atk8R9uomJ4K1RwfZCVMszdCh39ohJ9BxL_0ExFqVLiQ=w524-h420-no?authuser=0",
+	answerimage : "https://lh5.googleusercontent.com/60xDCA2Ga_IQ4R0PNqIDPrG2KSkQYaxHNxBMb3YTCJBePYQUB1534NRYs14rCJAa3_F7leHphg1P98NdP3DW-YI6KNVyH4macfDb0jUcTLxQE0VyZ3koAgnqcNAGml3J1pXZLN3U", answerSpeak : "Wendys"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3dD1URLLlWF8pkEO1ooRXa_nyKz4VKCpJ6_Ow8FOb8mddAnNBDw3_rocbDAd0VChdWj02NdbCNcCzKvyE_ucW2Y-RUwSNxKjTqtxqR7JPn6DXGA9kqDO4jwp3OzRzGCn-WweIS-Hdh6gB0_PGjT3OpANw=w613-h507-no?authuser=0",
+	answerimage : "https://logos-world.net/wp-content/uploads/2020/04/KFC-Logo.png", answerSpeak : "KFC"}) ;
+
+
 
 /*
   addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
