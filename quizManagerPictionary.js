@@ -92,7 +92,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 quests[++questIndexBuilder] = { //
 		name : "Pictionary 03",
 		hoverover : "Pictionary",
-		tags : "13/2/2021,pictionary",
+		tags : "13/2/2021,pictionary,specialDay",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
@@ -191,7 +191,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 quests[++questIndexBuilder] = { //
 		name : "Pictionary 06",
 		hoverover : "Pictionary",
-		tags : "2021-3-6,pictionary",
+		tags : "2021-3-6,pictionary,logo",
 		questInfo: new Array()
 	};
 
@@ -302,7 +302,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question
 quests[++questIndexBuilder] = { //
 		name : "Pictionary 10",
 		hoverover : "Pictionary",
-		tags : "2021-4-3,pictionary",
+		tags : "2021-4-3,pictionary,specialDay",
 		questInfo: new Array()
 	};
 
@@ -411,7 +411,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 quests[++questIndexBuilder] = { //
 		name : "Pictionary 14",
 		hoverover : "Pictionary on the Theme of Banks",
-		tags : "2021-5-1,pictionary",
+		tags : "2021-5-1,pictionary,logo",
 		questInfo: new Array()
 	};
 
@@ -438,7 +438,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 quests[++questIndexBuilder] = { //
 		name : "Pictionary 15",
 		hoverover : "Pictionary on the Theme of Fast Food",
-		tags : "2021-5-8,pictionary",
+		tags : "2021-5-8,pictionary,logo",
 		questInfo: new Array()
 	};
 
