@@ -402,6 +402,11 @@ function SQInitTagButtons() {
 					+ "\")' />"
 		
 	};
+		
+	buttons = buttons
+	+ "<input type='button' class='userBtnStop' value='Today' title='Reload page and only show quizzes with this tag' id='reload' onclick='SQreloadPage(\"" + todayString
+	+ "\")' />";
+	
 	//console.log("uniqueArray: ", tags);
 	return buttons;
 }
