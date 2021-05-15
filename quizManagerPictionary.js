@@ -470,22 +470,22 @@ quests[++questIndexBuilder] = { //
 	};
 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3cXoctQGwzsBZ_mfzRstoB1qVYsZnyyYgQxlS9APRS5yk_nf5LHQ7L6BaCcXjd0wl_add61mTm4uZGlvO9dzRr--EmMjt7bZjCaZNw50JYv3JOqiUHu0ligEGw82KqJG9GQMLuR7eRu68mwebax2hzuAw=w325-h350-no?authuser=0",
 	answerimage : "https://image.shutterstock.com/image-photo/pug-dog-waiting-play-ice-600w-541036300.jpg", answerSpeak : "Ice-cream"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3eYW8RQ9wKofCHdtt4mrdZ3ZRtAF9v6pWtZyLt7lE3H7y4v2yBhZu0VbuTKCq-qYOARjig05izc5KRGxiWfDZBS2InwxqOapWe3pFu5u9tg2leA1LMGjwNITLui6QG9VXrJe-kF_BNtbEOvxXktS0Ff5w=w1282-h519-no?authuser=0",
 	answerimage : "https://www.comelol.com/uploads/2017/9//pitchatent_234323.png", answerSpeak : "Tent"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3ds0hbZOtACN6nxM0aalQRTIpYtakQDN9hKTTfxdfK8Php0CIaVoBBUEc10b5IlygVWvR3INsWk0hh1r5-SO4G73BrGHBGagZqWz1lSVSPvEv9NjSk1HhOqe0W1tp1v4zCaNl8jlHPW5qkpOigHBd-BHQ=w346-h331-no?authuser=0",
 	answerimage : "https://external-preview.redd.it/10R8bMwbS8ZSM-fQzQYb6vMnCO7oYoMJsLbaVKJWsgw.jpg?auto=webp&s=dd0d5af18e36f5abeb53736e9d94fc916c7b0ae9", answerSpeak : "The Sun"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3fHMSC9aFu4BeobnPnR36lefksNaHDcQUXs6bKOy4WWa-xbFMhOz2rjLdpsZaCfUM5j8EKrAlNQpw21Fmp6DcDE2TfnrL4XOOJldx_nQ7aHK0isHg-aYvGGWQSTZjWhlZ9vhgaZVPnCQQOmFksThFCNVQ=w409-h315-no?authuser=0",
 	answerimage : "https://i.redd.it/71zi900rszc21.jpg", answerSpeak : "Shorts"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3ctANbpeDgnPpYbFhR0NoPMNYJdAZDeNSAnrNds04H6-0RAdjdB7o50M56msT08ba61yIiipuQgAHc4FYsmvDSViMfUqjRr4IIrFC_2xAzkZ2OA_fyKAl9lrmMqUdcqw-987BNhilGc0RjIDVYOmIyhVA=w629-h470-no?authuser=0",
 	answerimage : "https://previews.123rf.com/images/sonsedskaya/sonsedskaya1809/sonsedskaya180900027/109560957-portrait-of-a-funny-raccoon-in-sunglasses-showing-a-sign-of-peace-isolated-on-white-background.jpg", answerSpeak : "Sunglasses"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3dMpmXh5uE4ukwkgQ0GADwBxkY6kioEPaXfienJOV8_9PgnKBKv82_WfSzsgHLzQkl71IXuha6uAYK71FBzK1LrezlME3dSsU3AvAM-Y0ZDyECe97UFCVuDHx6sOFMR9Cv8EzHhraDjEier3oVUfmETKg=w876-h544-no?authuser=0",
 	answerimage : "https://pic.ebid.net/upload_big/1/8/4/uo_1477150422-12567-64.jpg", answerSpeak : "Seaside"}) ;
 
 
