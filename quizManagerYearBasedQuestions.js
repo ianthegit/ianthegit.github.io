@@ -2307,6 +2307,125 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 		answer : "No answer"
 	});
 
+
+quests[++questIndexBuilder] = {
+		name : "1989",
+		hoverover : "How much do you know about 1989, the year the magic started?",
+		tags : "2021-5-15,saturday,1989,year,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+//+ Table4ColumnStart + "?</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "where did this UK air disaster take place?  " ,
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/G-OBME_Aerial_photograph_of_site_%28AAIB%29.jpg/220px-G-OBME_Aerial_photograph_of_site_%28AAIB%29.jpg",
+	answer : "Kegworth, East Midlands, M1, A453", answerSpeak: "Any of these answers will do"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "the UK was told that 'You and me belong together' by the theme tune of it's newest Soap.  What is it called?  " ,
+	image : "http://ivillageau.s3.amazonaws.com/wp-content/uploads/files/Home-and-Away-with-Emily.jpg",
+	answer : "Home and Away"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture, 	
+	question : "Tim Berners-Lee produces the proposal document that will become the blueprint for what?" ,
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Sir_Tim_Berners-Lee_%28cropped%29.jpg/220px-Sir_Tim_Berners-Lee_%28cropped%29.jpg",
+	answerimage : "https://hackster.imgix.net/uploads/attachments/284333/the_internet_cover_uteWFNvvRs.png?auto=compress%2Cformat&w=900&h=675&fit=min",
+	answer : "The World Wide Web (the internet)"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "where was a massacre taking place which would lead to this iconic photo being taken?" ,
+	image : "https://upload.wikimedia.org/wikipedia/en/thumb/d/d8/Tianasquare.jpg/220px-Tianasquare.jpg",
+	answer : "Tiananmen Square, Beijing"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Perestroika in action as which restraunt chain begins to build it's first outlet in Moscow?" ,
+	answer : "McDonalds"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "English police arrest 250 people celebrating the summer solstice where?" ,
+	image : "https://i.guim.co.uk/img/media/445ebcd10339fbcb419f3aae98b1a5c028a14a66/0_130_3000_1800/master/3000.jpg?width=605&quality=85&auto=format&fit=max&s=e71121278ff4eaf4e7c1f8e6adcf8d6a",
+	answer : "Stonehenge"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "which firm releases the Game Boy portable video game system in North America?" ,
+	answer : "Nintendo"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : " fifty-one people die when a pleasure boat collides with a dredger on the River Thames adjacent to Southwark Bridge in London - what was the boat called?" ,
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Southwark_Bridge%2C_River_Thames%2C_London%2C_England.jpg/220px-Southwark_Bridge%2C_River_Thames%2C_London%2C_England.jpg",
+	answer : "The Marchioness"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
+	question : "SLDP leader Paddy Ashdown addresses his party's annual conference in Brighton with a vow to 'end Thatcherism' and achieve a long-term aim of getting the SLDP into power.  What nickname did the tabloids give him?" ,
+	answerimage : "https://4.bp.blogspot.com/-yx_AbArptgw/WPqZZNSc74I/AAAAAAAACaU/nYtGX6h5MGsPsFxR5xhSZoM1kgk7X865ACLcB/s400/paddypantsdown.jpg",
+	answer : "Paddy Pantsdown"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture, 	
+	question : " this chap resigns as Chancellor of the Exchequer.  During his time as Chancellor he oversaw the deregulation of the UK financial markets, known as the Big Bang - which could be his daughter's nickname too.  What's she called?" ,
+	image : "https://alchetron.com/cdn/nigel-lawson-51158970-8d62-4140-94ac-08e341d1f7b-resize-750.jpeg",
+	answerimage : "https://www.stopsmilingonline.com/uploads/photos/story/20071212080005_20071212.jpg",
+	answer : "Nigella"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "General Assembly of the Church of England votes to allow ordination of what?" ,
+	answer : "Women"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "the last one of these living in the wild in Britain is trapped, in East Anglia.  What is it?" ,
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Nutria-orange.JPG/220px-Nutria-orange.JPG",
+	answer : "Coypu"	});
+
+
+quests[++questIndexBuilder] = {
+		name : "1989 Ins and Outs",
+		hoverover : "Who died and who was born in 1989",
+		tags : "2021-5-15,saturday,1989,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	question : "Who is this?",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Lilly_James_%2835036323024%29.jpg/100px-Lilly_James_%2835036323024%29.jpg",
+	answer : "Lily James"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	question : "Who is this?",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/AUT_vs._WAL_2016-10-06_%28155%29.jpg/100px-AUT_vs._WAL_2016-10-06_%28155%29.jpg",
+	answer : "Gareth Bale"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	question : "Who is this?",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Daniel_Radcliffe_in_July_2015.jpg/100px-Daniel_Radcliffe_in_July_2015.jpg",
+	answer : "Daniel Radcliffe"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	question : "Who is this - I'm happy if you only know her by her 3 initials?",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Alexandria_Ocasio-Cortez_Official_Portrait_%28cropped_2%29.jpg/100px-Alexandria_Ocasio-Cortez_Official_Portrait_%28cropped_2%29.jpg",
+	answer : "Alexandria Ocasio-Cortez (AOC)", answerSpeak : "A O C"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	question : "Who is this?",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Taron_Egerton_by_Gage_Skidmore_2.jpg/100px-Taron_Egerton_by_Gage_Skidmore_2.jpg",
+	answer : "Taron Egerton"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	question : "Who is this?",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/191125_Taylor_Swift_at_the_2019_American_Music_Awards_%28cropped%29.png/100px-191125_Taylor_Swift_at_the_2019_American_Music_Awards_%28cropped%29.png",
+	answer : "Taylor Swift"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	question : "Who is this?",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Becky_Adlington2012_Olympic_Parade.jpg/175px-Becky_Adlington2012_Olympic_Parade.jpg",
+	answer : "Rebecca Adlington "}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	question : "Who is this?",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Richard_Fleeshman_performing%2C_2008_1_cropped.jpg/225px-Richard_Fleeshman_performing%2C_2008_1_cropped.jpg",
+	answer : "Richard Fleeshman "}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	question : "Who is this?",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Anthony_Joshua_2017.png/220px-Anthony_Joshua_2017.png",
+	answer : "Anthony Joshua"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	question : "Who is this sweetie?",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Sugar_Ray_Robinson_1947.jpg/100px-Sugar_Ray_Robinson_1947.jpg",
+	answer : "Sugar Ray Robinson"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	question : "Who is this?",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/LDBALL1950s.jpg/100px-LDBALL1950s.jpg",
+	answer : "Lucille Ball"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	question : "Who is this?",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Bette_Davis_1933.jpg/100px-Bette_Davis_1933.jpg",
+	answer : "Bette Davis"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	question : "Who is this?",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Anthony_Quayle-publicity.jpg/100px-Anthony_Quayle-publicity.jpg",
+	answer : "Anthony Quayle"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	question : "Who is this?",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Lord_Olivier_6_Allan_Warren.jpg/135px-Lord_Olivier_6_Allan_Warren.jpg",
+	answer : "Laurence Olivier"}) ;
+
+quests[++questIndexBuilder] = {
+		name : "1989 #1s",
+		hoverover : "What was number 1 over the year",
+		tags : "saturday,music,2021-5-15,1989",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+		question : 'Name the song & artist',
+		spotify : '<iframe src="https://open.spotify.com/embed/playlist/5SODMRdkID6lPk6giuR9vm" width="500" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+		answer : "No answer"
+	});
+
 quests[++questIndexBuilder] = {
 		name : "1992",
 		hoverover : "How much do you know about 1992?",
