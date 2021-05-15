@@ -471,6 +471,54 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/18NjaqeBIg7Wb4dicTWCSj" width="501" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
 	answer : ""}) ;
 
+quests[++questIndexBuilder] = { //
+		name : "Wee Donkey",
+		hoverover : "Line of Duty or Line of Doody?",
+		splash : {splashType :  splashTypePictureAndText , splashText : "How much do you know about AC-12 and the wee donkey?", splashImage : "https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/14/2016/04/horse-urinating-F2XJGG.jpg" },
+		tags : "2021-5-15,InnerWheel,surfers,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "In Season 1, AC-12 were investigating this man. What's his name?"+ Table4ColumnStart + "DCI Nigel Morton</td><td>DCI Tony Gates</td><td>DCI Ian Buckells</td><td>DCI Spectacles McTesticles" + Table4ColumnEnd,
+	image : "https://m0.joe.ie/wp-content/uploads/2020/02/11112814/Screen-Shot-2020-02-11-at-11.27.58.png",
+	answer : "DCI Tony Gates", answerSpeak : "D C I Tony Gates"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "This woman is murdered and the suspects' fingerprints are placed on the weapon. What is it?"+ Table4ColumnStart + "Gun</td><td>Glass</td><td>Knife</td><td>A Donkey" + Table4ColumnEnd,
+	image : "https://m0.joe.ie/wp-content/uploads/2020/02/11113047/Screen-Shot-2020-02-11-at-11.30.05.png",
+	answer : "Knife"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Of these options, what's unique about Morton?"+ Table4ColumnStart + "He has never fired his weapon</td><td>He works with a dog</td><td>He carries a cane</td><td>He used to behave badly" + Table4ColumnEnd,
+	image : "https://m0.joe.ie/wp-content/uploads/2020/02/11113247/Screen-Shot-2020-02-11-at-11.32.37.png",
+	answer : "He carries a cane"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "What's Cottan's nickname in the criminal underworld?"+ Table4ColumnStart + "The Bookie</td><td>The Caddy</td><td>The Mole</td><td>Dot" + Table4ColumnEnd,
+	image : "https://m0.joe.ie/wp-content/uploads/2020/02/11113324/Screen-Shot-2020-02-11-at-11.33.14.png",
+	answer : "The Caddy"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Trotman dies in the hospital. How?"+ Table4ColumnStart + "Thrown out of a window</td><td>shot by a sniper</td><td>Injected with poison</td><td>Eats canteen food" + Table4ColumnEnd,
+	image : "https://m0.joe.ie/wp-content/uploads/2020/02/11113457/Screen-Shot-2020-02-11-at-11.34.45.png",
+	answer : "Thrown out of a window"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "DCC Dryden tries to quash a crime his wife committed. What was it?"+ Table4ColumnStart + "GBH</td><td>Penalty points</td><td>Public intoxication</td><td>His Haircut" + Table4ColumnEnd,
+	image : "https://m0.joe.ie/wp-content/uploads/2020/02/11114352/Screen-Shot-2020-02-11-at-11.43.40.png",
+	answer : "Penalty points"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "This lady is...?"+ Table4ColumnStart + "DCI Roz Huntley</td><td>DCI Lisa McQueen</td><td>DCI Jodie Taylor</td><td>DCI Handy Thandie" + Table4ColumnEnd,
+	image : "https://m0.joe.ie/wp-content/uploads/2020/02/11115353/Screen-Shot-2020-02-11-at-11.53.39.png",
+	answer : "DCI Roz Huntley", answerSpeak : "D C I Roz Huntley"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Complete the quote: 'I didn't float up the ... in a bubble.'"+ Table4ColumnStart + "Foyle</td><td>Bann</td><td>Lagan</td><td>Liffey" + Table4ColumnEnd,
+	image : "https://m0.joe.ie/wp-content/uploads/2019/05/05110022/17408758-low_res-line-of-duty-series-5-39684a41.jpg",
+	answer : "Lagan"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "We all got a shock with the way that Ted spells definitely, how does he spell it?"+ Table4ColumnStart + "Definatelly</td><td>Definately</td><td>Definattely</td><td>It" + Table4ColumnEnd,
+	image : "https://m0.joe.ie/wp-content/uploads/2020/02/11120806/Screen-Shot-2020-02-11-at-12.07.52.png",
+	answer : "Definately", answerSpeak : "D e f i n a t e l y"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "What does Ted Hastings hate?",
+	image : "https://anunfinishedmasterpiece.files.wordpress.com/2014/12/bent-penny.jpg?w=300&h=200",
+	answer : "Bent coppers"}) ;
 
 
 /*
