@@ -521,6 +521,157 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	answer : "Bent coppers"}) ;
 
 
+
+quests[++questIndexBuilder] = { //
+		name : "Inventions",
+		hoverover : "High praise for men tinkering in sheds",
+		tags : "2021-5-22,InnerWheel,surfers,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "What were the world's first wheels used for?"+ Table4ColumnStart + "War Chariots</td><td>Carts</td><td>In toys</td><td>To help potters" + Table4ColumnEnd,
+	image : "https://res.cloudinary.com/dk-find-out/image/upload/q_80,w_640,f_auto/l-ed107_inventions_012g-c_dhgfqu.jpg",
+	answer : "To help potters"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "The very oldest surviving written records come from which country?"+ Table4ColumnStart + "China</td><td>South America</td><td>India</td><td>Mesopotamia" + Table4ColumnEnd,
+	image : "https://res.cloudinary.com/dk-find-out/image/upload/q_80,w_640,f_auto/MA_00757115_lzz5si.jpg",
+	answer : "Mesopotamia - over 5000 years old"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "What is the name of this counting machine?"+ Table4ColumnStart + "Anubis</td><td>Abacus</td><td>Addis Ababa</td><td>Abracadabra" + Table4ColumnEnd,
+	image : "https://res.cloudinary.com/dk-find-out/image/upload/q_80,w_640,f_auto/MA_00151260_stsoxp.jpg",
+	answer : "Abacus"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "What were the first steam engines used for?"+ Table4ColumnStart + "Powering tractors</td><td>Powering early computers</td><td>Pumping water out of mines</td><td>Powering trains" + Table4ColumnEnd,
+	image : "https://res.cloudinary.com/dk-find-out/image/upload/q_80,w_640,f_auto/l-ed107_inventions_032-33-c_svrlth.jpg",
+	answer : "Pumping water out of mines and to fill canals in the 17th Century"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "In which century was the bicycle invented?"+ Table4ColumnStart + "1600s</td><td>1900s</td><td>1200s</td><td>1800s" + Table4ColumnEnd,
+	image : "https://res.cloudinary.com/dk-find-out/image/upload/q_80,w_640,f_auto/14607103_mnl0xd.jpg",
+	answer : "1800s - by German nobleman Baron von Drais in 1817"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Hieroglyphs are an early form of writing invented in which country?"+ Table4ColumnStart + "Mesopotamia</td><td>Norway</td><td>Egypt</td><td>China" + Table4ColumnEnd,
+	image : "https://res.cloudinary.com/dk-find-out/image/upload/q_80,w_640,f_auto/MA_00066077_audutb.jpg",
+	answer : "Egypt"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "What is this - the first of it's kind?"+ Table4ColumnStart + "Music player</td><td>Telephone</td><td>Flugelhorn</td><td>Doorbell" + Table4ColumnEnd,
+	image : "https://res.cloudinary.com/dk-find-out/image/upload/q_80,w_640,f_auto/MA_00689367_ug7sys.jpg",
+	answer : "Telephone"}) ;
+
+
+quests[++questIndexBuilder] = { //
+		name : "Inventors",
+		hoverover : "Little tinkers",
+		tags : "2021-5-22,InnerWheel,surfers,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?",
+	image : "https://i2.wp.com/www.plethorist.com/wp-content/uploads/2019/01/Nikola-Tesla.jpg?resize=646%2C870&ssl=1",
+	answer : "Nikola Tesla"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this, who had a 'war of currents' with the previous person?",
+	image : "https://i0.wp.com/www.plethorist.com/wp-content/uploads/2019/01/375px-Thomas_Edison2.jpg?w=375&ssl=1",
+	answer : "Thomas Edison"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this proper Charlie, who made my job possible?",
+	image : "https://i0.wp.com/www.plethorist.com/wp-content/uploads/2019/01/charles-babbage.jpg?resize=768%2C480&ssl=1",
+	answer : "Charles Babbage"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this youngster",
+	image : "https://i0.wp.com/www.plethorist.com/wp-content/uploads/2019/01/685px-Einstein_1921_by_F_Schmutzer_-_restoration.jpg?w=685&ssl=1",
+	answer : "Albert Einstein"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this",
+	image : "https://i0.wp.com/www.plethorist.com/wp-content/uploads/2019/01/Bill_Gates_2018.jpg?w=701&ssl=1",
+	answer : "Bill Gates"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this, who featured in a question last week",
+	image : "https://i1.wp.com/www.plethorist.com/wp-content/uploads/2019/01/Sir_Tim_Berners-Lee_cropped.jpg?w=570&ssl=1",
+	answer : "Tim Berners-Lee"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who are these 2?",
+	image : "https://cramer-inventors.weebly.com/uploads/8/9/0/0/89003716/04-stevejobs-5210467_orig.jpg",
+	answer : "Steve Jobs and Steve 'Woz' Wozniak"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this",
+	image : "https://www.thoughtco.com/thmb/6ztNtwyw6kSUjzJcvg_VGI742jk=/2047x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/27409800708_865bed0ce6_k-7bb56730b23f4f72904ea65eeddd22c8.jpg",
+	answer : "Hedy Lamarr"}) ;
+
+quests[++questIndexBuilder] = { //
+		name : "Eurovision",
+		hoverover : "High camp high jinks?",
+		splash : {splashType :  splashTypePictureAndText , splashText : "Good evening, Europe!  This is London calling.  How much do you know about the greatest high-camp celebration since Ian opened a bottle of Rose?", splashImage : "https://i.guim.co.uk/img/media/97d22b42db3e0784300d5b9528579a306500e543/0_0_4000_2400/master/4000.jpg?width=1020&quality=85&auto=format&fit=max&s=7b38d0defb041486567233edfd5ede13" },
+		tags : "2021-5-22,InnerWheel,surfers,saturday,specialDay",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "Can you spot the winner of the last contest to be held, in 2019? His name was Duncan Laurence?",
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3eFBFKXOZXNDrAX29XmQ2cdT2kjyg7OdcRz7MQk1yiaYVDrZae70DIPkQXxXcxFTZnFnu74heeQs3bKaLePRjMHS4kutxUl7vy99Sl0FNMRo2bgVfpfP1PpPRgpyYDgK6AVBKRlJusPuKdZryVFAIhsig=w498-h317-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3eb2HbPg1jD6kl1kP2pnClueoJONgad09rb88kF-HfLGW8A_-OBlx8utdERjFCbZwWEmJWwJzAv8rgPrth-eCHvY1c0MVOxkDhsdFL_vU2GqAzdJmMv6BF0cWEK6_sL42qhmX_IYXpifRYu9luO7-tjsQ=w508-h403-no?authuser=0"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "Which of these acclaimed international stars has competed in Eurovision?"+ Table4ColumnStart + "Madonna</td><td>Celine Dion</td><td>Vanessa Paradis</td><td>Kate Bush" + Table4ColumnEnd,
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3eAwZkZo8OKHZ2w7w3xrTCZJVEixMthB5JlZ0GRCchmj_RN0UOSpXIBynWlaqGx1UMxoA8edZ06WvuytImCkgh7GlbXxkHs8AAv6G5tSizaFD3nBYwBFnlzJr-P0RA4qKfGbQnOOkiAl0eSuF7DUwsm0g=w505-h324-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3cSFmBPI97auLsacNT8Z0Otw2kX0MKT89O18suQoaPQXsD14ICyZA8PrdI9uI6mqodYc0FYVO1RHUmpHvMHrZwLw2KSF54BzDvTRfV5mlydtexFc1goWgYv4e1aCCFslge_vKyJ2ansr0HPyjEZVI1xPA=w502-h406-no?authuser=0"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "When was the very first Eurovision song contest held?"+ Table4ColumnStart + "24 May 1956</td><td>12 March 1958</td><td>29 March 1960</td><td>23 November 1963" + Table4ColumnEnd,
+	answer : "24 May 1956"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "James Newman is the UK entry in 2021. But what is his song called?"+ Table4ColumnStart + "Firefly</td><td>Flames</td><td>Embers</td><td>Dragonfire" + Table4ColumnEnd,
+	image : "https://i.guim.co.uk/img/media/d7056427a0e5c7417b20a6a2b2ee082b2a86e6db/330_612_2870_1722/master/2870.jpg?width=620&quality=85&auto=format&fit=max&s=14d782675fe59c538c020dea3975c2a3",
+	answer : "Embers", answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Which country sent a bunch of grannies to represent it in 2012?"+ Table4ColumnStart + "Russia</td><td>Albania</td><td>Armenia</td><td>Azerbaijan" + Table4ColumnEnd,
+	image : "https://i.guim.co.uk/img/media/2e8cb807fa24102f29120a55ad4d2227ef33601e/0_16_3543_2126/master/3543.jpg?width=620&quality=85&auto=format&fit=max&s=b150cb53e3db5ea48941cf86256d1ffe",
+	answer : "Russia"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "'Be it a mug, a goblet, a cup, a glass, or flute, raise it and toast the memory of the man who was and always will be the voice of Eurovision... the late great, Sir Terry Wogan.' In the UK, during which song is it a tradition to toast Terry?"+ Table4ColumnStart + "3rd</td><td>5th</td><td>7th</td><td>9th" + Table4ColumnEnd,
+	image : "https://i.guim.co.uk/img/media/bf26b4b62455a89c65a0b3d876919ae885b803cc/588_287_1572_943/master/1572.jpg?width=620&quality=85&auto=format&fit=max&s=3676850af1c0196b70011e1b66413feb",
+	answer : "Ninth"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Waterloo by Abba is arguably Eurovision's most famous winning song. Which year did it win?"+ Table4ColumnStart + "1971</td><td>1972</td><td>1973</td><td>1974" + Table4ColumnEnd,
+	image : "https://i.guim.co.uk/img/media/09ec330fc49484951512934999588bee2a06a8ad/0_74_2048_1229/master/2048.jpg?width=620&quality=85&auto=format&fit=max&s=e6744e9aeab1978149b307c44a93de51",
+	answer : "1974"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Bucks Fizz won the contest in 1981 with Making Your Mind Up. How many number one singles did the original Bucks Fizz line-up have in the UK in the 1980s?"+ Table4ColumnStart + "0</td><td>1</td><td>2</td><td>3" + Table4ColumnEnd,
+	image : "https://i.guim.co.uk/img/media/9f9a85db44e67e616e6a88d3c1909bc8d2000408/0_412_4110_2466/master/4110.jpg?width=620&quality=85&auto=format&fit=max&s=a38867b596a1e2adf26525cf7bd8a169",
+	answer : "3", answerSpeak : "Making Your Mind Up, The Land Of Make Believe, The Camera Never Lies"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Verka Serduchka has become a Eurovision icon. But which country did they represent in 2007?"+ Table4ColumnStart + "Belarus</td><td>Ukraine</td><td>Austria</td><td>Poland" + Table4ColumnEnd,
+	image : "https://i.guim.co.uk/img/media/8604d869debfb5f54ea5ba4748ab4b13b381b6d2/0_59_3000_1800/master/3000.jpg?width=620&quality=85&auto=format&fit=max&s=b5eefdcb63c2baa97f8571348d308048",
+	answer : "Ukraine"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "In what year did Australia first compete in the Eurovision song contest?"+ Table4ColumnStart + "1997</td><td>2009</td><td>2015</td><td>2017" + Table4ColumnEnd,
+	image : "https://i.guim.co.uk/img/media/99c910c007b163b49bcb6467e6c6e55d3ec97e0d/0_282_5760_3456/master/5760.jpg?width=620&quality=85&auto=format&fit=max&s=cc24c75a1e35243e0b8226feaad28211",
+	answer : "2015"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "By the time he represented the UK in 1968 with Congratulations, Cliff Richard had already scored more than forty Top 40 hits in the UK. Where did Congratulations finish in the Eurovision song contest that year?"+ Table4ColumnStart + "4th</td><td>3rd</td><td>2nd</td><td>1st" + Table4ColumnEnd,
+	image : "https://i.guim.co.uk/img/media/a0f33bf4c0753f923574a1b4de001e3e0ec96ed3/0_25_1643_987/master/1643.jpg?width=620&quality=85&auto=format&fit=max&s=dff4fbbcb2436c9d7d93d4c026579963",
+	answer : "2nd"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "The United Kingdom has hosted the contest in five different cities. Which of these has not had the honour of holding the final?"+ Table4ColumnStart + "Brighton</td><td>Birmingham</td><td>Glasgow</td><td>Harrogate" + Table4ColumnEnd,
+	answer : "Glasgow"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "This lot won Eurovision in 2006 for Finland with Hard Rock Hallelujah. What were they called?"+ Table4ColumnStart + "Loki</td><td>Lordi</td><td>Hokie</td><td>Kokie" + Table4ColumnEnd,
+	image : "https://i.guim.co.uk/img/media/63db2ebe8823f34af7655238fc95f7be3b4eaaf4/36_51_2149_1290/master/2149.jpg?width=620&quality=85&auto=format&fit=max&s=5b93ccc2f460f625a6948e6c5daef3ad",
+	answer : "Lordi", answerSpeak : ""}) ;
+
+
+quests[++questIndexBuilder] = { //
+		name : "EuroAudio",
+		hoverover : "Songs from Eurovisions past",
+		tags : "music,2021-5-22,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/0GL24sREHu8B5VjTfRT3od" width="501" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+	answer : ""}) ;
+
+
 /*
 quests[++questIndexBuilder] = { //
 		name : "Test Alt speak",
