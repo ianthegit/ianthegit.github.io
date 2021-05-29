@@ -672,6 +672,60 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : ""}) ;
 
 
+quests[++questIndexBuilder] = { //
+		name : "In the Bag",
+		hoverover : "Guess what is in the bag",
+		tags : "2021-5-29,surfers,saturday,InnerWheel",
+		splash : {splashType : splashTypePictureAndText , splashText : "Easy, just guess what's in the bag.  Most of these are from Down-Under, but the bag's aren't green...", 
+			splashImage : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/2017%E2%80%9318_W_Ashes_A_v_E_Test_17-11-10_Perry_portrait_%2802%29.jpg/220px-2017%E2%80%9318_W_Ashes_A_v_E_Test_17-11-10_Perry_portrait_%2802%29.jpg" },
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What is in this bag (this one from Norwich?"  ,answerSpeak : "Artery clip", 
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3dN97pYq6o-J44yg0K5EAp3WXcjqvJJygRCv8JdZbapUE0xF7G08op7tEHfnn5hSq_jqhPMwDP20kW4JFLKkT1aOAeYj7bjxGJDcZg2Ai7rwf4ulKmQrkKVMSPzg832ahrWo4Z4F23MMGDJb7LnX5abDA=w654-h871-no?authuser=0"	, 
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3fVSBPXRPZLQ9nYnQg5qZQAKnHBDfLD0VIGnYXMOYkcDMV-s9QY0gR_szqwCcuyz1KHqrzdlzMEAI4s-_JVxYhCRCmNQ2B1WP-qaNHJZV8vfykhXKcxF5SMIdcmOTK00FHvvqogg__UYdLtCA-bihdcyQ=w654-h871-no?authuser=0"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What is in this bag?"  ,answerSpeak : "Hand Sanitizer", 
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3fHKt83uIuDct8UVEYnqicQa5RyfywOGR-6JCsOwvFeUJOSJW3pVAQ-5_yeygQMWk5osI3KP0R2GR6vS5ewAgwmOeg8pziPXk1IMKPHGdAmE1HHOvnnM1Tw2VRHzMtaMRmlLOl7FajgeKWYyqlBrsSFnQ=w654-h871-no?authuser=0"	, 
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3cCy1TO7JRN9QHt6M8JeAQgRxjWheHNXoDxNXFAbdY-93tsAB4IJ9yrnaiDFqUAWkmgOfIgT-U0pcGVANgPeEaYPYvVOAH4Bz6ymcmePgoc2dHexDzBUq3MfgyVZcHrDh_8h0NlMChglyFG1B8PXN4Dng=w654-h871-no?authuser=0"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What is in this bag?"  ,answerSpeak : "Left thong", 
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3dmx5b2QHh0r0wPUfrnD28-Nq24geXbBTJ3fY6Ola5Qi-2ODG7tK-snVW5Oof1KjNHgfrvfB9mbwym0aOVL-65X5bRmkTBkAe7I_BOqW_Ic-TdbhKnUD1eHQbha_dq32g-WI4FzPc4LoYM7a8XNIEH_jg=w654-h871-no?authuser=0"	, 
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3eXXl7vW_OaEEy8gFlQAvmPg1L7TOxynNXRcOjkxy56XWP11VDeZZDx7NxZddOUyT_gVY10W-yNgbNlT9TLKD1LvsA74kmicTMX7DBmWXDKuC3cxCF0OTCy9iwEZv2l_2EzwEI5LqtdiAY2L5BmVUw7Lg=w654-h871-no?authuser=0"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What is in this bag?"  ,answerSpeak : "Box of face masks", 
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3dHh8zTsNwEidvN9MrCWbCU8mU2rP8TiIWmPK1IKdzR2X35olR2MsfBe4cB575xVWsX5kWHJra_xtftNvS_yc-w4ODgAhnu4mo8xqieKNSQTCYjG7rDMRspQ8DIPG05DjnkoXamiautoSzGGFjjldTJzw=w654-h871-no?authuser=0"	, 
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3fXzcEz6A8NKHBgbfGl2BQEpt5suDnpidMieNAnDhVb7qMMdFJbHGK51l8L52jzhPcIGDcfBYjwkLlVHH46pfpwAo6thQAR65g0DG1g0-OPwmEiqIoEppScWb9WXninqtkLmzswDw4wa3F-vUPlkgujdw=w654-h871-no?authuser=0"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What is in this bag?"  ,answerSpeak : "It's a hat yer great gallah", 
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3deFqXzoVcrUE73EwsU4RlghNUkgRspkEW1GrG3Eh4NhaLDX5DSf6ro1d1bXCFWXG2tZ1e1vQ0RHgm-zRKgwpgYHcmESciZE8XZWLISfETD77AXFJt6l1eo9yvI1vdQ8TmpOaNtpbSyIUZD8VNV72FfPA=w654-h871-no?authuser=0"	, 
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3c4XqIyIRz38YPyIqE-shNA5wcoXji31WUelMbH_wxzGqqS6Kt7crLMMpPECdSjsEOJ2h1km7_igRMC3hYW0sUQXIX9kEzm3bidUeG-t6uRelWzkBW2tcot_npFR9l2YcRfGu2znTxz_RUX7qU5EBhKLQ=w654-h871-no?authuser=0"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What is in this bag?"  ,answerSpeak : "Sunnies", 
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3dSpbmo2t-UTpSJW_Dnep1WR5Ua0fdyo1uchS_s5VOiDNWxcalgWU3hpC-dX867dAUEOINW3ZGiyFIG0hQoOn0j1EoJQO7k2jULUt7BfKRH3eZs8cDNyqrotyFXEvNHPGTsMORScQS_UJARi_3sJww4ww=w654-h871-no?authuser=0"	, 
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3cunTNfQ1zC0lKz4ylXCOeM01LwScQfFQqf9Cje11kRHduJC-WlEjnHmw-squScE7yyTPDzPo_aRN_38UHXDAgSagKPMAxSa_wOlf5l4pObh2NS_z4xJ4i8LtlWRecREXXrJpgVUL_VLD_FcV1Ml94YKg=w1162-h871-no?authuser=0"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What is in this bag?"  ,answerSpeak : "That's an avo mate, I eat them in the arvo", 
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3eSKB5fAvzFyAaOiIj_NQcJSTQ02tnh4SzJf0MyHn69WkZiDC6GMFr1B49Y7OIU7rGiYFpXIOf14AVf_GbzSsy42F79b2TL6J4s7oxiFosx3oWRjqRjLBt2yO9Wv16Iv8Q8FrA8lFrJtwOkvqlOlLDxgg=w654-h871-no?authuser=0"	, 
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3fqh1ZG31sFvGk1YnVlFUhZUSeVfs2U9I8m1AXyWWX2Unu-hC2BE2kOlXO4Yg4SuNi7HU-bT3esPRV4-kjx69mejmXmw6R4vuWjDXMPYWWnALyRqvXN2GhwCh5QMMibn-SorsG0_jRmpdfsyrI6YbXGsg=w654-h871-no?authuser=0"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What is in this bag?"  ,answerSpeak : "A book", 
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3f9Wgqt64XCd2ZJX3DfMXK98t3I1hNiVWiB3Vuyk8sA2HoKZ7C2eppNX_Wq2Gag_Wn5KFFgaDd7rveK8zLbXO39YYl7VkTvpdVVajpoIaUPvuVqUpQ75_zbo_YvETeNAACZf-fXZ2-dQ5HuzN7wDbqjZw=w654-h871-no?authuser=0"	, 
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3f3MVM3XUYu_AIF_1HBhX5o8cv-5W1Op0nS3dpyfOsMs1opf6Ki4lC3j582gF2LaycwOTWklUCTeraJ7Qlhsv8nm1pfbZYrbqFCnVWiXxSyvd6uqpkSYYGWRI1W6b86CeMMlLse8W0GeXWLMbisFyQRxw=w654-h871-no?authuser=0"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What is in this bag?"  ,answerSpeak : "Mother's ruin", 
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3e8_c38I6VHJy6Gorw3yGOpTrSnaS-D-FYw8dEPKBuNCSD59a9DOK3Xjlm9fqtmsX2IZjmSTfSBSUNIblM9AzUKI2g9K0_6ob4eQKzKLMwGAtr5GeBHg65Rolki_YZzrTvoW51iFooklw2BCkuTn3ihHA=w654-h871-no?authuser=0"	, 
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3f_ltg2cHxV41oHZiEcsS17WeDOjQNXK8biR1A8_d9TIb7JC4thc_v2jSGf7pWhzpcsFe-UoT1KifmLgNEvECM3RRdXwogeJXxWUdQRnmFZLSaKDwuaIMZlNNuVDV1GOXYDhMNAL6ft-kt4JRi3FBGkpQ=w654-h871-no?authuser=0"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What is in this bag?"  ,answerSpeak : "Velvet Mushroom decoration", 
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3e7jqN6Gtg8RLUipHjcR0dpNlYrYEBtzpyxg08nRWymb2J4hgeJ9vWxvutOPlUFO2G6BD8GS0IvICWbvxbFMVijnB9AXiR1OXVLbjOj5hq8Gej-7GluebqvTsFHGA0lFSpFxja_RakgCBkr6bHT1PYu4w=w654-h871-no?authuser=0"	, 
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3dsztigE9ma2QI4HEcccPvr1xsczJf8wIb5hf4V8Ii04K14635vi666itWIwOADTM7-R1H9pcj_cWbUMpzBZEQHFF8MxLzn1EJAjBiu7SvtLjJjWOYyQSSz3M2hV5-UFilFZ5BTtyUygP6AwepdiIH5xA=w654-h871-no?authuser=0"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What is in this bag?"  ,answerSpeak : "It's a barbie mate, for shrimps", 
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3fUd8AQoaS5PI1VHwQG_SBFypgA1yUGQZBTuGtL6y67lXjWpl7VRH7uiLHJS2GNGmBfzLHUasOlOD-Xf2eupGA1ix9XeIV5oa3RAzykCVtEnS5n-4S5uHsTR83S4Fyn6uW_rRzyIsgQi-3kdIA0V-DHpA=w1162-h871-no?authuser=0"	, 
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3criBW3g_KtIKdm8crBDNXXtvUZ6HkzFpshAbYySN5HJ3TiBvEspFnKxBzUGO0Q13zZvbvCN6mh2ec2wqxPzhH0fmIFiOfwTkSWDbJtLOIWx_4onKPQ9IbQSUF_ojqU1XwQmThWhJWfFY_eeSe283gVig=w1162-h871-no?authuser=0"}) ;
+
+
 /*
 quests[++questIndexBuilder] = { //
 		name : "Test Alt speak",
