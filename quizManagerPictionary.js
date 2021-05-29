@@ -514,6 +514,35 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	image : "https://lh3.googleusercontent.com/pw/ACtC-3fYTsF2Bm2ZCgOoCcH1vx9E5FlbNcHnljMFA-PFUBQVxOunP-urxbBKmxYJM_Y0jEVf6uNtylJHEmTGOf2BtXLn1LQYbNpPob33RPPqu2PPDTeYD8prItXaqQeIHulzcD3enlGJsyBi5SljV100CRMhEA=w702-h472-no?authuser=0",
 	answerimage : "https://cdn.britannica.com/74/6074-050-B5DDC4E0/Austria.jpg", answerSpeak : "Austria"}) ;
 
+
+
+quests[++questIndexBuilder] = { //
+		name : "Pictionary 18",
+		hoverover : "Pictionary on the theme of Dinosaurs",
+		tags : "2021-5-29,pictionary",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3cVVU_i2sEiH7DigDd1HL0-VzvshnG7ldUeKhvVnPDmQjZ7k0xRDHPEwZWJCg-wX3Z1XaqwuYCy6Fxw6NwLjXqAPSVdmADJZml37aW2gmRpH_QcDFdLB4Co0YEtFWNSCZxl6_plc6Wj3N4bcKgH-MKWtw=w514-h345-no?authuser=0",
+	answerimage : "https://nayturr.com/wp-content/uploads/2020/06/pterodactyl-june182020-min.jpg", answerSpeak : "Pterodactyl"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3cKwO-PUiWC4AqSthl2jdg77rzxFsPzjYyaZe1C7jvQvhmQy70WUd_hSS4xXKSBbVv2iTdvujcjoBtI5ZKGJR0r62GmJHcdfLQ4joYkMkFh7JPOmaiEQVqJjD3gTdbfuPEARWhSkeF-RV2AGNHuMgeHow=w746-h871-no?authuser=0",
+	answerimage : "https://nayturr.com/wp-content/uploads/2020/06/diplodocus-june182020-min.jpg", answerSpeak : "Diplodocus"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3eWchAsJmunv4izdQEWtMONRsHtWctyk0KBP8fFXPxd45PEeyVa1KbGKUsCd3Ou-YxXgBeLpeaNWNv9g40XuDFndW5aeZEF88yzdD4Yt7FQyBzAu2yeM_53PlKkEnx39yNFLRtwO3k_uD42J8SC9q7CRg=w747-h632-no?authuser=0",
+	answerimage : "https://nayturr.com/wp-content/uploads/2020/06/tyrannosaurus-rex-june182020-min.jpg", answerSpeak : "Tyrannosaurus Rex"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3dcqKsIceDik6kX1pvk8FV8K4Gug7F2tGfu8Y38bNQ-BV9MuS-x--c4x_XONWMsCHA-vrm4tdhX5wX9aeUQFvKM0YMBCAwXuzImy61-ybPbwQ2oCM8FZDz_laYC2qjuLUYPJexlfbmr-X4CfXnOmrDXlw=w748-h484-no?authuser=0",
+	answerimage : "https://nayturr.com/wp-content/uploads/2020/06/stegosaurus-june182020-min.jpg", answerSpeak : "Stegosaurus"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3eV6Qx7CEGsbYtFV836UjG_Oul4ip_8b0ncur4_2xL2Dax8WidwEEiF-M5WPfxYuCm9UhUdK2XFQMGrNLhbxBqW0hZAgTfQ1krYjob-P4rbxBYyiMd5hYv6HRriCG1tuqgsMW4h1tMqOjmF4RhPDd6oaQ=w445-h698-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3cRLcXw3UQLdM_F9iZwOTTRxtz_wtJXOIRID1txytvUi_WLNTgJKVFowVRbT2XaHjtpouT13ArNPX19RMCqmXj47Y1CSNUpwVEuheY-YbTLOL1w-XZrcsGpoAbknQYC-Tvh6uWmIa8LIzfrCFyadAIFqg=w655-h871-no?authuser=0", answerSpeak : "Ian"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3eCD_pbxXZYE3y2mmknbVPmIv5-mhFwT1fOt-OZx-CFL7Q8sglUt2yhyIMH0EzN2FdnefCZYIoi7LpMoWExrtr2UR20VbQpuYnqQJGzus0K5asvKNWNzXQ1cDLyY_X1Y4CZ2SzfLFjK81AG1mCbW8FzQg=w813-h595-no?authuser=0",
+	answerimage : "https://nayturr.com/wp-content/uploads/2020/06/triceratops-june182020-min.jpg", answerSpeak : "Triceratops"}) ;
+
+
+
 /*
   
  quests[++questIndexBuilder] = { //
