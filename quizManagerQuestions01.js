@@ -774,6 +774,55 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	image : "https://lh3.googleusercontent.com/pw/ACtC-3faiNH2eb-Ad4HJRP5WBX-nxWvVhN00AXL0I7UyhD2_XCx1eePwNKNlMOKl-vOAtbLNX_T8pDzxUckXLzRZQz1Rrg2jQLJMW9RV0N_kvGl8e_HA_6u_xM3Sn-fjI6AEAewKEUE8Pcdg9pdIaFiGwJQx8w=w1162-h871-no?authuser=0"	}) ;
 
 
+quests[++questIndexBuilder] = { //
+		name : "Shorts",
+		hoverover : "Tiny Dancers?",
+		splash : {splashType : splashTypeText , splashText : "Summer has arrived today, and I'm wearing shorts.  Who are these short people" },
+		tags : "2021-5-29,InnerWheel,surfers,saturday,specialDay",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?", answer : "Kit Harrington (5'7\") ",
+	image : "https://wl-brightside.cf.tsp.li/resize/728x/jpg/0f3/df9/9704e05164bbe7e232489d7f4f.jpg"	}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?", answer : "Elijah Wood - 5'6\"",
+	image : "https://wl-brightside.cf.tsp.li/resize/728x/jpg/08d/23b/bdfb5354fc9f6c6fb07376feb9.jpg"	}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?", answer : "Daniel Radcliffe - 5'5\"",
+	image : "https://wl-brightside.cf.tsp.li/resize/728x/jpg/127/143/f3124157819c7019066421cd4c.jpg"	}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?", answer : "Bruno Mars 5'5\"",
+	image : "https://wl-brightside.cf.tsp.li/resize/728x/jpg/1e0/edd/3d58db5dd88e85e4c23131fd93.jpg"	}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?", answer : "Kevin Hart 5'2\"",
+	image : "https://wl-brightside.cf.tsp.li/resize/728x/jpg/5ec/f7d/69f8475a4289bf8269d645fc50.jpg"	}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?", answer : "Reese Witherspoon - 5'1\"",
+	image : "https://wl-brightside.cf.tsp.li/resize/728x/jpg/ce8/27e/2261085f4abdeac90aa1bac40e.jpg"	}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?", answer : "Jack Black - 5'6\"",
+	image : "https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8yNTE2NDEwNy9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTYyMzEwNDM4MX0.NCPIOEtXurA-LomIRk9z_f-DezE_mhAcodMjolVUoVE/img.jpg?quality=80&width=750"	}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?", answer : "Ed Sheeran - 5'8\"",
+	image : "https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8yNTE2NDExMC9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTY1OTY3NjI3OX0._7biqoTP0QeznuqPuzag-4r9JDPVl93bda_AC957Ke0/img.jpg?quality=80&width=647"	}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?", answer : "Danny DeVito - 5'0\"",
+	image : "https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8yNTE2NDExMS9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTY1NzEwNDY2NH0.s9B9OS1zKCFr1hAYzfRND9I93stqoCuRRuQX7Tr1fTw/img.jpg?quality=80&width=672"	}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?", answer : "Billy Joel - 5'5\"",
+	image : "https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8yNTE2NDEyMi9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTY3NzYzMTUyNn0.Rpw-U5dX2YAjoeRksb-5_BP6BqfEwvON6YV8u_v3n5Y/img.jpg?quality=80&width=750"	}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?", answer : "Johnny Galecki - 5'5\"",
+	image : "https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8yNTE2NDEzNC9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTYzOTU4NDA2N30.FxPOomsHrXPvGZUbisivRHX9oDdfJrcyAFoHTj7X_Xc/img.jpg?quality=80&width=750"	}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?", answer : "George Lucas - 5'6\"",
+	image : "https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8yNTE2NDEzNy9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTYyNzE4MjI1OX0.baEuzJNy08xo4Dl_XJR16HmQ542FQXSDkJnr_ycveMg/img.jpg?quality=80&width=750"	}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this (Bonus point - who did he play in the Harry Potter movies)?", answer : "Toby Jones - 5'5\" - Dobby the house elf",
+	image : "https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8yNTE2NDE0OS9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTY1NDY4MTg0NX0.p2PSgX9jUdxUR-4ZegxQtIs-7SOH_GLkQTVe2YEDBXI/img.jpg?quality=80&width=683"	}) ;
+
+		
+
 
 /*
 quests[++questIndexBuilder] = { //
