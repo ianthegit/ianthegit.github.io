@@ -823,6 +823,18 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 		
 
+quests[++questIndexBuilder] = { //
+		name : "Summer Sun",
+		hoverover : "Songs about summer and sun",
+		tags : "music,2021-5-29,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/32fTrAgxwq7GWWSblhAMnl" width="501" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+	answer : ""}) ;
+
 
 /*
 quests[++questIndexBuilder] = { //
