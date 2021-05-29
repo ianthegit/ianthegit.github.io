@@ -726,6 +726,55 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
 	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3criBW3g_KtIKdm8crBDNXXtvUZ6HkzFpshAbYySN5HJ3TiBvEspFnKxBzUGO0Q13zZvbvCN6mh2ec2wqxPzhH0fmIFiOfwTkSWDbJtLOIWx_4onKPQ9IbQSUF_ojqU1XwQmThWhJWfFY_eeSe283gVig=w1162-h871-no?authuser=0"}) ;
 
 
+quests[++questIndexBuilder] = { //
+		name : "Lost",
+		hoverover : "Where am I?",
+		splash : {splashType : splashTypeText , splashText : "Guess where I am.  The more specific, the more points" },
+		tags : "2021-5-29,InnerWheel,surfers,saturday,specialDay",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Where am I?", answer : "Woodbridge, 1 point.  The Cherry Tree, 2 points",
+	image : "http://www.thecherrytreepub.co.uk/wp-content/uploads/elementor/thumbs/Bar-nwpjho9udi5gptzpniqd57tpj36ln9coml71iklcog.jpg"	}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Where am I?", answer : "Italy, 1 point.  Venice, 2 points",
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3dbWAhhOvqJf2NK91YfH7AIsz-PWf95FZ1DtYxugGYCQEj4WRIY6LnbytIqahLpCgfdkQi7NlJaWBE1iB7XliwH88c9IIZxF_XtmhdyDJ6n4DDVyMA47nAo8uejq3BLCIlaihZFOFO3xo0VlbQS_rFyXA=w1162-h871-no?authuser=0"	}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Where am I?", answer : "A zoo, 1 point.  Colchester Zoo, 2 points",
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3fv7xz9MG3n_n_fvC5eEuVdRW9Cc_T1MrORxttvVcmmbZC-Sat-hIhsF-CM8_3BN0TFlOo9GoRXKJqbQ1f_Dfn2Gsml1Cv9DgwWr6P23FIl-Z-hj8DdewOgfR2fay3hXh2bpiXbzDXMxsynkM2GndY4oA=w1162-h871-no?authuser=0"	}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Where am I?", answer : "Yorkshire, 0 points.  South Yorkshire, 1 point.  The Peak District, 2 points",
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3c_x-hSIV4BpJrLi324EAHzPMeJ8WAtfOeH9uXD4wOHPLDYAf1v_80B7BaF81DtYYwp3-hGHLdbBuFkqn5Al0HoLx0F4CqxiVoZ8ouP-ZP697J2gr3Cs6iUPY7DIN926Rx7qXCN76Iu106XMoZfND6MGQ=w1162-h871-no?authuser=0"	}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Where am I?", answer : "London, 1 point.  St Paul's, 2 points.  First Dates restaurant, 3 points",
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3cJ0VEeLJYwKXjOxgbP9cBwsyDNHZD0JQWFAwGnYIX_J1arUetAHn8zIDYD6bI8kPO3gYpKwIRkconF1hAlswc54MVa7uQTwjB8Pq-JMGnZKGVyPpvuPV8pHE33rgFwjZkqJNrd85STMl2ULl64wn2GPg=w1359-h871-no?authuser=0"	}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Where am I?", answer : "Woodbridge, 1 point.   Notcutts, 2 points",
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3f2-N5BcCBc0UMqNzDMYpoKXvy6MO-Mis8GWzaA7t8BAUucwNivRUVQXyExOLwAerL6iudX0n0QuGloLfJOZ0ex_9Oeq3SOceL1lhJFA2ZXvETBGqi3SvLoXCTGVUBQDFpmNtXPgIbqQNcyH9MmF76Yxw=w1162-h871-no?authuser=0"	}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Where am I?", answer : "The Seaside / The Coast, 0 points.  Cornwall, 1 point.   Newquay, 2 points.  Fistral Beach, 3 points",
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3ffKceCAMPWO-rH-OcVCI6hbRvcwSKnOhYM6r1egh3OVV6qH7yiyMxKaPBd64iQ9CyS09Dct6ul3fyQGqvDhhMiTmdpO56SCz_W-Wbc9MzILm79CcnSDn5cqiML9xWwwUbj1tRe5HTFGHFdLHe-MLfwDw=w1024-h768-no?authuser=0"	}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Where am I?", answer : "A pub, 0 points.  Birmingham, 1 point.",
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3fGW_m4OGAgVQ0upyNXg2M7NlthRvQYkcAxNLZNzhMHErE3ZIjj5b_D8qBWSDcd6OUNgfPzCUTjTelYzfryaAR4QUL_lHX08Hk3Xty6hnO5tVHjEJj3-D14Cp2qbdeiCuU69fn0dkxXjA-ZKlvwjhQskw=w654-h871-no?authuser=0"	}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Where am I?", answer : "South Tyneside, 0 points.   Gateshead, 1 point.  The Angel of the North, 2 points",
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3cr-Yiijw_1xEWHHKhhEKdZFihA-q4UD_9oeJerwvJVvltAtey0Fo7j6Glb25gmFqKdwNjpa_rwsY3qux9vk1wgYa1UXobNS9UHrD_JzcyN4EfWvRT9wTMrHEOYibQxjn6-eJYow_5qmCGHrJjtFdNaFw=w654-h871-no?authuser=0"	}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Where am I?", answer : "Whitley Bay, 1 point.  Spanish City, 2 points",
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3f9wc_2emF_3p7RTkURoYTwAbX4F3SlN42LVxcdlXqosQ2uNESws4MRFb-CykVJoFn8Fhl7CxVqlwKgdnk5TJr3uA_I--HwlHAWlq4VOH1F8mMBk4O6q3WH2jxb7BwDUOZ5gaGFMS3-pxgQgfaC-lXGrA=w1335-h872-no?authuser=0"	}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Where am I?", answer : "Ufford, 1 point.  Picking up the Christmas turkey from that rusty container, 2 points",
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3c5ckh57kbe5GiuyFhXSkMoYa2pqw3nbGcA-VPgxrUjH0KDmiH1zg9OGoOl-zghPASPiRBR5Ef_qnnkBd3wgzg-SIqe-qDl_tw69k3JpF4JXVY3d3-XDvV5zQBG4YKQ1tXEf2iCCdYVxIZsyKsdOB2PJQ=w1162-h871-no?authuser=0"	}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Where am I?", answer : "India, 1 point.  Bangalore 2 points.  Bengaluru 3 points",
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3fL3vO1oPeHv2_kaZv85kksMwVHKGgUgZai3ZcVNYk0CNAycOpDkuaL2pZeRXWOFIw5s1y6D6MsX2vhFBPC6-N1mLIxnX7PyjqlS5pxONGR8BLSG2ceGvo7Ah4aGZR2l4VQj2D4m5ix4wo45-F_kHnBAw=w1162-h871-no?authuser=0"	}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Where am I?", answer : "Woodbridge, 1 point.  Sutton Hoo, 2 points",
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3faiNH2eb-Ad4HJRP5WBX-nxWvVhN00AXL0I7UyhD2_XCx1eePwNKNlMOKl-vOAtbLNX_T8pDzxUckXLzRZQz1Rrg2jQLJMW9RV0N_kvGl8e_HA_6u_xM3Sn-fjI6AEAewKEUE8Pcdg9pdIaFiGwJQx8w=w1162-h871-no?authuser=0"	}) ;
+
+
+
 /*
 quests[++questIndexBuilder] = { //
 		name : "Test Alt speak",
