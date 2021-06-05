@@ -542,6 +542,44 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://nayturr.com/wp-content/uploads/2020/06/triceratops-june182020-min.jpg", answerSpeak : "Triceratops"}) ;
 
 
+quests[++questIndexBuilder] = { //
+		name : "Pictionary 19",
+		hoverover : "Pictionary on the theme of the best bits",
+		tags : "2021-6-5,pictionary",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What did Ted Draw?",	answer : "Batman" ,
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3fnYdzsPj_yYtikDnEfkdtOaDZqkoxdrHglJiEjNNmZ6frY93mugyeKsZJCCG9l8MU3fDQ4Rums667ejRGCkNfyTQalZoZDKtfntArCBciSOLspB4YMmMxS6-8n3YOtY-LqYcuGtEoreYbEor2dKqlrhA=w467-h458-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3du35Yt4XgRHaoEeLk1DYxa2CEpHmWq800pHZueut1W1Dir8uxbdxlmWjBXrKv5AkZCjAePz1cY9u4Q9PIhX9hH3ragxZOFnYNj8lV2gjXA8bznuH2ASlNKK8aHbd-IufAgPlKc2atVA9sgQXgo_PQ4rw=w623-h676-no?authuser=0",
+	answerimage2 : "" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What did Ian Draw?",	answer : "Scooby Doo" ,
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3cPzNGmShPFJ5rOAG-RW2z_mF741T_keItSR1Grd7th08X8H48Je0jqiqgKNmM-05b_OJvcWD14OlTXakBGQ17j_1qMvxSulgJdSppFPGNNzOi3CM117rLNmOhGT95MCvEliMK95eiG6NG9V-DjBOz3HA=w590-h475-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3d7_o3NuG280B4OVCBhm71KUW13qjzl75Q5ACO-QzAHXSRIx6tWAq9WkPpz9NyijNltuEUt9MJtLDd3hhiwpAwh9gGxZQBU212944-GGObqj1plk12im6XX4yhLb_PMnTHjmO8vF9QD8rj25n2d5m2VQg=w830-h475-no?authuser=0",
+	answerimage2 : "" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2PictureAnswer,
+	question : "What did Ted Draw?",	answer : "John Lennon" ,
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3d-8KGThqs2LYTyU39W26APJHWfoHRcn8yNTgT-gfg-tbXF5Os9kzmBiFuSBgLEbFt7ADOyyJJJiRMTuSXoJcKanfJkdTbahTLLBVwb4d3pPDIISKaD3EeewWtASgKTfruxUT4rEvqfMZk9EHGxaMpXaA=w416-h464-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3eHqSVRDlfn16GIymPIR46X2LuzA8pflhENtr5z3jH5sepcXVKk9R_xJKfyH_G4k42T1alxr7MGcZfonjfpHbSUCVM687WQRvJYj-japlLyJvNCr1h0d-firBSXy3_CyrblOECKI1PFCvSgbFmxKgg1ew=w395-h354-no?authuser=0",
+	answerimage2 : "https://liveforlivemusic.com/wp-content/uploads/2019/12/Lennon-Imagine.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What did Ian Draw?",	answer : "Donald Trump" ,
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3dYh6j8neAu3fU-afW8dN3jFqjGdnyXHseWaSijmlWpKy_CHCh4AYNIT6j1Q8C3wRTtlg14sfa0YtQn8-JYE2Zqmj9Y4jqimTMTfif65f4eNa_lfPTOATXTlIKKVaYk0sOy2gqWaS1y4ETDDhwNER21mw=w381-h335-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/RqVIeHi8T9Xet8QZbDY4XxMKP1pqFVosZn2RSU1Fx3gZU7Z0fdy5YX6OzRf0DtGmKWGbdy_qJudYRKpXxTlLc85dGDMUrOFDHiic_1b3RvXmBoSeu2h32NlK27dR0in4_UdY8fKOHc0=w1920-h1080",
+	answerimage2 : "" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2PictureAnswer,
+	question : "What did Ted Draw?",	answer : "Table" ,
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3cnCle5CC4JGKVveBjlgwBgbcq9sBE5yqBfRDawEBeiHpqX3bMtO3rgOn-lU9wF5nCq2B20Ci-Nq4qaCQ8oNQuNoPZufguSMLHJ0SqH3MlyFR83rqOPNALAqi8sqy1DcvH7ZCSVmfrIjVCVKwu9FHbm7w=w476-h215-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3e5K5O63pjqmTxvJ0OF22I5zJwGrGjbkgsoagMO6JOfyvwdO2x0QsqeMAPtUfWnwl883uS_LtFJqdS6l1ba9VuGHHjYha9KfKAvfXUk-vSS7D5sE7ZiaWFWXeed5n7jdDB9hrrTs1tryXT8j1R-kKVEHA=w843-h530-no?authuser=0",
+	answerimage2 : "https://diningroomdid.com/dining-room/wp-content/uploads/2017/07/Funny-Dining-Tables-%E2%80%93-Weird-and-Funny-Designs-of-Dining-Tables-19.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What did Ian Draw?",	answer : "Ewok" ,
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3eT4BYJ73UqHB0qAgYG4PXpP2uu2AcSmVAZLJfr4QY1qw6B2b3T5s4lgMnQ_ftziAa1C-_fNERFRt1NzJvZ86GaVfb-N-SNqVyuQInoXR8CVSxSU8vvLcuYhAm9WV2Lhyn_bm_ncrVcWToGzDLZP8kK_g=w498-h503-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/gaSwOekLX2MdVeM41O7l22m99YsjExGFI-EoiRi_XQ3yJ4Vcihykc52rMr2IQeYC-yAcxC7OLEjhMvzOFjAqix6t7EOgX6mG_kQJQb4do05LsYSfA6Gxwuh7xQ7WEQ4BH-b0-t-3miw=w2400",
+	answerimage2 : "" }) ;
+
 
 /*
   
