@@ -836,6 +836,176 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : ""}) ;
 
 
+
+quests[++questIndexBuilder] = { //
+		name : "Picture Smash",
+		hoverover : "Tell me everything you see",
+		tags : "2021-6-5,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2PictureAnswer,
+	question : "What and who do you see here?",	answer : "Deadpool and The Girl With The Pearl Earring" ,
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3cOV3Pv3Z4OclSfcDFkTYYvjKhQnL17hby5jwioz8LfFF4l-mGmJ918qFb5jTG1-nCzMQVOOk1ScTWbcNVA-b46UeydeIirtP3Rf-qQV_HFYUgwIMXxBXcZwBtHcznxQBAc1OTjYBZW3KiZlcVx-DzSdQ=w700-h830-no?authuser=0",
+	answerimage : "https://static.wikia.nocookie.net/xmenmovies/images/9/94/Deadpool_Textless.jpg/revision/latest/scale-to-width-down/310?cb=20200608174908",
+	answerimage2 : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/1665_Girl_with_a_Pearl_Earring.jpg/300px-1665_Girl_with_a_Pearl_Earring.jpg"
+}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2PictureAnswer,
+	question : "What and who do you see here?",	answer : "Sophia Loren, Jayne Mansfield, Mona Lisa, The Girl With The Pearl Earring " ,
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3cmMYbE7lLVDfpUUjiqlKOcmDDZb550IJ22RbwJV_07E6RDdGoXF-pL0c1bfVDe9TUwA5vgslsHH_YCYnDO6BV4W2GCU8HPahrPLSXzzWzYj0B4HuHfAXfk811sH0sX2hhfv6_CubXCtRiaQ_sAC68xgQ=w700-h702-no?authuser=0",
+	answerimage : "https://upload.wikimedia.org/wikipedia/en/thumb/1/12/Sophia_and_jayne.jpg/300px-Sophia_and_jayne.jpg",
+	answerimage2 : "https://lh3.googleusercontent.com/pw/ACtC-3cmMYbE7lLVDfpUUjiqlKOcmDDZb550IJ22RbwJV_07E6RDdGoXF-pL0c1bfVDe9TUwA5vgslsHH_YCYnDO6BV4W2GCU8HPahrPLSXzzWzYj0B4HuHfAXfk811sH0sX2hhfv6_CubXCtRiaQ_sAC68xgQ=w700-h702-no?authuser=0"
+}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2PictureAnswer,
+	question : "What and who do you see here?",	answer : "Captain Jack Sparrow, The Scream" ,
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3e7sBEaxUiufD41-oBn3C0bkD6B28C8XoAR1XHsrcW8adnNwrHpnmcYj_5mND0Mrvw0PxEOEqxUqTTpdHY9dMx5VLPqWzluN6eeoJV_xhrJZYBvjkTJ_s6d9wDWFZ2osu3vzg_bpnaIVWSXTk9ByXFNXA=w700-h865-no?authuser=0",
+	answerimage : "https://static.wikia.nocookie.net/pirates/images/4/47/Jackescape.JPG/revision/latest/scale-to-width-down/310?cb=20130108135829",
+	answerimage2 : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Edvard_Munch%2C_1893%2C_The_Scream%2C_oil%2C_tempera_and_pastel_on_cardboard%2C_91_x_73_cm%2C_National_Gallery_of_Norway.jpg/220px-Edvard_Munch%2C_1893%2C_The_Scream%2C_oil%2C_tempera_and_pastel_on_cardboard%2C_91_x_73_cm%2C_National_Gallery_of_Norway.jpg"
+}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2PictureAnswer,
+	question : "What and who do you see here?",	answer : "Dr Strange, Van Gogh" ,
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3fF_GUJUlbgzwWj3rkXdUqy_1flMkuVu8VNfjP6wyN0D7bIjj_PFvsZA1fcbL_M01V4R5LxC8_yo8c4Y3RbVd4suWEZCZLuw_sfZYWlcIXRcjub4JN2zkx6QoRFdNbUZEZO6veWr4-zzkTuC1jUqpUEww=w697-h871-no?authuser=0",
+	answerimage : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project.jpg/800px-Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project.jpg",
+	answerimage2 : "https://cdn.vox-cdn.com/thumbor/8w6m6Sdl8fkNt7UWPJr5hhNasqA=/0x0:1500x750/1400x1400/filters:focal(762x94:1002x334):format(jpeg)/cdn.vox-cdn.com/uploads/chorus_image/image/51717777/strange.0.jpg"
+}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2PictureAnswer,
+	question : "What and who do you see here?",	answer : "Helena Bonham-Carter, Mona Lisa" ,
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3cwWLTuCagVTO-3AmEhPyESneVO5LVuPz40cQ0FEtIxZQ2CRC3RQ4NE0BLBxXGBwlq2RIlw4UrO-a4OuRmKhm3cMRBUFRyyGg4Ho7Lu91tDI5AcfNDrHGkF_Tx3inuHim2jWM2UaiJ0ScIzxkYp5pCnsA=w697-h871-no?authuser=0",
+	answerimage : "https://2paragraphs.com/wp-content/uploads/2014/10/fight_club_helena_bonham_carter_edward_norton_2-617x375.jpg",
+	answerimage2 : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/1200px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg"
+}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2PictureAnswer,
+	question : "What and who do you see here?",	answer : "The Girl With The Pearl Earring, Maleficent" ,
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3eEO9gvroHhwJrVwDS7q2zL8Wf-YMzq2ZQGSENadqzvfR9l7muONpeA2Cq5_jaNppBgvmmoPbm-KtAqsDod4eJ1DDXYIngfSeu9ryAHfLnKx3piVFVuvWLfxAf6h-nFi_euzSvvCvGj3x9IpnmHab8GFw=w700-h871-no?authuser=0",
+	answerimage : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/1665_Girl_with_a_Pearl_Earring.jpg/300px-1665_Girl_with_a_Pearl_Earring.jpg",
+	answerimage2 : "https://flxt.tmsimg.com/assets/p10086642_p_v10_az.jpg"
+}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2PictureAnswer,
+	question : "What and who do you see here?",	answer : "VJ Day in Times Square, a sailor kissing a girl, The Kiss" ,
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3dCh0lyIuKSce_m8Tt9wwlKkkGH6AGyAyMIWv0Da6PsHOoBJ1PHGd5f5Gwil1Ho2FhJpSsM23gw67aKukAodwRU7kttnZI7DDKID_KL_S08dl2oSwcCe8UQ_JIdAZ_B5KFLKF0jrr8HVlP0dPJRbTXuOg=w642-h871-no?authuser=0",
+	answerimage : "https://upload.wikimedia.org/wikipedia/en/thumb/9/95/Legendary_kiss_V%E2%80%93J_day_in_Times_Square_Alfred_Eisenstaedt.jpg/220px-Legendary_kiss_V%E2%80%93J_day_in_Times_Square_Alfred_Eisenstaedt.jpg",
+	answerimage2 : "https://www.thetapestryhouse.com/media/transfer/img/the_kiss_fatth133.jpg"
+}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What and who do you see here?",	answer : "BoJo and Carrie" ,
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3dEsuFuIae2O5eEhAOsKFwrQJQgRru64HUyajOQ5ys2rw5Q64x-4ElxFlyBn4q4FZmbgN8rqQku5yGopddkJeIzETBiWoYGLIeob53Gc2Mc3KSWQ62RtxgSY6UXqv7-hlDrRwuQkXJv4cKXvOh30yZ1wA=w600-h338-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/ACtC-3fUFwuGUOG77LSMwkWOSxNOj_crmAWbV2DjKvjCelyxcFtyF0gwp85BO2MahJNa6dMzg8lTp69XMNpGSHAFDAocMQiWfkR4Uos0f6iYM8RpZtB5TAu8b8kNYW76WZX3S_OlkIKoF0anKlj44kJ95c3HkQ=w615-h820-no?authuser=0"
+}) ;
+
+quests[++questIndexBuilder] = { //
+		name : "Rain",
+		hoverover : "All types of rain/reign/rein",
+		tags : "2021-6-5,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Which piece of tack prevents a horse from putting its head up high when being ridden?  " + Table4ColumnStart + "Nose band</td><td>Grass reins</td><td>Martingale</td><td>Reins" + Table4ColumnEnd,
+	answer : "Martingale"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "How would a rider make a horse rein back?  " + Table4ColumnStart + "Squeeze on the reins</td><td>Lean back slightly</td><td>Put their legs on</td><td>All of these" + Table4ColumnEnd,
+	answer : "All of these"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Who was the last English king to lead his army into battle?  " + Table4ColumnStart + "George IV</td><td>George III</td><td>George II</td><td>Victoria" + Table4ColumnEnd,
+	answer : "George II at the battle of Dettingen in 1743"	, answerSpeak : "George 2nd"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Which English King had the longest reign?  " + Table4ColumnStart + "George IV</td><td>George III</td><td>George II</td><td>Victoria" + Table4ColumnEnd,
+	answer : "George III, 59 years 96 days.  Victoria reigned for 64 years, but she was a Queen"	, answerSpeak : "George 3rd"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Who was the last king to have a beard?  " + Table4ColumnStart + "George IV</td><td>George III</td><td>George II</td><td>George V" + Table4ColumnEnd,
+	answer : "George V, who reigned from 1910 to 1936", answerSpeak : "George 5th"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "In addition to England, what other countries was Cnut King of?  " + Table4ColumnStart + "Sweden and Finland</td><td>Denmark and Norway</td><td>Denmark and Sweden</td><td>Finland and Norway" + Table4ColumnEnd,
+	answer : "Denmark and Norway"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "In the nursery rhyme, what is the old man doing when 'it's raining, it's pouring'?  " ,
+	answer : "Snoring"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "'The Rain in Spain' is a song from the musical?  " ,
+	answer : "My Fair Lady"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "With what sport would you use the Duckworth-Lewis-Stern method?  " ,
+	answer : "Cricket (used to calculate the target score for the team batting second in a one-day cricket match interrupted by rain)", answerSpeak :"Cricket"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Who wrote the song 'A Hard Rain's a-Gonna Fall'?  " ,
+	answer : "Bob Dylan"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Which city gets the less rain?  " + Table4ColumnStart + "London</td><td>Rome</td><td>Sydney</td><td>New York" + Table4ColumnEnd,
+	answer : "London"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "'Golden Rain' is the name of what?  " ,
+	answer : "Laburnum's genus"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+		question : "'Raindrops Keep Fallin' on My Head' is a song written by Hal David and Burt Bacharach and sung by <B>B J Thomas</B> for which 1969 film?  " ,
+		answer : "Butch Cassidy & the Sundance Kid"	});
+
+
+quests[++questIndexBuilder] = { //
+		name : "Wet",
+		hoverover : "Who are these people, loking like they've been out in the rain?",
+		tags : "2021-6-5,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?",
+	image : "https://images.ctfassets.net/iyiurthvosft/img-of-media-slide-212063/d010e2d831edeca536bcbf013b02af6b/img-of-media-slide-212063.jpg?fm=jpg&fl=progressive&q=50&w=1200",
+	answer : "Rihanna"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?",
+	image : "https://images.ctfassets.net/iyiurthvosft/img-of-media-slide-212862/2757a889d9116efe6fe4b13316acc355/img-of-media-slide-212862.jpg?fm=jpg&fl=progressive&q=50&w=1200",
+	answer : "Kristen Bell"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?",
+	image : "https://images.ctfassets.net/iyiurthvosft/img-of-media-slide-212241/5ca58a5e2f2f28b001fe0521eb0422dd/img-of-media-slide-212241.jpg?fm=jpg&fl=progressive&q=50&w=1200",
+	answer : "Courteney COx"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?",
+	image : "https://images.ctfassets.net/iyiurthvosft/img-of-media-slide-212816/81090eee06a24ec468e40d913257bdc3/img-of-media-slide-212816.jpg?fm=jpg&fl=progressive&q=50&w=1200",
+	answer : "Jennifer Lopez"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?",
+	image : "https://images.ctfassets.net/iyiurthvosft/img-of-media-slide-212864/b6755af7975a798890439fe839ed4c2c/img-of-media-slide-212864.jpg?fm=jpg&fl=progressive&q=50&w=1200",
+	answer : "Millie Bobby Brown"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?",
+	image : "https://hips.hearstapps.com/rbk.h-cdn.co/assets/cm/14/50/480x640/548a4d4a7c44e_-_020112hothusbands049-msc.jpg?resize=980:*",
+	answer : "Hugh Jackman"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?",
+	image : "https://hips.hearstapps.com/rbk.h-cdn.co/assets/cm/14/50/480x640/548a4d468681a_-_020112hothusbands036_2-msc.jpg?fill=480:640&resize=980:*",
+	answer : "David Beckham"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?",
+	image : "https://hips.hearstapps.com/rbk.h-cdn.co/assets/cm/14/50/480x640/548a4d4ac8011_-_020112hothusbands050-msc.jpg?fill=480:640&resize=980:*",
+	answer : "Daniel Craig"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?",
+	image : "https://gl-images.condecdn.net/image/QYaLk9MZDDq/crop/1020/f/johnny-depp_glamour_19may15_getty_b.jpg",
+	answer : "Johnny Depp"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?",
+	image : "https://gl-images.condecdn.net/image/wx3D6OyzP91/crop/1020/f/Peter-Andre_glamour_19may15_getty_b.jpg",
+	answer : "Peter Andre"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?",
+	image : "https://cdn3.whatculture.com/images/2016/09/c6a428a71bfadfe0-600x338.jpg",
+	answer : "David Schwimmer"}) ;
+
+
+quests[++questIndexBuilder] = { //
+		name : "Summer Rain",
+		hoverover : "Songs about summer and Rain",
+		tags : "music,2021-6-5,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/5aQtHKqej3Ib1jRhK6HdDX" width="501" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+	answer : ""}) ;
+
+
 /*
 quests[++questIndexBuilder] = { //
 		name : "Test Alt speak",
@@ -850,6 +1020,12 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 	question : "Test speach",
 	answer : "written answer"} );
 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2PictureAnswer,
+	question : "What and who do you see here?",	answer : "" ,
+	image : "",
+	answerimage : "",
+	answerimage2 : ""
+}) ;
 
   addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 	question : "",
