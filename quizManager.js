@@ -29,6 +29,7 @@ quizQuestionTypeText = 'text';
 quizQuestionTypePicture = 'picture';
 quizQuestionTypeSpotify = 'spotify';
 quizQuestionType2Picture = '2picture';
+quizQuestionType2PictureAnswer = '2pictureAnswer'
 quizQuestionTypePictureAnswer = 'pictureAnswer';
 tags = new Array();
 tempTags = new Array();
@@ -273,12 +274,12 @@ function SQQuestion(questionType) {
 	SQGetAnswerArea().innerHTML = '';
 	
 
-	if (questionType == quizQuestionTypeText |questionType == quizQuestionTypePictureAnswer) {
+	if (questionType == quizQuestionTypeText ||questionType == quizQuestionTypePictureAnswer) {
 		SQGetQuestArea().innerHTML = "<p " + questionStyle + ">"
 				+ questStageData[currQuestStageIndex].question + "</p>";
 		var imageArea = document.getElementById("SQImage");
 		imageArea.innerHTML = '';
-	} else if (questionType == quizQuestionTypePicture | questionType == quizQuestionType2Picture) {
+	} else if (questionType == quizQuestionTypePicture || questionType == quizQuestionType2Picture || questionType == quizQuestionType2PictureAnswer) {
 		SQGetButtonsArea().innerHTML = buttonBar;
 		SQGetQuestArea().innerHTML = "<p " + questionStyle + ">"
 				+ questStageData[currQuestStageIndex].question + "</p>";
@@ -303,6 +304,25 @@ function sqInitPicture(imageSource) {
 
 }
 
+function sqInit2Picture(imageSource1, imageSource2) {
+	var imageArea = document.getElementById("SQImage");
+	imageArea.innerHTML = '<div style="width:100%;height:480px;background-color:black;text-align:center;"> '
+			+ ' <a href="'
+			+ imageSource1
+			+ '" target="_blank">'
+			+ ' <img style="height:100%;border:0;" src="'
+			+ imageSource1
+			+ '" /> ' + ' </a> ' 
+			+ ' <a href="'
+			+ imageSource2
+			+ '" target="_blank">'
+			+ ' <img style="height:100%;border:0;" src="'
+			+ imageSource2
+			+ '" /> ' + ' </a> ' 
+			+ ' </div>';
+
+}
+
 function sqInitSpotify(spotifyEmbed, spotifyQuestion) {
 
 	SQGetImageArea().innerHTML = spotifyEmbed;
@@ -318,7 +338,7 @@ function SQAnswer(questionType) {
 		SQGetImageArea().innerHTML = '';
 		SQGetQuestArea().innerHTML = "<p " + questionStyle + ">" + fullQuestion
 				+ "</p>";
-	} else if (questionType == quizQuestionTypePicture || questionType == quizQuestionType2Picture) {
+	} else if (questionType == quizQuestionTypePicture || questionType == quizQuestionType2Picture || questionType == quizQuestionType2PictureAnswer) {
 		sqInitPicture(questStageData[currQuestStageIndex].image)
 		SQGetQuestArea().innerHTML = "<p " + questionStyle + ">" + fullQuestion
 				+ "</p>";
@@ -338,6 +358,10 @@ function SQAnswer(questionType) {
 	if (questionType == quizQuestionType2Picture || questionType == quizQuestionTypePictureAnswer)  {
 		answerimage = questStageData[currQuestStageIndex].answerimage;
 		setTimeout(function(){sqInitPicture(answerimage);},3000 )
+	} else if (questionType == quizQuestionType2PictureAnswer) {
+		answerimage = questStageData[currQuestStageIndex].answerimage;
+		answerimage2 = questStageData[currQuestStageIndex].answerimage2;
+		setTimeout(function(){sqInit2Picture(answerimage,answerimage2);},3000 )
 	}
 	if (questStageData[currQuestStageIndex].hasOwnProperty('answer') || questStageData[currQuestStageIndex].hasOwnProperty('answerSpeak')) {
 		if (questStageData[currQuestStageIndex].hasOwnProperty('answerSpeak')) {
@@ -402,12 +426,12 @@ function SQInitTagButtons() {
 					+ "\")' />"
 		
 	};
-		
+	//console.log("uniqueArray: ", tags);
+	
 	buttons = buttons
 	+ "<input type='button' class='userBtnStop' value='Today' title='Reload page and only show quizzes with this tag' id='reload' onclick='SQreloadPage(\"" + todayString
 	+ "\")' />";
 	
-	//console.log("uniqueArray: ", tags);
 	return buttons;
 }
 
