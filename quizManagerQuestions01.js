@@ -892,7 +892,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
 }) ;
 
 quests[++questIndexBuilder] = { //
-		name : "Rain",
+		name : "R[ai|ei[g|]]n",
 		hoverover : "All types of rain/reign/rein",
 		tags : "2021-6-5,saturday,InnerWheel,surfers",
 		questInfo: new Array()
