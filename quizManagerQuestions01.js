@@ -958,7 +958,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	question : "Who is this?",
 	image : "https://images.ctfassets.net/iyiurthvosft/img-of-media-slide-212241/5ca58a5e2f2f28b001fe0521eb0422dd/img-of-media-slide-212241.jpg?fm=jpg&fl=progressive&q=50&w=1200",
-	answer : "Courteney COx"}) ;
+	answer : "Courteney Cox"}) ;
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	question : "Who is this?",
 	image : "https://images.ctfassets.net/iyiurthvosft/img-of-media-slide-212816/81090eee06a24ec468e40d913257bdc3/img-of-media-slide-212816.jpg?fm=jpg&fl=progressive&q=50&w=1200",
