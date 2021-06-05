@@ -943,7 +943,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 
 quests[++questIndexBuilder] = { //
 		name : "Wet",
-		hoverover : "Who are these people, loking like they've been out in the rain?",
+		hoverover : "Who are these people, looking like they have been out in the rain?",
 		tags : "2021-6-5,saturday,InnerWheel,surfers",
 		questInfo: new Array()
 	};
