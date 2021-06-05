@@ -846,7 +846,7 @@ quests[++questIndexBuilder] = { //
 addQuest(quests[questIndexBuilder],{	type : quizQuestionType2PictureAnswer,
 	question : "What and who do you see here?",	answer : "Deadpool and The Girl With The Pearl Earring" ,
 	image : "https://lh3.googleusercontent.com/pw/ACtC-3cOV3Pv3Z4OclSfcDFkTYYvjKhQnL17hby5jwioz8LfFF4l-mGmJ918qFb5jTG1-nCzMQVOOk1ScTWbcNVA-b46UeydeIirtP3Rf-qQV_HFYUgwIMXxBXcZwBtHcznxQBAc1OTjYBZW3KiZlcVx-DzSdQ=w700-h830-no?authuser=0",
-	answerimage : "https://static.wikia.nocookie.net/xmenmovies/images/9/94/Deadpool_Textless.jpg/revision/latest/scale-to-width-down/310?cb=20200608174908",
+	answerimage : "https://pbs.twimg.com/media/DZccF8yX0AAYxa3.jpg",
 	answerimage2 : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/1665_Girl_with_a_Pearl_Earring.jpg/300px-1665_Girl_with_a_Pearl_Earring.jpg"
 }) ;
 addQuest(quests[questIndexBuilder],{	type : quizQuestionType2PictureAnswer,
@@ -858,7 +858,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionType2PictureAnswer,
 addQuest(quests[questIndexBuilder],{	type : quizQuestionType2PictureAnswer,
 	question : "What and who do you see here?",	answer : "Captain Jack Sparrow, The Scream" ,
 	image : "https://lh3.googleusercontent.com/pw/ACtC-3e7sBEaxUiufD41-oBn3C0bkD6B28C8XoAR1XHsrcW8adnNwrHpnmcYj_5mND0Mrvw0PxEOEqxUqTTpdHY9dMx5VLPqWzluN6eeoJV_xhrJZYBvjkTJ_s6d9wDWFZ2osu3vzg_bpnaIVWSXTk9ByXFNXA=w700-h865-no?authuser=0",
-	answerimage : "https://static.wikia.nocookie.net/pirates/images/4/47/Jackescape.JPG/revision/latest/scale-to-width-down/310?cb=20130108135829",
+	answerimage : "https://www.cinelinx.com/wp-content/uploads/2020/05/JackSparrowrunning-696x464.jpg",
 	answerimage2 : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Edvard_Munch%2C_1893%2C_The_Scream%2C_oil%2C_tempera_and_pastel_on_cardboard%2C_91_x_73_cm%2C_National_Gallery_of_Norway.jpg/220px-Edvard_Munch%2C_1893%2C_The_Scream%2C_oil%2C_tempera_and_pastel_on_cardboard%2C_91_x_73_cm%2C_National_Gallery_of_Norway.jpg"
 }) ;
 addQuest(quests[questIndexBuilder],{	type : quizQuestionType2PictureAnswer,
