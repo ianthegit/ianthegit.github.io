@@ -1,0 +1,264 @@
+<script type="text/javascript">
+ // <![CDATA [
+
+     startTimeHour=19;
+
+	startTimeMinute=00;
+
+	endTimeHour=22;
+
+	endTimeMinute=55;
+
+    hours=new Array (12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23);
+
+    minutes=new Array (00, 15, 30, 45, 55);
+
+    pubString="";
+
+    function woodbridgeSurfersPubCrawlInit(pubStringTemp){
+
+    	pubStringFromURI = woodbridgeSurfersGetURIPubString();
+
+        if (!pubStringTemp) {
+
+        	if (pubStringFromURI){
+
+    			pubStringTemp = pubStringFromURI;
+
+    		} else {
+
+    			pubStringTemp ="Woodbridge 16, The Warwick, The Seckford, The Duke of York, The Cherry Tree, The Boatshed, A-Listers, The Anchor, The Crown, The East Coast Diner, The Red Lion, The Mariners, The Olde Bell & Steelyard, The Bull, The Angel, The Kings Head";
+
+    		}
+
+        }
+
+        pubString=pubStringTemp;
+
+       	pubs = pubString.split(",");
+
+       	document.write('<strong>' + woodbridgeSurfersRemoveFirstPub() + '</strong></p>');
+
+       	//document.write("<span id='debug'></span></br>");
+
+		document.write("Buy 1st drink : </br>" + 
+
+				woodbridgeSurfersTimerSetupSelector('startTimeHourDropper', startTimeHour, 'woodbridgeSurfersTimerSetDrinkBuyTime', hours) +
+
+				woodbridgeSurfersTimerSetupSelector('startTimeMinuteDropper', startTimeMinute, 'woodbridgeSurfersTimerSetDrinkBuyTime', minutes)
+
+				+ "</br>");
+
+		document.write("Buy last drink : </br>" + 
+
+				woodbridgeSurfersTimerSetupSelector('endTimeHourDropper', endTimeHour, 'woodbridgeSurfersTimerSetDrinkBuyTime', hours) +
+
+				woodbridgeSurfersTimerSetupSelector('endTimeMinuteDropper', endTimeMinute, 'woodbridgeSurfersTimerSetDrinkBuyTime', minutes)
+
+				);
+
+		document.write('<form id="PubCrawl">');
+
+		document.write('<div id="pubTimings"></div>');
+
+		woodbridgeSurfersTimerSetupPubTable();
+
+		woodbridgeSurfersTimerSetDrinkBuyTime();
+
+        document.write('</form>');
+
+        document.write('<input type="button" value="Change Pubs"  title="Change the pubs." id="AddPubs" onclick="woodbridgeSurfersTimerPopupGetPubs()" />');
+
+        document.write('<input type="button" value="Save pub crawl times to new Window and Print" title="Once the new page pops up a print dialogue will appear and you can print the page to a file to save." onclick="woodbridgeSurfersPubCrawlTimerEmail()" /></br> ');
+
+        //document.write('Version  1 ('+ document.lastModified + ') Developed by <a href="http://www.woodbridgeSurfers.blogspot.com">Woodbridge Surfers</a>.  Need help:<a href="https://docs.google.com/document/d/1EmnWzeepYHdtDPq9aBzA0ffSsZU-yM8eHH0TYTBfL78/pub">Small help doc</a>. ');
+
+	}
+
+    function woodbridgeSurfersGetURIPubString(){
+
+    	return decodeURI(location.search.substring(1, location.search.length));
+
+    }
+
+    function woodbridgeSurfersRemoveFirstPub(){
+
+    	var retVal = pubs[0];
+
+    	pubs.shift();
+
+    	return retVal;
+
+    }
+
+    function woodbridgeSurfersTimerSetupPubTable(){
+
+    	retVal='<table border="1" id="pubTable">';
+
+    	var size = pubs.length;
+
+		for (var i = 0 ; i < size ; i++) {
+
+			retVal = retVal + woodbridgeSurfersTimerGetPubHtml(pubs[i]);
+
+		}
+
+    	retVal = retVal +'</table> <br/> ';
+
+    	document.getElementById("pubTimings").innerHTML=retVal;
+
+    }
+
+    function woodbridgeSurfersTimerFormatTime(dateToFormat){
+
+    	return dateToFormat.getHours() + ':' + woodbridgeSurfersTimerFormatTimePart(dateToFormat.getMinutes()) + ':' + woodbridgeSurfersTimerFormatTimePart(dateToFormat.getSeconds());
+
+    }
+
+    function woodbridgeSurfersTimerSetDrinkBuyTime(){
+
+    	startTimeHour=document.getElementById("startTimeHourDropper").value;
+
+    	startTimeMinute=document.getElementById("startTimeMinuteDropper").value;
+
+    	endTimeHour=document.getElementById("endTimeHourDropper").value;
+
+    	endTimeMinute=document.getElementById("endTimeMinuteDropper").value;
+
+
+
+    	var size = pubs.length;
+
+		for (var i = 0 ; i < size ; i++) {
+
+			document.getElementById(pubs[i]+'Data').innerHTML = woodbridgeSurfersTimerFormatTime(woodbridgeSurfersTimerGetDBW(size, i ));
+
+		}
+
+		return true;
+
+    }
+
+    function woodbridgeSurfersTimerGetDBW(pubListSize, pubNumber){
+
+    	startDateTime = new Date;
+
+    	startDateTime.setHours(startTimeHour, startTimeMinute, 0, 0);
+
+    	endDateTime = new Date;
+
+    	endDateTime.setHours(endTimeHour, endTimeMinute, 0, 0);
+
+    	
+
+    	nextTime = new Date;
+
+    	nextTime.setHours(startTimeHour, startTimeMinute, 0, 0);
+
+    	nextTime.setSeconds((( (endDateTime - startDateTime)/(pubs.length-1))/1000)*(pubNumber));
+
+    	return nextTime;
+
+    }
+
+    function woodbridgeSurfersTimerGetPubHtml(pubName){
+
+        retVal='<tr><td>';
+
+	    retVal=retVal+ pubName ;
+
+	    retVal=retVal+'</td><td>';
+
+	    retVal=retVal+'<div id="' + pubName+ 'Data"></div>';
+
+	    retVal=retVal+'</td></tr>';
+
+	    return retVal;
+
+    }
+
+	function woodbridgeSurfersTimerSetupSelector(idName, defaultSelected, selectionChangeFunction, options){
+
+		var retVal = "";
+
+		retVal = retVal + '<span id="' + idName + 'Span"> <select name="' + idName + '" id="' + idName + '" onchange="' + selectionChangeFunction + '();" >';
+
+		optionsCount =options.length;
+
+		for (var i=0 ; i<optionsCount ; i++){
+
+        		retVal = retVal + '<option value="' + options[i] + '"' ;
+
+		    	if (options[i]==defaultSelected){
+
+			    	retVal = retVal+' selected' ;
+
+    			}
+
+                retVal = retVal + '>' + options[i] + '</option>';
+
+		}
+
+		retVal = retVal + '</select></span>';
+
+		return retVal;
+
+	}
+
+	function woodbridgeSurfersTimerPopupGetPubs(){
+
+        pubStringTemp = prompt("Please enter the pubs in order:", pubString);
+
+        if (pubStringTemp!='' && pubStringTemp!=null) {
+
+        	pubString = pubStringTemp;
+
+        	pubs=pubString.split(",");
+
+    		woodbridgeSurfersTimerSetupPubTable();
+
+    		woodbridgeSurfersTimerSetDrinkBuyTime();
+
+        }
+
+    }
+
+    function woodbridgeSurfersPubCrawlTimerEmail(){
+
+    	var openWindow = window.open('Pub Crawl Timings '+ new Date(), 'Pub Crawl Timings '+ new Date(),'width=350,height=250'
+
+    			   +',menubar=0,toolbar=0,status=0,scrollbars=1,resizable=1');
+
+    	var resultData = document.getElementById("PubCrawl").innerHTML;
+
+    	openWindow.document.writeln(
+
+    			  '<html><head><title>Pub Crawl Timings ' + new Date() + '</title></head>'
+
+    			   +'<body bgcolor=white onLoad="self.focus()">' +resultData +'</body></html>' );
+
+        openWindow.print();
+
+    }
+
+	function woodbridgeSurfersTimerFormatTimePart(timePart) {
+
+		if(timePart==0){return '00';} 
+
+		if(timePart<10){return '0'+timePart;} 
+
+		return timePart;
+
+	}
+
+    function debugOut(debugStr){
+
+    	document.getElementById("debug").innerHTML = debugStr;
+
+    }	
+
+	
+     woodbridgeSurfersPubCrawlInit("Woodbridge 16,The Warwick, The Seckford, The Duke of York, The Boatshed, A Listers, The Anchor, The Crown, The East Coast Diner, The Cumberland Fish Bar, The Red Lion, The Mariners, The Olde Bell & Steelyard, The Bull, The Angel, The Kings Head, The Cherry Tree");
+ // ] ] >
+ 
+</script>
