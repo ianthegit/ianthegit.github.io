@@ -1006,6 +1006,131 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : ""}) ;
 
 
+quests[++questIndexBuilder] = { //
+		name : "Wildlife",
+		hoverover : "Can you tell what animals thee photographs are of?",
+		tags : "2021-6-12,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What animal is this?", // 
+	image : "https://static.boredpanda.com/blog/wp-content/uploads/2021/04/funny-wildlife-animals-pics-147-60818691d4803__700.jpg",
+	answerimage : "https://c8.alamy.com/comp/AD344P/an-adult-mute-swan-landing-on-water-AD344P.jpg", answer : "A swan landing", answerSpeak : "A Swan"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What animal is this?", // 
+	image : "https://static.boredpanda.com/blog/wp-content/uploads/2021/04/funny-wildlife-animals-pics-177-608aaca7bb0fc__700.jpg",
+	answerimage : "https://static.photocrowd.com/upl/gs/cms.rFb-n3RGSxUfnyz4OcbA-collection_cover.jpeg", answer : "A deer"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What animal is this?", // 
+	image : "https://static.boredpanda.com/blog/wp-content/uploads/2021/04/funny-wildlife-animals-pics-122-608181b89f7f0__700.jpg",
+	answerimage : "https://scx1.b-cdn.net/csz/news/800a/2019/massachusett.jpg", answer : "A raccoon", answerSpeak : "A raccoon"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What animal is this?", // 
+	image : "https://static.boredpanda.com/blog/wp-content/uploads/2021/03/funny-wildlife-animals-pics-605c85d8368e5__700.jpg",
+	answerimage : "https://image.shutterstock.com/image-photo/cobra-standing-pose-has-deadly-260nw-1795801318.jpg", answer : "A snake"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What animal is this?", // 
+	image : "https://static.boredpanda.com/blog/wp-content/uploads/2021/05/funny-wildlife-animals-pics-24245653-608fe04acbbf5__700.jpg",
+	answerimage : "https://i.pinimg.com/originals/d6/6e/36/d66e36a8c781207a04c2de618472c807.jpg", answer : "A penguin"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What animal is this?", // 
+	image : "https://static.boredpanda.com/blog/wp-content/uploads/2021/06/funny-wildlife-animals-pics-44-60c1df5f4738b__700.jpg",
+	answerimage : "https://images.unsplash.com/photo-1502780402662-acc01c084a25?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Z3JlZW4lMjBmcm9nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80", answer : "A frog"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What animal is this?", // 
+	image : "https://static.boredpanda.com/blog/wp-content/uploads/2021/05/funny-wildlife-animals-pics-301-60b4e77c99727__700.jpg",
+	answerimage : "https://cdn.britannica.com/s:800x450,c:crop/96/180396-138-CA8FCDFD/chipmunks-Siberian-seeds.jpg", answer : "A chipmunk"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What animal is this?", // 
+	image : "https://pbs.twimg.com/media/E3rcQUbWUAEukfV?format=jpg&name=small",
+	answerimage : "https://static01.nyt.com/images/2019/07/25/fashion/24BORISSTYLE-2/merlin_158299497_84552a3b-f9a2-4c56-983b-5afc2837045c-superJumbo.jpg?quality=90&auto=webp", answer : "A clown whale (or, BoJo)", answerSpeak : "Bojo"}) ;
+
+
+quests[++questIndexBuilder] = { //
+		name : "Citylife",
+		hoverover : "Can you tell where these photos were taken?",
+		tags : "2021-6-12,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Where is this?",  answer : "Brussels",
+	image : "https://i2-prod.mirror.co.uk/travel/article22156154.ece/ALTERNATES/s1227b/0_Brussels.jpg"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Where is this?",  answer : "Seville",
+	image : "https://i2-prod.mirror.co.uk/travel/article22156153.ece/ALTERNATES/s1227b/0_Seville.jpg"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Where is this?",  answer : "Amsterdam",
+	image : "https://i2-prod.mirror.co.uk/travel/article20860569.ece/ALTERNATES/s1227b/0_Dec-mystery-pic.jpg"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Where is this?",  answer : "Wall Street, New York",
+	image : "https://i2-prod.mirror.co.uk/incoming/article12224983.ece/ALTERNATES/s1227b/Charging-bull-bronze-sculpture-on-Wall-street-New-York-USA.jpg"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Where is this?",  answer : "Edinburgh",
+	image : "https://i2-prod.mirror.co.uk/incoming/article12713855.ece/ALTERNATES/s1227b/The-stunning-city-skyline-of-Edinburgh.jpg"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Where is this?",  answer : "Havana, Cuba",
+	image : "https://i2-prod.mirror.co.uk/incoming/article13759233.ece/ALTERNATES/s1227b/1_Pastel-colored-buildings-near-city-center-Havana-Cuba.jpg"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Where is this?",  answer : "Berlin",
+	image : "https://i2-prod.mirror.co.uk/incoming/article22016589.ece/ALTERNATES/s1227b/0_GERMANY-HEALTH-VIRUS-ARCHITECTURE-SIGHTS-TOURISM.jpg"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Where is this?",  answer : "Sydney",
+	image : "https://i2-prod.mirror.co.uk/incoming/article22212315.ece/ALTERNATES/s1227b/0_Cityscape-image-of-Sydney-Australia-with-Harbor-Bridge-and-Sydney-skyline-during-sunset-Vacation-a.jpg"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Where is this?",  answer : "Moscow",
+	image : "https://i2-prod.mirror.co.uk/incoming/article21387530.ece/ALTERNATES/s1227b/0_Moscow-Kremlin-at-sunset.jpg"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Where is this?",  answer : "Sutton Hoo",
+	image : "https://lh3.googleusercontent.com/txa3UvZI0j817m-WiWfGRjYbaaC2DuaBsIBQQh-yxBPynDNXNGGKS4iP8XE3cUW9xz5-OoZboV7PcDH05FpNSk6GX3f4ZRV1CFd3dNHkjRUZvLaJDp_VJsDk5TS0ftFrFxshZRwW_a6WjMdKgypg9Z5KYMhdwy2cU_h8FQCueGKb54p5JErN5neeHT7zWXuzkqbXyDdtz4G716DPrpa-zGKmALLhKZTo5SlP8eQTH4DxllBaJbmJvufsq4inSx2kAYwuKED3PS0mK7uG_D6TpGfQGxHoNThCiqNLJk4OQL3zFZH5EsrkuGuaTScBbU6iLonLk9hhTBNMRVq3e9_dKLngl-fYKGPIbjNt5J_gPUsjmqjxzH8XT7QRZcV_ABBG04HPGbdsy3HRUvfT-VMoVj2f-7leyg0UqaHR45SpwoAlN9y1N3oxXSAFHCkfMJDkCXdDXu5btMdEe5-eCBHnJcOdTVzt_rl2o-c_zQmB9iRLMw7YqAxVIHnbdo1k--Lozi2RCSZcOp3eT20c3Buso15ZaP_I0pY6i_eGV-ttmMQaXF0LBd1KfSJTW8u3JtWnnej-XpcJrFmuyFd1pEe3iA0J9hjAFWuzOk_qAEMXJ4fwUlf63n4hsepsdgdR0w3OqkT4fyep6cHS_M0qQpKEHW1HYylJtYkObr1wxTYVn2sx-Tzkix7ry7ABZ0eZUWfo2He-WBTWpamq7uSH5bJ0dQrtVA=w1162-h871-no?authuser=0"}) ;
+
+quests[++questIndexBuilder] = { //
+		name : "Longest day",
+		hoverover : "Do you know who these tall people are?",
+		tags : "2021-6-12,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who are these 2 long-tall-Sally's?",  answer : "Julia Roberts and Tim Robbins",
+	image : "https://i.insider.com/50f9c238eab8eaba4b000019?width=700&format=jpeg&auto=webp"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who did this hairy monster famously play?",  answer : "Chewbacca",
+	image : "https://i.insider.com/57aa3b22ce38f2c0008b5a64?width=700&format=jpeg&auto=webp"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this scary monster on the left?",  answer : "Christopher Lee",
+	image : "https://i.insider.com/50f9c8dfeab8ea6058000024?width=700&format=jpeg&auto=webp"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this lanky so-and-so with his wife and daughter?",  answer : "Chevy Chase",
+	image : "https://i.insider.com/50f6d41cecad04a843000006?width=700&format=jpeg&auto=webp"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this lanky so-and-so on the right?",  answer : "Geena Davis",
+	image : "https://i.insider.com/50f9cb2869bedd684800001b?width=700&format=jpeg&auto=webp"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this lanky so-and-so?",  answer : "Brooke Shields",
+	image : "https://i.insider.com/50f9c95769bedd6648000007?width=700&format=jpeg&auto=webp"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Going up!  Who is this lanky so-and-so on the right?",  answer : "Bill Murray",
+	image : "https://i.insider.com/50fad7f5ecad040e4a00002a?width=700&format=jpeg&auto=webp"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this lanky marshmallow on the right?",  answer : "Jason Segel",
+	image : "https://i1.wp.com/bestlifeonline.com/wp-content/uploads/2018/09/shutterstock_177267125.jpg?resize=500%2C333&ssl=1"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this lanky so-and-so?",  answer : "Jason Momoa",
+	image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/jason-momoa-arrives-at-the-tom-ford-aw20-show-at-milk-news-photo-1594311419.jpg?crop=0.847xw:0.666xh;0.0374xw,0&resize=768:*&keepGifs=1"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this lanky so-and-so?",  answer : "John Krasinski",
+	image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/john-krasinski-attends-a-quiet-place-part-ii-world-premiere-news-photo-1594313902.jpg?crop=1xw:0.66656xh;center,top&resize=768:*&keepGifs=1"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this lanky Aldeburgh boy?",  answer : "Tom Hiddleston",
+	image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/actor-tom-hiddleston-visits-build-series-to-discuss-his-news-photo-1594312168.jpg?crop=1.00xw:0.651xh;0.00170xw,0.0532xh&resize=768:*&keepGifs=1"}) ;
+
+
+quests[++questIndexBuilder] = { //
+		name : "Long Tall High and Big",
+		hoverover : "Songs featuring the words Long, Tall, High or Big",
+		tags : "music,2021-6-12,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/3GJQ7ZHWhKo16VPbgYQ5z2" width="501" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+	answer : ""}) ;
+
+
+
 /*
 quests[++questIndexBuilder] = { //
 		name : "Test Alt speak",
