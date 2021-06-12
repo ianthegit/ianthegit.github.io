@@ -581,6 +581,31 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
 	answerimage2 : "" }) ;
 
 
+quests[++questIndexBuilder] = { //
+		name : "Pictionary 20",
+		hoverover : "Pictionary on the theme of the other G7 countries",
+		tags : "2021-6-12,pictionary",
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3cObcMoFI_Xe2ip497vg_kTLgvRwshKRb4WIlqB7xo3P92EEmYEXtTKc7c5R5D1O3r3zTnZw2yLI1_uQIzG7wQudrwRgb7WIcgzogU3DLcXqEeJMa82Ak-zoWx1WxXRZIs7DIgyKegkC7rxBlqWJnBimg=w752-h367-no?authuser=0",
+	answerimage : "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/125px-Flag_of_the_United_States.svg.png", answerSpeak : "US"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3f8o_Sa21Y6EJB8ng52bhtPG7IbI67Jr_fxHFErEowGrRkNbH9OZfKek13_qqAubJaUlIXczm9fHxAmCIsOpCOozaMKVc-m18OCwt62_NlYa2fdD7DQtG-52BFpTWXmsdajF74KQBJ13nGSVQZ-g4lDEA=w371-h251-no?authuser=0",
+	answerimage : "https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/125px-Flag_of_France.svg.png", answerSpeak : "France"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3dvu4LHtwOgnjDhSmslvuPBabDSYrFH34ewMgmXf1ByruZhm6t5_CKjw5zjPT6amuRk7EDTYjEZr66lMHi4ExgKkJ_WyD4UK3ZKlJZ2UjLleGRFLebegPKuFX7w9QLylw3yyY_dpePccWhwwYxa6SUxDA=w464-h260-no?authuser=0",
+	answerimage : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/125px-Flag_of_Canada_%28Pantone%29.svg.png", answerSpeak : "Canada"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3cM6p5A-Owmp7kgSDfCuExtARufpc5mjIQpiEZaaHNnLPferFWSeed--pAgiop8RMd-FAC-NR8ht6a3MdiOQdmHJHkM_-lAce-bmmLQv_H4HGnTrUgR1Ig6T9zXFU-nV3E3ZXpVVQtOk0niMtc5yIFdhA=w578-h383-no?authuser=0",
+	answerimage : "https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/125px-Flag_of_Germany.svg.png", answerSpeak : "Germany"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3dnaKb5Zoc5GRWx8GuKwOiNVC8eE2JeGCOacgRzZtauldfFeSpcn1jc-2fMwDq-s-4apJBzYf26hVa8DV23DM9R_7Wwc2arZHF_BS4F6eSHAu3yU_cepNwzs3omiPBO6TZYVYGE-PzEXQLANebguz9I9A=w570-h409-no?authuser=0",
+	answerimage : "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/125px-Flag_of_Japan.svg.png", answerSpeak : "Japan"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3edHYaT5_4hvPR2y7SBAGCZlJsnm-wa-5MEDl_BFVHuoiLsBpC5mcCHq3NmhffhAFc0prHqDEZScovooWw0Bht8H62Zm45zX6jcZl5GzbFXHul2rpKodHPgeqfsVPdxTWeSVI4SuRUG9rrhDIbyNjaIqA=w616-h370-no?authuser=0",
+	answerimage : "https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/125px-Flag_of_Italy.svg.png", answerSpeak : "Italy"}) ;
+
 /*
   
  quests[++questIndexBuilder] = { //
