@@ -1008,7 +1008,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 quests[++questIndexBuilder] = { //
 		name : "Wildlife",
-		hoverover : "Can you tell what animals thee photographs are of?",
+		hoverover : "Can you tell what animals these photographs are of?",
 		tags : "2021-6-12,saturday,InnerWheel,surfers",
 		questInfo: new Array()
 	};
