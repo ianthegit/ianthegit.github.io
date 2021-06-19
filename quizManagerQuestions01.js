@@ -1130,6 +1130,120 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : ""}) ;
 
 
+quests[++questIndexBuilder] = { //
+		name : "Lost Pa",
+		hoverover : "Do you know the name of these places starting with Pa?",
+		tags : "2021-6-19,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "Italian city that produces a lot of ham, and the cheese Ted grates to go on top of my numpty pasta",
+	answer : "Parma"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "London rail terminus which has a bear statue",
+	answer : "Paddington"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "Island nation whose cars have stickers reading 'PNG'",
+	answer : "Papua New Guinea"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "First Monopoly property after Jail (on the London edition)",
+	answer : "Pall Mall"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "Expensive Monopoly (London edition) property between Chance and Super Tax",
+	answer : "Park Lane"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "Cricketing country which acquired test status in 1952",
+	answer : "Pakistan"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "Athens temple which used to be home to the Elgin Marbles",
+	answer : "Parthenon"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "World's most romantic city", image : "https://lh3.googleusercontent.com/pw/ACtC-3dXOA765JKDm8Qr9jyMcPpUHMRtIneSvoeOO2V12tMFvsn3eHrdsVOpw_9DHKjbU5BVbYlssCp35ph9X3SGL_GwLmE2aNrYC-aA2HSM-IfWULVeqEH5wD2a4U5caeqlzflQ8UPfCq5zbTMzm2GjItB4pg=s871-no?authuser=0"
+	, answer : "Paris"});
+
+quests[++questIndexBuilder] = { //
+		name : "Famous Pa",
+		hoverover : "Do you know the name of these Pa s?",
+		tags : "2021-6-19,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "Bald Dad of Bartholomew, Lisa and Margaret",
+	answer : "Homer", 	answerimage : "https://upload.wikimedia.org/wikipedia/en/0/02/Homer_Simpson_2006.png"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "Alabama lawyer Dad of Jem and Scout",
+	answer : "Atticus Finch"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "Underpaid Victorian clerk, Dad of Martha, Belinda, Peter and small Tim",
+	answer : "Bob Cratchit"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "Dad of Luke",
+	answer : "Anakin Skywalker", 	answerimage : "https://www.liveabout.com/thmb/6siWz1QL5Du-Gv9Uq6TkkKLKE30=/993x993/smart/filters:no_upscale()/EP2-IA-32565_R_8x10-56a83bdc5f9b58b7d0f1b389.jpg"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "Dad of Kylo",
+	answer : "Han Solo", answerSpeak : "I know",	answerimage : "https://227263-694567-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2018/05/hanslove_lead.jpg"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "Rey's grandfather",
+	answer : "Emperor Palpatine", 	answerimage : "https://cdn.images.express.co.uk/img/dynamic/36/590x/reyevil-693824.jpg"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "Rusty and Audrey's Dad - not Superman",
+	answer : "Clark Griswald", 	answerimage : "https://www.denofgeek.com/wp-content/uploads/2019/12/christmas-vacation-griswolds-warner-bros.jpg?resize=768%2C432"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "Simba's Dad",
+	answer : "Mufasa", 	answerimage : "https://imgix.bustle.com/uploads/image/2021/1/15/c0d48fbe-b9eb-4e02-8243-d86bff15e92d-mufasa1.jpeg?w=1200&h=630&fit=crop&crop=faces&fm=jpg"});
+
+quests[++questIndexBuilder] = { //
+		name : "Film Pa",
+		hoverover : "Do you know the name of these films?",
+		tags : "2021-6-19,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "California Dad reconnects with kids by posing as a British nanny",
+	answer : "Mrs Doubtfire", 	answerimage : "https://variety.com/wp-content/uploads/2020/07/mrs-doubtfire.jpg"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "The plot of Hamlet, but songs by Elton John and Horatio is a Mandrill",
+	answer : "The Lion King", 	answerimage : "https://cdn.shopify.com/s/files/1/1057/4964/products/the-lion-king-vintage-movie-poster-original-1-sheet-27x41.jpeg?v=1555448600"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "A Dad loses his son and for some reason enlists an amnesiac to help locate him",
+	answer : "Finding Nemo", 	answerimage : "https://www.closeup-shop.com/media/oart_0/oart_f/oart_35097/thumbs/222816_2115058.jpg"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "The guy who once played James Bond is the father of the guy who played Han Solo",
+	answer : "India Jones (and the Last Crusade)", 	answerimage : "https://d2e111jq13me73.cloudfront.net/sites/default/files/styles/product_image_aspect_switcher_170w/public/product-images/csm-movie/3340-orig.jpg?itok=rhlgOlVw"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "A Dad finds work-life balance challenging and misses a deadline in lockdown-like conditions",
+	answer : "The Shining", 	answerimage : "https://m.media-amazon.com/images/I/51wVhTD108L._AC_.jpg"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "A Dad uses his special skills to find his daughter",
+	answer : "Taken", 	answerimage : "https://cdn.postercollector.co.uk/site/posters/2017/11/taken-2008-uk-quad-scaled.jpg"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "Girl wants her real Dad to come to her wedding",
+	answer : "Mamma Mia", 	answerimage : "https://images-na.ssl-images-amazon.com/images/I/51TLx39WwnL._AC_.jpg"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "Reluctant Dad wants custody after getting divorced",
+	answer : "Kramer vs Kramer", 	answerimage : "https://images-na.ssl-images-amazon.com/images/I/51wYGGTylxL._AC_.jpg"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "Dad finds more than 11 kids less expensive",
+	answer : "Cheaper by the Dozen", 	answerimage : "https://cdn.shopify.com/s/files/1/1416/8662/products/cheaperbythedozen_2003_original_film_art_a.jpg?v=1611982803"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "3 Dads raise a daughter",
+	answer : "3 Men and a Baby", 	answerimage : "https://upload.wikimedia.org/wikipedia/en/thumb/5/55/Three_men_and_a_baby_p.jpg/220px-Three_men_and_a_baby_p.jpg"});
+
+
+
+quests[++questIndexBuilder] = { //
+		name : "Pa songs",
+		hoverover : "Songs featuring the words Pa, Dad, Father",
+		tags : "music,2021-6-19,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/6efA1zrZyjAxSoe8RzH09e" width="501" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+	answer : ""}) ;
+
+
 
 /*
 quests[++questIndexBuilder] = { //
