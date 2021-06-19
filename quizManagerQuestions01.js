@@ -1244,6 +1244,30 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : ""}) ;
 
 
+quests[++questIndexBuilder] = { //
+		name : "Pictionary 21",
+		hoverover : "Pictionary on the theme of balls",
+		tags : "2021-6-19,pictionary",
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3fQjrftfX6iO1Rw5tcSXtGwUgypDzYByNurGVCsg2IQwk_wuKG1hLS1IHrUi-gWoDFNrcrlDoprJYMBU7Z1CXV8wIQS-xERbb5czZ3EmVE2LSs0xt325iOuMyzJm9W7T62-yxGD5fHHzXiX9dbxCTiygQ=w291-h267-no?authuser=0",
+	answerimage : "https://cdn.shopify.com/s/files/1/1492/1076/products/Traditional_Black_and_White_Football_Ball_32_Panel_Classic_1400x.jpg?v=1563121775", answerSpeak : "Football"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3e1CXqXW5ajL3qIL4j_B3R0FHkR87owyXiHYT40DNcru8a7DCgvkpeLZDuwDk3FvfbBFTYL7SZC3e4a6PxJpbfvdS1Nd80t6daUUut0liyN_oD401pVPvPRBE2yus7tj1EzJbKA91Kbr5VHwwpQtO6Z5A=w429-h228-no?authuser=0",
+	answerimage : "https://www.sportsballshop.co.uk/acatalog/GilbertBarbarian1.jpg", answerSpeak : "Rugby ball"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3dGwi2yTA974sFgxFDtUwxGsUBXCNWzlhzjSWwFsvzg0MRTS_e23NeHMGhiYKln68qyTlxMf21YO3IrabQoMX9cbiWPHWHTyp4Vk_YjNI_bqQV9v1w8oV3O4EoW8inccXB6dDP5Ca-ARl0HtHWNS73QCA=w348-h161-no?authuser=0",
+	answerimage : "https://nwscdn.com/media/wysiwyg/3kf/afball/td100offical.jpg", answerSpeak : "American football"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3fi81VweJLwJyrrZq9n1-rQJsDmD_piRFJuc4gloSrJfwX9CyAuVzbcZq9pw8tOWxfc87yTCLBqGQ9Sd_fClLme7hS4-MxL5ZsMV2hVQCypxUYd64kbKNa9SwqCb-m_zX4CxMcwAXN1b2WXH2dtuZQygQ=w419-h374-no?authuser=0",
+	answerimage : "https://cdn.shopify.com/s/files/1/0305/5457/products/TBY-single_1024x1024.jpg?v=1589451308", answerSpeak : "Tennis ball"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3dXiIEoLkxWccqNcbS4OAbltWN9JKY3IUZQj1PRyWp6K3guh0rtic8vvPbPsrCBzF8PstzQerISzO3JrFVHOJRvqthV5D_JlwVCQ6n8PEFnS2FxjSHaFBjv0Ucz6EIGwWDM4RlEcRuIOCWVE665rwA0kA=w145-h110-no?authuser=0",
+	answerimage : "https://image.shutterstock.com/image-vector/ping-pong-ball-white-photo-260nw-543102676.jpg", answerSpeak : "ping pong ball"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3fmn6uPDU4MDTbwXGHwZuz5eTd2hf-T8pvdx9nwsoUMszy4BByceERQJ4C4ldtkLzt7yI7mLcstwFclmMkwDMmuqtB6WO_kqWQAEZZUZkkARheW1suWfq7gHloC0IBYA68c_tjNI48X9x_qnLxrXX9Cjg=w394-h363-no?authuser=0",
+	answerimage : "https://glasgowlife.sportsuite.co.uk/images/files/76321/1280x720.jpg", answerSpeak : "basket ball"}) ;
 
 /*
 quests[++questIndexBuilder] = { //
