@@ -1133,7 +1133,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 quests[++questIndexBuilder] = { //
 		name : "Lost Pa",
 		hoverover : "Do you know the name of these places starting with Pa?",
-		tags : "2021-6-19,saturday,InnerWheel,surfers",
+		tags : "2021-6-19,saturday,InnerWheel,surfers,specialDay",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
@@ -1164,7 +1164,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 quests[++questIndexBuilder] = { //
 		name : "Famous Pa",
 		hoverover : "Do you know the name of these Pa s?",
-		tags : "2021-6-19,saturday,InnerWheel,surfers",
+		tags : "2021-6-19,saturday,InnerWheel,surfers,specialDay",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
@@ -1195,7 +1195,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
 quests[++questIndexBuilder] = { //
 		name : "Film Pa",
 		hoverover : "Do you know the name of these films?",
-		tags : "2021-6-19,saturday,InnerWheel,surfers",
+		tags : "2021-6-19,saturday,InnerWheel,surfers,specialDay",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
@@ -1234,7 +1234,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
 quests[++questIndexBuilder] = { //
 		name : "Pa songs",
 		hoverover : "Songs featuring the words Pa, Dad, Father",
-		tags : "music,2021-6-19,InnerWheel,saturday",
+		tags : "music,2021-6-19,InnerWheel,saturday,specialDay",
 		questInfo: new Array()
 	};
 
