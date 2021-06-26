@@ -1315,7 +1315,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 	question : "Complete this quotation attributed to W.C. Fields: <i>'I cook with wine. Sometimes I even...'</i>",
 	answer : "...put it in the food"} );
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 	question : "Which British football club director and celebrity cook may have had a few sharpeners when she came out at half time during her side's defeat to Manchester City and implored the crowd <i>'Where are you? Let's be having you! We need a twelfth man out here'</i>?",
 	answer : 'Delia Smith  <BR>  <iframe width="560" height="315" src="https://www.youtube.com/embed/NiC679ASOyA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'} );
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
