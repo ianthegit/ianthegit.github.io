@@ -632,6 +632,33 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	image : "https://lh3.googleusercontent.com/pw/ACtC-3fmn6uPDU4MDTbwXGHwZuz5eTd2hf-T8pvdx9nwsoUMszy4BByceERQJ4C4ldtkLzt7yI7mLcstwFclmMkwDMmuqtB6WO_kqWQAEZZUZkkARheW1suWfq7gHloC0IBYA68c_tjNI48X9x_qnLxrXX9Cjg=w394-h363-no?authuser=0",
 	answerimage : "https://glasgowlife.sportsuite.co.uk/images/files/76321/1280x720.jpg", answerSpeak : "basket ball"}) ;
 
+
+quests[++questIndexBuilder] = { //
+		name : "Pictionary 22",
+		hoverover : "Pictionary on the theme of dogs",
+		tags : "2021-6-26,pictionary",
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXk-i4msLtJ6d2Z0vBfunknmm9SgjXMCo__g0Hc8YvjBpqUQBT3LDUefVNfHLgBSQYgA55ISfsYmf89_tNnGU0GOhpmR_LFzsPtJe3dnU3ZDNiyEr0zR3Rp8KElJAoyMhnCREhahDDGZbFBMfnqL-gPsA=w754-h545-no?authuser=0",
+	answerimage : "https://i.chzbgr.com/full/6632130048/hD550C2E7/", answerSpeak : "Dalmation"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXM4FWoCAlwsbXFw48ccevMBt4sYWbP991XAXrmlf7THH0WcsadqXIVU240GeNLPx-vaD3aS4ofNGbynrBNpoVlvTRacGZ-791tQYoSbMRzYgm9KQbc_v6_QvqsfhjRoB56FehoC7HttvHxJQMZaN2E8A=w718-h380-no?authuser=0",
+	answerimage : "https://i.pinimg.com/236x/3b/95/90/3b9590382d50185e69c01ab17ef02f5a--dachshund-meme-dachshunds.jpg", answerSpeak : "Dachsund"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUX0oSrcJkwkI-KZMz3j-t70qswiyO9FBP1Oc8iwyHUHqeFvi87k0tF-Up77KhQMv00fZ6jMm_ZXdURMtMgOvtdXvq1VMMMdROeiKKUehlOfJ351FggwYNYdr6kTXUdDM6CpNC-WcyaEleA1d0T9s9IJg=w818-h639-no?authuser=0",
+	answerimage : "https://www.thepaws.net/wp-content/uploads/2018/10/schnauzer-meme-7.jpg", answerSpeak : "Schnauzer"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLWMMoSDQlzI9eRm3FxbKTFUkZbJIOZbbJqPSvxJySnGoFq4AZ1PM4Yn8VNOL8SLsHdLPJ7n-RWLaVKhcfkjQR-Hy-2Hwuo4PqpWbx1RjV_8D3wnkQHUgzpwqgrCMyCsYL78nzKR5_ACpOIxDz8S506iug=w782-h509-no?authuser=0",
+	answerimage : "https://pbs.twimg.com/media/Doq-Fe2UwAAuZhA?format=jpg&name=medium", answerSpeak : "Greyhound"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXj2-sYDNol5GsaSEsgaxUZpcEaOpsWxQ_yZ1h9l-SZYlTtkzs-KnEnfRCcpi-MR3K8R9xeZtW7JXd18G8fsgvT2_I45og6PUoV7V-cUINDVFTCnb1LqLdvYAqwqnvtfsPwqDNR0DDx1p984gRcEuBMsQ=w616-h376-no?authuser=0",
+	answerimage : "https://i.pinimg.com/originals/2d/05/9f/2d059f212140133644c0a08b005347a5.jpg", answerSpeak : "Border Terrier"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVdhwvO8aaLeD5bpBiA7OErFFxXWQCcJEI6n5oZsZLk5iUcM5ftLHqB2q8sNMNSQYTfwBUMlLj_g68MGIYKf9XZjo_OzUhz73XmQ3Go5t2AjgJEJ7EwkvO2sASKtPjmxOWLK12hh3E8MU2kojv09uAorQ=w665-h505-no?authuser=0",
+	answerimage : "https://i.pinimg.com/originals/43/8c/57/438c579723c2d79ac6ad5f4fbe7dcf14.jpg", answerSpeak : "Old English Sheepdog"}) ;
+
+
 /*
   
  quests[++questIndexBuilder] = { //
