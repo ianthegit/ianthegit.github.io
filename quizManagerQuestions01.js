@@ -1393,7 +1393,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 quests[++questIndexBuilder] = { //
 		name : "Drinking songs",
 		hoverover : "Songs about drinking",
-		tags : "music,2021-6-19,InnerWheel,saturday,drink",
+		tags : "music,2021-6-26,InnerWheel,saturday,drink",
 		questInfo: new Array()
 	};
 
