@@ -1244,6 +1244,165 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : ""}) ;
 
 
+quests[++questIndexBuilder] = { //
+		name : "Drink",
+		hoverover : "Some general knowledge questions about the demon drink",
+		tags : "2021-6-26,saturday,InnerWheel,surfers,drink",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "The shape of modern champagne glasses is said to have derived from the mould of whose breasts?",
+	answer : "Marie Antoinette", 	answerimage : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Marie-Antoinette%3B_koningin_der_Fransen.jpg/300px-Marie-Antoinette%3B_koningin_der_Fransen.jpg"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "The Manhattan cocktail, a blend of sweet vermouth and whisky, was first created by the mother of which famous politician?",
+	answer : "Winston Churchill", 	answerimage : "https://www.dulwichpicturegallery.org.uk/media/6477/jennie-churchill_website.jpg"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "In Greek mythology, who is the god of wine?",
+	answer : "Bacchus", 	answerimage : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Bacchus.jpg/504px-Bacchus.jpg"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "Gin was originally used for which purposes?", answerSpeak : "Medecine",
+	answer : "Medicine - Gin is made from juniper berries, little dark purple nuggets with superfood powers. These berries can help fight infection and prevent heart disease, improve blood circulation, and even help fight kidney and liver disease."
+		, 	answerimage : "https://40fn8xaond02n945e3uw849n-wpengine.netdna-ssl.com/wp-content/uploads/2020/04/Gin-Medicine.jpg"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : " What is the official alcoholic beverage of the United States?"+ Table4ColumnStart + "Budweiser</td><td>Bourbon</td><td>Whiskey Sour</td><td>Sex on the Beach" + Table4ColumnEnd,
+	answer : "Bourbon", 	answerimage : "https://www.jimbeam.com/sites/default/files/2019-04/Jim%20Beam%20Bourbon.jpg"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "Which Mexican beer brewery shares its name with a deadly virus?",
+	answer : "Corona", 	answerimage : "https://cdn.vox-cdn.com/thumbor/w3Oetof6CPE9MKPsamNUWCaU3wg=/0x0:4623x3082/920x613/filters:focal(1943x1172:2681x1910):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/66399132/shutterstock_672353038.0.jpg"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "What does the wine term Spumante mean?",
+	answer : "Sparkling", 	answerimage : "https://cdn-a.william-reed.com/var/wrbm_gb_food_pharma/storage/images/publications/food-beverage-nutrition/beveragedaily.com/article/2020/02/17/wine-around-the-world-germany-and-uk-top-imports-in-sparkling/10707816-2-eng-GB/Wine-around-the-world-Germany-and-UK-top-imports-in-sparkling_wrbm_large.jpg"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "What does the beer abbreviation IPA stand for?",
+	answer : "India Pale Ale", 	answerimage : "https://www.drinksupermarket.com/media/catalog/product/cache/0288c1cb4e2e8b328879830e17ef5901/b/r/brewdog_punk_ipa_india_pale_ale_cans.jpg"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "What is mead's main ingredient?",
+	answer : "Honey", 	answerimage : "https://img.themanual.com/image/themanual/bottles-of-mead-getty-images-768x768.jpg"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "Southern Comfort is flavored with which fruit?",
+	answer : "Peaches", 	answerimage : "https://media.self.com/photos/5b75ad5728dfab53ee567688/4:3/w_2560%2Cc_limit/GettyImages-614938268.jpg"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "What is the specific name of the plug used to seal a wine barrel?  Extra point for the name of the hole it goes into.",
+	answer : "Bung.  And it goes in the Bung Hole", 	answerimage : "https://www.ultimatequizquestions.com/wp-content/uploads/2021/02/wine-bung-hole.webp"});
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "In which month does the famous beer festival Oktoberfest generally occur?", answer : "September",
+	answerimage : "https://www.thelocal.de/wp-content/uploads/2018/09/1537782842_oktoberfest.jpg"} );
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "Which country is home to the beer Victoria Bitter?", answer : "Australia",
+	answerimage : "https://scontent.flhr2-3.fna.fbcdn.net/v/t31.18172-8/s960x960/24172857_193483781223298_9025253182843920695_o.jpg?_nc_cat=102&ccb=1-3&_nc_sid=e3f864&_nc_ohc=N3E8YCoBCBAAX_je7YG&_nc_ht=scontent.flhr2-3.fna&tp=7&oh=8d5181812770fbda5d45179c128b053d&oe=60DC4B55"} );
+
+quests[++questIndexBuilder] = { //
+		name : "Another Drink",
+		hoverover : "Some more general knowledge questions about the demon drink",
+		tags : "2021-6-26,saturday,InnerWheel,surfers,drink",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "Which drink is often described as having body, legs and nose and could also be flabby or fleshy?",
+	answer : "Wine"} );
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "Complete this quote attributed to Winston Churchill when Lady Astor chided him for being drunk: '<i>Well you, Madam, are ugly. In the morning...</i>'",
+	answer : "...I shall be sober"} );
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "What sort of vessel did England cricketer Andrew Flintoff infamously fall off after a drinking spree in the Caribbean in 2007?",
+	answer : "Pedalo", answerimage: "https://static.independent.co.uk/s3fs-public/thumbnails/image/2014/09/12/08/Flintoff.jpg?width=982&height=726&auto=webp&quality=75"} );
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "Typically involving tasks such as balancing on one leg and walking nine steps heel to toe in a straight line, FST stands for Field... what?",
+	answer : 'Field Sobriety Test </BR>  <iframe width="560" height="315" src="https://www.youtube.com/embed/D6VQDNIZH7U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'} );
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "Which communal living animals often get so drunk from fermented nectar that they have mid-air collisions or cannot find their way home?",
+	answer : "Bees"} );
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "Complete this quotation attributed to W.C. Fields: <i>'I cook with wine. Sometimes I even...'</i>",
+	answer : "...put it in the food"} );
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "Which British football club director and celebrity cook may have had a few sharpeners when she came out at half time during her side's defeat to Manchester City and implored the crowd <i>'Where are you? Let's be having you! We need a twelfth man out here'</i>?",
+	answer : 'Delia Smith  <BR>  <iframe width="560" height="315" src="https://www.youtube.com/embed/NiC679ASOyA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'} );
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "Which American author and drinker said <i>'Always do sober what you said you would do drunk. That will teach you to keep your mouth shut.'</i>",
+	answer : "Ernest Hemingway"} );
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "How does this Frank Sinatra quotation end: <i>'I feel bad for people who don't drink. When they wake up in the morning...'</i>?",
+	answer : "...that's the best they're going to feel all day"} );
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "In addition to being brewers, what is the occupation of the producers of Trappist beers such as Chimay?",
+	answer : "Monks"} );
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : " True or False? The National Anthem of the USA was written to the tune of a drinking song",
+	answer : "True"} );
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "In 1651, Prince Charles fled the Battle of Worcester. He got as far as Bishops Wood in Staffordshire, where he climbed a tree and hid in it for a day before escaping to France. Which common pub name recalls this event?",
+	answer : "The Royal Oak"} );
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "When the steam locomotive was invented, which two pub names sprung up and became some of the fastest growing in Britain? (A point per correct one)",
+	answer : "The Railway / The Station"} );
+
+quests[++questIndexBuilder] = { //
+		name : "Too many drinks",
+		hoverover : "Do you recognise these over-imbibers?",
+		tags : "2021-6-26,saturday,InnerWheel,surfers,drink",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?", 	answer : "Cara Delevinge",
+	image : "https://pbs.twimg.com/media/BLJO2TuCUAAnp64?format=jpg&name=small"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?", 	answer : "Lady Gaga",
+	image : "https://pbs.twimg.com/media/BLJRE3OCMAEee9t?format=jpg&name=small"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?", 	answer : "Cameron Diaz",
+	image : "https://pbs.twimg.com/media/BLJTH59CYAARzyE?format=jpg&name=360x360"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?", 	answer : "Kiefer Sutherland",
+	image : "https://www.awesomeinventions.com/wp-content/uploads/2015/11/drunk-celebrities-sutherland.jpg"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?", 	answer : "Reese Witherspoon",
+	image : "https://www.awesomeinventions.com/wp-content/uploads/2015/11/drunk-celebrities-reese-witherspoon.jpg"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?", 	answer : "Quentin Tarantino",
+	image : "https://www.awesomeinventions.com/wp-content/uploads/2015/11/drunk-celebrities-quentin-tarantino.jpg"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this I'd have trouble keeping up with?", 	answer : "Kim Kardashian",
+	image : "https://www.awesomeinventions.com/wp-content/uploads/2015/11/drunk-celebrities-kim-k.jpg"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?", 	answer : "Johnny Depp",
+	image : "https://www.awesomeinventions.com/wp-content/uploads/2015/11/drunk-celebrities-johnny-depp.jpg"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?", 	answer : "David 'The Hoff' Hasselhoff",
+	image : "https://www.awesomeinventions.com/wp-content/uploads/2015/11/drunk-celebrities-hoff.jpg"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?", 	answer : "Charlie Sheen",
+	image : "https://www.awesomeinventions.com/wp-content/uploads/2015/11/drunk-celebrities-charlie-sheen.jpg"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?", 	answer : "Robert Pattinson",
+	image : "https://atchuup.com/wp-content/uploads/2014/04/333.jpg"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this, again?", 	answer : "Keifer Sutherland",
+	image : "https://atchuup.com/wp-content/uploads/2014/04/622.jpg"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?", 	answer : "Prince Willy",
+	image : "https://www.atchuup.com/wp-content/uploads/2014/04/718.jpg"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?", 	answer : "Mel Gibson",
+	image : "https://atchuup.com/wp-content/uploads/2014/04/919.jpg"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this sober person taking pictures with a drunk passed-out chap?", 	answer : "Tom Hanks",
+	image : "https://www.atchuup.com/wp-content/uploads/2014/04/dh.jpg"}) ;
+
+
+quests[++questIndexBuilder] = { //
+		name : "Drinking songs",
+		hoverover : "Songs about drinking",
+		tags : "music,2021-6-19,InnerWheel,saturday,drink",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/12AmugyIxQeA9EkxXRZbBe" width="501" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+	answer : ""}) ;
+
+
 /*
 quests[++questIndexBuilder] = { //
 		name : "Test Alt speak",
