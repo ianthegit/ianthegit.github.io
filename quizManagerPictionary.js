@@ -659,6 +659,31 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://i.pinimg.com/originals/43/8c/57/438c579723c2d79ac6ad5f4fbe7dcf14.jpg", answerSpeak : "Old English Sheepdog"}) ;
 
 
+quests[++questIndexBuilder] = { //
+		name : "Pictionary 23",
+		hoverover : "Pictionary on the theme of Schooldays",
+		tags : "2021-7-3,pictionary",
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLURSIOn2wcp885Ff_O-94nvZ4eBKl8IRYZRBjiL7jlKWkiC0ZA47RESs-hLhX-SUmmJI5XTV5AvebL7HKRJrjz5-rjerc8dU764DD1ULZfRyXsXLcK14cAs6u_RONaOEnFzkGu8MAv0HiGBbmViXN7E9w=w483-h325-no?authuser=0",
+	answer : "Chemistry"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXqSv5gLGIy-_3ZpYSWvPkwsMUZOhnTTYiycKJKborE1RMVKqGfCpb7t0cM-iLAEBfKuvRAmelV9dgfLhLpjY8kybRTtQtYIUotwwrlT4oX5V4QAUFxMzfABWtkfI5rYkyx7rRRb5IGDAX5_DeS71rrvw=w268-h294-no?authuser=0",
+	answer : "Geography"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVrZwgZ2ApeOoyJboYoLVYLypYB_zSpJhYmC0zkMkPe8oeBr0W6nkSaJMQr0HuZXrjC3eNHTYPPGcm8T8vQkYMGIy0Hsehtn_kzNRNuaoLfEp5UaCJo-0-kqwUSgJJIvM3a6I4W6QcfpkkA1SPZHyeOOw=w383-h393-no?authuser=0",
+	answer : "RE"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUcPYZ2aBNeRKov00WZvs1F5lEnSKGPlfc-XFsmouNLfiiFcuBEJw4pQOpiGP8w7Cx5O06npN4BXQjErPMxM6GEAGxJ6iHYF3DJa8hCZHi58gEbdB_g1jM-Ve6j9DOSLQrS1XZvRLH1wA58y3VImg5TAw=w301-h309-no?authuser=0",
+	answer : "PE"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXmaWQRrwRZi8dx-AY_ikOt1jkbUYaOUgS46HSrOCcmsySRDWznMZsNwUwhZiQGmnL_HN56ca_VD31PANX_IpIM_lT-BOlkBjPmF1CBmeaSLY0eJbZ5BJt_L9_Xw6XjiwZV4UvcJqKd-Ws7aA-oRLcsow=w274-h296-no?authuser=0",
+	answer : "Art"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXkU7-fJzA5TB2RJqMXzVjgLuc8XXhn2pAaHGDth3_FtAdzdm-p-7e87BRlcYcAXR1jKX2zbulmx441iCNVBU_-con17XJlYjNg-am_6XBut8vG8OSKwzRspN01ZlmCyA9GpCvr8_YBoNFwEV6Csr0f2g=w378-h160-no?authuser=0",
+	answer : "Music"}) ;
+
 /*
   
  quests[++questIndexBuilder] = { //
