@@ -1402,6 +1402,144 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/12AmugyIxQeA9EkxXRZbBe" width="501" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
 	answer : ""}) ;
 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "It emerged that tourists had been erroneously charged as much as " + gbp + "2,104.18 for visiting Brighton's pier. What was the reason given for the error?  " + Table4ColumnStart + "The company handling the transactions had been targeted by Bitcoin ransomware</td><td>The transactions had been processed using the date rather than the amount</td><td>A misplaced decimal point had rounded up every transaction by a factor of 100</td><td>Parents are used to paying ludicrous sums to keep their children amused at the seaside so they thought nobody would notice" + Table4ColumnEnd,
+	answer : "The transactions had been processed using the date rather than the amount"	,
+	image : "https://i.guim.co.uk/img/media/9a2d0bc887e9a03bada8b7f8ed5f69f6d3910b77/0_90_3500_2099/master/3500.jpg?width=620&quality=85&auto=format&fit=max&s=614f285a10f9d40bc83f930fb81f2f6e"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "The Sony Walkman went on sale for the very first time in Japan on 1 July. But which year?  " + Table4ColumnStart + "1978</td><td>1979</td><td>1980</td><td>1981" + Table4ColumnEnd,
+	answer : "1979"	,
+	image : "https://i.guim.co.uk/img/media/c8c48bfbed44d4adbfe2dcd57768cd4a421270a5/0_87_2453_3066/master/2453.jpg?width=620&quality=85&auto=format&fit=max&s=6abf348fcd731a7e342adbee052d929d"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "COMPARATIVELY SPEAKING: Which of these motorways in the UK is the longest?  " + Table4ColumnStart + "M1</td><td>M4</td><td>M5</td><td>M6" + Table4ColumnEnd,
+	answer : "M6 at 232 miles - 30 miles longer than he M1"	,
+	image : "https://i.guim.co.uk/img/media/3bc543dca33a944b5a98f88be5c6d939468cee84/0_275_4128_2477/master/4128.jpg?width=620&quality=85&auto=format&fit=max&s=577f64c9a507eaa2b10c59559d962439"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Cambodian authorities confiscated which type of big cat that was being illegally kept as a pet from a private residence after they saw videos of the animal on the social media app TikTok?  " + Table4ColumnStart + "Lion</td><td>Tiger</td><td>Cheetah</td><td>Leopard" + Table4ColumnEnd,
+	answer : "Lion"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which film star is playing Batman here?  " + Table4ColumnStart + "Christian Bale</td><td>Ben Affleck</td><td>Michael Keaton</td><td>Val Kilmer" + Table4ColumnEnd,
+	answer : "Ben Affleck"	,
+	image : "https://i.guim.co.uk/img/media/38945e0904ed81c06d500262e0249f3ee3c29262/0_0_1698_1019/master/1698.jpg?width=620&quality=85&auto=format&fit=max&s=00ed47e93f662ff4dad5f095e86cdf80"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "TRUE OR FALSE: Bats comprise about 20% of all classified mammal species worldwide?  " ,
+	answer : "True - about 1,400 species of them"	,
+	image : "https://i.guim.co.uk/img/media/805cb973b7f6d2c9ffc82c9ec74599b7cf79aec4/0_103_3000_1801/master/3000.jpg?width=620&quality=85&auto=format&fit=max&s=83725cf5187c09c419cc3e8ef7cf5816"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "In 1976 Niki Lauda suffered a severe accident in a grand prix which nearly killed him. At which circuit?  " + Table4ColumnStart + "Nurburgring, Germany</td><td>Osterreichring, Austria</td><td>Zandvoort, Netherlands</td><td>Monza, Italy" + Table4ColumnEnd,
+	answer : "Nurburgring, Germany"	,
+	image : "https://i.guim.co.uk/img/media/1967ea79c1dee666930200b08af859d346aec870/0_72_3000_1801/master/3000.jpg?width=620&quality=85&auto=format&fit=max&s=f73d46233f801a2914435818661bec2f"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "When MTV first started broadcasting in the US, what was the first music video they played?  " + Table4ColumnStart + "Planet Earth by Duran Duran</td><td>Video Killed The Radio Star by the Buggles</td><td>Vienna by Ultravox</td><td>Wuthering Heights by Kate Bush" + Table4ColumnEnd,
+	answer : "Buggles"	,
+	image : "https://i.guim.co.uk/img/media/d328a937133aac819f7f8cbc9dc755698bf99b4d/0_0_2000_1200/master/2000.jpg?width=620&quality=85&auto=format&fit=max&s=354dea42e170948c284f4e93510ca527"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "In Douglas Adams' peerless Hitchhikers Guide to the Galaxy, what drink had effects similar to 'having your brains smashed out by a slice of lemon wrapped round a large gold brick'?  " + Table4ColumnStart + "Pan Galactic Gargle Blaster</td><td>Total Perspective Vortex</td><td>Bugblatter Beast of Traal</td><td>Jynnan Tonnyx" + Table4ColumnEnd,
+	answer : "Pan Galactic Gargle Blaster"	,
+	image : "https://i.guim.co.uk/img/media/7adb5c204ec379575b0c4bd71cef0f85d9bfdea9/248_85_1457_875/master/1457.jpg?width=620&quality=85&auto=format&fit=max&s=2212f348f5eb0251895d6a0836f35856"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "ONLY IN AUSTRALIA: New South Wales police have fined two men for breaching coronavirus restrictions after they were startled while sunbathing naked on a beach south of Sydney and ran into the bush, becoming lost and needing to be rescued. What did the men say startled them?  " ,
+	answer : "Deer"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "AND FINALLY: Last week Conservative MP Joy Morrissey launched a campaign to try and get something important for every household in Britain. What was it?  " + Table4ColumnStart + "Affordable rent and tax-free pandemic mortgage relief</td><td>Flammable cladding removed at no cost to leaseholders in order to protect their lives</td><td>Damp-proofing and adequate heating for all</td><td>Exactly one picture of Her Majesty Queen Elizabeth II each" + Table4ColumnEnd,
+	answer : "Exactly one picture of Her Majesty Queen Elizabeth II each"	,
+	image : "https://i.guim.co.uk/img/media/bd9e12f7f35d590f285a8e858712e412d1983c89/0_48_3500_2101/master/3500.jpg?width=620&quality=85&auto=format&fit=max&s=b62eba427cface194bb79b0e9c28e565"});
+
+
+quests[++questIndexBuilder] = { //
+		name : "Coming Home",
+		hoverover : "We all know the football is coming home - but do you know these homes?",
+		tags : "2021-7-3,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who lives here",
+	answer : "Harry Potter and the Dursleys"	,
+	image : "https://img.playbuzz.com/image/upload/ar_1.5,c_crop/q_auto:good,f_auto,fl_lossy,w_640,c_limit,dpr_1/v1586962081/vbmbwjdaal4hgmiromu6.png"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who lives here- what show was this house from, it sometimes had a pizza on the roof?",
+	answer : "Breaking Bad"	,
+	image : "https://img.playbuzz.com/image/upload/ar_1.5,c_crop/q_auto:good,f_auto,fl_lossy,w_640,c_limit,dpr_1/v1586962282/elgulvqdrgozuq0s1oef.jpg"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What show was set here, where they regularly ate a nice bit of squirrel?",
+	answer : "Friday Night Dinner"	,
+	image : "https://img.playbuzz.com/image/upload/ar_1.5,c_crop/q_auto:good,f_auto,fl_lossy,w_640,c_limit,dpr_1/v1586966880/gwkicb2og6szfxbtydb8.png"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What's occurrin here - what show is this Essex house from?",
+	answer : "Gavin & Stacy"	,
+	image : "https://img.playbuzz.com/image/upload/ar_1.5,c_crop/q_auto:good,f_auto,fl_lossy,w_640,c_limit,dpr_1/v1586961989/l5xtqybobd7al4epwayb.jpg"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What 3 to 2 combo lives here?",
+	answer : "Outnumbered"	,
+	image : "https://img.playbuzz.com/image/upload/ar_1.5,c_crop/q_auto:good,f_auto,fl_lossy,w_640,c_limit,dpr_1/v1586962168/bupqi0idu2zid2dylnjy.png"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who lives here?",
+	answer : "The Queen"	,
+	image : "https://img.buzzfeed.com/buzzfeed-static/static/2019-05/5/10/enhanced/buzzfeed-prod-web-05/enhanced-18381-1557066584-1.jpg?output-format=webp&output-quality=auto"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who lives here?",
+	answer : "The Simpsons"	,
+	image : "https://img.buzzfeed.com/buzzfeed-static/static/2019-05/3/8/enhanced/buzzfeed-prod-web-04/enhanced-818-1556885031-1.jpg?output-format=webp&output-quality=auto"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who lives here?",
+	answer : "The Flintstones"	,
+	image : "https://img.buzzfeed.com/buzzfeed-static/static/2019-05/5/10/enhanced/buzzfeed-prod-web-05/enhanced-18852-1557067059-1.jpg?output-format=webp&output-quality=auto"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who lives here?",
+	answer : "Rosie and Jim"	,
+	image : "https://img.buzzfeed.com/buzzfeed-static/static/2019-05/5/10/enhanced/buzzfeed-prod-web-01/enhanced-15499-1557068110-1.jpg?output-format=webp&output-quality=auto"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who lives here?",
+	answer : "Eeyore"	,
+	image : "https://img.buzzfeed.com/buzzfeed-static/static/2019-05/3/8/enhanced/buzzfeed-prod-web-01/enhanced-29697-1556885910-1.jpg?output-format=webp&output-quality=auto"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who lives here?",
+	answer : "Paddington & the Browns"	,
+	image : "https://ksassets.timeincuk.net/wp/uploads/sites/56/2017/11/26-chalcot-cres_front-920x920.jpg"});
+
+
+quests[++questIndexBuilder] = { //
+		name : "Garden Bush",
+		hoverover : "Kate Bush might be the answer?",
+		tags : "2021-7-3,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who famously turned up at the 2010 MTV video awards wearing a dress made of raw meat? Rihanna, Gwen Stefani, Lady Gaga or Kate Bush?",
+	answer : "Lady Gaga"	,
+	image : "https://i.guim.co.uk/img/media/b033ca12de32098520b484c469d5e992f7dd24d0/0_0_2000_1200/master/2000.jpg?width=620&quality=85&auto=format&fit=max&s=71ac9cf364a7e565a3ce94b821973759"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which of these artists had the bestselling album by a woman in the UK in 1985? Madonna, Alison Moyet, Tina Turner or Kate Bush?",
+	answer : "Madonna"	,
+	image : "https://i.guim.co.uk/img/media/2bffe054a09f15a98a83b662274bb8bfd36a4bd8/0_0_2000_1200/master/2000.jpg?width=620&quality=85&auto=format&fit=max&s=2a97ccff45ad92579a72b223f429c5b5"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which female pop star was recently the subject of a documentary which tackled her attempts to regain control of her career and finances from her father? Karen Carpenter, Taylor Swift, Britney Spears or Kate Bush?",
+	answer : "Britney Spears"	,
+	image : "https://i.guim.co.uk/img/media/dcdf06ddc572d7f610329cb3b1ee7687d7588924/0_0_2000_1200/master/2000.jpg?width=620&quality=85&auto=format&fit=max&s=c5e53522b92687f253893af941aa9b13"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : " Which of these female recording artists has won the most Grammy awards? Aretha Franklin, Beyonce, Whitney Houston, or Kate Bush?",
+	answer : "Beyonce"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Which of these female artists was the last UK entry to win the Eurovision song contest? Katrina and the Waves, Jade Ewen, Bonnie Tyler or Kate Bush?",
+	answer : "Katrina and the Waves"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Which of these was the first solo female artist to score a No 1 album in the official UK charts? Barbra Streisand, Connie Francis, Bonnie Tyler or Kate Bush?",
+	answer : "Barbra Streisand"	});
+
+
+quests[++questIndexBuilder] = { //
+		name : "Home songs",
+		hoverover : "Songs about home, houses or shacks",
+		tags : "music,2021-6-26,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/3VlemQzcmvbS618X6fERw5" width="501" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+	answer : ""}) ;
+
 
 /*
 quests[++questIndexBuilder] = { //
