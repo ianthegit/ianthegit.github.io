@@ -56,6 +56,7 @@ answerButton = "<input type='button' class='userBtnNext' value='Answers' title='
 tagsButton = "<input type='button' class='userBtnStop' value='Categories' title='Categories' id='Categories' onclick='showCategories()' />";
 Table4ColumnStart="<table style='font-family:verdana;color:Black;font-size:30px;topMargin=10px;bottomMargin=10px' width='95%' border='1'><tr><th>1</th><th>2</th><th>3</th><th>4</th></tr><tr><td>";
 Table4ColumnEnd=" </td></tr></table>";
+gbp="&#163";
 quests = new Array();
 
 function getMonthName(index) {
