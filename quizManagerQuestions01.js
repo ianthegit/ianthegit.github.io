@@ -1402,6 +1402,12 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/12AmugyIxQeA9EkxXRZbBe" width="501" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
 	answer : ""}) ;
 
+quests[++questIndexBuilder] = { //
+		name : "Last week in June",
+		hoverover : "Do you remember what happened end of June 2021?",
+		tags : "2021-7-3,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "It emerged that tourists had been erroneously charged as much as " + gbp + "2,104.18 for visiting Brighton's pier. What was the reason given for the error?  " + Table4ColumnStart + "The company handling the transactions had been targeted by Bitcoin ransomware</td><td>The transactions had been processed using the date rather than the amount</td><td>A misplaced decimal point had rounded up every transaction by a factor of 100</td><td>Parents are used to paying ludicrous sums to keep their children amused at the seaside so they thought nobody would notice" + Table4ColumnEnd,
 	answer : "The transactions had been processed using the date rather than the amount"	,
