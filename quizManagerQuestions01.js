@@ -1484,7 +1484,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	image : "https://img.buzzfeed.com/buzzfeed-static/static/2019-05/5/10/enhanced/buzzfeed-prod-web-05/enhanced-18381-1557066584-1.jpg?output-format=webp&output-quality=auto"});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Who lives here?",
-	answer : "The Simpsons"	,
+	answer : "Family Guy"	,
 	image : "https://img.buzzfeed.com/buzzfeed-static/static/2019-05/3/8/enhanced/buzzfeed-prod-web-04/enhanced-818-1556885031-1.jpg?output-format=webp&output-quality=auto"});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Who lives here?",
