@@ -1547,6 +1547,76 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : ""}) ;
 
 
+quests[++questIndexBuilder] = { //
+		name : "Older",
+		hoverover : "Who are these people, and who is older?  3 points up for grabs each question",
+		tags : "2021-7-10,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who are these people, and which is older or were they born in the same year?  " ,
+	answer : "Gwen Stefani, Cate Blanchett - both born 1969 "	,
+	image : "https://i0.wp.com/bestlifeonline.com/wp-content/uploads/2019/03/gwen-stefani-cate-blanchett.jpg?resize=500%2C500&ssl=1"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who are these people, and which is older or were they born in the same year?  " ,
+	answer : "Jay-Z and Matthew Perry - 1969"	,
+	image : "https://i1.wp.com/bestlifeonline.com/wp-content/uploads/2021/05/Jay-Z-and-Matthew-Perry.jpg?resize=500%2C364&ssl=1"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who are these people, and which is older or were they born in the same year?  " ,
+	answer : "Ryan Gosling and Macaulay Culkin - 1980"	,
+	image : "https://i2.wp.com/bestlifeonline.com/wp-content/uploads/2021/05/Ryan-Gosling-and-Macaulay-Culkin.jpg?resize=500%2C343&ssl=1"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who are these people, and which is older or were they born in the same year?  " ,
+	answer : "Matt Damon and Nick Offerman - 1970"	,
+	image : "https://i2.wp.com/bestlifeonline.com/wp-content/uploads/2021/05/Matt-Damon-and-Nick-Offerman.jpg?resize=500%2C346&ssl=1"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who are these people, and which is older or were they born in the same year?  " ,
+	answer : "Brad Pitt and Dean Norris - 1963"	,
+	image : "https://i2.wp.com/bestlifeonline.com/wp-content/uploads/2021/05/Brad-Pitt-and-Dean-Norris.jpg?resize=500%2C341&ssl=1"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who are these people, and which is older or were they born in the same year?  " ,
+	answer : "Jim Parsons and Andrew Lincoln - 1973"	,
+	image : "https://i2.wp.com/bestlifeonline.com/wp-content/uploads/2019/03/jim-parsons-andrew-lincoln.jpg?resize=500%2C500&ssl=1"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who are these people, and which is older or were they born in the same year?  " ,
+	answer : "Chris Rock and Mads Mikkelsen - 1965"	,
+	image : "https://i1.wp.com/bestlifeonline.com/wp-content/uploads/2021/05/Chris-Rock-and-Mads-Mikkelsen.jpg?resize=500%2C358&ssl=1"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who are these people, and which is older or were they born in the same year?  " ,
+	answer : "Jamie Lee Curtis and Ellen DeGeneres  -1958"	,
+	image : "https://i0.wp.com/bestlifeonline.com/wp-content/uploads/2021/05/Jamie-Lee-Curtis-and-Ellen-DeGeneres.jpg?resize=500%2C373&ssl=1"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who are these people, and which is older or were they born in the same year?  " ,
+	answer : "Eddie Murphy and Forest Whitaker - 1961"	,
+	image : "https://i2.wp.com/bestlifeonline.com/wp-content/uploads/2019/03/eddie-murphy-forest-whitaker.jpg?resize=500%2C500&ssl=1"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who are these people, and which is older or were they born in the same year?  " ,
+	answer : "Michael J. Fox and George Clooney - 1961"	,
+	image : "https://i1.wp.com/bestlifeonline.com/wp-content/uploads/2021/05/Michael-J-Fox-and-George-Clooney.jpg?resize=500%2C381&ssl=1"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who are these people, and which is older or were they born in the same year?  " ,
+	answer : "Paul Rudd and Rory McCann - 1969"	,
+	image : "https://i0.wp.com/bestlifeonline.com/wp-content/uploads/2021/05/Paul-Rudd-and-Rory-McCann.jpg?resize=500%2C335&ssl=1"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who are these people, and which is older or were they born in the same year?  " ,
+	answer : "Nicolas Cage and Keanu Reeves - 1964"	,
+	image : "https://i1.wp.com/bestlifeonline.com/wp-content/uploads/2021/05/Nicolas-Cage-and-Keanu-Reeves.jpg?resize=500%2C385&ssl=1"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who are these people, and which is older or were they born in the same year?  " ,
+	answer : "Cher and Sally Field - 1946"	,
+	image : "https://bestlifeonline.com/wp-content/uploads/2021/05/Cher-and-Sally-Field.jpg"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who are these people, and which is older or were they born in the same year?  " ,
+	answer : "Russell Crowe and Rob Lowe - 1964"	,
+	image : "https://i1.wp.com/bestlifeonline.com/wp-content/uploads/2019/03/russell-crowe-rob-lowe.jpg?resize=500%2C500&ssl=1"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who are these people, and which is older or were they born in the same year?  " ,
+	answer : "Helena Bonham Carter and Salma Hayek - 1966"	,
+	image : "https://i1.wp.com/bestlifeonline.com/wp-content/uploads/2019/03/helena-bonham-carter-salma-hayek.jpg?resize=500%2C500&ssl=1"});
+
+
+
 /*
 quests[++questIndexBuilder] = { //
 		name : "Test Alt speak",
