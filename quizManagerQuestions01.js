@@ -1616,6 +1616,78 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	image : "https://i1.wp.com/bestlifeonline.com/wp-content/uploads/2019/03/helena-bonham-carter-salma-hayek.jpg?resize=500%2C500&ssl=1"});
 
 
+quests[++questIndexBuilder] = { //
+		name : "Home or Rome",
+		hoverover : "Is it going to Rome or coming home",
+		tags : "2021-7-10,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Atomic Kitten have rerecorded their massive hit Whole Again with a football theme for Euro 2020 after it was adopted by England fans as an anthem. What is the new version called? "+ Table4ColumnStart + "Sterling You're the One (Football's Coming Home Again)</td><td>Sancho You're the One (Football's Coming Home Again)</td><td>Southgate You're the One (Football's Coming Home Again)</td><td>Suarez Bit My Bum (Football's Coming Home Again)" + Table4ColumnEnd ,
+	answer : 'Southgate You re the One (Football s Coming Home Again) </BR> <iframe width="560" height="315" src="https://www.youtube.com/embed/V3I0FYzr15w?start=38" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'	,
+	image : "https://i.guim.co.uk/img/media/57ca82cd4eb9867a75b6f992e76f2fe9217345ce/0_225_4200_2520/master/4200.jpg?width=620&quality=85&auto=format&fit=max&s=1c86b6bdc06ce3e94ca4eb56804f5718"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : " Which of the following Atomic Kittens is NOT in the current lineup doing the rounds with their Euro 2020 song? "+ Table4ColumnStart + "Liz McClarnon</td><td>Kerry Katona</td><td>Jenny Frost</td><td>Natasha Hamilton" + Table4ColumnEnd ,
+	answer : "Kerry Katona"	,
+	image : "https://i.guim.co.uk/img/media/3c772502f7625600e4317bea259c7b9bc0650a92/0_75_5011_3006/master/5011.jpg?width=620&quality=85&auto=format&fit=max&s=fca2539b551c2781648bd8903e6e871d"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "'Sterling is on fire and your defence is terrified' is one of the latest adaptations of a song which has been a crowd staple for years. What song? "+ Table4ColumnStart + "Katy Perry - Fireworks</td><td>Rihanna - Diamonds</td><td>CeCe Peniston - Finally</td><td>Gala - Freed From Desire?" + Table4ColumnEnd ,
+	answer : "Freed From Desire by Gala"	,
+	image : "https://i.guim.co.uk/img/media/234f710cf7d1cbf82e115d649743034b172a5cb4/134_46_2510_1507/master/2510.jpg?width=620&quality=85&auto=format&fit=max&s=314ca121071395d02bd6394fbc656ab0"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Three Lions was written and produced by Ian Broudie from the Lightning Seeds, along with David Baddiel and which other English comedian? "+ Table4ColumnStart + "Hugh Dennis</td><td>Rob Newman</td><td>Frank Skinner</td><td>Chris Morris" + Table4ColumnEnd ,
+	answer : "Frank Skinner"	,
+	image : "https://i.guim.co.uk/img/media/ba200d5b5bfe95fb6e825fdca2cf78ebd4277e27/0_141_4256_2554/master/4256.jpg?width=620&quality=85&auto=format&fit=max&s=ea12337cc2ae4bfe9ef8c10e1a3eb32c"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "It is fifty-five years since England won the World Cup in 1966 - a fact that you'll find seldom mentioned in the media in the buildup to big England games, and I doubt you've ever seen this picture I've dug up from the archives before. But when Three Lions was a hit for the first time, how many years of hurt had it been? "+ Table4ColumnStart + "20</td><td>30</td><td>32</td><td>42" + Table4ColumnEnd ,
+	answer : "30 - it was recorded for Euro 96"	,
+	image : "https://i.guim.co.uk/img/media/d27dff0b508048a950037c4bf29a09a682d51f57/0_0_3328_2397/master/3328.jpg?width=620&quality=85&auto=format&fit=max&s=9393798318ed3fd6c4ce7d6073cdc47a"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "The lyrics of Three Lions reference Jules Rimet. Who was Jules Rimet? "+ Table4ColumnStart + "He is credited with inventing the Fifa World Cup and the first trophy was named after him</td><td>He is the linesman who gave England's controversial third goal in the 1966 World Cup final which may or may not have bounced over the line depending on whether you are English or not</td><td>He was the French midfielder who made the mistake in the 1982 World Cup finals that led to Bryan Robson scoring after just 27 seconds when England played them in Bilbao</td><td>Nobody. It ended up written like that in the song as a mistake after the misheard phrase 'Jewels remain still gleaming'" + Table4ColumnEnd ,
+	answer : "He is credited with inventing the Fifa World Cup and the first trophy was named after him"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Keith Allen sang 1998 World Cup song Vindaloo by Fat Les. But it featured which member of Britpop darlings Blur? "+ Table4ColumnStart + "Damon Albarn</td><td>Alex James</td><td>Graham Coxon</td><td>Dave Rowntree" + Table4ColumnEnd ,
+	answer : "Alex James"	,
+	image : "https://i.guim.co.uk/img/media/1c64d2e7b3459315bff0e78cce2745ed81554af5/0_0_2960_1776/master/2960.jpg?width=620&quality=85&auto=format&fit=max&s=cf5342681985a420de2e1a1f24a4bc6a"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "New Order's World In Motion was arguably the start of 'cool' football songs in the 1990s, even if it doesn't look like it from this incredible picture from during the recording sessions. Keith Allen was involved in this too. But which English player from the Italia 90 squad provided the rap? "+ Table4ColumnStart + "Peter Beardsley</td><td>Des Walker</td><td>Chris Waddle</td><td>John Barnes" + Table4ColumnEnd ,
+	answer : "John Barnes"	,
+	image : "https://i.guim.co.uk/img/media/2489cad4b816f0f6cbb4c4f8873b9b422417c6a7/0_0_3996_2649/master/3996.jpg?width=620&quality=85&auto=format&fit=max&s=92054a0930b4477685d42b0c29e2bab4"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "OK, so the rap starts: 'You've got to hold and give, but do it at the right time.' What is the next line in World in Motion? "+ Table4ColumnStart + "They'll always hit you and hurt you, defend and attack</td><td>Catch me if you can, 'cause I'm the England man</td><td>You can be slow or fast, but you must get to the line</td><td>There's only one way to beat them, get round the back" + Table4ColumnEnd ,
+	answer : 'You can be slow or fast, but you must get to the line </BR> <iframe width="560" height="315" src="https://www.youtube.com/embed/1HoU1M6kePc?start=36" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'	,
+	image : "https://i.guim.co.uk/img/media/2489cad4b816f0f6cbb4c4f8873b9b422417c6a7/0_0_3996_2649/master/3996.jpg?width=620&quality=85&auto=format&fit=max&s=92054a0930b4477685d42b0c29e2bab4"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Paul Gascoigne was another Italia 90 squad member who hit the charts with a version of Fog on the Tyne. Which band from the north-east of England, pictured here, also appeared on the single? "+ Table4ColumnStart + "The Wildhearts</td><td>Lindisfarne</td><td>Dire Straits</td><td>Maximo Park" + Table4ColumnEnd ,
+	answer : "Lindisfarne"	,
+	image : "https://i.guim.co.uk/img/media/14792f49b26546149178ac0c63b16f19bbd282a6/0_0_3290_2196/master/3290.jpg?width=620&quality=85&auto=format&fit=max&s=172ad644aa079c93b526162e58ff2522"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "It was the 1970 England World Cup squad who featured the very first time that there was an 'official' England song. What was it called? "+ Table4ColumnStart + "Back Home</td><td>We've Got the Whole World at Our Feet</td><td>This Time</td><td>All The Way" + Table4ColumnEnd ,
+	answer : 'Back Home </BR> <iframe width="560" height="315" src="https://www.youtube.com/embed/DJ-EutNDgZQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'	,
+	image : "https://i.guim.co.uk/img/media/e119ec9c8467de893bff5d3fda8534140c2a02c1/0_566_5315_3190/master/5315.jpg?width=620&quality=85&auto=format&fit=max&s=436d15b03bd6d4c7f6a00063356d6f9e"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "England's 2010 World Cup song was Dizzee Rascal featuring James Corden doing an updated version of which 1980s Tears for Fears hit? "+ Table4ColumnStart + "Everybody Wants to Rule the World</td><td>I believe</td><td>Mad World</td><td>Shout" + Table4ColumnEnd ,
+	answer : "Shout"	,
+	image : "https://i.guim.co.uk/img/media/5bf1506aa77f8231c0a9010f1a3ea28b381de52e/0_226_4256_2554/master/4256.jpg?width=620&quality=85&auto=format&fit=max&s=03f90e64bcdce194332118ed891fbac5"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "England's 2002 World Cup song was We're on the Ball by Ant & Dec. Is this Ant or Dec? " ,
+	answer : "Dec"	,
+	image : "https://i.guim.co.uk/img/media/87717f4bdc564211237233185d3b3b027c2c1a6f/2220_55_2536_1521/master/2536.jpg?width=620&quality=85&auto=format&fit=max&s=a5a74f2235473e32ad7b10c45f0c106b"});
+
+
+quests[++questIndexBuilder] = { //
+		name : "Bike and Ball",
+		hoverover : "Songs about balls, bikes and wheels",
+		tags : "music,2021-7-10,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/0mpuT4NsOrHavSSSIQZeqf" width="501" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+	answer : ""}) ;
+
 
 /*
 quests[++questIndexBuilder] = { //
