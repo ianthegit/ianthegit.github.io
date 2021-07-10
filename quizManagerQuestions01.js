@@ -1677,6 +1677,50 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 
 quests[++questIndexBuilder] = { //
+		name : "No Sport",
+		hoverover : "One for the non-sports fans",
+		tags : "2021-7-10,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "GLOBAL NEWS: The ship that gained notoriety for blocking up the Suez canal earlier in the year is being released by Egyptian authorities who have held it since it was dislodged on 29 March. But what was its name? "+ Table4ColumnStart + "Ever Clear</td><td>Ever Ready</td><td>Ever Given</td><td>Evergreen" + Table4ColumnEnd ,
+	answer : 'Ever Given'	,
+	image : "https://i.guim.co.uk/img/media/d24a6142bbbe5bd8872ec428c137b8795a751754/0_190_3500_2101/master/3500.jpg?width=620&quality=85&auto=format&fit=max&s=02c439cca5fac7ac8c3e1f1947d72c9c"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "SPORT: Emma Raducanu withdrew from her Wimbledon fourth-round match on Monday. But who was her opponent? "+ Table4ColumnStart + "Aryna Sabalenka</td><td>Karolina Pliskova</td><td>Ashleigh Barty</td><td>Ajla Tomljanovic" + Table4ColumnEnd ,
+	answer : 'Ajla Tomljanovic'	,
+	image : "https://i.guim.co.uk/img/media/da0cbb251679a0d6c19d72c061b5cddfdb6d4df1/0_284_2361_1416/master/2361.jpg?width=620&quality=85&auto=format&fit=max&s=4944f7c4ea6816820cc088f3b467323a"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "FATE & FORTUNE: 10-year-old Irish lad William Woods won " + gbp + " 860 in a prize draw at Christmas. This week he was interviewed about how he'd spent the money. What did he buy? "+ Table4ColumnStart + "Lego because 'I can't get enough Star Wars sets'</td><td>Sweets because 'I wanted the world's biggest pick'n'mix'</td><td>Tesla shares because 'Elon Musk is a super-villain'</td><td>Baby cows because 'I missed my friends so much'" + Table4ColumnEnd ,
+	answer : 'Baby cows - he is the son of a farmer'});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "ON THIS DAY: It is the anniversary of the day that Roswell army airfield issued a press release reporting the recovery of a 'flying disc' from a ranch near Roswell, sparking the Roswell UFO incident and a million conspiracy theories. Which year though? "+ Table4ColumnStart + "1942</td><td>1947</td><td>1953</td><td>1961" + Table4ColumnEnd ,
+	answer : '1947'	,
+	image : "https://i.guim.co.uk/img/media/b9ff5488f96dcf3ac4643ac8598a1f75db9e15a8/323_0_2928_1757/master/2928.jpg?width=620&quality=85&auto=format&fit=max&s=b63d6a28eaa47d1562623fe6b2420ece"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "SPACE: This week Chinese astronauts performed a space walk outside their new space station - called Tiangong station. But what does the name mean in English? "+ Table4ColumnStart + "Heavenly Questions</td><td>Goddess of the Moon</td><td>Heavenly Palace</td><td>Storm" + Table4ColumnEnd ,
+	answer : 'Heavenly Palace'	,
+	image : "https://i.guim.co.uk/img/media/402d603d81e571d1f0f5386ce18e9b02f42fdae6/1_0_1545_928/master/1545.jpg?width=620&quality=85&auto=format&fit=max&s=daf07becbdae02237beaaa34eff81baa"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "FLEECED: The 1963 movie Jason and the Argonauts depicts the quest for the 'Golden Fleece'. In Greek myth, what was the name of the legendary golden-woolled winged ram that was the source of the fleece? "+ Table4ColumnStart + "Pegasus</td><td>Chrysomallos</td><td>Telos</td><td>Charybdis" + Table4ColumnEnd ,
+	answer : 'Chrysomallos'	,
+	image : "https://i.guim.co.uk/img/media/42630896c00a17b96d98dd7f7fdf6a752cde45a0/0_19_1809_1086/master/1809.jpg?width=620&quality=85&auto=format&fit=max&s=4691aca23b81b2dc306235ba3ce057bc"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "NUMBER OF THE BEAST: Earlier this year #TimsTwitterListeningParty held their 666th event. Which LP did everyone listen to along with the artist? "+ Table4ColumnStart + "Iron Maiden's Powerslave</td><td>Slayer's Reign in Blood</td><td>Black Sabbath's Sabbath Bloody Sabbath</td><td>Kate Bush's 50 Words For Snow" + Table4ColumnEnd ,
+	answer : "Iron Maiden's Powerslave"	,
+	image : "https://i.guim.co.uk/img/media/33110ff9a8c964cdc6e991f3af430594881746c9/20_13_1961_1176/master/1961.jpg?width=620&quality=85&auto=format&fit=max&s=a8fd884b0e7daf5cfb2218603ab9cd7d"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Disney's Donald Duck has a ludicrous middle name. What is it? "+ Table4ColumnStart + "Eggbert</td><td>Artemis</td><td>Lysander</td><td>Fauntleroy" + Table4ColumnEnd ,
+	answer : 'Fauntleroy'	,
+	image : "https://i.guim.co.uk/img/media/6cf4526c83aa66b524e406976608d30bbf1b566c/0_810_1849_1109/master/1849.jpg?width=620&quality=85&auto=format&fit=max&s=f636ab1a80a6470dbf3a91533c298435"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "ONLY IN AUSTRIA: A 65-year-old man 'felt a 'nip' in the genital area' shortly after sitting on the toilet at his home in Graz just after 6am on Monday, according to a statement from police in Styria province. He then looked into the toilet and discovered... what? "+ Table4ColumnStart + "A baby alligator</td><td>A python</td><td>A rat</td><td>A beaver" + Table4ColumnEnd ,
+	answer : 'A python'	});
+
+
+
+quests[++questIndexBuilder] = { //
 		name : "Bike and Ball",
 		hoverover : "Songs about balls, bikes and wheels",
 		tags : "music,2021-7-10,InnerWheel,saturday",
