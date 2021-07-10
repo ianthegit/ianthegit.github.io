@@ -684,6 +684,35 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLXkU7-fJzA5TB2RJqMXzVjgLuc8XXhn2pAaHGDth3_FtAdzdm-p-7e87BRlcYcAXR1jKX2zbulmx441iCNVBU_-con17XJlYjNg-am_6XBut8vG8OSKwzRspN01ZlmCyA9GpCvr8_YBoNFwEV6Csr0f2g=w378-h160-no?authuser=0",
 	answer : "Music"}) ;
 
+
+
+quests[++questIndexBuilder] = { //
+		name : "Pictionary 24",
+		hoverover : "Pictionary on the theme of British Animals - with respect to Eddy The Badger Merckx.",
+		tags : "2021-7-10,pictionary",
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVvUfzfQnzmD8ce796FE45HbUsivMk-ZA5SC9GvfwMpkHon1jZyRTtaxaeRcrEM3rwD27AyfPL271LsF2fW9uHeaKFPks-kglAijwmAioRvAODa4dE3YXzPI3Yg8WZeNjDiC6lyR8XpvOK0E-It8X90NQ=w438-h211-no?authuser=0",
+	answerimage : "https://laughingsquid.com/wp-content/uploads/2020/04/Funny-Fox-Laughs-When-Human-Pets-Him.png", answerSpeak : "Fox"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLU9rMbmpw9yTnDblkYtw9vqNMN0WxIboMi-p8jsCHTQhla525Wgl4E21EJpVKoFESdFcSKVQifWds9GXNlRNVxwCgVfpmmKCCZqjnD_pt3Msplu78WzMqgAQyGtdyFhcGzAjQ1EJkHPtt-2VLz5otivfw=w479-h537-no?authuser=0",
+	answerimage : "https://static.wikia.nocookie.net/drawntogether/images/3/30/Live_Action_Squirrel_With_Big_Balls.png/revision/latest/scale-to-width-down/250?cb=20150622175937", answerSpeak : "Squirrel"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUPpQVCBO_XNhUSKmvTAJbXFIWHkatn3HsGU1hs3OCTfzFwxcsmCLG7wl5MoQaORi9mxuorbosjo81_pRLfbolS57SwZnaxvTk5dtxoiv4fgMfhDbdd5yMKyQUzIx_NALuDI1KcCrZmOg4PlYSgtVdSww=w254-h281-no?authuser=0",
+	answerimage : "https://external-preview.redd.it/aXA6X23SC5uXT8w7kiOW0LTVyFQ-9y5RlQdNTeJZtCw.jpg?auto=webp&s=d0ebba1d894e5cd630862a6f2f37dc74e9cab45a", answerSpeak : "Deer"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUwMlUpITNd_3JQPoWgGdKv-CW-G3zDE6rJoKq7sdITy0yQoLWwhQTTmH_373wtBNQC8mPU2C_y8BMZPoJ1RDJHJJJzLT0ixI8gHYgFQolzWWHEYaHc8Lp56fvN2oVJt_x-20hrOGe5Gc_hA2uFqRosWw=w605-h349-no?authuser=0",
+	answerimage : "http://1.bp.blogspot.com/-fckcpXnYLdE/TvsfA_JDETI/AAAAAAAABdI/atK3zz0OuwQ/s320/Funny+Badger1.jpg", answerSpeak : "Badger"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLURj8iX5N4AA0m-8D12W11wKN-AbNprL6Lvkru2_jrxdD571uryauxVqiFANIA2XBnoI_k7M01UaibyycWhmP_U10J-kz1Mryp4ukRW7BnbKMI_RI_2yIjrcbGQJOGGijlO_Zr-D3S4tpm4LtStzG0MJQ=w287-h222-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/proxy/eQPHHDm9XoePm8E5hG5ARS2c3c7hg02LiUe_n9HhWO5ZsEDYAQ1Gc-plY4HtnyauYl5LFAL1zvlXvgcSozt2WwntdXzvAbgQIw182qP5U2tQnqxmjdq4E-uyMcYd9qzgqAuIGA", answerSpeak : "Pigeon"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXfmvJcmzML1DkrVptGffKigdqoDpEtXMbVDpUjP4Jh480BhpRScUhMeqPrMf4-JVkTAvfxQGgxJ59vftmLlpF2gOYBWEVbQzPHHs1Asn2pT1gnzHbjNIXp0Ol1pkcbcOAmNncDChRI_QQljQF0zuw6mQ=w355-h258-no?authuser=0",
+	answerimage : "https://image.shutterstock.com/image-photo/funny-face-pug-dog-lion-260nw-507738691.jpg", answerSpeak : "Lion"}) ;
+
+
+
 /*
   
  quests[++questIndexBuilder] = { //
