@@ -1773,6 +1773,99 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 	answer : 'I Will Survive'	});
 
 
+quests[++questIndexBuilder] = { //
+		name : "Trivia",
+		hoverover : "Bits and Bobs",
+		tags : "2021-7-17,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "GLOBAL NEWS: The Aboriginal flag turned how many years old this month?"+ Table4ColumnStart + "10 Years</td><td>25 years</td><td>50 Years</td><td>75 Years" + Table4ColumnEnd ,
+	answer : '50 Years'	,
+	image : "https://i.guim.co.uk/img/media/c3eae50ea81271c83de8cc20104ed7952c687805/0_12_6048_3628/master/6048.jpg?width=620&quality=85&auto=format&fit=max&s=44056e2c6520df3f52080f4bd94c06ec"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which Conservative MP tweeted to England's Tyrone Mings he should stick to football and stay out of politics, just a few days after the same MP had posted images of England's Gareth Southgate and Harry Kane and the slogan 'football's coming home' emblazoned with the Conservative party logo?"+ Table4ColumnStart + "Natalie Elphicke, Conservative MP for Dover and Deal</td><td>Andrew Rosindell, Conservative MP for Romford</td><td>Therese Coffey, Conservative MP for East Suffolk</td><td>Jacob Rees-Mogg, Conservative MP for the 18th century" + Table4ColumnEnd ,
+	answer : 'Andrew Rosindell, Conservative MP for Romford'	,
+	image : "https://i.guim.co.uk/img/media/b6fb4b05b9c990ed7124cabf36fd5a3a5108e64c/0_79_2642_1583/master/2642.jpg?width=620&quality=85&auto=format&fit=max&s=4389c45a56cb8c7ac54be12fc99bb44d"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Mary I was the daughter of Henry VIII and Catherine of Aragon. She compounded her Spanish roots by marrying which Spanish monarch?"+ Table4ColumnStart + "Alfonso of Spain</td><td>Philip of Spain</td><td>Charles of Spain</td><td>Ferdinand of Spain" + Table4ColumnEnd ,
+	answer : 'Philip of Spain - Philip II of Spain and also Philip I of Portugal, he was also king of Naples and Sicily and duke of Milan and effectively co-monarch of England and Ireland while married to Mary'	, answerSpeak : 'Philip of Spain',
+	image : "https://i.guim.co.uk/img/media/40fa9dfb757b350ead72e54723c6b178c6d1c391/611_150_3064_1837/master/3064.jpg?width=620&quality=85&auto=format&fit=max&s=d9f6b71d89b02193520cc6efe00604fa"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "The Isle of Man's Mark Cavendish has been ripping up the Tour de France, with the sprinter recording his 34th stage win and equalling the record set by which legendary cyclist?"+ Table4ColumnStart + "Bernard Hinault</td><td>Chris Froome</td><td>Eddy Merckx</td><td>Ian Hopgood" + Table4ColumnEnd ,
+	answer : 'Eddy Merckx'	,
+	image : "https://i.guim.co.uk/img/media/661cea5b516270f548afb00bb370aa7e1e68dc5b/0_0_8640_5760/master/8640.jpg?width=620&quality=85&auto=format&fit=max&s=a564e616184a14c73d91eb013619d4c6"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which of these is the tallest mountain in Northern Ireland"+ Table4ColumnStart + "Slieve Bearnagh</td><td>Slieve Donard</td><td>Slieve Binnian</td><td>Slieve Commedagh" + Table4ColumnEnd ,
+	answer : 'Slieve Donard at about 850 metres (2,970ft)', answerspeak : 'Slieve Donard'	,
+	image : "https://i.guim.co.uk/img/media/ba9b728ec307f52db9401344f7e3e203db06c1b2/389_0_3111_1869/master/3111.jpg?width=620&quality=85&auto=format&fit=max&s=d8df9ecae29d9dabf608d0acbbcb5a17"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "It would have been the birthday of Joy Division's Ian Curtis today. But which 80s solo pop singer did a glossy cover version of Love Will Tear Us Apart that was a hit in Germany and the Netherlands and featured on their UK No 1 album No Parlez?"+ Table4ColumnStart + "Paul Young</td><td>Chris Rea</td><td>Sting</td><td>Kate Bush" + Table4ColumnEnd ,
+	answer : 'Paul Young'	,
+	image : "https://i.guim.co.uk/img/media/6fc96f68c23f2ae2ee8a527e29a444bf7e9bc285/25_18_1936_1162/master/1936.jpg?width=620&quality=85&auto=format&fit=max&s=e7dc72c8490062c689f0948ea70ff0ca"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "The prestige drama The Terror was about the grisly fate of the crews of the polar exploration ships HMS Terror and ... (1 extra point if you can give me the full names of the Games of Thrones characters these 2 played)"+ Table4ColumnStart + "HMS Resolute</td><td>HMS Cerberus</td><td>HMS Fury</td><td>HMS Erebus" + Table4ColumnEnd ,
+	answer : 'HMS Erebus  (Edmure Tully, Mance Rayder)'	,
+	image : "https://i.guim.co.uk/img/media/036f1d1217d18f17dc5ece21646639c953d163aa/114_161_2880_1729/master/2880.jpg?width=620&quality=85&auto=format&fit=max&s=5fe097a6ad34039ca977f4ffeedf61cd"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : " Talking of the icy Arctic, which of these basic GCSE-esque phrases best describes what happens to water as it freezes?"+ Table4ColumnStart + "The molecules gain energy and break into separate oxygen and hydrogen atoms</td><td>The molecules lose energy and escape into the atmosphere</td><td>The molecules lose energy and the freedom to move about</td><td>The molecules gain energy and freedom to move about" + Table4ColumnEnd ,
+	answer : 'The molecules lose energy and the freedom to move about'	,
+	image : "https://i.guim.co.uk/img/media/ad7075818ee4f9e69e9be151ac9e4c325e6cf55e/0_1311_5472_3282/master/5472.jpg?width=620&quality=85&auto=format&fit=max&s=78a8dedd33692c8541d614ba7d08a8a8"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "IT'S GRIMSBY UP NORTH: Still on an icy theme, Grimsby's iconic ice factory is going to be turned into what?"+ Table4ColumnStart + "Europe's largest aquarium</td><td>An electric battery factory</td><td>A theatre</td><td>A fishing museum" + Table4ColumnEnd ,
+	answer : 'A theatre'	,
+	image : "https://i.guim.co.uk/img/media/1a08ec9c36fe2b791780911c28d2b4eed2474cf2/0_0_6720_4480/master/6720.jpg?width=620&quality=85&auto=format&fit=max&s=dc367fcff660def4f25ec69d9262587f"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "TRUE OR FALSE: Zsa Zsa Gabor's ashes were buried in Budapest this week, five years after her death. They were flown there first class." ,
+	answer : 'True'	,
+	image : "https://i.guim.co.uk/img/media/6e8b54ec109ba2146814145a65c130f4515a8ba7/0_490_8329_4996/master/8329.jpg?width=620&quality=85&auto=format&fit=max&s=80cedc444ca571ed43b4570e1303e590"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Did Richard Branson go 'into space'?"+ Table4ColumnStart + "Yes, because the flight exceeded the arbitrary 50-mile definition set by the US government</td><td>No, because the flight didn't reach the arbitrary 62-mile Kármán line set by the Fédération Aéronautique Internationale</td><td>No, because the earth is flat and it was all filmed by Stanley Kubrick from beyond the grave</td><td>There's no real right answer here because it is all just arbitrary definitions by people trying to set rules for their own self-interested reasons, but they definitely went really, really high" + Table4ColumnEnd ,
+	answer : "There's no real right answer here because it is all just arbitrary definitions by people trying to set rules for their own self-interested reasons, but they definitely went really, really high"	,
+	image : "https://i.guim.co.uk/img/media/380f363816c65ba9b4a157441f42d7d8eb280055/448_484_4952_2971/master/4952.jpg?width=620&quality=85&auto=format&fit=max&s=f399b862682b1f18734a06e8e9153c8e"});
+
+quests[++questIndexBuilder] = { //
+		name : "1 letter",
+		hoverover : "All the answers are a single letter",
+		tags : "2021-7-17,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "Which letter denotes the roman numeral for 100?",	answer : "C"} );
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "In The Simpsons, Homer Simpson has a middle initial - what is it?",	answer : "J for Jay"} );
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "Only four letters can be doubled at the beginning of a word, the letter 'e' is one as in 'eel' - can you name the other three letters (a point each)?",	answer : "A, O, and L (examples include aardvark,, ooze, and llama)"} );
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "Which letter was invented in 1524 by an Italian and was the last letter to be added to the English alphabet?",	answer : "J"} );
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "Which two letters of the alphabet have tittles?",	answer : "i and j"} );
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "The 1939 novel 'Gadsby' by Ernest Vincent Wright, does not have any words which contain which letter?",	answer : "E"} );
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "Which single letter often follows 'Elizabeth' when Queen Elizabeth II signs her name?",	answer : "R"} );
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "According to Merriam-Webster Dictionary, which is the only letter in the English language that is never silent?",	answer : "V"} );
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "How was Welsh singer Ian Watkins professionally known?",	answer : "H - from Steps"} );
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "Which general-purpose computer programming language was originally developed at Bell Labs by Dennis Ritchie between 1972 and 1973?",	answer : "C"} );
+
+quests[++questIndexBuilder] = { //
+		name : "Boys",
+		hoverover : "Songs which almost all feature the word boy",
+		tags : "music,2021-7-17,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/1ZSDKaasLHhlXnEyfyZPlT" width="501" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+	answer : ""}) ;
+
+
 /*
 quests[++questIndexBuilder] = { //
 		name : "Test Alt speak",
