@@ -138,7 +138,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
 	question : "Everyone recognises Long John Baldry, the famous English bluesman.  But who picked a new name for himself and used part of LJB's name for it, after having played in LJB's band?",answer : "Elton John",
 	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Long_John_Baldry_photo_1972.jpg/220px-Long_John_Baldry_photo_1972.jpg" ,
-	answerImage : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Elton_John_2011_Shankbone_2_%28cropped%29.JPG/220px-Elton_John_2011_Shankbone_2_%28cropped%29.JPG"}) ;
+	answerimage : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Elton_John_2011_Shankbone_2_%28cropped%29.JPG/220px-Elton_John_2011_Shankbone_2_%28cropped%29.JPG"}) ;
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	question : "Who is this, born in 1941?",answer : "Placido Domingo",
 	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Concierto_de_Pl%C3%A1cido_Domingo_%28cropped%29.jpg/220px-Concierto_de_Pl%C3%A1cido_Domingo_%28cropped%29.jpg" }) ;
