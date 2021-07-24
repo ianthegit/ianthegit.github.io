@@ -745,23 +745,23 @@ quests[++questIndexBuilder] = { //
 		tags : "2021-7-24,pictionary",
 		questInfo: new Array()
 	};
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUKErMAhbiFqxqzN5vAJGYTxEvnFgwMOWk4cf95TSk87gThCBKWNYwEnvrH-nRc9X3NDWPvY2kHsVqzuh4lXzlKn3C9xzmZIcB4n_yByi74cQiCBa4ApJiq0ZwTp49ugcBduaBRGtiUhdwZEj2aTKJSsQ=w629-h409-no?authuser=0",
 	answerimage : "https://media.tenor.com/images/a1ed68a842b7f034693039cc03bc9667/tenor.gif", answerSpeak : "Javelin"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUA7tSsco_2U9h4oD6UCgF2lPjDI2AdRpgRDRt7YVbuibJl-vZb0_a3HV_b2P0fC9mLB_CHvUqcRVoPdNkqxupmF0bheDney_bLNDGEtVrYUJUm6RWtsQhIEFOicgY9539Z8h8yyrn0te65W2mhDmtLlA=w543-h335-no?authuser=0",
 	answerimage : "https://www.cybersalt.org/images/stories/cleanlaugh/s/seniorduel.jpg", answerSpeak : "Fencing"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLX2cGGPMFltYXeFu263DNQaQ4rxZzPPe5fFWwjZHvqa54UBnq1dPbVnJqSLKoLlXteoZaAUMKx4QZZ3NLaqGiVh3fpmxX1n16pQr9a47syWSjmxLjlYVXqKt9ewEwvtaaMR_8CZACoz68d8AYxB93OOsg=w466-h341-no?authuser=0",
 	answerimage : "https://townsquare.media/site/341/files/2012/05/funny-diver-faces-lead-image.jpg?w=980&q=75", answerSpeak : "Diving"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXObSJig7Hf3n2G5KcJay8Rtpa2bH8IFTDXNI9tVgJ_kFmnax4d2joUTG_YgL-zpiTQxvLOiWBWA_sTH2mEelkg7cOO-rOpAwruSlshu7eti7Iby2yZkNUFMnbjDf7SIMmOTwWbdulTY3Y4t0mY7YjF1Q=w319-h229-no?authuser=0",
 	answerimage : "https://i.pinimg.com/originals/c1/d8/b6/c1d8b6183e3786c3f832f777357efe6d.jpg", answerSpeak : "Wrestling"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXJvi_XnUdjlE4NFfGUZfGkP-yZPTK0C_r7RMNQQidi9jx1ia_E_VZIwtlQOkQf1jl5I52c4yM2cyrq5T-s4m0TMqAbYwyuY6Qk9NQ6JxA5ra8BfYyi8RAwMdNeQmQAz3dRyJEi7nN7QQ12YDXcfHTyeg=w625-h330-no?authuser=0",
 	answerimage : "https://pics.me.me/water-polo-meme-55641992.png", answerSpeak : "Water Polo"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLW-cECzfoVsndGHGtYVTmw4JwzQINdrM2uBjPs1aDK0wJQsESZb02fLvMIdUEMCxRQcGkwPW_GnlzS79anK9Bk8Ck-iQcSrvx8TVG4YVNEmZtECrTxjSgEtToza4gAK8RmmCaKi95dincMkpaVfv9UtxA=w614-h483-no?authuser=0",
 	answerimage : "https://sayingimages.com/wp-content/uploads/they-told-me-gymnastics-memes.png", answerSpeak : "Rhythmic Gymnastics"}) ;
 
 
