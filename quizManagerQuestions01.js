@@ -1866,6 +1866,70 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : ""}) ;
 
 
+quests[++questIndexBuilder] = { //
+		name : "Weekly Trivia",
+		hoverover : "Bits and Bobs",
+		tags : "2021-7-24,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Ocado's share price sunk to its lowest level in more than a year after it was forced to cancel thousands of orders because of..."+ Table4ColumnStart + "A shortage of workers due to them self-isolating because of being 'pinged' by the NHS app</td><td>A collision between some robots that started a fire</td><td>A computer error meant that drivers were being sent to the wrong addresses by their Sat Navs</td><td>A national hummus and quinoa shortage meaning they couldn't fulfil any of their orders from Guardian readers" + Table4ColumnEnd ,
+	answer : 'A collision between some robots that started a fire'	,
+	image : "https://i.guim.co.uk/img/media/a6f6521628d04cf97bc8732a52fae2fc42faf717/0_1_3500_2102/master/3500.jpg?width=620&quality=85&auto=format&fit=max&s=2137e174c74ef42cbd2155d6fcf47cf1"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "The Met Office issued its first extreme heat warning for the UK as part of a new alert service. What level was the warning?"+ Table4ColumnStart + "Amber</td><td>Bronze</td><td>Ginger</td><td>Level Two" + Table4ColumnEnd ,
+	answer : 'Amber'	,
+	image : "https://i.guim.co.uk/img/media/ea02aba7fc7ccc30d64eb6afbfdf0aabdf2388c3/117_338_3312_1989/master/3312.jpg?width=620&quality=85&auto=format&fit=max&s=2daef746052eb8ae12093c8581b15627"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Hip-hop artist Biz Markie died recently, aged 57. He was at the centre of a landmark legal case when he used an unauthorised 20-second sample from an unlikely source on a record in 1991, and became the first person to be successfully sued for it. Which artist sued him?"+ Table4ColumnStart + "Leo Sayer</td><td>Gilbert O'Sullivan</td><td>Engelbert Humperdinck</td><td>Kate Bush" + Table4ColumnEnd ,
+	answer : "Gilbert O'Sullivan"	,
+	image : "https://i.guim.co.uk/img/media/7bb39d1fbe2f73e65e3f41d4a7eb7f1de8692b2e/0_0_2000_1200/master/2000.jpg?width=620&quality=85&auto=format&fit=max&s=46f3e4e41df35aa8292c00dee7a25c18"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "This week, one of the Olympic Games' most high-profile 'Worldwide Olympic Partners' said they wouldn't be doing any Olympic-related advertising in Japan, as hosting the event was proving so unpopular. Which one?"+ Table4ColumnStart + "Toyota</td><td>Coca-Cola</td><td>Nintendo</td><td>Samsung" + Table4ColumnEnd ,
+	answer : 'Toyota'	,
+	image : "https://i.guim.co.uk/img/media/8174b71b5fb36104e48c2c319e03e9bd64e168f2/0_0_3500_2289/master/3500.jpg?width=620&quality=85&auto=format&fit=max&s=609764f53d12628c11b9f0423f0e472a"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "The world's rarest stamp is returning to Britain permanently for the first time in 143 years. The stamp dealer Stanley Gibbons says it is thought to be - 'gram for gram' - the most valuable manufactured item in the world, about 2.5 million times more valuable than..."+ Table4ColumnStart + "Gold</td><td>The Koh-i-Noor diamond</td><td>The Mona Lisa</td><td>Rental prices in London" + Table4ColumnEnd ,
+	answer : 'Gold - the British Guiana 1c magenta has just sold for &dollar; 8,307,000'	,
+	image : "https://i.guim.co.uk/img/media/3d18a370c76627bf84d20960dc0cf5c5a178eefc/176_180_5222_3132/master/5222.jpg?width=620&quality=85&auto=format&fit=max&s=96ac7b80c1f8a5bb9fa9beb8315221c4"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Mariner 1 was one of Nasa's earliest attempts to flyby a planet. It launched on 22 July 1962 but the mission lasted only 294 seconds after the launch had to be aborted when it veered off course. What planet had Mariner 1 been aiming for?"+ Table4ColumnStart + "Mercury</td><td>Venus</td><td>Mars</td><td>Pluto" + Table4ColumnEnd ,
+	answer : 'Venus'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : " A council in Essex insisted on the removal of an artwork by Gabriella Hirst called An English Garden because it referred to what?"+ Table4ColumnStart + "Britain's early role in promoting the trans-Atlantic slave trade</td><td>The Black Lives Matter movement</td><td>Britain's role in the partition of India and Pakistan in 1947</td><td>Britain's nuclear tests in Australia" + Table4ColumnEnd ,
+	answer : "Britain's nuclear tests in Australia"	,
+	image : "https://i.guim.co.uk/img/media/82c87717c4f52ae288b8d1e9a17991bdd3f3947c/0_182_5448_3271/master/5448.jpg?width=620&quality=85&auto=format&fit=max&s=32ae0b12b1bd4c34aed36f7a25c6df86"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Whose dragon is it traditionally held to be on the Welsh flag"+ Table4ColumnStart + "Cadwaladr, King of Gwynedd</td><td>Edward I</td><td>Saint David</td><td>Ivor the Engine's" + Table4ColumnEnd ,
+	answer : 'Cadwaladr, King of Gwynedd'	,
+	image : "https://i.guim.co.uk/img/media/587df41de2f230595f73fe5d313452673cd62ff6/216_353_3402_2042/master/3402.jpg?width=620&quality=85&auto=format&fit=max&s=84ff10e04a966e99a4718f9934450791"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Named after Gustav Ludwig Hertz, the hertz is the derived unit of magnetic flux in the International System of Units - True or False?",
+	answer : 'False - Hertz was the first person to provide conclusive proof of the existence of electromagnetic waves, and so the derived unit of frequency is named after him. One hertz is defined as one cycle per second'});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "The climate impact of wild pigs around the world is equivalent to the greenhouse gas emissions of how many cars annually, according to new research?"+ Table4ColumnStart + "30-50</td><td>250,000</td><td>1.1 million</td><td>4 million" + Table4ColumnEnd ,
+	answer : '1.1 million'	,
+	image : "https://i.guim.co.uk/img/media/7cb400265ef440ad24ac797f750ae38bc744457d/0_0_6000_4000/master/6000.jpg?width=620&quality=85&auto=format&fit=max&s=725878ddbb466f5caae319240b6efd1b"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "While on the subject of feral hogs, parents in the US are complaining that watching Peppa Pig is doing what to their kids?"+ Table4ColumnStart + "Giving them British accents</td><td>Turning them into vegetarians</td><td>Making them splash in muddy puddles</td><td>Making them question why Miss Rabbit appears to have about 1,057 jobs and all of them give her paid holidays, unionised workers' rights and healthcare cover" + Table4ColumnEnd ,
+	answer : 'Giving them British accents'	,answerSpeak : 'Giving them British accents, the lucky bastards'	,
+	image : "https://i.guim.co.uk/img/media/97ef1652ca36d1c2e553628ffca8cf95e6d01c03/470_814_4479_2688/master/4479.jpg?width=620&quality=85&auto=format&fit=max&s=8a07dc7aabe7fcc66f0631a1d2081752"});
+
+
+
+quests[++questIndexBuilder] = { //
+		name : "Olympic",
+		hoverover : "Songs which have an olympic theme",
+		tags : "music,2021-7-24,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/67KwrKUP5cfGpinYWXX76K" width="501" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+	answer : ""}) ;
+
 /*
 quests[++questIndexBuilder] = { //
 		name : "Test Alt speak",
