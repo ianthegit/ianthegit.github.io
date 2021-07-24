@@ -120,6 +120,67 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	answer : "Ricardo Montalban:  <BR/><BR/>Armando in the Planet of the Apes  <BR/>Khan Noonien Singh, a genetically enhanced human, he starred in both the original Star Trek television series (1967) and the film Star Trek II: The Wrath of Khan (1982) <BR/>Mr. Roarke on the television series Fantasy Island"
 }) ;
 
+quests[++questIndexBuilder] = {
+		name : "1941 Ins and Outs",
+		hoverover : "Who was born or died in 1941",
+		tags : "saturday,2021-7-24,1941,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this, born in 1941?",answer : "Faye Dunaway",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Faye_Dunaway_Cannes_2011.jpg/100px-Faye_Dunaway_Cannes_2011.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this, born in 1941?",answer : "Graham Chapman",
+	image : "https://upload.wikimedia.org/wikipedia/en/f/f7/Graham_Chapman_Portrait.png" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this, born in 1941?",answer : "Joan Baez",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Joan_Baez_1966.jpg/170px-Joan_Baez_1966.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "Everyone recognises Long John Baldry, the famous English bluesman.  But who picked a new name for himself and used part of LJB's name for it, after having played in LJB's band?",answer : "Elton John",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Long_John_Baldry_photo_1972.jpg/220px-Long_John_Baldry_photo_1972.jpg" ,
+	answerImage : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Elton_John_2011_Shankbone_2_%28cropped%29.JPG/220px-Elton_John_2011_Shankbone_2_%28cropped%29.JPG"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this, born in 1941?",answer : "Placido Domingo",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Concierto_de_Pl%C3%A1cido_Domingo_%28cropped%29.jpg/220px-Concierto_de_Pl%C3%A1cido_Domingo_%28cropped%29.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this, born in 1941?",answer : "Neil Diamond",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Neil_Diamond_HWOF_Aug_2012_other_%28levels_adjusted_and_cropped%29.jpg/220px-Neil_Diamond_HWOF_Aug_2012_other_%28levels_adjusted_and_cropped%29.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this, born in 1941?",answer : "Nick Nolte",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Nick_Nolte_2008_%282544500287%29.jpg/220px-Nick_Nolte_2008_%282544500287%29.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this, born in 1941?",answer : "Bobby Moore",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Bobby_Moore_1969.jpg/220px-Bobby_Moore_1969.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this, born in 1941?",answer : "Ryan O'Neal",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Ryan_Oneal_-_1968.jpg/220px-Ryan_Oneal_-_1968.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this, born in 1941?",answer : "Bob Dylan",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Bob_Dylan_-_Azkena_Rock_Festival_2010_2.jpg/220px-Bob_Dylan_-_Azkena_Rock_Festival_2010_2.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this, born in 1941?",answer : "Charlie Watts",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Charlie_Watts_Berlinale_2008.jpg/220px-Charlie_Watts_Berlinale_2008.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who are these 2, both born in 1941?",answer : "Paul Simon and Art Garfunkel",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Simon_and_Garfunkel_Netherlands_1982.jpg/220px-Simon_and_Garfunkel_Netherlands_1982.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this, born in 1941?",answer : "Sir Alex Fergusen",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Alex_Ferguson.jpg/220px-Alex_Ferguson.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this, born in 1941?",answer : "Hank Marvin",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Hank_Marvin01.jpg/220px-Hank_Marvin01.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this, born in 1941?",answer : "Bill Oddie",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Bill_Oddie_%28383148953%29.jpg/220px-Bill_Oddie_%28383148953%29.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this, who died in 1941?",answer : "Lord Robert Baden Powell",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Robert_Baden-Powell_in_South_Africa%2C_1896_%282%29.jpg/200px-Robert_Baden-Powell_in_South_Africa%2C_1896_%282%29.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this, who died in 1941?",answer : "Virginia Woolf",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/George_Charles_Beresford_-_Virginia_Woolf_in_1902_-_Restoration.jpg/220px-George_Charles_Beresford_-_Virginia_Woolf_in_1902_-_Restoration.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this, who died in 1941?",answer : "Amy Johnson",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Amy_Johnson_%28Our_Generation%2C_1938%29.jpg/220px-Amy_Johnson_%28Our_Generation%2C_1938%29.jpg" }) ;
 
 
 
