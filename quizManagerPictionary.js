@@ -739,6 +739,32 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 
+quests[++questIndexBuilder] = { //
+		name : "Pictionary 26",
+		hoverover : "Pictionary on the theme of Olympics",
+		tags : "2021-7-24,pictionary",
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://media.tenor.com/images/a1ed68a842b7f034693039cc03bc9667/tenor.gif", answerSpeak : "Javelin"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://www.cybersalt.org/images/stories/cleanlaugh/s/seniorduel.jpg", answerSpeak : "Fencing"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://townsquare.media/site/341/files/2012/05/funny-diver-faces-lead-image.jpg?w=980&q=75", answerSpeak : "Diving"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://i.pinimg.com/originals/c1/d8/b6/c1d8b6183e3786c3f832f777357efe6d.jpg", answerSpeak : "Wrestling"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://pics.me.me/water-polo-meme-55641992.png", answerSpeak : "Water Polo"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://sayingimages.com/wp-content/uploads/they-told-me-gymnastics-memes.png", answerSpeak : "Rhythmic Gymnastics"}) ;
+
+
 
 /*
   
