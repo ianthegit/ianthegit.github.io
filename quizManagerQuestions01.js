@@ -1917,6 +1917,43 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	image : "https://i.guim.co.uk/img/media/97ef1652ca36d1c2e553628ffca8cf95e6d01c03/470_814_4479_2688/master/4479.jpg?width=620&quality=85&auto=format&fit=max&s=8a07dc7aabe7fcc66f0631a1d2081752"});
 
 
+quests[++questIndexBuilder] = { //
+		name : "Pub singer",
+		hoverover : "Sit back, close your eyes, you could be at a live venue right now.  ",
+		tags : "2021-7-24,saturday,InnerWheel,surfers,audio",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/alive.mp3' + endAudio ,
+	answer : "Stayin Alive"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/chance.mp3' + endAudio ,
+	answer : "Take a Chance"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/dance.mp3' + endAudio ,
+	answer : "I wanna dance with somebody"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/eileen.mp3' + endAudio ,
+	answer : "Come on Eileen"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/heaven.mp3' + endAudio ,
+	answer : "Heaven is a place on Earth"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/raining.mp3' + endAudio ,
+	answer : "It's Raining Men"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/rockdj.mp3' + endAudio ,
+	answer : "Rock DJ"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/shake.mp3' + endAudio ,
+	answer : "Shake it off"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/stopMe.mp3' + endAudio ,
+	answer : "Don't Stop Me Now"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/valerie.mp3' + endAudio ,
+	answer : "Valerie"	});
 
 quests[++questIndexBuilder] = { //
 		name : "Olympic",
