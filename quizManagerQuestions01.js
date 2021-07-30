@@ -2038,11 +2038,15 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 
 quests[++questIndexBuilder] = { //
-		name : "Links and stuff",
+		name : "Dusty",
 		hoverover : "Mixing it up",
 		tags : "2021-7-31,saturday,InnerWheel,surfers",
 		questInfo: new Array()
 	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Dusty Hill, the bassist and 2nd vocalist from ZZ Top, died this week.  Complete the name of the 3 members:  Dusty Hill, Billy Gibbons, Frank..." ,
+	answer : "Beard"	,
+	image : "https://s.france24.com/media/display/7f92d9d6-efec-11eb-b284-005056bf30b7/w:980/p:16x9/000_9H39CT.webp"});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : "What connects these four apparently random clues? A hammer and a feather; six US flags; Eugene Shoemaker's ashes; two golf balls?  " + Table4ColumnStart + "Featured in the 2016 Olympic opening ceremony</td><td>Depicted in Salvador Dali paintings</td><td>On the moon</td><td>In Donald Trump's Oval Office" + Table4ColumnEnd,
 	answer : "On the moon"	});
@@ -2053,7 +2057,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 	question : "What is the link here? Nothing at all; Welsh rock band; superseded by FSA; a British football governing body?  " + Table4ColumnStart + "SFA</td><td>Stereos</td><td>Zero</td><td>HMRC" + Table4ColumnEnd,
 	answer : "SFA - Sweet Fanny Adams; Super Furry Animals; the Securities and Futures Authority (SFA), the Scottish Football Association ", answerSpeak : "SFA"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "What connects these four apparently random pictures??  " + Table4ColumnStart + "They are acronyms</td><td>They were created by Swedes</td><td>They are anagrams of animal noises</td><td>They first appeared in the 60s" + Table4ColumnEnd,
+	question : "What connects these four apparently random pictures?  " + Table4ColumnStart + "They are acronyms</td><td>They were created by Swedes</td><td>They are anagrams of animal noises</td><td>They first appeared in the 60s" + Table4ColumnEnd,
 	answer : "They are acronyms - Pakistan: Punjab, Afghania, Kashmir, Sindh and Balochistan; Abba: Anni-Frid, Bjorn, Benny and Agnetha; Tardis: time and relative dimensions in space; Radar: radio detection and ranging"	, answerSpeak : "They are acronyms",
 	image : "https://i.guim.co.uk/img/media/596c249083d41283fce1b5d2533c3b82d9a4f429/0_0_5000_3000/master/5000.jpg?width=620&quality=85&auto=format&fit=max&s=4aac078a9ab81e634fd6698cd45bd847"});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
