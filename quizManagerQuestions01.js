@@ -1967,6 +1967,151 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/67KwrKUP5cfGpinYWXX76K" width="501" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
 	answer : ""}) ;
 
+
+quests[++questIndexBuilder] = { //
+		name : "Olympic effort",
+		hoverover : "Higher, faster, stronger",
+		tags : "2021-7-31,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Dean Boxall, Ariarne Titmus's coach, won the celebration Olympics with this celebration... what sport does she compete in?"+ Table4ColumnStart + "Rhythmic Gymnastics</td><td>Swimming</td><td>Diving</td><td>Putting a shrimp on the barbie" + Table4ColumnEnd ,
+	answer : 'Swimming'	,
+	image : "https://media.tenor.com/images/d68641f17bb7d793b359cab7b262b9ab/tenor.gif"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "A piece of history was made in the rowing earlier, with New Zealand coxswain Caleb Shepherd becoming the first man to win what?"+ Table4ColumnStart + "Rowing whilst on a Zoom call</td><td>A women's medal</td><td>Beard Lushness award from Beard's Monthly</td><td>Forwards Rowing" + Table4ColumnEnd ,
+	answer : "A women's Olympic medal - he steered the women's 8 to silver"	,
+	image : "https://resources.stuff.co.nz/content/dam/images/4/y/t/z/5/2/image.related.StuffLandscapeSixteenByNine.1240x700.22yzf2.png/1627631346641.jpg?format=pjpg&optimize=medium"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "True or False - did Novak Djokovic dislocate his arm playing this shot?" ,
+	answer : "False"	,
+	image : "https://i.guim.co.uk/img/media/ee98928c68b581d909ddb77781c7007a54372c87/0_8_2983_1790/master/2983.jpg?width=620&quality=85&auto=format&fit=max&s=af3b2445a5b9ec982d0f0a264c6a0c6d"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What sport are Gustav Nunez and Julio Rodriguez playing here?" ,
+	answer : "Baseball - they collided whilst trying to catch a ball"	,
+	image : "https://i.guim.co.uk/img/media/cddaa9389e5c644c860ed3ca1dc42799034f9467/0_0_1296_730/master/1296.jpg?width=1010&quality=85&auto=format&fit=max&s=608a0980649db5447f441ecf0e41fb5c"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Here is A'Ja Wilson of the USA basketball team watching a ball drop through the hoop.  What size feet (European measurements) does she have?" ,
+	answer : "44EU (13 US)"	,
+	image : "https://i.guim.co.uk/img/media/3f3353ad2cb078b9eb988366292e07ae3dd26636/0_0_3280_2336/master/3280.jpg?width=1010&quality=85&auto=format&fit=max&s=5a96d6713162161914909991229dc535"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Here is Japan's Haruka Hirotsu being tackled in her match against Kenya.  How many players are there on the pitch at any one time for each team?" ,
+	answer : "7"	,
+	image : "https://i.guim.co.uk/img/media/77a6d588a191dffbff740d3b8b39434f71291572/0_0_3695_2464/master/3695.jpg?width=1010&quality=85&auto=format&fit=max&s=35739c83a18e28aef7687a7e086e7662"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Hisayoshi Harasawa of Japan (left) and Lukas Krpalek of Czech Republic react after their +100kg semi-final bout - who is in the playing area (and therefore won)?" ,
+	answer : "Lukas Krpalek on the white"	,
+	image : "https://i.guim.co.uk/img/media/a7359335fa45a265fc4ebd817565bf8fbe84eff0/0_0_2333_1632/master/2333.jpg?width=1010&quality=85&auto=format&fit=max&s=18c3eb7291226f05283aaaa6868dd8bb"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Egypt's goalkeeper Karim Hendawy (left) tries to stop a shot by Sweden's Jonathan Carlsbogard during their preliminary round of what sport?" ,
+	answer : "Handball"	,
+	image : "https://i.guim.co.uk/img/media/cbf2359239b84a487a730f240251d99b1edc4738/0_0_3813_2542/master/3813.jpg?width=1010&quality=85&auto=format&fit=max&s=8bbf2e06ded14bd2ec279e7828a5e94d"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "True or False - England won gold & silver in the BMXing on the 30th July - is this a picture of a race (True), or is it a model of the track before it was built (False)?" ,
+	answer : "True - it's a real race"	,
+	image : "https://i.guim.co.uk/img/media/45803888f814e0626618b575c1014dbe52c329e8/0_0_4128_2748/master/4128.jpg?width=1010&quality=85&auto=format&fit=max&s=6c0d1233d06100d1f5d11c1275f87ab3"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "True or False - This mask is the reason Spain was so badly affected by COVID." ,
+	answer : "False"	,
+	image : "https://i.guim.co.uk/img/media/065d6c4a5f43b1b4d468df706466a030101d7d05/0_0_4737_3158/master/4737.jpg?width=1010&quality=85&auto=format&fit=max&s=ffc17fee3d164fc28b38aef6f1e9f8c3"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Kenya Vs ROC - Football or Rugby?" ,
+	answer : "Rugby 7's"	,
+	image : "https://i.guim.co.uk/img/media/ff00b476b44cf1ff43743eb0aceb7f18fd3c7849/0_0_3000_2000/master/3000.jpg?width=1010&quality=85&auto=format&fit=max&s=91f2e3e549ab847323cc2039c50e9d8c"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Julio Ruben Mayora Pernia of Venezuela somersaults during what competition?" ,
+	answer : "Weightlifting"	,
+	image : "https://i.guim.co.uk/img/media/c095a52513b72e5f1a0dbbbff05a54f17672394f/0_340_3118_3160/master/3118.jpg?width=1010&quality=85&auto=format&fit=max&s=5086e812cf2bbacde0df7a56062bda4c"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Why was this triathlon restarted?" ,
+	answer : "Becuase that boat was in the way"	,
+	image : "https://i.guim.co.uk/img/media/5746ddad11bc3afdc30646138847da9e8a82de28/0_0_3838_2558/master/3838.jpg?width=1010&quality=85&auto=format&fit=max&s=148124bd5fc759078da8c3779bcdf55b"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What sport is Argentinian Nicolas Keenan playing?" ,
+	answer : "Hockey"	,
+	image : "https://i.guim.co.uk/img/media/22d1199acf177207f68757eb639bfb992ef2dfda/0_0_1842_1227/master/1842.jpg?width=1010&quality=85&auto=format&fit=max&s=ebf26355118f78b48fa889b3bb29ed98"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Competitors are lined up for the men's individual ranking round of which sport here?" ,
+	answer : "Archery"	,
+	image : "https://i.guim.co.uk/img/media/c5d5f155afca7bd8363d895d5285bff8f8ded155/0_0_4589_3060/master/4589.jpg?width=1010&quality=85&auto=format&fit=max&s=ddcedbe345661080492b49e4bfcad337"});
+
+
+quests[++questIndexBuilder] = { //
+		name : "Links and stuff",
+		hoverover : "Mixing it up",
+		tags : "2021-7-31,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "What connects these four apparently random clues? A hammer and a feather; six US flags; Eugene Shoemaker's ashes; two golf balls?  " + Table4ColumnStart + "Featured in the 2016 Olympic opening ceremony</td><td>Depicted in Salvador Dali paintings</td><td>On the moon</td><td>In Donald Trump's Oval Office" + Table4ColumnEnd,
+	answer : "On the moon"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "What connects these four apparently random clues?   Lanthanides; Gaelic football teams; the UN security council; a Scottish jury in a criminal trial?  " + Table4ColumnStart + "Include a 'keeper' element</td><td>Not recognised by England</td><td>Associated with Alex Salmond</td><td>Have 15 members" + Table4ColumnEnd,
+	answer : "Have 15 members"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "What is the link here? Nothing at all; Welsh rock band; superseded by FSA; a British football governing body?  " + Table4ColumnStart + "SFA</td><td>Stereos</td><td>Zero</td><td>HMRC" + Table4ColumnEnd,
+	answer : "SFA - Sweet Fanny Adams; Super Furry Animals; the Securities and Futures Authority (SFA), the Scottish Football Association ", answerSpeak : "SFA"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What connects these four apparently random pictures??  " + Table4ColumnStart + "They are acronyms</td><td>They were created by Swedes</td><td>They are anagrams of animal noises</td><td>They first appeared in the 60s" + Table4ColumnEnd,
+	answer : "They are acronyms - Pakistan: Punjab, Afghania, Kashmir, Sindh and Balochistan; Abba: Anni-Frid, Bjorn, Benny and Agnetha; Tardis: time and relative dimensions in space; Radar: radio detection and ranging"	, answerSpeak : "They are acronyms",
+	image : "https://i.guim.co.uk/img/media/596c249083d41283fce1b5d2533c3b82d9a4f429/0_0_5000_3000/master/5000.jpg?width=620&quality=85&auto=format&fit=max&s=4aac078a9ab81e634fd6698cd45bd847"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "What connects these four apparently random people? Spike Milligan; Joanna Lumley; Cliff Richard; Julie Christie?  " + Table4ColumnStart + "Their children are cabinet ministers</td><td>Their real names are Harry</td><td>They were born in India</td><td>They appeared in The Goon Show" + Table4ColumnEnd,
+	answer : "They were born in India"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who comes fourth in this sequence? Val Kilmer; George Clooney; Christian Bale;?  " + Table4ColumnStart + "Ben Affleck</td><td>Robert Pattinson</td><td>Adam West</td><td>Michael Keaton" + Table4ColumnEnd,
+	answer : "Ben Affleck", image : "https://i.guim.co.uk/img/media/19d1a9f4856b0aef8fac20f4a5880b2770754f35/0_59_3500_2100/master/3500.jpg?width=620&quality=85&auto=format&fit=max&s=fea5baf007ce3a0e298d0ce1bb3ea5c5"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who might come fourth in this sequence? (Left to right, top to bottom.)?  " + Table4ColumnStart + "Iain M Banks</td><td>George W Bush</td><td>John F Kennedy</td><td>Michael J Fox" + Table4ColumnEnd,
+	answer : "Iain M Banks - Middle initials J, K, L, M: Mary J Blige, Stephen K Amos, Samuel L Jackson, Iain M Banks", answerSpeak : "Iain M Banks", 
+	image : "https://i.guim.co.uk/img/media/ff82e6698d94d47f01cffa20c5e26ded2e9b0c65/0_0_5000_3000/master/5000.jpg?width=620&quality=85&auto=format&fit=max&s=fd99decb2a23c828002a1fd14d8849c9"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who had a hit in 2004 with the song Hounds of Love?  " + Table4ColumnStart + "Celine Dion</td><td>Maximo Park</td><td>The Futureheads</td><td>Kate Bush" + Table4ColumnEnd,
+	answer : "The Futureheads (Kate Bush had an album of that name, not a song)" , answerSpeak : "The Futureheads"	, image : "https://i.guim.co.uk/img/media/e4b503d810f6b4ad17455aebf62751019c47bde7/0_0_2000_1200/master/2000.jpg?width=620&quality=85&auto=format&fit=max&s=36546ef0de75d7b963cd522c3fc20221"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Who once said 'Learn from the mistakes of others. You can't live long enough to make them all yourself'?  " + Table4ColumnStart + "Eleanor Roosevelt</td><td>Hillary Clinton</td><td>Michelle Obama</td><td>My Mum" + Table4ColumnEnd,
+	answer : "Eleanor Roosevelt"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+		question : "On 29 July 1986 Margaret Thatcher and Francois Mitterrand signed the agreement to build a tunnel under the Channel. But where did passenger services at the English end of 'the Chunnel' originally terminate?  " + Table4ColumnStart + "King's Cross</td><td>Waterloo</td><td>Paddington</td><td>Marylebone" + Table4ColumnEnd,
+		answer : "Waterloo"	, image : "https://i.guim.co.uk/img/media/5879c1386b510ba663af142232ed8b0eacba523b/197_423_6475_3888/master/6475.jpg?width=620&quality=85&auto=format&fit=max&s=9537661687b5d4293577c83aae2329ca"});
+
+quests[++questIndexBuilder] = { //
+		name : "Pub singer 2",
+		hoverover : "Sit back, close your eyes, you could be at a live venue right now.  ",
+		tags : "2021-7-31,saturday,InnerWheel,surfers,audio",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w3-alabama.mp3' + endAudio ,
+	answer : "Sweet Home Alabama"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w3-billie.mp3' + endAudio ,
+	answer : "Billie Jean"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w3-brown.mp3' + endAudio ,
+	answer : "Brown Eyed Girl"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w3-cars.mp3' + endAudio ,
+	answer : "Chasing Cars"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w3-champions.mp3' + endAudio ,
+	answer : "We Are The Champions"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w3-conversation.mp3' + endAudio ,
+	answer : "A Little Less Conversation"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w3-delilah.mp3' + endAudio ,
+	answer : "Delilah"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w3-faith.mp3' + endAudio ,
+	answer : "Faith"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w3-girlfun.mp3' + endAudio ,
+	answer : "Girls Just Wanna Have Fun"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w3-pianoMan.mp3' + endAudio ,
+	answer : "Piano Man"	});
 /*
 quests[++questIndexBuilder] = { //
 		name : "Test Alt speak",
