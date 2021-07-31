@@ -2044,6 +2044,10 @@ quests[++questIndexBuilder] = { //
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "My wedding anniversary is on Monday.   True or False?" ,
+	answer : 'False'	,
+	image : "https://lh3.googleusercontent.com/B-noVXi21aiO8tAwCmuI1doK4Q__oy1fJlkjlGMY7C0VMgkCMxl8WLe-wKylNd8VZv7tMpOW4a3wgT60Pj6Ng2_grqXBtTFHQQmJtZlW6yymEYKmmRbntRPpxtJgt-SvRO4zFGd17SveR4cvtqh7mgy8DNtPGIOMp_ND3q1PY6UjDSPw16S1e3MhwHUTkzOqTkwMPjFfMoBrlvBOJMF6Er-u-fCYWAoqltfSBgUPQ7R3b5w8NzEaqt9BksFWeZFL-rEOEnhL7y_CdT6HbHVKvkUPhZJJYZtRPlXzc_MprMXHOE_SOHfBH9li3BU15GIxyyLSqEIhBbMUqj72jUrLOFclMHHfWg2eGVesk2o3Wiyqs72P9wmc5p1wiDu6_08quwBF6PFV4SPGmD7D_-QCG17iYSJN9maSGnJVgWaFYD3NJG39AlXVE43AIkwUq9U-dO_uMTzadbIEL-qdvAQLuBTKYamJY-LZgOXhYzAv0N9tHA5Euq77kCQ8sr4AOV-iIRw5f4LlII-6c9X-UaqCiHUWOE2XjMoReYGjAF4vqUv5j3kFv2sLJqA4bt5sBWQ8INAYKb2gXKTLZs2UDzX4Wu6OC1mdfE3LISTouldY1UlzY5086s9_pQnyVHHk_O1oJxHOxdmuXVJkUlYt_AtJPaWvUocKFXZD_gTvnwxSn9ruMx9RvZfpAwdjwFqJiEr-qWcgWApicw3mGoJE0Qw3pVnPug=w1162-h871-no?authuser=0"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Dusty Hill, the bassist and 2nd vocalist from ZZ Top, died this week.  Complete the name of the 3 members:  Dusty Hill, Billy Gibbons, Frank..." ,
 	answer : "Beard"	,
 	image : "https://s.france24.com/media/display/7f92d9d6-efec-11eb-b284-005056bf30b7/w:980/p:16x9/000_9H39CT.webp"});
@@ -2116,6 +2120,20 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w3-pianoMan.mp3' + endAudio ,
 	answer : "Piano Man"	});
+
+quests[++questIndexBuilder] = { //
+		name : "Garden",
+		hoverover : "Songs which have a garden theme",
+		tags : "music,2021-7-24,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/1YC2gwZ5dnQsSJOTIq3mYL" width="501" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+	answer : ""}) ;
+
+
 /*
 quests[++questIndexBuilder] = { //
 		name : "Test Alt speak",
