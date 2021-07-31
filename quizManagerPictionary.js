@@ -765,6 +765,31 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://sayingimages.com/wp-content/uploads/they-told-me-gymnastics-memes.png", answerSpeak : "Rhythmic Gymnastics"}) ;
 
 
+quests[++questIndexBuilder] = { //
+		name : "Pictionary 27",
+		hoverover : "Pictionary on the theme of more Olympic sports",
+		tags : "2021-7-31,pictionary",
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVsvUMjrd_j16RXH16PimyDgXpQbhhcwIHLScKiJU8srAum5zTHOzHVaGZUH1GQtqOpiu1dWogY-G-2_hKU3YoaEnQ-jtYv0lJ__VuVVfLDf_p_lozY5JY6H3a2ffPa2zbXeoROdaNhKwal6DuajbmIeg=w539-h181-no?authuser=0",
+	answerimage : "https://briff.me/wp-content/uploads/2014/11/synchronized-swimming-funny-photos-2.jpg", answerSpeak : "Synchronised Swimming"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVXc2bGyzRsszKz-5s_U8OUqZK4csu9lAkgjP3oXF4xNZn95WTfz9J3Xsf0bbXT3Xr_duZPkR6URfhAjoOkgldHUoPTamftG24_AxVHGVuZkh4Ls4oXRDV16rzv5iUE8KS0z3u37-rNeC2M0jVWMDNMiw=w507-h379-no?authuser=0",
+	answerimage : "https://media.tenor.com/images/67089b6f6850ea8d37e02968eb6ea382/tenor.gif", answerSpeak : "Beach Volleyball"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUSU3ZCWwvvP9M-GeE1vdyJHfwLhU0lPlFdUYZ1vtj0s8DA7U2HiqG3_Pr0P-wP3-1N_-Wfyigge0FFCdHoqy7jyo9sNA-DQ5OAJslsbUMAn8s0C7TDmsj5Wyw8Qr7sM2aGucZU1ZPmEsZB7sax3bNK7A=w563-h228-no?authuser=0",
+	answerimage : "https://i.pinimg.com/originals/b0/d1/56/b0d156a0e0d9bbb531e2ca977bc54e5a.jpg", answerSpeak : "Rugby"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXemQgDZVsPi5Jh1Gl4q0NyjY7SSV_baxMIf8OMHpmnpMDyfGmUrwbBjQw_GKYqjU7eyvu2zcKFK37TwYEuDNWlKN4p3BkUropWXYWeXPlPnP-ig45XsH63KTnGdK1BvZuq-QP3pZccTNB6uSlbOndibg=w595-h384-no?authuser=0",
+	answerimage : "https://image.shutterstock.com/image-photo/rio-de-janeiro-brazil-august-260nw-550143886.jpg", answerSpeak : "Modern Pentathlon"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLU9sjQf7y4HpoTdBgkPla7RL4u3L7Atqvsr9kyw1BZH13feF431Wq6zjuUpBHp_PNKCqWrvGf6NieoXR-S8-QAiOXONo6x7Lr0HV6tPfkJYahtAEVOSlpdtcJa9JIGRCFIJInCKEVHY8DmgufwXzylYzg=w495-h431-no?authuser=0",
+	answerimage : "https://media.tenor.com/images/84ce2ecf6503ebc015eda527a59878e3/tenor.gif", answerSpeak : "Trampoline"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUpKQqO56RVR45WQF64JmtC3KrGoa7nv74pJVr6-S44GgAZqptHybrWtnd_EyuDTGluSSVWoZZrvu3wnRGZcnFFTc8fBhqMTyM8DDbdW4vEASzm_TiLAB8I4hzZJVCT2GhHAAnF4oZ3pMuiNP9oNcRg3Q=w685-h432-no?authuser=0",
+	answerimage : "https://i.pinimg.com/originals/8c/7c/76/8c7c762eb7ea8fae8e2ad42edbe19a28.jpg", answerSpeak : "Surfing"}) ;
+
 
 /*
   
