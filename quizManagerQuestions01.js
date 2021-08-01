@@ -1734,7 +1734,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pub singer",
+		name : "Pub singer 0",
 		hoverover : "Sit back, close your eyes, you could be at a live venue right now.  ",
 		tags : "2021-7-17,saturday,InnerWheel,surfers,audio",
 		questInfo: new Array()
@@ -1918,7 +1918,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pub singer",
+		name : "Pub singer 1",
 		hoverover : "Sit back, close your eyes, you could be at a live venue right now.  ",
 		tags : "2021-7-24,saturday,InnerWheel,surfers,audio",
 		questInfo: new Array()
