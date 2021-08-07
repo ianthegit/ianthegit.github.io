@@ -2133,6 +2133,133 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/1YC2gwZ5dnQsSJOTIq3mYL" width="501" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
 	answer : ""}) ;
 
+quests[++questIndexBuilder] = { //
+		name : "August pretentions",
+		hoverover : "Mixing it up",
+		tags : "2021-8-7,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Scotland runs what is described as the shortest commercial passenger flight in the world, between Westray (pictured) and Papa Westray in the Orkney Islands. How long does the flight last in minutes?  " + Table4ColumnStart + "4</td><td>3</td><td>2</td><td>1" + Table4ColumnEnd,
+	answer : "2 minutes", image : "https://i.guim.co.uk/img/media/02f985837e569f7a552160e1211dcdc104c49305/0_0_3500_2333/master/3500.jpg?width=620&quality=85&auto=format&fit=max&s=d84f62ea9ae5811a09cf6a91d90cca41"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Ukraine's Serhiy Kulish suffered a hilarious sporting calamity at the Olympics this week. What was it?  " + Table4ColumnStart + "His suit split during the men's discus, revealing his unmentionables</td><td>He managed to shoot an opponent's target by mistake in the shooting</td><td>He tumbled off straight into the water when his horse decided to make an abrupt halt during the eventing</td><td>His shorts got caught on the Pole in the Pole Vault, leaving him dangling" + Table4ColumnEnd,
+	answer : "He managed to shoot an opponent's target by mistake in the shooting",  image : "https://i.guim.co.uk/img/media/f1bd765b41e5b80a688a5d53488e57d71fabf790/386_0_3184_1911/master/3184.jpg?width=605&quality=85&auto=format&fit=max&s=83350882f8ef80def15a6b14bae90fc8"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Here's Bert and Ernie launching some Sesame Street stamps in Germany last year. That show has been running for approximately 1,057 years. But, in the US, which longest running animated kids TV show is to finally end after 25 years?  " + Table4ColumnStart + "SpongeBob SquarePants</td><td>Futurama</td><td>Scooby Doo</td><td>Arthur" + Table4ColumnEnd,
+	answer : "Arthur",  image : "https://i.guim.co.uk/img/media/cf6c70f5291beaa4816ac58a269c06951fefc70b/0_352_5275_3165/master/5275.jpg?width=620&quality=85&auto=format&fit=max&s=30db1856dff7411b4f133b8b05008aa0"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "On 5 August 1962 Nelson Mandela was jailed. He would not be released until when?  " + Table4ColumnStart + "1987</td><td>1990</td><td>1993</td><td>1997" + Table4ColumnEnd,
+	answer : "1990 (11th February)",  image : "https://i.guim.co.uk/img/media/638f410f2a3e06475400826af328520eee95e644/160_57_3867_2321/master/3867.jpg?width=620&quality=85&auto=format&fit=max&s=588ca1b1903a95164a9bafabc55e2e51"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "TRUE or FALSE?  'The Mandela Effect' is a name that has been dubbed online to people having false memories ",
+	answer : "TRUE - The origin comes from people agreeing online that they remember the news of Nelson Mandela dying in prison in the 1980s"	, answerSpeak : "True"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Fictional character Alan Partridge is a very enthusiastic driver, and a huge fan of the Rover 825. He'll be absolutely furious that the UK government is planning to put who at the top of its new-fangled 'road user hierarchy'?  " + Table4ColumnStart + "Pedestrians</td><td>Cyclists</td><td>Horses</td><td>Little Herberts whizzing around on e-scooters" + Table4ColumnEnd,
+	answer : "Pedestrians - the new version of the Highway Code is upsetting drivers of things that kill people as they may be forced to take care.", answerSpeak : "Pedestrians", image : "https://i.guim.co.uk/img/media/8fe8d7ee4f869eafdb232a5de10a4c1aaaa08a87/0_128_2186_1312/master/2186.jpg?width=620&quality=85&auto=format&fit=max&s=18d07540a51ac52863b2f440b3557e43"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which 80s superstar used to run their own record label called Paisley Park?  " + Table4ColumnStart + "Madonna</td><td>Prince</td><td>George Michael</td><td>Kate Bush" + Table4ColumnEnd,
+	answer : "Prince", image : "https://i.guim.co.uk/img/media/060077b40ea724845263e770ced713e1a1f80e27/0_0_2000_1200/master/2000.jpg?width=620&quality=85&auto=format&fit=max&s=b92f9b5b24ad0ed46c0fba47cd8bd14b"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "The Royal National Lifeboat Institution (RNLI) has seen a surge in donations after its life-saving activities rescuing people in trouble at sea in the English Channel were criticised in some quarters. But when was it founded, under its original name of the National Institution for the Preservation of Life from Shipwreck?  " + Table4ColumnStart + "1788</td><td>1824</td><td>1862</td><td>1888" + Table4ColumnEnd,
+	answer : "1824", image : "https://i.guim.co.uk/img/media/f91089d26da8dd28b63cac51078bc4101ad49ad9/0_0_4688_3170/master/4688.jpg?width=620&quality=85&auto=format&fit=max&s=d040f777e7c535db4468be03405cafb3"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "If the Royal National Lifeboat Institution (RNLI) had retained it's original name of the National Institution for the Preservation of Life from Shipwreck what would be the problem nowadays?  ",
+	answer : "It's acronym - we'd have headlines like 'NIPLS tweaking reduces response times', 'Icey weather makes NIPLS hard' 'Something clever about NIPLS and Nigel Farage being a tit'", image : "https://i.guim.co.uk/img/media/f91089d26da8dd28b63cac51078bc4101ad49ad9/0_0_4688_3170/master/4688.jpg?width=620&quality=85&auto=format&fit=max&s=d040f777e7c535db4468be03405cafb3"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What is the southernmost tip of the continent of Africa?  " + Table4ColumnStart + "Cape Horn</td><td>Cape of Good Hope</td><td>Cape Agulhas</td><td>Caped Avenger" + Table4ColumnEnd,
+	answer : "Cape Agulhas",  image : "https://www.nationsonline.org/maps/south_africa_prov_map2.jpg"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "An exhibition opened this week into finds from a vast expanse of territory submerged by the sea following a tsunami some 8,000 years ago which cut the British Isles off from modern Belgium, the Netherlands and southern Scandinavia. What do archaeologists call the sunken landmass?  " + Table4ColumnStart + "Vikingsund</td><td>Frontios</td><td>Doggerland</td><td>Zealand" + Table4ColumnEnd,
+	answer : "Doggerland"	, answerSpeak : "Doggerland"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Learning which language is going to be introduced into 40 state schools in England?  " + Table4ColumnStart + "Greek</td><td>Aramic</td><td>Latin</td><td>Klingon" + Table4ColumnEnd,
+	answer : "Latin - Stultorum plena est imperium"	, image : "https://i.guim.co.uk/img/media/4a9210e7ed126a21cd55565130f226d9e40565ff/0_285_5184_3110/master/5184.jpg?width=620&quality=85&auto=format&fit=max&s=e9d7b365accd37182405daa5ca5384f5"});
+//The full power of fools
+
+quests[++questIndexBuilder] = { //
+		name : "Olympic Heroes",
+		hoverover : "Do you recognise these fit folk",
+		tags : "2021-8-7,saturday,InnerWheel,surfers",
+		splash : {splashType : splashTypeText , splashText : "Do you recognise these 12 modern day conquering heroes - and how many Olympic medals have they each won by 7th August 2021?   Each person has won more (or the same) than the next.  2 points on offer per question", splashImage : "" },
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this?  " ,
+	answer : "Jason Kenny - 6G 2S 0B = 8", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/2015_UEC_Track_Elite_European_Championships_178.JPG/150px-2015_UEC_Track_Elite_European_Championships_178.JPG"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this?  " ,
+	answer : "Bradley Wiggins - 5G 1S 2B = 8", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/2015_UEC_Track_Elite_European_Championships_158_%28cropped%29.JPG/220px-2015_UEC_Track_Elite_European_Championships_158_%28cropped%29.JPG"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this?  " ,
+	answer : "Chris Hoy - 6G 1S 0B = 7", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Chris_Hoy%2C_October_2008.jpg/150px-Chris_Hoy%2C_October_2008.jpg"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this?  " ,
+	answer : "Laura Kenny (nee Trott) 5G 1S 0B = 6", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/2015_UEC_Track_Elite_European_Championships_118.JPG/220px-2015_UEC_Track_Elite_European_Championships_118.JPG"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this?  " ,
+	answer : "Steve Redgrave - 5G 0S 1B = 6", image : "https://werow.co.uk/wp-content/uploads/2017/10/Steve-Redgrave_olympic-world-and-international-rower.jpg?_t=1508084523"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this?  " ,
+	answer : "Charlotte Dujardin - 3G 1S 2B = 6", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Charlotte_Dujardin_2012_Olympic_Dressage_%28cropped%29.JPG/240px-Charlotte_Dujardin_2012_Olympic_Dressage_%28cropped%29.JPG"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this?  " ,
+	answer : "Max Whitlock - 3G 0S 3B = 6", image : "https://i.inews.co.uk/content/uploads/2021/07/PRI_191400500-640x360.jpg"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this?  " ,
+	answer : "Ben Ainslie - 4G 1S 0B = 5", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Ben_Ainslie_%28GBR%29_2021.jpg/240px-Ben_Ainslie_%28GBR%29_2021.jpg"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this?  " ,
+	answer : "Adam Peaty - 3G 2S 0B = 5", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Adam_Peaty_Rio_2016.jpg/480px-Adam_Peaty_Rio_2016.jpg"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this?  " ,
+	answer : "Mo Farah - 4G 0S 0B = 4", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Mo_Farah_Doha_2015_%28cropped%29.jpg/240px-Mo_Farah_Doha_2015_%28cropped%29.jpg"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this?  " ,
+	answer : "Matthew Pinsent - 4G 0S 0B = 4", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Boat_Race_2018_Matthew_Pinsent.jpg/480px-Boat_Race_2018_Matthew_Pinsent.jpg"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this?  " ,
+	answer : "Ed Clancy - 3G 0S 1B = 4", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/2019_UEC_Track_Elite_European_Championships_118.jpg/220px-2019_UEC_Track_Elite_European_Championships_118.jpg"	});
+
+
+
+quests[++questIndexBuilder] = { //
+		name : "Pub singer 3",
+		hoverover : "Sit back, close your eyes, you could be at a live venue right now.  ",
+		tags : "2021-8-7,saturday,InnerWheel,surfers,audio",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/lookingfor.mp3' + endAudio ,
+	answer : startYouTube + 'https://youtu.be/e3-5YC_oHjE' + endYouTube	, answerSpeak : "Still haven't found what I'm looking for"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/tainted.mp3' + endAudio ,
+	answer : startYouTube + 'https://www.youtube.com/watch?v=XZVpR3Pk-r8' + endYouTube	, answerSpeak : "Tainted Love"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/notright.mp3' + endAudio ,
+	answer : startYouTube + 'https://www.youtube.com/watch?v=6J538b-OLRU' + endYouTube	, answerSpeak : "It's not right, but it's OK   "	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/nowornever.mp3' + endAudio ,
+	answer : startYouTube + 'https://www.youtube.com/watch?v=QkMVscR5YOo' + endYouTube	, answerSpeak : "It's now or never"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/whatslove.mp3' + endAudio ,
+	answer : startYouTube + 'https://www.youtube.com/watch?v=oGpFcHTxjZs' + endYouTube	, answerSpeak : "What's love got to do with it"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/breaking.mp3' + endAudio ,
+	answer : startYouTube + 'https://www.youtube.com/watch?v=z0qW9P-uYfM' + endYouTube	, answerSpeak : "Don't go breaking my heart"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/loving.mp3' + endAudio ,
+	answer : startYouTube + 'https://www.youtube.com/watch?v=uOnYY9Mw2Fg' + endYouTube	, answerSpeak : "You've lost that loving feeling"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/wantme.mp3' + endAudio ,
+	answer : startYouTube + 'https://www.youtube.com/watch?v=uPudE8nDog0' + endYouTube	, answerSpeak : "Don't you want me Baby?"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/release.mp3' + endAudio ,
+	answer : startYouTube + 'https://www.youtube.com/watch?v=ch_Fz2Np-Z4' + endYouTube	, answerSpeak : "Please release me"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/divorce.mp3' + endAudio ,
+	answer : startYouTube + 'https://www.youtube.com/watch?v=912DKxD0H1U' + endYouTube	, answerSpeak : "D I V O R C E"	});
 
 /*
 quests[++questIndexBuilder] = { //
