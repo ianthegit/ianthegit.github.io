@@ -2487,6 +2487,19 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 		answer : "No answer"
 	});
 
+
+quests[++questIndexBuilder] = {
+		name : "1991 #1s",
+		hoverover : "What was number 1 over the year",
+		tags : "saturday,music,2021-8-7,1991",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+		question : 'Name the song & artist',
+		spotify : '<iframe src="https://open.spotify.com/embed/playlist/0MosHKlFcv0vs12PqSmf3i" width="500" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+		answer : "No answer"
+	});
+
 quests[++questIndexBuilder] = {
 		name : "1992",
 		hoverover : "How much do you know about 1992?",
