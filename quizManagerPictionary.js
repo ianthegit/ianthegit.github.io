@@ -791,6 +791,34 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://i.pinimg.com/originals/8c/7c/76/8c7c762eb7ea8fae8e2ad42edbe19a28.jpg", answerSpeak : "Surfing"}) ;
 
 
+
+quests[++questIndexBuilder] = { //
+		name : "Pictionary 28",
+		hoverover : "Pictionary on the theme of even more Olympics",
+		tags : "2021-8-7,pictionary",
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUstpVATfjJewPPU21gbBrKtScfNonW7eg2aJ6C1ttQCUunaoUiJOG3QxlEjsjXk4IY-7YEVE9Bhdob0LMVIpDOJY3ApRC2T7wUkL4WxcT3fSal_eM3KHD8OMm2PZxnBEtFNHN1IO7yCIVF6qwKLRLyyg=w397-h193-no?authuser=0",
+	answerimage : "https://res.cloudinary.com/paralympics/c_fill,w_354,h_215/q_auto:good,f_auto,fl_lossy/8c43f2e6-34f2-4ef3-a87e-078fea09d3aa", answerSpeak : "Paralympic shooting"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXtI7zRmbv9j0qoVI9pr5xB6cjZDXkssvRRDAosgXpijAf9_JZcCQ3oO32YWjzbFtLZ-UHw7EFifGUoGjhW70iWmZYMmOgeDNR8yQIFKMSp07xbRlozaW9-nwimnfXjBwqPZ4eZioD2latkR-UnA6wCXQ=w548-h427-no?authuser=0",
+	answerimage : "https://www.paralympic.org/sites/default/files/styles/large_original/public/images/160916143848918_GettyImages-605902478.jpg?itok=xmfqqBw-", answerSpeak : "Paralympic  sitting volleyball"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVPhMIMu83YZt7EfyYYU09TbdAI-6wveLCoMQcQ-yPDuCBSzvuPBoZaslBAiBTTQl7_-1zUux7wUwisGMLhzE1DGgi2X5uwvdmTROw6Oa6vU_pr-ODke-uOU61l0zLDb2ZWLF64oJtMI2tgns1FaY0Dvw=w334-h256-no?authuser=0",
+	answerimage : "https://www.paralympic.org/sites/default/files/styles/large_original/public/images/140724130106990_LON_0409_2608.jpg?itok=nCPGpdPp", answerSpeak : "Paralympic  wheeelchair basketball"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUzoXCHo5GeEUTF1zsTy7vM5w29nTC2Mah4dg2TCNx7UhTBQaBQ_cXBQLDIhBgkwkpAEC0tnMCzzM3FIlAxUMcw7GCEpxpM6XvOUYDnyko7rvAxZfZHA0efbkPL5nXtj6p8mGYLpU3XLzg9OjSs4o1cEQ=w452-h266-no?authuser=0",
+	answerimage : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Final_EMS-A_2013_Wheelchair_Fencing_WCH_t201328.jpg/220px-Final_EMS-A_2013_Wheelchair_Fencing_WCH_t201328.jpg", answerSpeak : "Paralympic  wheelchair fencing"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLWtqnESE1SnxHlld6zdnLiZ9V4BU2CCGRIE6sOdTVPmkkjlJxZcW3s5RJ8jcO--0S-nE9AvcqmSNUsjHiDyll6s8Pcpszwalcy0gnmrqeNSb9ndZzf93cmLOcZaVxmgY6TEwd0QrRQZuUuQU7LQq2KQLA=w487-h325-no?authuser=0",
+	answerimage : "https://d37md1uuehbh2y.cloudfront.net/content/uploads/2020/11/17163943/wheelchairrl-tom-halliwell.jpg", answerSpeak : "Paralympic  wheelchair rugby"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUsi60g4a4fXCICFwXenkSSdjMX8kkjbZObinLR72FXA_E9FZd6XfpnRgdJuBxq02j7FyKNWMX8xlLWr7ottjhM-uRenJ22nwO9dBxO02Mi_xzeDQG2gqeXr655mLifOHZ2v08PjTJnXj28PTlak2B0gQ=w490-h418-no?authuser=0",
+	answerimage : "https://images.tennis.com/image/private/t_16-9_1920/tenniscom-prd/pzjkyjid88ns55v0eive.jpg", answerSpeak : "Paralympic  wheelchair  tennis"}) ;
+
+
+
 /*
   
  quests[++questIndexBuilder] = { //
