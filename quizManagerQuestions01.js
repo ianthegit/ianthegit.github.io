@@ -2230,36 +2230,38 @@ quests[++questIndexBuilder] = { //
 		questInfo: new Array()
 	};
 
+
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/lookingfor.mp3' + endAudio ,
-	answer : startYouTube + 'https://youtu.be/e3-5YC_oHjE' + endYouTube	, answerSpeak : "Still haven't found what I'm looking for"});
+	answer : '<iframe src="https://open.spotify.com/embed/track/6wpGqhRvJGNNXwWlPmkMyO" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	, answerSpeak : "Still haven't found what I'm looking for"});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/tainted.mp3' + endAudio ,
-	answer : startYouTube + 'https://www.youtube.com/watch?v=XZVpR3Pk-r8' + endYouTube	, answerSpeak : "Tainted Love"	});
+	answer : '<iframe src="https://open.spotify.com/embed/track/0cGG2EouYCEEC3xfa0tDFV" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	, answerSpeak : "Tainted Love"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/notright.mp3' + endAudio ,
-	answer : startYouTube + 'https://www.youtube.com/watch?v=6J538b-OLRU' + endYouTube	, answerSpeak : "It's not right, but it's OK   "	});
+	answer : '<iframe src="https://open.spotify.com/embed/track/7861kBrZ5aw7o4NfggcyYW" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	, answerSpeak : "It's not right, but it's OK   "	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/nowornever.mp3' + endAudio ,
-	answer : startYouTube + 'https://www.youtube.com/watch?v=QkMVscR5YOo' + endYouTube	, answerSpeak : "It's now or never"	});
+	answer : '<iframe src="https://open.spotify.com/embed/track/1XunTmhOcj3xwh4b8P3isX" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	, answerSpeak : "It's now or never"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/whatslove.mp3' + endAudio ,
-	answer : startYouTube + 'https://www.youtube.com/watch?v=oGpFcHTxjZs' + endYouTube	, answerSpeak : "What's love got to do with it"	});
+	answer : '<iframe src="https://open.spotify.com/embed/track/4kOfxxnW1ukZdsNbCKY9br" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	, answerSpeak : "What's love got to do with it"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/breaking.mp3' + endAudio ,
-	answer : startYouTube + 'https://www.youtube.com/watch?v=z0qW9P-uYfM' + endYouTube	, answerSpeak : "Don't go breaking my heart"	});
+	answer : '<iframe src="https://open.spotify.com/embed/track/7HW5WIw7ZgZORCzUxv5gW5" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	, answerSpeak : "Don't go breaking my heart"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/loving.mp3' + endAudio ,
-	answer : startYouTube + 'https://www.youtube.com/watch?v=uOnYY9Mw2Fg' + endYouTube	, answerSpeak : "You've lost that loving feeling"	});
+	answer : '<iframe src="https://open.spotify.com/embed/track/6AeyHqzNHJthYJbn0tvJ4b" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	, answerSpeak : "You've lost that loving feeling"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/wantme.mp3' + endAudio ,
-	answer : startYouTube + 'https://www.youtube.com/watch?v=uPudE8nDog0' + endYouTube	, answerSpeak : "Don't you want me Baby?"	});
+	answer : '<iframe src="https://open.spotify.com/embed/track/3L7RtEcu1Hw3OXrpnthngx" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	, answerSpeak : "Don't you want me?"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/release.mp3' + endAudio ,
-	answer : startYouTube + 'https://www.youtube.com/watch?v=ch_Fz2Np-Z4' + endYouTube	, answerSpeak : "Please release me"	});
+	answer : '<iframe src="https://open.spotify.com/embed/track/51sOMAqntkvxYpPlgpIIxg" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	, answerSpeak : "Please release me"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/divorce.mp3' + endAudio ,
-	answer : startYouTube + 'https://www.youtube.com/watch?v=912DKxD0H1U' + endYouTube	, answerSpeak : "D I V O R C E"	});
+	answer : '<iframe src="https://open.spotify.com/embed/track/4JPEuPsDG3nNJMAvvQ2Rr3" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	, answerSpeak : "D I V O R C E"	});
+
 
 /*
 quests[++questIndexBuilder] = { //
