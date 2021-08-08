@@ -386,7 +386,7 @@ function SQSpeakAnswer(){
 	if (!'speechSynthesis' in window) {
 		return;
 	}
-	if (!speakText.includes("iframe")) {
+	if (!speakText.includes("iframe")|| fullAnswer.includes("target='_blank'")) {
 		var msg = new SpeechSynthesisUtterance();
 		msg.text = speakText;
 		window.speechSynthesis.speak(msg);
@@ -397,7 +397,7 @@ function SQWriteAnswer() {
 	if (!fullAnswer) {
 		return;
 	}
-	if (fullAnswer.includes("iframe")) {
+	if (fullAnswer.includes("iframe")|| fullAnswer.includes("target='_blank'")) {
 		SQGetAnswerArea().innerHTML = // answerPreText +
 			"<p " + answerStyle + ">" + fullAnswer + "</p>";
 	}
