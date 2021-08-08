@@ -2092,34 +2092,35 @@ quests[++questIndexBuilder] = { //
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w3-alabama.mp3' + endAudio ,
-	answer : "Sweet Home Alabama"	});
+	answer : '<iframe src="https://open.spotify.com/embed/track/7e89621JPkKaeDSTQ3avtg" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>', answerSpeak : "Sweet Home Alabama"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w3-billie.mp3' + endAudio ,
-	answer : "Billie Jean"	});
+	answer : '<iframe src="https://open.spotify.com/embed/track/5ChkMS8OtdzJeqyybCc9R5" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>', answerSpeak : "Billie Jean"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w3-brown.mp3' + endAudio ,
-	answer : "Brown Eyed Girl"	});
+	answer : '<iframe src="https://open.spotify.com/embed/track/3yrSvpt2l1xhsV9Em88Pul" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>', answerSpeak : "Brown Eyed Girl"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w3-cars.mp3' + endAudio ,
-	answer : "Chasing Cars"	});
+	answer : '<iframe src="https://open.spotify.com/embed/track/5GuZz08qie5efPtqsQFsdT" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>', answerSpeak : "Chasing Cars"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w3-champions.mp3' + endAudio ,
-	answer : "We Are The Champions"	});
+	answer : '<iframe src="https://open.spotify.com/embed/track/1lCRw5FEZ1gPDNPzy1K4zW" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>', answerSpeak : "We Are The Champions"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w3-conversation.mp3' + endAudio ,
-	answer : "A Little Less Conversation"	});
+	answer : '<iframe src="https://open.spotify.com/embed/track/4rr0gWiMrF4sOIefs3IEvZ" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>', answerSpeak : "A Little Less Conversation"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w3-delilah.mp3' + endAudio ,
-	answer : "Delilah"	});
+	answer : '<iframe src="https://open.spotify.com/embed/track/2v8B8d17Xxu9uLU5sNiHSL" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>', answerSpeak : "Delilah"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w3-faith.mp3' + endAudio ,
-	answer : "Faith"	});
+	answer : '<iframe src="https://open.spotify.com/embed/track/0HEmnAUT8PHznIAAmVXqFJ" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>', answerSpeak : "Faith"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w3-girlfun.mp3' + endAudio ,
-	answer : "Girls Just Wanna Have Fun"	});
+	answer : '<iframe src="https://open.spotify.com/embed/track/4y1LsJpmMti1PfRQV9AWWe" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>', answerSpeak : "Girls Just Wanna Have Fun"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w3-pianoMan.mp3' + endAudio ,
-	answer : "Piano Man"	});
+	answer : '<iframe src="https://open.spotify.com/embed/track/70C4NyhjD5OZUMzvWZ3njJ" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>', answerSpeak : "Piano Man"	});
+
 
 quests[++questIndexBuilder] = { //
 		name : "Garden",
