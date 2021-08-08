@@ -2231,6 +2231,7 @@ quests[++questIndexBuilder] = { //
 		name : "Pub singer 3",
 		hoverover : "Sit back, close your eyes, you could be at a live venue right now.  ",
 		tags : "2021-8-7,saturday,InnerWheel,surfers,audio",
+		splash : {splashType : splashTypePictureAndText , splashText : "In honour of my 30th wedding anniversary, 10 songs you shouldn't play at a wedding", splashImage : "https://lh3.googleusercontent.com/_xe1vRE-ALbgYpUU_peFoR3jJ8M2BriIUusFvMPBe3dHTFX4lhjWnVuzNVopNhQ8TlCAoQny1zR4vblWXVYG9jInm8NV6si7nlCW0yPLH6_yyMtavSOFjZl1GTZU1v2KlUfLqTW29U_B9PrPDj2HsR4FugmmLg_2sEGyA163zR0fMmXyyJwMtvhgOg1HWsJkWTWtNe95HoZxr_DdO3O4fnco7wCfeJcT4IFJ-HPQq28RnlU_fsZtKvRO-2U8JfugqhCKcyBJKsVBSw3OoeKd1BNDUTZRcBZZkFQL2U0LXGfz3jM8cDunOPrXnXf_noS6Hr2G5xTSGrjkRKmcHj6cVoWYcwmovmZg82eLfd-gdck1MAqu1LouDx_O1MMPUWqCaZjzuU2IXPsGP1WjFV6jbGc7t09c1_UFZ1aRCuk9C05eNnhckvigQQmAGCRP31Ar7iExnofj429CxGO1HAkKD3MgR98R1UwL2ta_T35VSMn_2NxXBnNm0RaD4kt_X1Ao-GqGauBqHUpDnp0h6PeDwMEJ159itTJBC_53V18mTj18NfRCRSJOn2K6XIDYuUFz47op0oNEhc_g1PuDUz5NQKqOpn6uQt-SRxfVL4iVLwDjUgDx0ha84MtZ_FAeW4ST7r4IvcQ_z0w-HDe8zBmv9hna4rcpsIXMML3z63xDkOPZDg_NtSc_n-qkt-C3wIipx89HcMBJw7tr9cKOsqQKwe0e3w=s871-no?authuser=0" },
 		questInfo: new Array()
 	};
 
