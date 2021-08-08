@@ -1741,36 +1741,38 @@ quests[++questIndexBuilder] = { //
 	};
 
 
+
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 		question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/believin.mp3' + endAudio ,
-		answer : "Don't Stop Believin"	});
+		answer : '<iframe src="https://open.spotify.com/embed/track/4bHsxqR3GMrXTxEPLuK5ue" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>', answerSpeak : "Don't Stop Believin"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/borap.mp3' + endAudio ,
-	answer : '<iframe width="560" height="315" src="https://www.youtube.com/embed/fJ9rUzIMcZQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'	});
+	answer : '<iframe src="https://open.spotify.com/embed/track/4u7EnebtmKWzUH433cf5Qv" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>', answerSpeak : 'Bohemian Rhapsody'	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/buttercup.mp3' + endAudio ,
-	answer : 'Why Do You Build Me Up, Buttercup?'	});
+	answer : '<iframe src="https://open.spotify.com/embed/track/1Hgvy8kokRufdMCTGQ5JkQ" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>', answerSpeak : 'Why Do You Build Me Up, Buttercup?'	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/caroline.mp3' + endAudio ,
-	answer : '<iframe width="560" height="315" src="https://www.youtube.com/embed/1vhFnTjia_I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'	});
+	answer : '<iframe src="https://open.spotify.com/embed/track/62AuGbAkt8Ox2IrFFb8GKV" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>', answerSpeak : 'Sweet Caroline'	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/dancing.mp3' + endAudio ,
-	answer : 'Dancing Queen'	});
+	answer : '<iframe src="https://open.spotify.com/embed/track/0GjEhVFGZW8afUYGChu3Rr" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>', answerSpeak : 'Dancing Queen'	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/hooked.mp3' + endAudio ,
-	answer : 'Hooked On A Feeling'	});
+	answer : '<iframe src="https://open.spotify.com/embed/track/0AenlXtLWIpybxAeGOBmXX" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>', answerSpeak : 'Hooked On A Feeling'	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/paradise.mp3' + endAudio ,
-	answer : 'Paradise By The Dashboard Light'	});
+	answer : '<iframe src="https://open.spotify.com/embed/track/7mzHEzbsl5iOvBRuXwReZU" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>', answerSpeak : 'Paradise By The Dashboard Light'	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/prayer.mp3' + endAudio ,
-	answer : 'Livin On A Prayer'	});
+	answer : '<iframe src="https://open.spotify.com/embed/track/37ZJ0p5Jm13JPevGcx4SkF" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>', answerSpeak : 'Livin On A Prayer'	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/ring.mp3' + endAudio ,
-	answer : 'All the Single Ladies (put a ring on it)'	});
+	answer : '<iframe src="https://open.spotify.com/embed/track/557un1HgwYMuqfWGSTmnxw" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>', answerSpeak : 'All the Single Ladies (put a ring on it)'	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/survive.mp3' + endAudio ,
-	answer : 'I Will Survive'	});
+	answer : '<iframe src="https://open.spotify.com/embed/track/5GGVL37gRgOMEAVGSP5O71" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>', answerSpeak : 'I Will Survive'	});
+
 
 
 quests[++questIndexBuilder] = { //
@@ -1926,34 +1928,35 @@ quests[++questIndexBuilder] = { //
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/alive.mp3' + endAudio ,
-	answer : "Stayin Alive"	});
+	answer : '<iframe src="https://open.spotify.com/embed/track/5ubvP9oKmxLUVq506fgLhk" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>', answerSpeak : "Stayin Alive"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/chance.mp3' + endAudio ,
-	answer : "Take a Chance"	});
+	answer : '<iframe src="https://open.spotify.com/embed/track/5BckPAYcKEJuYs1eV1BHHe" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>', answerSpeak : "Take a Chance"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/dance.mp3' + endAudio ,
-	answer : "I wanna dance with somebody"	});
+	answer : '<iframe src="https://open.spotify.com/embed/track/2tUBqZG2AbRi7Q0BIrVrEj" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>', answerSpeak : "I wanna dance with somebody"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/eileen.mp3' + endAudio ,
-	answer : "Come on Eileen"	});
+	answer : '<iframe src="https://open.spotify.com/embed/track/3MrWxJaD2AT0W9DjWF64Vm" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>', answerSpeak : "Come on Eileen"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/heaven.mp3' + endAudio ,
-	answer : "Heaven is a place on Earth"	});
+	answer : '<iframe src="https://open.spotify.com/embed/track/37Q5anxoGWYdRsyeXkkNoI" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>', answerSpeak : "Heaven is a place on Earth"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/raining.mp3' + endAudio ,
-	answer : "It's Raining Men"	});
+	answer : '<iframe src="https://open.spotify.com/embed/track/2IvetNzSZMH5gwjInoyr18" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>', answerSpeak : "It's Raining Men"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/rockdj.mp3' + endAudio ,
-	answer : "Rock DJ"	});
+	answer : '<iframe src="https://open.spotify.com/embed/track/4pbyDPjFgfPqFTcIMC8xpK" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>', answerSpeak : "Rock DJ"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/shake.mp3' + endAudio ,
-	answer : "Shake it off"	});
+	answer : '<iframe src="https://open.spotify.com/embed/track/0cqRj7pUJDkTCEsJkx8snD" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>', answerSpeak : "Shake it off"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/stopMe.mp3' + endAudio ,
-	answer : "Don't Stop Me Now"	});
+	answer : '<iframe src="https://open.spotify.com/embed/track/5T8EDUDqKcs6OSOwEsfqG7" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>', answerSpeak : "Don't Stop Me Now"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/valerie.mp3' + endAudio ,
-	answer : "Valerie"	});
+	answer : '<iframe src="https://open.spotify.com/embed/track/6kopmMZiyLmw7h66uXcXR7" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>', answerSpeak : "Valerie"	});
+
 
 quests[++questIndexBuilder] = { //
 		name : "Olympic",
