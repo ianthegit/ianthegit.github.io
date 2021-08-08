@@ -58,8 +58,12 @@ Table4ColumnStart="<table style='font-family:verdana;color:Black;font-size:30px;
 Table4ColumnEnd=" </td></tr></table>";
 beginAudio= '<audio controls><source src="'  ;
 endAudio = '?raw=true" type="audio/mp3">   </audio>';
-startYouTube=" <a href='"
-endYouTube="' target='_blank'>The Answer...</a> "
+startYouTube=" <a href='";
+endYouTube="' target='_blank'>The Answer...</a> ";
+
+audioOnlyYoutubeStart =	'<div style="position:relative;width:267px;height:25px;overflow:hidden;"> <div style="position:absolute;top:-276px;left:-5px"> <iframe width="300" height="300"  src="https://www.youtube.com/embed/';
+audioOnlyYoutubeEnd =	'?rel=0"> </iframe> </div> </div>' ;
+
 
 gbp="&#163 ";
 quests = new Array();
