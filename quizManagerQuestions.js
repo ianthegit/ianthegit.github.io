@@ -3350,49 +3350,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/3RMMvRmUMGSs2Ah4JmM9p9" width="500" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media">></iframe>',
 } );
 
-quests[++questIndexBuilder] = { //
-		name : "Riddles",
-		hoverover : "Some good, some downright rubbish",
-		tags : "2020-12-31,saturday,InnerWheel,surfers,Weever",
-		questInfo: new Array()
-	};
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
-	question : "Turn me on my side and I am everything. Cut me in half and I am nothing. What am I?",
-	answer : "8 - on it's side is infinity, in half is zero"} );
 
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
-	question : "A man lives on the 25 floor of an apartment. He can take the elevator all the way up to his apartment on rainy days or if there is someone else in the elevator. On sunny days he goes up on the elevator 10 floors and then takes the stairs the rest of the way up. Explain.",
-	answer : "He's too short to reach higher than button 10, but if someone else is in the elevator he can ask them to press the button for 25 for him and on rainy days he can reach it with his umbrella"});
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
-	question : "What word starts with E, ends with E, but only has one letter in it?",
-	answer : "Envelope"});
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
-	question : "What can you keep after giving it to someone?  ",
-	answer : "Your name"});
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
-	question : "You have been asked to take 3 gold balls from one village, to another which sits on the other side of a ravine. You approach the bridge and see a sign that tells you that the maximum weight of the bridge is 140kg.  You weigh 130kg, the 3 gold balls each weigh 5kg.   The ravine is too wide to throw them across and you cannot leave any behind as they will be stolen .   How do you make the journey in a single crossing?  ",
-	answer : "You juggle the balls, keeping 1 in the air at all times"});
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
-	question : "32 white horses upon a red hill. First they stomp, then they chomp and they they stand still. What are they?  ",
-	answer : "Teeth"});
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
-	question : "If you have a bee in your hand, what do you have in your eye?  ",
-	answer : "Beauty (Beauty is in the eye of the Bee-holder"});
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
-	question : "20 men went to visit a castle. Before they arrived there was no-one else at the castle, and during their visit no-one else arrived. During their visit there was a murder at the castle. At the end of their visit all 20 men went home alive. How is this possible?  ",
-	answer : "It was a murder of crows"});
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
-	question : "A man pushes his car to a hotel and tells the owner he’s bankrupt. Why?  ",
-	answer : "Playing Monopoly"});
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
-	question : "What five-letter word becomes shorter when you add two letters to it?  ",
-	answer : "Short"});
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
-	question : " 4+11=3 </BR> 6+2=8 </BR> 9+9=6 </BR> 3+7=10 </BR> What is 5+8?  ",
-	answer : "1 - all are times on a clock"});
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
-	question : "A man walks into a bar, he asks for a glass of water and only that. The bartender takes out a rifle and shoots the ceiling. The man thanks the bartender and goes out the door.   Why?  ",
-	answer : "He had hiccups"});
 /*
   addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 	question : "",
