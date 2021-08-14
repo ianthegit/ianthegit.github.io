@@ -2294,7 +2294,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 	answer : "Teeth"});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : "If you have a bee in your hand, what do you have in your eye?  ",
-	answer : "Beauty (Beauty is in the eye of the Bee-holder"});
+	answer : "Beauty (Beauty is in the eye of the Bee-holder)"});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : "20 men went to visit a castle. Before they arrived there was no-one else at the castle, and during their visit no-one else arrived. During their visit there was a murder at the castle. At the end of their visit all 20 men went home alive. How is this possible?  ",
 	answer : "It was a murder of crows"});
