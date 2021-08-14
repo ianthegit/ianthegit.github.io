@@ -2372,6 +2372,9 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 	question : 'What is Phil singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/bridge.ogg' + endAudio ,
 	answer : '<iframe src="https://open.spotify.com/embed/track/6l8EbYRtQMgKOyc1gcDHF9" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What is Pam trying to whistle? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/seasons.ogg' + endAudio ,
+	answer : '<iframe src="https://open.spotify.com/embed/track/7pGMRy91RcQT9oHdPgYz3A" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w4-betterleave.mp3' + endAudio ,  //leave right now
 	answer : '<iframe src="https://open.spotify.com/embed/track/4mZsyuthp695XQWwb2g3qe" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
