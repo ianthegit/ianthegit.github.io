@@ -819,6 +819,33 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 
+quests[++questIndexBuilder] = { //
+		name : "Pictionary 29",
+		hoverover : "Pictionary on the theme of Holidays",
+		splash : {splashType : splashTypeText , splashText : "Pictures on the theme of things that get used on holiday"  },
+		tags : "2021-8-14,pictionary",
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // Watermelon
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXe_X5fEFcBEaIbunMnQqGYDSLKDmx6ZZ3-RJtF0oO9KW9s1ABqOoLGlubDZ6uv64q7_2e3vdWjDTIXDiuvYoS0fSc1nhE-vQvlJikGz-AfMvXTfJYBQXQwiGTm2oBQIhHZ5Z_OyQs1NSgMM0sEFEI40g=w175-h232-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/proxy/4BfvhE8M2IliOFZkqaeNTV7F7u9JjLaKzdAvOpou4pDza9odDCiDPLbQWhAl_zVsUMafp5S-_GSWx3ETbZ1ytx9zYixCHlJA07uKuTluTjpEu12bTu9tZpxnbSSG-Arjg1XGgckOiEBNipeP7-_aPE4", answerSpeak : "Watermelon"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // shuttlecock
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLWDeEyIsTIMAh3YpM77mO8iRwPwUQXGDW7DvZJRfm6_i-vLuaQ12DOmmHw383V2HSa278jo-VKETpqZzu4qgjIXl8BKEtEWbRavUuELy3JJoLAZFX-FDbYCOjgVGPM0prS4FSHBKdueIlSZL5IeWIq5Pw=w465-h458-no?authuser=0",
+	answerimage : "https://i.pinimg.com/originals/41/3e/37/413e37a86c3b1c0e30e03835eee23ba3.jpg", answerSpeak : "Shuttlecock"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // frisbee
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXxfRnyGMTpFA1CJcLYZ2PCkTvk3aKyAVDzPU-dfQ8-zPsDv5qdq0UQwKRmTR7uxesMpYfWQerPJRvJTCxtYsaq5Gs0XL0osRfw95bMyM_FN5dAPbnRhyuzH9rItbfTeZmbK9s4Ve5WEGxlf1ctIJwuvg=w320-h146-no?authuser=0",
+	answerimage : "https://c.tenor.com/fNTQUwLxVkwAAAAM/ultimate-drake.gif", answerSpeak : "Frisbee"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // bodyboard
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUo6EMqDbCoy2D9-jCp_MYrlql6F5UVfLhiN_s1cJRF5JcuPw0ZSGrOPu4EaUfNeFLU5vMwi9WuMNbpV00JgCHKSMHpGm9b1P0aDUJR56PfOvPEkRuPzBhe9HqdFIbQxzNbswbcviPFqHTYinJQ4-99eQ=w634-h277-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/Hj6uyW_ys6C9rV_Kq8SockhPb5j6zFX597FDiAnPgh3ciSFzYoEa6dhAVPouguizdy7n-ETRFwixnFkOhSkyJJD5ghjY5FjfF89bv9-Tr4c5BwIPTiBYwceWlx25tbgbLWD-P25uMwRL39wUT5UUd9GJFRr079vURy-6qTtLcwh9U60NcnKoCoQg5o-bW7aCeA98MxDA-4T7r51MKKrpHZTTO8uOJHACjIzk-2rV9qViFawR9999kvKKKvdi12fByWbxMYQTnQ5LX1UzVrZ6iWIW_yR_DV9TA1z3e93Z3qRQ84Hp4VXRF85uBNCb3PJHJNHW1WQ-pjlrTMM40cqTng7riQkv6FLB6e9v1RY1UiIUvUKCPS1jElPh0-xQchwqjvND6eEzNCycw6VWVH4N056e1aIsEQGkWHulANGEp8OjxG5SkZBRdjTcfOlT8izY1xdjRl_4MJjApsumWvWl73Vwi5ruGVel2zV0OVEhHa8FdiWw7lJ6DciKA4o_rVcGYrkHovE-CrYXv4BesnsKEMQL9KGQCqkHNJB-K9DzPldvB7T90d71iagUZBtZlRpzszTniuTpTA1Rlr8EbSx3jd9aPTr6eUcRk0dbbcdjuxbyJ5_O0SXqIuGgyKKLbzoc0EawWMwsQ3kZAfFe7-IVek6Wu5M3ImHupAwlQtbAo0y9emY0ojV3SOVSwOaLhKNzh9B8syakYDQ89M9kkdRyQ5BNlg=w1162-h871-no?authuser=0", answerSpeak : "Bodyboard"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // flip flop
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLWTroPSFPQ8Yh3UA23hL1gQeF_G2gzCB8jF4RIDck5o45V5v_qi4B3Aob23zi-fynrKEXQu06Yv6wHfebZBLmnpOXRJq_vF_DRxvxfHA6vhVXIOxj52e3fPdn1Y1rUqNaaqfUbLAbqXNNiCPWMfY2LuEw=w288-h372-no?authuser=0",
+	answerimage : "https://i.redd.it/cfs1tz45pzk21.jpg", answerSpeak : "Flip Flop"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // swimming trunks
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXyvd_pNkFOwqI7UT1bgJhsjLt42rCySJ0UnbzJKInYs0SAifhnLLtgx6q0FezarRjVr90IgfNmqn40vjPKPVUVLvWvi-b9NtNlJwhi2BZ-P2IN6UT5pW4mMd13ywhUKfm8uk_xcDs4zA6QCB0bZeswWA=w344-h443-no?authuser=0",
+	answerimage : "https://images-na.ssl-images-amazon.com/images/I/61PWGrXbZqL._AC_UX679_.jpg", answerSpeak : "Swimming Trunks"}) ;
+
+
 
 /*
   
