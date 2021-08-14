@@ -2352,7 +2352,7 @@ quests[++questIndexBuilder] = { //
 		name : "Pub singer 4",
 		hoverover : "Sit back, close your eyes, you could be at a live venue right now.  ",
 		tags : "2021-8-14,saturday,InnerWheel,surfers,audio",
-		splash : {splashType : splashTypeText , splashText : "Tonight we have a guests - not quite the Von Traps, but not far off!!   The first 5 songs are from them, the final 5 were all #1s in 2003"  },
+		splash : {splashType : splashTypeText , splashText : "Tonight we have a guests - not quite the Von Traps, but not far off!!   The first 6 songs are from them, the final 5 were all #1s in 2003"  },
 		questInfo: new Array()
 	};
 
