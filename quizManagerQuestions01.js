@@ -2358,22 +2358,35 @@ quests[++questIndexBuilder] = { //
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What are Phil and Shirley singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/islands.ogg' + endAudio ,
-	answer : ''	, answerSpeak : ""});
+	answer : '<iframe src="https://open.spotify.com/embed/track/6dnco8haegnJYtylV26cBq" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What is Phil singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/gloryDays.ogg' + endAudio ,
-	answer : ''	, answerSpeak : ""});
+	answer : '<iframe src="https://open.spotify.com/embed/track/2Y90nL1ohB4sgYELDs7uNx" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What is Phil singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/knowingMe.ogg' + endAudio ,
-	answer : ''	, answerSpeak : ""});
+	answer : '<iframe src="https://open.spotify.com/embed/track/798cuJeotvXP8UVa8GJPnD" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What are Phil and Lu singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/totalEclipse.ogg' + endAudio ,
-	answer : ''	, answerSpeak : ""});
+	answer : '<iframe src="https://open.spotify.com/embed/track/7wuJGgpTNzbUyn26IOY6rj" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What is Phil singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/bridge.ogg' + endAudio ,
-	answer : ''	, answerSpeak : ""});
+	answer : '<iframe src="https://open.spotify.com/embed/track/6l8EbYRtQMgKOyc1gcDHF9" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
-	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/.mp3' + endAudio ,
-	answer : ''	, answerSpeak : ""});
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w4-betterleave.mp3' + endAudio ,  //leave right now
+	answer : '<iframe src="https://open.spotify.com/embed/track/4mZsyuthp695XQWwb2g3qe" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w4-wedding.mp3' + endAudio ,  //crashed the wedding
+	answer : '<iframe src="https://open.spotify.com/embed/track/0lPvOtxMOvPdr8ICzGfVSQ" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w4-areYouReady.mp3' + endAudio ,  //are you ready for love
+	answer : '<iframe src="https://open.spotify.com/embed/track/3D15FZXmjfna7aFfKmEajd" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w4-crazy.mp3' + endAudio , //Crazy in Love
+	answer : '<iframe src="https://open.spotify.com/embed/track/5IVuqXILoxVWvWEPm82Jxr" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w4-spirit.mp3' + endAudio , // Spirit in the sky
+	answer : '<iframe src="https://open.spotify.com/embed/track/2F0zMyfnuIqoETFkLc5v8a" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+
 
 
 
