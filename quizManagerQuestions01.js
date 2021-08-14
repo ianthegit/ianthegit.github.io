@@ -2270,7 +2270,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 quests[++questIndexBuilder] = { //
 		name : "Riddles",
 		hoverover : "Some good, some downright rubbish",
-		tags : "2020-8-14,saturday,InnerWheel,surfers,Weever",
+		tags : "2021-8-14,saturday,InnerWheel,surfers,Weever",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
@@ -2347,6 +2347,48 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "The Seahorses had a couple of UK hits in the late 1990s, including Blinded By The Sun and Love Me And Leave Me. They featured a member who had previously been successful with UK hits in a different band including Love Spreads and Ten Story Love Song. Who?" + Table4ColumnStart + "John Squire</td><td>Bernard Butler</td><td>Guy Chambers</td><td>Kate Bush" + Table4ColumnEnd,
 	answer : "John Squire", image : "https://i.guim.co.uk/img/media/4dc62d88326d6d8f1838c6aedb453e28485cd9d1/0_0_2000_1200/master/2000.jpg?width=620&quality=85&auto=format&fit=max&s=3b7c11a0c993b84614fad80d41fea5bc"	});
+
+quests[++questIndexBuilder] = { //
+		name : "Pub singer 4",
+		hoverover : "Sit back, close your eyes, you could be at a live venue right now.  ",
+		tags : "2021-8-14,saturday,InnerWheel,surfers,audio",
+		splash : {splashType : splashTypeText , splashText : "Tonight we have a guest singer!!"  },
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What are Phil and Shirley singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/islands.ogg' + endAudio ,
+	answer : ''	, answerSpeak : ""});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What is Phil singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/gloryDays.ogg' + endAudio ,
+	answer : ''	, answerSpeak : ""});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What is Phil singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/knowingMe.ogg' + endAudio ,
+	answer : ''	, answerSpeak : ""});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What are Phil and Lu singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/totalEclipse.ogg' + endAudio ,
+	answer : ''	, answerSpeak : ""});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What is Phil singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/bridge.ogg' + endAudio ,
+	answer : ''	, answerSpeak : ""});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/.mp3' + endAudio ,
+	answer : ''	, answerSpeak : ""});
+
+
+
+
+quests[++questIndexBuilder] = { //
+		name : "Holiday",
+		hoverover : "Songs which have a holiday theme",
+		tags : "music,2021-8-14,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/34xgBRPqTo7sBUnSw05VqT" width="501" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+	answer : ""}) ;
 
 /*
 quests[++questIndexBuilder] = { //
