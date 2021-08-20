@@ -2464,7 +2464,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 	question : "What is celebrated on 1st March in Wales?", // + Table4ColumnStart + "</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd,
 	answer : "St David's Day"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
-	question : "Who was given teh surname Waterman?", // + Table4ColumnStart + "</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd,
+	question : "Who was given the surname Waterman?", // + Table4ColumnStart + "</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd,
 	answer : "St David"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : "What did St David insist that his monks do for themselves, rather than use farm animals?   Pull the...", // + Table4ColumnStart + "</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd,
