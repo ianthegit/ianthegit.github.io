@@ -2450,6 +2450,72 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	question : "Which British sitcom featured these actors as regular characters in supporting roles: Connie Booth, Ballard Berkeley and Andrew Sachs?" + Table4ColumnStart + "'Allo 'Allo!</td><td>Fawlty Towers</td><td>Hi-de-Hi!</td><td>One Foot in the Grave" + Table4ColumnEnd,
 	answer : "Fawlty Towers", image : "https://i.guim.co.uk/img/media/3842e4791d5a317de2aafdc5351f9ad9e49ae620/0_432_3236_1942/master/3236.jpg?width=620&quality=85&auto=format&fit=max&s=2d411038abd85985a64e94ae235f2ac0"	});
 
+quests[++questIndexBuilder] = { //
+		name : "Wales 1",
+		hoverover : "Some specific questions",
+		tags : "2021-8-21,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Who is Dewi Sant?", // + Table4ColumnStart + "</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd,
+	answer : "St David"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "What is celebrated on 1st March in Wales?", // + Table4ColumnStart + "</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd,
+	answer : "St David's Day"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Who was given teh surname Waterman?", // + Table4ColumnStart + "</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd,
+	answer : "St David"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "What did St David insist that his monks do for themselves, rather than use farm animals?   Pull the...", // + Table4ColumnStart + "</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd,
+	answer : "Plough"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Which bird is often depicted as sitting on St David's shoulder?", // + Table4ColumnStart + "</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd,
+	answer : "A dove"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "What did St David allegedly do when people at the back of the crowd he was preaching to complained that they couldn't see or hear him?", // + Table4ColumnStart + "</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd,
+	answer : "Levitate"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Which group of people is St David said to be the patron saint of?", // + Table4ColumnStart + "</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd,
+	answer : "Poets and Vegetarians - pretty niche..."	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Where is St David's shrine?", // + Table4ColumnStart + "</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd,
+	answer : "St David's Cathedral, Pembrokeshire"	});
+
+
+
+quests[++questIndexBuilder] = { //
+		name : "Wales 2",
+		hoverover : "Some less specific questions",
+		tags : "2021-8-21,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What is the capital city of Wales?  " ,//+ Table4ColumnStart + "?</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd,
+	answer : "Cardiff", image : "https://www.visitwales.com/sites/visit/files/styles/o_articleimage_small__4_3_xl_min_1x/public/media-library/2020-05/DJI_0055_Edit.jpg?h=439fb1d9&itok=JO9mulqX"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "How many national park are there in Wales?  "  + Table4ColumnStart + "4</td><td>3</td><td>2</td><td>1" + Table4ColumnEnd,
+	answer : "There are 3 - Snowdonia National Park, Brecon Beacons National Park and Pembrokeshire National Park", answerSpeak : "There are 3", image : "https://www.visitwales.com/sites/visit/files/styles/o_articleimage_small__4_3_xl_min_1x/public/media-library/2019-01/CW-C145-1819-0001-small.jpg?h=53ec2083&itok=2WJ9W_i5"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "How many Great Little Trains of Wales are there?  "  + Table4ColumnStart + "7</td><td>9</td><td>11</td><td>13" + Table4ColumnEnd,
+	answer : "11 - not including Ivor", answerSpeak : "11", image : "https://www.visitwales.com/sites/visit/files/styles/o_articleimage_small__4_3_xl_min_1x/public/media-library/2019-09/NVW-C15-1920-0001.jpg?h=1c9b88c9&itok=0f1bZLxg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "In which year was The Ryder Cup first staged in Wales?  "  + Table4ColumnStart + "2008</td><td>2010</td><td>2012</td><td>It has never been played in Wales as all links are owned by the Crown so golf courses are English" + Table4ColumnEnd,
+	answer : "2010", answerSpeak : "2010", image : "https://www.visitwales.com/sites/visit/files/styles/o_articleimage_small__4_3_xl_min_1x/public/media-library/2019-10/SVW-C35%201920-0041.jpg?h=99f90351&itok=hNonh15r"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What is the name of the highest mountain in Wales?  " ,// + Table4ColumnStart + "?</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd,
+	answer : "Mount Snowden", image : "https://www.visitwales.com/sites/visit/files/styles/o_articleimage_small__4_3_xl_min_1x/public/media-library/2020-05/NVW-C155-1819-0050-small%20%281%29.jpg?h=e5aec6c8&itok=F15SbmzG"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "How many castles are there in Wales?  "  + Table4ColumnStart + "541</td><td>641</td><td>741</td><td>None - all castles are owned by the Crown so are considered to be in England" + Table4ColumnEnd,
+	answer : "641", image : "https://www.visitwales.com/sites/visit/files/styles/o_articleimage_small__4_3_xl_min_1x/public/media-library/2020-05/NCX-VH08-1718-0079.jpg?h=e5aec6c8&itok=Jz-XOLRv"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "How long is the Wales Coast Path in miles?  "  + Table4ColumnStart + "770</td><td>870</td><td>970</td><td>0 as the land beween low and high tide is the property of the Crown, so the path is considered to be in England" + Table4ColumnEnd,
+	answer : "870", image : "https://www.visitwales.com/sites/visit/files/styles/o_articleimage_small__4_3_xl_min_1x/public/media-library/2018-12/NVW-C97-1819-0026.jpg?h=1813e112&itok=0ijc6wpw"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is the Patron Saint of Wales and on which date are they celebrated?  " ,// + Table4ColumnStart + "?</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd,
+	answer : "St David Waterman, 1st March", image : "https://www.visitwales.com/sites/visit/files/styles/o_articleimage_small__4_3_xl_min_1x/public/media-library/2018-12/SVW-C28-1718-0006-small.jpg?h=8a0aa05d&itok=xmh8BJeH"	});	
+
 
 /*
 quests[++questIndexBuilder] = { //
