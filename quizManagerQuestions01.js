@@ -2410,7 +2410,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 quests[++questIndexBuilder] = { //
 		name : "Turtally Brilliant",
 		hoverover : "Some turtles",
-		tags : "2021-8-21,saturday,InnerWheel,surfers",
+		tags : "2021-9-4,saturday,InnerWheel,surfers",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
@@ -2453,7 +2453,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 quests[++questIndexBuilder] = { //
 		name : "Wales 1",
 		hoverover : "Some specific questions",
-		tags : "2021-8-21,saturday,InnerWheel,surfers",
+		tags : "2021-9-4,saturday,InnerWheel,surfers",
 		questInfo: new Array()
 	};
 
@@ -2487,7 +2487,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 quests[++questIndexBuilder] = { //
 		name : "Wales 2",
 		hoverover : "Some less specific questions",
-		tags : "2021-8-21,saturday,InnerWheel,surfers",
+		tags : "2021-9-4,saturday,InnerWheel,surfers",
 		questInfo: new Array()
 	};
 
@@ -2515,6 +2515,43 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Who is the Patron Saint of Wales and on which date are they celebrated?  " ,// + Table4ColumnStart + "?</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd,
 	answer : "St David Waterman, 1st March", image : "https://www.visitwales.com/sites/visit/files/styles/o_articleimage_small__4_3_xl_min_1x/public/media-library/2018-12/SVW-C28-1718-0006-small.jpg?h=8a0aa05d&itok=xmh8BJeH"	});	
+
+quests[++questIndexBuilder] = { //
+		name : "Cruising",
+		hoverover : "Tom and his curry",
+		tags : "2021-9-4,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "This bridge was meant to reopen in the middle of August 2021 after refurbishment, but got stuck fast and positively refused to swing. In which British city?" + Table4ColumnStart + "Glasgow</td><td>Belfast</td><td>Newcastle</td><td>Cardif" + Table4ColumnEnd,
+	answer : "Newcastle", image : "https://i.guim.co.uk/img/media/7017c9afe240a893d90c175e89d553dc82e2bed9/0_91_5102_3060/master/5102.jpg?width=620&quality=85&auto=format&fit=max&s=57389415ccf5a566f222c4b7a86e7811"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Kathleen Jamie is Scotland’s national poet. What is the role called?" + Table4ColumnStart + "Mauner</td><td>Makar</td><td>Mara</td><td>Mostly boring" + Table4ColumnEnd,
+	answer : "Makar", image : "https://i.guim.co.uk/img/media/d7ff458a606126d1794d51fe50b3269db2430de9/0_351_8192_4918/master/8192.jpg?width=620&quality=85&auto=format&fit=max&s=16aaa52e260a323a6af163810b8e1136"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which of these common substances has the highest pH value?" + Table4ColumnStart + "Lemon Juice</td><td>Beer</td><td>Milk</td><td>Toothpaste" + Table4ColumnEnd,
+	answer : "Toothpaste - about 9.   Lemon - 2, Beer - 4 and Milk - 6", image : "https://i.guim.co.uk/img/media/9a0385909a51dcb6518b41ab5f2bd47f8a0ff99e/0_157_3616_2170/master/3616.jpg?width=620&quality=85&auto=format&fit=max&s=52c75c4a20d18b1eab4738a73a94ec97"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Whose 2004 album Love Angel Music Baby was a Top 5 hit in both the US and the UK?" + Table4ColumnStart + "Katie Melua</td><td>Scissor Sisters</td><td>Gwen Stefani</td><td>Kate Bush" + Table4ColumnEnd,
+	answer : "Gwen Stefani", image : "https://i.guim.co.uk/img/media/aa1da6f3721e72932f50e43b22b7a1a69498fd36/0_0_2000_1200/master/2000.jpg?width=620&quality=85&auto=format&fit=max&s=ad3d6626249a1a7bfe24977b41f019fb"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which US sitcom featured these actors in regularly recurring supporting roles? Peri Gilpin, John Mahoney and Moose?" + Table4ColumnStart + "Frasier</td><td>Seinfield</td><td>Cheers</td><td>Golden Girls" + Table4ColumnEnd,
+	answer : "Frasier", image : "https://i.guim.co.uk/img/media/3842e4791d5a317de2aafdc5351f9ad9e49ae620/0_432_3236_1942/master/3236.jpg?width=620&quality=85&auto=format&fit=max&s=2d411038abd85985a64e94ae235f2ac0"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "The captain of the Nautilus in Jules Verne’s 1870 novel Twenty Thousand Leagues Under the Sea was - Captain...?" + Table4ColumnStart + "Nero</td><td>Nemo</td><td>Dory</td><td>Haddock" + Table4ColumnEnd,
+	answer : "Captain Nemo"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Tom Cruise went to Birmingham in the UK, and according to restaurant Asha's, he enjoyed eating his curry so much that he immediately ordered another one exactly the same. Which dish though?" + Table4ColumnStart + "Lamb bhuna</td><td>Vegan jackfruit massaman</td><td>Chicken tikka masala</td><td>Paneer jalfrezi" + Table4ColumnEnd,
+	answer : "Chicken tikka masala", image : "https://i.guim.co.uk/img/media/ab1881e018621d916d471b64e36bd3de79b66daa/769_151_2596_1558/master/2596.jpg?width=620&quality=85&auto=format&fit=max&s=ebb96ed93cfc65d1c4d1bde82d4c3aeb"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "From September Belgium is introducing a legal right to go and retrieve a lost ball or lost pet from a neighbour’s garden - True or False?" ,
+	answer : "It’s true – provided it ended up there by accident", image : "https://i.guim.co.uk/img/media/e0c05c83c7c61a5dac44ef31e697ce6a14131036/0_352_5315_3191/master/5315.jpg?width=620&quality=85&auto=format&fit=max&s=15a7efad2b8b5c0c254e60b17aa1edd1"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Which synth-pop duo had hits in the UK including Numbers, Torch and Bedsitter?" + Table4ColumnStart + "Soft Cell</td><td>Eurythmics</td><td>Pet Shop Boys</td><td>Erasure" + Table4ColumnEnd,
+	answer : "Soft Cell"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "An academic study recently found that what had happened to swearing in Britain between 1994 and 2014?" + Table4ColumnStart + "It had increased by 10%</td><td>It had stayed roughly the same</td><td>It had decreased by 27%</td><td>It'd gone fucking nuts" + Table4ColumnEnd,
+	answer : "It had decreased by 27%"	});
 
 
 /*
