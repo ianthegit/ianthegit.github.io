@@ -2526,7 +2526,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	question : "This bridge was meant to reopen in the middle of August 2021 after refurbishment, but got stuck fast and positively refused to swing. In which British city?" + Table4ColumnStart + "Glasgow</td><td>Belfast</td><td>Newcastle</td><td>Cardiff" + Table4ColumnEnd,
 	answer : "Newcastle", image : "https://i.guim.co.uk/img/media/7017c9afe240a893d90c175e89d553dc82e2bed9/0_91_5102_3060/master/5102.jpg?width=620&quality=85&auto=format&fit=max&s=57389415ccf5a566f222c4b7a86e7811"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Kathleen Jamie is Scotland’s national poet. What is the role called?" + Table4ColumnStart + "Mauner</td><td>Makar</td><td>Mara</td><td>Mostly boring" + Table4ColumnEnd,
+	question : "Kathleen Jamie is Scotland’s national poet. What is the role called?" + Table4ColumnStart + "Mauner</td><td>Makar</td><td>Mara</td><td>Protagonist" + Table4ColumnEnd,
 	answer : "Makar", image : "https://i.guim.co.uk/img/media/d7ff458a606126d1794d51fe50b3269db2430de9/0_351_8192_4918/master/8192.jpg?width=620&quality=85&auto=format&fit=max&s=16aaa52e260a323a6af163810b8e1136"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Which of these common substances has the highest pH value?" + Table4ColumnStart + "Lemon Juice</td><td>Beer</td><td>Milk</td><td>Toothpaste" + Table4ColumnEnd,
