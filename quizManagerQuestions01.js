@@ -2538,13 +2538,13 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	question : "Which US sitcom featured these actors in regularly recurring supporting roles? Peri Gilpin, John Mahoney and Moose?" + Table4ColumnStart + "Frasier</td><td>Seinfield</td><td>Cheers</td><td>Golden Girls" + Table4ColumnEnd,
 	answer : "Frasier", image : "https://i.guim.co.uk/img/media/3842e4791d5a317de2aafdc5351f9ad9e49ae620/0_432_3236_1942/master/3236.jpg?width=620&quality=85&auto=format&fit=max&s=2d411038abd85985a64e94ae235f2ac0"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
-	question : "The captain of the Nautilus in Jules Verne’s 1870 novel Twenty Thousand Leagues Under the Sea was - Captain...?" + Table4ColumnStart + "Nero</td><td>Nemo</td><td>Dory</td><td>Haddock" + Table4ColumnEnd,
+	question : "The captain of the Nautilus in Jules Verne's 1870 novel Twenty Thousand Leagues Under the Sea was - Captain...?" + Table4ColumnStart + "Nero</td><td>Nemo</td><td>Dory</td><td>Haddock" + Table4ColumnEnd,
 	answer : "Captain Nemo"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Tom Cruise went to Birmingham in the UK, and according to restaurant Asha's, he enjoyed eating his curry so much that he immediately ordered another one exactly the same. Which dish though?" + Table4ColumnStart + "Lamb bhuna</td><td>Vegan jackfruit massaman</td><td>Chicken tikka masala</td><td>Paneer jalfrezi" + Table4ColumnEnd,
 	answer : "Chicken tikka masala", image : "https://i.guim.co.uk/img/media/ab1881e018621d916d471b64e36bd3de79b66daa/769_151_2596_1558/master/2596.jpg?width=620&quality=85&auto=format&fit=max&s=ebb96ed93cfc65d1c4d1bde82d4c3aeb"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "From September Belgium is introducing a legal right to go and retrieve a lost ball or lost pet from a neighbour’s garden - True or False?" ,
+	question : "From September Belgium is introducing a legal right to go and retrieve a lost ball or lost pet from a neighbour's garden - True or False?" ,
 	answer : "It’s true – provided it ended up there by accident", image : "https://i.guim.co.uk/img/media/e0c05c83c7c61a5dac44ef31e697ce6a14131036/0_352_5315_3191/master/5315.jpg?width=620&quality=85&auto=format&fit=max&s=15a7efad2b8b5c0c254e60b17aa1edd1"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : "Which synth-pop duo had hits in the UK including Numbers, Torch and Bedsitter?" + Table4ColumnStart + "Soft Cell</td><td>Eurythmics</td><td>Pet Shop Boys</td><td>Erasure" + Table4ColumnEnd,
