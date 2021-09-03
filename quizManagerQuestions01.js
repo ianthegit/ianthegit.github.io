@@ -2594,6 +2594,54 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLVCyk2Ark9BTiAX-K2Z--3PSjtnWWG7WUQQ2e5j8MG4QNjAXtnFg1U18NnBGNwE9bCIeA1RLwO6pIyN78BIGbknvfOfWbb_Tcv-n-rE3QXAUbHUjfBk1rkCwXUnIUzuWGSgwMbXtY3OhHji5RX7ax1M-A=w700-h550-no?authuser=0"}) ;
 
 
+quests[++questIndexBuilder] = { //
+		name : "Hidden Time Traveller",
+		hoverover : "Spot the hidden Dr Who reference for an extra point",
+		tags : "2021-9-4,saturday,InnerWheel,surfers",
+		splash : {splashType : splashTypePictureAndText , splashText : "Shout out the hidden Dr Who reference and win a point", splashImage : "https://metro.co.uk/wp-content/uploads/2020/02/doctor-who-elisabeth-sladen-sarah-jane-smith_1582209527.png?w=1200&h=630&crop=1" },
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Claimed to be the tallest three-sided obelisk in the world, which feels like a niche category if ever there was one, " + gbp +" 3.1m has been spent on restoring this monument on a hill in Somerset. Who is it for?" + Table4ColumnStart + "Benjamin Disraeli</td><td>The Duke of York</td><td>The Duke of Wellington</td><td>The Duke of Earle" + Table4ColumnEnd,
+	answer : "The Duke of Wellington", image : "https://i.guim.co.uk/img/media/8e4f3e125c024c9066d4789d70538dac32853175/650_588_2350_1411/master/2350.jpg?width=620&quality=85&auto=format&fit=max&s=8fca04338731aec478d6affb032707ee"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "In the 1860s Brussels covered up most of the river that runs through it, because it was a right old stinky mess - much like the vegetable the city is named after. After the removal of 1,966 tonnes of concrete, a 200-metre stretch is being exposed again. But which river is it that runs through Brussels?" + Table4ColumnStart + "Meuse</td><td>Scheldt</td><td>Senne</td><td>Semois" + Table4ColumnEnd,
+	answer : "Senne", image : "https://i.guim.co.uk/img/media/c8726391b2b9d4d69ebb9b3ee07832687029fafd/0_133_2953_1773/master/2953.jpg?width=620&quality=85&auto=format&fit=max&s=1127c3da4e401f845490cbbfac5aa396"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Previously I asked you about Tom Cruise's curry escapades in Birmingham. What happened to him afte his curry gorging in Birmingham that made the news next?" + Table4ColumnStart + "His car was stolen</td><td>His car was impounded for illegal parking</td><td>Someone crashed into his car</td><td>Kate Bush was seen in his car" + Table4ColumnEnd,
+	answer : "His car was stolen", image : "https://i.guim.co.uk/img/media/ab1881e018621d916d471b64e36bd3de79b66daa/769_151_2596_1558/master/2596.jpg?width=620&quality=85&auto=format&fit=max&s=ebb96ed93cfc65d1c4d1bde82d4c3aeb"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Scientists claim to have discovered something near the North Pole which they have recommended be named Qeqertaq Avannarleq in the local language. What?" + Table4ColumnStart + "A new breed of Arctic penguin</td><td>A makeshift memorial to Captain Lawrence Oates</td><td>The remains of a wrecked Viking expedition</td><td>An island that is the world's northernmost point of land" + Table4ColumnEnd,
+	answer : "An island that is the world's northernmost point of land", image : "https://i.guim.co.uk/img/media/f85054b79b29cb3135e9bcc7a36d7507e81445f6/1015_147_2525_1516/master/2525.jpg?width=620&quality=85&auto=format&fit=max&s=d67e6fda944bb103a7167dbc7a72d4c5"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Another northern thing, who released the 1995 album A Northern Soul?" + Table4ColumnStart + "The Verve</td><td>Nick Heyward</td><td>M-People</td><td>Kate Bush" + Table4ColumnEnd,
+	answer : "The Verve", image : "https://i.guim.co.uk/img/media/02f972a89a11dbc09a25ff5c81c429a9685f7a86/0_0_2000_1200/master/2000.jpg?width=620&quality=85&auto=format&fit=max&s=76a5be66471be1d15f9033335ff79f2b"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "This is Puliksenija Jovanoska, who was part of the North Macedonia team competing at the Tokyo 2020 Olympics and Paralympics for the first time under its newly agreed international name. But what is the capital of North Macedonia?" + Table4ColumnStart + "Baku</td><td>Shtip</td><td>Yerevan</td><td>Skopje" + Table4ColumnEnd,
+	answer : "Skopje", image : "https://i.guim.co.uk/img/media/23277efdcf0fd8117ace27c1cab0b3359ad62fbf/71_0_2126_1276/master/2126.jpg?width=620&quality=85&auto=format&fit=max&s=b20a72c1a092651db9b43a4b6f402624"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "On 2 September 1859 the largest geomagnetic storm on record took place. A solar coronal mass ejection hit Earth's magnetosphere and caused the 'Northern' lights to appear nearly all over the globe and seriously damaged telegraph systems. Officially designated SOL1859-09-01, what is it generally called by physicists, the only people who care about this crap?" + Table4ColumnStart + "The Carstairs Event</td><td>The Carrington Event</td><td>The Cromwell Event</td><td>The Constantinople Event" + Table4ColumnEnd,
+	answer : "The Carrington Event", image : "https://i.guim.co.uk/img/media/5d1b909970e1662258f44411bfd11a25c4bbad6a/0_1446_4096_2458/master/4096.jpg?width=620&quality=85&auto=format&fit=max&s=cac2ab81e721163773f3a9ab740bcf81"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "The Scottish whisky industry is naturally very protective of its produce. For a drink to count as a Scotch, it has to be distilled in Scotland and aged for a minimum of how many years in an oak barrel?" + Table4ColumnStart + "4</td><td>3</td><td>2</td><td>1" + Table4ColumnEnd,
+	answer : "3", image : "https://i.guim.co.uk/img/media/44a94c89c75438ac52087ff132fb47f90551fa22/0_134_3500_2099/master/3500.jpg?width=620&quality=85&auto=format&fit=max&s=c709de3cbf6a7d2b48b5017c8aad7311"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which British sitcom features these actors as regular supporting characters? Kirsten Cooke, Arthur Bostrom and Guy Siner?" + Table4ColumnStart + "'Allo 'Allo</td><td>Brush Strokes</td><td>Hi-De-Hi</td><td>Keeping up Appearances" + Table4ColumnEnd,
+	answer : "'Allo 'Allo", image : "https://i.guim.co.uk/img/media/3842e4791d5a317de2aafdc5351f9ad9e49ae620/0_432_3236_1942/master/3236.jpg?width=620&quality=85&auto=format&fit=max&s=2d411038abd85985a64e94ae235f2ac0"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which central American country is preparing to start accepting Bitcoin as legal tender from 7 September?" + Table4ColumnStart + "Honduras</td><td>El Salvador</td><td>Belize</td><td>Nicaragua" + Table4ColumnEnd,
+	answer : "El Salvador (with Cuba a week later)", image : "https://i.guim.co.uk/img/media/cb447dc3cf01ce844eabe91ede8b4228ced4bb9e/3_0_1938_1163/master/1938.jpg?width=620&quality=85&auto=format&fit=max&s=22c7c3371446237ee11d1db3f2dbbfec"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Not every Pokemon is as cute as Pikachu. Which Pokemon has this worrying official description: 'People who approach this Pokemon are swallowed and turned into mummies. It loves to eat gold.'?" + Table4ColumnStart + "Cofagrigus</td><td>Yamask</td><td>Absol</td><td>Munna" + Table4ColumnEnd,
+	answer : "Cofagrigus", image : "https://i.guim.co.uk/img/media/049485d9d80d90edb0968f251959c1af0b43d451/0_309_5695_3417/master/5695.jpg?width=620&quality=85&auto=format&fit=max&s=61ab841d0a977ee40b8eccf578b51e40"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Kraftwerk famously sang that it's in the air for you and me, but when we are talking about radioactivity, what fraction of a radioisotope has decayed after two half-lives?" + Table4ColumnStart + "All of it</td><td>3/4</td><td>1/2</td><td>1/4" + Table4ColumnEnd,
+	answer : "3/4", image : "https://i.guim.co.uk/img/media/9a0385909a51dcb6518b41ab5f2bd47f8a0ff99e/0_157_3616_2170/master/3616.jpg?width=620&quality=85&auto=format&fit=max&s=52c75c4a20d18b1eab4738a73a94ec97"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Authors including Val McDermid, Naomi Alderman, Lucy Foley, Jean Kwok and Dreda Say Mitchell have contributed stories to a new short story collection which will continue the adventures of which beloved fictional character?" + Table4ColumnStart + "Nancy Drew</td><td>Pippi Longstocking</td><td>Jane Marple</td><td>Sarah Jane Smith" + Table4ColumnEnd,
+	answer : "Jane Marple - and a bonus if someone shouted 'Dr Who reference' for Sarah Jane Smith"	});
+
+
 /*
 quests[++questIndexBuilder] = { //
 		name : "Test Alt speak",
