@@ -2608,7 +2608,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	question : "In the 1860s Brussels covered up most of the river that runs through it, because it was a right old stinky mess - much like the vegetable the city is named after. After the removal of 1,966 tonnes of concrete, a 200-metre stretch is being exposed again. But which river is it that runs through Brussels?" + Table4ColumnStart + "Meuse</td><td>Scheldt</td><td>Senne</td><td>Semois" + Table4ColumnEnd,
 	answer : "Senne", image : "https://i.guim.co.uk/img/media/c8726391b2b9d4d69ebb9b3ee07832687029fafd/0_133_2953_1773/master/2953.jpg?width=620&quality=85&auto=format&fit=max&s=1127c3da4e401f845490cbbfac5aa396"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Previously I asked you about Tom Cruise's curry escapades in Birmingham. What happened to him afte his curry gorging in Birmingham that made the news next?" + Table4ColumnStart + "His car was stolen</td><td>His car was impounded for illegal parking</td><td>Someone crashed into his car</td><td>Kate Bush was seen in his car" + Table4ColumnEnd,
+	question : "Previously I asked you about Tom Cruise's curry escapades in Birmingham. What happened to him after his curry gorging in Birmingham that made the news next?" + Table4ColumnStart + "His car was stolen</td><td>His car was impounded for illegal parking</td><td>Someone crashed into his car</td><td>Kate Bush was seen in his car" + Table4ColumnEnd,
 	answer : "His car was stolen", image : "https://i.guim.co.uk/img/media/ab1881e018621d916d471b64e36bd3de79b66daa/769_151_2596_1558/master/2596.jpg?width=620&quality=85&auto=format&fit=max&s=ebb96ed93cfc65d1c4d1bde82d4c3aeb"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Scientists claim to have discovered something near the North Pole which they have recommended be named Qeqertaq Avannarleq in the local language. What?" + Table4ColumnStart + "A new breed of Arctic penguin</td><td>A makeshift memorial to Captain Lawrence Oates</td><td>The remains of a wrecked Viking expedition</td><td>An island that is the world's northernmost point of land" + Table4ColumnEnd,
@@ -2640,6 +2640,19 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : "Authors including Val McDermid, Naomi Alderman, Lucy Foley, Jean Kwok and Dreda Say Mitchell have contributed stories to a new short story collection which will continue the adventures of which beloved fictional character?" + Table4ColumnStart + "Nancy Drew</td><td>Pippi Longstocking</td><td>Jane Marple</td><td>Sarah Jane Smith" + Table4ColumnEnd,
 	answer : "Jane Marple - and a bonus if someone shouted 'Dr Who reference' for Sarah Jane Smith"	});
+
+
+quests[++questIndexBuilder] = { //
+		name : "They can all sing",
+		hoverover : "Welsh folk",
+		tags : "music,2021-9-4,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/09M748OpTxzefX96KlPMk2" width="501" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+	answer : ""}) ;
 
 
 /*
