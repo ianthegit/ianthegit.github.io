@@ -2717,7 +2717,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	answer : "The rate of his sexual activity, Brad Pitt", image : "https://img.playbuzz.com/image/upload/ar_1.5,c_crop/q_auto:good,f_auto,fl_lossy,w_640,c_limit,dpr_1/v1534256714/gnvchvhh2acj8jowhwaf.png"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Ancient Egyptians often wore false beards as a sign of leadership. This included designing false beards for men, women - and what other creature?" + Table4ColumnStart + "Cows</td><td>Horses</td><td>Crocodiles</td><td>Cats" + Table4ColumnEnd,
-	answer : "Cows, tom Selleck", image : "https://img.playbuzz.com/image/upload/ar_1.5,c_crop/q_auto:good,f_auto,fl_lossy,w_640,c_limit,dpr_1/v1534256758/eytp2bhstibnhh0u2cog.png"	});
+	answer : "Cows, Tom Selleck", image : "https://img.playbuzz.com/image/upload/ar_1.5,c_crop/q_auto:good,f_auto,fl_lossy,w_640,c_limit,dpr_1/v1534256758/eytp2bhstibnhh0u2cog.png"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Ancient Persians and Mesopotamians placed great value on beards. Not only did they spend a great deal of time oiling, plaiting or decorating them, what other style did they incorporate into them?" + Table4ColumnStart + "Perms</td><td>Crew Cuts</td><td>Ringlets</td><td>Afros" + Table4ColumnEnd,
 	answer : "Ringlets, Christian Bale", image : "https://img.playbuzz.com/image/upload/ar_1.5,c_crop/q_auto:good,f_auto,fl_lossy,w_640,c_limit,dpr_1/v1534256870/dbok3wvaeysy2coqotyy.png"	});
