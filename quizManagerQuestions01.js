@@ -2703,6 +2703,45 @@ addQuest(quests[questIndexBuilder],{type : quizQuestionTypePictureAnswer,	questi
 	answerSpeak : "Star Wars", answerimage : "https://1.bp.blogspot.com/-7Ua0cHG0XBs/XbDNsHp0ZRI/AAAAAAABIGk/xrXnoAtj5qYsbaGZvkzg_7Natqo-YtoEwCEwYBhgL/s1600/Luke%252C%2BI%2Bam%2Byour%2Bfather%2Bquote%2BTDIQ.jpg"} ); 
 
 quests[++questIndexBuilder] = { //
+		name : "World Beard Day",
+		hoverover : "What do you know about your favourite facial fur?",
+		tags : "2021-9-4,saturday,InnerWheel,surfers,specialDay",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What is the study of beards known as?" + Table4ColumnStart + "Pogonology</td><td>Hirsutology</td><td>Commendable</td><td>Stalking" + Table4ColumnEnd,
+	answer : "Pogonology, Idris Elba", image : "https://img.playbuzz.com/image/upload/ar_1.5,c_crop/q_auto:good,f_auto,fl_lossy,w_640,c_limit,dpr_1/v1534258704/iy70ijgybelu7olhrjfo.png"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "The rate at which a beard grows is genetic, but it is also linked to what other division of the human male physiology?" + Table4ColumnStart + "The rate of his heartbeat</td><td>The length of his nose</td><td>The size of his wisdom teeth</td><td>The rate of his sexual activity" + Table4ColumnEnd,
+	answer : "The rate of his sexual activity, Brad Pitt", image : "https://img.playbuzz.com/image/upload/ar_1.5,c_crop/q_auto:good,f_auto,fl_lossy,w_640,c_limit,dpr_1/v1534256714/gnvchvhh2acj8jowhwaf.png"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Ancient Egyptians often wore false beards as a sign of leadership. This included designing false beards for men, women - and what other creature?" + Table4ColumnStart + "Cows</td><td>Horses</td><td>Crocodiles</td><td>Cats" + Table4ColumnEnd,
+	answer : "Cows, tom Selleck", image : "https://img.playbuzz.com/image/upload/ar_1.5,c_crop/q_auto:good,f_auto,fl_lossy,w_640,c_limit,dpr_1/v1534256758/eytp2bhstibnhh0u2cog.png"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Ancient Persians and Mesopotamians placed great value on beards. Not only did they spend a great deal of time oiling, plaiting or decorating them, what other style did they incorporate into them?" + Table4ColumnStart + "Perms</td><td>Crew Cuts</td><td>Ringlets</td><td>Afros" + Table4ColumnEnd,
+	answer : "Ringlets, Christian Bale", image : "https://img.playbuzz.com/image/upload/ar_1.5,c_crop/q_auto:good,f_auto,fl_lossy,w_640,c_limit,dpr_1/v1534256870/dbok3wvaeysy2coqotyy.png"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Such was the veneration in which beards were held, that many men breaking the law had their beards cut off as punishment. For which sin in particular was this the case?" + Table4ColumnStart + "Theft</td><td>Adultery</td><td>Sacrilege</td><td>Laziness" + Table4ColumnEnd,
+	answer : "Adultery, Jamie Foxx", image : "https://img.playbuzz.com/image/upload/ar_1.5,c_crop/q_auto:good,f_auto,fl_lossy,w_640,c_limit,dpr_1/v1534258440/g3bnjkb6tbxoergnl5lt.png"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "In ancient Greece, only portions of beards were removed as punishment. What was the only socially acceptable reason that a beard could be fully removed?" + Table4ColumnStart + "If one was an Olympic champion</td><td>On the first day of marriage</td><td>If one became a eunuch</td><td>As a sign of mourning" + Table4ColumnEnd,
+	answer : "As a sign of mourning, George Clooney", image : "https://img.playbuzz.com/image/upload/ar_1.5,c_crop/q_auto:good,f_auto,fl_lossy,w_640,c_limit,dpr_1/v1534257005/kegzmcpbsaqbxaxzod8w.png"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "During Alexander the Great's time, he introduced smooth shaven faces and insisted his own and that of his army be kept in this condition. Why was this?" + Table4ColumnStart + "For neatness of appearance</td><td>So they didn't get caught in their swords</td><td>It was easier to eat a hasty meal without a beard</td><td>To prevent enemies grabbing it in battle" + Table4ColumnEnd,
+	answer : "To prevent enemies grabbing it in battle, Paul Rudd", image : "https://img.playbuzz.com/image/upload/ar_1.5,c_crop/q_auto:good,f_auto,fl_lossy,w_640,c_limit,dpr_1/v1534257090/uyzbqlqgvdxj4t63hvlk.png"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "In Roman days, shaving, rather than beards, was the fashion. What did shaving represent?" + Table4ColumnStart + "Enlistment into the army</td><td>Transition from boyhood to manhood</td><td>The first time one cast a vote</td><td>To mark a contract of marriage" + Table4ColumnEnd,
+	answer : "Transition from boyhood to manhood, Tom Hardy", image : "https://img.playbuzz.com/image/upload/ar_1.5,c_crop/q_auto:good,f_auto,fl_lossy,w_640,c_limit,dpr_1/v1534257359/kbdjo6qkh3nzk6ynzfrj.png"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Many of the Celtic and Germanic tribal men disliked beards, and, like the Beatles at their worst, preferred long moustaches and long hair instead. A young man was not allowed to shave until he had achieved what deed?" + Table4ColumnStart + "Kissed his first woman</td><td>Eaten the liver of a horse</td><td>Married</td><td>Killed his first enemy" + Table4ColumnEnd,
+	answer : "Killed his first enemy, Eddie Murphy", image : "https://img.playbuzz.com/image/upload/ar_1.5,c_crop/q_auto:good,f_auto,fl_lossy,w_640,c_limit,dpr_1/v1534257756/wvgtmrsbcyqajlnnp6xa.png"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "By the 17th century in Russia, beards were frowned upon by Peter the Great. He ordered all men to shave them off - or face what consequence?" + Table4ColumnStart + "Pay tax on them</td><td>Face execution</td><td>Have one's nose removed</td><td>Lose one's estates" + Table4ColumnEnd,
+	answer : "Pay tax on them, Burt Reynolds", image : "https://img.playbuzz.com/image/upload/ar_1.5,c_crop/q_auto:good,f_auto,fl_lossy,w_640,c_limit,dpr_1/v1534257843/qallpxqlrzyow23aau2b.png"	});
+
+
+
+quests[++questIndexBuilder] = { //
 		name : "They can all sing",
 		hoverover : "Welsh folk",
 		tags : "music,2021-9-4,InnerWheel,saturday",
