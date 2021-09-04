@@ -2740,6 +2740,44 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	question : "By the 17th century in Russia, beards were frowned upon by Peter the Great. He ordered all men to shave them off - or face what consequence?" + Table4ColumnStart + "Pay tax on them</td><td>Face execution</td><td>Have one's nose removed</td><td>Lose one's estates" + Table4ColumnEnd,
 	answer : "Pay tax on them, Burt Reynolds", image : "https://img.playbuzz.com/image/upload/ar_1.5,c_crop/q_auto:good,f_auto,fl_lossy,w_640,c_limit,dpr_1/v1534257843/qallpxqlrzyow23aau2b.png"	});
 
+quests[++questIndexBuilder] = { //
+		name : "Pub singer 5",
+		hoverover : "Sit back, close your eyes, you could be at a live venue right now.  ",
+		tags : "2021-9-4,saturday,InnerWheel,surfers,audio",
+		splash : {splashType : splashTypePictureAndText , splashText : "Tonight we celebrate the return of the 70s pop icons ABBA", splashImage : "https://c.tenor.com/oIBAElorV70AAAAM/abba.gif"  },
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	//
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w5-dancingqueen.mp3' + endAudio ,
+	answer : '<iframe src="https://open.spotify.com/embed/track/2BsqXN1LH76kAqjegAAsTZ" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	//
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w5-dream.mp3' + endAudio ,
+	answer : '<iframe src="https://open.spotify.com/embed/track/7ag8e1oEnmws1UVx0dxw5Y" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	//
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w5-knowingme.mp3' + endAudio ,
+	answer : '<iframe src="https://open.spotify.com/embed/track/5CneYQz33XzOZKBeMOTwFO" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	//
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w5-layallyourlove.mp3' + endAudio ,
+	answer : '<iframe src="https://open.spotify.com/embed/track/2Eti9d7wbABR3WKviUuzV8" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	//
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w5-mammamia.mp3' + endAudio ,
+	answer : '<iframe src="https://open.spotify.com/embed/track/4EcCZJiu87nY1EdGtTs1TC" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	//
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w5-money.mp3' + endAudio ,
+	answer : '<iframe src="https://open.spotify.com/embed/track/72FUO1NFsAUYCMEk7ZL3mL" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	//
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w5-supertrooper.mp3' + endAudio ,
+	answer : '<iframe src="https://open.spotify.com/embed/track/77KOV2BXCOQM2rvC52v4Gd" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	//
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w5-takeachance.mp3' + endAudio ,
+	answer : '<iframe src="https://open.spotify.com/embed/track/5FUbjEhsAV6SnuA33qhiGa" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	//
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w5-winner.mp3' + endAudio ,
+	answer : '<iframe src="https://open.spotify.com/embed/track/0hByIDFmdFv8f6DejefIft" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	//
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w5-sos.mp3' + endAudio ,
+	answer : '<iframe src="https://open.spotify.com/embed/track/1qg0zw8yNgfeClchuFXvWD" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
 
 
 quests[++questIndexBuilder] = { //
