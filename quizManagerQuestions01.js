@@ -2705,6 +2705,7 @@ addQuest(quests[questIndexBuilder],{type : quizQuestionTypePictureAnswer,	questi
 quests[++questIndexBuilder] = { //
 		name : "World Beard Day",
 		hoverover : "What do you know about your favourite facial fur?",
+		splash : {splashType : splashTypePictureAndText , splashText : "Answer the question, and say who owns the pictured facial hair" , splashImage : "https://lh3.googleusercontent.com/G4kneZFJMcXWJadRGLH0CW5n2uxP15DSiXnaVQCG8tZppDCQNchYkm3ngBOjWFuv9C8gHSqhyKscxxF_w7ao2p7Af2REBw2s4BQGAUW3EabpgCR15zDfJumu71P7541ZV32SDCdnGN6m-U1LysR9Oxi1xPt4CNXJukbSQRsIJ_zJVufoOGxA-MGsY3UgTCsEbxNEZJ4AD8_HoV39ItdCvS1f35TAosXWkmq_qeEjURbMRTEux2c9-YfoMCP5zc56jGo7ayovf6KThSPhNyj5mqoWNRx9J6oQHVBMXaVU4V7fjVCh_ZC-D0aIjMDy1bzdpkZlhes_ialaPGgaqAc5gE9gRvYy0Gc6UcBRWbxs6DHt4PcmQu6Cnppr88c6FkcVjyMGHylrWSLYBCuTG7Znm57Zo6rCiZxHI6Y5U17wb535AWR7OIGvgu-DJEQKVgodM-6nNZfxwTNmdlAbzoBDEg2g34oVN83Ym3IH2YrYMKzblnkX3YwVlsPKAbDF7CJnLUGhGsqCMniC64Cz1GVDl6xMDExYYykelGOcNc0FJrE5PQfyn8ITR0t1ZCYdBWDVWJyWDXmiFFWsGB3BZ2hofl3M7XaJ8lU3npWQoH3LjVRYA12nRyfY_5nzedFiNdtVrgUjymu6ZV8YkLvEOAkqZtzWlyzb0jrEEYifp2ozetQziAeOD-dHAhmIjKpS2QoTTdh96y7ecdugeFXlnaj49RpXKw=w644-h871-no?authuser=0" },
 		tags : "2021-9-4,saturday,InnerWheel,surfers,specialDay",
 		questInfo: new Array()
 	};
