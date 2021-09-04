@@ -2656,7 +2656,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Name the 2 films mashed together here" ,	answer : "Pirates of the Caribbean and Titanic", image : "https://lh3.googleusercontent.com/pw/AM-JKLWODwsyx1pB-_6w6uRdLG7RhLGTI1fk28LbALyvMAKP7TkIeVpxBOL5CqzHW3Rd3j7QDVHa1_mkzKLeqQ8mRM9rEOQpdYU03g4wrOmbi58gtK2LyianKn3nFVNfmWsDSgURhJbbrrXR1c0RKQgwwj3oTg=w700-h760-no?authuser=0"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Name the 2 films mashed together here" ,	answer : "Spiderman and Singing i tnhe Rain", image : "https://lh3.googleusercontent.com/pw/AM-JKLXYk4Z5AO8Hmm7doWi54qW2SPFVAWUQrKN7grS_UmOmmZ4gN66PJaLwUsIs3dtqrF9Z47pKJGiOSXb-RNIVxkrbTmOxNPp-AZnv7V75gjt0s-odwryLqsiQBBvFXvfuPCHuQyC5mjEVWJ5TExlNq7UsXQ=s700-no?authuser=0"	});
+	question : "Name the 2 films mashed together here" ,	answer : "Spiderman and Singing in the Rain", image : "https://lh3.googleusercontent.com/pw/AM-JKLXYk4Z5AO8Hmm7doWi54qW2SPFVAWUQrKN7grS_UmOmmZ4gN66PJaLwUsIs3dtqrF9Z47pKJGiOSXb-RNIVxkrbTmOxNPp-AZnv7V75gjt0s-odwryLqsiQBBvFXvfuPCHuQyC5mjEVWJ5TExlNq7UsXQ=s700-no?authuser=0"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Name the 2 films mashed together here" ,	answer : "Indiana Jones and Avengers [Infinity War | Endgame ] ", image : "https://lh3.googleusercontent.com/pw/AM-JKLXYaA_QHNhW5MjOOjvj7b1J6pTodUwxv6Vwe2hify6FRqPdtvyFJ0CxnmYLW44OPXmn3ovnH1uIu5i9wGpZSU8-NWJvLuF4meE8gV19a5i_lsS8dv5GQn8i4QsgYfKQtAa1-aWU-eTaWhME4a8HFRBX4A=w700-h699-no?authuser=0"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
