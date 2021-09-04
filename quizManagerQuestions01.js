@@ -2643,6 +2643,66 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 
 
 quests[++questIndexBuilder] = { //
+		name : "Film Mash",
+		hoverover : "Name the 2 films referenced in each photo",
+		tags : "2021-9-4,saturday,InnerWheel,surfers",
+		splash : {splashType : splashTypePictureAndText , splashText : "Name the 2 films referenced in each photo - there may be some duplicates.  For instance, this is..." , splashImage : "https://lh3.googleusercontent.com/pw/AM-JKLVL9D9w2bYSjclLl2nmBw3W6FDZLcyvFzduLekOaKV3OiCJwjxfpHcZlESGxDUj3eyrS4QAHbei5Os_B6ytgsJ6QAZc6dSmo5fK1EK2PjQkP6GkCeYLdz-I-YHlpyQGaW4ea4HvDFHuvD5oztOkgqkcAA=w697-h871-no?authuser=0"},
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Name the 2 films mashed together here" ,	answer : "Terminator and Dead Pool", image : "https://lh3.googleusercontent.com/pw/AM-JKLUEjAquKSYVfOuphknCZViZvOLI8hUMCnqGmN1-2kHrNISx40aMOwREPvaBSKrx2t-nyvXETid0Wor_FRnWLPdX4tiMYqySfnKcrNw7jdVAGCrWQqC7S5DL-Jc4iEMzQFCtw6gU1fnGTgJcRnkD7v9Bmg=s700-no?authuser=0"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Name the 2 films mashed together here" ,	answer : "Pulp Fiction and Men in Black", image : "https://lh3.googleusercontent.com/pw/AM-JKLUN6AUeoAEKEZedFayaVwDhCtT6YG3bvuhtN8HzXmQeuwOKCW8aKM3PMOJ-q9g-hN-cvrpuk6DF569z5y2yP8o-Pc3T_wfzJR6xwaCnPZGb1EUm3uyH5JS-iLymOsq6-e7WlcsjWKn08eBrO29NECBGwA=w700-h622-no?authuser=0"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Name the 2 films mashed together here" ,	answer : "Pirates of the Caribbean and Titanic", image : "https://lh3.googleusercontent.com/pw/AM-JKLWODwsyx1pB-_6w6uRdLG7RhLGTI1fk28LbALyvMAKP7TkIeVpxBOL5CqzHW3Rd3j7QDVHa1_mkzKLeqQ8mRM9rEOQpdYU03g4wrOmbi58gtK2LyianKn3nFVNfmWsDSgURhJbbrrXR1c0RKQgwwj3oTg=w700-h760-no?authuser=0"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Name the 2 films mashed together here" ,	answer : "Spiderman and Singing i tnhe Rain", image : "https://lh3.googleusercontent.com/pw/AM-JKLXYk4Z5AO8Hmm7doWi54qW2SPFVAWUQrKN7grS_UmOmmZ4gN66PJaLwUsIs3dtqrF9Z47pKJGiOSXb-RNIVxkrbTmOxNPp-AZnv7V75gjt0s-odwryLqsiQBBvFXvfuPCHuQyC5mjEVWJ5TExlNq7UsXQ=s700-no?authuser=0"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Name the 2 films mashed together here" ,	answer : "Indiana Jones and Avengers [Infinity War | Endgame ] ", image : "https://lh3.googleusercontent.com/pw/AM-JKLXYaA_QHNhW5MjOOjvj7b1J6pTodUwxv6Vwe2hify6FRqPdtvyFJ0CxnmYLW44OPXmn3ovnH1uIu5i9wGpZSU8-NWJvLuF4meE8gV19a5i_lsS8dv5GQn8i4QsgYfKQtAa1-aWU-eTaWhME4a8HFRBX4A=w700-h699-no?authuser=0"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Name the 2 films mashed together here" ,	answer : "Mr Bean and The Shining", image : "https://lh3.googleusercontent.com/pw/AM-JKLWJPuz0BPbvYknq2apJ1e5uJ6OyIDi3LSTIJxebly_3Fg2TI8x94K8YTqWLF-dmfOCnSKwm1_Ka4VW-BWjQ3FL5oH6QP0nNEVj8AUWJ_OF-Yh87oJG3PTOp9dQvvTqT1SG13frWZROS_6S9w4CYQtr82Q=s700-no?authuser=0"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Name the 2 films mashed together here" ,	answer : "Toy Story and Guardians of the Galaxy", image : "https://lh3.googleusercontent.com/pw/AM-JKLUY3Y6s9VNetWbdahG7f0wcv-v2r_PzG-5WiLoRKGEN3nJVeBw_-EPaxvhuR6T-xx3QdjfA0IXeb4uLg5MhpfOTgz9_2sqUrAENofCkyz2MpfFUn6nOJDwk_erBKh1cpIuQN0XwKkpVeHN4Ilbc_OdDKw=s700-no?authuser=0"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Name the 2 films mashed together here" ,	answer : "The Wizard of Oz and Robocop", image : "https://lh3.googleusercontent.com/pw/AM-JKLWPnm_bpM0GR499UhBkYu00s714fi-GcXxdBi3pQPlw-hHyhy2_z-82hvmnk1wLrma4ynOy3EZgO6p0cuYUQTOmETqgNVHp2k1YNKSC-NeHtM47c6n4crk4OkB3iBKKs7jdIl89Q4jZuR2t6MzM93ka2A=w700-h625-no?authuser=0"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Name the 2 films mashed together here" ,	answer : "Ghost and Ghostbusters", image : "https://lh3.googleusercontent.com/pw/AM-JKLXNJajlXUvmnVGPkaexwiP7MffUAB4vwBAZ-ep6BZ4vkVl58FRPr38zw1vEeEPH26fvjn9I5R-32ujszQSAGgIswVyzRQSw4h9DirjnxVbDSEsNnWGLo03q-_v-Q_DZCO7S3XCL3zJVum6_KLb32VT_2g=w700-h547-no?authuser=0"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Name the 2 films mashed together here" ,	answer : "The Silence of the Lambs and Mr Bean", image : "https://lh3.googleusercontent.com/pw/AM-JKLUZ8BacRR7c6A4AGQ3stIUoGSWAqlc2Nj-AKyaXpQO9S8dGYjMYxiI27zLX-_zPnYAXuiOLI-h_dGPophGwqG9Lm_CxSAYGlNuH2_seb9KfW3VdEPjOuKl9xl2zEOs4xVAzPwKq1EG8ppIWWkIVX_AM5w=w700-h626-no?authuser=0"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Name the 2 films mashed together here" ,	answer : "Aquaman and Finding Nemo", image : "https://lh3.googleusercontent.com/pw/AM-JKLVD4U04lTo13zzfWWgFO9QoAZTOUuF7tBFkCO3QTQuXy1XIfCKtfqVBLlz6rWefSyhLHrlX5x4bZGlHSLhblYNMbtNGyyoBP-5u5JLYYl1t99vzSDEvpKj0R7m6DxPMtmkBSOnpoYWnGiarXs50ZmiMTg=s700-no?authuser=0"	});
+
+quests[++questIndexBuilder] = { //
+		name : "Film Lines",
+		hoverover : "Name the films from the quote",
+		tags : "2021-9-4,saturday,InnerWheel,surfers",
+		splash : {splashType : splashTypeText , splashText : "Name the films from the famous dialogue." },
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{type : quizQuestionTypePictureAnswer,	question : "</BR>All work and no play makes Jack a dull boy.</BR>All work and no play makes Jack a dull boy.</BR>All work and no play makes Jack a dull boy.</BR>All work and no play makes Jack a dull boy.</BR>All work and no play makes Jack a dull boy.</BR>All work and no play makes Jack a dull boy.</BR>",
+	answerSpeak : "The Shining", answerimage : "https://static.independent.co.uk/s3fs-public/thumbnails/image/2020/05/21/09/the-shining-2.jpg?width=1200"} ); 
+addQuest(quests[questIndexBuilder],{type : quizQuestionTypePictureAnswer,	question : "Hakuna Matata",
+	answerSpeak : "The Lion King", answerimage : "https://imgs.classicfm.com/images/64192?width=4096&crop=16_9&signature=EvW6RFS9UANEHY0MsiMlLJvs3Uo="} ); 
+addQuest(quests[questIndexBuilder],{type : quizQuestionTypePictureAnswer,	question : "You, are, a... TOOOYYYYYYYY!!!!",
+	answerSpeak : "Toy Story", answerimage : "https://media.vanityfair.com/photos/5d0a6ab8a2036c7745753f00/master/pass/MCDTOST_EC058.jpg"} ); 
+addQuest(quests[questIndexBuilder],{type : quizQuestionTypePictureAnswer,	question : "Where we are going we don't need roads!",
+	answerSpeak : "Back to the Future", answerimage : "https://x-culture.org/wp-content/uploads/2017/03/Roads-1170x500.jpg"} ); 
+addQuest(quests[questIndexBuilder],{type : quizQuestionTypePictureAnswer,	question : "Yippie ki yay Motherfucker",
+	answerSpeak : "Die Hard", answerimage : "https://img-9gag-fun.9cache.com/photo/aVwA7pd_460s.jpg"} ); 
+addQuest(quests[questIndexBuilder],{type : quizQuestionTypePictureAnswer,	question : "I need your clothes, your boots, and your motorcycle.",
+	answerSpeak : "Terminator", answerimage : "https://starecat.com/content/wp-content/uploads/schwarzenegger-pope-francis-i-need-your-clothes-your-boots-and-your-motorcycle.jpg"} ); 
+addQuest(quests[questIndexBuilder],{type : quizQuestionTypePictureAnswer,	question : "A census taker tried to test me once. I ate his liver with a side of Fava beans and a nice Chianti",
+	answerSpeak : "The Silence of the Lambs", answerimage : "https://pics.me.me/a-census-taker-once-tried-to-test-me-i-ate-28802039.png"} ); 
+addQuest(quests[questIndexBuilder],{type : quizQuestionTypePictureAnswer,	question : "Snakes. Why'd it have to be snakes",
+	answerSpeak : "Indiana Jones", answerimage : "https://memegenerator.net/img/instances/67706426.jpg"} ); 
+addQuest(quests[questIndexBuilder],{type : quizQuestionTypePictureAnswer,	question : "There are 106 miles to Chicago, we have a full tank of gas, half a pack of cigarettes, it's dark and we're wearing sunglasses.",
+	answerSpeak : "The Blues Brothers", answerimage : "https://pbs.twimg.com/tweet_video_thumb/EToKzaSUYAE14an.jpg"} ); 
+addQuest(quests[questIndexBuilder],{type : quizQuestionTypePictureAnswer,	question : "You are without a doubt the worst pirate I've ever heard of.</BR></BR>But you have heard of me",
+	answerSpeak : "Pirates of the Caribbean", answerimage : "https://c.tenor.com/r0pBPjtriLcAAAAC/pirates-of-the-carribean-jack-sparrow.gif"} ); 
+addQuest(quests[questIndexBuilder],{type : quizQuestionTypePictureAnswer,	question : "No, I am your father",
+	answerSpeak : "Star Wars", answerimage : "https://1.bp.blogspot.com/-7Ua0cHG0XBs/XbDNsHp0ZRI/AAAAAAABIGk/xrXnoAtj5qYsbaGZvkzg_7Natqo-YtoEwCEwYBhgL/s1600/Luke%252C%2BI%2Bam%2Byour%2Bfather%2Bquote%2BTDIQ.jpg"} ); 
+
+quests[++questIndexBuilder] = { //
 		name : "They can all sing",
 		hoverover : "Welsh folk",
 		tags : "music,2021-9-4,InnerWheel,saturday",
