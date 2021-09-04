@@ -846,6 +846,31 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://images-na.ssl-images-amazon.com/images/I/61PWGrXbZqL._AC_UX679_.jpg", answerSpeak : "Swimming Trunks"}) ;
 
 
+quests[++questIndexBuilder] = { //
+		name : "Pictionary 30",
+		hoverover : "Pictionary on the theme of back to school",
+		tags : "2021-9-4,pictionary",
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUQpezyOv-kjki3kz3MVMJu_LV-SJ7GyVECkgj12jn-JO74pqR4OU2Y-73lufZ8pYX5yJX8lS9BdrVkS9cSDw0pGbKtqQM1v2YoDYYk9HsCOCtLBau7AqSChBqeVaQYIn8vpei_n-rBjq9RQDASomgOIg=w384-h157-no?authuser=0",
+	answerimage : "https://cdn3.vectorstock.com/i/1000x1000/94/57/funny-pencil-vector-4939457.jpg", answerSpeak : "Pencil"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLWmAoTt2PP96-EE-VyK6gPuKZoQ9fFel_3ShxyoKdk65mDrUzfE8iWT0yPLafYUx-MANrKh-AjSRNqgzsYMuokaYWk7xZOsY1oraozWfyO4uD_3pEwwJJeOGaVE1Woc3RLCjbAUOET4fIvjH0kyICf3zg=w351-h448-no?authuser=0",
+	answerimage : "https://images-na.ssl-images-amazon.com/images/I/613Jvo104CL.jpg", answerSpeak : "Book"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLWU3_C3fwQhm2CycPd1S-pW3e2hU4k8xDzk460u0qiCZ55WIIG_r3_ZavnWom_G-gx4FMXoNVz0F1XPMbw04lKiyEhMRk-7ZJ20vKAEB6FzG3BIgnfnPGm-J9cliwCGWeb5025ySni8SR8VowNTPJHpMg=w687-h514-no?authuser=0",
+	answerimage : "https://image.shutterstock.com/image-vector/back-school-chalkboard-blackboard-hand-260nw-111505283.jpg", answerSpeak : "Chalk"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXwJYte9MUdpFOWOiZkJDDrId42inJ4hjO_YkYtHu4s5RGWRj2dWrG8PtC8fUYEXG4XWrqvFPoZ3DXxmuI_1Yu6-Yxm1ql9wZOOBxcFIDoJUWmVx97K3EqnDieOdkNENDbwQzUEy-K5kHWNGd8lHld0jQ=w575-h390-no?authuser=0",
+	answerimage : "https://i.makeagif.com/media/5-09-2017/eDVWcp.gif", answerSpeak : "Blackboard eraser"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVk7w8x5eFb98QuU7BI8wdfjJEQgqINhJtQlUgmbMB2hcLNeLwRGh7RfFQN2a3A3uKHlb9kkYFoonDy-byk25n6Ipl2oElh1IBX-56F1hyUNSyUDBir3kqIXuJMrXfIwidg3NLkzp-OasM3-9Ic-5jkRQ=w745-h590-no?authuser=0",
+	answerimage : "https://i.chzbgr.com/full/9089532160/hE4CE046C/contemplate-the-insigniacance-of-one-human-life-on-this-bau-of-swirling-gas-and-rock-pee-matsareke", answerSpeak : "Whiteboard"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXl67bVt3fnyIjuFTEQwXJ9NR_s6dz08g8EdTbOOZjamPMBGA70A8YyvE5Z56Nh3EzqrcCYmQu688CqrDJB8bZl-WHwf8-DxEpz9KuhO-kTE1G8nBcqXHC38ZZ_xUdnzPNIzBxzsYcP8kpTCIrpsNXAjA=w845-h618-no?authuser=0",
+	answerimage : "https://img.huffingtonpost.com/asset/5d0224ea2500004e12e33a0d.jpeg?ops=scalefit_950_800_noupscale", answerSpeak : "Blackboard"}) ;
+
 
 /*
   
