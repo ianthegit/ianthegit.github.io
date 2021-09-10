@@ -2793,6 +2793,80 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : ""}) ;
 
 
+quests[++questIndexBuilder] = { ////https://quizly.co/can-you-guess-what-happens-next/?utm_source=PlayAgain&utm_medium=Quiz
+		name : "Next!",
+		hoverover : "What happens next",
+		splash : {splashType : splashTypePictureAndText , splashText : "In honour of the new Question of Sport and their famous 'What happened next?' round...", splashImage : "https://i2-prod.mirror.co.uk/incoming/article1742301.ece/ALTERNATES/s1200c/David%20Coleman.jpg"  },
+		tags : "2021-9-11,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?", 
+	image : "https://cdn.quizly.co/wp-content/uploads/2015/10/02175811/Lucky-man-cover_BIG.jpg",
+	answerimage : "https://cdn.quizly.co/wp-content/uploads/2015/10/Win-1.gif"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?", 
+		image : "https://cdn.quizly.co/wp-content/uploads/2015/10/02175801/Win-2.jpg",
+		answerimage : "https://cdn.quizly.co/wp-content/uploads/2012/10/03.gif"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?", 
+		image : "https://cdn.quizly.co/wp-content/uploads/2015/10/02175640/Win-3.jpg",
+		answerimage : "https://cdn.quizly.co/wp-content/uploads/2012/10/Win-3.gif"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?", 
+		image : "https://cdn.quizly.co/wp-content/uploads/2015/10/02175743/Win-4.jpg",
+		answerimage : "https://cdn.quizly.co/wp-content/uploads/2012/10/Win-4.gif"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?", 
+		image : "https://cdn.quizly.co/wp-content/uploads/2015/10/02175632/Win-51.jpg",
+		answerimage : "https://cdn.quizly.co/wp-content/uploads/2012/10/Win-5.gif"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?", 
+		image : "https://cdn.quizly.co/wp-content/uploads/2015/10/02175717/Win-6.jpg",
+		answerimage : "https://cdn.quizly.co/wp-content/uploads/2012/10/Win-6.gif"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?", 
+		image : "https://cdn.quizly.co/wp-content/uploads/2015/10/02175637/Win-7.jpg",
+		answerimage : "https://cdn.quizly.co/wp-content/uploads/2012/10/Win-7.gif"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?", 
+		image : "https://cdn.quizly.co/wp-content/uploads/2015/10/23042330/Win-8.jpg",
+		answerimage : "https://cdn.quizly.co/wp-content/uploads/2012/10/Win-8-1.gif"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?", 
+		image : "https://cdn.quizly.co/wp-content/uploads/2015/10/02175650/Win-9.jpg",
+		answerimage : "https://cdn.quizly.co/wp-content/uploads/2012/10/Win-9.gif"}) ;
+ 
+ quests[++questIndexBuilder] = { ////https://quizly.co/can-you-guess-what-happens-next/?utm_source=PlayAgain&utm_medium=Quiz
+			name : "Next!",
+			hoverover : "What happens next",
+			splash : {splashType : splashTypePictureAndText , splashText : "In honour of the new Question of Sport and their famous 'What happened next?' round...", splashImage : "https://i.inews.co.uk/content/uploads/2021/09/PRI_197773633-640x360.jpg"  },
+			tags : "2021-9-11,saturday,InnerWheel,surfers",
+			questInfo: new Array()
+		};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?", 
+		image : "https://learnhip.com/img/whnpics/1.gif",
+		answerimage : "https://learnhip.com/img/whnpics/1l.gif"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?", 
+		image : "https://learnhip.com/img/whnpics/2.gif",
+		answerimage : "https://learnhip.com/img/whnpics/2l.gif"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?", 
+		image : "https://learnhip.com/img/whnpics/3.gif",
+		answerimage : "https://learnhip.com/img/whnpics/3l.gif"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?", 
+		image : "https://learnhip.com/img/whnpics/4.gif",
+		answerimage : "https://learnhip.com/img/whnpics/4l.gif"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?", 
+		image : "https://learnhip.com/img/whnpics/5.gif",
+		answerimage : "https://learnhip.com/img/whnpics/5l.gif"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?", 
+		image : "https://learnhip.com/img/whnpics/6.gif",
+		answerimage : "https://learnhip.com/img/whnpics/6l.gif"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?", 
+		image : "https://learnhip.com/img/whnpics/7.gif",
+		answerimage : "https://learnhip.com/img/whnpics/7l.gif"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?", 
+		image : "https://learnhip.com/img/whnpics/8.gif",
+		answerimage : "https://learnhip.com/img/whnpics/8l.gif"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?", 
+		image : "https://learnhip.com/img/whnpics/9.gif",
+		answerimage : "https://learnhip.com/img/whnpics/9l.gif"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?", 
+		image : "https://learnhip.com/img/whnpics/10.gif",
+		answerimage : "https://learnhip.com/img/whnpics/10l.gif"}) ;
+
+ 
 /*
 quests[++questIndexBuilder] = { //
 		name : "Test Alt speak",
