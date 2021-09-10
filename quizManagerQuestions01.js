@@ -2410,7 +2410,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 quests[++questIndexBuilder] = { //
 		name : "Turtally Brilliant",
 		hoverover : "Some turtles",
-		tags : "2021-9-4,saturday,InnerWheel,surfers",
+		tags : "2021-9-11,saturday,InnerWheel,surfers",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
@@ -2453,7 +2453,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 quests[++questIndexBuilder] = { //
 		name : "Wales 1",
 		hoverover : "Some specific questions",
-		tags : "2021-9-4,saturday,InnerWheel,surfers",
+		tags : "2021-9-11,saturday,InnerWheel,surfers",
 		questInfo: new Array()
 	};
 
@@ -2487,7 +2487,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 quests[++questIndexBuilder] = { //
 		name : "Wales 2",
 		hoverover : "Some less specific questions",
-		tags : "2021-9-4,saturday,InnerWheel,surfers",
+		tags : "2021-9-11,saturday,InnerWheel,surfers",
 		questInfo: new Array()
 	};
 
@@ -2519,7 +2519,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 quests[++questIndexBuilder] = { //
 		name : "Cruising",
 		hoverover : "Tom and his curry",
-		tags : "2021-9-4,saturday,InnerWheel,surfers",
+		tags : "2021-9-11,saturday,InnerWheel,surfers",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
@@ -2556,7 +2556,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 quests[++questIndexBuilder] = { //
 		name : "Time Travel",
 		hoverover : "Who will look like this in the future",
-		tags : "2021-9-4,saturday,InnerWheel,surfers",
+		tags : "2021-9-11,saturday,InnerWheel,surfers",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Who will look like this when they're older?", //
@@ -2597,7 +2597,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 quests[++questIndexBuilder] = { //
 		name : "Hidden Time Traveller",
 		hoverover : "Spot the hidden Dr Who reference for an extra point",
-		tags : "2021-9-4,saturday,InnerWheel,surfers",
+		tags : "2021-9-11,saturday,InnerWheel,surfers",
 		splash : {splashType : splashTypePictureAndText , splashText : "Shout out the hidden Dr Who reference and win a point", splashImage : "https://metro.co.uk/wp-content/uploads/2020/02/doctor-who-elisabeth-sladen-sarah-jane-smith_1582209527.png?w=1200&h=630&crop=1" },
 		questInfo: new Array()
 	};
