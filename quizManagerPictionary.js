@@ -872,6 +872,32 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://i.chzbgr.com/full/9089532160/hE4CE046C/contemplate-the-insigniacance-of-one-human-life-on-this-bau-of-swirling-gas-and-rock-pee-matsareke", answerSpeak : "Whiteboard"}) ;
 
 
+quests[++questIndexBuilder] = { //
+		name : "Pictionary 31",
+		hoverover : "Pictionary on the theme of famous vehicles from TV and Movies",
+		tags : "2021-9-11,pictionary",
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://www.cnet.com/a/img/resize/888ce9c6104626c60c4c51e086214f5784f9e723/hub/2013/05/15/e8c5a3d7-f07b-11e2-8c7c-d4ae52e62bcc/TOS_newent1_1.jpg?auto=webp&width=1092", answerSpeak : "USS Enterprise"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/mysterymachine1-1587130271.jpg?resize=480:*", answerSpeak : "The Mystery Machine"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://cdn.nazmiyalantiquerugs.com/wp-content/uploads/2016/05/flying-magic-carpets-of-aladdin-nazmiyal-antique-rugs-599x449.jpg", answerSpeak : "Aladdin's magic carpet"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://www.rmg.co.uk/sites/default/files/styles/full_width_1440/public/Atlantic%20liner%20%27Titanic%27%20%28Br%2C%201912%29%20sinking%2C%20bow%20first%2C%201912%2C%20with%20eight%20full%20lifeboats%20nearby%20and%20an%20iceberg%20in%20the%20distance_banner.jpg?itok=fQV6kN3z", answerSpeak : "RMS Titanic"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://ideascdn.lego.com/media/generate/lego_ci/ecf4801f-c030-4fe4-a151-73f64ea25e25/resize:950:633/legacy", answerSpeak : "The A-Team van"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://www.independent.ie/migration_catalog/d2d97/25303377.ece/AUTOCROP/w1240h700/ET", answerSpeak : "ET's bike"}) ;
+
+
 /*
   
  quests[++questIndexBuilder] = { //
