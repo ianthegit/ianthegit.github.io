@@ -2836,7 +2836,7 @@ quests[++questIndexBuilder] = { ////https://quizly.co/can-you-guess-what-happens
 			name : "Next!",
 			hoverover : "What happens next",
 			splash : {splashType : splashTypePictureAndText , splashText : "In honour of the new Question of Sport and their famous 'What happened next?' round...", splashImage : "https://i.inews.co.uk/content/uploads/2021/09/PRI_197773633-640x360.jpg"  },
-			tags : "2021-9-11,saturday,InnerWheel,surfers",
+			tags : "2021-9-18,saturday,InnerWheel,surfers",
 			questInfo: new Array()
 		};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?", 
