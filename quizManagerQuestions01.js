@@ -2797,8 +2797,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { ////https://quizly.co/can-you-guess-what-happens-next/?utm_source=PlayAgain&utm_medium=Quiz
-		name : "
-	Next!",
+		name : "Next!",
 		hoverover : "What happens next",
 		splash : {splashType : splashTypePictureAndText , splashText : "In honour of the new Question of Sport and their famous 'What happened next?' round...", splashImage : "https://i2-prod.mirror.co.uk/incoming/article1742301.ece/ALTERNATES/s1200c/David%20Coleman.jpg"  },
 		tags : "2021-9-11,saturday,InnerWheel,surfers",
