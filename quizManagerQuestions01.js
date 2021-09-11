@@ -2922,7 +2922,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	//wannabe
 quests[++questIndexBuilder] = { //
 		name : "Girrl Power",
 		hoverover : "Our best female artists",
-		tags : "music,2021-9-1,InnerWheel,saturday",
+		tags : "music,2021-9-11,InnerWheel,saturday",
 		questInfo: new Array()
 	};
 
