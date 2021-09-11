@@ -2797,37 +2797,38 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { ////https://quizly.co/can-you-guess-what-happens-next/?utm_source=PlayAgain&utm_medium=Quiz
-		name : "Next!",
+		name : "
+	Next!",
 		hoverover : "What happens next",
 		splash : {splashType : splashTypePictureAndText , splashText : "In honour of the new Question of Sport and their famous 'What happened next?' round...", splashImage : "https://i2-prod.mirror.co.uk/incoming/article1742301.ece/ALTERNATES/s1200c/David%20Coleman.jpg"  },
 		tags : "2021-9-11,saturday,InnerWheel,surfers",
 		questInfo: new Array()
 	};
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?", 
+  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?" + Table4ColumnStart + "He flew, in an assisted manner</td><td>He dodged everything</td><td>Nothing</td><td>The eagles rescued him" + Table4ColumnEnd, 
 	image : "https://cdn.quizly.co/wp-content/uploads/2015/10/02175811/Lucky-man-cover_BIG.jpg",
 	answerimage : "https://cdn.quizly.co/wp-content/uploads/2015/10/Win-1.gif"}) ;
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?", 
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?" + Table4ColumnStart + "His Dad pressed his face into the cake</td><td>The cake slid off the plate and onto the floor</td><td>The cake slid off the plate but his Dad caught it</td><td>Nothing" + Table4ColumnEnd, 
 		image : "https://cdn.quizly.co/wp-content/uploads/2015/10/02175801/Win-2.jpg",
 		answerimage : "https://cdn.quizly.co/wp-content/uploads/2012/10/03.gif"}) ;
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?", 
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?" + Table4ColumnStart + "The cat pounced</td><td>The cat fell backwards</td><td>Nothing</td><td>The cat shaped bee flew" + Table4ColumnEnd, 
 		image : "https://cdn.quizly.co/wp-content/uploads/2015/10/02175640/Win-3.jpg",
 		answerimage : "https://cdn.quizly.co/wp-content/uploads/2012/10/Win-3.gif"}) ;
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?", 
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?" + Table4ColumnStart + "He got hit by a ball</td><td>He caught a ball</td><td>Nothing</td><td>A lady blocked his view" + Table4ColumnEnd, 
 		image : "https://cdn.quizly.co/wp-content/uploads/2015/10/02175743/Win-4.jpg",
 		answerimage : "https://cdn.quizly.co/wp-content/uploads/2012/10/Win-4.gif"}) ;
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?", 
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?" + Table4ColumnStart + "He tripped and the shelves came down</td><td>The cleared the wire</td><td>Nothing</td><td>He vaulted over the shelves" + Table4ColumnEnd, 
 		image : "https://cdn.quizly.co/wp-content/uploads/2015/10/02175632/Win-51.jpg",
 		answerimage : "https://cdn.quizly.co/wp-content/uploads/2012/10/Win-5.gif"}) ;
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?", 
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?" + Table4ColumnStart + "He slapped a flying fish</td><td>He flipped the boat over</td><td>Nothing</td><td>He got slapped by a fish" + Table4ColumnEnd, 
 		image : "https://cdn.quizly.co/wp-content/uploads/2015/10/02175717/Win-6.jpg",
 		answerimage : "https://cdn.quizly.co/wp-content/uploads/2012/10/Win-6.gif"}) ;
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?", 
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?" + Table4ColumnStart + "They were better than Coldplay</td><td>They got run over by a tractor</td><td>Nothing</td><td>Lefty smashed the guitar" + Table4ColumnEnd, 
 		image : "https://cdn.quizly.co/wp-content/uploads/2015/10/02175637/Win-7.jpg",
 		answerimage : "https://cdn.quizly.co/wp-content/uploads/2012/10/Win-7.gif"}) ;
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?", 
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?" + Table4ColumnStart + "The gecko got startled</td><td>The cat got startled</td><td>Nothing</td><td>A cucumber appeared" + Table4ColumnEnd, 
 		image : "https://cdn.quizly.co/wp-content/uploads/2015/10/23042330/Win-8.jpg",
 		answerimage : "https://cdn.quizly.co/wp-content/uploads/2012/10/Win-8-1.gif"}) ;
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?", 
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?" + Table4ColumnStart + "The ring tailed panda ate it's lunch</td><td>The ring tailed panda over reacted to a wellington boot </td><td>Nothing</td><td>A special hug" + Table4ColumnEnd, 
 		image : "https://cdn.quizly.co/wp-content/uploads/2015/10/02175650/Win-9.jpg",
 		answerimage : "https://cdn.quizly.co/wp-content/uploads/2012/10/Win-9.gif"}) ;
  
