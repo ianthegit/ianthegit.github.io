@@ -879,23 +879,24 @@ quests[++questIndexBuilder] = { //
 		questInfo: new Array()
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXY4bNUn0XDf1PphK1nkYe1p0CdaPPIE1poRm9iHW5WpLh8P4dnczJabcWunHwjqLTuhslVyfZ-KkZf4vu_vQFafyEOwM5rsUfoLzX8SDFeM3Hut2XJblriL_zDdPdNBJJZ6RyvHuNb_h14aUWt5IvfkA=w266-h125-no?authuser=0",
 	answerimage : "https://www.cnet.com/a/img/resize/888ce9c6104626c60c4c51e086214f5784f9e723/hub/2013/05/15/e8c5a3d7-f07b-11e2-8c7c-d4ae52e62bcc/TOS_newent1_1.jpg?auto=webp&width=1092", answerSpeak : "USS Enterprise"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVw3_NGclNEnbKLny1Q6jrNC9u3ncnlOR6r5D6DSuR6wNUlEITvtSTgn7_iZQS0kdZcbxt4OJYa6BOtQEWqIqJ-lKIT4r74jZOCp-V4CX4fG3gkwzQcJNrRlB9FS2jjGI2R1VELoy80tp-Gjs7avehBFw=w378-h270-no?authuser=0",
 	answerimage : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/mysterymachine1-1587130271.jpg?resize=480:*", answerSpeak : "The Mystery Machine"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLU24aJHwL6OzFJOCfMq6QqTiU6OI6qLQPzioiBn8_IFq2mlEakDzXOT03eBEaNxx9D8WatNstavWjSsrbe5sWTDVf_f9jYzxPBgLoPGEse7ls-rUXVzuTp0QUYeq3eXJNlGDn83BSoNlRbllgp8yYcbwg=w497-h394-no?authuser=0",
 	answerimage : "https://cdn.nazmiyalantiquerugs.com/wp-content/uploads/2016/05/flying-magic-carpets-of-aladdin-nazmiyal-antique-rugs-599x449.jpg", answerSpeak : "Aladdin's magic carpet"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLU5kwdO7A9GTG8bcvPvi2xQV__MOPTFRmuN31Ylbo9UTQmDimuZa9mBXppATNLwIzK5pVJtcU10wqIqjQYLWHrNHWd7matuokcj-hk04QjGhIkm0zHA3p_RKs3Vpqakb_zuJGPj1tu4mkzbWrx5A-gM7Q=w747-h449-no?authuser=0",
 	answerimage : "https://www.rmg.co.uk/sites/default/files/styles/full_width_1440/public/Atlantic%20liner%20%27Titanic%27%20%28Br%2C%201912%29%20sinking%2C%20bow%20first%2C%201912%2C%20with%20eight%20full%20lifeboats%20nearby%20and%20an%20iceberg%20in%20the%20distance_banner.jpg?itok=fQV6kN3z", answerSpeak : "RMS Titanic"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUc8LruhYKQEWsBw_e-c1WziLUfIPKXimZsRpAM6uR6XG0MAO9I0NtYaeybDspBh4x0ewXhlcLl6z-xijNwCC0__nierj5gZD4h-j4CXd6tn6Yky7oI5Tsudhl_XHUECstvXJPedukHL36cE0qRPD5BBg=w325-h237-no?authuser=0",
 	answerimage : "https://ideascdn.lego.com/media/generate/lego_ci/ecf4801f-c030-4fe4-a151-73f64ea25e25/resize:950:633/legacy", answerSpeak : "The A-Team van"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUQ1Bh2V88n3nJLvn83SXvMRGiIZOEqjfJtTlqLNT3cv-TV8PeU1vPbR7OcMbjDU0LB6uL2emIV-W8stvC9Ap1N61vgEJSvHsEVSblXQlEDOeJT2IiUXBwNXY0acfezDjsddQzD9XsNHzEhN6Cb9qfTMQ=w726-h497-no?authuser=0",
 	answerimage : "https://www.independent.ie/migration_catalog/d2d97/25303377.ece/AUTOCROP/w1240h700/ET", answerSpeak : "ET's bike"}) ;
+
 
 
 /*
