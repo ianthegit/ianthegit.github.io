@@ -2870,6 +2870,67 @@ quests[++questIndexBuilder] = { ////https://quizly.co/can-you-guess-what-happens
 		answerimage : "https://learnhip.com/img/whnpics/10l.gif"}) ;
 
  
+quests[++questIndexBuilder] = { //
+		name : "Pub singer 6",
+		hoverover : "Sit back, close your eyes, you could be at a live venue right now.  ",
+		tags : "2021-9-11,saturday,InnerWheel,surfers,audio",
+		splash : {splashType : splashTypePictureAndText , splashText : "This week we pay tribute to Sara Harding of Girls Aloud, and all great girl groups", splashImage : "https://images.8tracks.com/cover/i/010/330/840/uk_girl_group-1699.jpg?rect=325,0,949,949&q=98&fm=jpg&fit=max"  },
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicureAnswer, 	//love machine
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w6-lovemachine.mp3' + endAudio ,
+	answerimage : "https://static.standard.co.uk/s3fs-public/thumbnails/image/2017/03/27/09/cherylmusic2703f.jpg?width=640&auto=webp&quality=75&crop=2028%3A1372%2Csmart",
+	answer : '<iframe src="https://open.spotify.com/embed/track/6SHvqMjPEQqyJaxuEzNcr3" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	//shoutout to my ex
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w6-ex.mp3' + endAudio ,
+	answerimage : "https://static.standard.co.uk/s3fs-public/thumbnails/image/2018/01/24/12/littlemix.jpg?width=640&auto=webp&quality=75&crop=2464%3A1642%2Csmart",
+	answer : '<iframe src="https://open.spotify.com/embed/track/0ErK6K0kYr0Ow2RkPMhmMs" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	//so excited
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w6-excited.mp3' + endAudio ,
+	answerimage : "https://static.standard.co.uk/s3fs-public/thumbnails/image/2018/03/06/17/the-pointer-sisters.jpg?width=640&auto=webp&quality=75&crop=1500%3A1000%2Csmart",
+	answer : '<iframe src="https://open.spotify.com/embed/track/1ot6jEe4w4hYnsOPjd3xKQ" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	// manic
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w6-manic.mp3' + endAudio ,
+	answerimage : "https://static.standard.co.uk/s3fs-public/thumbnails/image/2018/03/06/17/the-bangles.jpg?width=640&auto=webp&quality=75&crop=1511%3A1000%2Csmart",
+	answer : '<iframe src="https://open.spotify.com/embed/track/7Di7t9yGoxdZRLAt5a4pi0" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	// leader
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w6-leader.mp3' + endAudio ,
+	answerimage : "https://static.standard.co.uk/s3fs-public/thumbnails/image/2018/03/06/17/the-shangrilas.jpg?width=640&auto=webp&quality=75&crop=1505%3A1000%2Csmart",
+	answer : '<iframe src="https://open.spotify.com/embed/track/6O5PIO5pAWxdoxvaUFQ02G" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	// never ever
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w6-never.mp3' + endAudio ,
+	answerimage : "https://static.standard.co.uk/s3fs-public/thumbnails/image/2018/03/05/15/all-saints.jpg?width=640&auto=webp&quality=75&crop=1502%3A1000%2Csmart",
+	answer : '<iframe src="https://open.spotify.com/embed/track/7ziHnshbknkpFLDW5yGBjO" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	// stop in the name of love
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w6-stop.mp3' + endAudio ,
+	answerimage : "https://static.standard.co.uk/s3fs-public/thumbnails/image/2014/02/25/10/18supreme2502a.jpg?width=640&auto=webp&quality=75&crop=1500%3A1000%2Csmart",
+	answer : '<iframe src="https://open.spotify.com/embed/track/52FlwUMMDnTK8TGkCag9Jd" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	// Waterfalls
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w6-waterfalls.mp3' + endAudio ,
+	answerimage : "https://static.standard.co.uk/s3fs-public/thumbnails/image/2018/02/27/10/tlc.jpg?width=640&auto=webp&quality=75&crop=2340%3A1560%2Csmart",
+	answer : '<iframe src="https://open.spotify.com/embed/track/6qspW4YKycviDFjHBOaqUY" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	// C'est la vie
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w6-cestlavie.mp3' + endAudio ,
+	answerimage : "https://www.irishcentral.com/uploads/article/120123/cropped_Bewitched-band.jpg?t=1597258623",
+	answer : '<iframe src="https://open.spotify.com/embed/track/0P6CPJrNJ1Zt755CQTWg3S" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	//wannabe
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w6-wannabe.mp3' + endAudio ,
+	answerimage : "https://static.standard.co.uk/s3fs-public/thumbnails/image/2017/06/21/12/o210years2106zo.jpg?width=640&auto=webp&quality=75&crop=2157%3A1438%2Csmart",
+	answer : '<iframe src="https://open.spotify.com/embed/track/1Je1IMUlBXcx1Fz0WE7oPT" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+
+quests[++questIndexBuilder] = { //
+		name : "Girrl Power",
+		hoverover : "Our best female artists",
+		tags : "music,2021-9-1,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/2ZG4DBsLKai9DwRiJC6sSu" width="501" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+	answer : ""}) ;
+ 
 /*
 quests[++questIndexBuilder] = { //
 		name : "Test Alt speak",
