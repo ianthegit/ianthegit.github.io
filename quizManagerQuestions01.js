@@ -2931,6 +2931,154 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/2ZG4DBsLKai9DwRiJC6sSu" width="501" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
 	answer : ""}) ;
  
+
+
+quests[++questIndexBuilder] = { //
+		name : "Time Travel 2",
+		hoverover : "Who did look like this in the past",
+		tags : "2021-9-18,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Who might have once looked like this?", //
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLWnjqYx6ri22DFz83aexHe4Dh7KVRJz0Or3iqXuHgvcETyRc0sDh1xbMPR3TwitW1S0nuOOwVnMJfuhWzr34PX7p_XYPZNDfVN3qWryMrg4A2F4PemiRnxguHLrSyaoqzlkDoRQJ97_0f-C9UBNusdfyA=w351-h467-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLUGTiOS-CULb2oGdPs7HpdjlsWgHlbMHwLHma6M09TmCaRZF7OaMQy3crmlBU6oLQ92V6JOKE_UBeoeOL_fkT0x8UvrDzI-xA5lLM0fr2BUX3BZEOzklMoSgFQxeiSMzPEWx9wA85tLX-7P88L0sQxHAg=w700-h467-no?authuser=0"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Who might have once looked like this?", //
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVPhCJiPb1omchMSb8ZjkjrnesuydnSo_mdwMOmb0H-jARYp1iZtxghFSteMzhLUNWRLz5UNbFIyHXBwuT32Gcb_bJMzpUX9tCMQEYRG83CIcQf-3bgOrRbInpckh9s84znRJggVDZ2ILK2chy8vfuvMA=w352-h426-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLWYY4VMrtfpxYbBJxVkdSZsFQDCOWTwzUEdgxkdiIJEYULcevDUbNV0uQqisblfhbJ0cUOSCZV9VHw6vxMDetwGtZuT-n0YU_5zRhlT5OQK_ZUsS7f1yDydJZk0rk3fB8o9cEKk8MW3UdvA45K-x5kBQw=w700-h426-no?authuser=0"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Who might have once looked like this?", //
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUwYNkT9fXINbzDwMUdBaeDJGGH-DGKsSewL8IFLeSprJezJRLToqx99N2bMQ9Iocdek3pMKV7ZXdoOrYAlj7LHl5NaI-0YWbgXWcFW5Kc1REkydMhl5f3yG3W9U78mHNSnGgdeyxDasoG4HmYuBOAMYw=w350-h430-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLXgBzvx6fREk3JCO7h3t-5xQ2sK9198zxrZ9hw5ie_Tcvq083NyFqMtYC5wDBpotqHFoZFj2OvZiyCf3n-xhLEUyF1qdpQSKkeoNoHC42OWWU_SH0TgEA14mz_EDlGZjOLfA96gh38Suc2N84i3C45w4A=w700-h430-no?authuser=0"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Who might have once looked like this?", //
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUPY9Z-eE471WQ8gqRrH7wdkRIK8T9LfRbZuJoydBgRoNbJMKNAxcHH8LA7a5uStpJrmkL71umjcMn78WGGmySVpCpT69Le2fte3UUEVOqNmP-3-zDi6VDcj6ijvQQPj9dgTfvLAlOgYOy1I-d0x7aklg=w350-h429-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLXeBYFPngUSLvw4Lkg_aPhlLQSZKrWR7TnEgNy7dJo44xOB9xnh1CL-ZIsmaqqdvLnFWt8tucEbhQPtNiUX3dw3zW5G-7EJ0ew0CkUgF2IJr8yHuYpqJDqLYscfOQKMqwcXLw1tq-dLGEngEVJApEwvbw=w700-h429-no?authuser=0"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Who might have once looked like this?", //
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLWkv3p6uKkr36LmJ6eaV1rZZuusYG9KFTJVmvsHSVStN66szkVMdjSJiaw6yYrdfCAtgYg2_lSuyzXUAIVfKoeAX8NFp7QmskYR5_zZVHIukmaCmXd4ynzbI-zS-tOm6a1XD2UvKVVEcPlaTllP_M8c_Q=w352-h522-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLUbh7XNYvORZQdokntgIxMNDQGMyhpcifrnbBuCN9FCq1cJUDMVT_nC1DsXijGBMF5by8HM2BPSEdhSSBL37IxmaYd95Pj9n9uFBGCu429BHbFicmNo-ss2RJSpNrdPqgYURHsvl59wB8N1nU2PHNQF3Q=w700-h522-no?authuser=0"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Who might have once looked like this?", //
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVZCJ-XwYJC2Wile57JxEodxNr2hwv1ZtPu0JoflV9JHe15YZ1CaLSiYp34U-whbYK7cEhQgDUDH9tXMCfdzlylOCXgXSAdtyK8_vRzhOP9PhFx03je5SgOsmKbBWEYL0IXgELRzRIPC5gRpdHkduMRPw=w345-h430-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLWt6d3JkTtn_qSgvtKH_Wx6tvMHdbAScblojtMTRITovLdBxxXDkAUdQM0wXwfouinQEeFHYFKUh3_dtzrd9aS_LobtfHhEEFrsUJIy8lnRGQY3tovvgXPUIc7u5MWC85d0BRSTFpAB9-euvDmWhNht2A=w700-h430-no?authuser=0"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Who might have once looked like this?", //
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXW7BPTfrke4iuiXIStO8bWlR3CgrPMBTKdwaMLCv7lo9dNZ4PDyrURto5njy8G_naNyjANYqvR8Bi0gtU0xbEWvsfVxLy0dxNsNcMuHfzJzedGvTFdYZCexohpC21GAsEICZ4GukFPpn1IN2p3QpCvbw=w348-h430-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLXhmQrX71XJ13-biRiTgM7lGEoYwWkTm-3_iN4Bll54gYXAi1hmFvnz_kPpUpAx3k0ccajwRoA4MEH2jC9lRBpFJ6aYJI-pBv2NHUvBzZuVu003OIAh10yT3_WC-tb91QTilY7NmxZcIS8H2kRczSfi2Q=w700-h430-no?authuser=0"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Who might have once looked like this?", //
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUV1uL4EQ0CKxnVjpYxSU-RIB7RNz5nKLyBCTWraald-7pPZpsykRFOvyRfnQygI9NOGwehmyqArTskMZqQIjEEu1HlOmwiajWWF_c9Z2D3n6XqXNYNmg-oSGb-C2VLm9d6CXf22-q6Zn7s0vf-X9zBTQ=w350-h432-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLVSLDVbDiFWFGL1jgskqBm6MXAShE9icglivYamsDxy6ggdk17CozbPQLnIqp_tra32O24vPAGlyFIw6YXxcQ1yRn3GSh3H0g6dQz4VNxqyFCeDoaAq46SeQM0HXjPbbKqe-h5oMPWZSQec0m9DJWdRDg=w700-h432-no?authuser=0"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Who might have once looked like this?", //
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVI0KUnc6yNk3VxRpr8SLWGnXOlEmw_E4hE3TII31mAzHTbT_e6EAopKGgSff23dUCmthx8aXUfSTlpYW6OIo3YJrXrIzKO_-jpS2034tK538pu5w0tPY26HiAb0HoAEyPjZrlCIo-og2EG3kj2B3AS5g=w349-h518-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLV0ra_nA_72VDukeJLBWfXGUufO7_YTjjfDUT7pR7njRJp8BkBvmP8TxufGDT_fKH8RBemABAabwI8KCjlgBTLUFqiUgI7iXDAOYRj3eH-n6OyX3jT5X8rlDw6moRRxjiyCg0BiLv_LItfu-fE8YuRh3A=w700-h518-no?authuser=0"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Who might have once looked like this?", //
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVvdCtZna0_ebdfFQhdRPnEp8MpsZowSd8CNSlkgP6OUB6E9eqVUggwHoR-2D-ZBmwdWAunKQP8nIH7lHkCg33qyNLesiX01DmEKHzLbRpIjXqqdqSIJMFKn1YDepjRJzgHoTvhvaS854Fn-D8mfKI4qA=w349-h519-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLV7HKrUI_bBlIugdzBgwn3fA1giOe0_qku_Sq5Qx-QIsrSGSEaDZmUqq20X7TE_5oBYHSCXBrUDfq9iW-1sIcVQkVqgucnFFhcqvXv9W9KVEiO8yc7e5shYHaP9qYnYsEIxjIsS2QyGAnwQwyEAGHofWA=w700-h519-no?authuser=0"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Who might have once looked like this?", //
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUtGec9gTd1fXwgFZFX7LMqK7vl7hm7s4IMuq3aR_7U63qGAXQ52yd8HfwQAfmjGQ-Y8i_fQkADyRLi9l4U8c7wIApmBehMgosBK5pLkub9C_9RX4J7oLTniHLGhQzDXFMc9-A0sHdHhVVXTuow2DUeBw=w350-h429-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLVLC53lEKCwa73xNCViGn6A61NyrQdX3gkB4arF_flg8ByczyL5ZRHct6fsJEzQIEc6t366SsKs6qVb1Lj1N7DXUOVBnDrgyMIFi3moEM_QA58L33C9UnF1PhIV1NnZUej3ts90NZuyrYH72lMzV_0UFA=w700-h429-no?authuser=0"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Who might have once looked like this?", //
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUN5mri7XHivG4CLavtPxdEUZua-XCsPCB9OORhoVKUDT7qqBfX8qET27fOZIc2O_jsoaz8UPBlO1dkcyv50t7L7RxgAxRxAgk2e1MVF_gybsg-ikQOw0A764ayZ9e5DZkht33PEm8JpG6OoJUT1mpxzg=w348-h429-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLWSfG6SkBtOcRfwX6fHgVV5X9cUIb_bdJmUOmuuzkB8TLE5QIJRhbXb5L6NtOmhXLe_jDi302cxAqlhCoNA3_cuIC5xwspqcDPjswatEzPWhx20-w4JBsIDoTy3FAM_ZCJD4hLUmGU6qjGIbsLxF44mzg=w700-h429-no?authuser=0"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Who might have once looked like this?", //
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXYhYhBTVcYrr49jE_Elotqwm60ziqMDNLzJEdsgaf7v2m07xrQiYVspB14dKHRCW8Znrh7wMY5VvBr6yvV83MGylWlxuG4Wno65Ju63MrTA2Fbof81DdTYSLW0CPRT05_PE83YVIgeB2TGs_1YQzXzbQ=w352-h519-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLU49Pqc5CtEEy-Q0V2LdAxReZdm9Mfi7qESDLX-Oqm9NWlRUe40fy6s-OyOv_FRiL6Cj19CAM3zz0QdsvsgUjCeGjxpLYsACpa6JSfrXh5HRYVHBffVfegaOZGLuwuO6ork43nW80qbXaHsA_KtG_ReBg=w700-h519-no?authuser=0"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Who might have once looked like this?", //
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVTNSNy760wyLeggwddu3iVC2wrlVcg5aFxkgA36ZqqynBNgBLoNOjF9IWFt-ZQlzrAMM2Lm81Qzl86KHCT9Mgtur-z1xT_vQTfzoC0tj2Ey4jLCY9gsvHI4-SbSVkHsFixc_8O998zdeej4a1aFEputA=w349-h425-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLUNlAXwz_WijLI_rFjjDaO55B5ewp9CqgYSHiTcGn-iuyfzlPaMjDdQ7C3yINlHDhgKm51b4UFreWrPaSM6DmCcUK5NZsFBQ7YGDdbXxvBa5XEp6ZR2JtwXZhkRgStjCco0ueaMvyoJOw4JwkTFiXNsOw=w700-h425-no?authuser=0"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Who might have once looked like this?", //
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXzQuV3-srseyhOuQdLB27P9t99-ArCf5MOFjc6N2Kk24Xz7d7zvKUiRf1XCCV8leCqRUAOuUmka-49h0AB7L6QfEWIy9I9WDdL4VyW2lK4CUbYD6FnK7MP23kmvfmhBdfsGqDQd29CVKj_rz_-bInchA=w349-h520-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLWej7059vc6IcS5IW3fx5mQEn1bBK9aBdlP62inMg89mBQZSxqLZFkCCfu6QxQNrFwq9zO3G52WP6FY5jnP4OgqhNOWcyCkyGM8efumB7MCN_4sAK_WaxdKrG8uNNJKDVnYWBk0fz-nUPJolialDRZCUA=w700-h520-no?authuser=0"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Who might have once looked like this?", //
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUd7HNfFSJJc8j5eVKk-2LQlxm_vpBXdOvBqFyafbNxx-4uIM78KjLs9lPLAZ_LFDMwnEEaYBoOiVGBR_X_fP7hKaxVTCsPdP29FyhdCjuXdFVODNFifeqAhFsGQJ9lQrnTEasG27x8gEUj9Id6zZvl_A=w347-h521-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLVxFmUHO3egvvNOO2FYa9d-5nftgvR-k7Sv5H2TIqqe-FDYze_o6SjSVKYjloKIweEuaXbyEb98IDJ1Nj-awgPcTVnE7PESJ-NahD6oJ4zEC7Ucpi_9NXW2poePhWSHlux7Oe-q1O-r-9e7n1guK5xsdQ=w700-h521-no?authuser=0"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Who might have once looked like this?", //
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVkbYN0JyKSzTgyUkKfIh2Ts3Ekw1UP-ycDTXf4rOtCXOOKPSyHhOjj6CxVLyTzPj1584mokXN2U_CIGdxnHFFBTWQiDOw_B_bw0j1PwWiTcwD67lgfseiS9eu5pp6cmKuhIGE3uKknakZKa1j5EzzCUA=w351-h434-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLWyYL2MDOOqze8gT2P_rZlD3IoC7OR-CPadYywNQ48BVbCX_2cncnZAZ6TiQKT3qfc4e7KvRut8E41gUJM35KRjeSIAmmvhFEXwObmc9Z6fcansosSXWdpOssJtD08FuXNPkLQK11N0fsgNeppRfWBa9A=w700-h434-no?authuser=0"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Who might have once looked like this?", //
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVb0EEkiPsBgYhpYpSbB_C5zZ8Y6dvzSg3uLMfdyXqKn3naXo3ve00ZOTZBFeCpeC-WTnb_y22ymbYHhbL8n-o8KoIEVdpHKrYm5wiNWjGUlmvaIivavWUuAhZqINpluJsyano7ilBRVisv3oQYOp4i1Q=w296-h350-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLV0tXxgOCIW6NebQvFxQrlfEHFneCPGKibrbZDwjnAyxU9zaLGG38QvUHWRcfWt4fLDea2RsffGqdLQ0onpSHf-g22QweHxYT8BZQ_48NhfQD2g6BRDe1qMUVqLv61q9wBlblgNKo6FkvKdVPG7WM2PLQ=w296-h350-no?authuser=0"}) ;
+
+
+
+quests[++questIndexBuilder] = { //
+		name : "Plants",
+		hoverover : "Alphabetical plants",
+		tags : "2021-9-18,saturday,InnerWheel,surfers",
+		splash : {splashType : splashTypeText  , splashText : "Name the plant.  The answers are in alphabetical order", splashImage : "" },
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,	question : "What is the plant which is similar to the thistle, with a partly edible flower?", //
+	answer : "Artichoke",
+	answerimage : "https://www.gimmesomeoven.com/wp-content/uploads/2017/05/How-To-Steam-and-Eat-An-Artichoke-Recipe-1-2.jpg"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,	question : "To which family do the cabbage and cauliflower belong?", //
+	answer : "Brassicas",
+	answerimage : "https://www.quickcrop.co.uk/blog/wp-content/uploads/2019/04/Brassica-oleracea-evolution.jpg"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,	question : "What is the common name for the family of spiny, fleshy plants native to America?", //
+	answer : "Cactus (Cacti)",
+	answerimage : "https://cdn.shopify.com/s/files/1/0012/7896/7891/products/WhatAPrick-MoonFlower_cactuslights2000px_eyes_1024x1024@2x.jpg?v=1613656025"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,	question : "From which flower does the expensive spice of saffron come from?", //
+	answer : "Crocus",
+	answerimage : "https://cdn.webshopapp.com/shops/108044/files/55689084/650x750x1/crocus-early-purple.jpg"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,	question : "Linseed oil is obtained from the seed of which plant?", //
+	answer : "Flax",
+	answerimage : "https://www.gardenia.net/storage/app/public/uploads/images/detail/vqwxsF0wz5895VcqdlQza1bCZNtSBnpMan7m1wNy.jpeg"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,	question : "What flowers name translates from the Greek as 'Water Vessel'?", //
+	answer : "Hydrangea",
+	answerimage : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-680839667-1555611719.jpg?crop=0.752xw:1.00xh;0.219xw,0&resize=480:*"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,	question : "What plant was named after the Greek goddess of the rainbow?", //
+	answer : "Iris",
+	answerimage : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Iris_germanica_%28Purple_bearded_Iris%29%2C_Wakehurst_Place%2C_UK_-_Diliff.jpg/220px-Iris_germanica_%28Purple_bearded_Iris%29%2C_Wakehurst_Place%2C_UK_-_Diliff.jpg"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,	question : "In Greek legend what was eaten on the Island of Jerba?", //
+	answer : "Lotuses",
+	answerimage : "https://www.thoughtco.com/thmb/mik7Z00SAYN786BQbieXWOzZmc8=/2121x1414/filters:fill(auto,1)/lotus-flower-828457262-5c6334b646e0fb0001dcd75a.jpg"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,	question : "Eggplant (aubergine) is not a vegetable, but is actually a member of what plant family?", //
+	answer : "Nightshade",
+	answerimage : "https://www.besthealthmag.ca/wp-content/uploads/2011/09/Nightshade-vegetables-eggplants.jpg"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,	question : "Which edible nut of the American hickory tree is similar to a Walnut?", //
+	answer : "Pecan",
+	answerimage : "https://post.healthline.com/wp-content/uploads/2020/08/pecans-732x549-thumbnail-732x549.jpg"}) ;
+
+
+
+quests[++questIndexBuilder] = { //
+		name : "Lost in Translation",
+		hoverover : "Song lyrics which have undergone multiple Google Translates",
+		tags : "2021-9-18,saturday,InnerWheel,surfers",
+		splash : {splashType : splashTypeText  , splashText : "Name the song from the lyrics - but the lyrics have been put through Google Translate a number of times...", splashImage : "" },
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	
+	question : "</BR>Mom, he killed a man</BR>Write it on your head</BR>Pull the mark, now dead.</BR>Mom, life is just getting started</BR>But now I discard everything", //
+	answer : '<iframe src="https://open.spotify.com/embed/track/3z8h0TU7ReDPLIbEnYhWZb" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	
+	question : "</BR>They tried to force me to go to recovery</BR>But I did.  'No no no'</BR>Yes I am</BR>But when I get back, you know, you know, you know", //
+	answer : '<iframe src="https://open.spotify.com/embed/track/3N4DI1vuTSX1tz7fa2NQZw" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	
+	question : "</BR>Touch your hand.</BR>Reach, touch, touch.</BR>Beautiful Caroline.</BR> Good times are never good.</BR>I'm sad if I'm sure that didn't happen", //
+	answer : '<iframe src="https://open.spotify.com/embed/track/62AuGbAkt8Ox2IrFFb8GKV" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	
+	question : "</BR>This is Tom manor on the ground control.</BR>I walk through the door.</BR>I flow naturally.</BR>May I go again?", //
+	answer : '<iframe src="https://open.spotify.com/embed/track/72Z17vmmeQKAg8bptWvpVG" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	
+	question : "</BR>I choose a good environment</BR>give me suggestions</BR>I choose good vibes</BR>Give me suggestions", //
+	answer : '<iframe src="https://open.spotify.com/embed/track/5t9KYe0Fhd5cW6UYT4qP8f" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	
+	question : "</BR>I was just sitting on the harbour</BR>Pay attention to the flow flow</BR>I was sitting on the harbour and counting my time", //
+	answer : '<iframe src="https://open.spotify.com/embed/track/3zBhihYUHBmGd2bcQIobrF" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	
+	question : "</BR>William Denim is not my favourite</BR>She is just a girl who claims to be me</BR>But that boy is not my son</BR>He said that I am the same, but the child is not my son", //
+	answer : '<iframe src="https://open.spotify.com/embed/track/5ChkMS8OtdzJeqyybCc9R5" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	
+	question : "</BR>One two three four.</BR>Everything is in the car, so let's ride.</BR>Wedding shops around the wine shop</BR>The boys said they needed some gin and juice", //
+	answer : '<iframe src="https://open.spotify.com/embed/track/6x4tKaOzfNJpEJHySoiJcs" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	
+	question : "</BR>You are not just any dog</BR>Cry every time</BR>You are not just any dog</BR>Cry every time</BR>You never get a girl, you're not my friend", //
+	answer : '<iframe src="https://open.spotify.com/embed/track/64Ny7djQ6rNJspquof2KoX" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	
+	question : "</BR>Take me to the moon</BR>My reading plays in the stars</BR>How to see spring, Jupiter and Mars.</BR>In other words, hold my hand</BR>Kiss me with baby sounds", //
+	answer : '<iframe src="https://open.spotify.com/embed/track/1PVTvvxpSkyJWemW1CwVVk" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	
+	question : "</BR>They stood in the sun and laughed</BR>Hidden away behind a rainbow wall slide</BR>Always along he waterfall, with you</BR>My dung eyes you, my dung eyed woman", //
+	answer : '<iframe src="https://open.spotify.com/embed/track/3yrSvpt2l1xhsV9Em88Pul" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'}) ;
+
+
+
 /*
 quests[++questIndexBuilder] = { //
 		name : "Test Alt speak",
