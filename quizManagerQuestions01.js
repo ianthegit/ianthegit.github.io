@@ -3078,6 +3078,17 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
 	answer : '<iframe src="https://open.spotify.com/embed/track/3yrSvpt2l1xhsV9Em88Pul" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'}) ;
 
 
+quests[++questIndexBuilder] = { //grl power
+		name : "Goodbye traffic lights",
+		hoverover : "As the UK rips up the traffic lights travel system, here are some Red/Amber(Yellow/Orange)/Green songs",
+		tags : "music,2021-9-18,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/72acVRlAD2l0EiiMn1GYlO" width="501" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+	answer : ""}) ;
 
 /*
 quests[++questIndexBuilder] = { //
