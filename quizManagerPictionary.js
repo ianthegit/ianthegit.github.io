@@ -898,6 +898,31 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://www.independent.ie/migration_catalog/d2d97/25303377.ece/AUTOCROP/w1240h700/ET", answerSpeak : "ET's bike"}) ;
 
 
+quests[++questIndexBuilder] = { //
+		name : "Pictionary 32",
+		hoverover : "Pictionary on the theme of British stereotypes",
+		tags : "2021-9-18,pictionary",
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUjLsgCpXF_M8-HGxzQorM7xSC6G5X8WgpEkZwoMbxlERIfd_pvLXo_VynW2WXISyHM7X-n8PC0CGLLMhLQCa1FjIOA84ANeynE_PbXFagnAz6JO_72A0tMZhDGS0a4XccprGS1KeCX1Q6EG4kKCJuamQ=w590-h506-no?authuser=0",
+	answerimage : "https://cdn.ebaumsworld.com/mediaFiles/picture/2391127/85012439.jpg", answerSpeak : "Rain"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLW7QeA3HJOSp9QsnTS3EUB9ZshRMCyjI1gbOYinphyZkZ5I4S0rp1r1vd4fM1efU8F5zaiQPa96UTfmoP_bII-LSMc5TNM8mkZdJUb28JBt_VklyPtnQCFKg1dTMwkrmH4T7zvTzDOgZPGetP26PEhXEA=w289-h299-no?authuser=0",
+	answerimage : "https://pics.me.me/well-at-least-his-hair-is-dry-21-funny-rain-53616411.png", answerSpeak : "Umbrella"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLV1pWpPtAqLaOf9nyWq2QmYtOkpAooRQvRHO_HJmGq-Hfb1Q9LIrgItLCjMGx5DpLsirkMMq9NDKJFvp9q-AEwlSjI2K5ERrHxSTAU4VLNC_vtiBJhPvlRrwNSWdFpvvrinHr8KO-x2BYXZO7aLpCUq2g=w336-h202-no?authuser=0",
+	answerimage : "https://i.pinimg.com/236x/a8/6c/29/a86c292f415412c8d9d4be80b22e9522--funny-things-funny-stuff.jpg", answerSpeak : "Queueing"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXE3aJbu_wqkTnDimc-S21orLSO_b1z57Vlg6JVdgIiu0qmUv7Yr3q4Dl5qvcbDPjvFvB4uaZjIQkQYw6h7JOctpKVqvPIzugZaHcOvpUoC9AcoPOMLF32hcGTf3DT-eIi8DSdTp06MndzTrYyGe0cJjQ=w305-h203-no?authuser=0",
+	answerimage : "https://s3.amazonaws.com/lowres.cartoonstock.com/fashion-ebola-bowler_hats-bowlers-ebola_crisis-ebola_pandemic-tcrn1595_low.jpg", answerSpeak : "Bowler hat"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVmnZzKhdtO3ih8gq_jc27V-Vr-pmGDRPtUzoq0z8FGPeZuw8yvvtT-0f_WZzaEfaop64-9u8Ld120f-F-u_yiCRzTmGNugaaooH_FL3ujfXWX_rCgvM670pqPSyohQbcICLXS5lPFDUi4ugJXgzJFYOw=w215-h273-no?authuser=0",
+	answerimage : "https://canary.contestimg.wish.com/api/webimage/59152bea0005e426fc6bebb9-large.jpg?cache_buster=c73c0a8986a7636c967d2a73081e5716", answerSpeak : "Cup of tea"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLWI123ugNN9SQdfMgKaDGxU3O-Soz7Sglkm3y8GuhqwMEFcMkfhAhEHdGfTVCowUWcwCyiEOHwTJTuts-qUOrBsC8FVU_pNrSAg9m6UCNHCemhHIWn5Z6dEBeejiVnZhoYWUl9bPGQ_X9IrNSMzI43sQw=w192-h227-no?authuser=0",
+	answerimage : "https://cdn-o.fishpond.com/0286/242/138/1410651732/original.jpeg", answerSpeak : "Pint of beer"}) ;
+
 
 /*
   
