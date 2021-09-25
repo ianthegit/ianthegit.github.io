@@ -2410,7 +2410,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 quests[++questIndexBuilder] = { //
 		name : "Turtally Brilliant",
 		hoverover : "Some turtles",
-		tags : "2021-9-11,saturday,InnerWheel,surfers",
+		tags : "2021-10-3,saturday,InnerWheel,surfers",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
@@ -2453,7 +2453,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 quests[++questIndexBuilder] = { //
 		name : "Wales 1",
 		hoverover : "Some specific questions",
-		tags : "2021-9-11,saturday,InnerWheel,surfers",
+		tags : "2021-9-26,saturday,InnerWheel,surfers",
 		questInfo: new Array()
 	};
 
@@ -2487,7 +2487,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 quests[++questIndexBuilder] = { //
 		name : "Wales 2",
 		hoverover : "Some less specific questions",
-		tags : "2021-9-11,saturday,InnerWheel,surfers",
+		tags : "2021-9-26,saturday,InnerWheel,surfers",
 		questInfo: new Array()
 	};
 
@@ -2519,7 +2519,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 quests[++questIndexBuilder] = { //
 		name : "Cruising",
 		hoverover : "Tom and his curry",
-		tags : "2021-9-11,saturday,InnerWheel,surfers",
+		tags : "2021-10-3,saturday,InnerWheel,surfers",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
@@ -2600,7 +2600,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 quests[++questIndexBuilder] = { //
 		name : "Hidden Time Traveller",
 		hoverover : "Spot the hidden Dr Who reference for an extra point",
-		tags : "2021-9-11,saturday,InnerWheel,surfers",
+		tags : "2021-10-3,saturday,InnerWheel,surfers",
 		splash : {splashType : splashTypePictureAndText , splashText : "Shout out the hidden Dr Who reference and win a point", splashImage : "https://metro.co.uk/wp-content/uploads/2020/02/doctor-who-elisabeth-sladen-sarah-jane-smith_1582209527.png?w=1200&h=630&crop=1" },
 		questInfo: new Array()
 	};
@@ -2835,7 +2835,7 @@ quests[++questIndexBuilder] = { ////https://quizly.co/can-you-guess-what-happens
 			name : "Next!",
 			hoverover : "What happens next",
 			splash : {splashType : splashTypePictureAndText , splashText : "In honour of the new Question of Sport and their famous 'What happened next?' round...", splashImage : "https://i.inews.co.uk/content/uploads/2021/09/PRI_197773633-640x360.jpg"  },
-			tags : "2021-9-18,saturday,InnerWheel,surfers",
+			tags : "2021-10-3,saturday,InnerWheel,surfers",
 			questInfo: new Array()
 		};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?", 
@@ -3088,6 +3088,69 @@ quests[++questIndexBuilder] = { //grl power
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	question : "",
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/72acVRlAD2l0EiiMn1GYlO" width="501" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+	answer : ""}) ;
+
+
+
+
+quests[++questIndexBuilder] = { //
+		name : "Brexit movies",
+		hoverover : "What Hollywood blockbusters have been reimagined for the Brexit age?",
+		tags : "2021-9-26,saturday,InnerWheel,surfers",
+		splash : {splashType : splashTypePictureAndText  , splashText : "What Hollywood blockbusters have been reimagined for the Brexit age - for instance, this is 'Hunt for Red October'", splashImage : "https://lh3.googleusercontent.com/pw/AM-JKLWa-sXEthCH0yEZDUut56ho2ZJqN7JInRw52n2LE44LSNW3lKb54qU1V2DeEKmuGNaavvYlRC0ied6NZ4b1eJYhtn72x_s4wiTuQpJYDMjvUb6DM7bv1jpXXGiIRoQfke5BKEuMm5Y1jD79faFs-4UPuA=w600-h800-no?authuser=0" },
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What film is this?" ,
+	answer : "Chips", image : "https://lh3.googleusercontent.com/pw/AM-JKLXdjDXjwIeNLWrelxkw38yzmLDqlXwYl47NU2DAFq9hTBuj1ELBp1twNmFVlwajNz9GetoOLj_QYiq_L_4bN9dwjbz4HiWNSQdCpzDM5eqmbPoODqUCu0BgfyH7pZLTmYgFsBfseumsnAmegDnI5NaPmg=w800-h627-no?authuser=0"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What film is this?" ,
+	answer : "The Matrix", image : "https://lh3.googleusercontent.com/pw/AM-JKLWDRqfgVqVax2coWUg30xIeRzNq6bFTk3rReI2W-LEvjdvRp0pciOGKMSkRVdKzpNgLNe8NJ1-G2IkMfn4FcngI30Xco_XTnjVFHXKfJkA86Vo9mvVsgY_dtxVWlKkWt-nHZcCrYwH0Q1lD68KJp8Ntyg=s799-no?authuser=0"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What film is this?" ,
+	answer : "Bill and Ted's Excellent Adventure", image : "https://lh3.googleusercontent.com/pw/AM-JKLUZLllsHP7bSiNB2KkykaNPJ4hgz2W7Vv31lbgd5FPpdjIM3j02f_zIc-ercXMve7nh7P2ZK4EEdeqmHbATnt8tzvuLJ1dKHdxBhh-nzxgpz0e6siBHY_Rzx_vVhFTM3ZhZu5qS-tFU2cJ3L_YMZJZp0g=w676-h800-no?authuser=0"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What film is this?" ,
+	answer : "King Kong", image : "https://lh3.googleusercontent.com/pw/AM-JKLXmokgcw_wlaScLO8k4oU7T8IUlfGikQF7Gx_gJNl9yjvGLtX1JzWaq43N5VThIs-GOj4Gtxa9qwoLiZJZ9cmWJ-0XC4nWihaaTcss4GiC6LJcmJWMoJFxPnbC5QcE26R6CRBSjKb14m-SATokW4vokiA=w400-h600-no?authuser=0"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What film is this?" ,
+	answer : "Game of Thrones", image : "https://lh3.googleusercontent.com/pw/AM-JKLXQzQGroQwsPqeg1qtVpBNSYvgc9Ov1Rhe683DVAVtY62DQh6HuJmBRccepVMefbChzmqKoYDx7o_pR3VEtmMBG5u-GG_9or3fPVKxRoQDdkh6iKPVgBebtvvf7HW98j2poHz9Him-llnt41_HxZkzKhw=w800-h483-no?authuser=0"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What film is this?" ,
+	answer : "Dirty Harry", image : "https://lh3.googleusercontent.com/pw/AM-JKLXLztZ9-XJXGq99RHFlPyC9s2gK1RX74WADbxd_ajrcjGzKT8rgTu2uCjoOG4UMd5TkEBu7Rnky3H9LF2azOPc-r4kSWyHrpmAwHF1mrL2V_Oz1dJH1jTLAxGZzAcvW3uR0vhHuMA3Db6LKwP5-6Q67DQ=w471-h800-no?authuser=0"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What film is this?" ,
+	answer : "Fargo", image : "https://lh3.googleusercontent.com/pw/AM-JKLVpG7rsL8AS8duKPL4opMh8KOWBHSqliB1E5FUrgwYhDUeY3VaNgQb6uheA0Pxu1ksn2Bkj37FOIzcEhdBsB6XdSQWBYzwm_qtvItIzNb8clIQPnLYTrq6birCCQ9hpWznCjr61JX9QU9kGu41Lf_JWTA=w460-h611-no?authuser=0"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What film is this?" ,
+	answer : "Bad Boys II", image : "https://lh3.googleusercontent.com/pw/AM-JKLVG4YeMndPmFWqZJ6cBaq0GAxquOqdgLSFeb8XRj7LIS9sdT65Ivffo9RIjSkwBYH1xv5kFVLhsOPLulfdllnoM6uYe-tvtob1EnUP9ulYLaBTKyMZORRv2cJcOI8z5KZzUeswJJFjspFbYz2Lca9KNYA=w556-h800-no?authuser=0"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What film is this?" ,
+	answer : "Savng Private Ryan", image : "https://lh3.googleusercontent.com/pw/AM-JKLXhnOTChOuc0MRdnKE2VkZecPzC8nEEVlxKoxepTVWxDQ1IzKS-U_US19URTC7yQ0NvWpJhOv0eCt936D2Jgc416ynhBj3E77TbcnTXPcTmMoXqnQ7M8buDHGsYdwGwLBnksiBQdHk6htuP5FesIj7pDQ=w354-h482-no?authuser=0"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What film is this?" ,
+	answer : "The Lost Boys", image : "https://lh3.googleusercontent.com/pw/AM-JKLXxER4z9Ieh3BBiTCb-VSC3yAS8zVzTgUc_oVsAnpW0kdOYYTLGbA_DqCfpyp5L7J1igs5jBv0BiIy14HjIhuxj9eXiBGRUP3ws5lSDxMRBjhMi4ZKZDNHR66338q4F9cr_3b9x4zDDWNwWFRl-5M2hPQ=w600-h407-no?authuser=0"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What film is this?" ,
+	answer : "Mash", image : "https://lh3.googleusercontent.com/pw/AM-JKLVsStOCajT1CluFftTRwrg5ylTA6WFA684R1uY_8Om8LiTfoEFG_m80iibmgikfgDHq_MnSwtLP2EyR6f3e0Td5oh-PPz9SeswTInSijleuo5ydaCDiivcxdBec03wlJdsVpeunlAz9bObjt7NFH9t2jQ=w400-h600-no?authuser=0"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What film is this?" ,
+	answer : "The Silence of the Lambs", image : "https://lh3.googleusercontent.com/pw/AM-JKLU3-zIWlQS94Lp_akWT0Z40MIxxW6x3vOK7EECTatZ6BYL0c4IGg7WagA5i_Gokx3fDQVdmvelPBS21vZ7Xl_ojfJCV5zVrEryU4ON-ri470UTfNeiFjJOQFODuAC1K4fMEY9VN-6VOc_jHuhSMW__cvQ=w800-h628-no?authuser=0"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What film is this?" ,
+	answer : "Emmanuelle", image : "https://lh3.googleusercontent.com/pw/AM-JKLX7w1Zuqwn9Z_KUd5dBrQeEHbd0hmZHixWExN0f_JqylA4Gat9qVtPqmh8jL_Joe74_1zuC3h4BGVq0jc_BlIuavQrbKEg7J6kwrf9OYIMGMp5lVa-GpoE3mk1J6J2F1vVuxCkECuJzAHi7ceZFnQ6kkA=w582-h871-no?authuser=0"	});
+
+
+quests[++questIndexBuilder] = { 
+		name : "Goodbye cars",
+		hoverover : "As the UK runs out of fuel, here are some songs about cars you will never drive again, roads you will never drive on, and walking",
+		tags : "music,2021-9-26,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/0ItsN9LCyhnOYQVWyvTqdG" width="501" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
 	answer : ""}) ;
 
 /*
