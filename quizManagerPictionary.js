@@ -923,6 +923,30 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLWI123ugNN9SQdfMgKaDGxU3O-Soz7Sglkm3y8GuhqwMEFcMkfhAhEHdGfTVCowUWcwCyiEOHwTJTuts-qUOrBsC8FVU_pNrSAg9m6UCNHCemhHIWn5Z6dEBeejiVnZhoYWUl9bPGQ_X9IrNSMzI43sQw=w192-h227-no?authuser=0",
 	answerimage : "https://cdn-o.fishpond.com/0286/242/138/1410651732/original.jpeg", answerSpeak : "Pint of beer"}) ;
 
+quests[++questIndexBuilder] = { //
+		name : "Pictionary 33",
+		hoverover : "Pictionary on the theme of Famous historical figures",
+		tags : "2021-9-26,pictionary",
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXhoOPQssN7EnH0qshjk-eimA3_aRs8ohIbhvC58l2_Lk3Zwalsk07CnvlYze3bsXE9T-lNzXiV5eCoePxnmYV6_w3F8HC88UdC3BWraqu8rvFaWfhS5XkEKub-5e9bGHElgPqm5f3UFxhEf4uaY6hD2Q=w771-h528-no?authuser=0",
+	answerimage : "https://imgix.ranker.com/user_node_img/50107/1002130231/original/1002130231-photo-u1?auto=format&fit=crop&fm=pjpg&w=650&q=60&dpr=1", answerSpeak : "Henry 8th"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVZBHH7wSLA1ANdsSGH6-QhmG1QORrSNTj3TGJ9E5u94JJzWSfE6aq8HON4r7hutqd9HA5lfNkdJFnlRiW7GcMvZ6B-yGgzC7nJEtd_kNeiDCYuZ3wxjFSe4vtwRuNM8H_nvULPk0A20kdNTXFMmBdmUA=w659-h722-no?authuser=0",
+	answerimage : "https://pics.awwmemes.com/lord-nelson-was-about-5-ft-6-and-his-statue-35540608.png", answerSpeak : "Nelson"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUQxhhi98St6jGLhsbUVtweTmEBosM0tyjXKiNKQkPOLZCQSgooxMHVGoUPuFjeT5Ou-paq362PtWF9zyBOGRWA5Cp9_YEREMVkNypV96HuQE9Jd72qZnCEpQUapL2TOqNphKscRfiYBehTGk05D_ueNw=w899-h776-no?authuser=0",
+	answerimage : "https://www.jokejive.com/images/jokejive/22/22a3c7fa913a9965284182fbc3d6000c.jpeg", answerSpeak : "Napolean"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLU9kHLAXGSEnDdepBp7Z_Pq-qJWwegn_h_RddLJ7HXjoO42EK_7B3cUd_lqtmIny5wvVRWJqDlbT5URLiF01ZXOiZmqGuvxneUXgWby8MffvdwEMvz9gsroSp6oQ1Nt4BHjrx4wqVg1jlZMF4Um-Ky0JQ=w420-h435-no?authuser=0",
+	answerimage : "https://images.squarespace-cdn.com/content/v1/584d5b1003596e5ae93ecce1/1481468405481-CIC5N8M11W41EOFJLYLC/image-asset.jpeg", answerSpeak : "Arthur Scargill"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUENkfPbGC1aFlX9eSfYiekgciRW5F_ZUdOfdTlCCqJpSRSso1ZkBIWXkZEgwQE0gZLerb36vAClOQ6ezBFXY8s2XAIRQGhUc4r6knZlexUwi8zpiNlhSC7BlEY_Ue9Bv6FbfkGptbxNvti_eb06gyXQQ=w424-h461-no?authuser=0",
+	answerimage : "https://www.travelnursing.com/uploadedImages/TravelNursing/Content/Resources/News_Features_And_More/Florence.jpg?n=6950", answerSpeak : "Florence Nightingale"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVf4q6QqFHn4Zzub2a5JdhRJXCqaSL-afieUZ5p3DZ1iascX0nOXNiUiBwthJJhNwEunENQ5h1PPEKJ2gcHJY_oZknyB-QGK5kjqSJLHPGyxDtHXH5LgkUAbBINCP6-zraF5lGsN_-Wn7e7-NBe76LcFA=w354-h391-no?authuser=0",
+	answerimage : "https://learnodo-newtonic.com/wp-content/uploads/2013/05/Albert-Einstein-Funny-Quotes-Featured.jpg", answerSpeak : "Einstein"}) ;
 
 /*
   
