@@ -3159,7 +3159,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 quests[++questIndexBuilder] = { 
 		name : "Eye know!",
 		hoverover : "Name the celeb",
-		tags : "2025-1-1,saturday",
+		tags : "2025-1-3,saturday",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
@@ -3199,7 +3199,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 quests[++questIndexBuilder] = { 
 		name : "Fall",
 		hoverover : "How much do you know about Autumn?",
-		tags : "2021-10-2,saturday",
+		tags : "2021-10-3,saturday",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
@@ -3233,7 +3233,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 quests[++questIndexBuilder] = { 
 		name : "Autumnal toonz",
 		hoverover : "Songs about Autumn",
-		tags : "music,2021-10-2,InnerWheel,saturday",
+		tags : "music,2021-10-3,InnerWheel,saturday",
 		questInfo: new Array()
 	};
 
