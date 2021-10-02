@@ -3153,6 +3153,135 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/0ItsN9LCyhnOYQVWyvTqdG" width="501" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
 	answer : ""}) ;
 
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Eye know!",
+		hoverover : "Name the celeb",
+		tags : "2025-1-1,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this?" + Table4ColumnStart + "Beyonce</td><td>Whitney Houston</td><td>Jennifer Lopez</td><td>Rihanna" + Table4ColumnEnd,
+	answer : "Whitney Houston", image : "https://i.guim.co.uk/img/media/8aa305e9917b348df91e077f105800b5e0e9a43f/769_1033_503_301/master/503.jpg?width=620&quality=85&auto=format&fit=max&s=510424bc4ab427cc7afc9a7d7c0c1617"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this?" + Table4ColumnStart + "Michael Gove</td><td>Keir Starmer</td><td>Dominic Raab</td><td>Matt Hancock" + Table4ColumnEnd,
+	answer : "Matt Hancock", image : "https://i.guim.co.uk/img/media/67afe43328232795d067a340af2251e6bd4c88e4/865_845_510_306/master/510.jpg?width=620&quality=85&auto=format&fit=max&s=bb37e24803ee61cfcd5fba7c5c62c27d"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this?" + Table4ColumnStart + "Romesh Ranganathan</td><td>Nish Kumar</td><td>Mawaan Rizwan</td><td>Richard Ayoade" + Table4ColumnEnd,
+	answer : "Richard Ayoade", image : "https://i.guim.co.uk/img/media/d092334f761b35943567d243c6904038ddf03957/730_1298_626_376/master/626.jpg?width=620&quality=85&auto=format&fit=max&s=923d4283cb0c23eca89d26f39219077f"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this?" + Table4ColumnStart + "Miranda Hart</td><td>Phoebe Waller-Bridge</td><td>Charlotte Ritchie</td><td>Emma Watson" + Table4ColumnEnd,
+	answer : "Phoebe Waller-Bridge", image : "https://i.guim.co.uk/img/media/b8e0d7d39d0840a40cc8d77ef55085d03b442b42/545_891_646_387/master/646.jpg?width=620&quality=85&auto=format&fit=max&s=cc25be79ed8c4284bf324a86c3193aa0"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this?" + Table4ColumnStart + "Liam Gallagher</td><td>Ian Brodie</td><td>Jarvis Cocker </td><td>Damon Albarn" + Table4ColumnEnd,
+	answer : "Jarvis Cocker ", image : "https://i.guim.co.uk/img/media/c5bbb0dee35efb2152823d8ce24120c4051bbc66/480_1088_847_508/master/847.jpg?width=620&quality=85&auto=format&fit=max&s=0c83de4046e622c1ca8ee6aad74d533d"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this?" + Table4ColumnStart + "Ian McKellen</td><td>John Hurt</td><td>Patrick Stewart</td><td>Christopher Lee" + Table4ColumnEnd,
+	answer : "Patrick Stewart", image : "https://i.guim.co.uk/img/media/366e87b4a2afff007b68c4c282ff5e5ee243d065/2026_1014_539_323/master/539.jpg?width=620&quality=85&auto=format&fit=max&s=d0655b99660eadae7e36b0c998eb83fd"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which 2 celebs are mashed together here?",
+	answer : "Ant and Dec", image : "https://www.thesun.co.uk/wp-content/uploads/2018/04/nintchdbpict000398032619.jpg?w=620"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which 2 celebs are mashed together here?",
+	answer : "Jeremy Clarkson and Richard Hammond", image : "https://www.thesun.co.uk/wp-content/uploads/2018/04/nintchdbpict000398032622.jpg?w=620"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which 2 celebs are mashed together here?",
+	answer : "Meghan Markle and the Duchess of Cambridge", image : "https://www.thesun.co.uk/wp-content/uploads/2018/04/nintchdbpict000398032629.jpg?w=620"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which 2 celebs are mashed together here?",
+	answer : "Louis Walsh and Simon Cowell", image : "https://www.thesun.co.uk/wp-content/uploads/2018/04/nintchdbpict000398032617.jpg?w=620"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which 2 celebs are mashed together here?",
+	answer : "Vladimir Putin and Jeremy Corbyn", image : "https://www.thesun.co.uk/wp-content/uploads/2018/04/nintchdbpict000398032618.jpg?w=620"	});
+
+quests[++questIndexBuilder] = { 
+		name : "Fall",
+		hoverover : "How much do you know about Autumn?",
+		tags : "2021-10-2,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which autumnal farming practice has been banned in England and Wales since 1993?" ,
+	answer : "Stubble Burning", image : "https://i.dailymail.co.uk/i/pix/2016/01/04/21/2FCC3CBA00000578-0-image-a-66_1451944044987.jpg"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which world championship takes place every year in Northamptonshire on the second Sunday in October (Which these 2 won a few years ago)? Something that occurs naturally every autumn is a crucial part of the sport." ,
+	answer : "World Conker championship", image : "https://ichef.bbci.co.uk/news/976/cpsprodpb/3A7C/production/_98227941_conk_king2.jpg"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Why is autumn particularly important to the Queen's first grandchild?" ,
+	answer : "He married her - Autumn Kelly (although they're now divorced)", image : "https://www.hellomagazine.com/imagenes/royalty/20201112100760/peter-phillips-to-celebrate-43rd-birthday-autumn-phillips/0-482-710/peter-birthday-t.jpg"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Squirrels are starting to bury acorns. What is the bird that does the same?" ,
+	answer : "The Jay", image : "https://i.redd.it/wlb2xvxp0yi11.jpg"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "This mushroom got its name because its tubes coming from the ground look like devices to allow the dead and buried to hear. What is it's name?" ,
+	answer : "Trompette, from 'trompette de la mort', or 'hearing trumpet of death'", image : "https://i.dailymail.co.uk/1/2018/09/24/22/4524000-6203315-image-a-7_1537823184788.jpg"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "The Siberian hamster's testicles swell to how many times their normal size in preparation for mating?"+ Table4ColumnStart + "2</td><td>5</td><td>17</td><td>They shrink due to the cold" + Table4ColumnEnd ,
+	answer : "17", image : "https://news.uchicago.edu/sites/default/files/images/2019-06/siberian_hamster_hibernation.jpg"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Hedgehogs begin hibernating. What is a baby hedgehog called?"+ Table4ColumnStart + "hedgenipper</td><td>hoglet</td><td>truffle-spiker</td><td>ickle-prickle" + Table4ColumnEnd ,
+	answer : "Hoglet", image : "https://heavenlyhedgies.com/wp-content/uploads/2019/03/mama-hedgehog-with-five-baby-hedgehogs-1024x538.jpg"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Spiders mate in October. This breed of spider shares its name with which ecclesiastical rank?"+ Table4ColumnStart + "parson</td><td>cardinal</td><td>bishop</td><td>reverend" + Table4ColumnEnd ,
+	answer : "Cardinal. It's named after Cardinal Thomas Wolsey, who was once scared by a spider at Hampton Court", image : "https://static.inaturalist.org/photos/107830610/large.jpg?1608485902"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "In Australia, Autumn begins in which month?" ,
+	answer : "March", image : "https://www.internshipsdownunder.com/wp-content/uploads/2020/01/Autumn-in-Sydney-1.jpg"	});
+
+quests[++questIndexBuilder] = { 
+		name : "Autumnal toonz",
+		hoverover : "Songs about Autumn",
+		tags : "music,2021-10-2,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/17lZ4dFh6HTqxIB28gMKnz" width="501" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+	answer : ""}) ;
+
+
+quests[++questIndexBuilder] = { 
+		name : "Pokemon",
+		hoverover : "A round for Ted",
+		tags : "NoDateYet,2025-1-1,saturday",
+		splash : {splashType : splashTypePictureAndText  , splashText : "Coming up are some questions about Pokemon.  How many do you think Ted will get correct?   Let me know how many you think - your score for this round will be your guess, minus how many out from Ted's score you are", splashImage : "https://i.guim.co.uk/img/media/049485d9d80d90edb0968f251959c1af0b43d451/0_309_5695_3417/master/5695.jpg?width=620&quality=85&auto=format&fit=max&s=61ab841d0a977ee40b8eccf578b51e40" },
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What Pokemon is being described here? </BR>A Pokemon formed by the spirits of people and Pokemon. It tugs on the hands of children to steal them away. Because of the way it floats aimlessly, an old folktale calls it a 'Signpost for Wandering Spirits'",
+	answerimage : "https://assets.pokemon.com/assets/cms2/img/pokedex/full/425.png", answerSpeak : "Drifloon"
+} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What Pokemon is being described here? </BR>It wears a ragged head cover as a disguise, but little is known about this Pokemon. It's said that a scholar who once tried to look inside, met his end",
+	answerimage : "https://static.wikia.nocookie.net/pokemon/images/d/d6/Jessie_Mimikyu.png/revision/latest?cb=20170915045921", answerSpeak : "Mimikyu"
+} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What Pokemon is being described here? </BR>People who approach this Pokemon are swallowed and turned into mummies. It loves to eat gold",
+	answerimage : "https://static.wikia.nocookie.net/villains/images/9/97/Char-cofagrigus-531x507.png/revision/latest?cb=20170717000118", answerSpeak : "Cofagrigus"
+} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What Pokemon is being described here? </BR>This Pokemon wears a skull as a helmet, concealing its face as it sheds tears for its long-lost mother. It cries loudly to express its loneliness.",
+	answerimage : "https://cdn2.bulbagarden.net/upload/2/2a/104Cubone.png", answerSpeak : "Cubone"
+} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What Pokemon is being described here? </BR>",
+	answerimage : "", answerSpeak : ""
+} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What Pokemon is being described here? </BR>",
+	answerimage : "", answerSpeak : ""
+} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What Pokemon is being described here? </BR>",
+	answerimage : "", answerSpeak : ""
+} ); 
+
+
+
 /*
 quests[++questIndexBuilder] = { //
 		name : "Test Alt speak",
