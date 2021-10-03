@@ -3159,7 +3159,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 quests[++questIndexBuilder] = { 
 		name : "Eye know!",
 		hoverover : "Name the celeb",
-		tags : "2021-1-3,saturday",
+		tags : "2021-10-3,saturday",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
