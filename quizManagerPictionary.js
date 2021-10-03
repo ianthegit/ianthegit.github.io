@@ -969,7 +969,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://www.gannett-cdn.com/-mm-/99678243ec47428d05e9303d907baf407c11a17d/c=0-116-3993-2372/local/-/media/2017/05/23/USATODAY/USATODAY/636311344714120851-XXX-GETTYIMAGES-607391786-MASTER-91131045.JPG", answerSpeak : "Pretty Women"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLWo09eW99nrn9DKDlqm2VM_5k_i5HYxaHn02QYPYDfEhoKtEvWpPQJ7VBlKhr5llJuO1UbMW6jBXLe0cULaPTQJ6boqcwZnPlZuhHpMSWoDx0LlHjdDZugO1c8350lYlSOKGkmSIonkWu9drOx9mI7zcQ=w469-h243-no?authuser=0",
-	answerimage : "https://static.wikia.nocookie.net/p__/images/3/36/13911_883787808302798_7013617339755323866_n.jpg/revision/latest?cb=20170227001403&path-prefix=protagonist", answerSpeak : "Q and M"}) ;
+	answerimage : "https://static.wikia.nocookie.net/p__/images/3/36/13911_883787808302798_7013617339755323866_n.jpg/revision/latest/scale-to-width-down/286?cb=20170227001403&path-prefix=protagonist", answerSpeak : "Q and M"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLXlbq-StTELdq8iT3e2M_TEagEpCay0Cm--g_N1axolHkR2CC-OxDwm0BJMxuw5q4eRwE9UHwrRkY3R6kDxeQVJwk_w9OeJuY1CiNHq7dEpkyK6rlQCC8ft1r2D_GmHBBe9W9p5D3cFqgCwdhnU8blHbQ=w454-h559-no?authuser=0",
 	answerimage : "https://www.primermagazine.com/wp-content/uploads/2020/09/james-bonds-tuxedos.jpg", answerSpeak : "Tuxedo"}) ;
