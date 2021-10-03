@@ -2541,9 +2541,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 	question : "The captain of the Nautilus in Jules Verne's 1870 novel Twenty Thousand Leagues Under the Sea was - Captain...?" + Table4ColumnStart + "Nero</td><td>Nemo</td><td>Dory</td><td>Haddock" + Table4ColumnEnd,
 	answer : "Captain Nemo"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Tom Cruise went to Birmingham in the UK, and according to restaurant Asha's, he enjoyed eating his curry so much that he immediately ordered another one exactly the same. Which dish though?" + Table4ColumnStart + "Lamb bhuna</td><td>Vegan jackfruit massaman</td><td>Chicken tikka masala</td><td>Paneer jalfrezi" + Table4ColumnEnd,
-	answer : "Chicken tikka masala", image : "https://i.guim.co.uk/img/media/ab1881e018621d916d471b64e36bd3de79b66daa/769_151_2596_1558/master/2596.jpg?width=620&quality=85&auto=format&fit=max&s=ebb96ed93cfc65d1c4d1bde82d4c3aeb"	});
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "From September Belgium is introducing a legal right to go and retrieve a lost ball or lost pet from a neighbour's garden - True or False?" ,
 	answer : "It’s true – provided it ended up there by accident", image : "https://i.guim.co.uk/img/media/e0c05c83c7c61a5dac44ef31e697ce6a14131036/0_352_5315_3191/master/5315.jpg?width=620&quality=85&auto=format&fit=max&s=15a7efad2b8b5c0c254e60b17aa1edd1"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
@@ -2611,7 +2608,10 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	question : "In the 1860s Brussels covered up most of the river that runs through it, because it was a right old stinky mess - much like the vegetable the city is named after. After the removal of 1,966 tonnes of concrete, a 200-metre stretch is being exposed again. But which river is it that runs through Brussels?" + Table4ColumnStart + "Meuse</td><td>Scheldt</td><td>Senne</td><td>Semois" + Table4ColumnEnd,
 	answer : "Senne", image : "https://i.guim.co.uk/img/media/c8726391b2b9d4d69ebb9b3ee07832687029fafd/0_133_2953_1773/master/2953.jpg?width=620&quality=85&auto=format&fit=max&s=1127c3da4e401f845490cbbfac5aa396"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Previously I asked you about Tom Cruise's curry escapades in Birmingham. What happened to him after his curry gorging in Birmingham that made the news next?" + Table4ColumnStart + "His car was stolen</td><td>His car was impounded for illegal parking</td><td>Someone crashed into his car</td><td>Kate Bush was seen in his car" + Table4ColumnEnd,
+	question : "Tom Cruise went to Birmingham in the UK, and according to restaurant Asha's, he enjoyed eating his curry so much that he immediately ordered another one exactly the same. Which dish though?" + Table4ColumnStart + "Lamb bhuna</td><td>Vegan jackfruit massaman</td><td>Chicken tikka masala</td><td>Paneer jalfrezi" + Table4ColumnEnd,
+	answer : "Chicken tikka masala", image : "https://i.guim.co.uk/img/media/ab1881e018621d916d471b64e36bd3de79b66daa/769_151_2596_1558/master/2596.jpg?width=620&quality=85&auto=format&fit=max&s=ebb96ed93cfc65d1c4d1bde82d4c3aeb"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "After Tom Cruise's curry gorging in Birmingham what happened that made the news next?" + Table4ColumnStart + "His car was stolen</td><td>His car was impounded for illegal parking</td><td>Someone crashed into his car</td><td>Kate Bush was seen in his car" + Table4ColumnEnd,
 	answer : "His car was stolen", image : "https://i.guim.co.uk/img/media/ab1881e018621d916d471b64e36bd3de79b66daa/769_151_2596_1558/master/2596.jpg?width=620&quality=85&auto=format&fit=max&s=ebb96ed93cfc65d1c4d1bde82d4c3aeb"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Scientists claim to have discovered something near the North Pole which they have recommended be named Qeqertaq Avannarleq in the local language. What?" + Table4ColumnStart + "A new breed of Arctic penguin</td><td>A makeshift memorial to Captain Lawrence Oates</td><td>The remains of a wrecked Viking expedition</td><td>An island that is the world's northernmost point of land" + Table4ColumnEnd,
@@ -2632,11 +2632,8 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	question : "Which British sitcom features these actors as regular supporting characters? Kirsten Cooke, Arthur Bostrom and Guy Siner?" + Table4ColumnStart + "'Allo 'Allo</td><td>Brush Strokes</td><td>Hi-De-Hi</td><td>Keeping up Appearances" + Table4ColumnEnd,
 	answer : "'Allo 'Allo", image : "https://i.guim.co.uk/img/media/3842e4791d5a317de2aafdc5351f9ad9e49ae620/0_432_3236_1942/master/3236.jpg?width=620&quality=85&auto=format&fit=max&s=2d411038abd85985a64e94ae235f2ac0"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Which central American country is preparing to start accepting Bitcoin as legal tender from 7 September?" + Table4ColumnStart + "Honduras</td><td>El Salvador</td><td>Belize</td><td>Nicaragua" + Table4ColumnEnd,
+	question : "Which central American country started accepting Bitcoin as legal tender from 7 September?" + Table4ColumnStart + "Honduras</td><td>El Salvador</td><td>Belize</td><td>Nicaragua" + Table4ColumnEnd,
 	answer : "El Salvador (with Cuba a week later)", image : "https://i.guim.co.uk/img/media/cb447dc3cf01ce844eabe91ede8b4228ced4bb9e/3_0_1938_1163/master/1938.jpg?width=620&quality=85&auto=format&fit=max&s=22c7c3371446237ee11d1db3f2dbbfec"	});
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Not every Pokemon is as cute as Pikachu. Which Pokemon has this worrying official description: 'People who approach this Pokemon are swallowed and turned into mummies. It loves to eat gold.'?" + Table4ColumnStart + "Cofagrigus</td><td>Yamask</td><td>Absol</td><td>Munna" + Table4ColumnEnd,
-	answer : "Cofagrigus", image : "https://i.guim.co.uk/img/media/049485d9d80d90edb0968f251959c1af0b43d451/0_309_5695_3417/master/5695.jpg?width=620&quality=85&auto=format&fit=max&s=61ab841d0a977ee40b8eccf578b51e40"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Kraftwerk famously sang that it's in the air for you and me, but when we are talking about radioactivity, what fraction of a radioisotope has decayed after two half-lives?" + Table4ColumnStart + "All of it</td><td>3/4</td><td>1/2</td><td>1/4" + Table4ColumnEnd,
 	answer : "3/4", image : "https://i.guim.co.uk/img/media/9a0385909a51dcb6518b41ab5f2bd47f8a0ff99e/0_157_3616_2170/master/3616.jpg?width=620&quality=85&auto=format&fit=max&s=52c75c4a20d18b1eab4738a73a94ec97"	});
