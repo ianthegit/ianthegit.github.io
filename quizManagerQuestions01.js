@@ -3283,6 +3283,42 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 } ); 
 
 
+quests[++questIndexBuilder] = { 
+		name : "Mashup",
+		hoverover : "Name the celebs",
+		tags : "2021-10-10,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Name these 2 famous people", // 
+	image : "https://metro.co.uk/wp-content/uploads/2016/07/ad212168316internet_jokers_-e1468147916331.jpg",
+	answerimage : "https://metro.co.uk/wp-content/uploads/2016/07/ad_212469581.jpg", answer : "Donald Trump and Hilary Clinton"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Name these 2 famous people", answer : "Justin Timberlake and Justin Bieber", // 
+	image : "https://metro.co.uk/wp-content/uploads/2016/07/ad212168324internet_jokers_-e1468148002339.jpg",
+	answerimage : "https://metro.co.uk/wp-content/uploads/2016/07/ad_212469577.jpg"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Name these 2 famous people", answer : "Sly Stallone and Arnie Schwarzenegger", // 
+	image : "https://metro.co.uk/wp-content/uploads/2016/07/ad212168320internet_jokers_-e1468147971232.jpg",
+	answerimage : "https://metro.co.uk/wp-content/uploads/2016/07/ad_212469579.jpg"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Name these 2 famous people", answer : "Britney Spears and Cher", // 
+	image : "https://metro.co.uk/wp-content/uploads/2016/07/gbhfghhh.jpg",
+	answerimage : "https://metro.co.uk/wp-content/uploads/2016/07/pjimage-13.jpg"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Name these 2 famous people", answer : "Sean Penn and Leonardo DiCaprio", // 
+	image : "https://metro.co.uk/wp-content/uploads/2016/07/ad212168317internet_jokers_-e1468147955198.jpg",
+	answerimage : "https://metro.co.uk/wp-content/uploads/2016/07/ad_212469580.jpg"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Name these 2 famous people", answer : "Jason Bateman and Jack Black", // 
+	image : "https://metro.co.uk/wp-content/uploads/2016/07/vgdfgfh.jpg",
+	answerimage : "https://metro.co.uk/wp-content/uploads/2016/07/pjimage-12.jpg"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Name these 2 famous people", answer : "Emma Watson and Russell Brand", // 
+	image : "https://metro.co.uk/wp-content/uploads/2016/07/khnjknhjk.jpg",
+	answerimage : "https://metro.co.uk/wp-content/uploads/2016/07/pjimage-9.jpg"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Name these 2 famous people", answer : "Anthony Hopkins and Bill Murray", // 
+	image : "https://metro.co.uk/wp-content/uploads/2016/07/jhbgjhbgh.jpg",
+	answerimage : "https://metro.co.uk/wp-content/uploads/2016/07/pjimage-11.jpg"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Name these 2 famous people", answer : "Rihanna and Katy Perry", // 
+	image : "https://metro.co.uk/wp-content/uploads/2016/07/jnjknhjknjl.jpg",
+	answerimage : "https://metro.co.uk/wp-content/uploads/2016/07/pjimage-18.jpg"}) ;
+
+
+
 quests[++questIndexBuilder] = { //
 		name : "Pub singer 7",
 		hoverover : "Sit back, close your eyes, you could be at a live venue right now.  ",
