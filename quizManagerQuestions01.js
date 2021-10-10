@@ -3267,11 +3267,11 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 } ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 	question : "What Pokemon is being described here? </BR>It wears a ragged head cover as a disguise, but little is known about this Pokemon. It's said that a scholar who once tried to look inside, met his end",
-	answerimage : "https://static.wikia.nocookie.net/pokemon/images/d/d6/Jessie_Mimikyu.png/revision/latest?cb=20170915045921", answer : "Mimikyu"
+	answerimage : "https://cdn2.bulbagarden.net/upload/thumb/9/9b/778Mimikyu.png/1200px-778Mimikyu.png", answer : "Mimikyu"
 } ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 	question : "What Pokemon is being described here? </BR>People who approach this Pokemon are swallowed and turned into mummies. It loves to eat gold",
-	answerimage : "https://static.wikia.nocookie.net/villains/images/9/97/Char-cofagrigus-531x507.png/revision/latest?cb=20170717000118", answer : "Cofagrigus"
+	answerimage : "https://cdn2.bulbagarden.net/upload/thumb/d/d1/Cofagrigus_anime.png/250px-Cofagrigus_anime.png", answer : "Cofagrigus"
 } ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 	question : "What Pokemon is being described here? </BR>This Pokemon wears a skull as a helmet, concealing its face as it sheds tears for its long-lost mother. It cries loudly to express its loneliness.",
