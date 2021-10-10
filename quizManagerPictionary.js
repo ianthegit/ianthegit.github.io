@@ -1001,6 +1001,32 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://www.primermagazine.com/wp-content/uploads/2020/09/james-bonds-tuxedos.jpg", answerSpeak : "Tuxedo"}) ;
 
 
+quests[++questIndexBuilder] = { //
+		name : "Pictionary 35",
+		hoverover : "Pictionary on the theme of The Squid Games - sea creatures",
+		tags : "2021-10-10,pictionary",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVmdsGd3-R27ibJOM9MYjn4-fLbZDWz2f1tdPUc1xl-hb49g3UYA-anItXgZXWaM0nxj45zQWHALYsLVEAAr_rRHX7Ees_zjgBlIuJoocIdA02z2rUoXW0Y65qQTODk80HEOHAH-0EpzA-cKT1jJZOchA=w409-h340-no?authuser=0",
+	answerimage : "https://render.fineartamerica.com/images/rendered/default/print/6.5/8/break/images/artworkimages/medium/3/1-i-wish-i-was-an-octopus-slap-8-people-at-once-funny-octopus-eq-designs.jpg", answerSpeak : "Octopus"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVlhLnVfP2dsz885adoIkBF_tILbBYfUHQ-UOzvuwaSE_RrwkygyUO34ZckZNT4jwrFb0ZV2U5SfsY-55XSLxo0OtcjKfwEQMWiUxMyXYEuywnN9bt_ouTNsjib8nLQppzKdiCJ7Bnorwk0aesusmjMaQ=w383-h433-no?authuser=0",
+	answerimage : "https://i.pinimg.com/originals/54/9a/8f/549a8ff2c2ef0a8b27f90da5f805a820.jpg", answerSpeak : "Squid"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVXurcuvGNo15u5NgGvA7VY_YtcIb67qh8umqGml9OomctxMfFsPDHdrBvCeGXJ2rLif8UZJsO_-RKMV5FwIsHSC-VluS2CyzXnGPn1fdPT40rQFmAsTPbV_rSnIuKEUKrTUDyWoQFEFyf_lGSETEHS5A=w596-h281-no?authuser=0",
+	answerimage : "https://i.pinimg.com/736x/b4/79/72/b4797220aefc3fd3cf5e418ff2b892b3.jpg", answerSpeak : "Crab"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLW6Ah5WVJpzkVt78Ka6lFENjuFX1PurAcFUCXQysGl75pDLgrQwFOafSnXOgxUW_4HyCk58qbG0hVdlGTt83xWTifAv4FQxSB0sbFOky1DlSFINiIYN9vM_r2jt6HtgQy72B_G2Vq92zyUPY2uzsWNHog=w503-h478-no?authuser=0",
+	answerimage : "https://pics.me.me/thumb_im-a-muhfking-starfish-34697862.png", answerSpeak : "Starfish"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXDHQw-BkJUG3JFTGdb2dn_ppkFmFXhLBwxrQX_-foa40FFzGwiMQ5Q13GX6cKuT1mx6VPNrljVxEalMzilma7R2eacoHQaMRT8S0Mr0dof5a3sPI2BUyuby_tyFafY7B4b5vC5PO1-05VX5k_9IGrPIg=w628-h426-no?authuser=0",
+	answerimage : "https://www.askideas.com/media/39/Have-You-Ever-Been-So-Mad-You-Boxed-A-Shark-And-Won-Funny-Meme-Image.jpg", answerSpeak : "Shark"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLX2Gx_z3Q1Xwgk9L9LdIWCycxXwge5-qqdO1hF4kVIyYMTwufsX40I9TjcDauC5py1E8TjTlKFkjAAEeemwEhVymjx51F3Jwjb5HDevgrHgQoqnaMAN5DeoH-EixgsabFdjYaH5oy_10zJrU5fulA5bXA=w1072-h429-no?authuser=0",
+	answerimage : "https://i.chzbgr.com/full/12579845/hA8785923/", answerSpeak : "Whale"}) ;
+
+
 /*
   
  quests[++questIndexBuilder] = { //
