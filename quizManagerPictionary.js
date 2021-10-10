@@ -975,6 +975,31 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://www.primermagazine.com/wp-content/uploads/2020/09/james-bonds-tuxedos.jpg", answerSpeak : "Tuxedo"}) ;
 
 
+quests[++questIndexBuilder] = { //
+		name : "Pictionary 34",
+		hoverover : "Pictionary on the theme of Bond, James Bond",
+		tags : "2021-10-3,pictionary",
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVDSRbkSg6JuHVgkZIhjIen8j1SjZ6QM1qEdhMVP6o-QvcSRhsO48QvPZZjxYhViZ1dXsY5yUXlf3v-mcody6OopvX1fnkHwUykrm0oQ2MlZqzzBDVHqkjjVA4Si6ASH4q27xrgotJlOOgF-qKMmFE5YA=w598-h533-no?authuser=0",
+	answerimage : "https://static.independent.co.uk/s3fs-public/thumbnails/image/2020/03/06/09/james-bond-comp-0.jpg?width=990&auto=webp&quality=75", answerSpeak : "Gun"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLX8gCehRKSeuQACZ2KcjeZ-EFB06La_5TrrDAPtTIdIdPtEAAWYpYPvbjvJhJGll-ZEbau4CeU0mtk7DYC_4geK76k-6IC3Y-Nqa5h5RLOCEx_zybCJt-wohlEmFSy8qmGwljCWJGDKGAfoKwiIkh45GA=w369-h400-no?authuser=0",	answerimage : "", 
+	answer : '<iframe width="560" height="315" src="https://www.youtube.com/embed/OUUq5mRCimo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',  answerSpeak : "Martini, shaken not stirred"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVidsJKvQo24hBN4eDPotSjbdu5nM3xz9vGIuW_gZGYnc74BuAO-n9xVPIf9qHpxzQxULCgJy9fToKBdPV5KGpCA5EpKohIucJhNgisVWoXtX9Ur1KyeIqCzWrBU_RX2fCUgVt5UEtxZgzf5-dLoh4iow=w551-h268-no?authuser=0",
+	answerimage : "https://i.pinimg.com/originals/c4/eb/8c/c4eb8c4a7106b4bac4b9ab61bb25af82.jpg", answerSpeak : "Aston Martin"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXFg5IwA1e4HNPD2vW0xIhAi-SB8VDPE7y0Vgv-Q2Tr5-e1XAY72Kj7c-nNk9kmvm7Lylxid23d_o0Ufn8XbOw460ODj9zz3JEParEIjqsTl__ZpHbIMic1PBUqaoC5VEuGfulmdaQLFwZKtLyZmW72IA=w775-h660-no?authuser=0",
+	answerimage : "https://www.gannett-cdn.com/-mm-/99678243ec47428d05e9303d907baf407c11a17d/c=0-116-3993-2372/local/-/media/2017/05/23/USATODAY/USATODAY/636311344714120851-XXX-GETTYIMAGES-607391786-MASTER-91131045.JPG", answerSpeak : "Pretty Women"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLWo09eW99nrn9DKDlqm2VM_5k_i5HYxaHn02QYPYDfEhoKtEvWpPQJ7VBlKhr5llJuO1UbMW6jBXLe0cULaPTQJ6boqcwZnPlZuhHpMSWoDx0LlHjdDZugO1c8350lYlSOKGkmSIonkWu9drOx9mI7zcQ=w469-h243-no?authuser=0",
+	answerimage : "https://static.wikia.nocookie.net/p__/images/3/36/13911_883787808302798_7013617339755323866_n.jpg/revision/latest?cb=20170227001403&path-prefix=protagonist", answerSpeak : "Q and M"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXlbq-StTELdq8iT3e2M_TEagEpCay0Cm--g_N1axolHkR2CC-OxDwm0BJMxuw5q4eRwE9UHwrRkY3R6kDxeQVJwk_w9OeJuY1CiNHq7dEpkyK6rlQCC8ft1r2D_GmHBBe9W9p5D3cFqgCwdhnU8blHbQ=w454-h559-no?authuser=0",
+	answerimage : "https://www.primermagazine.com/wp-content/uploads/2020/09/james-bonds-tuxedos.jpg", answerSpeak : "Tuxedo"}) ;
+
 
 /*
   
