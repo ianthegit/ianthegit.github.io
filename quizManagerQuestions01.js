@@ -3240,42 +3240,87 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : ""}) ;
 
 
+
+quests[++questIndexBuilder] = { 
+		name : "Quickfire",
+		hoverover : "Do I know what song this is",
+		tags : "2021-10-10,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'Do I know the name of this song? </BR> <iframe id="reddit-embed" src="https://www.redditmedia.com/r/holdmyfries/comments/q56law/hmf_while_im_a_music_instrument/?ref_source=embed&amp;ref=share&amp;embed=true" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;" height="408" width="640" scrolling="no"></iframe>' ,
+	answer : "No", 	});
+
+
 quests[++questIndexBuilder] = { 
 		name : "Pokemon",
 		hoverover : "A round for Ted",
-		tags : "NoDateYet,2025-1-1,saturday",
+		tags : "2021-10-10,saturday",
 		splash : {splashType : splashTypePictureAndText  , splashText : "Coming up are some questions about Pokemon.  How many do you think Ted will get correct?   Let me know how many you think - your score for this round will be your guess, minus how many out from Ted's score you are", splashImage : "https://i.guim.co.uk/img/media/049485d9d80d90edb0968f251959c1af0b43d451/0_309_5695_3417/master/5695.jpg?width=620&quality=85&auto=format&fit=max&s=61ab841d0a977ee40b8eccf578b51e40" },
 		questInfo: new Array()
 	};
 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 	question : "What Pokemon is being described here? </BR>A Pokemon formed by the spirits of people and Pokemon. It tugs on the hands of children to steal them away. Because of the way it floats aimlessly, an old folktale calls it a 'Signpost for Wandering Spirits'",
-	answerimage : "https://assets.pokemon.com/assets/cms2/img/pokedex/full/425.png", answerSpeak : "Drifloon"
+	answerimage : "https://assets.pokemon.com/assets/cms2/img/pokedex/full/425.png", answer : "Drifloon"
 } ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 	question : "What Pokemon is being described here? </BR>It wears a ragged head cover as a disguise, but little is known about this Pokemon. It's said that a scholar who once tried to look inside, met his end",
-	answerimage : "https://static.wikia.nocookie.net/pokemon/images/d/d6/Jessie_Mimikyu.png/revision/latest?cb=20170915045921", answerSpeak : "Mimikyu"
+	answerimage : "https://static.wikia.nocookie.net/pokemon/images/d/d6/Jessie_Mimikyu.png/revision/latest?cb=20170915045921", answer : "Mimikyu"
 } ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 	question : "What Pokemon is being described here? </BR>People who approach this Pokemon are swallowed and turned into mummies. It loves to eat gold",
-	answerimage : "https://static.wikia.nocookie.net/villains/images/9/97/Char-cofagrigus-531x507.png/revision/latest?cb=20170717000118", answerSpeak : "Cofagrigus"
+	answerimage : "https://static.wikia.nocookie.net/villains/images/9/97/Char-cofagrigus-531x507.png/revision/latest?cb=20170717000118", answer : "Cofagrigus"
 } ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 	question : "What Pokemon is being described here? </BR>This Pokemon wears a skull as a helmet, concealing its face as it sheds tears for its long-lost mother. It cries loudly to express its loneliness.",
-	answerimage : "https://cdn2.bulbagarden.net/upload/2/2a/104Cubone.png", answerSpeak : "Cubone"
+	answerimage : "https://cdn2.bulbagarden.net/upload/2/2a/104Cubone.png", answer : "Cubone"
 } ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
-	question : "What Pokemon is being described here? </BR>",
-	answerimage : "", answerSpeak : ""
+	question : "What Pokemon is being described here? </BR>After a woman met her end on a snowy mountain, her regrets lingered on. From them, this Pokemon was born. Its favorite food is frozen souls",
+	answerimage : "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2020/10/Untitled-design-2020-10-21T111008.506.jpg?q=50&fit=crop&w=740&dpr=1.5", answer : "Froslass"
 } ); 
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
-	question : "What Pokemon is being described here? </BR>",
-	answerimage : "", answerSpeak : ""
-} ); 
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
-	question : "What Pokemon is being described here? </BR>",
-	answerimage : "", answerSpeak : ""
-} ); 
+
+
+quests[++questIndexBuilder] = { //
+		name : "Pub singer 7",
+		hoverover : "Sit back, close your eyes, you could be at a live venue right now.  ",
+		splash : {splashType : splashTypeText  , splashText : "A point for the song name, a point for the musical name" },
+		tags : "2021-10-10,saturday,InnerWheel,surfers,audio",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w7-tomorow.mp3' + endAudio ,
+	answer : '<iframe src="https://open.spotify.com/embed/track/1AXO42HiJSTgPq7KbJAEjp" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>', answerSpeak : ""	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+		question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w7-coat.mp3' + endAudio ,
+		answer : '<iframe src="https://open.spotify.com/embed/track/4bEu2Uuk26hzTsdT0EA173" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>', answerSpeak : ""	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w7-cry.mp3' + endAudio ,
+	answer : '<iframe src="https://open.spotify.com/embed/track/7mhxoW5aWHn5QiZqT4rS4S" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>', answerSpeak : ""	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w7-hide.mp3' + endAudio ,
+	answer : '<iframe src="https://open.spotify.com/embed/track/63sRdoAVKRdmvPaaxfuT3G" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>', answerSpeak : ""	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w7-mother.mp3' + endAudio ,
+	answer : '<iframe src="https://open.spotify.com/embed/track/5bM7js02Uazq6sHaM7IQFO" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>', answerSpeak : ""	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w7-rewrite.mp3' + endAudio ,
+	answer : '<iframe src="https://open.spotify.com/embed/track/65fpYBrI8o2cfrwf2US4gq" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>', answerSpeak : ""	});
+
+
+quests[++questIndexBuilder] = { 
+		name : "Oct or Ten",
+		hoverover : "Songs about OCTober, 8 and 10",
+		tags : "music,2021-10-10,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/72W2B0NZY3wAergY6IVpsd" width="501" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+	answer : ""}) ;
 
 
 
