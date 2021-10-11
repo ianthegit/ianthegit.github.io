@@ -391,6 +391,7 @@ function SQSpeakAnswer(){
 	if (!'speechSynthesis' in window) {
 		return;
 	}
+	window.speechSynthesis.cancel();
 	if (!speakText.includes("iframe")|| fullAnswer.includes("target='_blank'")) {
 		var msg = new SpeechSynthesisUtterance();
 		msg.text = speakText;
