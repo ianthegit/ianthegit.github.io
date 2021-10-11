@@ -392,8 +392,10 @@ function SQSpeakAnswer(){
 		return;
 	}
 	window.speechSynthesis.cancel();
+	voices = speechSynthesis.getVoices();
 	if (!speakText.includes("iframe")|| fullAnswer.includes("target='_blank'")) {
 		var msg = new SpeechSynthesisUtterance();
+		msg.voice = voices[Math.floor(Math.random() * voices.length)];
 		msg.text = speakText;
 		window.speechSynthesis.speak(msg);
 	}
