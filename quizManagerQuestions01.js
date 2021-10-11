@@ -3359,6 +3359,94 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : ""}) ;
 
 
+quests[++questIndexBuilder] = { 
+		name : "Sitcom",
+		hoverover : "Winter is coming, time to watch more TV.  How many BBC sitcom sets do you recognise?",
+		tags : "2021-10-17,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What was recorded here?" ,
+	answer : "Open All Hours", image : "https://ichef.bbci.co.uk/images/ic/1280xn/p08c9hck.jpg"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What was recorded here?" ,
+	answer : "Porridge", image : "https://ichef.bbci.co.uk/images/ic/1280xn/p08c9hxf.jpg"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What was recorded here?" ,
+	answer : "The Fall & Rise of Reginald Perrin", image : "https://ichef.bbci.co.uk/images/ic/1280xn/p08c9j4l.jpg"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What was recorded here?" ,
+	answer : "Fawlty Towers", image : "https://ichef.bbci.co.uk/images/ic/1280xn/p08cg54y.jpg"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What was recorded here?" ,
+	answer : "The Good Life", image : "https://ichef.bbci.co.uk/images/ic/1280xn/p08c9jkg.jpg"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What was recorded here?" ,
+	answer : "Only Fools and Horses", image : "https://ichef.bbci.co.uk/images/ic/1280xn/p08c9xcv.jpg"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What was recorded here?" ,
+	answer : "Are You Being Served?", image : "https://ichef.bbci.co.uk/images/ic/1280xn/p08c9zl7.jpg"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What was recorded here?" ,
+	answer : "The Young Ones", image : "https://ichef.bbci.co.uk/images/ic/1280xn/p08cb0kt.jpg"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What was recorded here?" ,
+	answer : "Acorn Antiques", image : "https://ichef.bbci.co.uk/images/ic/1280xn/p08cg7sl.jpg"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What was recorded here?" ,
+	answer : "Absolutely Fabulous", image : "https://ichef.bbci.co.uk/images/ic/1280xn/p08cg8zr.jpg"	});
+
+
+quests[++questIndexBuilder] = { 
+		name : "Synonyms",
+		hoverover : "Can you recognise these synonym-swapped films?",
+		tags : "2021-10-17,saturday",
+		splash : {splashType : splashTypePictureAndText  , splashText : "Guess the film", splashImage : "https://img.buzzfeed.com/buzzfeed-static/static/2018-02/12/17/asset/buzzfeed-prod-fastlane-03/sub-buzz-405-1518474339-2.jpg?downsize=700%3A%2A&output-quality=auto&output-format=auto" },
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "2 Speedy 2 Angry", answer : "2 Fast 2 Furious",
+	answerimage : "https://img.buzzfeed.com/buzzfeed-static/static/2018-02/12/17/enhanced/buzzfeed-prod-fastlane-01/enhanced-22272-1518473768-2.jpg?output-format=webp&output-quality=auto"
+} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "The Starvation Sports", answer : "The Hunger Games",
+	answerimage : "https://img.buzzfeed.com/buzzfeed-static/static/2018-02/12/14/enhanced/buzzfeed-prod-fastlane-03/enhanced-16966-1518463727-2.jpg?output-format=webp&output-quality=auto"
+} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "The Gloomy Cavalier", answer : "The Dark Knight",
+	answerimage : "https://img.buzzfeed.com/buzzfeed-static/static/2018-02/12/14/enhanced/buzzfeed-prod-fastlane-03/enhanced-16675-1518463245-1.jpg?output-format=webp&output-quality=auto"
+} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "Absent Lady", answer : "Gone Girl",
+	answerimage : "https://img.buzzfeed.com/buzzfeed-static/static/2018-02/12/14/enhanced/buzzfeed-prod-fastlane-01/enhanced-6399-1518463437-7.jpg?output-format=webp&output-quality=auto"
+} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "Plaything Narrative", answer : "Toy Story",
+	answerimage : "https://img.buzzfeed.com/buzzfeed-static/static/2018-02/12/15/enhanced/buzzfeed-prod-fastlane-01/enhanced-7888-1518466156-12.jpg?output-format=webp&output-quality=auto"
+} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "The Commander of the Hoops: The Reappearance of the Monarch", answer : "The Lord of the Rings: The Return of the King",
+	answerimage : "https://img.buzzfeed.com/buzzfeed-static/static/2018-02/12/14/enhanced/buzzfeed-prod-fastlane-01/enhanced-7590-1518465210-3.jpg?output-format=webp&output-quality=auto"
+} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "Ferrous Fellow", answer : "Iron Man",
+	answerimage : "https://img.buzzfeed.com/buzzfeed-static/static/2018-02/12/14/enhanced/buzzfeed-prod-fastlane-03/enhanced-17632-1518465391-5.jpg?output-format=webp&output-quality=auto"
+} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "Murder William", answer : "Kill Bill",
+	answerimage : "https://img.buzzfeed.com/buzzfeed-static/static/2018-02/12/14/enhanced/buzzfeed-prod-fastlane-01/enhanced-7903-1518465505-1.jpg?output-format=webp&output-quality=auto"
+} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "Heavenly Body Battles: The Strength Arouses", answer : "Star Wars: The Force Awakens",
+	answerimage : "https://img.buzzfeed.com/buzzfeed-static/static/2018-02/12/17/enhanced/buzzfeed-prod-fastlane-03/enhanced-32331-1518473865-10.jpg?output-format=webp&output-quality=auto"
+} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "Infant Motorist", answer : "Baby Driver",
+	answerimage : "https://img.buzzfeed.com/buzzfeed-static/static/2018-02/12/18/enhanced/buzzfeed-prod-fastlane-03/enhanced-2116-1518477821-4.jpg?output-format=webp&output-quality=auto"
+} ); 
+
+
 
 /*
 quests[++questIndexBuilder] = { //
