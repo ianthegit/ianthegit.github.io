@@ -3362,7 +3362,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 quests[++questIndexBuilder] = { 
 		name : "Sitcom",
 		hoverover : "Winter is coming, time to watch more TV.  How many BBC sitcom sets do you recognise?",
-		tags : "2021-10-17,saturday",
+		tags : "2021-10-17,saturday,surfers",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
@@ -3400,7 +3400,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 quests[++questIndexBuilder] = { 
 		name : "Synonyms",
 		hoverover : "Can you recognise these synonym-swapped films?",
-		tags : "2021-10-17,saturday",
+		tags : "2021-10-17,saturday,surfers",
 		splash : {splashType : splashTypePictureAndText  , splashText : "Guess the film", splashImage : "https://img.buzzfeed.com/buzzfeed-static/static/2018-02/12/17/asset/buzzfeed-prod-fastlane-03/sub-buzz-405-1518474339-2.jpg?downsize=700%3A%2A&output-quality=auto&output-format=auto" },
 		questInfo: new Array()
 	};
@@ -3445,6 +3445,17 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 	question : "Infant Motorist", answer : "Baby Driver",
 	answerimage : "https://img.buzzfeed.com/buzzfeed-static/static/2018-02/12/18/enhanced/buzzfeed-prod-fastlane-03/enhanced-2116-1518477821-4.jpg?output-format=webp&output-quality=auto"
 } ); 
+
+
+quests[++questIndexBuilder] = { 
+		name : "Race 0",
+		hoverover : "Choose a number",
+		tags : "surfers,2021-10-17,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'Who will win?</BR> <iframe width="1020" height="630" src="https://www.youtube.com/embed/oKkMQqBEQdM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+	answer : '#8 = 3 points, #5 = 1 point'	});
 
 
 
