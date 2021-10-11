@@ -3448,6 +3448,18 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 
 
 
+quests[++questIndexBuilder] = { 
+		name : "TV Toonz",
+		hoverover : "TV theme toonz from (mainly) back in the day",
+		tags : "music,2021-10-17,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/49AqPISrqO5dCHS8GifZlN" width="501" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+	answer : ""}) ;
+
 /*
 quests[++questIndexBuilder] = { //
 		name : "Test Alt speak",
