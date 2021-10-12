@@ -3466,16 +3466,16 @@ quests[++questIndexBuilder] = { //
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What is our guest singing? '  , questionSpeak : "Don't go walkin' down Lover's Lane, with anyone else but me anyone else but me",
-	answer : "The Andrews Sisters, Don't sit under the apple tree", answerSpeak : ""	});
+	answer : "The Andrews Sisters, Don't sit under the apple tree", answerSpeak : "Don't go walkin' down Lover's Lane, with anyone else but me anyone else but me"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What is our guest singing? '  , questionSpeak : "There'll be love and laughter and peace ever after, tomorrow just you wait and see",
-	answer : "Vera Lynn, White Cliffs of Dover", answerSpeak : ""	});
+	answer : "Vera Lynn, White Cliffs of Dover", answerSpeak : "There'll be love and laughter and peace ever after, tomorrow just you wait and see"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What is our guest singing (no singer to guess this time, too many)? '  , questionSpeak : "You make me happy when skies are grey, you'll never know dear how much I love you",
-	answer : "You Are My Sunshine", answerSpeak : ""	});
+	answer : "You Are My Sunshine", answerSpeak : "You make me happy when skies are grey, you'll never know dear how much I love you"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What is our guest singing? '  , questionSpeak : "When I was just a little girl I asked my mother what will I be",
-	answer : "Doris Day, Que Sera Sera", answerSpeak : ""	});
+	answer : "Doris Day, Que Sera Sera", answerSpeak : "When I was just a little girl I asked my mother what will I be"	});
 
 
 quests[++questIndexBuilder] = { 
