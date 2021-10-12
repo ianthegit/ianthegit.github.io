@@ -3457,6 +3457,25 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 	question : 'Who will win?</BR> <iframe width="1020" height="630" src="https://www.youtube.com/embed/oKkMQqBEQdM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
 	answer : '#8 = 3 points, #5 = 1 point'	});
 
+quests[++questIndexBuilder] = { //
+		name : "Pub singer 8",
+		hoverover : "Sit back, close your eyes, you could be at a live venue right now.  ",
+		splash : {splashType : splashTypeText  , splashText : "A point for the song name, a point for the usual singer's name" },
+		tags : "2021-10-17,saturday,InnerWheel,surfers,audio",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What is our guest singing? '  , questionSpeak : "Don't go walkin' down Lover's Lane, with anyone else but me anyone else but me",
+	answer : "The Andrews Sisters, Don't sit under the apple tree", answerSpeak : ""	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What is our guest singing? '  , questionSpeak : "There'll be love and laughter and peace ever after, tomorrow just you wait and see",
+	answer : "Vera Lynn, White Cliffs of Dover", answerSpeak : ""	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What is our guest singing (no singer to guess this time, too many)? '  , questionSpeak : "You make me happy when skies are grey, you'll never know dear how much I love you",
+	answer : "You Are My Sunshine", answerSpeak : ""	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What is our guest singing? '  , questionSpeak : "When I was just a little girl I asked my mother what will I be",
+	answer : "Doris Day, Que Sera Sera", answerSpeak : ""	});
 
 
 quests[++questIndexBuilder] = { 
