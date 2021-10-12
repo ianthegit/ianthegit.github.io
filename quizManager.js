@@ -382,8 +382,10 @@ function SQAnswer(questionType) {
 	}
 	if (questStageData[currQuestStageIndex].hasOwnProperty('answer') || questStageData[currQuestStageIndex].hasOwnProperty('answerSpeak')) {
 		if (questStageData[currQuestStageIndex].hasOwnProperty('answerSpeak')) {
-			speakText=questStageData[currQuestStageIndex].answerSpeak;
-			setTimeout(SQSpeakAnswer, 3000);
+			if (questStageData[currQuestStageIndex].answerSpeak != '') {
+				speakText=questStageData[currQuestStageIndex].answerSpeak;
+				setTimeout(SQSpeakAnswer, 3000);
+			}
 		} else {
 			speakText=fullAnswer;
 			setTimeout(SQSpeakAnswer, 3000);
