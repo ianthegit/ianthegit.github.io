@@ -382,7 +382,7 @@ function SQAnswer(questionType) {
 	}
 	if (questStageData[currQuestStageIndex].hasOwnProperty('answer') || questStageData[currQuestStageIndex].hasOwnProperty('answerSpeak')) {
 		if (questStageData[currQuestStageIndex].hasOwnProperty('answerSpeak')) {
-			if (questStageData[currQuestStageIndex].answerSpeak != '') {
+			if (!questStageData[currQuestStageIndex].answerSpeak = '') {
 				speakText=questStageData[currQuestStageIndex].answerSpeak;
 				setTimeout(SQSpeakAnswer, 3000);
 			}
