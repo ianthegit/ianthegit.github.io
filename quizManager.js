@@ -299,7 +299,10 @@ function SQQuestion(questionType) {
 		sqInitSpotify(questStageData[currQuestStageIndex].spotify,
 				questStageData[currQuestStageIndex].question)
 	}
-
+	if (questStageData[currQuestStageIndex].hasOwnProperty('questionSpeak')) {
+		speakText=questStageData[currQuestStageIndex].questionSpeak;
+		setTimeout(SQSpeakAnswer, 3000);	
+	}
 	currQuestStageIndex++
 }
 
@@ -362,7 +365,10 @@ function SQAnswer(questionType) {
 		SQGetQuestArea().innerHTML = "<p " + questionStyle + ">" + fullQuestion
 		+ "</p>";
 	}
-	
+	if (questStageData[currQuestStageIndex].hasOwnProperty('questionSpeak')) {
+		speakText=questStageData[currQuestStageIndex].questionSpeak;
+		setTimeout(SQSpeakAnswer, 10);	
+	}
 	// SQGetQuestArea().innerHTML = answerPreText;
 	answerText = '';
 	SQGetAnswerArea().innerHTML = '';
