@@ -1027,6 +1027,30 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://i.chzbgr.com/full/12579845/hA8785923/", answerSpeak : "Whale"}) ;
 
 
+quests[++questIndexBuilder] = { //
+		name : "Pictionary 36",
+		hoverover : "Pictionary on the theme of Playground Games",
+		tags : "2021-10-17,pictionary",
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLWIVsdgs5V7a_Ln6c-5zmQVYXdFXwREkAwOeToOKupUB44TpaF2cScba4X6Bn9edhIEEhKp6hcTqrSvkOmpGkShRwtK2mqsqZtuaU_Egj8gfGGU_B0TsbFN3XO0ExHoXZ_q5MaJm7HcIThnPWYbtBFePQ=w451-h286-no?authuser=0",
+	answer : '<iframe width="560" height="315" src="https://www.youtube.com/embed/nrchfeybHmw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', answerSpeak :'What\'s the time Mr Wolf '}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVw_UzHI1wVNsm959AatZqmC_Oy23p7bqyjbYnEkoMVjv5XQ2yzVQ7L-mESSbpiWtYwgJ7BLLEeblhLZBjXDf6zeXL7iNOEtU990BXbr0QIIkORTrJ3zy0DJT5xSo74arqsiZ_Ac0OvqhujHhtmej7mNA=w821-h511-no?authuser=0",
+	answerimage : "https://media1.giphy.com/media/11M6gcJIihDEOI/giphy.gif", answerSpeak : "Skipping"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLV66WHQqTy8TgyLAnlz3UiRkeBcKRbzpOH3SJPvSYL5iJ3cvPuIzOle-b5xTQrDsNVhX_U4tpKp6fBv5BmYcWuOqpd7hxi7end-pUEE7NbvFmJtSimUtj7yqRcyG3Mu2_URbqabCyBhCL_eJh_ZpcxYUg=w179-h319-no?authuser=0",
+	answerimage : "https://www.mandatory.com/assets/uploads/gallery/little-kid-games/b7qzufr.gif", answerSpeak : "Hopscotch"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUEragZzJnfvESfCOqj77KPPqNVgHMWjQgec72X82r4DEc6BASdR3KYi-H0KKHGAIu8pIlVjrzBiSgAEKxs0PTBnmtG8tzN7uKjvqHasxOJK71UDu9LMD_bxFaYT1ClKH-ySwkmv0CxdGmksqr4SXoH4Q=w646-h395-no?authuser=0",
+	answerimage : "https://thumbs.gfycat.com/PastPointedArthropods-size_restricted.gif", answerSpeak : "Kiss chase"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXiXIBspwBj1swQ6c9YtE0YuQASIxvRAfQ0z1mCEn5-x_LkSVkvNg9QZPezkLmEI-wrM8VAu0Of63qwrQ64edgO-oM59GDyHC0j4cWKDJaHIiqpBAxaBlUjm2EB9Ar-Jni16eLLG-k_GniDqZlMOFPMzw=w352-h249-no?authuser=0",
+	answerimage : "http://25.media.tumblr.com/c0cbeec34abcb9a85e185ef5e279aa41/tumblr_mrkylkjtZU1rrb1gzo1_500.gif", answerSpeak : "Handclap games"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLWNH3DDpmmnLsvvxcq7KDF6OXgBmpsnd4tPdZNlML_36FFRgyOAubvpcOc5VjbuM4WwkZFanduObEkYuOMDowF6j1TAn_ofYYj6-aw69HZO6qTy8H9sOnqDn-fYSdbZvAk4R7a7qC0PPZmOWE4wL49TBQ=w481-h535-no?authuser=0",
+	answerimage : "https://i.imgur.com/U53RjG2.gif", answerSpeak : "Hula Hoop"}) ;
 /*
   
  quests[++questIndexBuilder] = { //
