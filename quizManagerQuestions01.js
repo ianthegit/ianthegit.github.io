@@ -3465,17 +3465,35 @@ quests[++questIndexBuilder] = { //
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
-	question : 'What is our guest singing? '  , questionSpeak : "Don't go walkin' down Lover's Lane, with anyone else but me anyone else but me",
+	question : 'What is our guest singing? ' + reRunButton  , questionSpeak : "Don't go walkin' down Lover's Lane, with anyone else but me anyone else but me",
 	answer : "The Andrews Sisters, Don't sit under the apple tree", answerSpeak : ""	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
-	question : 'What is our guest singing? '  , questionSpeak : "There'll be love and laughter and peace ever after, tomorrow just you wait and see",
+	question : 'What is our guest singing? ' + reRunButton  , questionSpeak : "There'll be love and laughter and peace ever after, tomorrow just you wait and see",
 	answer : "Vera Lynn, White Cliffs of Dover", answerSpeak : ""	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
-	question : 'What is our guest singing (no singer to guess this time, too many)? '  , questionSpeak : "You make me happy when skies are grey, you'll never know dear how much I love you",
+	question : 'What is our guest singing (no singer to guess this time, too many)? ' + reRunButton  , questionSpeak : "You make me happy when skies are grey, you'll never know dear how much I love you",
 	answer : "You Are My Sunshine", answerSpeak : ""	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
-	question : 'What is our guest singing? '  , questionSpeak : "When I was just a little girl I asked my mother what will I be",
+	question : 'What is our guest singing? '  + reRunButton , questionSpeak : "When I was just a little girl I asked my mother what will I be",
 	answer : "Doris Day, Que Sera Sera", answerSpeak : ""	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What is our guest singing? '  + reRunButton , questionSpeak : "Oh we ain't got a barrel of money, maybe we're ragged and funny, but we'll travel the road sharing our load",
+	answer : "Patsy Cline, Side by Side", answerSpeak : ""	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What is our guest singing (Only guess the song, not the singer)? '  + reRunButton , questionSpeak : "There's a tear in your eye and I'm wondering why, for it never should be there at all",
+	answer : "When Irish Eyes Are Smiling", answerSpeak : ""	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What is our guest singing? ' + reRunButton  , questionSpeak : "I'm laughing at clouds, so dark up above.  The sun's in my heart and I'm ready for love",
+	answer : "Gene Kelly, Singing in the Rain", answerSpeak : ""	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What is our guest singing? '  + reRunButton , questionSpeak : "Oh, tiptoe from the garden, by the garden of the willow tree",
+	answer : "Tiny Tim, Tiptoe through the Tulips", answerSpeak : ""	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What is our guest singing? '  + reRunButton , questionSpeak : "And I seem to find the happiness I seek.  When we're out together",
+	answer : "Fred Astaire, Dancing cheek to Cheek", answerSpeak : ""	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What is our guest singing (Song and the musical it is from please)? '  + reRunButton , questionSpeak : "Chicks and ducks and geese better scurry, when I take you out in the surry",
+	answer : "Oklahma, The Surry with the Fringe on Top", answerSpeak : ""	});
 
 
 quests[++questIndexBuilder] = { 
