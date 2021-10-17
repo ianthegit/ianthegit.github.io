@@ -50,6 +50,7 @@ questionStyle = 'style="font-family:verdana;color:Black;font-size:30px;topMargin
 answerStyle = 'style="font-family:Courier New;color:Black;font-size:30px;topMargin=0px;bottomMargin=0px;"';
 previousButton = "<input type='button' class='userBtnStop' value='Previous' title='Previous' id='Previous' onclick='runPreviousQuestStage()' />";
 nextButton = "<input type='button' class='userBtnNext' value='Next' title='Next' id='Next' onclick='runNextQuestStage()' />";
+reRunButton = "<input type='button' class='userBtnNext' value='Repeat' title='Repeat' id='Repeat' onclick='reRunQuestStage()' />";
 closeSplashButtonStart = "<input type='button' class='userBtnNext' value='Start Quiz' title='Start Quiz' id='Start Quiz' onclick='SQStartQuiz(";
 closeSplashButtonEnd=")' />";
 answerButton = "<input type='button' class='userBtnNext' value='Answers' title='Answers' id='Next' onclick='runNextQuestStage()' />";
@@ -225,6 +226,11 @@ function passwordPasses() {
 	}
 	return true;
 }
+function reRunQuestStage() {
+	currQuestStageIndex = currQuestStageIndex - 1;
+	runNextQuestStage();
+}
+
 function runNextQuestStage() {
 	questStageData = quests[currQuestIndex].questInfo;
 	if (currQuestStageIndex == questStageData.length
