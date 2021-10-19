@@ -10,6 +10,7 @@ Within an html page, in the <body>, use:
 
 ```html
 <script type="text/javascript" src='https://www.hopgood.uk/quizManager.js' ></script>
+<!-- Sample questions -->
 <script type="text/javascript" src='https://www.hopgood.uk/quizManagerYearBasedQuestions.js' ></script>
 <script type="text/javascript" src='https://www.hopgood.uk/quizManagerQuestions.js' ></script>
 <script type="text/javascript" src='https://www.hopgood.uk/quizManagerQuestions01.js' ></script>
@@ -17,9 +18,9 @@ Within an html page, in the <body>, use:
 
 
 <script type='text/javascript'>
-	// <![CDATA [
+// <![CDATA [
     	SQInit();
-	// ] ] >
+// ] ] >
 	
 </script>
 ```
