@@ -6,7 +6,7 @@ quizManager.js is a javascript library to allow the creation of simple online qu
 
 ## Installation
 
-Within an html page, in the <body>, use:
+Within an \html page, in the \<body>, use:
 
 ```html
 <script type="text/javascript" src='https://www.hopgood.uk/quizManager.js' ></script>
