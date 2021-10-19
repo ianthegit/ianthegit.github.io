@@ -80,7 +80,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,
 ```
 Question with a Text question, a picture question and a 2 picturee & text answer
 ```javascript
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2PictureAnswer,	
 	question : "",  
 	image : "",
 	answerimage : "",
@@ -88,6 +88,16 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,
 	answer : "", 
 	answerSpeak : ""}) ;
 ```
+
+
+Question with a Text question, and a picture & text answer
+```javascript	
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "",
+	answerimage : "IMAGE_URL"
+	} ); 	
+```
+	
 Spotify list question
 ```javascript
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
@@ -96,4 +106,5 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : ""
 }) ;
 ```
+
 
