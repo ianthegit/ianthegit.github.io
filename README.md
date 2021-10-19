@@ -46,7 +46,7 @@ Optional - splash screen Text and picture
 splash : {splashType : splashTypePictureAndText, splashText : "Splash Screen Text" , splashImage : "Image URL"},
 ```
 
-If the tags contain 'year' then add up to 12 questions and each will be prepended by the appropriate month (January - December) - otherwise each question will be numbered 1 ... <length>
+If the tags contain 'year' then add up to 12 questions and each will be prepended by the appropriate month (January - December) - otherwise each question will be numbered 1 to \<length>
 
 If the tags contain 'music' then an auto-generated Splash screen will remind you to only share your audio
 
