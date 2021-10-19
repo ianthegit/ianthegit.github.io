@@ -98,6 +98,16 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 	answerimage : "IMAGE_URL"
 	} ); 	
 ```
+
+Question with a Text question, and a text answer, but additional question text is read out by a random voice (voice types browser specific).  'ReRun' button appears if added to question text
+
+```javascript	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What is our guest singing, and who is known for singing it? ' + reRunButton  , 
+	questionSpeak : "Don't go walkin' down Lover's Lane, with anyone else but me anyone else but me",
+	answer : "The Andrews Sisters, Don't sit under the apple tree", 
+	answerSpeak : ""	});
+```	
 	
 Spotify list question
 ```javascript
