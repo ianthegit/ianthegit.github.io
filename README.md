@@ -78,7 +78,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,
 	answer : "", 
 	answerSpeak : ""}) ;
 ```
-Question with a Text question, a picture question and a 2 picturee & text answer
+Question with a Text question, a picture question and a 2 picture & text answer
 ```javascript
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2PictureAnswer,	
 	question : "",  
