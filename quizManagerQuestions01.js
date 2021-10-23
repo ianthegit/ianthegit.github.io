@@ -3450,12 +3450,14 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 quests[++questIndexBuilder] = { 
 		name : "Race 0",
 		hoverover : "Choose a number",
-		tags : "surfers,2021-10-17,InnerWheel,saturday",
+		tags : "surfers,2021-10-17,InnerWheel,saturday,tieBreaker",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
-	question : 'Who will win?</BR> <iframe width="1020" height="630" src="https://www.youtube.com/embed/oKkMQqBEQdM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
-	answer : '#8 = 3 points, #5 = 1 point'	});
+	question : 'Who will win?   Choose a number between 1 and 10. </BR> <iframe width="1020" height="630" src="https://www.youtube.com/embed/oKkMQqBEQdM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
+	answer : "Closest to number 8 wins.  If you're still drawing, then it's meant to be"	});
+
+
 
 quests[++questIndexBuilder] = { //
 		name : "Pub singer 8",
@@ -3508,122 +3510,99 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/49AqPISrqO5dCHS8GifZlN" width="501" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
 	answer : ""}) ;
 
-/*
-quests[++questIndexBuilder] = { //
-		name : "Test Alt speak",
-		hoverover : "Pictionary on the Theme of household goods",
-		tags : "2021-4-17,pictionary",
+
+
+quests[++questIndexBuilder] = { 
+		name : "Rare",
+		hoverover : "How rare are these traits?",
+		tags : "2021-10-24,saturday,InnerWheel,surfers",
+		splash : {splashType : splashTypePictureAndText  , splashText : "How rare are these traits?", splashImage : "https://www.mashed.com/img/gallery/is-it-safe-to-eat-a-blue-steak/intro-1571064354.jpg" },
 		questInfo: new Array()
 	};
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
-	question : "Test speach",
-	answer : "written answer", answerSpeak : "spoken answer"} );
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
-	question : "Test speach",
-	answer : "written answer"} );
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "", //
-	image : "",
-	answerimage : ""}) ;
-addQuest(quests[questIndexBuilder],{	type : quizQuestionType2PictureAnswer,
-	question : "What and who do you see here?",	answer : "" ,
-	image : "",
-	answerimage : "",
-	answerimage2 : ""
-}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "What percentage of the population can raise 1 eyebrow?"+ Table4ColumnStart + "15%</td><td>30%</td><td>45%</td><td>0% - it's done by lowering the other eyebrow really" + Table4ColumnEnd, 
+	answer : "30%",
+	image : "https://www.boredpanda.com/blog/wp-content/uploads/2021/10/clipimage-616eadeb40de8__700.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "What percentage of the population is born without wisdom teeth  ?"+ Table4ColumnStart + "30%</td><td>35%</td><td>40%</td><td>100% - wisdom teeth don't exist" + Table4ColumnEnd, 
+	answer : "35%",
+	image : "https://www.boredpanda.com/blog/wp-content/uploads/2021/10/clipimage-616e72049b1f8__700.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "What percentage of the population is bortn with Heterochromia (2 different coloured eyes)?"+ Table4ColumnStart + "Less than 1%</td><td>5% to 8%</td><td>12% to 15%</td><td>100% as eyeballs are unique" + Table4ColumnEnd, 
+	answer : "Less than 1%",
+	image : "https://www.boredpanda.com/blog/wp-content/uploads/2021/10/clipimage-616e78401890f__700.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "What percentage of the population are left-handed?"+ Table4ColumnStart + "5%</td><td>10%</td><td>12%</td><td>0% as left-handedness is just the result of lazy parenting" + Table4ColumnEnd, 
+	answer : "10%",
+	image : "https://www.boredpanda.com/blog/wp-content/uploads/2021/10/clipimage-616e72bf0a445__700.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "What percentage of the population is born with eyes which remain blue?"+ Table4ColumnStart + "5%</td><td>8%</td><td>42%</td><td>0% as blue eyes are really purple" + Table4ColumnEnd, 
+	answer : "8%",
+	image : "https://www.boredpanda.com/blog/wp-content/uploads/2021/10/clipimage-616e72622dd50__700.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "What percentage of the human population are gingers?"+ Table4ColumnStart + "Less than 2%</td><td>3.5%</td><td>5%</td><td>0% as gingers aren't really humans" + Table4ColumnEnd, 
+	answer : "Less than 2%",
+	image : "https://thehill.com/sites/default/files/styles/thumb_small_article/public/sheeraned_princeharry_10102019insta.jpg?itok=hgY2mltx"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "What percentage of the population are like Meghan Markle and have Morton's Toe?"+ Table4ColumnStart + "5%</td><td>10%</td><td>15%</td><td>It doesn't matter, Morton is just really annoyed and wants his toe back" + Table4ColumnEnd, 
+	answer : "10%",
+	image : "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F12%2F2018%2F12%2FGettyImages-506187074-2000.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "What percentage of the population have freckles into adulthood?"+ Table4ColumnStart + "2%</td><td>5%</td><td>8%</td><td>0% as freckles are just dirt" + Table4ColumnEnd, 
+	answer : "5%",
+	image : "https://static.boredpanda.com/blog/wp-content/uploads/2016/11/freckles-redheads-beautiful-portrait-photography-20-583565f0950f1-jpeg__700.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "What percentage of the population have Hitchhiker's thumb?"+ Table4ColumnStart + "32%</td><td>38%</td><td>42%</td><td>0% - Since the useage of mobile phones has made this impossible" + Table4ColumnEnd, 
+	answer : "32%",
+	image : "https://www.boredpanda.com/blog/wp-content/uploads/2021/10/clipimage-616e7512d813d__700.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "What percentage of the population are double-jointed?"+ Table4ColumnStart + "10%</td><td>20%</td><td>30%</td><td>0% It's just loose ligaments" + Table4ColumnEnd, 
+	answer : "20%",
+	image : "https://i.pinimg.com/originals/6c/97/4c/6c974ccacd7dce0ebed70983c7600f24.gif"} ); 
 
-  addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
-	question : "",
-	answer : "", answerSpeak : "spoken answer"} );
 
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
-	question : "?",
-	image : "",
-	answer : ""}) ;
- 
- 
- quests[++questIndexBuilder] = { //
-		name : "Pictionary 12",
-		hoverover : "Pictionary on the Theme of ???",
-		tags : "2021-4-17,pictionary",
+quests[++questIndexBuilder] = { 
+		name : "Real or Fake",
+		hoverover : "Are these business names real or fake?",
+		tags : "2021-10-24,saturday,InnerWheel,surfers",
+		splash : {splashType : splashTypePictureAndText  , splashText : "Carrie Fisher ran 'Curl up and Dye' in The Blues Brothers, but are these business names real or fake?", splashImage : "https://i.pinimg.com/originals/29/7f/36/297f36de3019440222f046f3918c5895.jpg" },
 		questInfo: new Array()
 	};
-
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
-	answerimage : "", answer : "", answerSpeak : ""}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
-	answerimage : "", answer : "", answerSpeak : ""}) ;
- 
- 
-quests[++questIndexBuilder] = { //
-		name : "Test new quiz builder",
-		hoverover : "Try out the quicker builder",
-		tags : "test",
-		splash : {splashType : splashTypeText / splashTypePictureAndText , splashText : "Test Text", splashImage : "" },
-		questInfo: new Array()
-	};
-
-quests[++questIndexBuilder] = {  //
-		name : "Test new month-based quiz builder",
-		hoverover : "Try out the quicker builder",
-		tags : "test,year,saturday",
-		questInfo: new Array()
-	};
-	
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
-	question : "?  " + Table4ColumnStart + "?</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd,
-	answer : ""	});
-
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
-	question : "",
-	answer : ""    } );
-
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
-	question : "What movie is being described",
-	image : "https://lh3.googleusercontent.com/Ftq4kmwf2ZMgm2Au1KHEirPcTYyA2MfoTe5ti0A2v6cPUAyexLjvfFtcovCeJDtF8oX8j6EXHIV9HMrZj41byAmnurxMK4mfRcSw695znXl608VK__rflaCyjX_fcVMXtxvgNfEU0NU=w1920-h1080",
-	answer : "Groundhog Day"
-}) ;
-
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
-	question : 'Name the products these songs were used to advertise',
-	spotify : '<iframe src="https://open.spotify.com/embed/playlist/7BQJ0lhgEX1NCPKBt6TlYm" width="500" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
-	answer : "Cadbury, Levi's,Muller Light, Galaxy, Wrigleys, Guinness, Vauxhall, Nike, Levi's, Barclaycard,Quality Street  "
-}) ;
-
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
-	question : '',
-	spotify : '<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRm7q0c3dgVMI_pieDAUPcSHXQ8N3I20dHQytGEjaKsq2Pj-l2xHcRpud-McY2UhU_qrBcLyVRidpOJ/embed?start=false&loop=false&delayms=10000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>',
-	answer : "Click the presentation to move it along"
-} );
-
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
-		question : "In August, who said (during a voice check for a radio broadcast) 'My fellow Americans, I'm pleased to tell you today that I've signed legislation that will outlaw Russia forever. We begin bombing in five minutes'?",
-		answer : "POTUS Ronald Reagan  <iframe width='560' height='315' src='https://www.youtube.com/embed/bBow1ToJBFE' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
-}) ;
-
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,
-		question : "What movie", //Brigadoon
-		image : "",
-		answerimage : ""
-}) ;
 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
-		question : "Which actor has died most times on the big-screen (ie in films)? <BR/> (a) Danny Trejo, <BR/> (II) Vincent Price, <BR/> (3) Christopher Lee, <BR/> (Ivy) Dennis Hopper.",
-		answerimage : "https://lh3.googleusercontent.com/X8Cwofy-XdhCTIt7Ict9vOQ-Du4KGOMC8wwGSXAP_y9RdlJOiP8RTp3Nnmj5rqik9AV-epVXWxb6hDPjwtbBuHqOur_YQKJrM5P1EoCO3U9U8yFzGXGHvX7El6AE_lK5SsiOB2DR-Dg=w1920-h1080"
-	} ); 
-	
+	question : "Real or Fake: </BR> </BR> Goin Postal", answer : "Real",
+	answerimage : "https://img.huffingtonpost.com/asset/59246999200000140016e693.jpeg?ops=scalefit_720_noupscale&format=webp"} ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
-	question : "Which actor has died most times on the big-screen (ie in films)? <BR/> (a) Danny Trejo, <BR/> (II) Vincent Price, <BR/> (3) Christopher Lee, <BR/> (Ivy) Dennis Hopper.",
-	answerimage : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Danny_Trejo_by_Gage_Skidmore.jpg/220px-Danny_Trejo_by_Gage_Skidmore.jpg"
-} ); 
+	question : "Real or Fake: </BR> </BR> Sam n Ella's", answer : "Real",
+	answerimage : "https://img.huffingtonpost.com/asset/592469c02000001a0016e695.jpg?ops=scalefit_720_noupscale&format=webp"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "Real or Fake: </BR> </BR> Passmore Gas", answer : "Real",
+	answerimage : "https://img.huffingtonpost.com/asset/592469fc200000190016e69a.jpg?ops=scalefit_720_noupscale&format=webp"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "Real or Fake: </BR> </BR> Amigone Funeral Home", answer : "Real",
+	answerimage : "https://img.huffingtonpost.com/asset/59246a112000004900cb2388.jpg?ops=scalefit_720_noupscale&format=webp"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "Real or Fake - a bar called: </BR> </BR> Tequila Mockingbird", answer : "Real",
+	answerimage : "https://img.huffingtonpost.com/asset/59246a25200000190016e69c.jpg?ops=scalefit_720_noupscale&format=webp"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "Real or Fake - a tobacco shop called: </BR> </BR> Chew-N-Butts", answer : "Real",
+	answerimage : "https://img.huffingtonpost.com/asset/59246aef2000004900cb238c.jpg?ops=scalefit_720_noupscale&format=webp"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "Real or Fake: </BR> </BR> Spruce Springclean", answer : "Real",
+	answerimage : "https://img.huffingtonpost.com/asset/59246b3d1600002b00ddc652.jpg?ops=scalefit_720_noupscale&format=webp"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "Real or Fake - a flame-grilled burger joint: </BR> </BR> Hindenburger", answer : "Real",
+	answerimage : "https://img.huffingtonpost.com/asset/59246bcc2000003400cb2395.jpg?ops=scalefit_720_noupscale&format=webp"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "Real or Fake: </BR> </BR> Thai Tanic", answer : "Real",
+	answerimage : "https://img.huffingtonpost.com/asset/59246be31600002500ddc659.jpg?ops=scalefit_720_noupscale&format=webp"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "Real or Fake - Fishing supplier: </BR> </BR> Master Bait & Tackle", answer : "Real",
+	answerimage : "https://img.huffingtonpost.com/asset/59246bfd2000001700cb2397.jpg?ops=scalefit_720_noupscale&format=webp"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "Real or Fake: </BR> </BR> Little Hope Cemetary", answer : "Real",
+	answerimage : "https://img.huffingtonpost.com/asset/59246c422000001a00cb239c.jpg?ops=scalefit_720_noupscale&format=webp"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "Real or Fake - Middle Eastern restaurant: </BR> </BR> Just Falafs", answer : "Real",
+	answerimage : "https://img.huffingtonpost.com/asset/59246c2e2000004900cb2399.jpg?ops=scalefit_720_noupscale&format=webp"} ); 
 
-questIndexBuilder++;
-
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
-	question : "who was born?",
-	answer : "Ted"
-} ); 
-
-questIndexBuilder++;
-*/
