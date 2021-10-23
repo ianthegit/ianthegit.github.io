@@ -27,6 +27,18 @@ Within an html page, in the \<body>, use:
 
 # Usage
 
+URL Parameters are used to control the view.
+
+https://www.hopgood.uk/  Will show an empty screen, unless you have questions with todays date (yyyy-mm-dd) in which case they will be showns, and will require the password 'letmein' to access them
+
+Parameters can be chained with '&'
+
+<URL>?
+	quizType=<TAG> (or 'ShowAll' to view them all)
+	showTags=1 to show all tags as clickable buttons
+	
+https://www.hopgood.uk/?quizType=ShowAll&showTags=1
+
 To add your own Rounds and Questions, use the examples below to add them here:
 
 ```html
