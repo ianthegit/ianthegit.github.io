@@ -3519,9 +3519,9 @@ quests[++questIndexBuilder] = {
 		splash : {splashType : splashTypePictureAndText  , splashText : "How rare are these traits?", splashImage : "https://www.mashed.com/img/gallery/is-it-safe-to-eat-a-blue-steak/intro-1571064354.jpg" },
 		questInfo: new Array()
 	};
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,
 	question : "What percentage of the population can raise 1 eyebrow?"+ Table4ColumnStart + "15%</td><td>30%</td><td>45%</td><td>0% - it's done by lowering the other eyebrow really" + Table4ColumnEnd, 
-	answer : "30%",
+	answer : "30%", answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLVd4AtpWZdMpdcHYDUSzey4F1X4VLCmobf3nXhL84t8Cm0h3dwAfTBNtXKSYNc0AYpTMQTtW6yTn1mIpEjOJIOg_2bHaZOgHBkLTUi-0juGfpzhNLA5hYLSrehvWk53GcTNgVL1iatXHQhd7dsS6sPHqA=w780-h871-no?authuser=0",
 	image : "https://www.boredpanda.com/blog/wp-content/uploads/2021/10/clipimage-616eadeb40de8__700.jpg"} ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
 	question : "What percentage of the population is born without wisdom teeth  ?"+ Table4ColumnStart + "30%</td><td>35%</td><td>40%</td><td>100% - wisdom teeth don't exist" + Table4ColumnEnd, 
