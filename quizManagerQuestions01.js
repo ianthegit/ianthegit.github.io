@@ -3528,7 +3528,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
 	answer : "35%",
 	image : "https://www.boredpanda.com/blog/wp-content/uploads/2021/10/clipimage-616e72049b1f8__700.jpg"} ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
-	question : "What percentage of the population is bortn with Heterochromia (2 different coloured eyes)?"+ Table4ColumnStart + "Less than 1%</td><td>5% to 8%</td><td>12% to 15%</td><td>100% as eyeballs are unique" + Table4ColumnEnd, 
+	question : "What percentage of the population is born with Heterochromia (2 different coloured eyes)?"+ Table4ColumnStart + "Less than 1%</td><td>5% to 8%</td><td>12% to 15%</td><td>100% as eyeballs are unique" + Table4ColumnEnd, 
 	answer : "Less than 1%",
 	image : "https://www.boredpanda.com/blog/wp-content/uploads/2021/10/clipimage-616e78401890f__700.jpg"} ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
