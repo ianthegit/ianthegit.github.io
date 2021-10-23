@@ -3606,3 +3606,15 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 	question : "Real or Fake - Middle Eastern restaurant: </BR> </BR> Just Falafs", answer : "Real",
 	answerimage : "https://img.huffingtonpost.com/asset/59246c2e2000004900cb2399.jpg?ops=scalefit_720_noupscale&format=webp"} ); 
 
+
+quests[++questIndexBuilder] = { 
+		name : "Scary Toonz",
+		hoverover : "Halloweenish songs",
+		tags : "music,2021-10-24,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/2RhuTY6qGoqWiShY2AiFXr" width="501" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+	answer : ""}) ;
