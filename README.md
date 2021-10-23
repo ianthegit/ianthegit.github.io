@@ -33,8 +33,6 @@ https://www.hopgood.uk/  Will show an empty screen, unless you have questions wi
 
 Parameters can be chained with '&'
 
-<URL>?
-	
 	quizType=<TAG> (or 'ShowAll' to view them all)
 	
 	showTags=1 to show all tags as clickable buttons
