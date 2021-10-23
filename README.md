@@ -6,7 +6,7 @@ quizManager.js is a javascript library to allow the creation of simple online qu
 
 ## Installation
 
-Within an \html page, in the \<body>, use:
+Within an html page, in the \<body>, use:
 
 ```html
 <script type="text/javascript" src='https://www.hopgood.uk/quizManager.js' ></script>
@@ -26,6 +26,19 @@ Within an \html page, in the \<body>, use:
 ```
 
 # Usage
+
+To add your own Rounds and Questions, use the examples below to add them here:
+
+```html
+
+<script type='text/javascript'>
+// <![CDATA [
+	//Add Rounds and Questions here
+    	SQInit();
+// ] ] >
+	
+</script>
+```
 
 ## Create a round
 
