@@ -3447,18 +3447,6 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 } ); 
 
 
-quests[++questIndexBuilder] = { 
-		name : "Race 0",
-		hoverover : "Choose a number",
-		tags : "surfers,2021-10-17,InnerWheel,saturday,tieBreaker",
-		questInfo: new Array()
-	};
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
-	question : 'Who will win?   Choose a number between 1 and 10. </BR> <iframe width="1020" height="630" src="https://www.youtube.com/embed/oKkMQqBEQdM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
-	answer : "Closest to number 8 wins.  If you're still drawing, then it's meant to be"	});
-
-
-
 quests[++questIndexBuilder] = { //
 		name : "Pub singer 8",
 		hoverover : "Sit back, close your eyes, you could be at a live venue right now.  ",
