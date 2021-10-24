@@ -32,5 +32,5 @@ quests[++questIndexBuilder] = {
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
-	question : 'How many countries are there which have border both the Mediterranean Sea and Atlantic Ocean? ',
+	question : 'How many countries are there which border both the Mediterranean Sea and Atlantic Ocean? ',
 	answer : "3 - France, Spain and Morocco"	});
