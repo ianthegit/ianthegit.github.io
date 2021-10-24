@@ -1,5 +1,5 @@
 /**
- * 
+ * https://www.radiotimes.com/quizzes/pub-quiz-tie-breaker/
  */
 
 
@@ -34,3 +34,26 @@ quests[++questIndexBuilder] = {
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'How many countries are there which border both the Mediterranean Sea and Atlantic Ocean? ',
 	answer : "3 - France, Spain and Morocco"	});
+
+
+quests[++questIndexBuilder] = { 
+		name : "TieBreaker 3",
+		hoverover : "Choose a number",
+		tags : "surfers,InnerWheel,saturday,tieBreaker",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : 'How many stars in the Brazillian flag? ', image : "https://cdn.britannica.com/47/6847-004-7D668BB0/Flag-Brazil.jpg",
+	answer : "3 - France, Spain and Morocco"	});
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "TieBreaker 4",
+		hoverover : "Choose a number",
+		tags : "surfers,InnerWheel,saturday,tieBreaker",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'How many Post Offices were there in India when she became independent in 1947? ',
+	answer : "23,344"	});
