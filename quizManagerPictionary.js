@@ -1051,6 +1051,33 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLWNH3DDpmmnLsvvxcq7KDF6OXgBmpsnd4tPdZNlML_36FFRgyOAubvpcOc5VjbuM4WwkZFanduObEkYuOMDowF6j1TAn_ofYYj6-aw69HZO6qTy8H9sOnqDn-fYSdbZvAk4R7a7qC0PPZmOWE4wL49TBQ=w481-h535-no?authuser=0",
 	answerimage : "https://i.imgur.com/U53RjG2.gif", answerSpeak : "Hula Hoop"}) ;
+
+
+quests[++questIndexBuilder] = { //
+		name : "Pictionary 37",
+		hoverover : "Pictionary on the theme of Halloween",
+		tags : "2021-10-24,pictionary",
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://media0.giphy.com/media/yP2Cxjc7zzjRovzIi9/giphy.gif", answerSpeak : "Spider Web"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://c.tenor.com/Z68MBM-q5CgAAAAC/funny-animals-bats.gif", answerSpeak : "Bat"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://c.tenor.com/Uzj1mo4gf2sAAAAC/ghosts-funny.gif", answerSpeak : "Ghost"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://c.tenor.com/ciziVF-00NwAAAAC/massacration-mummy.gif", answerSpeak : "Mummy"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://media2.giphy.com/media/UjYw9fdCEPwU8/giphy.gif", answerSpeak : "Witch"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://c.tenor.com/_0zRWyx38OYAAAAM/pumpkin-spice.gif", answerSpeak : "Pumpkin"}) ;
+
 /*
   
  quests[++questIndexBuilder] = { //
