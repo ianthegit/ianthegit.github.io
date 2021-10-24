@@ -3598,7 +3598,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 quests[++questIndexBuilder] = { 
 		name : "Scary Toonz",
 		hoverover : "Halloweenish songs",
-		tags : "music,2021-10-24,InnerWheel,saturday",
+		tags : "music,2021-10-24,InnerWheel,saturday,specialDay",
 		questInfo: new Array()
 	};
 
