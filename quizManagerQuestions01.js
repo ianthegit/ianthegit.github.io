@@ -3539,9 +3539,9 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
 	question : "What percentage of the population is born with eyes which remain blue?"+ Table4ColumnStart + "5%</td><td>8%</td><td>42%</td><td>0% as blue eyes are really purple" + Table4ColumnEnd, 
 	answer : "8%",
 	image : "https://www.boredpanda.com/blog/wp-content/uploads/2021/10/clipimage-616e72622dd50__700.jpg"} ); 
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,
 	question : "What percentage of the human population are gingers?"+ Table4ColumnStart + "Less than 2%</td><td>3.5%</td><td>5%</td><td>0% as gingers aren't really humans" + Table4ColumnEnd, 
-	answer : "Less than 2%",
+	answer : "Less than 2%",answerimage : "https://lh3.googleusercontent.com/s1YuZ-Rk0T6Firl77BfM3tIxsf7RWeZWP-SQmfWDKzK3BwA5eGaJaib9WeA4RcwA41XCiAok8ilBw06O4Snia6aQKfTvC_EycHB8UEvxviUoM0qoXv8YxtiKW933nitbBF97ug7ttUa4wKD1DYUgYc9ns6I1SAfiKWxmAKY5iZCdNE14hmPLHmUU5GmLV_z65iFTd7qnwancDT1XrhDPqZVtBS2PxVWmPsvJXQEe7ulNqteJIhsuWZMxw0u-Z-8lCZ1TBZse5wb5x_HCDzwQZ7W4oIEpKtEhpOwtfeDsvRG9GAdYo-N3qm2rAJ6ekh2OQIcO6Ho17lIH0c06R_HLWCbwYhzCLK-E5jUvsrTZb8uWHrQFOV-Mvi3iv8bUN95XMLjgJyRbMDaSso4pyZuRI1viUULFmjpKrtUUOiq21ICZGlgVO8LdMH0r-sVvyembuziUjnbVWdUcvDayE_0O3zc51yxiyB4upULJ2dfqV2ZdvHXgTN84NL_Sp5IaVB9zJmVgStENAsambMtVAQh8bnkR_LrrNHgEJ9rlQR9_8_8TyFs3Hj92WjRxi2v5ltkWcGTbBI9OLKN7Q4Ym0J4TOy-TehGXe4AdwagXUWChEMRAno1_MQs7qaSTJFjgDTmqWdOFrM2klUL07Rxw7fWe_n3nhfntQZFkOwzrIs2TJyWf-DYxBufPNi44XWLt0VybicXTcM7sIcXUus9tS1JyoCMNqw=w655-h871-no?authuser=0",
 	image : "https://thehill.com/sites/default/files/styles/thumb_small_article/public/sheeraned_princeharry_10102019insta.jpg?itok=hgY2mltx"} ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
 	question : "What percentage of the population are like Meghan Markle and have Morton's Toe?"+ Table4ColumnStart + "5%</td><td>10%</td><td>15%</td><td>It doesn't matter, Morton is just really annoyed and wants his toe back" + Table4ColumnEnd, 
