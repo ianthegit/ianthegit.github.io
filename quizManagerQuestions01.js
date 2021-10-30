@@ -3606,3 +3606,141 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	question : "",
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/2RhuTY6qGoqWiShY2AiFXr" width="501" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
 	answer : ""}) ;
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Real or Fake",
+		hoverover : "Are these pictures real or fake?",
+		tags : "2021-11-1,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	}; //https://triviaboss.com/real-or-fake/page/26/
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "Is this picture Real or Fake?" , 	answer : "Real - and he's called Lurch", 
+	image : "https://triviaboss.com/static/46d29aea9ac34c348f52a1de68be7137/52f06/qf45de753-523d-4986-9d85-a31d9ce5d130_3-17.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "Is this picture Real or Fake?" , 	answer : "Real", 
+	image : "https://triviaboss.com/static/b83e7ebe3def2ef280f93fbf94dc7d4f/52f06/q3b7b659d-2237-4304-8450-3656dd600b31_22-18.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "Is this picture Real or Fake?" , 	answer : "Real - Solna Centrum is a metro station and shopping mall in Solna Municipality, approximately 5 km from central Stockholm, Sweden", 
+	image : "https://triviaboss.com/static/68ba7e131cced42e837011efe15f6824/52f06/qd828d4cc-d2d1-4940-afe9-86bbdd8df563_2-16.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "Is this picture Real or Fake?" , 	answer : "Fake", 
+	image : "https://triviaboss.com/static/038c4f1574d86c8c32bef9c7795ca96d/52f06/qede00e7a-7f19-43c2-a0ac-be905cbe52ad_34-13.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "Is this picture Real or Fake?" , 	answer : "Real - it's Ladybower Reservoir in Derbyshire", 
+	image : "https://triviaboss.com/static/41c01ef44a3af9b2512be47405b90baf/52f06/q718bdc8d-442b-404d-b9f3-e5aa9bc5f1da_7-17.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "Is this picture Real or Fake?" , 	answer : "Fake (but there are squid that size)", 
+	image : "https://triviaboss.com/static/9c894a9d87af40ffd5c773c9051e9f7b/52f06/qe97f685a-f6f3-4596-9ddc-75a31e4d6961_58-14.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "Is this picture Real or Fake?" , 	answer : "Fake", 
+	image : "https://triviaboss.com/static/5cc49de1ad58c4328754b4623a9a4e50/52f06/q930b97d9-78a1-4cd9-b067-406a999a7b8c_10-17.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "Is this picture Real or Fake?" , 	answer : "Real - it is in Australia, the captain was eating breakfast during bad weather...", 
+	image : "https://triviaboss.com/static/861e254a2b55475ca9db855cd2504058/52f06/q8d353eca-4a03-46ab-a0b6-14bc596719f6_12-17.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "Is this picture Real or Fake?" , 	answer : "Real - the Kawah Ijen Volcano is part of a complex of volcanoes in Banywang Regency, Java", 
+	image : "https://triviaboss.com/static/dc57397d82edc1dce2b38164689abf2d/52f06/q1fff8096-4e9a-4ed8-a3cd-704ec7902f62_14-17.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "Is this picture Real or Fake?" , 	answer : "Real", 
+	image : "https://triviaboss.com/static/aa12acf43edb01748b8ac6a769d16ea8/52f06/q637844a5-4a09-448c-a1c2-5612131dd00b_17-16.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "Is this picture Real or Fake?" , 	answer : "Real - it is a coconut crab", 
+	image : "https://triviaboss.com/static/5a3c995d426f8b7d9e3e29ac5e4b468b/52f06/q8bf6534d-8f5f-42ae-bbf2-8a4a69fe4e6c_18-16.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "Is this picture Real or Fake?" , 	answer : "Real - It is the Princess Juliana International Airport on the Caribbean island of St Maarten", 
+	image : "https://triviaboss.com/static/739272d0bc0d12b4e3af3bedf5c3447c/52f06/q5bd6e43a-1d83-4909-ab67-7f06bf529ffb_21-16.jpg"} ); 
+
+quests[++questIndexBuilder] = { 
+		name : "This week(ish)",
+		hoverover : "Been reading the news this week?",
+		tags : "2021-11-1,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "Supernatural horror movie Poltergeist was released in June 1982, but then reissued on October 29th the same year to capitalise on the Halloween holiday weekend. What horror trope did the film employ?" + Table4ColumnStart + "Evil spirits attack the family because teen daughter Dana loses her virginity</td><td>The house was built on top of an old cemetery</td><td>After everyone dies, little Carol Anne (Heather O'Rourke) is the 'final girl'</td><td>The family experience a 'bat scare' when bats fly out of the basement" + Table4ColumnEnd, 	
+	answer : "Buit on an old cemetery",	image : "https://i.guim.co.uk/img/media/74bca093d526854f39e2b2865b4fdf4288475a4b/0_83_2324_1394/master/2324.jpg?width=620&quality=85&auto=format&fit=max&s=578cd135f36987db4a4e2804bff7cd7e"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "The Simpsons' 'Treehouse Of Horror' Halloween special tradition began in 1990 with the episode of the same name. In the segment 'Bad Dream House', the Simpsons move into a suspiciously cheap old house that turns out to be fostering an evil spirit a la The Amityville Horror and Poltergeist. Which legendary actor provided the unusually mellifluous voice of the removal man who mutters 'I'm glad there's a curse on this place' after Homer tips him $1?" + Table4ColumnStart + "Vincent Price</td><td>James Earl Jones</td><td>Jeremy Irons</td><td>Morgan Freeman" + Table4ColumnEnd, 	
+	answer : "James Earl Jones",	image : "https://static.wikia.nocookie.net/simpsons/images/4/4b/Baddreamhouse.jpg/revision/latest?cb=20210513221347"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "Scream queens Jamie Lee Curtis and her mother Janet Leigh have co-starred in two horror movies. What were they?" + Table4ColumnStart + "Halloween and Psycho</td><td>Halloween: H20 and The Fog</td><td>The Fog and Halloween: Resurrection</td><td>The Fog and Halloween" + Table4ColumnEnd, 	
+	answer : "Halloween: H20 and The Fog",	image : "https://i.guim.co.uk/img/media/98b9233c3171b647818152a8e08395cab931a05f/0_164_4768_2861/master/4768.jpg?width=620&quality=85&auto=format&fit=max&s=318d0fc8298ada4e5590cc89ceb7a3a5"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "In Kathryn Bigelow's immortal 1991 bromance Point Break, Bodhi (Patrick Swayze) and his fellow surfing outlaws rob banks while wearing Halloween rubber masks of which notable figures?" , 	
+	answer : "Former Presidents of the USA",	image : "https://i.pinimg.com/originals/60/53/dc/6053dc613f1c09ac8e8b07a0bb75d50b.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "New Zealand's prime minister, Jacinda Ardern, said: 'Sorry, a slight distraction' after what disrupted one of her press conferences?" + Table4ColumnStart + "Her phone wouldn't stop buzzing with goal alerts from Old Trafford</td><td>One of the flags on the backdrop behind her fell down</td><td>A 5.9 magnitude earthquake happened</td><td>A man wearing an Olly Murs face mask burst into the room" + Table4ColumnEnd, 	
+	answer : "A 5.9 magnitude earthquake happened",	image : "https://i.guim.co.uk/img/media/f49cf235f002e92565de78eeb67ae12f2419a33c/953_805_3137_1882/master/3137.jpg?width=620&quality=85&auto=format&fit=max&s=ad4c0cd0b871734adc933bee7e771eb7"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "Which artist last week smashed the UK's record for streams of a song in a week after there were 24m streams for her new single?" + Table4ColumnStart + "Dua Lipa</td><td>Adele</td><td>Billie Eilish</td><td>Kate Bush" + Table4ColumnEnd, 	
+	answer : "Adele",	image : "https://i.guim.co.uk/img/media/536940adfcf8133a1fd7b9f73ad9ad8c82f1fa74/0_0_2000_1200/master/2000.jpg?width=620&quality=85&auto=format&fit=max&s=c0bb4bb9077f75c851641f65d02cfe5c"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : " Adults in which country will be permitted to grow up to four cannabis plants in their homes or gardens under laws that will make it the first country in Europe to legalise production and consumption of the drug?" + Table4ColumnStart + "Liechtenstein</td><td>San Marino</td><td>Andorra</td><td>Luxembourg" + Table4ColumnEnd, 	
+	answer : "Luxembourg",	image : "https://c.tenor.com/8LSToAJJFSsAAAAM/smoke-weed.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "The Giant's Causeway (Clochan an Aifir) is a world heritage site and has made it onto this quiz before. But what are the mysterious columns made of?" + Table4ColumnStart + "Basalt</td><td>Dacite</td><td>Granite</td><td>Peladon" + Table4ColumnEnd, 	
+	answer : "Basalt",	image : "https://i.guim.co.uk/img/media/b5684b0526276f7295f33306992632e84da91728/0_365_5400_3239/master/5400.jpg?width=620&quality=85&auto=format&fit=max&s=c869db9ca9fe1dd3c3a39bad17f3f7fa"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "It was Halloween last night, but which of these seasonal festivals on 'the wheel of the year' takes place at the same time as Halloween?" + Table4ColumnStart + "Coachella</td><td>Beltane</td><td>Lughnasa</td><td>Samhain" + Table4ColumnEnd, 	
+	answer : "Samhain",	image : "https://i.guim.co.uk/img/media/2a385facb0fde4bd16314db97959f043ea5a1025/559_518_7633_4582/master/7633.jpg?width=620&quality=85&auto=format&fit=max&s=55136727476adb54a734b7debd72494f"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "What is currently winning New Zealand's bird of the year competition?" + Table4ColumnStart + "A butterfly</td><td>A bird</td><td>A bat</td><td>A bee" + Table4ColumnEnd, 	
+	answer : "A bat - ekapeka-tou-roa, or long-tailed bat, one of New Zealand's few land-based native mammals. It was put on the list to raise awareness of the bat's endangered species",	image : "https://i.guim.co.uk/img/media/1e0aec69df8ba51f1ac48dc9123d270a1c10c571/0_0_3632_2848/master/3632.jpg?width=620&quality=85&auto=format&fit=max&s=c7f08a5fc5b77431c48467dee1c351f3"} ); 
+
+
+quests[++questIndexBuilder] = { //
+		name : "Pub singer 9",
+		hoverover : "Sit back, close your eyes, you could be at a live venue right now.  ",
+		tags : "2021-11-1,saturday,InnerWheel,surfers,audio",
+		splash : {splashType : splashTypePictureAndText , splashText : "This week we pay tribute to 70's Disco greats the Bee Gees and Barry White.  Hold on for some lovin", splashImage : "https://s3.eu-west-3.amazonaws.com/media.cdn.brusselslife.be/38528/14518-agenda-image.jpg"  },
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w8-howdeep.mp3' + endAudio ,
+	answer : '<iframe src="https://open.spotify.com/embed/track/2JoZzpdeP2G6Csfdq5aLXP" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w8-jive.mp3' + endAudio ,
+	answer : '<iframe src="https://open.spotify.com/embed/track/4t0Pj3iBnSCZv5pDEPNmzG" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w8-massachusetts.mp3' + endAudio ,
+	answer : '<iframe src="https://open.spotify.com/embed/track/2R30N7DHSavVqORsbMApqV" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w8-morethanawoman.mp3' + endAudio ,
+	answer : '<iframe src="https://open.spotify.com/embed/track/2cX2coZS1PYBfPs8wgbdWE" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w8-nightfever.mp3' + endAudio ,
+	answer : '<iframe src="https://open.spotify.com/embed/track/0qemIQjSxcKyf42VPfZnfa" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w8-stayingalive.mp3' + endAudio ,
+	answer : '<iframe src="https://open.spotify.com/embed/track/5ubvP9oKmxLUVq506fgLhk" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w8-tragedy.mp3' + endAudio ,
+	answer : '<iframe src="https://open.spotify.com/embed/track/6UXXeFqMBGiqjkzQzkMT3E" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w8-winagain.mp3' + endAudio ,
+	answer : '<iframe src="https://open.spotify.com/embed/track/5mwzpzRue1SBWwrbbhXfbf" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w8-myfirst.mp3' + endAudio ,
+	answer : '<iframe src="https://open.spotify.com/embed/track/3ZYO0HGRFFdAGeb8o7F9KC" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w8-cantgetenough.mp3' + endAudio ,
+	answer : '<iframe src="https://open.spotify.com/embed/track/3mWpUEBYnv9SIFWfixSJFx" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Dr Who restarting",
+		hoverover : "Vague Dr Who related",
+		tags : "music,2021-11-1,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/4mLNKTLN7hTHojyssCLTu3" width="501" height="580" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+	answer : ""}) ;
+
+
