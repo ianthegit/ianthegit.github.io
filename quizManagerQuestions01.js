@@ -3612,7 +3612,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 quests[++questIndexBuilder] = { 
 		name : "Real or Fake",
 		hoverover : "Are these pictures real or fake?",
-		tags : "2021-11-1,saturday,InnerWheel,surfers",
+		tags : "2021-10-31,saturday,InnerWheel,surfers",
 		questInfo: new Array()
 	}; //https://triviaboss.com/real-or-fake/page/26/
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
@@ -3655,7 +3655,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
 quests[++questIndexBuilder] = { 
 		name : "This week(ish)",
 		hoverover : "Been reading the news this week?",
-		tags : "2021-11-1,saturday,InnerWheel,surfers",
+		tags : "2021-10-31,saturday,InnerWheel,surfers",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
@@ -3693,7 +3693,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
 quests[++questIndexBuilder] = { //
 		name : "Pub singer 9",
 		hoverover : "Sit back, close your eyes, you could be at a live venue right now.  ",
-		tags : "2021-11-1,saturday,InnerWheel,surfers,audio",
+		tags : "2021-10-31,saturday,InnerWheel,surfers,audio",
 		splash : {splashType : splashTypePictureAndText , splashText : "This week we pay tribute to 70's Disco greats the Bee Gees and Barry White.  Hold on for some lovin", splashImage : "https://s3.eu-west-3.amazonaws.com/media.cdn.brusselslife.be/38528/14518-agenda-image.jpg"  },
 		questInfo: new Array()
 	};
@@ -3734,7 +3734,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 quests[++questIndexBuilder] = { 
 		name : "Dr Who restarting",
 		hoverover : "Vague Dr Who related",
-		tags : "music,2021-11-1,InnerWheel,saturday",
+		tags : "music,2021-10-31,InnerWheel,saturday",
 		questInfo: new Array()
 	};
 
