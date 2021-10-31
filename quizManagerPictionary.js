@@ -1082,6 +1082,32 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 
+quests[++questIndexBuilder] = { //
+		name : "Pictionary 38",
+		hoverover : "Pictionary on the theme of Dr Who",
+		tags : "2021-10-31,pictionary",
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://media4.giphy.com/media/l2ZE7SFH6JKz4gRwc/200w.webp?cid=ecf05e470bb0c537wrx3ej24qm0fccijaubgm66tjjspm2ft&rid=200w.webp&ct=g", answerSpeak : "Tardis"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://64.media.tumblr.com/tumblr_m7byzjP1Yj1qcwhkeo1_400.gifv", answerSpeak : "Dr Who's scarf"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://i.pinimg.com/originals/9f/44/91/9f449113f3523dab04f0611905847cc2.gif", answerSpeak : "Dalek"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://c.tenor.com/Mu7_dv_LT48AAAAC/4th-doctor-fourth-doctor.gif", answerSpeak : "Dr Who's floppy hat"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://media1.giphy.com/media/GfUUDzSy3QiyI/giphy.gif", answerSpeak : "Cybermen"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://c.tenor.com/yAFJs6rF9pAAAAAC/doctor-who-david-tennant.gif", answerSpeak : "Sonic Screwdriver"}) ;
+
+
 /*
   
  quests[++questIndexBuilder] = { //
