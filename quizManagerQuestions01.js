@@ -3744,3 +3744,48 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : ""}) ;
 
 
+quests[++questIndexBuilder] = { 
+		name : "Cool knowledge",
+		hoverover : "Here is some stuff you might know?",
+		tags : "2021-11-7,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "We all know that sharks can detect (smell) blood at a concentration of 1 part per 25 million, but is a human's ability to detect wet earth greater or lesser?" , 	
+	answer : "Greater - as low as 400 parts per trillion!",	image : "https://c.tenor.com/LYz3YZN1s9AAAAAM/shark-oups.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "What happened to the patent for Fire Hydrants?" + Table4ColumnStart + "A dog ate it</td><td>It was lost in a fire</td><td>It was never patented</td><td>It was filed correctly and remains in the NYC patent office" + Table4ColumnEnd , 	
+	answer : "It was lost in a fire",	image : "https://i.imgur.com/cIRswoB.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "Is the shell part of a turtle's skeleton?" , 	
+	answer : "Yes",	image : "https://thumbs.gfycat.com/EducatedImpracticalGrackle-max-1mb.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "Name 3 celestial bodies where parts of the Wright brothers first plane now reside?" , 	
+	answer : "Earth, the Moon, Mars",	image : "https://thumbs.gfycat.com/BossyDownrightDore-size_restricted.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "What percentage of the earth's population lives in the Northern Hemisphere?" + Table4ColumnStart + "95%</td><td>90%</td><td>75%</td><td>67%" + Table4ColumnEnd, 	
+	answer : "90%",	image : "https://c.tenor.com/EhXBLBx7n9sAAAAd/planet-earth.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "Is the figure in Munch's 'The Scream' screaming?" , 	
+	answer : "No, it's reacting to hearing The Scream",	image : "https://i.pinimg.com/originals/9c/8a/47/9c8a479f5a2b507ccf46848deb1b733d.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "Which is wider - Australia or the Moon (it's diameter)?" , 	
+	answer : "Australia is roughly 4,000Kms wide, whereas the moon's diameter is roughly 3,500Km",	image : "https://i.makeagif.com/media/6-18-2015/tx4YN-.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "If an alpaca has blue eyes it is most likely..."+ Table4ColumnStart + "Very sexy</td><td>Deaf</td><td>Swedish</td><td>The product of blue-eyed parents" + Table4ColumnEnd , 	
+	answer : "deaf.  Pardon?",	image : "https://media4.giphy.com/media/mXwxPJjb1SzlhwMHfd/giphy.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "What came first - sharks or trees?" , 	
+	answer : "Sharks",	image : "https://media2.giphy.com/media/1Y6eOlvgr9JuM9dgF5/giphy.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "What came first - sharks or Saturn's rings?" , 	
+	answer : "Probably sharks (450 million years ago - compared to Saturn's rings which are probably 100 million years old)",	image : "https://media3.giphy.com/media/3o7buctjKD8g5r4544/giphy.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "What do more people die from - vending machines or sharks?" , 	
+	answer : "Vending machines",	image : "https://i.imgur.com/BjtwDL9.gif?noredirect"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "Did the Tyrannosaurus Rex live closer to the invention of the iPhone or the Stegasaurus?" , 	
+	answer : "The iPhone - Stegasaurus died out 150 million years ago. T-rex died out 65 million years ago",	image : "https://c.tenor.com/KX9m00pthYoAAAAC/rex-dinosaur.gif"} ); 
+
+
+
