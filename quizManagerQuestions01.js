@@ -3788,4 +3788,36 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
 	answer : "The iPhone - Stegasaurus died out 150 million years ago. T-rex died out 65 million years ago",	image : "https://c.tenor.com/KX9m00pthYoAAAAC/rex-dinosaur.gif"} ); 
 
 
+quests[++questIndexBuilder] = { //https://www.buzzfeed.com/bendzialdowski/robert-de-niro-quiz?ref=hpsplash
+		name : "Bobby",
+		hoverover : "We've all seen Bobby D-N in films, but can you recognise what films these stills are from...?",
+		splash : {splashType : splashTypePictureAndText , splashText : "We've all seen Bobby D-N in films, but can you recognise what films these stills are from...?", splashImage : "https://i.pinimg.com/originals/67/b3/61/67b3615598c1509493727efdefd72c3c.gif" },
+		tags : "2021-11-7,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this from"+ Table4ColumnStart + "Goodfellas</td><td>Dominos</td><td>Pizza Express</td><td>Pizza Hut" + Table4ColumnEnd, // 
+	image : "https://img.buzzfeed.com/buzzfeed-static/static/2021-10/28/10/enhanced/42839ec2033f/enhanced-519-1635416368-3.png?output-format=auto&output-quality=auto",
+	answerimage : "https://c.tenor.com/mm-jYBApr78AAAAC/robert-de-niro-kick.gif", answer : "Goodfellas"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this from"+ Table4ColumnStart + "Meet the parents</td><td>The intern</td><td>The wolf of wallstreet</td><td>The internship" + Table4ColumnEnd, // 
+	image : "https://img.buzzfeed.com/buzzfeed-static/static/2021-10/27/16/enhanced/3a5d422e9596/enhanced-489-1635351516-8.png?output-format=auto&output-quality=auto",
+	answerimage : "https://i.gifer.com/U5Sf.gif", answer : "The Intern"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this from"+ Table4ColumnStart + "Bad Neighbours</td><td>Dirty Dancing</td><td>Dirty Grandpa</td><td>Italian Stallion" + Table4ColumnEnd, // 
+	image : "https://img.buzzfeed.com/buzzfeed-static/static/2021-11/1/11/enhanced/10f527de873a/enhanced-12498-1635766641-12.jpg?output-format=auto&output-quality=auto",
+	answerimage : "https://c.tenor.com/89QREkUrcdYAAAAC/dirty-grandpa-zac-efron.gif", answer : "Dirty Grandpa"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this from"+ Table4ColumnStart + "Cheaper by the dozen</td><td>The Irishman</td><td>Meet the Fockers</td><td>Meet the Parents" + Table4ColumnEnd, // 
+	image : "https://img.buzzfeed.com/buzzfeed-static/static/2021-11/1/11/enhanced/c8c168ecef21/enhanced-12291-1635766883-5.jpg?output-format=auto&output-quality=auto",
+	answerimage : "https://c.tenor.com/RCMb35wVWpoAAAAM/meet-the-parents-robert-de-niro.gif", answer : "Meet the Parents"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this from"+ Table4ColumnStart + "Leon</td><td>Raging Bull</td><td>Taxi Driver</td><td>Saturday Night Fever" + Table4ColumnEnd, // 
+	image : "https://img.buzzfeed.com/buzzfeed-static/static/2021-10/27/16/enhanced/3a5d422e9596/enhanced-533-1635351975-20.jpg?output-format=auto&output-quality=auto",
+	answerimage : "https://i.gifer.com/EsBO.gif", answer : "Taxi Driver"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this from"+ Table4ColumnStart + "Heat</td><td>Casino</td><td>Chinatown</td><td>Finding Nemo" + Table4ColumnEnd, // 
+	image : "https://img.buzzfeed.com/buzzfeed-static/static/2021-11/1/11/enhanced/c8c168ecef21/enhanced-12310-1635766954-1.jpg?output-format=auto&output-quality=auto",
+	answerimage : "https://64.media.tumblr.com/82c39e27deaeefd5342cb1357f7e346d/b00463b3abf97f6c-69/s500x750/4c420d2ca8ef4eb35d263ddb90bbae1bfff92c28.gifv", answer : "Heat"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this from"+ Table4ColumnStart + "Raging Bull</td><td>Taxi Driver</td><td>Mad Dog and Glory</td><td>Rocky IV" + Table4ColumnEnd, // 
+	image : "https://img.buzzfeed.com/buzzfeed-static/static/2021-11/1/11/enhanced/10f527de873a/enhanced-12559-1635767333-1.jpg?output-format=auto&output-quality=auto",
+	answerimage : "https://thumbs.gfycat.com/TinyInfamousBaboon-size_restricted.gif", answer : "Raging Bull"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this from"+ Table4ColumnStart + "Hands of Stone</td><td>Dirty Grandpa</td><td>The Joker</td><td>The Irishman" + Table4ColumnEnd, // 
+	image : "https://img.buzzfeed.com/buzzfeed-static/static/2021-11/1/11/enhanced/bd560ef93b1c/enhanced-12295-1635767119-8.jpg?output-format=auto&output-quality=auto",
+	answerimage : "https://c.tenor.com/Qj5UtccRwO4AAAAC/umm-awkward.gif", answer : "The Joker"}) ;
+
 
