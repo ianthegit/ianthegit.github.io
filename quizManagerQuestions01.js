@@ -3861,3 +3861,42 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://upload.wikimedia.org/wikipedia/en/thumb/7/7d/Planet_of_the_Apes_%282001%29_poster.jpg/220px-Planet_of_the_Apes_%282001%29_poster.jpg", answer : "Planet of the Apes"}) ;
 
 
+quests[++questIndexBuilder] = { //
+		name : "Pub singer 10",
+		hoverover : "Sit back, close your eyes, you could be at a live venue right now.  ",
+		tags : "2021-11-7,saturday,InnerWheel,surfers,audio",
+		splash : {splashType : splashTypePictureAndText , splashText : "This week we pay tribute to the great crooners", splashImage : "https://www.propermusic.com/media/catalog/product/cache/770f7f65d519370eea7ae1a9215d2a64/5/7/572378_1.jpg"  },
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w10-strangers.mp3' + endAudio ,
+	answer : '<iframe src="https://open.spotify.com/embed/track/2F8DsV74G8roccHCegEAeE" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w10-knife.mp3' + endAudio ,
+	answer : '<iframe src="https://open.spotify.com/embed/track/3E5ndyOfO6vFDEIE42HA8o" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w10-fly.mp3' + endAudio ,
+	answer : '<iframe src="https://open.spotify.com/embed/track/5KKiN9LDoI510Yf4VWboOz" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w10-difference.mp3' + endAudio ,
+	answer : '<iframe src="https://open.spotify.com/embed/track/32pqXXrWeAwXKAWZYy1NUL" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w10-impossible.mp3' + endAudio ,
+	answer : '<iframe src="https://open.spotify.com/embed/track/3kdGMnFYSKD7ALecbxadhg" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w10-eyes.mp3' + endAudio ,
+	answer : '<iframe src="https://open.spotify.com/embed/track/7oHymG8r14Iv9zn5hFTNax" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w10-kick.mp3' + endAudio ,
+	answer : '<iframe src="https://open.spotify.com/embed/track/6tANJIaIQAFhMxgnafAZd2" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w10-amore.mp3' + endAudio ,
+	answer : '<iframe src="https://open.spotify.com/embed/track/64MgjDp6ijaLvS3T83JHX9" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w10-goesby.mp3' + endAudio ,
+	answer : '<iframe src="https://open.spotify.com/embed/track/4N6xY1v1oOuXb6GdEJqQTP" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w10-new.mp3' + endAudio ,
+	answer : '<iframe src="https://open.spotify.com/embed/track/5hjXF13XHZ5d1lgF3YqyED" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
+
