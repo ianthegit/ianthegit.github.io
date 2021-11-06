@@ -3792,7 +3792,7 @@ quests[++questIndexBuilder] = { //https://www.buzzfeed.com/bendzialdowski/robert
 		name : "Bobby",
 		hoverover : "We've all seen Bobby D-N in films, but can you recognise what films these stills are from...?",
 		splash : {splashType : splashTypePictureAndText , splashText : "We've all seen Bobby D-N in films, but can you recognise what films these stills are from...?", splashImage : "https://i.pinimg.com/originals/67/b3/61/67b3615598c1509493727efdefd72c3c.gif" },
-		tags : "2021-11-7,saturday,InnerWheel,surfers",
+		tags : "2021-11-7,saturday,InnerWheel,surfers,casting",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this from"+ Table4ColumnStart + "Goodfellas</td><td>Dominos</td><td>Pizza Express</td><td>Pizza Hut" + Table4ColumnEnd, // 
@@ -3819,5 +3819,45 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this from"+ Table4ColumnStart + "Hands of Stone</td><td>Dirty Grandpa</td><td>The Joker</td><td>The Irishman" + Table4ColumnEnd, // 
 	image : "https://img.buzzfeed.com/buzzfeed-static/static/2021-11/1/11/enhanced/bd560ef93b1c/enhanced-12295-1635767119-8.jpg?output-format=auto&output-quality=auto",
 	answerimage : "https://c.tenor.com/Qj5UtccRwO4AAAAC/umm-awkward.gif", answer : "The Joker"}) ;
+
+
+
+quests[++questIndexBuilder] = { //https://www.buzzfeed.com/bendzialdowski/robert-de-niro-quiz?ref=hpsplash
+		name : "Hels Bells",
+		hoverover : "We've all seen the future Mrs Hopgood in films, but can you recognise what films these stills are from...?",
+		splash : {splashType : splashTypePictureAndText , splashText : "We've all seen the future Mrs Hopgood in films, but can you recognise what films these stills are from...?", splashImage : "https://i.gifer.com/origin/95/953e95f22cef08c407ed0b94458e3753_w200.gif" },
+		tags : "2021-11-7,saturday,InnerWheel,surfers,casting",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this from"+ Table4ColumnStart + "Maurice</td><td>Room with a View</td><td>Where Angels Fear to Tread</td><td>Planet of the Apes" + Table4ColumnEnd, // 
+	image : "https://cdn.britannica.com/23/212123-050-1F23B04E/Publicity-movie-still-Room-With-View-Helena-Bonham-Carter-Julian-Sands-1985.jpg",
+	answerimage : "https://64.media.tumblr.com/42316d3c370afd9b33bb89ca32c00dc2/385bcd4b356621db-e7/s540x810/581e67388a888c29eb2904b4f27ac17e39403cfe.gifv", answer : "Room with a view"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this from"+ Table4ColumnStart + "Maurice</td><td>Room with a View</td><td>Where Angels Fear to Tread</td><td>Planet of the Apes" + Table4ColumnEnd, // 
+	image : "http://www.helen-mirren.net/videos/wp-content/uploads/2017/04/1_173.jpg",
+	answerimage : "https://m.media-amazon.com/images/I/51ME5T4C1SL.jpg", answer : "Where Angels Fear to Tread"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this from"+ Table4ColumnStart + "A Nightmare Before Christmas</td><td>Fight Club</td><td>Getting it Right</td><td>Planet of the Apes" + Table4ColumnEnd, // 
+	image : "https://i.pinimg.com/originals/cf/fd/5e/cffd5eb2141a91bf92bb6704a3a03ff3.png",
+	answerimage : "https://i.gifer.com/3LKL.gifhttps://i.gifer.com/3LKL.gif", answer : "Fight Club"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this from"+ Table4ColumnStart + "A Nightmare Before Christmas</td><td>Fight Club</td><td>Getting it Right</td><td>Planet of the Apes" + Table4ColumnEnd, // 
+	image : "https://m.media-amazon.com/images/M/MV5BMTU0MzI2MTgwN15BMl5BanBnXkFtZTcwMzM0MDkwMw@@._V1_.jpg",
+	answerimage : "https://m.media-amazon.com/images/M/MV5BYjk1NDczNjEtZGZiZS00MjY2LTgxOGYtMDIyNTc0MTZhYmM1XkEyXkFqcGdeQXVyMjUyNDk2ODc@._V1_.jpg", answer : "Getting it Right"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this from"+ Table4ColumnStart + "Keep the Aspidistra Flying</td><td>The Petticoat Expeditions</td><td>Women Talking Dirty</td><td>Planet of the Apes" + Table4ColumnEnd, // 
+	image : "http://31.media.tumblr.com/88c2fe17830bbe396a110948a3cd33c5/tumblr_mgs3s5u7HZ1rertyro1_500.gif",
+	answerimage : "https://m.media-amazon.com/images/M/MV5BYWYzY2U2NDItNzA5OC00M2UxLTg0ZjktZjIxNzMxNDgwNmMzXkEyXkFqcGdeQXVyMTY5Nzc4MDY@._V1_FMjpg_UX1000_.jpg", answer : "Women Talking Dirty"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this from"+ Table4ColumnStart + "Sweeny Todd</td><td>Harry Potter</td><td>Fight Club</td><td>Planet of the Apes" + Table4ColumnEnd, // 
+	image : "http://24.media.tumblr.com/d4c2e5b9cbed0dcc3b603d4cd40fc057/tumblr_n3a1z6OsXz1rey868o1_500.gif",
+	answerimage : "https://media.harrypotterfanzone.com/dan-radcliffe-and-helena-bonham-carter.jpg", answer : "Harry Potter"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this from"+ Table4ColumnStart + "Sweeny Todd</td><td>Harry Potter</td><td>Fight Club</td><td>Planet of the Apes" + Table4ColumnEnd, // 
+	image : "https://i.gifer.com/40SW.gif",
+	answerimage : "https://thumbs.worthpoint.com/zoom/images1/360/0213/12/helena-bonham-carter-sweeney-todd_360_c716c78c29e34f6fbbcfe01b4414bfe9.jpg", answer : "Sweeny Todd"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this from"+ Table4ColumnStart + "Harry Potter</td><td>Cinderella</td><td>Alice through the Looking Glass</td><td>Planet of the Apes" + Table4ColumnEnd, // 
+	image : "https://64.media.tumblr.com/8ec5bc496e785f004a10ddcb21e20f4f/tumblr_nkva4mxOLL1qblt13o1_500.gifv",
+	answerimage : "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1e725ce2-9195-451c-b155-0a1a3e19ee77/d88lauy-cac74528-8fc0-4a19-bf39-0fb882c0bb1e.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzFlNzI1Y2UyLTkxOTUtNDUxYy1iMTU1LTBhMWEzZTE5ZWU3N1wvZDg4bGF1eS1jYWM3NDUyOC04ZmMwLTRhMTktYmYzOS0wZmI4ODJjMGJiMWUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.W51rlqVFIPhCTsGaKVtaxemww-SK4v0rY5ZilvuSqZc", answer : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this from"+ Table4ColumnStart + "Harry Potter</td><td>Cinderella</td><td>Alice through the Looking Glass</td><td>Planet of the Apes" + Table4ColumnEnd, // 
+	image : "https://c.tenor.com/wzpeVllHfOwAAAAd/queen-of-hearts-helena-bonham-carter.gif",
+	answerimage : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNIVHzrFvF4zq9MipNCcXCxWfWg0sDQdarTw&usqp=CAU", answer : "Alice through the Looking Glass"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this from"+ Table4ColumnStart + "Rise of the Planet of the Apes</td><td>Dawn of the Planet of the Apes</td><td>War for the Planet of the Apes</td><td>Planet of the Apes" + Table4ColumnEnd, // 
+	image : "https://i.pinimg.com/originals/da/fc/f4/dafcf42c1108b64f413d4ed905e96366.jpg",
+	answerimage : "https://upload.wikimedia.org/wikipedia/en/thumb/7/7d/Planet_of_the_Apes_%282001%29_poster.jpg/220px-Planet_of_the_Apes_%282001%29_poster.jpg", answer : "Planet of the Apes"}) ;
 
 
