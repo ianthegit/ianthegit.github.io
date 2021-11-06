@@ -3837,7 +3837,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://m.media-amazon.com/images/I/51ME5T4C1SL.jpg", answer : "Where Angels Fear to Tread"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this from"+ Table4ColumnStart + "A Nightmare Before Christmas</td><td>Fight Club</td><td>Getting it Right</td><td>Planet of the Apes" + Table4ColumnEnd, // 
 	image : "https://i.pinimg.com/originals/cf/fd/5e/cffd5eb2141a91bf92bb6704a3a03ff3.png",
-	answerimage : "https://i.gifer.com/3LKL.gifhttps://i.gifer.com/3LKL.gif", answer : "Fight Club"}) ;
+	answerimage : "https://i.gifer.com/3LKL.gif", answer : "Fight Club"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this from"+ Table4ColumnStart + "A Nightmare Before Christmas</td><td>Fight Club</td><td>Getting it Right</td><td>Planet of the Apes" + Table4ColumnEnd, // 
 	image : "https://m.media-amazon.com/images/M/MV5BMTU0MzI2MTgwN15BMl5BanBnXkFtZTcwMzM0MDkwMw@@._V1_.jpg",
 	answerimage : "https://m.media-amazon.com/images/M/MV5BYjk1NDczNjEtZGZiZS00MjY2LTgxOGYtMDIyNTc0MTZhYmM1XkEyXkFqcGdeQXVyMjUyNDk2ODc@._V1_.jpg", answer : "Getting it Right"}) ;
