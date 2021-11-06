@@ -3849,7 +3849,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://media.harrypotterfanzone.com/dan-radcliffe-and-helena-bonham-carter.jpg", answer : "Harry Potter"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this from"+ Table4ColumnStart + "Sweeny Todd</td><td>Harry Potter</td><td>Fight Club</td><td>Planet of the Apes" + Table4ColumnEnd, // 
 	image : "https://i.gifer.com/40SW.gif",
-	answerimage : "https://thumbs.worthpoint.com/zoom/images1/360/0213/12/helena-bonham-carter-sweeney-todd_360_c716c78c29e34f6fbbcfe01b4414bfe9.jpg", answer : "Sweeny Todd"}) ;
+	answerimage : "https://signedforcharity.org/wp-content/uploads/2020/06/Helena-Bonham-Carter-0007A-254cmx203cm-scaled.jpg", answer : "Sweeny Todd"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this from"+ Table4ColumnStart + "Harry Potter</td><td>Cinderella</td><td>Alice through the Looking Glass</td><td>Planet of the Apes" + Table4ColumnEnd, // 
 	image : "https://64.media.tumblr.com/8ec5bc496e785f004a10ddcb21e20f4f/tumblr_nkva4mxOLL1qblt13o1_500.gifv",
 	answerimage : "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1e725ce2-9195-451c-b155-0a1a3e19ee77/d88lauy-cac74528-8fc0-4a19-bf39-0fb882c0bb1e.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzFlNzI1Y2UyLTkxOTUtNDUxYy1iMTU1LTBhMWEzZTE5ZWU3N1wvZDg4bGF1eS1jYWM3NDUyOC04ZmMwLTRhMTktYmYzOS0wZmI4ODJjMGJiMWUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.W51rlqVFIPhCTsGaKVtaxemww-SK4v0rY5ZilvuSqZc", answer : ""}) ;
