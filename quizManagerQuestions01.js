@@ -3900,3 +3900,20 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w10-new.mp3' + endAudio ,
 	answer : '<iframe src="https://open.spotify.com/embed/track/5hjXF13XHZ5d1lgF3YqyED" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
 
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "COP 26",
+		hoverover : "Weather related songs",
+		tags : "music,2021-11-7,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/16diyPwoSWYkfZDN3uuoh9" width="501" height="580" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+	answer : ""}) ;
+
+
+
