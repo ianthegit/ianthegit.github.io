@@ -1118,7 +1118,7 @@ quests[++questIndexBuilder] = { //
 	};
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLVHsgm5D2BQXGWPTKb343_f8A1GI_VZOe9D3IY4Og4qXEpun5y3kaK3uCi-vsjJVVUsAgU2rP1PmRX0fAVZIgAsBWRt63LJ0OODCdmSLJOCtcfiwQNJK0Iq8KfPtCmDvA7sALm0bh_V5wLSxZiixr0OTw=w501-h513-no?authuser=0",
-	answerimage : "https://lh3.googleusercontent.com/proxy/267DUsoJnSqavrDHIAxRn6HK6skZ813kItH_dLWxYsL2peV1DjAalyk2weQ2qOLr302K8KJcVywXw-Mc2JjfWbQO5Ld_AkE5_byOmZwDIMpWx4Sn5Cwi-YjpiZZstU5m3y8pGGfn7L2dhCv_TtTzPWLRXtw", answerSpeak : "Gloves"}) ;
+	answerimage : "https://lh3.googleusercontent.com/proxy/MbOTJ39BrIt0qks47ckoyJG7kALmRcJ8ooRd7zxEhrOsRVUihMBh8lCpiQg5_xhjcISwRDgo_AB85pgSwe2pkAzrN7f8bwlsMBuROE0Cu-uoDZFQQtxuNVbm_vZtfDDf91AOlCFs_w8j1EPT7sMM2nmPldw", answerSpeak : "Gloves"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLXcCVA12ph8TfzcFSN5PB9AMPOSTKR3F5EtXfMyYaC9sSFLVNB8Lw9muovjOIW2dljRdj0cYaJbd69o1YVXa5j3ie-EcvA2uEnUfLvS2C2GshL1vogOwz-keO-S32-hBw8LZDGhc-fS4dLnVJo0_aIfgw=w455-h432-no?authuser=0",
 	answerimage : "https://media4.giphy.com/media/cNRem6vXQbMCL0hoGf/giphy.gif", answerSpeak : "Wooly bobble hat"}) ;
