@@ -1117,22 +1117,22 @@ quests[++questIndexBuilder] = { //
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVHsgm5D2BQXGWPTKb343_f8A1GI_VZOe9D3IY4Og4qXEpun5y3kaK3uCi-vsjJVVUsAgU2rP1PmRX0fAVZIgAsBWRt63LJ0OODCdmSLJOCtcfiwQNJK0Iq8KfPtCmDvA7sALm0bh_V5wLSxZiixr0OTw=w501-h513-no?authuser=0",
 	answerimage : "https://lh3.googleusercontent.com/proxy/267DUsoJnSqavrDHIAxRn6HK6skZ813kItH_dLWxYsL2peV1DjAalyk2weQ2qOLr302K8KJcVywXw-Mc2JjfWbQO5Ld_AkE5_byOmZwDIMpWx4Sn5Cwi-YjpiZZstU5m3y8pGGfn7L2dhCv_TtTzPWLRXtw", answerSpeak : "Gloves"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXcCVA12ph8TfzcFSN5PB9AMPOSTKR3F5EtXfMyYaC9sSFLVNB8Lw9muovjOIW2dljRdj0cYaJbd69o1YVXa5j3ie-EcvA2uEnUfLvS2C2GshL1vogOwz-keO-S32-hBw8LZDGhc-fS4dLnVJo0_aIfgw=w455-h432-no?authuser=0",
 	answerimage : "https://media4.giphy.com/media/cNRem6vXQbMCL0hoGf/giphy.gif", answerSpeak : "Wooly bobble hat"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXcCZPHSZTKmpxoi1qhVERGlYj9myzV_kKYPE0kWWc1-H9zDqmh0Gt2fNN8a93o9RTsgtW4aF0OmXIP72S6Ui7pI8qd1kUW53-ALvv145QDP9OJYO9jx8oU58l-SjHXSbUoUd9-eYfO0dVula6c9Y_R1A=w735-h620-no?authuser=0",
 	answerimage : "https://static.onecms.io/wp-content/uploads/sites/20/2018/09/lenny-kravitz1.jpg", answerSpeak : "Scarf"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVHdnhN6Ct09KimOOmZU8BK23fDfoIcRN-EhLKUBw2V2E2xQqTiW0dxYJcIJWsBSBmMY6bVNOqD8joKOBdOg9pQTcccGZyh7HEW47-H51SNwrqeZ0OFq-4Rln69jqSyLVzCkc8BBnhBOgg7B2qGy3SpCw=w595-h439-no?authuser=0",
 	answerimage : "https://thumbs.gfycat.com/CleverUnitedIberianbarbel-max-1mb.gif", answerSpeak : "Flip-flops"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLV20-dzWSm50qncd6dkqu5n41bFJ-5vqreoXNw4EYdH_CQkOqzzaPrQIwu_gntvjTGtAsAm9HT2FcZx79RsEAyhNlcOE87gNFrH3ZFba5veAYZRs2Ij4v9OYToAmLHZ0Ilyzk_osmxPnYijvjAqIHgMtQ=w412-h294-no?authuser=0",
 	answerimage : "https://i.imgur.com/aGx2xbc.gif?noredirect", answerSpeak : "Swimming trunks"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXcsScOKmLx2vd0e5iSjvuQZhCizFT9O5boh7oxV-6zyXFtNIWY8k1BJRujToQsXq05-5_-pna_YfMmcjTb824FoCaLGhl1eeZyC7MekE7xoz3gZObQrdr3LAE5cH3M1WT4KVa-D0ZjcjnN_ndSCg6lDQ=w903-h445-no?authuser=0",
 	answerimage : "https://c.tenor.com/iFr08qPaScgAAAAM/snorkeling-girl.gif", answerSpeak : "Snorkle"}) ;
 
 
