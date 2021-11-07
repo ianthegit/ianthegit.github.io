@@ -1110,6 +1110,33 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 
+quests[++questIndexBuilder] = { //
+		name : "Pictionary 39",
+		hoverover : "Pictionary on the theme of COP26 and Global Warming",
+		tags : "2021-11-7,pictionary",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://lh3.googleusercontent.com/proxy/267DUsoJnSqavrDHIAxRn6HK6skZ813kItH_dLWxYsL2peV1DjAalyk2weQ2qOLr302K8KJcVywXw-Mc2JjfWbQO5Ld_AkE5_byOmZwDIMpWx4Sn5Cwi-YjpiZZstU5m3y8pGGfn7L2dhCv_TtTzPWLRXtw", answerSpeak : "Gloves"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://media4.giphy.com/media/cNRem6vXQbMCL0hoGf/giphy.gif", answerSpeak : "Wooly bobble hat"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://static.onecms.io/wp-content/uploads/sites/20/2018/09/lenny-kravitz1.jpg", answerSpeak : "Scarf"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://thumbs.gfycat.com/CleverUnitedIberianbarbel-max-1mb.gif", answerSpeak : "Flip-flops"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://i.imgur.com/aGx2xbc.gif?noredirect", answerSpeak : "Swimming trunks"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://c.tenor.com/iFr08qPaScgAAAAM/snorkeling-girl.gif", answerSpeak : "Snorkle"}) ;
+
+
+
 /*
   
  quests[++questIndexBuilder] = { //
