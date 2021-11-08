@@ -3792,7 +3792,7 @@ quests[++questIndexBuilder] = { //https://www.buzzfeed.com/bendzialdowski/robert
 		name : "Bobby",
 		hoverover : "We've all seen Bobby D-N in films, but can you recognise what films these stills are from...?",
 		splash : {splashType : splashTypePictureAndText , splashText : "We've all seen Bobby D-N in films, but can you recognise what films these stills are from...?", splashImage : "https://i.pinimg.com/originals/67/b3/61/67b3615598c1509493727efdefd72c3c.gif" },
-		tags : "2021-11-14,saturday,InnerWheel,surfers,casting",
+		tags : "2021-11-14,saturday,InnerWheel,surfers,7DegreesOfHBC",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this from"+ Table4ColumnStart + "Raging Bull</td><td>Beauty and the Beast</td><td>Frankenstein</td><td>Bride of Frankenstein" + Table4ColumnEnd, // 
@@ -3829,7 +3829,7 @@ quests[++questIndexBuilder] = { //https://www.buzzfeed.com/bendzialdowski/robert
 		name : "Hels Bells",
 		hoverover : "We've all seen the future Mrs Hopgood in films, but can you recognise what films these stills are from...?",
 		splash : {splashType : splashTypePictureAndText , splashText : "We've all seen the future Mrs Hopgood in films, but can you recognise what films these stills are from...?", splashImage : "https://i.gifer.com/origin/95/953e95f22cef08c407ed0b94458e3753_w200.gif" },
-		tags : "2021-11-7,saturday,InnerWheel,surfers,casting",
+		tags : "2021-11-7,saturday,InnerWheel,surfers,7DegreesOfHBC",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this from"+ Table4ColumnStart + "Maurice</td><td>Room with a View</td><td>Where Angels Fear to Tread</td><td>Planet of the Apes" + Table4ColumnEnd, // 
@@ -3923,7 +3923,7 @@ quests[++questIndexBuilder] = { //https://en.wikipedia.org/wiki/List_of_Judi_Den
 		name : "Hey Jude",
 		hoverover : "We've all seen Dame Judy in films, but can you recognise what films these stills are from...?",
 		splash : {splashType : splashTypePictureAndText , splashText : "We've all seen Dame Judy in films, but can you recognise what films these stills are from...?", splashImage : "https://media2.giphy.com/media/YplBZ0pxRAqRyVNVSU/giphy.gif" },
-		tags : "2021-11-7,saturday,InnerWheel,surfers,casting",
+		tags : "2021-11-7,saturday,InnerWheel,surfers,7DegreesOfHBC",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What film is this from"+ Table4ColumnStart + "Maurice</td><td>A Room with a View</td><td>Where Angels Fear to Tread</td><td>Planet of the Apes" + Table4ColumnEnd, // 
