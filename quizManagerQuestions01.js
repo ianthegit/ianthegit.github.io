@@ -3941,7 +3941,7 @@ quests[++questIndexBuilder] = { //https://www.reddit.com/r/AskReddit/comments/qo
 	};
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this line famously from (NOT the clip)"+ Table4ColumnStart + "The Empire Strikes Back</td><td>Return of the Jedi</td><td>Indiana Jones and the Temple of Doom</td><td>Planet of the Apes" + Table4ColumnEnd, // 
 	image : "https://c.tenor.com/jopMoI1TAgEAAAAM/steve-carell-the-office.gif",
-	answerimage : "https://64.media.tumblr.com/c67ca9e54c356d915f116cfc515bad86/2db06ed9619ba7b4-7e/s500x750/2dff6a4a81d0fdb95d0c91c549fbda14d4e809f7.gifv",
+	answerimage : "http://i.imgur.com/efda0.gif",
 	answer : "The Empire Strikes Back OR Return of the Jedi.   2 points if you got both"}) ;
 
 
