@@ -3919,4 +3919,14 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : ""}) ;
 
 
+quests[++questIndexBuilder] = { //https://en.wikipedia.org/wiki/List_of_Judi_Dench_performances
+		name : "Hey Jude",
+		hoverover : "We've all seen Dame Judy in films, but can you recognise what films these stills are from...?",
+		splash : {splashType : splashTypePictureAndText , splashText : "We've all seen Dame Judy in films, but can you recognise what films these stills are from...?", splashImage : "https://media2.giphy.com/media/YplBZ0pxRAqRyVNVSU/giphy.gif" },
+		tags : "2021-11-7,saturday,InnerWheel,surfers,casting",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What film is this from"+ Table4ColumnStart + "Maurice</td><td>A Room with a View</td><td>Where Angels Fear to Tread</td><td>Planet of the Apes" + Table4ColumnEnd, // 
+	image : "https://64.media.tumblr.com/f78de73be9b7f724dece4fffab32e4d0/c513bb611303bf0c-8b/s540x810/a753b73c4356379b76172ed39b700fe6307a3bd0.gifv",
+	answer : "A Room with a View"}) ;
 
