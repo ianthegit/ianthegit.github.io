@@ -3923,10 +3923,26 @@ quests[++questIndexBuilder] = { //https://en.wikipedia.org/wiki/List_of_Judi_Den
 		name : "Hey Jude",
 		hoverover : "We've all seen Dame Judy in films, but can you recognise what films these stills are from...?",
 		splash : {splashType : splashTypePictureAndText , splashText : "We've all seen Dame Judy in films, but can you recognise what films these stills are from...?", splashImage : "https://media2.giphy.com/media/YplBZ0pxRAqRyVNVSU/giphy.gif" },
-		tags : "2021-11-7,saturday,InnerWheel,surfers,7DegreesOfHBC",
+		tags : "2021-11-14,saturday,InnerWheel,surfers,casting",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What film is this from"+ Table4ColumnStart + "Maurice</td><td>A Room with a View</td><td>Where Angels Fear to Tread</td><td>Planet of the Apes" + Table4ColumnEnd, // 
 	image : "https://64.media.tumblr.com/f78de73be9b7f724dece4fffab32e4d0/c513bb611303bf0c-8b/s540x810/a753b73c4356379b76172ed39b700fe6307a3bd0.gifv",
 	answer : "A Room with a View"}) ;
+
+
+
+quests[++questIndexBuilder] = { //https://www.reddit.com/r/AskReddit/comments/qop4mr/what_are_some_of_the_most_iconic_movie_quotes/
+		name : "Youwhat?",
+		hoverover : "What films are thes quotes from...?",
+		splash : {splashType : splashTypeText , splashText : "What films are thes quotes from...?" },
+		tags : "2021-11-14,saturday,InnerWheel,surfers,casting",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this line famously from (NOT the clip)"+ Table4ColumnStart + "The Empire Strikes Back</td><td>Return of the Jedi</td><td>Indiana Jones and the Temple of Doom</td><td>Planet of the Apes" + Table4ColumnEnd, // 
+	image : "https://c.tenor.com/jopMoI1TAgEAAAAM/steve-carell-the-office.gif",
+	answerimage : "https://64.media.tumblr.com/c67ca9e54c356d915f116cfc515bad86/2db06ed9619ba7b4-7e/s500x750/2dff6a4a81d0fdb95d0c91c549fbda14d4e809f7.gifv",
+	answer : "The Empire Strikes Back OR Return of the Jedi.   2 points if you got both"}) ;
+
+
 
