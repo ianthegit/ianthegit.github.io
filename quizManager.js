@@ -203,6 +203,12 @@ function SQStartQuizFromButton(quizIndex) {
 		SQGetQuestArea().innerHTML = "<p " + questionStyle + "> This quiz is a Music quiz.  Please ensure you are only sharing sound, not screen.  " + closeSplashButtonStart + quizIndex + closeSplashButtonEnd +  "</p>";
 		return;
 	};
+	if (SQIs7DegreesOfHBC(quizIndex)){
+		SQGetQuestArea().innerHTML = "<p " + questionStyle + ">This is a 7 Degrees of Helena Bonham Carter quiz - There is an extra point for recognising whch film(s) also stared HBC (only if you get the film name correct too)" + closeSplashButtonStart + quizIndex + closeSplashButtonEnd +  "</p>";
+		//console.log("<p " + questionStyle + ">"	+ quests[quizIndex].splash.splashText + "   " + closeSplashButtonStart + quizIndex + closeSplashButtonEnd +  "</p>");
+		sqInitPicture("https://i.gifer.com/origin/95/953e95f22cef08c407ed0b94458e3753_w200.gif");
+		return;
+	}
 	
 	SQStartQuiz(quizIndex);
 }
@@ -519,6 +525,22 @@ function SQIsQuizMusic(quizIndex) {
 	
 	for (var i = 0; i < optionTagsCount; i++) {
 		if (optionTags[i] == 'music' ) {
+			return true;
+		}
+	}
+	return false;
+}
+
+function SQIs7DegreesOfHBC(quizIndex) { 
+	
+	optionTagsString = quests[quizIndex].tags;
+	
+	optionTags = optionTagsString.split(",");
+	optionTagsCount = optionTags.length;
+	
+	for (var i = 0; i < optionTagsCount; i++) {
+		console.log(optionTags[i]);
+		if (optionTags[i] == '7DegreesOfHBC' ) {
 			return true;
 		}
 	}
