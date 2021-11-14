@@ -1136,6 +1136,30 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://c.tenor.com/iFr08qPaScgAAAAM/snorkeling-girl.gif", answerSpeak : "Snorkle"}) ;
 
 
+quests[++questIndexBuilder] = { //
+		name : "Pictionary 40",
+		hoverover : "Pictionary on the theme of Cops",
+		tags : "2021-11-14,pictionary",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://cdnmetv.metv.com/HatGw-1504815952-embed-tj-hooker-healthier-partner.gif", answerSpeak : "Donut"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://i.imgur.com/aBP01MR.gif", answerSpeak : "Helmet"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://c.tenor.com/LuH2RKCgotwAAAAM/chandler-bing-friends.gif", answerSpeak : "Handcuffs"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://thumbs.gfycat.com/FluidIllegalCats-max-1mb.gif", answerSpeak : "Trunchen"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://thumbs.gfycat.com/BleakPlayfulAlabamamapturtle-max-1mb.gif", answerSpeak : "Police Box"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://thumbs.gfycat.com/LinearCheerfulIberianemeraldlizard-max-1mb.gif", answerSpeak : "Police car"}) ;
 
 /*
   
