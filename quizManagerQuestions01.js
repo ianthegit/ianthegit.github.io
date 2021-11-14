@@ -3795,9 +3795,6 @@ quests[++questIndexBuilder] = { //https://www.buzzfeed.com/bendzialdowski/robert
 		tags : "2021-11-14,saturday,InnerWheel,surfers,7DegreesOfHBC",
 		questInfo: new Array()
 	};
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this from"+ Table4ColumnStart + "Raging Bull</td><td>Beauty and the Beast</td><td>Frankenstein</td><td>Bride of Frankenstein" + Table4ColumnEnd, // 
-	image : "https://cache.moviestillsdb.com/i/500x/yeqmapy0/frankenstein-lg.jpg",
-	answerimage : "https://66.media.tumblr.com/6c633e920d55e2ff8ef635f72dad7c43/tumblr_o2cgq9QUQc1rp0vkjo1_500.gif", answer : "Frankenstein (HBC point due here too if you got it)"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this from"+ Table4ColumnStart + "Goodfellas</td><td>Dominos</td><td>Pizza Express</td><td>Pizza Hut" + Table4ColumnEnd, // 
 	image : "https://img.buzzfeed.com/buzzfeed-static/static/2021-10/28/10/enhanced/42839ec2033f/enhanced-519-1635416368-3.png?output-format=auto&output-quality=auto",
 	answerimage : "https://c.tenor.com/mm-jYBApr78AAAAC/robert-de-niro-kick.gif", answer : "Goodfellas"}) ;
@@ -3807,6 +3804,9 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this from"+ Table4ColumnStart + "Bad Neighbours</td><td>Dirty Dancing</td><td>Dirty Grandpa</td><td>Italian Stallion" + Table4ColumnEnd, // 
 	image : "https://img.buzzfeed.com/buzzfeed-static/static/2021-11/1/11/enhanced/10f527de873a/enhanced-12498-1635766641-12.jpg?output-format=auto&output-quality=auto",
 	answerimage : "https://c.tenor.com/89QREkUrcdYAAAAC/dirty-grandpa-zac-efron.gif", answer : "Dirty Grandpa"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this from"+ Table4ColumnStart + "Raging Bull</td><td>Beauty and the Beast</td><td>Frankenstein</td><td>Bride of Frankenstein" + Table4ColumnEnd, // 
+	image : "https://cache.moviestillsdb.com/i/500x/yeqmapy0/frankenstein-lg.jpg",
+	answerimage : "https://66.media.tumblr.com/6c633e920d55e2ff8ef635f72dad7c43/tumblr_o2cgq9QUQc1rp0vkjo1_500.gif", answer : "Frankenstein (HBC point due here too if you got it)"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this from"+ Table4ColumnStart + "Cheaper by the dozen</td><td>The Irishman</td><td>Meet the Fockers</td><td>Meet the Parents" + Table4ColumnEnd, // 
 	image : "https://img.buzzfeed.com/buzzfeed-static/static/2021-11/1/11/enhanced/c8c168ecef21/enhanced-12291-1635766883-5.jpg?output-format=auto&output-quality=auto",
 	answerimage : "https://c.tenor.com/RCMb35wVWpoAAAAM/meet-the-parents-robert-de-niro.gif", answer : "Meet the Parents"}) ;
@@ -3904,8 +3904,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 	answer : '<iframe src="https://open.spotify.com/embed/track/5hjXF13XHZ5d1lgF3YqyED" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
 
 
-
-
 quests[++questIndexBuilder] = { 
 		name : "COP 26",
 		hoverover : "Weather related songs",
@@ -3919,11 +3917,67 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : ""}) ;
 
 
+
+quests[++questIndexBuilder] = { //https://en.wikipedia.org/wiki/List_of_Judi_Dench_performances
+		name : "Halloween is over",
+		hoverover : "Name the Horror Movie and the Game for 2 points...?",
+		splash : {splashType : splashTypePictureAndText , splashText : "Can you name the Game and film mashed up for Halloween here..?  For instance, Sack Race and Jason Vorhees from Friday the 13th.  1 point each.", splashImage : "http://www2.b3ta.com/host/creative/81693/1635702251/sackrace.jpg" },
+		tags : "2021-11-14,saturday,InnerWheel,surfers,horror",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What game & film is this?", // 
+	image : "http://www2.b3ta.com/host/creative/81693/1635685967/Untitled2.gif",
+	answer : "The Ring and Twister"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What game & film is this?", // 
+	image : "http://www2.b3ta.com/host/creative/42654/1370520084/hellraiser.kerplunk.jpg",
+	answer : "Hellraiser and Kerplunk"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What game & film is this?", // 
+	image : "http://www2.b3ta.com/host/creative/64002/1548616836/aliens1.jpg",
+	answer : "Alien and Operation"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What game & film is this?", // 
+	image : "http://www2.b3ta.com/host/creative/81693/1635680133/jenga.jpg",
+	answer : "The Wicker Man and Jenga"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What game & film is this?", // 
+	image : "http://www2.b3ta.com/host/creative/20932/1635710264/theshining.jpg",
+	answer : "Mario Kart and The Shining"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What game & film is this?", // 
+	image : "http://www2.b3ta.com/host/creative/20932/1635683126/breakout.jpg",
+	answer : "The Great Escape and Brickbreaker"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What game & film is this?", // 
+	image : "http://www2.b3ta.com/host/creative/81693/1635766524/yoyosnatcher.jpg",
+	answer : "Invasion of the Bodysnatchers and YoYo"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What game & film is this?", // 
+	image : "https://i.imgur.com/tVrp5os.jpg",
+	answer : "Misery and Whack-A-Mole"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What game & film is this?", // 
+	image : "http://www2.b3ta.com/host/creative/13/1636291852/theangrybirds.jpg",
+	answer : "The Birds and Angry Birds"}) ;
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Films",
+		hoverover : "Name the song, singer and film",
+		tags : "music,2021-11-14,InnerWheel,saturday,7DegreesOfHBC",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/5St9Yqwmo3EREnsVzhjBmV" width="501" height="580" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+	answer : ""}) ;
+
+
+
+
+
+
+
 quests[++questIndexBuilder] = { //https://en.wikipedia.org/wiki/List_of_Judi_Dench_performances
 		name : "Hey Jude",
 		hoverover : "We've all seen Dame Judy in films, but can you recognise what films these stills are from...?",
 		splash : {splashType : splashTypePictureAndText , splashText : "We've all seen Dame Judy in films, but can you recognise what films these stills are from...?", splashImage : "https://media2.giphy.com/media/YplBZ0pxRAqRyVNVSU/giphy.gif" },
-		tags : "2021-11-14,saturday,InnerWheel,surfers,casting",
+		tags : "2021-11-14,saturday,InnerWheel,surfers,casting,7DegreesOfHBC",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What film is this from"+ Table4ColumnStart + "Maurice</td><td>A Room with a View</td><td>Where Angels Fear to Tread</td><td>Planet of the Apes" + Table4ColumnEnd, // 
@@ -3936,7 +3990,7 @@ quests[++questIndexBuilder] = { //https://www.reddit.com/r/AskReddit/comments/qo
 		name : "Youwhat?",
 		hoverover : "What films are thes quotes from...?",
 		splash : {splashType : splashTypeText , splashText : "What films are thes quotes from...?" },
-		tags : "2021-11-14,saturday,InnerWheel,surfers,casting",
+		tags : "2021-11-21,saturday,InnerWheel,surfers,casting",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this line famously from (NOT the clip)"+ Table4ColumnStart + "The Empire Strikes Back</td><td>Return of the Jedi</td><td>Indiana Jones and the Temple of Doom</td><td>Planet of the Apes" + Table4ColumnEnd, // 
