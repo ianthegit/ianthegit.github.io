@@ -45,6 +45,7 @@ password='letmein';
 showTagsURI='showTags=1';
 splashTypeText='text';
 splashTypePictureAndText = 'pictureAndText';
+HBCgif = 'https://i.gifer.com/origin/95/953e95f22cef08c407ed0b94458e3753_w200.gif'
 
 questionStyle = 'style="font-family:verdana;color:Black;font-size:30px;topMargin=10px;bottomMargin=10px"';
 answerStyle = 'style="font-family:Courier New;color:Black;font-size:30px;topMargin=0px;bottomMargin=0px;"';
