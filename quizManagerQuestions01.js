@@ -3965,7 +3965,8 @@ quests[++questIndexBuilder] = {
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	question : "",
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/5St9Yqwmo3EREnsVzhjBmV" width="501" height="580" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
-	answer : ""}) ;
+	answer : "Footloose, The Bodyguard, Moulin Rouge, Slumdog Millionaire, Stayin Alive (or Saturday Night Fever), The Wizard of Oz, Breakfast at Tiffany's, Flashdance, Pinocchio, Cinderella (HBC point)"}) ;
+
 
 
 
