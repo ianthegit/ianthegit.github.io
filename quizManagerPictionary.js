@@ -1143,22 +1143,22 @@ quests[++questIndexBuilder] = { //
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUdEaVyjbCR8MU7e32Unu5joqr6iCt--KlpEn8wFLalgD9_YWYPmPLjEfdsh_jvb4VykPuOoFZCBId2Zi2Aw5HMa80v2xKScA7NoaPQCI_NYAjRzYIgil4Vjlm-eANNP9z74tJHLreCpSeVqMT-i0NJrQ=w356-h254-no?authuser=0",
 	answerimage : "https://cdnmetv.metv.com/HatGw-1504815952-embed-tj-hooker-healthier-partner.gif", answerSpeak : "Donut"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVRvPpNzPorSGL6xzOo943WVabVXi-ul6IrBZTxfNRQ8EKsKx5-msAAseu461syPlp5VE5voG1svXnJ0zOy-7e3TRrx9bKVPyfYdcCs723MYQzhT8OXeSVBgu4Pg8Cwiwy_WNRkn1XAXrOXjGKVDtQZGA=w417-h575-no?authuser=0",
 	answerimage : "https://i.imgur.com/aBP01MR.gif", answerSpeak : "Helmet"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLWO8Yo3aMObbWWvupq88P8cnncjIbDjxTmwVy69qE2RM_56vgRbWYmLYTHqvmLCbufCBEUFjeSalZFIPvjV3pMlOV3SvLQUJ8IrWC7tMUuHoaSpf5YuIScKX5oTXAm3duRKvjbEOEVy1GX4pgOPL6uBEA=w460-h212-no?authuser=0",
 	answerimage : "https://c.tenor.com/LuH2RKCgotwAAAAM/chandler-bing-friends.gif", answerSpeak : "Handcuffs"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVxYAQKXquDzsiMM-ONMcuDBHiG4hO6-czra-rryCAZ-QYeBDK3UJMAT6K-C1Ki2_sq2W_c1H8i5R-DvLuUtLCb9oEyYe3-_uAM2nclEGdRbIviiqzH46dNoSohT6bu5o1Zb-zQOAFG2Fh5zEWJoZWg7w=w625-h216-no?authuser=0",
 	answerimage : "https://thumbs.gfycat.com/FluidIllegalCats-max-1mb.gif", answerSpeak : "Trunchen"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUaNFqLFFTHoFO0NpuX3BVhYRLgb_tzUaYZTOtZI2Do2Me2EOx0naSi-GcEJCSX2E9PjiC5DlHzMpcroQOV81r5EE8tUm-1B25FjfCghF_AvHMRzZKy2NFQpPbeKmlCwR9FmXXSgYckChLPZJbjzYhPCw=w248-h295-no?authuser=0",
 	answerimage : "https://thumbs.gfycat.com/BleakPlayfulAlabamamapturtle-max-1mb.gif", answerSpeak : "Police Box"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUlAhTQUZSATxtxIZ7rEbHHz1xoYryIxfk9lLvZE0sO7ecYdLytX-Asl4VlUOD4AHwDHAIRWdQQNYfnrPc_KrzdHoapf_7apJA6d_1YO3SldoIeyeBNgCrkDTekBZ1FOTUnuOaPdK9pHII6qfpBseCBgA=w460-h199-no?authuser=0",
 	answerimage : "https://thumbs.gfycat.com/LinearCheerfulIberianemeraldlizard-max-1mb.gif", answerSpeak : "Police car"}) ;
 
 /*
