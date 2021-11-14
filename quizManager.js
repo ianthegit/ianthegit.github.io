@@ -189,26 +189,36 @@ function SQStartQuizFromButton(quizIndex) {
 	document.getElementById("SQmenu").innerHTML = '(' + naturalizedQuizIndex + ') ' + quests[quizIndex].name + " - " + quests[quizIndex].hoverover;
 	
 	if (quests[quizIndex].hasOwnProperty('splash')) {
+		
+		extraText='';
+		if (SQIs7DegreesOfHBC(quizIndex)){
+			extraText='</BR></BR>This is a 7 Degrees of Helena Bonham Carter quiz - There is an extra point for recognising whch film(s) also stared HBC (only if you get the film name correct too)';
+		}
+		
 		if (splashTypeText == quests[quizIndex].splash.splashType ) {
-			SQGetQuestArea().innerHTML = "<p " + questionStyle + ">"+ quests[quizIndex].splash.splashText + "   " + closeSplashButtonStart + quizIndex + closeSplashButtonEnd +  "</p>";
+			SQGetQuestArea().innerHTML = "<p " + questionStyle + ">"+ quests[quizIndex].splash.splashText + extraText + "   " + closeSplashButtonStart + quizIndex + closeSplashButtonEnd +  "</p>";
+			sqInitPicture("https://i.gifer.com/origin/95/953e95f22cef08c407ed0b94458e3753_w200.gif");
 		} 
 		if (splashTypePictureAndText == quests[quizIndex].splash.splashType ) {
-			SQGetQuestArea().innerHTML = "<p " + questionStyle + ">"+ quests[quizIndex].splash.splashText + "   " + closeSplashButtonStart + quizIndex + closeSplashButtonEnd +  "</p>";
+			SQGetQuestArea().innerHTML = "<p " + questionStyle + ">"+ quests[quizIndex].splash.splashText + extraText +"   " + closeSplashButtonStart + quizIndex + closeSplashButtonEnd +  "</p>";
 			console.log("<p " + questionStyle + ">"	+ quests[quizIndex].splash.splashText + "   " + closeSplashButtonStart + quizIndex + closeSplashButtonEnd +  "</p>");
 			sqInitPicture(quests[quizIndex].splash.splashImage);
 		}
 		return;
-	}; 
+	} else {
+		if (SQIs7DegreesOfHBC(quizIndex)){
+			SQGetQuestArea().innerHTML = "<p " + questionStyle + ">This is a 7 Degrees of Helena Bonham Carter quiz - There is an extra point for recognising whch film(s) also stared HBC (only if you get the film name correct too)" + closeSplashButtonStart + quizIndex + closeSplashButtonEnd +  "</p>";
+			//console.log("<p " + questionStyle + ">"	+ quests[quizIndex].splash.splashText + "   " + closeSplashButtonStart + quizIndex + closeSplashButtonEnd +  "</p>");
+			sqInitPicture("https://i.gifer.com/origin/95/953e95f22cef08c407ed0b94458e3753_w200.gif");
+			return;
+		}
+
+	} 
 	if (SQIsQuizMusic(quizIndex)){
 		SQGetQuestArea().innerHTML = "<p " + questionStyle + "> This quiz is a Music quiz.  Please ensure you are only sharing sound, not screen.  " + closeSplashButtonStart + quizIndex + closeSplashButtonEnd +  "</p>";
 		return;
 	};
-	if (SQIs7DegreesOfHBC(quizIndex)){
-		SQGetQuestArea().innerHTML = "<p " + questionStyle + ">This is a 7 Degrees of Helena Bonham Carter quiz - There is an extra point for recognising whch film(s) also stared HBC (only if you get the film name correct too)" + closeSplashButtonStart + quizIndex + closeSplashButtonEnd +  "</p>";
-		//console.log("<p " + questionStyle + ">"	+ quests[quizIndex].splash.splashText + "   " + closeSplashButtonStart + quizIndex + closeSplashButtonEnd +  "</p>");
-		sqInitPicture("https://i.gifer.com/origin/95/953e95f22cef08c407ed0b94458e3753_w200.gif");
-		return;
-	}
+
 	
 	SQStartQuiz(quizIndex);
 }
