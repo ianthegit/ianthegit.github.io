@@ -197,8 +197,9 @@ function SQStartQuizFromButton(quizIndex) {
 		
 		if (splashTypeText == quests[quizIndex].splash.splashType ) {
 			SQGetQuestArea().innerHTML = "<p " + questionStyle + ">"+ quests[quizIndex].splash.splashText + extraText + "   " + closeSplashButtonStart + quizIndex + closeSplashButtonEnd +  "</p>";
-			sqInitPicture("https://i.gifer.com/origin/95/953e95f22cef08c407ed0b94458e3753_w200.gif");
-		} 
+			if (SQIs7DegreesOfHBC(quizIndex)){
+				sqInitPicture("https://i.gifer.com/origin/95/953e95f22cef08c407ed0b94458e3753_w200.gif");
+			}		} 
 		if (splashTypePictureAndText == quests[quizIndex].splash.splashType ) {
 			SQGetQuestArea().innerHTML = "<p " + questionStyle + ">"+ quests[quizIndex].splash.splashText + extraText +"   " + closeSplashButtonStart + quizIndex + closeSplashButtonEnd +  "</p>";
 			console.log("<p " + questionStyle + ">"	+ quests[quizIndex].splash.splashText + "   " + closeSplashButtonStart + quizIndex + closeSplashButtonEnd +  "</p>");
