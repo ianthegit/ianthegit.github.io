@@ -191,7 +191,7 @@ function SQStartQuizFromButton(quizIndex) {
 	
 	extraText='';
 	if (SQIs7DegreesOfHBC(quizIndex)){
-		extraText='</BR></BR>This is a 7 Degrees of Helena Bonham Carter quiz - There is an extra point for recognising whch film(s) also starred HBC (only if you get the film name correct too)';
+		extraText='</BR></BR>This is a 7 Degrees of Helena Bonham Carter quiz - There is an extra point for recognising which film(s) also starred Helena Bonham Carter (only if you get the film name correct too)';
 	}
 	
 	if (quests[quizIndex].hasOwnProperty('splash')) {
@@ -216,7 +216,7 @@ function SQStartQuizFromButton(quizIndex) {
 			return;
 		} else {
 			if (SQIs7DegreesOfHBC(quizIndex)){
-				SQGetQuestArea().innerHTML = "<p " + questionStyle + ">This is a 7 Degrees of Helena Bonham Carter quiz - There is an extra point for recognising whch film(s) also starred HBC (only if you get the film name correct too)" + closeSplashButtonStart + quizIndex + closeSplashButtonEnd +  "</p>";
+				SQGetQuestArea().innerHTML = "<p " + questionStyle + ">This is a 7 Degrees of Helena Bonham Carter quiz - There is an extra point for recognising which film(s) also starred Helena Bonham Carter (only if you get the film name correct too)" + closeSplashButtonStart + quizIndex + closeSplashButtonEnd +  "</p>";
 				//console.log("<p " + questionStyle + ">"	+ quests[quizIndex].splash.splashText + "   " + closeSplashButtonStart + quizIndex + closeSplashButtonEnd +  "</p>");
 				sqInitPicture(HBCgif);
 				return;
