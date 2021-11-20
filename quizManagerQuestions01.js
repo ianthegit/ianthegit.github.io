@@ -4083,6 +4083,20 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionType2PictureQuestion,
 
 
 
+quests[++questIndexBuilder] = { 
+		name : "Jungle",
+		hoverover : "Name the song and singer ",
+		tags : "music,2021-11-21,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/2npKrd3XiobvUhQvIZd1sn" width="501" height="580" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+	answer : ""}) ;
+
+
+
 quests[++questIndexBuilder] = { //https://en.wikipedia.org/wiki/List_of_Judi_Dench_performances
 		name : "Hey Jude",
 		hoverover : "We have all seen Dame Judy in films, but can you recognise what films these stills are from...?",
