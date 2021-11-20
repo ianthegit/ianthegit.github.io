@@ -31,6 +31,7 @@ quizQuestionTypeSpotify = 'spotify';
 quizQuestionType2Picture = '2picture';
 quizQuestionType2PictureAnswer = '2pictureAnswer'
 quizQuestionTypePictureAnswer = 'pictureAnswer';
+quizQuestionType2PictureQuestion = '2pictureQuestion'
 tags = new Array();
 tempTags = new Array();
 showAll = 'ShowAll';
@@ -46,7 +47,7 @@ showTagsURI='showTags=1';
 splashTypeText='text';
 splashTypePictureAndText = 'pictureAndText';
 HBCgif = 'https://i.gifer.com/origin/95/953e95f22cef08c407ed0b94458e3753_w200.gif'
-
+	
 questionStyle = 'style="font-family:verdana;color:Black;font-size:30px;topMargin=10px;bottomMargin=10px"';
 answerStyle = 'style="font-family:Courier New;color:Black;font-size:30px;topMargin=0px;bottomMargin=0px;"';
 previousButton = "<input type='button' class='userBtnStop' value='Previous' title='Previous' id='Previous' onclick='runPreviousQuestStage()' />";
@@ -191,7 +192,7 @@ function SQStartQuizFromButton(quizIndex) {
 	
 	extraText='';
 	if (SQIs7DegreesOfHBC(quizIndex)){
-		extraText='</BR></BR>This is a 7 Degrees of Helena Bonham Carter quiz - There is an extra point for recognising which film(s) also starred Helena Bonham Carter (only if you get the film name correct too)';
+		extraText='</BR></BR>This is a 7 Degrees of Helena Bonham Carter quiz - There is an extra point for recognising whch film(s) also starred HBC (only if you get the film name correct too)';
 	}
 	
 	if (quests[quizIndex].hasOwnProperty('splash')) {
@@ -216,13 +217,14 @@ function SQStartQuizFromButton(quizIndex) {
 			return;
 		} else {
 			if (SQIs7DegreesOfHBC(quizIndex)){
-				SQGetQuestArea().innerHTML = "<p " + questionStyle + ">This is a 7 Degrees of Helena Bonham Carter quiz - There is an extra point for recognising which film(s) also starred Helena Bonham Carter (only if you get the film name correct too)" + closeSplashButtonStart + quizIndex + closeSplashButtonEnd +  "</p>";
+				SQGetQuestArea().innerHTML = "<p " + questionStyle + ">This is a 7 Degrees of Helena Bonham Carter quiz - There is an extra point for recognising whch film(s) also starred HBC (only if you get the film name correct too)" + closeSplashButtonStart + quizIndex + closeSplashButtonEnd +  "</p>";
 				//console.log("<p " + questionStyle + ">"	+ quests[quizIndex].splash.splashText + "   " + closeSplashButtonStart + quizIndex + closeSplashButtonEnd +  "</p>");
 				sqInitPicture(HBCgif);
 				return;
 			}
 		}
 	} 
+
 	
 	SQStartQuiz(quizIndex);
 }
@@ -321,6 +323,12 @@ function SQQuestion(questionType) {
 		SQGetQuestArea().innerHTML = "<p " + questionStyle + ">"
 				+ questStageData[currQuestStageIndex].question + "</p>";
 		sqInitPicture(questStageData[currQuestStageIndex].image)
+	} else if (questionType == quizQuestionType2PictureQuestion) {
+		SQGetQuestArea().innerHTML = "<p " + questionStyle + ">"
+		+ questStageData[currQuestStageIndex].question + "</p>";
+		questionimage = questStageData[currQuestStageIndex].image;
+		questionimage2 = questStageData[currQuestStageIndex].image2;
+		sqInit2Picture(questionimage,questionimage2);
 	} else if (questionType == quizQuestionTypeSpotify) {
 		sqInitSpotify(questStageData[currQuestStageIndex].spotify,
 				questStageData[currQuestStageIndex].question)
@@ -382,6 +390,10 @@ function SQAnswer(questionType) {
 		sqInitPicture(questStageData[currQuestStageIndex].image)
 		SQGetQuestArea().innerHTML = "<p " + questionStyle + ">" + fullQuestion
 				+ "</p>";
+	} else if (questionType == quizQuestionType2PictureQuestion) {
+		questionimage = questStageData[currQuestStageIndex].image;
+		questionimage2 = questStageData[currQuestStageIndex].image2;
+		sqInit2Picture(questionimage,questionimage2);
 	} else if (questionType == quizQuestionTypeSpotify) {
 		sqInitSpotify(questStageData[currQuestStageIndex].spotify,
 				questStageData[currQuestStageIndex].question)
