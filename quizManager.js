@@ -322,7 +322,12 @@ function SQQuestion(questionType) {
 		SQGetButtonsArea().innerHTML = buttonBar;
 		SQGetQuestArea().innerHTML = "<p " + questionStyle + ">"
 				+ questStageData[currQuestStageIndex].question + "</p>";
-		sqInitPicture(questStageData[currQuestStageIndex].image)
+		if (questStageData[currQuestStageIndex].hasOwnProperty('image')) {
+			sqInitPicture(questStageData[currQuestStageIndex].image)
+		} else {
+			var imageArea = document.getElementById("SQImage");
+			imageArea.innerHTML = '';
+		}
 	} else if (questionType == quizQuestionType2PictureQuestion) {
 		SQGetQuestArea().innerHTML = "<p " + questionStyle + ">"
 		+ questStageData[currQuestStageIndex].question + "</p>";
