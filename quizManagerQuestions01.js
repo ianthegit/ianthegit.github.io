@@ -3974,30 +3974,47 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 
-quests[++questIndexBuilder] = { //https://en.wikipedia.org/wiki/List_of_Judi_Dench_performances
-		name : "Hey Jude",
-		hoverover : "We have all seen Dame Judy in films, but can you recognise what films these stills are from...?",
-		splash : {splashType : splashTypePictureAndText , splashText : "We've all seen Dame Judy in films, but can you recognise what films these stills are from...?", splashImage : "https://media2.giphy.com/media/YplBZ0pxRAqRyVNVSU/giphy.gif" },
-		tags : "2021-11-21,saturday,InnerWheel,surfers,casting,7DegreesOfHBC",
-		questInfo: new Array()
-	};
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What film is this from"+ Table4ColumnStart + "Maurice</td><td>A Room with a View</td><td>Where Angels Fear to Tread</td><td>Planet of the Apes" + Table4ColumnEnd, // 
-	image : "https://64.media.tumblr.com/f78de73be9b7f724dece4fffab32e4d0/c513bb611303bf0c-8b/s540x810/a753b73c4356379b76172ed39b700fe6307a3bd0.gifv",
-	answer : "A Room with a View"}) ;
 
-
-
-quests[++questIndexBuilder] = { //https://www.reddit.com/r/AskReddit/comments/qop4mr/what_are_some_of_the_most_iconic_movie_quotes/
+quests[++questIndexBuilder] = { //https://www.reddit.com/r/AskReddit/comments/qop4mr/what_are_some_of_the_most_iconic_movie_quotes/    https://www.reddit.com/r/AskReddit/comments/o4tzin/what_short_movie_quote_can_people_instantly/
 		name : "Youwhat?",
 		hoverover : "What films are thes quotes from...?",
-		splash : {splashType : splashTypeText , splashText : "What films are thes quotes from...?" },
+		splash : {splashType : splashTypeText , splashText : "What films are these quotes from...?" },
 		tags : "2021-11-21,saturday,InnerWheel,surfers,casting",
 		questInfo: new Array()
 	};
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this line famously from (NOT the clip)"+ Table4ColumnStart + "The Empire Strikes Back</td><td>Return of the Jedi</td><td>Indiana Jones and the Temple of Doom</td><td>Planet of the Apes" + Table4ColumnEnd, // 
-	image : "https://c.tenor.com/jopMoI1TAgEAAAAM/steve-carell-the-office.gif",
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,	question : "What film is this line famously from </BR> </BR> I know"+ Table4ColumnStart + "The Empire Strikes Back</td><td>Return of the Jedi</td><td>Indiana Jones and the Temple of Doom</td><td>Planet of the Apes" + Table4ColumnEnd, // 
 	answerimage : "http://i.imgur.com/efda0.gif",
 	answer : "The Empire Strikes Back OR Return of the Jedi.   2 points if you got both"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,	question : "What film is this line famously from: </BR> </BR>With great power comes great responsibility", // 
+	answerimage : "https://c.tenor.com/6ENpc9fK6m0AAAAM/tom-holland-spiderman.gif",
+	answer : "Spiderman"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,	question : "What film is this line famously from: </BR> </BR>I'll be back", // 
+	answerimage : "https://media4.giphy.com/media/LFEjnqmVmbKk8/giphy.gif",
+	answer : "Terminator"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,	question : "What film is this line famously from: </BR> </BR>We're not in Kansas anymore", // 
+	answerimage : "https://thumbs.gfycat.com/QueasyQuerulousGemsbok-size_restricted.gif",
+	answer : "The Wizard of Oz"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,	question : "What film is this line famously from: </BR> </BR>Clever girl" + Table4ColumnStart + "Clueless</td><td>Star Wars</td><td>Back to the Future</td><td>Jurassic Park" + Table4ColumnEnd, // 
+	answerimage : "https://thetylerloop.com/wp-content/uploads/2019/02/clever-girl-gif-16.gif",
+	answer : "Jurassic Park"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,	question : "What film is this line famously from: </BR> </BR>Hello, my name is Inigo Montoya. You killed my father, prepare to die" + Table4ColumnStart + "Zorro</td><td>Shrek</td><td>Princess Bride</td><td>A Room with a View" + Table4ColumnEnd, // 
+	answerimage : "https://c.tenor.com/ur4pFtUDnsIAAAAC/inigo-montoya-you-killed-my-father.gif",
+	answer : "Princess Bride"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,	question : "What film is this line famously from: </BR> </BR>My Precious", // 
+	answerimage : "https://c.tenor.com/FCitJ5ak9CoAAAAC/gollum-my-precious.gif",
+	answer : "Lord of the Rings"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,	question : "What film is this line famously from: </BR> </BR>I'll have what she's having", // 
+	answerimage : "https://i.imgur.com/e9SOX63.gif",
+	answer : "When Harry met Sally"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,	question : "What film is this line famously from: </BR> </BR>Hello there...."+ Table4ColumnStart + "The Empire Strikes Back</td><td>Return of the Jedi</td><td>The Revenge of the Sith</td><td>A Room with a View" + Table4ColumnEnd, // 
+	answerimage : "https://c.tenor.com/DSG9ZID25nsAAAAC/hello-there-general-kenobi.gif",
+	answer : "The Revenge of the Sith"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,	question : "What film is this line famously from: </BR> </BR>We're on a mission from God"+ Table4ColumnStart + "The Blues Brothers</td><td>The Passion of Christ</td><td>The Life of Brian</td><td>A Room with a View" + Table4ColumnEnd, // 
+	answerimage : "https://c.tenor.com/iwHDWmhv1X4AAAAC/mission-from-god-blues-brothers.gif",
+	answer : "The Blues Brothers"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,	question : "What show is this line famously from: </BR> </BR>Deer testicles", // 
+	answerimage : "https://i2-prod.manchestereveningnews.co.uk/incoming/article19295285.ece/ALTERNATES/s615/0_Vernon-4.jpg",
+	answer : "I'm a Celebrity get me out of here"}) ;
 
 
 quests[++questIndexBuilder] = { //https://www.pocket-lint.com/apps/news/134579-worst-album-cover-art-of-all-time-you-won-t-believe-number-34
@@ -4065,3 +4082,14 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionType2PictureQuestion,
 
 
 
+
+quests[++questIndexBuilder] = { //https://en.wikipedia.org/wiki/List_of_Judi_Dench_performances
+		name : "Hey Jude",
+		hoverover : "We have all seen Dame Judy in films, but can you recognise what films these stills are from...?",
+		splash : {splashType : splashTypePictureAndText , splashText : "We've all seen Dame Judy in films, but can you recognise what films these stills are from...?", splashImage : "https://media2.giphy.com/media/YplBZ0pxRAqRyVNVSU/giphy.gif" },
+		tags : "2021-11-28,saturday,InnerWheel,surfers,casting,7DegreesOfHBC",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What film is this from"+ Table4ColumnStart + "Maurice</td><td>A Room with a View</td><td>Where Angels Fear to Tread</td><td>Planet of the Apes" + Table4ColumnEnd, // 
+	image : "https://64.media.tumblr.com/f78de73be9b7f724dece4fffab32e4d0/c513bb611303bf0c-8b/s540x810/a753b73c4356379b76172ed39b700fe6307a3bd0.gifv",
+	answer : "A Room with a View"}) ;
