@@ -128,7 +128,8 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 Question with 2 pictures in the question, and a text answer
 
 ```javascript	
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2PictureQuestion,	question : "", 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2PictureQuestion,
+	question : "", 
 	image : "<image URL>",
 	image2: "<image URL>",
 	answer : ''}) ;
