@@ -4000,4 +4000,68 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answer : "The Empire Strikes Back OR Return of the Jedi.   2 points if you got both"}) ;
 
 
+quests[++questIndexBuilder] = { //https://www.pocket-lint.com/apps/news/134579-worst-album-cover-art-of-all-time-you-won-t-believe-number-34
+		name : "Bad Albums",
+		hoverover : "Bad album covers, but which act has the most Spotify listens?",
+		splash : {splashType : splashTypePictureAndText , splashText : "Bad album covers, but which act has the most Spotify listens...?", splashImage : "https://scontent.fltn3-2.fna.fbcdn.net/v/t31.18172-8/14976849_1174228349338417_7115787037305981998_o.jpg?_nc_cat=106&ccb=1-5&_nc_sid=174925&_nc_ohc=AT_LBLxKOjsAX_nT_hl&_nc_ht=scontent.fltn3-2.fna&oh=60fefe5a7b0ddbd99fbdadd1c79364c4&oe=61BD5972" },
+		tags : "2021-11-21,saturday,InnerWheel,surfers,listens",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2PictureQuestion,	question : "Which act has the most Spotify listens per month", // 
+	image : "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image18-gs8jhoazrv-jpg.webp?v1",
+	image2: "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image14-hcbugy4jdm-jpg.webp?v1",
+	answer : 'The Faith Tones - 0 </BR>The Sherwood Singers - 28 </BR> <iframe src="https://open.spotify.com/embed/artist/1Y6lLl0lxGlrqb2PDkT79n?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2PictureQuestion,
+	question : "Which act has the most Spotify listens per month", 
+	image : "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image17-tm4h5nmkxg-jpg.webp?v1",
+	image2: "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image6-zf34nsxbwd-jpg.webp?v1",
+	answer : 'Brainstorm - 0 </BR>Swamp Dogg - 286,986 </BR><iframe src="https://open.spotify.com/embed/album/69vZXMM3hnlYbflPV7wvIj?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2PictureQuestion,
+	question : "Which act has the most Spotify listens per month", 
+	image : "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image9-cylozamr9p-jpg.webp?v1",
+	image2: "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image20-n78kgrw30d-jpg.webp?v1",
+	answer : 'Knorkator 196,424 </BR>Norberto de Freitas - 0 </BR><iframe src="https://open.spotify.com/embed/album/1ezRNJ2YqA8p7xWxZbTynN?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2PictureQuestion,
+	question : "Which act has the most Spotify listens per month", 
+	image : "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image19-eur5mhwhlk-jpg.webp?v1",
+	image2: "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image21-dsylicxomu-jpg.webp?v1",
+	answer : 'Gary - 0 </BR>Camilo Sesto - 2,538,691</BR><iframe src="https://open.spotify.com/embed/album/63TZUWrwMNVgO4ER545sfF?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2PictureQuestion,
+	question : "Which act has the most Spotify listens per month", 
+	image : "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image22-sl1hcqpb5o-jpg.webp?v1",
+	image2: "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image23-qwyz6nea1r-jpg.webp?v1",
+	answer : 'Wayne Cochran - 6,314 </BR>Mija Aleksic - 20 </BR><iframe src="https://open.spotify.com/embed/album/1qKxb0UbN005keMUPwT5L4?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2PictureQuestion,
+	question : "Which act has the most Spotify listens per month", 
+	image : "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image4-uipwx1mwsy-jpg.webp?v1",
+	image2: "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image24-p7jvnlewtr-jpg.webp?v1",
+	answer : 'The Handsome Beasts - 387</BR>Dragan Antonijevic Arlekino - 0 </BR><iframe src="https://open.spotify.com/embed/album/6dm86RpogtDIuDpjWHs6hc?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2PictureQuestion,
+	question : "Which act has the most Spotify listens per month", 
+	image : "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image12-mcfkaxaljw-jpg.webp?v1",
+	image2: "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image2-bzukmt4xcn-jpg.webp?v1",
+	answer : 'Argentina Coral - 441 </BR>Kevin Rowland - 63,282 </BR><iframe src="https://open.spotify.com/embed/album/3POfEid66jzvvTysJZlhRy?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2PictureQuestion,
+	question : "Which act has the most Spotify listens per month", 
+	image : "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image13-znsitaj7pq-jpg.webp?v1",
+	image2: "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image5-xglmbq4mvp-jpg.webp?v1",
+	answer : 'Maddy Genets - 0 </BR>Gerhard Polt - 9,443 </BR><iframe src="https://open.spotify.com/embed/artist/6WxYg8wxrR9tXzRujscIpa?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2PictureQuestion,
+	question : "Which act has the most Spotify listens per month", 
+	image : "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image15-wttvr4uxvd-jpg.webp?v1",
+	image2: "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image8-czjpzfudwq-jpg.webp?v1",
+	answer : 'Elna Fredhey and Rigmor Odum - 0 </BR>Scorpions - 10,257,601 </BR><iframe src="https://open.spotify.com/embed/album/1KWIRGaeCscnnFmZUfbYDj?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2PictureQuestion,
+	question : "Which act has the most Spotify listens per month", 
+	image : "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image16-tgw9hqkoev-jpg.webp?v1",
+	image2: "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image44-ukxolhxcmf-jpg.webp?v1",
+	answer : 'Quim Barreiros - 79,505 </BR>Devastatin Dave - 0 </BR><iframe src="https://open.spotify.com/embed/artist/2oWYReGFzdcjvgUC5aizxv?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2PictureQuestion,
+	question : "Which act has the most Spotify listens per month", 
+	image : "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image36-tkczh6hwgq-jpg.webp?v1",
+	image2: "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image47-lksacqg7kh-jpg.webp?v1",
+	answer : 'John Bult - 16</BR>Christian Crusaders - 0 </BR><iframe src="https://open.spotify.com/embed/artist/77ALzdw4Gh6MkyAGlp7PE4?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'}) ;
+
+
 
