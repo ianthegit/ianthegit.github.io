@@ -391,6 +391,8 @@ function SQAnswer(questionType) {
 		SQGetQuestArea().innerHTML = "<p " + questionStyle + ">" + fullQuestion
 				+ "</p>";
 	} else if (questionType == quizQuestionType2PictureQuestion) {
+		SQGetQuestArea().innerHTML = "<p " + questionStyle + ">"
+			+ questStageData[currQuestStageIndex].question + "</p>";
 		questionimage = questStageData[currQuestStageIndex].image;
 		questionimage2 = questStageData[currQuestStageIndex].image2;
 		sqInit2Picture(questionimage,questionimage2);
