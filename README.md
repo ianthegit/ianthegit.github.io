@@ -125,6 +125,14 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 	answerimage : "IMAGE_URL"
 	} ); 	
 ```
+Question with 2 pictures in the question, and a text answer
+
+```javascript	
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2PictureQuestion,	question : "", 
+	image : "<image URL>",
+	image2: "<image URL>",
+	answer : ''}) ;
+```
 
 Question with a Text question, and a text answer, but additional question text is read out by a random voice (voice types browser specific).  'ReRun' button appears if added to question text
 
