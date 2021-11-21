@@ -162,7 +162,7 @@ function SQInitMenu() {
 	if (showTags) {
 		menuArea.innerHTML = 'Rounds' + beginAudioLoop + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/intro.mp3' + endAudio + '<BR/><BR/>' + SQInitQuestButtons(quests)  + '<BR/><BR/>Restrict rounds list by interest<BR/><BR/>'+ SQInitTagButtons();
 	} else {
-		menuArea.innerHTML = 'Rounds' + beginAudioLoop + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/intro.mp3' + endAudio + '<BR/><BR/>' + SQInitQuestButtons(quests)  ;
+		menuArea.innerHTML = ' <BR/><BR/>' + SQInitQuestButtons(quests)  ;
 	}
 }
 
