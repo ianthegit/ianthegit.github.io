@@ -1161,6 +1161,32 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLUlAhTQUZSATxtxIZ7rEbHHz1xoYryIxfk9lLvZE0sO7ecYdLytX-Asl4VlUOD4AHwDHAIRWdQQNYfnrPc_KrzdHoapf_7apJA6d_1YO3SldoIeyeBNgCrkDTekBZ1FOTUnuOaPdK9pHII6qfpBseCBgA=w460-h199-no?authuser=0",
 	answerimage : "https://thumbs.gfycat.com/LinearCheerfulIberianemeraldlizard-max-1mb.gif", answerSpeak : "Police car"}) ;
 
+
+quests[++questIndexBuilder] = { //
+		name : "Pictionary 41",
+		hoverover : "Pictionary on the theme of IACGMOOH",
+		tags : "2021-11-21,pictionary",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://i.gifer.com/EwVp.gif", answerSpeak : "Ant"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://m0.her.ie/wp-content/uploads/2017/08/24092039/ant.gif", answerSpeak : "Dec"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://media1.giphy.com/media/WvixhOVEixWZUEH8la/giphy.gif", answerSpeak : "Jungle"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://media4.giphy.com/media/d8SMqAtm3D9bYfOtcs/giphy.gif", answerSpeak : "Castle"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://c.tenor.com/hNtwHybr7m0AAAAC/fish-weird-eyes.gif", answerSpeak : "Fisheye"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://lh3.googleusercontent.com/proxy/gxSVo8meKuvDGIN3ge29CzNEHo9pGlTtdIUr-r5eebmtU7ysxwgvPCve0jSND-eOm3o5Sv4GZ45VG6MNIiSfmRd_Sp77MzX-DFU-ItNTikwAFoSrjByKBw", answerSpeak : "Pig testicle"}) ;
+
 /*
   
  quests[++questIndexBuilder] = { //
