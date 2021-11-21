@@ -19,6 +19,7 @@ document.getElementsByTagName('head')[0].appendChild(meta);
 
 currQuestIndex = 0;
 currQuestStageIndex = -1;
+discussionPointIndex=-1;
 resultText = '';
 questResultData = new Array(6);
 question = 0;
@@ -64,6 +65,9 @@ beginAudio= '<audio controls><source src="'  ;
 endAudio = '?raw=true" type="audio/mp3">   </audio>';
 startYouTube=" <a href='";
 endYouTube="' target='_blank'>The Answer...</a> ";
+startPointsButton = "<input type='button' class='userBtnNext' value='Next' title='Next' id='nextPoint' onclick='SQWriteAnswerPoint()' />";
+
+
 
 audioOnlyYoutubeStart =	'<div style="position:relative;width:267px;height:25px;overflow:hidden;"> <div style="position:absolute;top:-276px;left:-5px"> <iframe width="300" height="300"  src="https://www.youtube.com/embed/';
 audioOnlyYoutubeEnd =	'?rel=0"> </iframe> </div> </div>' ;
@@ -254,6 +258,7 @@ function reRunQuestStage() {
 }
 
 function runNextQuestStage() {
+	discussionPointIndex=-1;
 	questStageData = quests[currQuestIndex].questInfo;
 	if (currQuestStageIndex == questStageData.length
 			&& quizStage == quizStageQuestions) {
@@ -397,7 +402,7 @@ function SQAnswer(questionType) {
 				+ "</p>";
 	} else if (questionType == quizQuestionType2PictureQuestion) {
 		SQGetQuestArea().innerHTML = "<p " + questionStyle + ">"
-			+ questStageData[currQuestStageIndex].question + "</p>";
+		+ questStageData[currQuestStageIndex].question + "</p>";
 		questionimage = questStageData[currQuestStageIndex].image;
 		questionimage2 = questStageData[currQuestStageIndex].image2;
 		sqInit2Picture(questionimage,questionimage2);
@@ -453,14 +458,18 @@ function SQSpeakAnswer(){
 		window.speechSynthesis.speak(msg);
 	}
 }
-
+//if (questStageData[currQuestStageIndex].hasOwnProperty('answerList')) {
 function SQWriteAnswer() {
 	if (!fullAnswer) {
 		return;
 	}
-	if (fullAnswer.includes("iframe")|| fullAnswer.includes("target='_blank'")) {
+	if (fullAnswer.includes("iframe")|| fullAnswer.includes("target='_blank'") || questStageData[currQuestStageIndex-1].hasOwnProperty('answerList')) {
+		pointsText='';
+		if (questStageData[currQuestStageIndex-1].hasOwnProperty('answerList')) {
+			pointsText=startPointsButton;
+		}
 		SQGetAnswerArea().innerHTML = // answerPreText +
-			"<p " + answerStyle + ">" + fullAnswer + "</p>";
+			"<p " + answerStyle + ">" + fullAnswer + "</p> " + pointsText;
 	}
 	else if (counter < fullAnswer.length) {
 		answerText = answerText += fullAnswer.charAt(counter);
@@ -469,6 +478,16 @@ function SQWriteAnswer() {
 		"<p " + answerStyle + ">" + answerText + "</p>";
 		counter++;
 		setTimeout(SQWriteAnswer, 80);
+	}
+}
+
+function SQWriteAnswerPoint() {
+	//optionTags = optionTagsString.split(",");
+	pointsList=questStageData[currQuestStageIndex-1].answerList.split("|");
+	console.log(pointsList);
+	discussionPointIndex++;
+	if (discussionPointIndex < pointsList.length) {
+		SQGetAnswerArea().innerHTML = SQGetAnswerArea().innerHTML + '</BR>' + pointsList[discussionPointIndex] ;
 	}
 }
 
