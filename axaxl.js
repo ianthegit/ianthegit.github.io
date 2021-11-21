@@ -1,3 +1,8 @@
+/**
+ * 
+ */
+
+
 
 
 quests[++questIndexBuilder] = { 
@@ -22,7 +27,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'Describe your approach to engaging with the challenging stakeholder and how you might plan to address the issue </BR></BR>Long Term',
 	answer : "Obviously disgruntled business users are an unwanted outcome, and will take up time which could be used more productively."	, answerSpeak : "",
-	answerList: "Introduce an Agile model of working to provide better feedback to the business - not only for expectations, but also on issues and blockers|Ensure change timeframes are fully understood by all stakeholders|Ensure the effects of changes to priorities are well understood and communicated|Looks to create dedicated SME teams to expediate change in heir areas"	});
+	answerList: "Introduce an Agile model of working to provide better feedback to the business - not only for expectations, but also on issues and blockers|Ensure change timeframes are fully understood by all stakeholders|Ensure the effects of changes to priorities are well understood and communicated using well planned sprints|Look to create dedicated SME teams to expediate change in their areas"	});
 
 
 
@@ -36,15 +41,15 @@ quests[++questIndexBuilder] = {
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'level 2 support team are overwhelmed',
 	answer : "Describe any steps you would take to streamline the process, re-organise the team, motivate them and increase throughput</BR></BR>Short Term"	, answerSpeak : "",
-	answerList: "Ask for a list of most performed activities to see how these could be changed to be handled quicker.|Form a hit-team (or teams) skilled in a subset of issue resolution.|Ask the team what is holding them back"});
+	answerList: "Ask for a list of most performed activities to see how these could be changed to be handled quicker.|Form SME hit-teams skilled in subsets of the system to expedite resolution.|Ask the team what is holding them back"});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'level 3 team is under-resourced and lack the skills and experience </BR></BR>L3 team are lacking motivation as they are not getting exposure to any defect fixing / development work',
 	answer : "Describe any steps you would take to streamline the process, re-organise the team, motivate them and increase throughput</BR></BR>Short Term"	, answerSpeak : "",
-	answerList: "Look to form Tech Leads from AD and Lvl3 top performers to manage small focused teams|Ensure KT is coming from AD to Lvl 3|Give teams their own areas and allow them to become SME teams|Remove barriers between AD and Lvl3 and create end-to-end teams"});
+	answerList: "Look to form Tech Leads from AD and Lvl3 top performers to manage small focused SME teams|Ensure effective KT is being given by AD to Lvl 3|Give teams their own areas and allow them to become SME teams|Remove barriers between AD and Lvl3 and create end-to-end teams who can take reponsibility"});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'Describe any steps you would take to streamline the process, re-organise the team, motivate them and increase throughput</BR></BR>Long Term',
-	answer : "A team in this situation is not going to be fixed by short-term measures."	, answerSpeak : "",
-	answerList: "Look at why there are so many Lvl 2 and 3 items|What can be done to make AD more responsible for issue resolution|Throttle demand where possible to allow the teams to coalesce|Remove Lvl3 alogether|Introduce Agile - daily ceremonies can highlight progress made and provide positive feedback where traditional methodologies lack this"});
+	answer : "A team in this situation is not going to be fixed simply by short-term measures."	, answerSpeak : "",
+	answerList: "Look at why there are so many Lvl 2 and 3 items|What can be done to make AD more responsible for issue resolution - merge AD and Lvl3 into SME Agile teams|Throttle demand where possible to allow the teams to coalesce|Introduce Agile - daily ceremonies can highlight progress made and provide positive feedback where traditional methodologies lack this"});
 
 
 
@@ -63,11 +68,26 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : ' requests come in ad-hoc with short timeframes which creates stress for the team',
 	answer : "Ad-hoc sounds like disorganised", answerSpeak : "",
-	answerList: "Are all requests expected to be fullfilled quickly or can there be 2 (or more) fullfillment lists created|Ensure timeframes remain relevant for teams abilities and experience - make sure team velocity is known|Keep teams away from escalations and business pressure - engage a scrummaster to manage workloads into sprints"});
+	answerList: "Are all requests expected to be fullfilled quickly or can there be 2 (or more) fullfillment lists created|Ensure timeframes remain relevant for teams' abilities and experience - make sure team velocity is known|Keep teams away from escalations and business pressure - engage a scrummaster to manage workloads into sprints"});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'ensure we are on top of the requirements at any point in time without causing too much drag on the team or micro-managing',
-	answer : "", answerSpeak : "",
-	answerList: "Ensure we have a team appropriate - both technical and size appropriate - to deal with the volumes|Use Agile delivery methods to ensure teams are not exposed to large lists of defects which can be disheartening - create a backlog and concentrate on a sprint|Merge AD and Lvl3 teams into smaller independent teams with experienced Tech Leads who can work to improve their velocity"});
+	answer : "Build reporting into the ticket list - move to an Agile methodology with appropriately sized sprints and a backlog of defects", answerSpeak : "",
+	answerList: "Ensure we have a team appropriate - both technical and size appropriate - to deal with the volumes|Use Agile delivery methods to ensure teams are not exposed to large lists of defects which can be disheartening - create a backlog and concentrate on a sprint|Merge AD and Lvl3 teams into smaller independent SME teams with experienced Tech Leads who can work to improve their velocity"});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
