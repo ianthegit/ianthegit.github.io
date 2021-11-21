@@ -24,3 +24,28 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 	answer : "Obviously disgruntled business users are an unwanted outcome, and will take up time which could be used more productively."	, answerSpeak : "",
 	answerList: "Introduce an Agile model of working to provide better feedback to the business - not only for expectations, but also on issues and blockers|Ensure change timeframes are fully understood by all stakeholders|Ensure the effects of changes to priorities are well understood and communicated"	});
 
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Scenario 2",
+		hoverover : "Scenario 2",
+		splash : {splashType : splashTypeText , splashText : "The level 2 support team are overwhelmed with incident resolution and service request resolution, the level 3 team is under-resourced and lack the skills and experience to do much defect fixing and the development team are busy on small change, discretionary and regulatory project work. There is a growing backlog of tickets across L2 and L3 and the L3 team are lacking motivation as they are not getting exposure to any defect fixing / development work. Describe any steps you would take to streamline the process, re-organise the team, motivate them and increase throughput." },
+		tags : "AXAXL,axaxl",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'level 2 support team are overwhelmed',
+	answer : "Describe any steps you would take to streamline the process, re-organise the team, motivate them and increase throughput</BR></BR>Short Term"	, answerSpeak : "",
+	answerList: "Ask for a list of most performed activities to see how these could be changed to be handled quicker.|Form a hit-team (or teams) skilled in a subset of issue resolution.|Ask the team what is holding them back"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'level 3 team is under-resourced and lack the skills and experience </BR></BR>L3 team are lacking motivation as they are not getting exposure to any defect fixing / development work',
+	answer : "Describe any steps you would take to streamline the process, re-organise the team, motivate them and increase throughput</BR></BR>Short Term"	, answerSpeak : "",
+	answerList: "Look to form Tech Leads from AD and Lvl3 top performers to manage small focused teams|Ensure KT is coming from AD to Lvl 3|Give teams their own areas and allow them to become SME teams|Remove barriers between AD and Lvl3 and create end-to-end teams"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'Describe any steps you would take to streamline the process, re-organise the team, motivate them and increase throughput</BR></BR>Long Term',
+	answer : "A team in this situation is not going to be fixed by short-term measures."	, answerSpeak : "",
+	answerList: "Look at why there are so many Lvl 2 and 3 items|What can be done to make AD more responsible for issue resolution|Throttle demand where possible to allow the teams to coalesce|Remove Lvl3 alogether|Introduce Agile - daily ceremonies can highlight progress made and provide positive feedback where traditional methodologies lack this"});
+
+
+
