@@ -1182,7 +1182,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://media4.giphy.com/media/d8SMqAtm3D9bYfOtcs/giphy.gif", answerSpeak : "Castle"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
 	image : "",
-	answerimage : "https://c.tenor.com/hNtwHybr7m0AAAAC/fish-weird-eyes.gif", answerSpeak : "Fisheye"}) ;
+	answerimage : "https://c.tenor.com/hNtwHybr7m0AAAAC/fish-weird-eyes.gif", answerSpeak : "Fish eye"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
 	image : "",
 	answerimage : "https://lh3.googleusercontent.com/proxy/gxSVo8meKuvDGIN3ge29CzNEHo9pGlTtdIUr-r5eebmtU7ysxwgvPCve0jSND-eOm3o5Sv4GZ45VG6MNIiSfmRd_Sp77MzX-DFU-ItNTikwAFoSrjByKBw", answerSpeak : "Pig testicle"}) ;
