@@ -65,7 +65,7 @@ beginAudio= '<audio controls><source src="'  ;
 endAudio = '?raw=true" type="audio/mp3">   </audio>';
 startYouTube=" <a href='";
 endYouTube="' target='_blank'>The Answer...</a> ";
-startPointsButton = "<input type='button' class='userBtnNext' value='Next' title='Next' id='nextPoint' onclick='SQWriteAnswerPoint()' />";
+startPointsButton = "<input type='button' class='userBtnNext' value='Next' id='nextPoint' onclick='SQWriteAnswerPoint()' />";
 
 
 
