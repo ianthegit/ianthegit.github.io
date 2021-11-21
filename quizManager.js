@@ -53,7 +53,7 @@ answerStyle = 'style="font-family:Courier New;color:Black;font-size:30px;topMarg
 previousButton = "<input type='button' class='userBtnStop' value='Previous' title='Previous' id='Previous' onclick='runPreviousQuestStage()' />";
 nextButton = "<input type='button' class='userBtnNext' value='Next' title='Next' id='Next' onclick='runNextQuestStage()' />";
 reRunButton = "<input type='button' class='userBtnNext' value='Repeat' title='Repeat' id='Repeat' onclick='reRunQuestStage()' />";
-closeSplashButtonStart = "<input type='button' class='userBtnNext' value='Start Quiz' title='Start Quiz' id='Start Quiz' onclick='SQStartQuiz(";
+closeSplashButtonStart = "<input type='button' class='userBtnNext' value='Start' title='Start' id='Start Quiz' onclick='SQStartQuiz(";
 closeSplashButtonEnd=")' />";
 answerButton = "<input type='button' class='userBtnNext' value='Answers' title='Answers' id='Next' onclick='runNextQuestStage()' />";
 tagsButton = "<input type='button' class='userBtnStop' value='Categories' title='Categories' id='Categories' onclick='showCategories()' />";
