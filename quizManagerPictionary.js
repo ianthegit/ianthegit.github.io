@@ -1169,22 +1169,22 @@ quests[++questIndexBuilder] = { //
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLX603pJufGU_-79D4Tgojtnq9ytw0srUQmgfYH1r3vvWlihowqD740-AXuHugAkWYJ2KlPDzGuSpwEFu9yylREmOWYRkuSw675F9D6_ZF_1-MpiZrBsiabhdhqKlqNpvDC3_tFvlqMWReNlk3ypUs6ACA=w561-h660-no?authuser=0",
 	answerimage : "https://i.gifer.com/EwVp.gif", answerSpeak : "Ant"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLURbEMCPhG5CRUleT6ufa3qCEHTIReRs6kNqhkWUlgRlCFk78K4xcsSGpfLlU66o1NTzEhh8Gn-3beJBhqD_e9ETMAwkPSTA1cUJBNCeAe5jlG09VUhLUv74qOyWxd9Dxhv548vOAQkH5q15EEIo9726Q=w756-h717-no?authuser=0",
 	answerimage : "https://m0.her.ie/wp-content/uploads/2017/08/24092039/ant.gif", answerSpeak : "Dec"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLWLw_bBGTG4tKMRhsbShxgOul3WHePkw3Fcz4_0UKacqehmIC6n1O2-cutVbYp1-BHJ1DkEQmzNfLDWvD2l8Ms5A_fXfOZm-qsmTVQVVnkKH32idWM4q2AUetM-7hHQzj3b6qPsKi-2l_VoL_ikWCOScA=w567-h507-no?authuser=0",
 	answerimage : "https://media1.giphy.com/media/WvixhOVEixWZUEH8la/giphy.gif", answerSpeak : "Jungle"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUcdZPZiMc5gKl0jFb0IOyO1O821aBda4oxKS9sOczbGYt4HQjPhfZ5DEqEoYv1VHDVFTpSKFDJrF-PGWPowe9t8-gf92oSO9Nh_7OfSY52GvcOEIBEvAQNyOPc8weHZOTGxPrQeTi-_hKtzeCcxiLHmw=w742-h473-no?authuser=0",
 	answerimage : "https://media4.giphy.com/media/d8SMqAtm3D9bYfOtcs/giphy.gif", answerSpeak : "Castle"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUkDEZTQm_M7xcRh0nkVYEy6nIu_ohgBvdGWwpYZ3JZPuQZSolPIsycatxJ-VAoxUDGlIk38XRWEKjWT4X0_ycDtj7dW47Fj4PB-ttR0K24sVvqMfovMMcSe0yBnZzJBX3-D4VrGvTdPc-xmjcDQbwy9Q=w676-h504-no?authuser=0",
 	answerimage : "https://c.tenor.com/hNtwHybr7m0AAAAC/fish-weird-eyes.gif", answerSpeak : "Fish eye"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUO8e7jnZCfmxDFHCwqTu4xTjylpoq7_Gd_ReR_1cQx_jkUH8dwLz8TNpGvVEUTgMo531Aq70G0TkOfQ-jsiIPoYv0JT-WkAglbtnt6QTYqPCP7iG0Bk6ANAvHmwsdT5ySKdl2uALO7mcOogiqC_Gs4uQ=w743-h571-no?authuser=0",
 	answerimage : "https://lh3.googleusercontent.com/proxy/gxSVo8meKuvDGIN3ge29CzNEHo9pGlTtdIUr-r5eebmtU7ysxwgvPCve0jSND-eOm3o5Sv4GZ45VG6MNIiSfmRd_Sp77MzX-DFU-ItNTikwAFoSrjByKBw", answerSpeak : "Pig testicle"}) ;
 
 /*
