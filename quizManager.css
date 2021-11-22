@@ -32,6 +32,11 @@
    /* transform: rotate(.03turn);  */
 }
 
+.visible {
+  height: 3em;
+  width: 10em;
+  background: grey;
+}
 @keyframes spin {
     from {
         transform:rotate(0deg);
