@@ -114,7 +114,8 @@ function SQInit() {
 	showTags = SQShouldShowTags();
 	
 	document
-	.write("<div id='SQQuiz' class='SQQuizMain' ><span id='SQworkarea' class='grad'><table border='0' width=80%><table border='1'>"
+	.write("<div id='SQQuiz' class='SQQuizMain' ><span id='SQworkarea' class='grad'><table border='1'>"
+//	.write("<div id='SQQuiz' class='SQQuizMain' ><span id='SQworkarea' class='grad'><table border='0' width=80%><table border='1'>"
 			+ "<tr><td><span id='SQmenu' STYLE='color: black'></span></td>"
 			+ "<td><span id='SQButtons'></span></td></tr></table>"
 			+ "<tr><td><span id='SQAnswer'></span></td></tr>"
