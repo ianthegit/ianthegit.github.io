@@ -192,8 +192,12 @@ function SQStartQuizFromButton(quizIndex) {
 		}
 	}
 	naturalizedQuizIndex = quizIndex + 1;
-	document.getElementById("SQmenu").innerHTML = '(' + naturalizedQuizIndex + ') ' + quests[quizIndex].name + " - " + quests[quizIndex].hoverover;
-	
+	hoverText='';
+	if (quests[quizIndex].hasOwnProperty("splash")) {
+		hoverText=quests[quizIndex].splash.splashText;
+	}
+	document.getElementById("SQmenu").innerHTML = '<div title="' + hoverText + '" class="visible"> (' + naturalizedQuizIndex + ') ' + quests[quizIndex].name + " - " + quests[quizIndex].hoverover + '</div>';
+		
 	extraText='';
 	if (SQIs7DegreesOfHBC(quizIndex)){
 		extraText='</BR></BR>This is a 7 Degrees of Helena Bonham Carter quiz - There is an extra point for recognising whch film(s) also starred HBC (only if you get the film name correct too)';
