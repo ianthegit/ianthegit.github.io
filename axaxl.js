@@ -9,7 +9,7 @@ quests[++questIndexBuilder] = {
 		name : "Scenario 1",
 		hoverover : "Scenario 1",
 		splash : {splashType : splashTypeText , splashText : "The team are fully occupied across production support, small change, discretionary and regulatory project work, but we are receiving multiple escalations from a business stakeholder as their small change is not being picked up according to their preferred timeframe. Describe your approach to engaging with the challenging stakeholder and how you might plan to address the issue." },
-		tags : "AXAXL,axaxl",
+		tags : "AXAXL",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
@@ -40,7 +40,7 @@ quests[++questIndexBuilder] = {
 		name : "Scenario 2",
 		hoverover : "Scenario 2",
 		splash : {splashType : splashTypeText , splashText : "The level 2 support team are overwhelmed with incident resolution and service request resolution, the level 3 team is under-resourced and lack the skills and experience to do much defect fixing and the development team are busy on small change, discretionary and regulatory project work. There is a growing backlog of tickets across L2 and L3 and the L3 team are lacking motivation as they are not getting exposure to any defect fixing / development work. Describe any steps you would take to streamline the process, re-organise the team, motivate them and increase throughput." },
-		tags : "AXAXL,axaxl",
+		tags : "AXAXL",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
@@ -72,7 +72,7 @@ quests[++questIndexBuilder] = {
 		name : "Scenario 3",
 		hoverover : "Scenario 3",
 		splash : {splashType : splashTypeText , splashText : "Genius is a critical finance application with lots of compliance and audit requirements that must be adhered to. The L2 team have relatively mature processes to ensure these requirements are fulfilled, but the requests come in ad-hoc with short timeframes which creates stress for the team. Describe any ideas you may have to ensure we are on top of the requirements at any point in time without causing too much drag on the team or micro-managing." },
-		tags : "AXAXL,axaxl",
+		tags : "AXAXL",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
