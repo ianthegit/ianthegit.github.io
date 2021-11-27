@@ -4192,3 +4192,16 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 
 
 
+quests[++questIndexBuilder] = { 
+		name : "Chris",
+		hoverover : "In homage to Chris Whitty coming back onto our screens ",
+		tags : "music,2021-11-28,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/7cbiHgrw75A3flDW9AZTB2" width="501" height="580" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+	answer : ""}) ;
+
+
