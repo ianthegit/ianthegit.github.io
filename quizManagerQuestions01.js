@@ -4097,13 +4097,98 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 
+quests[++questIndexBuilder] = { //https://www.pocket-lint.com/apps/news/134579-worst-album-cover-art-of-all-time-you-won-t-believe-number-34
+		name : "Bad Albums",
+		hoverover : "Bad album covers, but which act has the most Spotify listens?",
+		splash : {splashType : splashTypePictureAndText , splashText : "Bad album covers, but which act has the most Spotify listens...?", splashImage : "https://scontent.fltn3-2.fna.fbcdn.net/v/t31.18172-8/14976849_1174228349338417_7115787037305981998_o.jpg?_nc_cat=106&ccb=1-5&_nc_sid=174925&_nc_ohc=AT_LBLxKOjsAX_nT_hl&_nc_ht=scontent.fltn3-2.fna&oh=60fefe5a7b0ddbd99fbdadd1c79364c4&oe=61BD5972" },
+		tags : "2021-11-28,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2PictureQuestion,	question : "Which act has the most Spotify listens per month", // 
+	image : "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image45-dtq4keqel0-jpg.webp?v1",
+	image2: "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image25-nf5awdjxrc-jpg.webp?v1",
+	answer : 'Johnny Guitar Watson - 179,630 </BR>Tozovac - 19,342  </BR> <iframe src="https://open.spotify.com/embed/artist/6uB4Ax6mlzohDTLqLOJ6Vl?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2PictureQuestion,	question : "Which act has the most Spotify listens per month", // 
+	image : "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image48-vu9rxq4ldj-jpg.webp?v1",
+	image2: "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image42-p3ycckrfvw-jpg.webp?v1",
+	answer : 'Freddie Gage - 0 </BR>Rudy Ray Moore - 5,937  </BR> <iframe src="https://open.spotify.com/embed/artist/04D6nPuCycr1pfTwXXqmDH?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2PictureQuestion,	question : "Which act has the most Spotify listens per month", // 
+	image : "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image49-24raeldjhd-jpg.webp?v1",
+	image2: "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image31-fbqali7lxs-jpg.webp?v1",
+	answer : 'Manowar - 695,276 </BR>The Friends - 0  </BR> <iframe src="https://open.spotify.com/embed/artist/4CzUzn54Cp9TQr6a7JIlMZ?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe> '}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2PictureQuestion,	question : "Which act has the most Spotify listens per month", // 
+	image : "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image50-voq3ptlecs-jpg.webp?v1",
+	image2: "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image33-67ubgp4jxj-jpg.webp?v1",
+	answer : 'Heino - 205,214 </BR>Foster Edwards\' Orchestra - 0 <?BR> <iframe src="https://open.spotify.com/embed/artist/1W35UHuYsAHko9w0wllyaX?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>   '}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2PictureQuestion,	question : "Which act has the most Spotify listens per month", // 
+	image : "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image34-w5dwecg9kr-jpg.webp?v1",
+	image2: "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image27-j1lcgxucgn-jpg.webp?v1",
+	answer : 'W.A.S.P. - 1,059,222 </BR>Millie Jackson - 114,213 </BR><iframe src="https://open.spotify.com/embed/artist/3BVkDHWRvLJEyKdvhLbjsq?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2PictureQuestion,	question : "Which act has the most Spotify listens per month", // 
+	image : "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image35-7emliy2tdu-jpg.webp?v1",
+	image2: "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image29-aqhjdmfyce-jpg.webp?v1",
+	answer : 'Los Wanka\'s - 47 </BR>Uncle Les and Aunt Nancy Wheeler - 0 </BR> <iframe src="https://open.spotify.com/embed/artist/0ILpQwjoDAoiq3Q9Ve2pur?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe> '}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2PictureQuestion,	question : "Which act has the most Spotify listens per month", // 
+	image : "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image38-2zwwhuxfx1-jpg.webp?v1",
+	image2: "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image30-ryqwc0mezv-jpg.webp?v1",
+	answer : 'Kjell Kraghe - 626 </BR>The Singing Richey Family - 0  </BR> <iframe src="https://open.spotify.com/embed/artist/3uSfQb34ibK88PxNkrv0mB?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe> '}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2PictureQuestion,	question : "Which act has the most Spotify listens per month", // 
+	image : "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image41-joyrgv725o-jpg.webp?v1",
+	image2: "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image39-5uecgndokp-jpg.webp?v1",
+	answer : 'The Ministers Quartet - 0 </BR>Dick Black - 321  </BR> <iframe src="https://open.spotify.com/embed/artist/1q95JbJqByCIkcXzsQkxcM?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe> '}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2PictureQuestion,	question : "Which act has the most Spotify listens per month", // 
+	image : "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image40-816dhtrpz3-jpg.webp?v1",
+	image2: "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image37-k8zcdfir9l-jpg.webp?v1",
+	answer : 'Country Church - 0 </BR>Orion - 11,574  </BR> <iframe src="https://open.spotify.com/embed/artist/4k7v8UC7BAe31BeADfuAQU?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe> '}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2PictureQuestion,	question : "Which act has the most Spotify listens per month", // 
+	image : "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image46-rcuey2mevl-jpg.webp?v1",
+	image2: "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image52-0fsion9ugp-jpg.webp?v1",
+	answer : 'The Cooper Family - 0 </BR>Mike Adkins - 189  </BR> <iframe src="https://open.spotify.com/embed/artist/4Nlfy9wsBmADQPWk1b4qFw?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe> '}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2PictureQuestion,	question : "Which act has the most Spotify listens per month", // 
+	image : "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image26-urcvtczde2-jpg.webp?v1",
+	image2: "https://cdn.pocket-lint.com/r/s/660x/assets/images/134579-gadgets-feature-53-of-the-worst-album-covers-of-all-time-image54-i6vwmztlov-jpg.webp?v1",
+	answer : 'Svetlana Gruebbersolvik - 0 </BR>Boned - 16  </BR><iframe src="https://open.spotify.com/embed/artist/4vrbDOYJD87WWpgwKs2b2p?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe> '}) ;
+
+
+
 quests[++questIndexBuilder] = { //https://en.wikipedia.org/wiki/List_of_Judi_Dench_performances
 		name : "Hey Jude",
-		hoverover : "We have all seen Dame Judy in films, but can you recognise what films these stills are from...?",
-		splash : {splashType : splashTypePictureAndText , splashText : "We've all seen Dame Judy in films, but can you recognise what films these stills are from...?", splashImage : "https://media2.giphy.com/media/YplBZ0pxRAqRyVNVSU/giphy.gif" },
+		hoverover : "We've all seen Dame Judy in films, but can you recognise what films these stills are from...?",
+		splash : {splashType : splashTypeText , splashText : "We've all seen Dame Judy in films, but can you recognise what films are from...?", splashImage : "https://media2.giphy.com/media/YplBZ0pxRAqRyVNVSU/giphy.gif" },
 		tags : "2021-11-28,saturday,InnerWheel,surfers,casting,7DegreesOfHBC",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What film is this from"+ Table4ColumnStart + "Maurice</td><td>A Room with a View</td><td>Where Angels Fear to Tread</td><td>Planet of the Apes" + Table4ColumnEnd, // 
 	image : "https://64.media.tumblr.com/f78de73be9b7f724dece4fffab32e4d0/c513bb611303bf0c-8b/s540x810/a753b73c4356379b76172ed39b700fe6307a3bd0.gifv",
 	answer : "A Room with a View"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What film is this from - Victoria and..."+ Table4ColumnStart + "Sajid</td><td>Albert</td><td>Abdul</td><td>Rishi" + Table4ColumnEnd, // 
+	image : "https://64.media.tumblr.com/26af4c773092ca57e66defc7b350c860/tumblr_oqs6x8Z3p41s0xdato8_r1_540.gifv",
+	answer : "Victoria and Abdul"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What film is this from"+ Table4ColumnStart + "Casino Royale</td><td>Goldeneye</td><td>Skyfall</td><td>Quantum of Solace" + Table4ColumnEnd, // 
+	image : "https://i.imgur.com/OCcyP6r.gif",
+	answer : "Goldeneye"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What film is this from"+ Table4ColumnStart + "Casino Royale</td><td>Goldeneye</td><td>Skyfall</td><td>Quantum of Solace" + Table4ColumnEnd, // 
+	image : "http://25.media.tumblr.com/8b8c4f5796825cdd9b5c93a5f238c49c/tumblr_mjcfduh2kx1s514bao1_250.gif",
+	answer : "Skyfall"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What film is this from"+ Table4ColumnStart + "Casino Royale</td><td>Goldeneye</td><td>Skyfall</td><td>Quantum of Solace" + Table4ColumnEnd, // 
+	image : "https://thumbs.gfycat.com/BronzeCriminalBittern-size_restricted.gif",
+	answer : "Quantum of Solace"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What film is this from"+ Table4ColumnStart + "Casino Royale</td><td>Goldeneye</td><td>Skyfall</td><td>Quantum of Solace" + Table4ColumnEnd, // 
+	image : "https://64.media.tumblr.com/9c97c5b6d82cf2afef130fd4c96e430d/tumblr_o2nrj4Iyue1s0xdato7_r1_500.gifv",
+	answer : "Casino Royale"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What film is this from"+ Table4ColumnStart + "Philomena</td><td>Slumdog Millionaire</td><td>The Best Exotic Marigold Hotel</td><td>Notes on a Scandal" + Table4ColumnEnd, // 
+	image : "https://i.gifer.com/M10N.gif",
+	answer : "The Best Exotic Marigold Hotel"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What series is this from", // 
+	image : "https://64.media.tumblr.com/7ef4bb62fdbfdfa2a0f441387cb2687c/89c052f5df1668a7-d2/s500x750/ddba32b695ea9984e2e1d59391b9369fb0663f66.gifv",
+	answer : "As Time Goes By"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What series is this from", // 
+	image : "https://64.media.tumblr.com/cc6caa45fb0f434e1ef19af6440f4165/tumblr_oir5n9qOnn1vwrej1o7_250.gifv",
+	answer : "A fine Romance"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What show is this from", // 
+	image : "https://64.media.tumblr.com/108ccc2b51448d0115cba59c36b71f90/976962a4a3cdf276-d0/s500x750/ac11b4606a211802873ec47935d755319a52f8a1.gifv",
+	answer : "Graham Norton"}) ;
+
+
+
