@@ -197,7 +197,7 @@ function SQStartQuizFromButton(quizIndex) {
 	if (quests[quizIndex].hasOwnProperty("splash")) {
 		hoverText=quests[quizIndex].splash.splashText;
 	}
-	document.getElementById("SQmenu").innerHTML = '<div title="' + hoverText + '" class="visible"> (' + naturalizedQuizIndex + ') ' + quests[quizIndex].name + " - " + quests[quizIndex].hoverover + '</div>';
+	document.getElementById("SQmenu").innerHTML = '<span title="' + hoverText + '" class="visible"> (' + naturalizedQuizIndex + ') ' + quests[quizIndex].name + " - " + quests[quizIndex].hoverover + '</span>';
 		
 	extraText='';
 	if (SQIs7DegreesOfHBC(quizIndex)){
