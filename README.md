@@ -59,19 +59,19 @@ To add your own Rounds and Questions, use the examples below to add them here:
 
 ```javascript
 quests[++questIndexBuilder] = { //
-		name : "Round Name",
-		hoverover : "Hoverover text",
-		tags : "comma separated tag list",
-		questInfo: new Array()
+		name : "Round Name"
+		,hoverover : "Hoverover text"
+		,tags : "comma separated tag list"
+		,questInfo: new Array()
 	};
 ```
 Optional - splash screen Text only
 ```javascript
-splash : {splashType : splashTypeText  , splashText : "Splash Screen Text" },
+,splash : {splashType : splashTypeText  , splashText : "Splash Screen Text" }
 ```
 Optional - splash screen Text and picture
 ```javascript
-splash : {splashType : splashTypePictureAndText, splashText : "Splash Screen Text" , splashImage : "Image URL"},
+,splash : {splashType : splashTypePictureAndText, splashText : "Splash Screen Text" , splashImage : "Image URL"}
 ```
 
 If the tags contain 'year' then add up to 12 questions and each will be prepended by the appropriate month (January - December) - otherwise each question will be numbered 1 to \<length>
@@ -85,7 +85,7 @@ To get a 4-choice multiple choice question text, add the below to the question t
 + Table4ColumnStart + "Answer1</td><td>Answer2</td><td>Answer3</td><td>Answer4" + Table4ColumnEnd
 ```
 
-To add a question which plays a audio clip:
+To add a question which plays an audio clip:
 ```javascript
  addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://RESOURCE_NAME.mp3' + endAudio ,
