@@ -1187,6 +1187,32 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLUO8e7jnZCfmxDFHCwqTu4xTjylpoq7_Gd_ReR_1cQx_jkUH8dwLz8TNpGvVEUTgMo531Aq70G0TkOfQ-jsiIPoYv0JT-WkAglbtnt6QTYqPCP7iG0Bk6ANAvHmwsdT5ySKdl2uALO7mcOogiqC_Gs4uQ=w743-h571-no?authuser=0",
 	answerimage : "https://lh3.googleusercontent.com/proxy/gxSVo8meKuvDGIN3ge29CzNEHo9pGlTtdIUr-r5eebmtU7ysxwgvPCve0jSND-eOm3o5Sv4GZ45VG6MNIiSfmRd_Sp77MzX-DFU-ItNTikwAFoSrjByKBw", answerSpeak : "Pig testicle"}) ;
 
+
+quests[++questIndexBuilder] = { //
+		name : "Pictionary 42",
+		hoverover : "Pictionary on the theme of Christmas Parties",
+		tags : "2021-12-5,pictionary",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://c.tenor.com/8cd-cVBTiQIAAAAM/beerfest-oktoberfest.gif", answerSpeak : "Drinks"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://i.gifer.com/9C0y.gif", answerSpeak : "Food"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://i.gifer.com/WeHN.gif", answerSpeak : "Mistletoe"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://c.tenor.com/q1CVMNoC7CcAAAAC/christmas-party-dancing.gif", answerSpeak : "Dancing"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://thumbs.gfycat.com/AntiqueMeaslyAllosaurus-size_restricted.gif", answerSpeak : "Games"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://cdn3.whatculture.com/images/2014/12/bad-santa-gif.gif", answerSpeak : "Hangovers"}) ;
+
 /*
   
  quests[++questIndexBuilder] = { //
