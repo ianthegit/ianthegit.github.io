@@ -67,7 +67,76 @@ startYouTube=" <a href='";
 endYouTube="' target='_blank'>The Answer...</a> ";
 startPointsButton = "<input type='button' class='userBtnNext' value='Next' id='nextPoint' onclick='SQWriteAnswerPoint()' />";
 
-
+//emojis
+const emoji = {
+	bigSmile : " &#128513;"
+	,cryLaugh : " &#128514;"
+	,stop : " &#9940;"
+	,baby : " &#128113;"
+	,watch : " &#8986;"
+	,rainUmbrella : " &#9748;"
+	,coffee : " &#9749;"
+	,anchor : " &#9875	;"
+	,lightning : " &#9889;"
+	,football : " &#9917;"
+	,snowman : " &#9924	;"
+	,chains : " &#9939;"
+	,church : " &#9962;"
+	,fountain : " &#9970;"
+	,dinghy : " &#9973;"
+	,corn : " &#127805;"
+	,shamrock : " &#127808;"
+	,mushroom : " &#127812;"
+	,watermelon : " &#127817;"
+	,orange : " &#127818;"
+	,lemon : " &#127819;"
+	,banana : " &#127820;"
+	,pineapple : " &#127821;"
+	,peach : " &#127825;"
+	,cake : " &#127856;"
+	,redwine : " &#127863;"
+	,beer : " &#127866;"
+	,beers : " &#127867;"
+	,champagne : " &#127870;"
+	,present : " &#127873;"
+	,spooky : " &#127875;"
+	,xmasTree : " &#127876;"
+	,santa : " &#127877;"
+	,balloon : " &#127880;"
+	,pawPrints : " &#128062;"
+	,eyes : " &#128064;"
+	,eye : " &#128065;"
+	,ear : " &#128066;"
+	,nose : " &#128067;"
+	,lips : " &#128068;"
+	,tongue : " &#128069;"
+	,pointUp : " &#128070;"
+	,pointDown : " &#128071;"
+	,pointLeft : " &#128072;"
+	,pointRight : " &#128073;"
+	,fist : " &#128074;"
+	,OK : " &#128076;"
+	,thumbsUp : " &#128077;"
+	,thumbsDown : " &#128078;"
+	,clap : " &#128079;"
+	,crown : " &#128081;"
+	,baby : " &#128118;"
+	,grandma : " &#128117;"
+/*
+		, : " &#;"
+	, : " &#;"
+	, : " &#;"
+	, : " &#;"
+	, : " &#;"
+	, : " &#;"
+	, : " &#;"
+	, : " &#;"
+	, : " &#;"
+	, : " &#;"
+ * 
+ */
+};
+Object.freeze(emoji);
 
 audioOnlyYoutubeStart =	'<div style="position:relative;width:267px;height:25px;overflow:hidden;"> <div style="position:absolute;top:-276px;left:-5px"> <iframe width="300" height="300"  src="https://www.youtube.com/embed/';
 audioOnlyYoutubeEnd =	'?rel=0"> </iframe> </div> </div>' ;
