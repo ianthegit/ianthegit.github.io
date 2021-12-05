@@ -1,44 +1,4 @@
 
-
-quests[++questIndexBuilder] = { //https://www.buzzfeed.com/ivyrichardson1/not-nice-sweets-brits
-		name : "Puddin",
-		hoverover : "Do you recognise these?",
-//		splash : {splashType : splashTypeText , splashText : "We've all seen Dame Judy in films, but can you recognise what films are from...?", splashImage : "https://media2.giphy.com/media/YplBZ0pxRAqRyVNVSU/giphy.gif" },
-		tags : "2021-12-5,saturday,InnerWheel,surfers", //,7DegreesOfHBC",
-		questInfo: new Array()
-	};
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this", // 
-	image : "https://img.buzzfeed.com/buzzfeed-static/static/2021-10/24/17/asset/50c4363d5d1a/sub-buzz-8370-1635096730-11.jpg?downsize=700%3A%2A&output-quality=auto&output-format=auto",
-	answer : "Bread & Butter Pudding"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this", // 
-	image : "https://img.buzzfeed.com/buzzfeed-static/static/2021-10/24/17/asset/6e8071cfddbf/sub-buzz-8123-1635096931-9.jpg?downsize=600:*&output-format=auto&output-quality=auto",
-	answer : "Banoffee Pie"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this", // 
-	image : "https://img.buzzfeed.com/buzzfeed-static/static/2021-10/24/17/asset/50c4363d5d1a/sub-buzz-8406-1635097138-3.jpg?downsize=600:*&output-format=auto&output-quality=auto",
-	answer : "Trifle"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this", // 
-	image : "https://img.buzzfeed.com/buzzfeed-static/static/2021-10/24/17/asset/50c4363d5d1a/sub-buzz-8393-1635097227-5.jpg?downsize=600:*&output-format=auto&output-quality=auto",
-	answer : "Pineapple upside-down cake"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this", // 
-	image : "https://img.buzzfeed.com/buzzfeed-static/static/2021-10/24/17/asset/6e8071cfddbf/sub-buzz-8167-1635097420-13.jpg?downsize=600:*&output-format=auto&output-quality=auto",
-	answer : "Mince Pies"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this", // 
-	image : "https://img.buzzfeed.com/buzzfeed-static/static/2021-10/24/17/asset/6e8071cfddbf/sub-buzz-8182-1635097489-25.jpg?downsize=600:*&output-format=auto&output-quality=auto",
-	answer : "Eccles Cakes"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this", // 
-	image : "https://img.buzzfeed.com/buzzfeed-static/static/2021-10/24/17/asset/8bd4a1a7a519/sub-buzz-8204-1635097642-46.jpg?downsize=600:*&output-format=auto&output-quality=auto",
-	answer : "Spotted Dick"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this", // 
-	image : "https://img.buzzfeed.com/buzzfeed-static/static/2018-11/26/5/asset/buzzfeed-prod-web-02/sub-buzz-11349-1543228588-1.jpg?downsize=600:*&output-format=auto&output-quality=auto",
-	answer : "Pavlova"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this", // 
-	image : "https://img.buzzfeed.com/buzzfeed-static/static/2018-11/26/6/asset/buzzfeed-prod-web-06/sub-buzz-26233-1543231988-2.jpg?downsize=600:*&output-format=auto&output-quality=auto",
-	answer : "Panettone"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this", // 
-	image : "https://img.buzzfeed.com/buzzfeed-static/static/2018-11/26/6/asset/buzzfeed-prod-web-03/sub-buzz-11830-1543232397-2.jpg?downsize=600:*&output-format=auto&output-quality=auto",
-	answer : "Stollen"}) ;
-
-
 quests[++questIndexBuilder] = { //https://www.buzzfeed.com/ivyrichardson1/not-nice-sweets-brits   https://www.buzzfeed.com/moonlightskies/how-many-of-these-holiday-films-have-you-seen-alre-aq7jys05t5
 		name : "Goggely-eyed",
 		hoverover : "Do you recognise these?",
@@ -88,47 +48,6 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What Christmas film is this from?", // 
 	image : "https://media3.giphy.com/media/l0ErNev7slIJ2WnTy/giphy.gif",
 	answer : "The Muppet Christmas Carol"}) ;
-
-
-
-
-quests[++questIndexBuilder] = { 
-		name : "Elf-on-the-Shelf",
-		hoverover : "Everyone has heard of Elf-on-the-shelf, but do you know these...?",
-		splash : {splashType : splashTypePictureAndText , splashText : "For instance... Ghost on the Toast", splashImage : "https://i.redd.it/1wmdoikfw2rz.jpg" },
-		tags : "2021-12-5,saturday,InnerWheel,surfers",
-		questInfo: new Array()
-	};
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this?", // 
-	image : "https://i.redd.it/senttkyw02mz.jpg",
-	answer : "Binks on the Sphinx"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this?", // 
-	image : "https://preview.redd.it/jngzu44r0wlz.jpg?width=640&crop=smart&auto=webp&s=e1e3fbe447c265c3615db398744fa383b2b4dee4",
-	answer : "Shrek on the Deck"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this?", // 
-	image : "https://preview.redd.it/4v23walrgqmz.jpg?width=640&crop=smart&auto=webp&s=11dac38827a3a95d64375ccc4c1477a2642a6bd6",
-	answer : "Putin on Newton"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this?", // 
-	image : "https://i.redd.it/l296xxwcr7261.jpg",
-	answer : "Delorian on the Mandalorian"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this?", // 
-	image : "https://preview.redd.it/lnswgcgj8n161.jpg?width=640&crop=smart&auto=webp&s=f85bde9e7dde3dcb82a444f322e3e2be1ec9eb4e",
-	answer : "Clone on a Stone"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this?", // 
-	image : "https://preview.redd.it/jt5w87oj6lq21.jpg?width=640&crop=smart&auto=webp&s=256001935be18f5ca9db98df8628055b16191797",
-	answer : "Caeser in a Freezer, or Nero at Sub-zero"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this?", // 
-	image : "https://runt-of-the-web.com/wordpress/wp-content/uploads/2017/09/chrome-on-a-gnome.png",
-	answer : "Chrome on a Gnome"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this?", // 
-	image : "https://runt-of-the-web.com/wordpress/wp-content/uploads/2017/09/RuPaul-on-a-U-haul.png",
-	answer : "Ru Paul on a U-Haul"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this?", // 
-	image : "https://runt-of-the-web.com/wordpress/wp-content/uploads/2017/09/fidget-spinner-on-dinner.png",
-	answer : "Spinner on Dinner"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this?", // 
-	image : "https://runt-of-the-web.com/wordpress/wp-content/uploads/2017/09/obama-on-a-llama.png",
-	answer : "Obama on a Lama"}) ;
 
 
 
@@ -186,4 +105,86 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	question : "Christmas songs from the ultimate Christmas film.   Bonus point for the film name",
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/4SsYaxRyDhYSS4o5udJgqb?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
 	answer : "Die Hard"}) ;
+
+
+
+
+
+quests[++questIndexBuilder] = { //https://www.buzzfeed.com/ivyrichardson1/not-nice-sweets-brits
+		name : "Puddin",
+		hoverover : "Do you recognise these?",
+//		splash : {splashType : splashTypeText , splashText : "We've all seen Dame Judy in films, but can you recognise what films are from...?", splashImage : "https://media2.giphy.com/media/YplBZ0pxRAqRyVNVSU/giphy.gif" },
+		tags : "2021-12-12,saturday,InnerWheel,surfers", //,7DegreesOfHBC",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this", // 
+	image : "https://img.buzzfeed.com/buzzfeed-static/static/2021-10/24/17/asset/50c4363d5d1a/sub-buzz-8370-1635096730-11.jpg?downsize=700%3A%2A&output-quality=auto&output-format=auto",
+	answer : "Bread & Butter Pudding"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this", // 
+	image : "https://img.buzzfeed.com/buzzfeed-static/static/2021-10/24/17/asset/6e8071cfddbf/sub-buzz-8123-1635096931-9.jpg?downsize=600:*&output-format=auto&output-quality=auto",
+	answer : "Banoffee Pie"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this", // 
+	image : "https://img.buzzfeed.com/buzzfeed-static/static/2021-10/24/17/asset/50c4363d5d1a/sub-buzz-8406-1635097138-3.jpg?downsize=600:*&output-format=auto&output-quality=auto",
+	answer : "Trifle"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this", // 
+	image : "https://img.buzzfeed.com/buzzfeed-static/static/2021-10/24/17/asset/50c4363d5d1a/sub-buzz-8393-1635097227-5.jpg?downsize=600:*&output-format=auto&output-quality=auto",
+	answer : "Pineapple upside-down cake"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this", // 
+	image : "https://img.buzzfeed.com/buzzfeed-static/static/2021-10/24/17/asset/6e8071cfddbf/sub-buzz-8167-1635097420-13.jpg?downsize=600:*&output-format=auto&output-quality=auto",
+	answer : "Mince Pies"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this", // 
+	image : "https://img.buzzfeed.com/buzzfeed-static/static/2021-10/24/17/asset/6e8071cfddbf/sub-buzz-8182-1635097489-25.jpg?downsize=600:*&output-format=auto&output-quality=auto",
+	answer : "Eccles Cakes"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this", // 
+	image : "https://img.buzzfeed.com/buzzfeed-static/static/2021-10/24/17/asset/8bd4a1a7a519/sub-buzz-8204-1635097642-46.jpg?downsize=600:*&output-format=auto&output-quality=auto",
+	answer : "Spotted Dick"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this", // 
+	image : "https://img.buzzfeed.com/buzzfeed-static/static/2018-11/26/5/asset/buzzfeed-prod-web-02/sub-buzz-11349-1543228588-1.jpg?downsize=600:*&output-format=auto&output-quality=auto",
+	answer : "Pavlova"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this", // 
+	image : "https://img.buzzfeed.com/buzzfeed-static/static/2018-11/26/6/asset/buzzfeed-prod-web-06/sub-buzz-26233-1543231988-2.jpg?downsize=600:*&output-format=auto&output-quality=auto",
+	answer : "Panettone"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this", // 
+	image : "https://img.buzzfeed.com/buzzfeed-static/static/2018-11/26/6/asset/buzzfeed-prod-web-03/sub-buzz-11830-1543232397-2.jpg?downsize=600:*&output-format=auto&output-quality=auto",
+	answer : "Stollen"}) ;
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Elf-on-the-Shelf",
+		hoverover : "Everyone has heard of Elf-on-the-shelf, but do you know these...?",
+		splash : {splashType : splashTypePictureAndText , splashText : "For instance... Ghost on the Toast", splashImage : "https://i.redd.it/1wmdoikfw2rz.jpg" },
+		tags : "2021-12-12,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this?", // 
+	image : "https://i.redd.it/senttkyw02mz.jpg",
+	answer : "Binks on the Sphinx"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this?", // 
+	image : "https://preview.redd.it/jngzu44r0wlz.jpg?width=640&crop=smart&auto=webp&s=e1e3fbe447c265c3615db398744fa383b2b4dee4",
+	answer : "Shrek on the Deck"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this?", // 
+	image : "https://preview.redd.it/4v23walrgqmz.jpg?width=640&crop=smart&auto=webp&s=11dac38827a3a95d64375ccc4c1477a2642a6bd6",
+	answer : "Putin on Newton"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this?", // 
+	image : "https://i.redd.it/l296xxwcr7261.jpg",
+	answer : "Delorian on the Mandalorian"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this?", // 
+	image : "https://preview.redd.it/lnswgcgj8n161.jpg?width=640&crop=smart&auto=webp&s=f85bde9e7dde3dcb82a444f322e3e2be1ec9eb4e",
+	answer : "Clone on a Stone"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this?", // 
+	image : "https://preview.redd.it/jt5w87oj6lq21.jpg?width=640&crop=smart&auto=webp&s=256001935be18f5ca9db98df8628055b16191797",
+	answer : "Caeser in a Freezer, or Nero at Sub-zero"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this?", // 
+	image : "https://runt-of-the-web.com/wordpress/wp-content/uploads/2017/09/chrome-on-a-gnome.png",
+	answer : "Chrome on a Gnome"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this?", // 
+	image : "https://runt-of-the-web.com/wordpress/wp-content/uploads/2017/09/RuPaul-on-a-U-haul.png",
+	answer : "Ru Paul on a U-Haul"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this?", // 
+	image : "https://runt-of-the-web.com/wordpress/wp-content/uploads/2017/09/fidget-spinner-on-dinner.png",
+	answer : "Spinner on Dinner"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this?", // 
+	image : "https://runt-of-the-web.com/wordpress/wp-content/uploads/2017/09/obama-on-a-llama.png",
+	answer : "Obama on a Lama"}) ;
 
