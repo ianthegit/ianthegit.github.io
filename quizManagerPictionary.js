@@ -1188,6 +1188,8 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://lh3.googleusercontent.com/proxy/gxSVo8meKuvDGIN3ge29CzNEHo9pGlTtdIUr-r5eebmtU7ysxwgvPCve0jSND-eOm3o5Sv4GZ45VG6MNIiSfmRd_Sp77MzX-DFU-ItNTikwAFoSrjByKBw", answerSpeak : "Pig testicle"}) ;
 
 
+
+
 quests[++questIndexBuilder] = { //
 		name : "Pictionary 42",
 		hoverover : "Pictionary on the theme of Christmas Parties",
@@ -1195,22 +1197,22 @@ quests[++questIndexBuilder] = { //
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVssSXVl0seVX8tLQaN9rIZjBGGzqudigkicKA901yLU9CT_v-9RvMJi-el6IiYI-d_0rg_jX-BLkNAiuiLrbloaPjyRNmn6wB5ktba2Brc9VzhMqDDqGwGtKidXcrGwRj1zcj0frcUVuX1OInCfbqfhw=w177-h268-no?authuser=0",
 	answerimage : "https://c.tenor.com/8cd-cVBTiQIAAAAM/beerfest-oktoberfest.gif", answerSpeak : "Drinks"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVJsyGpSo-0z2BMEgtgCF7PWKbsRrKqRvmZZuLxO75kVZ4BaXvAnF6KQdIn6KPBWVWjCrER4gRAnWnbX3gbJPwDnQsQTe55-k0qJsgRIDUEp9GM_MrPqmzBQyROGojzYt_-AHpd5HW0WqXDE8aO5Vzi9w=w874-h277-no?authuser=0",
 	answerimage : "https://i.gifer.com/9C0y.gif", answerSpeak : "Food"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUrYHICYDbSoznW22WPxZrlKtrhpCscXSFbW0iHKnty5ejwLxcLf7_bRR560oKBqfFzXcCqUuCTGTosCrkImvGFFN_-ma9mOxWB-im-b0P5Jx0poDPCehVEbnk34CZ3NkNGX4_YONw1cFp-GKBvCiF7NA=w209-h247-no?authuser=0",
 	answerimage : "https://i.gifer.com/WeHN.gif", answerSpeak : "Mistletoe"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVrdhDpPpZq7qIIDEGUbBbRjlFYtvTY3XBprm_EvySAtxYoYSnBcEc48G1VswRT1ma-yvlXEUyLQMEJgd_0wZ-jmsGOG2ypm3F4uufSy_xhmFFjjA05Z832-W-de0EsKfzuS-RjFAIiqODvb6uMHHUvRw=w711-h566-no?authuser=0",
 	answerimage : "https://c.tenor.com/q1CVMNoC7CcAAAAC/christmas-party-dancing.gif", answerSpeak : "Dancing"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLWX58iCNAv-RQTIYa_mof61BOnRInlrXDC42iaCvzIEgojaer4TnEwCvt6hiq8Nhy0AbqcbbEO5mZHaUiMEU1hOl-zKW2Z0e4Irwz0C4Cwqq0fO7MT7EQMZSofsdDRTwZNCJ1SzwN9pyPulNx6VpB7yfw=w267-h203-no?authuser=0",
 	answerimage : "https://thumbs.gfycat.com/AntiqueMeaslyAllosaurus-size_restricted.gif", answerSpeak : "Games"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUVCPi4HV2b0YFWN7x81o3oZzf9nO3RZ-HxIKFPmwS3Bm8N0KxGGDAlxF-0auYB2evJ1YRB0P5slwUAWihHMVL1zK9pSzl3TJkcYEyhnk99HXtZLdRQipYdea7-N4Ubj_fxx-iHANJzlTPu2UYRxvDTvQ=w479-h369-no?authuser=0",
 	answerimage : "https://cdn3.whatculture.com/images/2014/12/bad-santa-gif.gif", answerSpeak : "Hangovers"}) ;
 
 /*
