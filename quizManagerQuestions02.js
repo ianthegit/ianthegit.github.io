@@ -42,7 +42,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 quests[++questIndexBuilder] = { //https://www.buzzfeed.com/ivyrichardson1/not-nice-sweets-brits   https://www.buzzfeed.com/moonlightskies/how-many-of-these-holiday-films-have-you-seen-alre-aq7jys05t5
 		name : "Goggely-eyed",
 		hoverover : "Do you recognise these?",
-		splash : {splashType : splashTypeText , splashText : "We've all seen Christmas films, but can you recognise what these films are...?", splashImage : "https://media2.giphy.com/media/YplBZ0pxRAqRyVNVSU/giphy.gif" },
+		splash : {splashType : splashTypeText , splashText : "We've all seen Christmas films, but can you recognise what these films are...?"},
 		tags : "2021-12-5,saturday,InnerWheel,surfers,7DegreesOfHBC",
 		questInfo: new Array()
 	};
@@ -69,7 +69,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 	answer : "Miracle on 34th Street"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What Christmas film is this from?", // 
 	image : "https://c.tenor.com/_BYKmAMVXyQAAAAC/its-a-wonderful-life-snow.gif",
-	answer : "It's a Wonderful LIfe"}) ;
+	answer : "It's a Wonderful Life"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What Christmas film is this from?", // 
 	image : "https://media1.giphy.com/media/zhNNxi6S9fnDnm8PP2/giphy.gif",
 	answer : "Home Alone"}) ;
@@ -141,27 +141,49 @@ quests[++questIndexBuilder] = {
 		tags : "2021-12-5,saturday,InnerWheel,surfers",
 		questInfo: new Array()
 	};
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "Is Greenland, compared to Iceland, further..."+ Table4ColumnStart + "West & South</td><td>North & East</td><td>East & West</td><td>North, South, East & West" + Table4ColumnEnd, // 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Is Greenland, compared to Iceland, further..."+ Table4ColumnStart + "West & South</td><td>North & East</td><td>East & West</td><td>North, South, East & West" + Table4ColumnEnd, //
+	image : "https://thumbs.gfycat.com/LimitedSameChipmunk-max-1mb.gif",
 	answer : 'North, South, East & West </BR> <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12554716.056941109!2d-38.314793545265864!3d76.79725613939398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2suk!4v1638626772248!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>'}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "The 3 countries closest to Canada are..."+ Table4ColumnStart + "USA, Russia, Greenland</td><td>USA, Russia, Portugal</td><td>USA, Russia, Iceland</td><td>USA, Russia, France" + Table4ColumnEnd, // 
-	answer : 'USA, Russia, France   Thanks to St Piere and Miquelon</BR> <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3916114.3276903243!2d-56.485626636111746!3d47.32977075524781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2suk!4v1638628277708!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>'}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "The northernmost point of Brazil is closest to "+ Table4ColumnStart + "Canada</td><td>the Southernmost point of Brazil</td><td>Iceland</td><td>Portugal" + Table4ColumnEnd, // 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "The 3 countries closest to Canada are..."+ Table4ColumnStart + "USA, Greenland, Russia</td><td>USA, Greenland, Denmark</td><td>USA, Greenland, Iceland</td><td>USA, Greenland, France" + Table4ColumnEnd, // 
+	image : "https://thumbs.gfycat.com/LimitedSameChipmunk-max-1mb.gif",
+	answer : 'USA, Greenland, France   Thanks to St Piere and Miquelon</BR> <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3916114.3276903243!2d-56.485626636111746!3d47.32977075524781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2suk!4v1638628277708!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>'}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "The northernmost point of Brazil is closest to "+ Table4ColumnStart + "Canada</td><td>the Southernmost point of Brazil</td><td>Iceland</td><td>Portugal" + Table4ColumnEnd, // 
+	image : "https://thumbs.gfycat.com/LimitedSameChipmunk-max-1mb.gif",
 	answer : 'Canada'}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "Is the Western (Atlantic) entry point of the Panama Canal further West or further East than the Eastern (Pacific) entry point?", // 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Is the Western (Atlantic) entry point of the Panama Canal further West or further East than the Eastern (Pacific) entry point?", // 
+	image : "https://thumbs.gfycat.com/LimitedSameChipmunk-max-1mb.gif",
 	answer : 'West </BR><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d504290.5506851502!2d-79.80959006896994!3d9.084712135182862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fab5f4b31cd492d%3A0xd9dd11e7a14a0960!2sPanama%20Canal!5e0!3m2!1sen!2suk!4v1638628643744!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe> '}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "Is the Northen (Mediterranean Sea) entry point to the Suez Canal further North or further South than the Southern (Gulf of Suez) entry point?", // 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Is the Northen (Mediterranean Sea) entry point to the Suez Canal further North or further South than the Southern (Gulf of Suez) entry point?", // 
+	image : "https://thumbs.gfycat.com/LimitedSameChipmunk-max-1mb.gif",
 	answer : 'North </BR> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d521298.3140208602!2d32.123220971712016!3d30.86788590383458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f9aaeef52d333b%3A0xadec1b7a1220a846!2sSuez%20Canal!5e0!3m2!1sen!2suk!4v1638628789794!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>'}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "Which is further East - Chile on the West coast of Southern America or New York on the Eastern coast of North America", // 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Which is further East - Chile on the West coast of Southern America or New York on the Eastern coast of North America", // 
+	image : "https://thumbs.gfycat.com/LimitedSameChipmunk-max-1mb.gif",
 	answer : 'Chile </BR> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d65368830.73108282!2d-80.67996264302417!3d0.18819607722794382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2suk!4v1638628934147!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>'}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "Do most British people live further north than most Canadians, or most Canadians live further north than most British people?", // 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Do most British people live further north than most Canadians, or most Canadians live further north than most British people?", // 
+	image : "https://thumbs.gfycat.com/LimitedSameChipmunk-max-1mb.gif",
 	answer : '90% of Canadians live within 20 miles of the USA border, so more British people live further north'}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "Is Newcastle nearer to Dublin, London or Amsterdam?", // 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Is Newcastle nearer to Dublin, London or Amsterdam?", // 
+	image : "https://thumbs.gfycat.com/LimitedSameChipmunk-max-1mb.gif",
 	answer : 'Dublin </BR> <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2916985.673220548!2d-1.725544844981024!3d53.103129235608094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2suk!4v1638629305542!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>'}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "Alaska holds the title of being the furthest what State of the USA (by Lat and Long)?" + Table4ColumnStart + "Northern</td><td>Northern and Western</td><td>Northern, Western and Eastern</td><td>Northern, Western, Eastern and Southern" + Table4ColumnEnd, // 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Alaska holds the title of being the furthest what State of the USA (by Lat and Long)?" + Table4ColumnStart + "Northern</td><td>Northern and Western</td><td>Northern, Western and Eastern</td><td>Northern, Western, Eastern and Southern" + Table4ColumnEnd, // 
+	image : "https://thumbs.gfycat.com/LimitedSameChipmunk-max-1mb.gif",
 	answer : 'Northern, Western and Eastern </BR> <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d30435827.617964!2d-174.24302003028444!3d59.486635365199064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2suk!4v1638629827169!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>'}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "If you travel due south from the centre of Motor City, Detroit, which country will you enter first?" + Table4ColumnStart + "Cuba</td><td>Costa Rica</td><td>Colombia</td><td>Canada" + Table4ColumnEnd, // 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "If you travel due south from the centre of Detroit Illinois, which country will you enter first?" + Table4ColumnStart + "Cuba</td><td>Costa Rica</td><td>Colombia</td><td>Canada" + Table4ColumnEnd, // 
+	image : "https://thumbs.gfycat.com/LimitedSameChipmunk-max-1mb.gif",
 	answer : 'Canada </BR> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d66748.77030372804!2d-83.05605305094491!3d42.323187486104224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8824ca0110cb1d75%3A0x5776864e35b9c4d2!2sDetroit%2C%20MI%2C%20USA!5e0!3m2!1sen!2suk!4v1638630128700!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>'}) ;
 
 
 
+
+quests[++questIndexBuilder] = { 
+		name : "Christmas Film",
+		hoverover : "Christmas songs from the ultimate Christmas film.   Bonus point for the film name ",
+		tags : "music,2021-12-5,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "Christmas songs from the ultimate Christmas film.   Bonus point for the film name",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/4SsYaxRyDhYSS4o5udJgqb?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+	answer : "Die Hard"}) ;
 
