@@ -95,7 +95,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 
 
 quests[++questIndexBuilder] = { 
-		name : "Christmas Film",
+		name : "Christmas Film 0",
 		hoverover : "Christmas songs from the ultimate Christmas film.   Bonus point for the film name ",
 		tags : "music,2021-12-5,InnerWheel,saturday",
 		questInfo: new Array()
@@ -114,7 +114,7 @@ quests[++questIndexBuilder] = { //https://www.buzzfeed.com/ivyrichardson1/not-ni
 		name : "Puddin",
 		hoverover : "Do you recognise these?",
 //		splash : {splashType : splashTypeText , splashText : "We've all seen Dame Judy in films, but can you recognise what films are from...?", splashImage : "https://media2.giphy.com/media/YplBZ0pxRAqRyVNVSU/giphy.gif" },
-		tags : "2021-12-12,saturday,InnerWheel,surfers", //,7DegreesOfHBC",
+		tags : "2021-12-13,saturday,InnerWheel,surfers", //,7DegreesOfHBC",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this", // 
@@ -154,7 +154,7 @@ quests[++questIndexBuilder] = {
 		name : "Elf-on-the-Shelf",
 		hoverover : "Everyone has heard of Elf-on-the-shelf, but do you know these...?",
 		splash : {splashType : splashTypePictureAndText , splashText : "For instance... Ghost on the Toast", splashImage : "https://i.redd.it/1wmdoikfw2rz.jpg" },
-		tags : "2021-12-12,saturday,InnerWheel,surfers",
+		tags : "2021-12-13,saturday,InnerWheel,surfers",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this?", // 
@@ -187,4 +187,20 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this?", // 
 	image : "https://runt-of-the-web.com/wordpress/wp-content/uploads/2017/09/obama-on-a-llama.png",
 	answer : "Obama on a Lama"}) ;
+
+
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Christmas Film 1",
+		hoverover : "Christmas songs from the ultimate Christmas film according to Ted.   Bonus point for the film name ",
+		tags : "music,2021-12-13,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "Christmas songs from the ultimate Christmas film according to Ted.   Bonus point for the film name",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/1cSFs3dYeHBjl3jETZ4hK8?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+	answer : 'National Lampoons Christmas Vacation </BR> <iframe src="https://open.spotify.com/embed/track/3bTj3C6tSyLWBAAt8yzG4v?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'}) ;
 
