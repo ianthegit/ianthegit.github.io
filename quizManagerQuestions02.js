@@ -202,5 +202,5 @@ quests[++questIndexBuilder] = {
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	question : "Christmas songs from the ultimate Christmas film according to Ted.   Bonus point for the film name",
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/1cSFs3dYeHBjl3jETZ4hK8?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
-	answer : 'National Lampoons Christmas Vacation </BR> <iframe src="https://open.spotify.com/embed/track/3bTj3C6tSyLWBAAt8yzG4v?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>'}) ;
+	answer : 'National Lampoons Christmas Vacation </BR> <iframe width="560" height="315" src="https://www.youtube.com/embed/3G3kVIsTgKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'}) ;
 
