@@ -282,7 +282,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 	answerSpeak : "Angela Hartnett", answer : "Angela Hartnett - My fridge is never without parmesan, anchovies, mayonnaise, mustard, piccalilli and homemade vinaigrette. The ideal ingredients to lift any savoury meal"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Who owns this fridge?" + Table4ColumnStart + "Angela Hartnett</td><td>Ravneet Gill</td><td>Rukmini Iyer</td><td>Jules" + Table4ColumnEnd, // 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLVctlGun5Zo782D6o-QUy4mm6PPoLSVDbqWL6mfFdLVeaSpGqSpC0qPRnOiTK_GMBoom5K2YUnfTlyE9cNou-sWktd3ad45hEUz8CLnjOwzojcdoxFp8iAjg57iqEQIfkKe8spRuNM3Kkb5yIwkjwBDCw=w1162-h871-no?authuser=0",
-	answerSpeak : "Jules", answer : "Angela Hartnett - My fridge, my rules"}) ;
+	answerSpeak : "Jules", answer : "Jules - My fridge, my rules"}) ;
 
 
 quests[++questIndexBuilder] = { 
