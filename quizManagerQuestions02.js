@@ -303,7 +303,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 } ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 	question : "Who said...</BR></BR>The problem with the wife who has known you since way before you were king of the world is that she sees through your facade ?"+ Table4ColumnStart + "Samantha Cameron</td><td>Melania Trump</td><td>Sarah Vine</td><td>Jules" + Table4ColumnEnd,
-	answer : "Sarah Vine - shorty before divorcing Michael Gove", answerimage : "https://www.thesun.co.uk/wp-content/uploads/2021/08/GIF-Gove-v2.gif?strip=all&w=600&h=400&crop=1"
+	answer : "Sarah Vine - shortly before divorcing Michael Gove", answerimage : "https://www.thesun.co.uk/wp-content/uploads/2021/08/GIF-Gove-v2.gif?strip=all&w=600&h=400&crop=1"
 } ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 	question : "Who said...</BR></BR>Level up? You can't even fill up! ?"+ Table4ColumnStart + "Ian on the way to Wales</td><td>Jimmy Carr</td><td>Eddie Stobart</td><td>Keir Starmer" + Table4ColumnEnd,
