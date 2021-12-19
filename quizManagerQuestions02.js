@@ -231,7 +231,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 	answer : "Cat on a Mat"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this?", // 
 	image : "https://i.redd.it/ky8e2ch9l2mz.jpg",
-	answer : "Chewbacca on a Maracca"}) ;
+	answer : "Chewbacca on a Maraca"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this?", // 
 	image : "https://preview.redd.it/5bli62d0v9681.jpg?width=640&crop=smart&auto=webp&s=7c8e4c6f75100a3ed5fb260f1f67abc3ff5afc19",
 	answer : "Batman on a Fatman"}) ;
@@ -250,4 +250,37 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What is this?", // 
 	image : "https://pbs.twimg.com/media/FG8EO00XwAAxgKY?format=jpg&name=small",
 	answer : "Sock on a Cock"}) ;
+
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Elf-in-the-Fridge",
+		hoverover : "Everyone has heard of Elf-on-the-shelf, but do you know which chef owns which fridge...?",
+		splash : {splashType : splashTypePictureAndText , splashText : "Everyone has heard of Elf-on-the-shelf, but do you know which chef owns which fridge", splashImage : "https://i.guim.co.uk/img/media/619494db983a112d50991ce17fee863d92906b36/0_23_2480_1487/master/2480.jpg?width=1020&quality=85&auto=format&fit=max&s=85ddff375fbfca741e7a79e40b51fa79" },
+		tags : "2021-12-19,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Who owns this fridge?" + Table4ColumnStart + "Tim Anderson</td><td>Rukmini Iyer</td><td>Angela Hartnet</td><td>Jules" + Table4ColumnEnd, // 
+	image : "https://i.guim.co.uk/img/media/998d97ba992b05cdc6c45babbc5c12093d7d5bfa/0_0_7360_4416/master/7360.jpg?width=620&quality=85&auto=format&fit=max&s=66bfcf62b12234733f63ff95007c0b78",
+	answerSpeak : "Rukmini Iyer", answer : "Rukmini Iyer - I always try to have fresh berries in the fridge so we can beast through three of our five a day at breakfast time. Lots of fresh veg in the crisper for one-tin dinners, usually a bit of fish as we generally try to eat pesce, and harissa, miso, mustard etc for quick seasonings. My favourite fridge treat is Bonne Maman dark chocolate pots with a touch of sea salt - looking at the fridge, you've reminded me that I'm all out!"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Who owns this fridge?" + Table4ColumnStart + "Meera Sodha</td><td>Tim Anderson</td><td>Ainsley Harriot</td><td>Jules" + Table4ColumnEnd, // 
+	image : "https://i.guim.co.uk/img/media/b16ec050d91c094c4665f02d7c6d4f1602aca859/0_0_2121_3594/master/2121.jpg?width=620&quality=85&auto=format&fit=max&s=a3bfede5d1915c6ee7cf76a609d882e8",
+	answerSpeak : "Ainsley Harriott", answer : "Ainsley Harriott - My fridge has lots of condiments, often with a spicy kick, fruit and veggies for smoothies etc and always some natural yoghurt as it makes my gut feel good. It's my fridge because it's neat and tidy - I don't like mess - and there's always a few ingredients to knock up a quick delicious supper."}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Who owns this fridge?" + Table4ColumnStart + "Meera Sodha</td><td>Ravneet Gill</td><td>Angela Hartnett</td><td>Jules" + Table4ColumnEnd, // 
+	image : "https://i.guim.co.uk/img/media/a18251d2b906449048bafcbb9b2cbaac08efa1ac/0_0_4431_6646/master/4431.jpg?width=620&quality=85&auto=format&fit=max&s=9ba0e5f1ac7b9e41e6677259192637bb",
+	answerSpeak : "Meera Sodha", answer : "Meera Sodha - I really, really (really) love vegetables and condiments. South-east Asian condiments have a special place in my heart because they give me joy, but also, by throwing a spoonful of this (miso) or that (gochujang) into the pot I can bring a meal together in (somewhat of) an instant"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Who owns this fridge?" + Table4ColumnStart + "Rukmini Iyer</td><td>Tim Anderson</td><td>Ainsley Harriott</td><td>Jules" + Table4ColumnEnd, // 
+	image : "https://i.guim.co.uk/img/media/cf7a50390484cb5b90889d848f1e31bc3aaa0743/0_0_4480_6606/master/4480.jpg?width=620&quality=85&auto=format&fit=max&s=dcff1625ef875ffdaa85bda641a4ccac",
+	answerSpeak : "Tim Anderson", answer : "Tim Anderson - I'd expect the wide variety of Japanese seasonings and condiments in my fridge (I think there was ponzu, unpasteurised soy sauce, umeboshi, miso, and tonkatsu sauce in there) to be a major giveaway, but there were some pretty arcane beverages as well - sake, Queer Brewing pilsner, and two kinds of Kinnie, if memory serves"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Who owns this fridge?" + Table4ColumnStart + "Ainsley Harriott</td><td>Ravneet Gill</td><td>Meera Sodha</td><td>Jules" + Table4ColumnEnd, // 
+	image : "https://i.guim.co.uk/img/media/b4819311fb72c998b79685f7f6e885b3b19b4778/0_0_4346_6051/master/4346.jpg?width=620&quality=85&auto=format&fit=max&s=263c14730564c0264eef42308c708b0b",
+	answerSpeak : "Ravneet Gill", answer : "Ravneet Gill - I'm always worried that I'll run out of butter mid-bake. It never happens but I still keep buying it and there's always a varied selection of butter in my fridge. Buttermilk and double cream invariably make an appearance because my go-to bake, especially during winter, is a big fat chocolate cake"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Who owns this fridge?" + Table4ColumnStart + "Angela Hartnett</td><td>Ravneet Gill</td><td>Rukmini Iyer</td><td>Jules" + Table4ColumnEnd, // 
+	image : "https://i.guim.co.uk/img/media/d27378dcdcbd389cfd3f9ab08086dc13934a0340/0_0_5031_3550/master/5031.jpg?width=620&quality=85&auto=format&fit=max&s=6a03194f8d7169153d17aabdfea2dd0d",
+	answerSpeak : "Angela Hartnett", answer : "Angela Hartnett - My fridge is never without parmesan, anchovies, mayonnaise, mustard, piccalilli and homemade vinaigrette. The ideal ingredients to lift any savoury meal"}) ;
+
+
+
 
