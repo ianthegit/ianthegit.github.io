@@ -289,7 +289,7 @@ quests[++questIndexBuilder] = {
 		name : "Overheard-by-the-Elf",
 		hoverover : "Everyone has heard of Elf-on-the-shelf, but do you know who said what in 2021...?",
 		splash : {splashType : splashTypePictureAndText , splashText : "Everyone has heard of Elf-on-the-shelf, but do you know who said what in 2021", splashImage : "https://i.guim.co.uk/img/media/f902ce8e51195c0f8b1f60211c219530afcbd5c4/0_0_5000_3000/master/5000.jpg?width=1020&quality=85&auto=format&fit=max&s=0d90c43d5867d4de486afe627e45edd1" },
-		tags : "2021-12-19,saturday,InnerWheel,surfers",
+		tags : "2021-12-19,saturday,InnerWheel,surfers,2021",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
