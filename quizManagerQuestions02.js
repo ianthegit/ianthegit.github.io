@@ -280,6 +280,9 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Who owns this fridge?" + Table4ColumnStart + "Angela Hartnett</td><td>Ravneet Gill</td><td>Rukmini Iyer</td><td>Jules" + Table4ColumnEnd, // 
 	image : "https://i.guim.co.uk/img/media/d27378dcdcbd389cfd3f9ab08086dc13934a0340/0_0_5031_3550/master/5031.jpg?width=620&quality=85&auto=format&fit=max&s=6a03194f8d7169153d17aabdfea2dd0d",
 	answerSpeak : "Angela Hartnett", answer : "Angela Hartnett - My fridge is never without parmesan, anchovies, mayonnaise, mustard, piccalilli and homemade vinaigrette. The ideal ingredients to lift any savoury meal"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Who owns this fridge?" + Table4ColumnStart + "Angela Hartnett</td><td>Ravneet Gill</td><td>Rukmini Iyer</td><td>Jules" + Table4ColumnEnd, // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVctlGun5Zo782D6o-QUy4mm6PPoLSVDbqWL6mfFdLVeaSpGqSpC0qPRnOiTK_GMBoom5K2YUnfTlyE9cNou-sWktd3ad45hEUz8CLnjOwzojcdoxFp8iAjg57iqEQIfkKe8spRuNM3Kkb5yIwkjwBDCw=w1162-h871-no?authuser=0",
+	answerSpeak : "Jules", answer : "Angela Hartnett - My fridge, my rules"}) ;
 
 
 quests[++questIndexBuilder] = { 
