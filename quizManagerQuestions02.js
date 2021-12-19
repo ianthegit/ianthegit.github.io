@@ -282,5 +282,53 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 	answerSpeak : "Angela Hartnett", answer : "Angela Hartnett - My fridge is never without parmesan, anchovies, mayonnaise, mustard, piccalilli and homemade vinaigrette. The ideal ingredients to lift any savoury meal"}) ;
 
 
+quests[++questIndexBuilder] = { 
+		name : "Overheard-by-the-Elf",
+		hoverover : "Everyone has heard of Elf-on-the-shelf, but do you know who said what in 2021...?",
+		splash : {splashType : splashTypePictureAndText , splashText : "Everyone has heard of Elf-on-the-shelf, but do you know who said what in 2021", splashImage : "https://i.guim.co.uk/img/media/f902ce8e51195c0f8b1f60211c219530afcbd5c4/0_0_5000_3000/master/5000.jpg?width=1020&quality=85&auto=format&fit=max&s=0d90c43d5867d4de486afe627e45edd1" },
+		tags : "2021-12-19,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "Who said...</BR></BR>You guys paid for all this! ?"+ Table4ColumnStart + "Andy Burnham, on HS2's northern link</td><td>Elon Musk, on selling his Tesla shares</td><td>Bill Gates, on the AstraZeneca vaccine</td><td>Jeff Bezos, thanking Amazon employees and customers for his trip to space" + Table4ColumnEnd,
+	answer : "Jeff Bezos",	answerimage : "https://cdn.wionews.com/sites/default/files/styles/large/public/2021/01/15/178522-untitled-design-1.jpg"
+} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "Who said...</BR></BR>I drank alcohol during quarantine. I was drinking seven nights a week and making pasta and eating bread. I went totally off the rails ?"+ Table4ColumnStart + "Ted</td><td>Rylan Clark-Neal</td><td>Theresa May</td><td>Gwyneth Paltrow" + Table4ColumnEnd,
+	answer : "Gwyneth Paltrow", answerimage : "https://i.guim.co.uk/img/media/835bd125d03a8c4abcd6a5f53d7c1da551100766/0_0_5000_3000/master/5000.jpg?width=1200&quality=85&auto=format&fit=max&s=81722f39b5e3edbdac32d9ee2ff4a5f2"
+} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "Who said...</BR></BR>They're now British fish and they're better and happier fish for it. ?"+ Table4ColumnStart + "Nigel Farage</td><td>Bob Mortimer</td><td>Jacob Rees-Mogg</td><td>Rick Stein" + Table4ColumnEnd,
+	answer : "Jacob Rees-Mogg", answerimage : "https://westenglandbylines.co.uk/wp-content/uploads/2021/01/JRM-and-fish-689x1024.jpg"
+} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "Who said...</BR></BR>The problem with the wife who has known you since way before you were king of the world is that she sees through your facade ?"+ Table4ColumnStart + "Samantha Cameron</td><td>Melania Trump</td><td>Sarah Vine</td><td>Jules" + Table4ColumnEnd,
+	answer : "Sarah Vine - shorty before divorcing Michael Gove", answerimage : "https://www.thesun.co.uk/wp-content/uploads/2021/08/GIF-Gove-v2.gif?strip=all&w=600&h=400&crop=1"
+} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "Who said...</BR></BR>Level up? You can't even fill up! ?"+ Table4ColumnStart + "Ian on the way to Wales</td><td>Jimmy Carr</td><td>Eddie Stobart</td><td>Keir Starmer" + Table4ColumnEnd,
+	answer : "Keir Starmer", answerimage : "https://c.tenor.com/Lpu_0DZ_W-IAAAAd/keir-starmer-labour-party.gif"
+} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "Who said...</BR></BR>I wish I'd never heard of Barnard Castle ?"+ Table4ColumnStart + "Boris Johnson</td><td>Laura Kuenssberg</td><td>Dominic Cummings</td><td>Jonathan Van-Tam" + Table4ColumnEnd,
+	answer : "Dominic Cummings", answerimage : "https://c.tenor.com/tc9NxmzADPYAAAAC/dominic-cummings-cumgate.gif"
+} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "Who said...</BR></BR>Ferraris, Maseratis, Nissan, Skylines, Proton Sagas: you name it, I drove it. ?"+ Table4ColumnStart + "The Rock</td><td>Lewis Hamilton</td><td>Boris Johnson</td><td>Peppa Pig" + Table4ColumnEnd,
+	answer : "Boris Johnson", answerimage : "https://c.tenor.com/U__7Xy8QMkEAAAAd/boris-boris-johnson.gif"
+} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "Who said...</BR></BR>I admit, I breached socal distancing ?"+ Table4ColumnStart + "Boris Johnson</td><td>Dominic Cummings</td><td>Matt Hancock</td><td>Peppa Pig" + Table4ColumnEnd,
+	answer : "Matt 'handsy' Hancock", answerimage : "https://c.tenor.com/n2KgDINwAaMAAAAd/matt-hancock-cheating.gif"
+} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "Who said...</BR></BR>We moved on to reading Macbeth, which was a kind of foreplay routine we had ?"+ Table4ColumnStart + "Boris Johnson</td><td>Matt Hancock</td><td>Jennifer Arcuri</td><td>Peppa Pig" + Table4ColumnEnd,
+	answer : "Jennifer Arcuri", answerimage : "https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/09/27/23/borisandarcuri.jpg?width=1200"
+} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "Who said...</BR></BR>Is this how our story is due to end ?"+ Table4ColumnStart + "Sir David Attenborough</td><td>Greta Thunberg</td><td>Boris Johnson</td><td>Peppa Pig" + Table4ColumnEnd,
+	answer : "Sir David Attenborough", answerimage : "https://pbs.twimg.com/media/FDHUNYtXEAY66-W.jpg"
+} ); 
+
 
 
