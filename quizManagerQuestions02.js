@@ -332,3 +332,16 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 
 
 
+
+quests[++questIndexBuilder] = { 
+		name : "Christmas Film 2",
+		hoverover : "Christmas songs from another Christmas film franchise soundtrack.   Bonus point for the film name ",
+		tags : "music,2021-12-13,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "Christmas songs from another Christmas film franchise soundtrack.   Bonus point for the film name",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/1tl6175ZP5j3lkL3EosT7b?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+	answer : 'Bad Santa'}) ;
+
