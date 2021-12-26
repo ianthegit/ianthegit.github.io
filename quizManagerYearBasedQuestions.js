@@ -3278,6 +3278,34 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	answer : "A golden suit of armour, which he wore layered over a gold-studded bodysuit", image : "https://i.guim.co.uk/img/media/82859db83b8c7c31fbdc8dac96f504b1a5211293/0_343_4412_2647/master/4412.jpg?width=620&quality=85&auto=format&fit=max&s=2dcd04bf1cd5d2d7a89f48d4ae44a61c"	});	
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Alexandria Ocasio-Cortez wore a dress to this year's Met Gala that caused quite the storm. What words were scrawled on the back of it in red? " + Table4ColumnStart + "Fax Elaine Stritch</td><td>Vax and Snitch</td><td>Tax the Rich</td><td>Whack the Witch" + Table4ColumnEnd,
+	answer : "Tax the Rich", image : "https://i.guim.co.uk/img/media/a78715235ce4f09107b5290422cef698fb3c2830/0_0_3000_2059/master/3000.jpg?width=620&quality=85&auto=format&fit=max&s=2629b022fef8c43e1835066dc446a6bd"	});	
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Season two of RuPaul's Drag Race UK captured the hearts of a nation in lockdown when it aired in January. Arguably the biggest star to emerge was Bimini Bon Boulash; what did Bimini do after the show finished?  " + Table4ColumnStart + "Release a book that made the Sunday Times bestseller list</td><td>Eat 500 Quorn mini cocktail sausages in under five minutes, setting a new world record</td><td>Start a makeup line</td><td>Rediscover oregano" + Table4ColumnEnd,
+	answer : "Release a book that made the Sunday Times bestseller list", image : "https://i.guim.co.uk/img/media/c9bbc4a3d89d372b4cd378c1d655ab762267abf7/0_0_3500_2411/master/3500.jpg?width=620&quality=85&auto=format&fit=max&s=5f4a5e92d865a30d5273e41a0d9d3d0f"	});	
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What did singer Demi Lovato have to say about aliens in a recent interview with E! News? " + Table4ColumnStart + "That aliens appeared to Demi in a Burning Man fever dream and provided the main hook for their song Cool for the Summer</td><td>That Signs, directed by M Night Shyamalan, is overrated</td><td>That extraterrestrial beings should not be referred to as 'aliens' because it's offensive</td><td>That aliens won't know what's hit them when the new album drops" + Table4ColumnEnd,
+	answer : "That extraterrestrial beings should not be referred to as “aliens” because it’s offensive", image : "https://i.gifer.com/embedded/download/CHwA.gif"	});
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "It's been a big year for celebrity couples. Megan Fox and Machine Gun Kelly have become the latest couple du jour, known for being present and looking hot. In a recent interview, Fox revealed the rapper's alleged first words to her, and they have inspired a maelstrom of memes since. What were they " + Table4ColumnStart + "I am Sparta</td><td>I am yours</td><td>I am an anathema</td><td>I am weed" + Table4ColumnEnd,
+	answer : "I am weed", image : "https://i.guim.co.uk/img/media/c98e9f1a68638259af5f205d21ff88869f371e27/494_0_4392_2636/master/4392.jpg?width=620&quality=85&auto=format&fit=max&s=51c872217fce3d5573c55e93ce2a95ac"	});
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Gwyneth Paltrow can always be relied upon for a headline-grabbing statement. During an appearance on The Kelly Clarkson Show in March, what did she reveal she listens to when upset " + Table4ColumnStart + "Both Sides Now by Joni Mitchell</td><td>Uptown Funk by Mark Ronson feat Bruno Mars</td><td>WAP by Cardi B and Megan Thee Stallion</td><td>Ganny Get Off The Range, Your Vagina is Burning" + Table4ColumnEnd,
+	answer : "Uptown Funk by Mark Ronson feat Bruno Mars", image : "https://i.guim.co.uk/img/media/835bd125d03a8c4abcd6a5f53d7c1da551100766/0_0_5000_3000/master/5000.jpg?width=1200&quality=85&auto=format&fit=max&s=81722f39b5e3edbdac32d9ee2ff4a5f2"	});	
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Timothee Chalamet has been one of 2021's most visible stars, with lead roles in Dune and The French Dispatch. Which of these things has Chalamet NOT done this year?  " + Table4ColumnStart + "Make a TikTok video of him pirouetting through a Christmas tree farm</td><td>Wear a Slytherin sweater</td><td>Get compared to a medieval shoe</td><td>Reveal that he used to modify Xbox controllers" + Table4ColumnEnd,
+	answer : "Make a TikTok video of him pirouetting through a Christmas tree farm", image : "https://i.pinimg.com/originals/c9/e9/62/c9e9629f928361830f4094e6dd5b4c60.gif"	});	
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "In an interview, Will Smith said he was in his 'fuck-it 50s' where he gave himself the freedom to do whatever he wanted. Which of these didn't he do as part of this new attitude to life? " + Table4ColumnStart + "Explore the world with a harem of women</td><td>Open a standup show for Dave Chappelle</td><td>Attend more than a dozen ayahuasca rituals in Peru</td><td>Travel without security" + Table4ColumnEnd,
+	answer : "Explore the world with a harem of women", image : "https://media1.giphy.com/media/1TJB4TPjtaEJq/giphy.gif"	});	
+	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "After years of being a hairstyle icon, Jennifer Aniston announced she is launching her own hair brand, but what is it called? " + Table4ColumnStart + "On A Break</td><td>The Rachel</td><td>LolaVie</td><td>I'll Be Hair for You" + Table4ColumnEnd,
 	answer : "LolaVie - it's her nickname", answerSpeak : "LolaVie", image : "https://i2-prod.mirror.co.uk/incoming/article2059739.ece/ALTERNATES/s615b/Jennifer-Aniston.png"	});	
 	
