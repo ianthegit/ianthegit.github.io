@@ -3148,4 +3148,138 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 
+quests[++questIndexBuilder] = {
+		name : "2021 - Outs",
+		hoverover : "Who did we say goodbye to in 2021",
+		tags : "saturday,2021-12-27,2021,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?",answer : "Phil Spectre",
+	image : "https://img.huffingtonpost.com/asset/60045b8824000034000b7dd6.jpeg?cache=2o6gXPAdt2&ops=crop_26_94_1926_1380%2Cscalefit_720_noupscale" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?",answer : "Christopher Plummer",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Christopher_Plummer_1964.jpg/100px-Christopher_Plummer_1964.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?",answer : "Prince Philip, Duke of Edinburgh",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Duke_of_Edinburgh_33_Allan_Warren.jpg/100px-Duke_of_Edinburgh_33_Allan_Warren.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?",answer : "Olympia Dukakis",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Olympia_Dukakis_2019.jpg/100px-Olympia_Dukakis_2019.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?",answer : "Charlie Watts",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Charle-Watts-1965_%28cropped%29.jpg/100px-Charle-Watts-1965_%28cropped%29.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?",answer : "Desmond Tutu",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Desmond_Tutu%2C_1986_Jan_%28cropped%29.jpg/100px-Desmond_Tutu%2C_1986_Jan_%28cropped%29.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?",answer : "Michael Nesmith",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/The_Monkees_1966_-_Nesmith.JPG/220px-The_Monkees_1966_-_Nesmith.JPG" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?",answer : "Gerry Marsden",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Gerry_in_group_photo_with_Pacemakers_1964.JPG/220px-Gerry_in_group_photo_with_Pacemakers_1964.JPG" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?",answer : "John 'Ian' St John",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Ian_St_John_%281966%29.jpg/220px-Ian_St_John_%281966%29.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?",answer : "Murray Walker",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/MurrayWalkerAutosportInternational2009.jpg/220px-MurrayWalkerAutosportInternational2009.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?",answer : "Sir Clive Sinclair",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Sinclair.600pix.crop.jpg/220px-Sinclair.600pix.crop.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?",answer : "Jimmy Greaves",
+	image : "https://metro.co.uk/wp-content/uploads/2021/09/Jimmy-Greaves-cac7.jpg?quality=90&strip=all&zoom=1&resize=480%2C300" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?",answer : "Sir Frank Williams",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/FrankWilliams-cropped.JPG/220px-FrankWilliams-cropped.JPG" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?",answer : "Mark Eden",
+	image : "https://i.guim.co.uk/img/media/e5d0c2fab833a9b2b157bad3fe793b0522014cb9/0_410_7438_4464/master/7438.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=ddea12a781199dae8992ed54c0f8a768" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?",answer : "Captain Tom Moore",
+	image : "https://upload.wikimedia.org/wikipedia/en/thumb/1/12/Captain_Tom_Moore_fundraising_walk.jpg/220px-Captain_Tom_Moore_fundraising_walk.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?",answer : "Johnny Briggs",
+	image : "https://i2-prod.manchestereveningnews.co.uk/incoming/article19933564.ece/ALTERNATES/s1200c/0_Johnny-Briggs-death.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?",answer : "Una Stubs",
+	image : "https://media.gettyimages.com/photos/dancer-una-stubbs-aged-22-in-her-flat-in-london-outside-unas-bedroom-picture-id993670204" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?",answer : "Sean Lock",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Sean_lock_the_hexagon_08_%28crop%29.jpg/220px-Sean_lock_the_hexagon_08_%28crop%29.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this?",answer : "Lionel Blair",
+	image : "https://i.guim.co.uk/img/media/cab84bd2eb37849f1d2ba1507b0abc7625ae6d52/0_0_2687_4075/master/2687.jpg?width=300&quality=85&auto=format&fit=max&s=cf91338387db0034b0c581baab359f50" }) ;
+
+
+quests[++questIndexBuilder] = {
+		name : "2021 - Quotes",
+		hoverover : "Who said what in 2021",
+		tags : "saturday,2021-12-27,2021,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Who said this?</BR></BR>I don't dislike her. I've never said that. Never would. Samantha isn't part of this story. But she will always be part of us. No matter where we are or what we do  " + Table4ColumnStart + "Sarah Jessica Parker</td><td>Kristin Davis</td><td>Cynthia Nixon</td><td>David Cameron" + Table4ColumnEnd,
+	answer : "Sarah Jessica Parker"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Who said this?</BR></BR>I went to the institution and I said that I needed to go somewhere to get help. And I was told that I couldn't, that it wouldn't be good for the institution  " + Table4ColumnStart + "Gareth Southgate</td><td>Tom Davies</td><td>Lindsay Hoyle</td><td>Meghan Markle" + Table4ColumnEnd,
+	answer : "Meghan Markle"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Who said this?</BR></BR>Enjoy your wedding BJ  " + Table4ColumnStart + "Marina Wheeler</td><td>Stanley Johnson</td><td>Keir Starmer</td><td>Peter Andre" + Table4ColumnEnd,
+	answer : "Peter Andre - It was perhaps the unfortunate collision of Andre and his own Twitter following that led everyone to misconstrue the initials and taint the prime minister's nuptials"	, answerSpeak : "Peter Andre"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Who said this?</BR></BR>Looks-wise, I've always gone for blondes. But for me, the main thing is having respect and having good fun, and someone who will be loyal to you  " + Table4ColumnStart + "Rod Stewart</td><td>Carrie Symonds</td><td>Boris Johnson</td><td>Jake Cornish" + Table4ColumnEnd,
+	answer : "Jake Cornish - the Love Islander with a clipboard"	, answerSpeak : "Jake Cornish"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
+	question : "Who said this?</BR></BR>I'd been on the p*** since half eight in the morning and had had at least 20 cans of Strongbow. It was the biggest day of my life. All I know is that I loved it all. I was off my face and I loved every minute  " + Table4ColumnStart + "Michael Gove</td><td>Carrie Symmonds</td><td>Ted</td><td>Charlie Perry" + Table4ColumnEnd,
+	answer : "Charlie Perry - 25-year-old Perry successfully gatecrashed the Euros final. He is more famous, however, for sticking a flare up his butt beforehand"	, answerSpeak : "Charlie Perry",
+	answerimage : "https://i2-prod.dailystar.co.uk/incoming/article24538617.ece/ALTERNATES/s1200b/4_PAY-England-fans-walking-around-the-west-end-before-the-Euros-final-match-this-evening-between-England-a.jpg"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Who said this?</BR></BR>We sat on the sofa and he started reading out questions from his phone and I said: 'Have you lost your mind? Your crazy girlfriend is sitting upstairs texting you questions?' And he was like: 'Omigod, you're right, she's driving me crackers. We've got to find her a job with lots of foreign travel'  " + Table4ColumnStart + "Boris Johnson</td><td>Matt Handcock</td><td>Gareth Southgate</td><td>Dominic Cummings" + Table4ColumnEnd,
+	answer : "Dominic Cummings - discussing one of his chats with our glorious PM"	, answerSpeak : "Dominic Cummings"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Who said this?</BR></BR>By the time the river gets to Woolhampton a further 12 miles downstream an extra 5,327 hours worth of sewage has been dumped into the river. Running totals, 34.5 miles from source, 8,106 hours worth of sewage, equivalent of 337 whole days.  " + Table4ColumnStart + "David Attenburgh</td><td>Dominic Cummings</td><td>Caroline Lucas</td><td>Feargal Sharkey" + Table4ColumnEnd,
+	answer : "Feargal Sharkey - Finding a new career high as an environmental lobbyist, forcing a government u-turn"	, answerSpeak : "Feargal Sharkey"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Finally, where are you MOST likely to hear someone wish you a Merry Christmas by saying 'Nollaig Shona Duit'  " + Table4ColumnStart + "Iceland</td><td>Finland</td><td>Wales</td><td>Ireland" + Table4ColumnEnd,
+	answer : "Ireland"	});
+
+
+quests[++questIndexBuilder] = {
+		name : "2021 - Fashion",
+		hoverover : "Who wore what in 2021",
+		tags : "saturday,2021-12-27,2021,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Bernie Sanders's knitted mittens were the unexpected must-have fashion accessory following Joe Biden's inauguration in January, but where did he get them?  " + Table4ColumnStart + "He's had them since he was a student in Chicago</td><td>From a retired elementary school teacher in Vermont, where he was mayor</td><td>From the Rokit vintage store in Camden Market</td><td>They were a part of his costume from his cameo in the 1988 Susan Sarandon comedy, Sweet Hearts Dance" + Table4ColumnEnd,
+	answer : "From a retired elementary school teacher in Vermont, where he was mayor", image : "https://i.guim.co.uk/img/media/5d405bab65f4fb9fa02f4096444615186d12a31a/0_355_4296_2577/master/4296.jpg?width=620&quality=85&auto=format&fit=max&s=5fdbf348a0fbc7b934688b5d26c77cdc"	});
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Eleven million of us tuned in to see Harry and Meghan spill their guts to Oprah Winfrey in March. What symbolic floral print featured on the Duchess's Giorgio Armani dress " + Table4ColumnStart + "A crossed-out English rose</td><td>A white lotus to symbolise rebirth</td><td>A freesia thought to represent innocence</td><td>A joyful bird of paradise" + Table4ColumnEnd,
+	answer : "A white lotus to symbolise rebirth"});
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "In May, Carrie Symonds married prime minister Boris Johnson, wearing a flower crown and lace dress. But what was special about her wedding gown? " + Table4ColumnStart + "It was designed to match the gold wallpaper reportedly used to renovate the couple's Downing Street flat</td><td>It was a family heirloom</td><td>She didn't own it. Symonds rented the dress from My Wardrobe, for " + gbp + " 45</td><td>It was a gift from Dominic Cummings" + Table4ColumnEnd,
+	answer : "She didn't own it. Symonds rented the dress from My Wardrobe, for " + gbp + " 45"	, answerSpeak : ""});
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "One of the year's most memorable transformations saw Billie Eilish ditch the green hair dye and oversized black hoodies for the cover of British Vogue's June issue. What uplifting fashion item did she wear for the occasion? " + Table4ColumnStart + "A T-shirt from Balenciaga's collaboration with The Simpsons</td><td>The rebooted version of Liz Hurley's iconic Versace safety pin dress</td><td>Head to toe yellow</td><td>A powder pink corset" + Table4ColumnEnd,
+	answer : "A powder pink corset", image : "https://i.guim.co.uk/img/media/3c2d12639910419f3f28035a2e584df71c9e4078/0_319_8265_4962/master/8265.jpg?width=620&quality=85&auto=format&fit=max&s=6b2b9151c31d107ac492c6704afe9d9a"	});	
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "When Tom Daley wasn't busy nailing double somersaults and twist pikes at the Tokyo Olympics, he was poolside with his knitting needles. What was the wearable fruit of this labour? " + Table4ColumnStart + "Cable-knit Speedos</td><td>A Fair Isle balaclava</td><td>A crocheted face mask</td><td>A cardigan featuring the Team GB logo" + Table4ColumnEnd,
+	answer : "A cardigan featuring the Team GB logo", image : "https://i.guim.co.uk/img/media/261a272fb742167ac6a6ab32e4083a46f1387a1b/1917_84_2477_1486/master/2477.jpg?width=620&quality=85&auto=format&fit=max&s=402a30968b9cc2e2598bd0e8ca9cbbaf"	});	
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "The Met Gala took place in September, inspiring a stream of wild red-carpet looks. Lil Nas X went all out on this year's regency-core trend, donning a gold embroidered cape by Donatella Versace to arrive at the event. What was hiding underneath? " + Table4ColumnStart + "A West Ham shirt - he's a big fan of the London football club</td><td>A pair of vintage velvet pyjamas lent to the star by the Metropolitan Museum of Art</td><td>A pin-sharp tuxedo and a pair of gold metallic brogues</td><td>A golden suit of armour, which he wore layered over a gold-studded bodysuit" + Table4ColumnEnd,
+	answer : "A golden suit of armour, which he wore layered over a gold-studded bodysuit", image : "https://i.guim.co.uk/img/media/82859db83b8c7c31fbdc8dac96f504b1a5211293/0_343_4412_2647/master/4412.jpg?width=620&quality=85&auto=format&fit=max&s=2dcd04bf1cd5d2d7a89f48d4ae44a61c"	});	
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "After years of being a hairstyle icon, Jennifer Aniston announced she is launching her own hair brand, but what is it called? " + Table4ColumnStart + "On A Break</td><td>The Rachel</td><td>LolaVie</td><td>I'll Be Hair for You" + Table4ColumnEnd,
+	answer : "LolaVie - it's her nickname", answerSpeak : "LolaVie", image : "https://i2-prod.mirror.co.uk/incoming/article2059739.ece/ALTERNATES/s615b/Jennifer-Aniston.png"	});	
+	
+
 
