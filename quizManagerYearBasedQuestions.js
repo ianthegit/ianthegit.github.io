@@ -3233,7 +3233,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 	question : "Who said this?</BR></BR>Looks-wise, I've always gone for blondes. But for me, the main thing is having respect and having good fun, and someone who will be loyal to you  " + Table4ColumnStart + "Rod Stewart</td><td>Carrie Symonds</td><td>Boris Johnson</td><td>Jake Cornish" + Table4ColumnEnd,
 	answer : "Jake Cornish - the Love Islander with a clipboard"	, answerSpeak : "Jake Cornish"});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
-	question : "Who said this?</BR></BR>I'd been on the p*** since half eight in the morning and had had at least 20 cans of Strongbow. It was the biggest day of my life. All I know is that I loved it all. I was off my face and I loved every minute  " + Table4ColumnStart + "Michael Gove</td><td>Carrie Symmonds</td><td>Ted</td><td>Charlie Perry" + Table4ColumnEnd,
+	question : "Who said this?</BR></BR>I'd been on the p*** since half eight in the morning and had had at least 20 cans of Strongbow. It was the biggest day of my life. All I know is that I loved it all. I was off my face and I loved every minute  " + Table4ColumnStart + "Michael Gove</td><td>Carrie Symmonds</td><td>Sam</td><td>Charlie Perry" + Table4ColumnEnd,
 	answer : "Charlie Perry - 25-year-old Perry successfully gatecrashed the Euros final. He is more famous, however, for sticking a flare up his butt beforehand"	, answerSpeak : "Charlie Perry",
 	answerimage : "https://i2-prod.dailystar.co.uk/incoming/article24538617.ece/ALTERNATES/s1200b/4_PAY-England-fans-walking-around-the-west-end-before-the-Euros-final-match-this-evening-between-England-a.jpg"});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
