@@ -361,4 +361,98 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	question : "",
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/1nAPcphZRZ6LB0xvwiSe2x?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
 	answer : ''}) ;
+	
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "New for 22",
+		hoverover : "What is being reintroduced into the UK in 2022?",
+		splash : {splashType : splashTypePictureAndText , splashText : "Can we expect to see more of these in the UK in 2022?", splashImage : "https://i.guim.co.uk/img/media/969a0482db1936db4c46c4572e7ab913df87ba81/20_0_4174_2505/master/4174.jpg?width=1020&quality=85&auto=format&fit=max&s=3e92205bc1500415cb251cc0fa887267" },
+		tags : "2022-1-1,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Bison - should we expect to see more of them in the UK in 2022?" , // 
+	image : "https://i.guim.co.uk/img/media/1c4b215e30b35dfa26acbb8b49462d642c06ae3f/0_0_3500_2333/master/3500.jpg?width=620&quality=85&auto=format&fit=max&s=1b3c854db0a924a3cefd14ae970d2db7",
+	answerSpeak : "Yes", answer : "Four bison are arriving in north Kent in spring 2022 as part of a 210-hectare (519-acre) rewilding project to create more wildlife-rich woodlands. Bison, which are Europe's largest land mammal, were driven out of the UK 6,000 years ago by hunting and habitat loss."}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Northern Pool Frog - should we expect to see more of them in the UK in 2022?" , // 
+	image : "https://i.guim.co.uk/img/media/d1e0042c5bc41587872be45621f629479ac46b50/0_0_4250_2833/master/4250.jpg?width=620&quality=85&auto=format&fit=max&s=527c7f9af0f629fd6766823808947fed",
+	answerSpeak : "Yes", answer : "The northern pool frog is finally croaking again on Thompson Common in Norfolk - its last stronghold before it became extinct in England about 20 years ago"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Beavers - should we expect to see more of them in the UK in 2022?" , // 
+	image : "https://i.guim.co.uk/img/media/017e28fcb3787be42f63321745284ca845aaec33/1_339_1678_1007/master/1678.jpg?width=620&quality=85&auto=format&fit=max&s=3d5fcb71c204926ace592e1db0ead491",
+	answerSpeak : "Yes", answer : "The first baby beaver born in Exmoor for 400 years was named Rashford, after the footballer Marcus Rashford, by popular vote, in celebration of England reaching the Euro 2020 final."}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Grasshoppers - should we expect to see more of them in the UK in 2022?" , // 
+	image : "https://i.guim.co.uk/img/media/219a239b7f6d5aa29d9a2f9ccce73e04972dfd0e/0_0_5122_3415/master/5122.jpg?width=620&quality=85&auto=format&fit=max&s=854a4303473bdeab782f5a356a576860",
+	answerSpeak : "Yes", answer : "Large marsh grasshoppers have been reintroduced to wetlands across Norfolk"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Dwarf Pansy - should we expect to see more of them in the UK in 2022?" , // 
+	image : "https://i.guim.co.uk/img/media/02debfc9231cc085a1a9f1e2382dd9f5ba81b731/505_398_947_568/master/947.jpg?width=620&quality=85&auto=format&fit=max&s=a10622cbb08810ad3455690e8aa7e9f9",
+	answerSpeak : "Yes", answer : "The dwarf pansy has returned to an uninhabited island in the Isles of Scilly thanks to long-term habitat restoration work, after an absence of 16 years"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Oysters - should we expect to see more of them in the UK in 2022?" , // 
+	image : "https://i.guim.co.uk/img/media/98b5868eb4c7aff58b5605720adea55fb5c68138/0_0_2394_1564/master/2394.jpg?width=620&quality=85&auto=format&fit=max&s=d24b549e9469bde014985a5c43900d08",
+	answerSpeak : "Yes", answer : "Native oysters are being restored on the west coast of Scotland after being almost wiped out after several decades of overexploitation"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Ospreys - should we expect to see more of them in the UK in 2022?" , // 
+	image : "https://i.guim.co.uk/img/media/5bb636cbb163a876c04454bccb8395af3eeb71b7/0_0_3500_2330/master/3500.jpg?width=620&quality=85&auto=format&fit=max&s=f24154c34963616d50995ed9b092f779",
+	answerSpeak : "Yes", answer : "The 200th osprey chick fledged this year after a 25-year successful reintroduction project at Rutland Water nature reserve"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Sphagnum moss - should we expect to see more of it in the UK in 2022?" , // 
+	image : "https://i.guim.co.uk/img/media/a6bd55614ebebeae52ff777ff9f862b78277c517/0_0_3500_2195/master/3500.jpg?width=620&quality=85&auto=format&fit=max&s=bdebf992440b0774b6deaed6e2457460",
+	answerSpeak : "Yes", answer : "Sphagnum mosses are being reintroduced at sites across Manchester to help capture carbon and support other bog-loving species, such as sundews, invertebrates and fungi"}) ;
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "End of 21",
+		hoverover : "General general knowledge",
+		tags : "2022-1-1,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "One of these is NOT a line from the lyrics of popular new year ditty Auld Lang Syne. Which one?"+ Table4ColumnStart + "And surely ye'll be your pint-stoup!</td><td>And wi' a meikle hazel rung</td><td>But we've wander'd mony a weary fit</td><td>And we'll tak' a right gude-willie waught" + Table4ColumnEnd , // 
+	image : "https://i.guim.co.uk/img/media/5094effa2b6c695281598dd4de9a5a24dd1f527c/102_1275_2284_1369/master/2284.jpg?width=620&quality=85&auto=format&fit=max&s=387c72a2a5384e12da830c276dd98b6a",
+	answerSpeak : "And wi a meikle hazel rung", answer : "And wi' a meikle hazel rung"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "1 January is considered the start of the year due to the reorganisation of their previous chaotic calendar into what became known as the Julian Calendar. When?"+ Table4ColumnStart + "65BC</td><td>45BC</td><td>25BC</td><td>AD45" + Table4ColumnEnd , // 
+	image : "https://i.guim.co.uk/img/media/d6b0e2e949d8a907cd4b8495e5f2d0879f3e7cfe/0_400_6000_3600/master/6000.jpg?width=620&quality=85&auto=format&fit=max&s=abc55694b138fe2edd915f936363211b",
+	answerSpeak : "45BC", answer : "45BC"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "The second Asterix volume to be published in France was called La Serpe d'or. But what was the title of the English translation 'Asterix and the...'?"+ Table4ColumnStart + "Golden Fleece</td><td>Golden Serpent</td><td>Golden Sickle</td><td>Big Fight" + Table4ColumnEnd , // 
+	image : "https://i.guim.co.uk/img/media/dff5d348e0aae541721b066a3a0e475987c47dba/0_0_1798_1239/master/1798.jpg?width=620&quality=85&auto=format&fit=max&s=61101639756305a6189cc58ede9bff0f",
+	answerSpeak : "Asterix and the Golden Sickle", answer : "Asterix and the Golden Sickle"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "A flame test is one way of identifying which metal you have to hand. If you have lithium, what colour flame are you going to get?"+ Table4ColumnStart + "Yellow</td><td>Lilac</td><td>Red</td><td>Blue-green" + Table4ColumnEnd , // 
+	image : "https://i.gifer.com/Fpax.gif",
+	answerSpeak : "Red", answer : "Red"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Tracy Ullman is known to different generations for different reasons - Dancing with Neil Kinnoch, Robin's Mum  - but what was the name of the comedy sketch show she starred in with Lenny Henry and David Copperfield?"+ Table4ColumnStart + "A Kick up the Eighties</td><td>Laugh??? I Nearly Paid My Licence Fee</td><td>The Fast Show</td><td>Three of a Kind" + Table4ColumnEnd , // 
+	image : "https://www.thetimes.co.uk/imageserver/image/%2Fmethode%2Ftimes%2Fprodmigration%2Fweb%2Fbin%2F6e382840-e376-3316-9832-18fce90ea329.jpg?crop=1500%2C1000%2C0%2C0&resize=1200",
+	answerSpeak : "Three of a Kind", answer : "Three of a Kind"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Naval warfare was revolutionised in the 1850s and 1860s making images like this a thing of the past as countries scrambled to launch ironclad and iron-hulled warships. But who had the first ironclad warship?"+ Table4ColumnStart + "United Kingdom</td><td>United States</td><td>France</td><td>Spain" + Table4ColumnEnd , // 
+	image : "https://i.guim.co.uk/img/media/c59c30ec5087428460e95ee8518dd0805fafe537/101_159_5084_3053/master/5084.jpg?width=620&quality=85&auto=format&fit=max&s=5a9cfd42e7b60fedde43d60b11630b41",
+	answerSpeak : "France", answer : "France"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Girls Aloud, featuring the much-mourned Sarah Harding who died earlier this year, were formed on which TV talent show?"+ Table4ColumnStart + "Fame Academy</td><td>Popstars: The Rivals</td><td>The Voice UK</td><td>The X Factor" + Table4ColumnEnd , // 
+	image : "https://i.gifer.com/BF6n.gif",
+	answerSpeak : "Popstars: The Rivals", answer : "Popstars: The Rivals - way back in 2002"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "The Doctor Who New Year's Day special this year is called Eve of the Daleks. But who created the Daleks?"+ Table4ColumnStart + "Sydney Newman</td><td>Terry Nation</td><td>Douglas Adams</td><td>Russell T Davies" + Table4ColumnEnd , // 
+	image : "https://media0.giphy.com/media/JYBxsH8NmzbSo/giphy.gif",
+	answerSpeak : "Terry Nation", answer : "Terry Nation (No, Davros will not get you any points Ted)"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Which year was Jools Holland's Hootenanny first broadcast?"+ Table4ColumnStart + "1994</td><td>1993</td><td>1992</td><td>1991" + Table4ColumnEnd , // 
+	image : "https://img2.thejournal.ie/inline/1244639/original/?width=450&version=1244639",
+	 answer : "1993"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "He was big and strong, in his eyes a flaming glow, but 30 December is also the anniversary of the murder of adviser to the Tsar Grigori Rasputin. In which year was Boney M's all-time disco banger Rasputin released?"+ Table4ColumnStart + "1975</td><td>1978</td><td>1980</td><td>1981" + Table4ColumnEnd , // 
+	image : "https://thumbs.gfycat.com/AgonizingThunderousEskimodog-size_restricted.gif",
+	 answer : "1978"}) ;
+
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Iron Maiden had their only UK No 1 hit single - Bring Your Daughter To The Slaughter - in the singles chart that ran from 30 December 1990 to 5 January 1991. But who had they replaced at No 1 from the previous week?"+ Table4ColumnStart + "Band Aid, with a reissue of Do They Know It's Christmas</td><td>Queen, with a reissue of Bohemian Rhapsody coupled with These Are the Days of Our Lives</td><td>Cliff Richard, with Saviou's Day</td><td>Kate Bush, with December Will Be Magic Again" + Table4ColumnEnd , // 
+	image : "https://i.guim.co.uk/img/media/ebdc5e022f3485aee430f23ad4592e69bee1f3b3/0_0_2000_1200/master/2000.jpg?width=620&quality=85&auto=format&fit=max&s=2d5ed295d0cbaea34ffbfa54b84fbd28",
+	 answer : "Cliff Richard, with Saviour's Day"}) ;
+
+
+quests[++questIndexBuilder] = { 
+		name : "New Year",
+		hoverover : "New or Year in songs ",
+		tags : "music,2022-1-1,InnerWheel,saturday,specialDay",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/6ll1OCrvL2jb7Pi5kf02M4?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+	answer : ''}) ;
 		
+
