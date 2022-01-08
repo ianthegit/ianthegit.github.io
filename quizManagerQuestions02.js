@@ -369,7 +369,7 @@ quests[++questIndexBuilder] = {
 		name : "New for 22",
 		hoverover : "What is being reintroduced into the UK in 2022?",
 		splash : {splashType : splashTypePictureAndText , splashText : "Can we expect to see more of these in the UK in 2022?", splashImage : "https://i.guim.co.uk/img/media/969a0482db1936db4c46c4572e7ab913df87ba81/20_0_4174_2505/master/4174.jpg?width=1020&quality=85&auto=format&fit=max&s=3e92205bc1500415cb251cc0fa887267" },
-		tags : "2022-1-1,saturday,InnerWheel,surfers",
+		tags : "2022-1-8,saturday,InnerWheel,surfers",
 		questInfo: new Array()
 	};
 
@@ -403,7 +403,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 quests[++questIndexBuilder] = { 
 		name : "End of 21",
 		hoverover : "General general knowledge",
-		tags : "2022-1-1,saturday,InnerWheel,surfers",
+		tags : "2022-1-8,saturday,InnerWheel,surfers",
 		questInfo: new Array()
 	};
 
@@ -437,16 +437,25 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "He was big and strong, in his eyes a flaming glow, but 30 December is also the anniversary of the murder of adviser to the Tsar Grigori Rasputin. In which year was Boney M's all-time disco banger Rasputin released?"+ Table4ColumnStart + "1975</td><td>1978</td><td>1980</td><td>1981" + Table4ColumnEnd , // 
 	image : "https://thumbs.gfycat.com/AgonizingThunderousEskimodog-size_restricted.gif",
 	 answer : "1978"}) ;
-
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Iron Maiden had their only UK No 1 hit single - Bring Your Daughter To The Slaughter - in the singles chart that ran from 30 December 1990 to 5 January 1991. But who had they replaced at No 1 from the previous week?"+ Table4ColumnStart + "Band Aid, with a reissue of Do They Know It's Christmas</td><td>Queen, with a reissue of Bohemian Rhapsody coupled with These Are the Days of Our Lives</td><td>Cliff Richard, with Saviou's Day</td><td>Kate Bush, with December Will Be Magic Again" + Table4ColumnEnd , // 
 	image : "https://i.guim.co.uk/img/media/ebdc5e022f3485aee430f23ad4592e69bee1f3b3/0_0_2000_1200/master/2000.jpg?width=620&quality=85&auto=format&fit=max&s=2d5ed295d0cbaea34ffbfa54b84fbd28",
 	 answer : "Cliff Richard, with Saviour's Day"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "WHO AM I? I am a hugely successful singer with many hits to my name over a long period of time, and in 2021 I sold more calendars than any other singer?  " + Table4ColumnStart + "Kylie Minogue</td><td>Robbie Williams</td><td>Alvin & the Chipmunks</td><td>Cliff Richard" + Table4ColumnEnd,
+	answer : "Cliff Richard", image : "https://i.guim.co.uk/img/media/54b7c86d2a1dbca1fd6cb255f784662831a895a8/127_127_1863_1118/master/1863.jpg?width=620&quality=85&auto=format&fit=max&s=90a1b1448a1116eb0bf0261e090f61c2"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Hadrian's Wall is apparently celebrating its 1,900th anniversary this year, but according to the English Heritage website, how many miles does it stretch (Wallsend to Bowness-on-Solway)?  " + Table4ColumnStart + "73</td><td>93</td><td>113</td><td>133" + Table4ColumnEnd,
+	answer : "73 miles - acording to English Heritage", answerSpeak : "73 miles", image : "https://ugc.futurelearn.com/uploads/images/f1/46/header_f14602f7-e536-4d70-b60c-b93fdd875a0e.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "There was controversy after an Amazon Alexa device suggested to a 10 year old child to do which stupid stunt when asked for 'a challenge'?  " + Table4ColumnStart + "Eat a Tide pod</td><td>Eat a spoonful of ground cinnamon</td><td>Crack an egg over someone's head</td><td>Stick a penny into an electric socket" + Table4ColumnEnd,
+	answer : "Stick a penny into an electric socket", image : "https://i.guim.co.uk/img/media/912a9dad985cf3a5e3a5df39cfee1ffee77b39bc/0_165_3500_2101/master/3500.jpg?width=620&quality=85&auto=format&fit=max&s=ae28da4e1e9971d2e3f5f1d200d33d4f"	});	
+
 
 
 quests[++questIndexBuilder] = { 
 		name : "New Year",
 		hoverover : "New or Year in songs ",
-		tags : "music,2022-1-1,InnerWheel,saturday,specialDay",
+		tags : "music,2022-1-8,InnerWheel,saturday,specialDay",
 		questInfo: new Array()
 	};
 
@@ -456,3 +465,73 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : ''}) ;
 		
 
+
+quests[++questIndexBuilder] = { 
+		name : "Mighty Swordspeople",
+		hoverover : "Do you recognise these people famous for their choppers?",
+		splash : {splashType : splashTypePictureAndText , splashText : "Do you recognise these people famous for their choppers?", splashImage : "https://lh3.googleusercontent.com/pw/AM-JKLVSf8Nml_XPn2LAxCmtr5qpPMsZvW5X3pWB1TtK6nYGqgFJWwEuNGA27xi_dmcZvIK2BOmpeFf5bdcHgz2U3ACu83Fjg9OaRACmQ9VQUBaEB9Bn0i1QXjkbuNXfPjoyZvtMlHJ66No4diUfQbvaGy1c1w=w750-h367-no?authuser=0" },
+		tags : "2022-1-15,saturday,InnerWheel,surfers,swords",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What is the actor's name, the character's name and the film/show name?",	answer : "Brad Pitt, Achilles, Troy" ,
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUR8CjM2xx13X-3hV667Va5BmqOSMx_bnvdel1gfad-ntmFf3VI9yqogRyv35efMaFCk6He-ydUEMtWDMr4m8NvCqKMcKsXDiQbrUb6mGbILrQfq1gTYXpzAA7DjRioVoyNNPQj4V2QHggPAqPewOFOzQ=w600-h338-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLUcTNfmkgeNIDndskLCKHsTxF-M5QwvIVlfZvlgBD0UymWfJpWATupMZIyURQWhejepvcvo5lN3Geb0lwDeincLKTD3bMfKPlLPk0qVqO-z8m_qbcEsM4rKaJhao5MMLyWot-HUyY-KS5pbOL1W5kPTKQ=w600-h338-no?authuser=0"
+}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What is the actor's name, the character's name and the film/show name?",	answer : "Mel Gibson, William Wallace, Braveheart" ,
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLX342r_Dl-n5J6mvBg7Mo3g80BiCBMl4LzLG0-x1_rsl2CWLA9BvekPBUJmQcLL5NrFNldzVJX9GPczn0xCTEc4Wa0a9LbhWa431wq4Lm9BHFfA4PPokiHvE8sS69ZuWZPqu0FA18TGo_yNjX5JM8CwHQ=w968-h506-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLWAFoRrljznJj5bw-Ow-j_NyRLBKIkDVkahBrZUH0YeileQbuNUk2JnpIxhHSkFnPTylAGIbeHGrw122CwUcxuTOh5Qg8LPt0i7_looc55sTi_xJP9IPpIuMkSjee6rFTdspKSkaUka-fgadZBk0y8H_Q=w968-h506-no?authuser=0"
+}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What is the actor's name, the character's name and the film/show name?",	answer : "Gwendoline Christie, Brienne of Tarth, Game of Thrones" ,
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXhwui4qxqkTkDIUCa7ZreEr9dqOd7sOawPIj7c0cnh5udAWcAVsNOCyVK7z9e_D1igTZy9uZAhYsonYCsaQ4xU9FeQp8EghVBZhiwC-hz8H9n9Itd8iK2EOFNgak6HXkkkJ2ms-CajEkWNtCkqnH2q5w=w968-h506-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLWxzAo0J0KMnb8EGnwogcbDJsS3MUJyw-J1tQ6mkoMzyrwoPPTyWZlWWk10EOSRDeDvnFMYHis-xZTS74GdGEx9XedDAHFvDwtfQxqrjqJkWpiiLpGBADMcKaQlp7iy4ImSwIPz3IihHJf6APx2ALTA4w=w968-h506-no?authuser=0"
+}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What is the actor's name, the character's name and the film/show name?",	answer : "Henry Cavill, Geralt of Rivia, The Witcher" ,
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUBfYn_28FlBLbilPT7ZFyUSadb42qBv5eGbsbZgWuK6oIGoCb9YNKxBCW_B7hmxfgJX9b5Hk1OwnIDPhKjMyPiGhAbKOv56oGj2ZqpxOxWkPR9lunvi666URJf1phheno5kjtYh1OznTWQ9dXIuK4TFQ=w968-h506-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLUlZyxR-4FKhbMmAKJ9_QO1jLOp0gt7gcdefx_CWBSXga9PPujHvdMV2Hbx_KKuEvWTBDvSqHE7wGwmHR6Yb3hzX9uvf3xjgzxPj9DF2AS_2kIuroejs-Aq-xHy6hBPZ-2f6XgdLZFYx7DIb_vcVkhAUg=w968-h506-no?authuser=0"
+}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What is the actor's name, the character's name and the film/show name?",	answer : "Uma Thurman, The Bride, Kill Bill" ,
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLWbSzCFK6mO0b_-QwGrM6rLCTESwtpwk1l7JVO0z_7r8-Wq6iv--bwTDOPgkyTiS0m3fVvlI4_KmuFsxq94T6-e5RyZ_TnCgm9D2il0Hoz7ZyWemMNqGI2VWNhpDV5iF9b_B4v_lsQh6lmZen5hA6qGeg=w968-h506-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLUcG2gT8TY7lsYyqeO5_Pv6TeA9XopH8d73rd68-mt6OCf0hmQQfHd62dfk3dLfhYlx4kMh7Mta9mC-5wnyGFRtFNUYOR93R0J3l67oO6C_nzo3sNsWTirFMlmdz_iRw2Nex0l-BEmZCRqNmIvzjs-xbQ=w968-h506-no?authuser=0"
+}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What is the actor's name, the character's name and the film/show name?",	answer : "Arnold Schwarzenegger, Conan the Barbarian, Conan the Barbarian" ,
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXKBVfFt3rXUmsULGesCXISLQbORDU0-ctRHDTatupICluxqHWquLnMeBDKrhU6jVbZcHCeHP1wnUKtVyccTsO-smfqoVNpwTqFTw-1f9f_4tgdRY0AayHXrCSJhJRcQtyGmA6udKKEwpMMK3z6SaUWdQ=w740-h370-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLWxHeKDcT_dVrytard0EbWxC70CBbNip5qFSk3k4_nGf52KPP4n0EBqyEHzIgdwlKJ3-5ss77udbMQF2pb6sPVqAhh2v71WW6zWpxslACN6SjFs-me8CA3aRhhkXAQ0ettls5OPsyLDK28w4zBvYpg9oQ=w740-h370-no?authuser=0"
+}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What is the actor's name, the character's name and the film/show name?",	answer : "Kitt Harrington, John Snow (Aegon Targaryen), Game of Thrones" ,
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXOKGLyc-r4QadnIwIrwDO9jCH4Y4rzl3KX129lCMa1-xQ-0VkUyJ3b-U49Hi7WpPR27wnDr6DMXBrLdW-yGAWBggvsmCfsLI3MzsuT2GmbnWiOAkNczCzJGwPSQMnPTWmJ-O8QF8mMGo-UvD0iu1sy4w=w968-h506-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLXgulF2p0wkL9zw3SddEyHZj8NwKRZhukJjfC1PTM71MLdNF2084EnzYlIPI14__95DdoSG9NK7tHgw3_I3Nn10-jPEA0qE5kdWSJ0ZNSxqLZNmyGi-hIAsWW4VBEyqekhaZ1IwgBt3qmOspSFDGBqjBA=w968-h506-no?authuser=0"
+}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What is the actor's name, the character's name and the film/show name?",	answer : "Ewan McGregor, Obi-Wan Kenobi, Star Wars" ,
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXvUJ7ZLLaKUFIyIucpnIM_QfGdTjIJpRRZfkveu4q-vJc-Ag5yoYHOVn_fyAt5of9p7NhR8jhZXmdjhLr_ma85IZBytw5Oreg4OFXU7KMSifSuQBAWZXeTTSMDPpOxxoEJzL0ikYntLdAtIniVJQAtMw=w1000-h666-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLVcASSydaD1cfdfQ8ojDAp8NYkAwZmG6t-8WSa1m-1rZoeWcSnoSpj5KGnP-U8jHHUfidrkeRjvuM8mowNMxDcjtizRuOkPyWsVVf2gAcowrD0lcQ1oDMmS0ufbEK9pccnlDAHeLT9QH5QIeZncck6qqw=w1000-h666-no?authuser=0"
+}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What is the actor's name, the character's name and the film/show name?",	answer : "Russell Crow, Maximus Decimus Meridius, The Gladiator" ,
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXTvx47ZV7AxMlSqtvZ-WdPoJ0u7Qn9SXqK7_kOf7mkdzeZnNG9zU1OhV05JfXkB7fXMcXHq7aK7QbY-9flmeHZ9S1AJ1F9Qd5PzeSg_Mhqe79ynmXzySUfcyoBVCW7l8-Q2ObltA6FRZVXvXrva0TSbg=w1321-h871-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLUkPd9UVYB9tRy9KHRqTj8IIb1vs4uUjUnXK8TLvI0OLm4OBo5PvDLN1XMvIAVPW5I1U5RWbF0EXUrNVuaHD_AROESrV2UZqVSrsqcXRKqe-VQNw2oPxAZ78CxZUTvzpzuz2GbrQf3Ml0TK1RrJ9fpJQQ=w1321-h871-no?authuser=0"
+}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What is the actor's name, the character's name and the film/show name?",	answer : "Erroll Flynn, Robin Hood, Robin Hood" ,
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXpp63iijYRCw-ckU6B6cCCaHpZg_nx2f1wtPJwXrv27DDIBWG8xhRkeQz0vP-m53eyBLuHV-f9hten8GeNpZryxPxxqe1jwgFxrq_oWuCl2uIQj1vaLS9JPc3JYJVaTwlM2cmHSoHUWK1rbsd1A8BTYA=w768-h424-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLUVVWmGYWF47TQA8bVHK-arDBEkzOMgGn5gd4lnEcU9SWASA1ybD9wheaOuE8i_1RAz3_9QGoaTYuv8w78IdRWHAZ97WAXa78__sXS9pvan4sWb0YNZOk_RJ7-7YL9QA382_ku4fxPHPQ1K_5644mVjAQ=w768-h424-no?authuser=0"
+}) ;
+quests[++questIndexBuilder] = { 
+		name : "Witcher and Swords",
+		hoverover : "Songs loosely connected to The Witcher",
+		tags : "music,2022-1-15,InnerWheel,saturday,specialDay,swords",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/6F3AIOy152FVyHZNH7io2W?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+	answer : ''}) ;
