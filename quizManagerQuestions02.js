@@ -535,3 +535,77 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	question : "",
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/6F3AIOy152FVyHZNH7io2W?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
 	answer : ''}) ;
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Digital Do-Over",
+		hoverover : "Do you recognise these films which have had a glow-up for the 2022s?",
+		splash : {splashType : splashTypePictureAndText , splashText : "Do you recognise these films which have had a glow-up for the 2022s?   For instance - The Birds might look like this nowadays", splashImage : "http://www2.b3ta.com/host/creative/98688/1642023196/theangrybirds.jpg" },
+		tags : "2022-1-15,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What is the name of the original film?",	answer : "Kes" ,
+	image : "http://www2.b3ta.com/host/creative/10643/1562433679/KesDrone.jpg",
+	answerimage : "https://a.ltrbxd.com/resized/sm/upload/ab/lz/gn/xi/kes-1200-1200-675-675-crop-000000.jpg?k=88a98c9baa"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What is the name of the original film?",	answer : "The 39 Steps" ,
+	image : "http://www2.b3ta.com/host/creative/99929/1641853109./39ccexpress.jpeg",
+	answerimage : "https://upload.wikimedia.org/wikipedia/en/thumb/0/07/39steps60poster.jpg/220px-39steps60poster.jpg"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What is the name of the original film?",	answer : "The Princess Bride" ,
+	image : "https://i.imgur.com/x7bdNrU.jpg",
+	answerimage : "https://static.wikia.nocookie.net/princessbride/images/1/14/PrincessBridePoster.PNG/revision/latest?cb=20210419213707"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What is the name of the original film?",	answer : "The Alamo" ,
+	image : "http://www2.b3ta.com/host/creative/10643/1641648885/TheLMAO.jpg",
+	answerimage : "https://flxt.tmsimg.com/assets/p683_p_v10_aa.jpg"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What is the name of the original film?",	answer : "Dial M for Murder" ,
+	image : "http://www2.b3ta.com/host/creative/96052/1641712872/txt4moider.jpg",
+	answerimage : "https://m.media-amazon.com/images/M/MV5BOWIwODIxYWItZDI4MS00YzhhLWE3MmYtMzlhZDIwOTMzZmE5L2ltYWdlXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_.jpg"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What is the name of the original film?",	answer : "Jaws" ,
+	image : "http://www2.b3ta.com/host/creative/5681/1641906856/jabs.jpg",
+	answerimage : "https://static.wikia.nocookie.net/jaws/images/d/da/Jaws-movie-poster.jpg/revision/latest/scale-to-width-down/1545?cb=20131015071208"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What is the name of the original film?",	answer : "Carrie" ,
+	image : "http://www2.b3ta.com/host/creative/81693/1641899342/carrie.jpg",
+	answerimage : "https://m.media-amazon.com/images/M/MV5BMTlhNmVkZGUtNjdjOC00YWY3LTljZWQtMTY1YWFhNGYwNDQwXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_.jpg"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What is the name of the original film?",	answer : "Dr Zhivago" ,
+	image : "http://www2.b3ta.com/host/creative/10643/1641983934/DoctorTrivago.jpg",
+	answerimage : "https://upload.wikimedia.org/wikipedia/en/6/64/DrZhivago_Asheet.jpg"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What is the name of the original film?",	answer : "Ben-Hur" ,
+	image : "http://www2.b3ta.com/host/creative/56930/1641584643/benthey.jpg",
+	answerimage : "https://i0.wp.com/interestingliterature.com/wp-content/uploads/2015/09/ben-hur.jpg?ssl=1"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What is the name of the original film?",	answer : "A Private Function" ,
+	image : "https://i.ibb.co/X4bvQV0/apf.jpg",
+	answerimage : "https://m.media-amazon.com/images/M/MV5BNjI1MTg5MTYxOV5BMl5BanBnXkFtZTcwMTg1OTU0NA@@._V1_.jpg"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What is the name of the original film?",	answer : "ET" ,
+	image : "http://www2.b3ta.com/host/creative/64002/1641921268/ET.jpg",
+	answerimage : "https://flxt.tmsimg.com/assets/p10998_p_v13_au.jpg"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What is the name of the original film?",	answer : "Bateries Not Included" ,
+	image : "http://www2.b3ta.com/host/creative/38966/1641765549/usbcablenotincluded.jpg",
+	answerimage : "https://m.media-amazon.com/images/I/91MB0OPqqKL._AC_SL1500_.jpg"}) ;
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bangers",
+		hoverover : "Bangers by relative unknowns",
+		tags : "music,2022-1-15,InnerWheel,saturday,specialDay",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/2TexZSwpwHPOeDkXTqJgYF?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+	answer : ''}) ;
+		
+
