@@ -596,6 +596,49 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
 	answerimage : "https://m.media-amazon.com/images/I/91MB0OPqqKL._AC_SL1500_.jpg"}) ;
 
 
+
+quests[++questIndexBuilder] = { 
+		name : "General stuff",
+		hoverover : "What has been going on, and other stuff",
+		tags : "2022-1-15,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "It was Orlando Bloom's birthday on Thursday. He first came to global prominence in the Lord of the Rings movies as Legolas, but what is the name of his character in the Pirates of the Caribbean film series?  " + Table4ColumnStart + "Will Turner</td><td>Will Turner-few-heads</td><td>Will Tedflower</td><td>Will Writer" + Table4ColumnEnd,
+	answer : "Will Turner", image : "https://www.usmagazine.com/wp-content/uploads/2018/11/MAIN.jpg?w=1370&quality=86&strip=all"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Ursula K Le Guin is regarded as one of the foremost science fiction writers of the 20th century. But which of these ISN'T the title of one of her book series?  " + Table4ColumnStart + "The Earthsea Cycle</td><td>Hainish Cycle</td><td>Discworld</td><td>Annals of the Western Shore" + Table4ColumnEnd,
+	answer : "Discworld", image : "https://i.guim.co.uk/img/media/38ffaa4fe8050c888d8a70681911f615e2d17359/0_396_2855_1713/master/2855.jpg?width=620&quality=85&auto=format&fit=max&s=fee83abae710d0b3435b55d26ebc4174"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "In the modern periodic table, how are the elements of a period arranged from left to right?  " + Table4ColumnStart + "In order of boiling point in degrees Kelvin</td><td>In order of discovery</td><td>In order of increasing atomic number</td><td>In alphabetical order of their name in Latin" + Table4ColumnEnd,
+	answer : "In order of increasing atomic number", image : "https://m.media-amazon.com/images/I/71iOasBCeXL._AC_SS130_.jpg"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "The Royal Order of the Seraphim is a chivalry order that appoints knights. Where?  " + Table4ColumnStart + "Sweden</td><td>Rome</td><td>The James Bond novels</td><td>Some science-fiction book no-one has read unless they're under 12 or work in IT" + Table4ColumnEnd,
+	answer : "Sweden"	, image : "https://astronlogia.com/wp-content/uploads/2020/12/seraphim-angels.webp"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "China upset the UK's security forces by releasing a spoof video featuring which spy?  " + Table4ColumnStart + "Jane Bond</td><td>Jennie Bond</td><td>James Pond</td><td>James Wrong" + Table4ColumnEnd,
+	answer : 'James Pond </BR></BR> <iframe width="560" height="315" src="https://www.youtube.com/embed/6og10hBza04" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : " In AD532 rival factions of chariot race supporters triggered the Nika riots, which, it is claimed, destroyed nearly half of which city?  " + Table4ColumnStart + "Constantinople</td><td>Rome</td><td>Athens</td><td>Arbeia" + Table4ColumnEnd,
+	answer : "Constantinople - allegedly as many as 30,000 rioters were killed"	, image : "https://i.ytimg.com/vi/4plmljU0-2E/maxresdefault.jpg"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "The Greek flag - notably not pictured here - features a white cross on a blue background in the top left-hand corner. Ignoring that bit, how many BLUE stripes does it have on the main body of the flag?  " + Table4ColumnStart + "3</td><td>5</td><td>7</td><td>9" + Table4ColumnEnd,
+	answer : "5 - There are nine stripes in total - said to represent the nine syllables of the phrase 'Freedom or Death' - but that is five blue stripes and four white ones", image : "https://i.guim.co.uk/img/media/8ce45e37e8d251afe7ae89f7f86039684b9de766/0_384_5760_3456/master/5760.jpg?width=620&quality=85&auto=format&fit=max&s=fe46aa6f2f3694a3abb12d268f75f3db"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "It has been announced that the first new plant to be officially named in 2022 - this small was tree discovered in the Ebo forest in Cameroon, don't look up or you'll miss it - has been named after which famous Hollywood actor for their environmental campaigning?  " + Table4ColumnStart + "Meryl Streep</td><td>Jennifer Lawrence</td><td>Leonardo DiCaprio</td><td>Theresa Russell" + Table4ColumnEnd,
+	answer : "Leonardo DiCaprio"	, image : "https://i.guim.co.uk/img/media/75f70f944688a1005e0b607d29b79fed23265946/0_436_2848_1708/master/2848.jpg?width=620&quality=85&auto=format&fit=max&s=83267033f57cdc58f31b0940d7127bbb"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Britain's nuclear weapons are carried by four submarines as part of the Trident programme. What are their names?  " + Table4ColumnStart + "Endeavour, Endurance, Enterprise and Excalibur</td><td>Nautilus, Nelson, Nemesis and Neptune</td><td>Vanguard, Vengeance, Victorious and Vigilant</td><td>John, Paul, George and Subby McSubface" + Table4ColumnEnd,
+	answer : "Vanguard, Vengeance, Victorious and Vigilant"	, image : "https://i.guim.co.uk/img/media/779a4fb49f1f3e44767b7726bad601949acdd457/1_710_2152_1292/master/2152.jpg?width=620&quality=85&auto=format&fit=max&s=c8882f1cfe2b030ec4511161675d93b3"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "WHO AM I? I was one of Phil Spector's first Wall Of Sound singers who died last week (Pictured with Bruce)?  " + Table4ColumnStart + "Regina Spector</td><td>Ronnie Spector</td><td>Reggie Spector</td><td>Blofeld" + Table4ColumnEnd,
+	answer : "Ronnie Spector"	, image : "https://i.guim.co.uk/img/media/1ca83ff3f7ee824147b75c853a011b5e0e096746/0_65_3926_2354/master/3926.jpg?width=380&quality=85&auto=format&fit=max&s=8ebcdf415ba80bc295f098e3b37cab17"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "In 1988, Peter Gabriel guested on whose album, titled Chalk Mark in a Rain Storm?  " + Table4ColumnStart + "Joni Mitchell</td><td>Stevie Nicks</td><td>Marianne Faithfull</td><td>Kate Bush" + Table4ColumnEnd,
+	answer : "Joni Mitchell"	, image : "https://i.guim.co.uk/img/media/71813a1ce760206f1384e9bfbea4d63960becfaf/0_0_2000_1200/master/2000.jpg?width=620&quality=85&auto=format&fit=max&s=a4e4bee79cd9d42d634445c846f2893d"});
+
+
+
 quests[++questIndexBuilder] = { 
 		name : "Bangers",
 		hoverover : "Bangers by relative unknowns",
