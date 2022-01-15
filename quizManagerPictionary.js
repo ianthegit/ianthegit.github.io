@@ -1215,6 +1215,33 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLUVCPi4HV2b0YFWN7x81o3oZzf9nO3RZ-HxIKFPmwS3Bm8N0KxGGDAlxF-0auYB2evJ1YRB0P5slwUAWihHMVL1zK9pSzl3TJkcYEyhnk99HXtZLdRQipYdea7-N4Ubj_fxx-iHANJzlTPu2UYRxvDTvQ=w479-h369-no?authuser=0",
 	answerimage : "https://cdn3.whatculture.com/images/2014/12/bad-santa-gif.gif", answerSpeak : "Hangovers"}) ;
 
+
+quests[++questIndexBuilder] = { //
+		name : "Pictionary 43",
+		hoverover : "Pictionary on the theme of Downing Street Work Events",
+		tags : "2022-1-15,pictionary",
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLWfS61xcGw9LJjL50VklCX76hjGSO-iO70Gs55v_bB7PBe6m8aZ_MIg-EzE1g9Ie5DUVZi2KUGx82dtH83cWLF4QTKxI4mNmAqjkdb2HjYfFfFWJaR0JFEBHwObViMBJRJjxZevxxa3_Z4Oi0R9QMJ3lw=w286-h238-no?authuser=0",
+	answerimage : "https://images.milledcdn.com/2021-07-21/jvpo_NhwcQLo51yn/_gURNu_dygcW.gif", answerSpeak : "Suitcase of wine"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUavJY0EwAEgkIBGvdi8xyPbuIj4_PkREelV6_xn6uaCaLO5WRaIaw2BPGOowIKQGsVyRDLf6WibUXa92pC2YhVQtPe_wlLP1URWX3DmzkX-cGcKNcOzT79nZSJlMvn0V2NTnZoU-vdHIsoYDEGK2GqGg=w358-h359-no?authuser=0",
+	answerimage : "https://c.tenor.com/adQLCTedL8IAAAAM/darren-christmas-party.gif", answerSpeak : "Bum photocopying"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLU4IehjaDuXRn550_jziV9azOExCr3q3rttyo6gdhX-0BXGmKRgMfq1Et99eKMRRRpLt0y74NmC9Ul5X7Hs7F_Kzod3eky1Mr2OMbG9UbmXdf8mbFkCGzyMwf7C17NmDPrM9tExyYn_io_aW8hf263vpw=w634-h319-no?authuser=0",
+	answerimage : "https://media4.giphy.com/media/dq59M3WZTqOSA/giphy.gif", answerSpeak : "Wilfred's broken swing"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLWg7Cvg2ZSEYEFbRPB7JRNDMeNK6FPQMsfXJ1Ex_w5xeXqtmP51ej9sRcylUAauWPXa28RyasVcDM2sYMvqbkP2GAFaUoaV_LBLPwrv9mn7Uf5Kimc_W0M4q5O_w1t8CVA4JSdZKkMiOQLuHrbPrmUN0g=w282-h280-no?authuser=0",
+	answerimage : "https://c.tenor.com/n2KgDINwAaMAAAAd/matt-hancock-cheating.gif", answerSpeak : "Snogging"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLX5jcCMHldnP3fsbbVx6cYAjWP_bbQiWWy7Jgvl7-hrr0ax5kKjlXMWH1Rqtip_kU1mMK5J2GHqfqav5VNLPjlSOdokSWPhXPuKaWmOrszJtZGlgGxyDZ9WUbHPnTMVNMIoJfwzSdn4rVleredTv02cgg=w379-h301-no?authuser=0",
+	answerimage : "https://c.tenor.com/6mVXdjNniwsAAAAC/love-actually-dance.gif", answerSpeak : "Dancing"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVb7UIZhXm7US1R14kbuLf8v2jq_-Jc3WE92sZEd_PqesFQ810iJg6P9tDy4ok1ogdrmzN-EIi82OtBHQYQ2tHbZj4H8AFEcENlE4WDWnIpMN_gT4kBeDtF0QFjSajvmMIv43IGZWvKd5gkjDGtjLFUzw=w370-h493-no?authuser=0",
+	answerimage : "https://e3.365dm.com/21/10/1600x900/skynews-therese-coffey-work-and-pensions_5537124.jpg?20211006125453", answerSpeak : "Karaoke"}) ;
+
+
 /*
   
  quests[++questIndexBuilder] = { //
