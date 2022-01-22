@@ -1242,6 +1242,32 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://e3.365dm.com/21/10/1600x900/skynews-therese-coffey-work-and-pensions_5537124.jpg?20211006125453", answerSpeak : "Karaoke"}) ;
 
 
+
+quests[++questIndexBuilder] = { //
+		name : "Pictionary 44",
+		hoverover : "Pictionary on the theme of double-barralled food",
+		tags : "2022-1-22,pictionary",
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXOgJ8hJNTNJwpIcVCjHQy0h6JxoblRVAYEnmWarLi0r3K-jqWvryvJks9sH27mESvtV8Bcpk83dbPOOKE7HxAeFNlj7vaLRPJRbL49DVe2y0LqrSWZ4shFCD5TaOuudCjE1NZWYncb1S3Pjnb2uuwO0A=w362-h231-no?authuser=0",
+	answerimage : "https://thumbs.gfycat.com/FrenchFlatIcterinewarbler-size_restricted.gif", answer : "Bread Pudding"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLU8TU3nY4nnxuwY-WTyJ4JRC1rA4z5hVXaqRJYfXvtR7LOp3ddsNmKr2kq6EATuNPYxQ40omTaAFbKemSgzrr9VJ4jZb5pGnSY6IWelNdxkZL_8ecuuOEoakZEjQcAGz5XrD0S1LDAwwFPtm-yYHiK47Q=w404-h254-no?authuser=0",
+	answerimage : "https://thumbs.gfycat.com/PessimisticLameBluemorphobutterfly-max-1mb.gif", answer : "Meat Loaf"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVci4tOHxghQY9FcPfNKPi_gO_nFoFt17IA5BKGpagMiYeGpgy9x1MeAT-eLva10YfrEihW7AaiQWqdVv27sh_OAkwSx0FufjkuKjqOZoq0yi2WK66Qs6ZXkidTiVXjZI0Rel0LwpYc5oy8CaPIcCIEAg=w346-h195-no?authuser=0",
+	answerimage : "https://media4.giphy.com/media/SqU70CExzxZN1sR8vX/giphy-downsized-large.gif", answer : "Banana Bread"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVCVMaEbqTnyFZPYvgl5DD14HPjjCMxBY2dGN7FQUjj_40tyH6PPXHdFzdK5y2mMOPStd0cvNZ0JTEVdcgoTsRCniM0IAoyPpndDdhzbWdJIM7a_5-iFER0Vdf_e0nQ1s2ieNNSByTWo6De6ARDauspRQ=w502-h346-no?authuser=0",
+	answerimage : "https://www.chatsworth.org/media/12477/chick-cockaleekie_1920x920.gif?anchor=center&mode=crop&width=1920&height=920&rnd=636875523414070000", answer : "Cock-a-leekie Soup"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLWgokIryhXVM0kAfGE7lbeoRx35q05clkUAWSbxM3EhMTDHhVoTU3KljGK8V5qOhCzcSDFqYxbRpZJ5c7Cex-wRYJHxhlMw8ryvknBMcrh_NVhWFqYm0zpF9j-RgTVE9qXmv4hUHTMqY1vCa2TEP1ZMTA=w511-h314-no?authuser=0",
+	answerimage : "https://c.tenor.com/WWukpgBSd28AAAAC/cake-cheesecake.gif", answer : "Cheese Cake"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUR7WkAYChJO3BarjuOStNTjmIpx1CY59ZQMFirwS0VZGtBZAXasNKgWzWcTA7Ua2HGCy-b9eDWFtpp-uKOGoDE3nKqzduM1aQnhELWrjD6VxEsbhZyjL6fdO8UyLknNViuC4wCZ6UMJGVpQ4AXgCvhEQ=w489-h377-no?authuser=0",
+	answerimage : "https://i.pinimg.com/originals/01/d9/44/01d944c03ee76f738e5c26d72c71ca15.jpg", answer : "Spotted Dick"}) ;
+
 /*
   
  quests[++questIndexBuilder] = { //
