@@ -470,7 +470,7 @@ quests[++questIndexBuilder] = {
 		name : "Mighty Swordspeople",
 		hoverover : "Do you recognise these people famous for their choppers?",
 		splash : {splashType : splashTypePictureAndText , splashText : "Do you recognise these people famous for their choppers?", splashImage : "https://lh3.googleusercontent.com/pw/AM-JKLVSf8Nml_XPn2LAxCmtr5qpPMsZvW5X3pWB1TtK6nYGqgFJWwEuNGA27xi_dmcZvIK2BOmpeFf5bdcHgz2U3ACu83Fjg9OaRACmQ9VQUBaEB9Bn0i1QXjkbuNXfPjoyZvtMlHJ66No4diUfQbvaGy1c1w=w750-h367-no?authuser=0" },
-		tags : "2022-1-15,saturday,InnerWheel,surfers,swords",
+		tags : "2022-1-22,saturday,InnerWheel,surfers,swords",
 		questInfo: new Array()
 	};
 
@@ -527,7 +527,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
 quests[++questIndexBuilder] = { 
 		name : "Witcher and Swords",
 		hoverover : "Songs loosely connected to The Witcher",
-		tags : "music,2022-1-15,InnerWheel,saturday,specialDay,swords",
+		tags : "music,2022-1-22,InnerWheel,saturday,specialDay,swords",
 		questInfo: new Array()
 	};
 
@@ -650,5 +650,106 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	question : "",
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/2TexZSwpwHPOeDkXTqJgYF?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
 	answer : ''}) ;
+		
+
+
+quests[++questIndexBuilder] = { 
+		name : "Art",
+		hoverover : "I dont knw a lot about art, but I know what I like",
+		splash : {splashType : splashTypePictureAndText , splashText : "Do you recognise who these statues are of?  ", splashImage : "https://lh3.googleusercontent.com/qSvfgFsT6FL08vHqGh1cITOBqcpVZFEisK8jbJQy3Tc7lf-urnZtu8qr_mmTl-rJ7aHEmiugQD7C3PqM_-ftenxZLfZFZ32Z8j1XPYVyk3OGFkW_ZcCH7jUhcFvnxCwjQzx7RniJ4Fi65Y2mewTJDqbYt4GfjLKBAlAVOa7jr7vT8bOrPYuKfN7vzOHk_K86h_15ZCaZ9j5ZBPz_r8JcsZBSuVzuPX16v0ePdKoAJsQe1W8_jS8DWeaASlEc7DFmLUZo80_jF-vUVAszEtrU3mNF9P0QEuT4g6gwhjg_S09rrJSr7blJBySlXw5S66ll5CUhynnSdTE7TfuUmjMRSPr-Y_U3DgbldWq4x1qo7-gnh7yC4R_yfRXN5BE0T-uYsqfd-wppSHBSVYJ36KaLN_Gn_ep-pIJ7rcdAtWgc1SlKrFzGQBWetOIpBhBoewQxhvFmFYPHUfSP1WXOgW0ui6R8S7gOg6MvoaMQyDgjzqf88jgWegnq6YJILOcp-9goENuPP7eZHwN7VtJmXba1UfPUZYO50Gb-5bcogAqdumvtbfDP-5aw6uQgFm_-bYgz4PwNzqpd-_0v4TktWWmfoTHUUQByGZJ3vqmS6qxap0PU77Ei3B7GNBIC_pcrMgyOeJM6oZLS8hYCaaxZpdJTeeckYxXF44eVqQb865FnXq-L4xiShPcitSKeUg4y7sK2pXdnaid88OXNgQKVZbZrS9nB_Q=w625-h736-no?authuser=0" },
+		tags : "2022-1-22,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this meant to be?  " + Table4ColumnStart + "Eric Trump</td><td>Chris Evans</td><td>Chris Evans (the other one)</td><td>Cristiano Ronaldo" + Table4ColumnEnd,
+	answer : "Cristiano Ronaldo", image : "https://cdn.riddle.com/embeds/v2/images/q_80,c_fill,w_960,h_540/23d/23d5a199a86fad71c5d816412909c5cc.png"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this meant to be?  " + Table4ColumnStart + "Johnny Depp</td><td>Elvis Presley</td><td>Paul (Vision) Bettany</td><td>Cliff Richard" + Table4ColumnEnd,
+	answer : "Elvis Presley", image : "https://cdn.riddle.com/embeds/v2/images/q_80,c_fill,w_960,h_540/423/4233588779da6fab911b6d365718cd61.png"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this meant to be?  " + Table4ColumnStart + "Buddha</td><td>Winston Churchill</td><td>Odd Job</td><td>Alfred Hitchcock" + Table4ColumnEnd,
+	answer : "Alfred Hitchcock", image : "https://cdn.riddle.com/embeds/v2/images/q_80,c_fill,w_960,h_540/f49/f4915baef1cffbc894732e3a3f362e02.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this meant to be?  " + Table4ColumnStart + "Kate Bush</td><td>Miley Cirus</td><td>Madonna & Child</td><td>Melania Trump" + Table4ColumnEnd,
+	answer : "Melania Trump", image : "https://cdn.riddle.com/embeds/v2/images/q_80,c_fill,w_960,h_540/3cb/3cbedd2835ef27dfcc1a5194ccfa9502.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this meant to be?  " + Table4ColumnStart + "Kate Bush</td><td>Kate Moss</td><td>Kate Daffodil</td><td>Kate Tree" + Table4ColumnEnd,
+	answer : "Kate Moss", image : "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/red/blue_pics/2006/04/12/quinnmoss123122334.jpg?width=620&quality=85&auto=format&fit=max&s=1e28467c873c895e6662940887078782"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this meant to be?  " + Table4ColumnStart + "Rod Laver</td><td>Andy Murray</td><td>Judy Murray</td><td>Murray Walker" + Table4ColumnEnd,
+	answer : "Andy Murray", image : "https://cdn.riddle.com/embeds/v2/images/q_80,c_fill,w_960,h_540/ddb/ddbc89f8141d4e6c5ad1c8ef65fa6916.png"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this meant to be?  " + Table4ColumnStart + "Elvis Presley</td><td>Lucille Ball</td><td>Elizabeth Taylor</td><td>Barbara Bush" + Table4ColumnEnd,
+	answer : "Lucille Ball", image : "https://cdn.riddle.com/embeds/v2/images/q_80,c_fill,w_960,h_540/bb2/bb24d29cd9c06616b59aae1665c4d2d5.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this meant to be?  " + Table4ColumnStart + "Paul Walker</td><td>James Dean</td><td>Elvis Presley</td><td>Johnny Cash" + Table4ColumnEnd,
+	answer : "James Dean", image : "https://cdn.riddle.com/embeds/v2/images/q_80,c_fill,w_960,h_540/da5/da5cba9f9e8dc2efcf0b44505a9955f4.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this meant to be?  " + Table4ColumnStart + "Ernest Hemingway</td><td>Oscar Wilde</td><td>Guy Fieri</td><td>Stephen Fry" + Table4ColumnEnd,
+	answer : "Oscar Wilde", image : "https://cdn.riddle.com/embeds/v2/images/q_80,c_fill,w_960,h_540/491/49185c77ecad39d8147f7bfdd56d6c7b.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this meant to be?  No clues for this one." ,
+	answer : "The Queen & Prince Philip", image : "https://im.indiatimes.in/media/content/2019/Jul/unusual_celebrity_statues_around_the_world9_1562665142_725x725.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this meant to be?  No clues for this one." ,
+	answer : "Sylvester Stallone", image : "https://im.indiatimes.in/media/content/2019/Jul/unusual_celebrity_statues_around_the_world5_1562665142_725x725.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this meant to be?  No clues for this one." ,
+	answer : "Jeff Goldblum", image : "https://img-s-msn-com.akamaized.net/tenant/amp/entityid/BB1aHG8G.img?h=416&w=799&m=6&q=60&u=t&o=f&l=f&x=1266&y=366"	});	
+
+
+quests[++questIndexBuilder] = { 
+		name : "Yank or Manc",
+		hoverover : "American English or English English",
+		splash : {splashType : splashTypePictureAndText , splashText : "British or Shittish.  </BR></BR>Answer 'British' if the word you see is spelt the English way, or 'Shittish' if it's spelt the American way", splashImage : "https://ak.picdn.net/shutterstock/videos/3389780/thumb/1.jpg" },
+		tags : "2022-1-22,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Is this the British or Shittish spelling?  </BR></BR>Cancelled" ,
+	answer : "British. Americans use 'Canceled'", image : "https://cdn.riddle.com/embeds/v2/images/q_80,c_fill,w_960,h_540/757/75761c7ee70d48d4dca2ee6edf6c4a77.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Is this the British or Shittish spelling?  </BR></BR>Pediatrician" ,
+	answer : "Shittish.  British use 'Paediatrician'", image : "https://cdn.riddle.com/embeds/v2/images/q_80,c_fill,w_960,h_540/305/305ecde0552062c71a6dfc3edf4a009c.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Is this the British or Shittish spelling?  </BR></BR>Defence" ,
+	answer : "British.  Americans use 'Defense'", image : "https://cdn.riddle.com/embeds/v2/images/q_80,c_fill,w_960,h_540/da4/da4854ee725f13a013501a45b5d8d679.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Is this the British or Shittish spelling?  </BR></BR>Coeliac" ,
+	answer : "British.  Americans use 'Celiac'", image : "https://cdn.riddle.com/embeds/v2/images/q_80,c_fill,w_960,h_540/8d8/8d80748de328a604a36b7961dd369023.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Is this the British or Shittish spelling?  </BR></BR>Toward" ,
+	answer : "Shittish.  British use 'Towards'", image : "https://cdn.riddle.com/embeds/v2/images/q_80,c_fill,w_960,h_540/f0a/f0a07c268e2389f29df96d14118ef43b.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Is this the British or Shittish spelling?  </BR></BR>Aeroplane" ,
+	answer : "British.  Americans use 'Airplane'", image : "https://cdn.riddle.com/embeds/v2/images/q_80,c_fill,w_960,h_540/0f3/0f39b18f0bfb14638b6f7fb9aa73b551.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Is this the British or Shittish spelling?  </BR></BR>Artefact" ,
+	answer : "British.   Americans use 'Artifact'", image : "https://cdn.riddle.com/embeds/v2/images/q_80,c_fill,w_960,h_540/a1a/a1af8669e97dca3557e11ff11488cef4.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Is this the British or Shittish spelling?  </BR></BR>Grey" ,
+	answer : "British.  Americans use 'Gray'", image : "https://hips.hearstapps.com/esq.h-cdn.co/assets/15/07/1423611652-635566902168940659-fiftyshadesofgrey-soundtrackcover-rgb.jpeg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Is this the British or Shittish spelling?  </BR></BR>Theater" ,
+	answer : "Shittish.  British use 'Theatre'", image : "https://cdn.riddle.com/embeds/v2/images/q_80,c_fill,w_960,h_540/890/8907bfd55130fe3ae073471bb288991f.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Is this the British or Shittish spelling?  </BR></BR>Catalog" ,
+	answer : "Shittish.  British use 'Catalogue'", image : "https://cdn.riddle.com/embeds/v2/images/q_80,c_fill,w_960,h_540/7b9/7b94bf6be8b6f7baab9fe00c4dc73330.jpg"	});	
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Soporific",
+		hoverover : "These will help you nod off",
+		tags : "music,2022-1-22,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/451iPKwE1ZLTsjrPMy874I?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+	answer : 'Queen, The Beatles, Queen & David Bowie, Elton John, The Beatles, Queen, Elton John, Elton John & Kiki Dee, Queen, Queen'}) ;
 		
 
