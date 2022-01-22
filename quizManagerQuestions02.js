@@ -700,7 +700,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 
 quests[++questIndexBuilder] = { 
-		name : "Yank or Manc",
+		name : "British or Not",
 		hoverover : "American English or English English",
 		splash : {splashType : splashTypePictureAndText , splashText : "British or Shittish.  </BR></BR>Answer 'British' if the word you see is spelt the English way, or 'Shittish' if it's spelt the American way", splashImage : "https://ak.picdn.net/shutterstock/videos/3389780/thumb/1.jpg" },
 		tags : "2022-1-22,saturday,InnerWheel,surfers",
