@@ -57,3 +57,15 @@ quests[++questIndexBuilder] = {
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'How many Post Offices were there in India when she became independent in 1947? ',
 	answer : "23,344"	});
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "TieBreaker 5",
+		hoverover : "Choose a number",
+		tags : "surfers,InnerWheel,saturday,tieBreaker",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : '"Thankful Villages" are villages in England & Wales from which all of their members of the armed forces survived World War I.  How many "Thankful Villages" have been identifed? ',
+	answer : "53"	});
