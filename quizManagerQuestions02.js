@@ -753,3 +753,82 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : 'Queen, The Beatles, Queen & David Bowie, Elton John, The Beatles, Queen, Elton John, Elton John & Kiki Dee, Queen, Queen'}) ;
 		
 
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/451iPKwE1ZLTsjrPMy874I?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+	answer : 'Queen, The Beatles, Queen & David Bowie, Elton John, The Beatles, Queen, Elton John, Elton John & Kiki Dee, Queen, Queen'}) ;
+		
+quests[++questIndexBuilder] = { 
+		name : "On Yer Bike 0",
+		hoverover : "Who is on their bike",
+		splash : {splashType : splashTypePictureAndText , splashText : "Here is Jimmy Fallon and Bono riding along - who else can you name?", splashImage : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/spl1016113-001-1511367715.jpg?crop=1xw:1xh;center,top&resize=980:*" },
+		tags : "2022-1-29,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is on their bike?" ,
+	answer : "Orlando Bloom", image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/spl1609304-001-150-1509719179.jpg?crop=1xw:1xh;center,top&resize=980:*"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is on their bike?" ,
+	answer : "Jesse Eisenberg", image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-838661314-master-1511367254.jpg?crop=1xw:1xh;center,top&resize=980:*"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is on their bike?" ,
+	answer : "Gerard Butler", image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-687955736-master-1511367217.jpg?crop=1xw:1xh;center,top&resize=980:*"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is on their bike?" ,
+	answer : "Bruce Springsteen", image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-620187430-master-1511367154.jpg?crop=1xw:1xh;center,top&resize=768:*&keepGifs=1"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is on their bike?" ,
+	answer : "Lady Gaga", image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-617723616-master-1511367152.jpg?crop=1xw:1xh;center,top&resize=768:*&keepGifs=1"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is on their bike?" ,
+	answer : "Prince Charles", image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-599655800-master-1511367121.jpg?crop=1xw:1xh;center,top&resize=768:*&keepGifs=1"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is on their bike?" ,
+	answer : "Arnold Schwarzenegger", image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-583539770-master-1511367077.jpg?crop=1xw:1xh;center,top&resize=980:*"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is on their bike?" ,
+	answer : "Leonardo DiCapro", image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-530179306-master-1511367021.jpg?crop=1xw:1xh;center,top&resize=980:*"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is on their bike?" ,
+	answer : "Ben Stiller", image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-527380590-master-1511367060.jpg?crop=1xw:1xh;center,top&resize=980:*"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is on their bike?" ,
+	answer : "Alec Baldwin", image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-491228018-master-1511367019.jpg?crop=1xw:1xh;center,top&resize=980:*"	});	
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "On Yer Bike1",
+		hoverover : "Who is on their bike",
+		splash : {splashType : splashTypePictureAndText , splashText : "Here is Jimmy Fallon and Bono riding along - who else can you name?", splashImage : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/spl1016113-001-1511367715.jpg?crop=1xw:1xh;center,top&resize=980:*" },
+		tags : "2022-2-5,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is on their bike?" ,
+	answer : "Rob Lowe", image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-488134512-master-1511367094.jpg?crop=1xw:1xh;center,top&resize=980:*"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is on their bike?" ,
+	answer : "Owen Wilson", image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-475836914-master-1511367109.jpg?crop=1xw:1xh;center,top&resize=980:*"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is on their bike?" ,
+	answer : "Will Smith", image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/spl1255406-003-1-1511367746.jpg?crop=1xw:1xh;center,top&resize=980:*"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is on their bike?" ,
+	answer : "Pippa Middleton", image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-477981574-1511370441.jpg?crop=1xw:1xh;center,top&resize=980:*"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is on their bike?" ,
+	answer : "Sarah Jessica Parker", image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/spl864078-003-1511367695.jpg?crop=1xw:1xh;center,top&resize=980:*"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is on their bike?" ,
+	answer : "Kurt Russell", image : "https://www.usmagazine.com/wp-content/uploads/2019/09/Kurt-Russell-Is-Nearly-Unrecognizable-on-LA-Bike-Ride-slide.jpg?w=700&quality=86&strip=all"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is on their bike?" ,
+	answer : "Simon Cowell", image : "https://www.usmagazine.com/wp-content/uploads/2019/10/Simon-Cowell-Celebrities-on-Bicycles-See-Hollywood%E2%80%99s-Pedal-Pushers-Ride-Through-the-Streets.jpg?w=700&quality=86&strip=all"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is on their bike?" ,
+	answer : "Brad Pitt", image : "https://www.usmagazine.com/wp-content/uploads/2019/03/brad-pitt-biking.jpg?w=700&quality=86&strip=all"	});	
+
