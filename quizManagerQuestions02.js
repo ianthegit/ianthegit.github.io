@@ -809,34 +809,34 @@ quests[++questIndexBuilder] = {
 	};
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Is the person on the left or right the real celeb?" ,
+	question : "Is the person on the left or right the real celeb, and who is it?" ,
 	answer : "Right is the real Taylor Swift", image : "https://akns-images.eonline.com/eol_images/Entire_Site/201775/rs_1024x759-170805124024-1024.taylor-swift.cm.8517.jpg?fit=around%7C776:576&output-quality=90&crop=776:576;center,top"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Is the person on the left or right the real celeb?" ,
+	question : "Is the person on the left or right the real celeb, and who is it?" ,
 	answer : "Right is the real Leo", image : "https://akns-images.eonline.com/eol_images/Entire_Site/201775/rs_1024x759-170805124302-1024.leonardo-dicaprio.cm.8517.jpg?fit=around%7C776:576&output-quality=90&crop=776:576;center,top"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Is the person on the left or right the real celeb?" ,
+	question : "Is the person on the left or right the real celeb, and who is it?" ,
 	answer : "Left is the real Margo Robbie", image : "https://akns-images.eonline.com/eol_images/Entire_Site/202179/rs_1024x759-210809055854-1024-Margot-Robbie-Lookalike-LT-8921-GettyImages-1304607796-Tiktok.jpg?fit=around%7C776:576&output-quality=90&crop=776:576;center,top"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Is the person on the left or right the real celeb?" ,
+	question : "Is the person on the left or right the real celeb, and who is it?" ,
 	answer : "Right is he real Angelina Jolie", image : "https://akns-images.eonline.com/eol_images/Entire_Site/201583/rs_1024x759-150903132948-1024.Chelsea-Marr-Angelina-Jolie.ms.090315.jpg?fit=around%7C776:576&output-quality=90&crop=776:576;center,top"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Is the person on the left or right the real celeb?" ,
+	question : "Is the person on the left or right the real celeb, and who is it?" ,
 	answer : "Right is the real Bryan Cranston", image : "https://static.boredpanda.com/blog/wp-content/uploads/2019/10/3-5db2c45533154__700.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Is the person on the left or right the real celeb?" ,
+	question : "Is the person on the left or right the real celeb, and who is it?" ,
 	answer : "Right is the real Simon Cowell", image : "https://static.boredpanda.com/blog/wp-content/uploads/2019/10/8-5db2c5496afec__700.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Is the person on the left or right the real celeb?" ,
+	question : "Is the person on the left or right the real celeb, and who is it?" ,
 	answer : "Right is the real Katy Perry", image : "https://static.boredpanda.com/blog/wp-content/uploads/2019/10/26-5db2ded592581__700.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Is the person on the left or right the real celeb?" ,
+	question : "Is the person on the left or right the real celeb, and who is it?" ,
 	answer : "", image : "https://static.boredpanda.com/blog/wp-content/uploads/2019/10/2-5db2c42b80050__700.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Is the person on the left or right the real celeb?" ,
+	question : "Is the person on the left or right the real celeb, and who is it?" ,
 	answer : "Right is the real Elton", image : "https://static.boredpanda.com/blog/wp-content/uploads/2019/10/2-5db2c42b80050__700.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Is the person on the left or right the real celeb?" ,
+	question : "Is the person on the left or right the real celeb, and who is it?" ,
 	answer : "Right is the real Robbie", image : "https://static.boredpanda.com/blog/wp-content/uploads/2019/10/16-5db28bacb5ef3__700.jpg"	});	
 
 
@@ -874,8 +874,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	question : "Who is on their bike?" ,
 	answer : "Brad Pitt", image : "https://www.usmagazine.com/wp-content/uploads/2019/03/brad-pitt-biking.jpg?w=700&quality=86&strip=all"	});	
 
-
-
 quests[++questIndexBuilder] = { 
 		name : "Seeing Double 1",
 		hoverover : "Who is the real celeb",
@@ -885,33 +883,33 @@ quests[++questIndexBuilder] = {
 	};
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Is the person on the left or right the real celeb?" ,
+	question : "Is the person on the left or right the real celeb, and who is it?" ,
 	answer : "Right is the real Daniel Craig", image : "https://static.boredpanda.com/blog/wp-content/uploads/2019/10/25-5db2dd8736eee__700.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Is the person on the left or right the real celeb?" ,
+	question : "Is the person on the left or right the real celeb, and who is it?" ,
 	answer : "Right is thereal Johnny Depp", image : "https://static.boredpanda.com/blog/wp-content/uploads/2019/10/14-5db2c76b787bf__700.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Is the person on the left or right the real celeb?" ,
+	question : "Is the person on the left or right the real celeb, and who is it?" ,
 	answer : "Right is the real Jason Statham", image : "https://static.boredpanda.com/blog/wp-content/uploads/2019/10/27-5db2df56472cf__700.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Is the person on the left or right the real celeb?" ,
+	question : "Is the person on the left or right the real celeb, and who is it?" ,
 	answer : "Right is the real Mariah Carrey", image : "https://static.boredpanda.com/blog/wp-content/uploads/2019/10/18-5db2d5f8e8780__700.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Is the person on the left or right the real celeb?" ,
+	question : "Is the person on the left or right the real celeb, and who is it?" ,
 	answer : "Right is the real Rihanna", image : "https://static.boredpanda.com/blog/wp-content/uploads/2019/10/24-5db2dcddd2941__700.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Is the person on the left or right the real celeb?" ,
+	question : "Is the person on the left or right the real celeb, and who is it?" ,
 	answer : "Right is the real Justin Timberlake", image : "https://static.boredpanda.com/blog/wp-content/uploads/2019/10/20-5db2d8caf15cf__700.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Is the person on the left or right the real celeb?" ,
+	question : "Is the person on the left or right the real celeb, and who is it?" ,
 	answer : "Right is the real Andew Lincoln", image : "https://static.boredpanda.com/blog/wp-content/uploads/2019/10/17-5db2d56ed72aa__700.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Is the person on the left or right the real celeb?" ,
+	question : "Is the person on the left or right the real celeb, and who is it?" ,
 	answer : "Right is the real Katy Perry", image : "https://wl-brightside.cf.tsp.li/resize/728x/jpg/027/085/f470fc506fa2dda8e4098dceb9.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Is the person on the left or right the real celeb?" ,
+	question : "Is the person on the left or right the real celeb, and who is it?" ,
 	answer : "Right is teh real Emma Watson", image : "https://wl-brightside.cf.tsp.li/resize/728x/jpg/21c/fba/31b18a5d1dbfb9af1a3b1766b0.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Is the person on the left or right the real celeb?" ,
+	question : "Is the person on the left or right the real celeb, and who is it?" ,
 	answer : "Right is the real Adele", image : "https://wl-brightside.cf.tsp.li/resize/728x/jpg/328/ccb/4da0fd5a439bbc4095d30324b6.jpg"	});	
 
