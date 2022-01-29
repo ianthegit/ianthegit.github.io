@@ -1268,6 +1268,32 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLUR7WkAYChJO3BarjuOStNTjmIpx1CY59ZQMFirwS0VZGtBZAXasNKgWzWcTA7Ua2HGCy-b9eDWFtpp-uKOGoDE3nKqzduM1aQnhELWrjD6VxEsbhZyjL6fdO8UyLknNViuC4wCZ6UMJGVpQ4AXgCvhEQ=w489-h377-no?authuser=0",
 	answerimage : "https://i.pinimg.com/originals/01/d9/44/01d944c03ee76f738e5c26d72c71ca15.jpg", answer : "Spotted Dick"}) ;
 
+
+quests[++questIndexBuilder] = { //
+		name : "Pictionary 45",
+		hoverover : "Pictionary on the theme of Chinese New Year",
+		tags : "2022-1-29,pictionary",
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLWchup3y4FJNGCdMg5EH2gkfltNq-XePCK-tNIEHRf6dDQ2201ozU_bya53zr-RKbuPVVAtExn7olLG5rEskPJ6Y5cNl4dAfixpHOwSgpnkLMIdkZWPt8CAihHpdkW4c-_p6q0_TMV-a0QkD_LZ1Szf9g=w500-h395-no?authuser=0",
+	answerimage : "https://media0.giphy.com/media/l9mASFqtemeKk/giphy.gif", answerSpeak : "Ox"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLWIp3C1DRPLhF5nKm8F-9vyiaY9221KBLJWe3eQFM5cFKtrdv7LHkmtTayVfMIxQMUt4EPO_e-Mhu1gNVP_uhNbBGjWrTzfXZPuhSOcGhGABI5ErxIrcagiTHkYQgfYImMupnwlT8TYkHx_6rpcxMhNqQ=w502-h524-no?authuser=0",
+	answerimage : "https://c.tenor.com/6Hd8Xfq0P0kAAAAC/boi-ox-chifrudo.gif", answerSpeak : "Horse"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLWfUbnH_XuNiKcf6aiYcPzhW-GgKMLJhoXNt750CjfD1zdiN20WcA7rOsydWC08S3htMAxvIVIyiJKb4Gb3IySfXytkEFpZWOwKh1drioAs6TKJT5JSLidGJOYudfmfAnoHQZX95XTh9Y1zbucnl644sQ=w575-h297-no?authuser=0",
+	answerimage : "https://media1.giphy.com/media/B9yqVMxkcBpu0/200w.gif?cid=82a1493beqxdvialxl7rmxa0c1expcx601gswax2v860cyee&rid=200w.gif&ct=g", answerSpeak : "Tiger"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVH9kuC2s75rHt9hvSHr--Dv3Kt_NpSFtGxOC46UqIreO3ZJvzopSOEtR2KVI6xEzH7cNIjr2-3HKiPjzyX5MqK-wBd2I-VmTt8_ZLWSRz2ASMUaSwKDKpKL2y1m6P_l8pzhxCWOrdWhL3vmWr_Y2YWpw=w258-h360-no?authuser=0",
+	answerimage : "https://c.tenor.com/chdl53HYIq4AAAAM/pig-cute.gif", answerSpeak : "Pig"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUIOXij_uxUSODXU8_91NVn18mDDnmGhhQgPJjaz4pViW7ntvgKwzkhfP3xcNRZrUpjMIULSAn6dAhFdZaj6DA9T_zkVcf-d5-kkrPVOsn8IWZuvrmoqs4vfEdxVa558cg0alTAT12OD0Hskw3-eeeSaQ=w296-h277-no?authuser=0",
+	answerimage : "https://media4.giphy.com/media/KpACNEh8jXK2Q/200.gif", answerSpeak : "Monkey"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVkz9RCm2anCcTQnbX3DQ1dT6nq79XJ0FX0S21fblG7gdeSsEnJMnb5--d7pJDY_kv3-php3LxBjEa9u2FFgd-5Pmh5xYFlxuWH57xorkAtCNNFTYI_yeW_XLQ1FprHYp0KcJ8aXEtDhZBjQRXdFeownA=w330-h358-no?authuser=0",
+	answerimage : "https://media0.giphy.com/media/Lqmp9tVPIvtyyKQneQ/giphy.gif?cid=82a1493byrnjx3ueuu5809ymipquqdmhtdascxcqnws5vwc4&rid=giphy.gif&ct=g", answerSpeak : "Goat"}) ;
+	
 /*
   
  quests[++questIndexBuilder] = { //
