@@ -1277,10 +1277,10 @@ quests[++questIndexBuilder] = { //
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLWchup3y4FJNGCdMg5EH2gkfltNq-XePCK-tNIEHRf6dDQ2201ozU_bya53zr-RKbuPVVAtExn7olLG5rEskPJ6Y5cNl4dAfixpHOwSgpnkLMIdkZWPt8CAihHpdkW4c-_p6q0_TMV-a0QkD_LZ1Szf9g=w500-h395-no?authuser=0",
-	answerimage : "https://media0.giphy.com/media/l9mASFqtemeKk/giphy.gif", answerSpeak : "Ox"}) ;
+	 answerimage : "https://c.tenor.com/6Hd8Xfq0P0kAAAAC/boi-ox-chifrudo.gif",answerSpeak : "Ox"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLWIp3C1DRPLhF5nKm8F-9vyiaY9221KBLJWe3eQFM5cFKtrdv7LHkmtTayVfMIxQMUt4EPO_e-Mhu1gNVP_uhNbBGjWrTzfXZPuhSOcGhGABI5ErxIrcagiTHkYQgfYImMupnwlT8TYkHx_6rpcxMhNqQ=w502-h524-no?authuser=0",
-	answerimage : "https://c.tenor.com/6Hd8Xfq0P0kAAAAC/boi-ox-chifrudo.gif", answerSpeak : "Horse"}) ;
+	answerimage : "https://media0.giphy.com/media/l9mASFqtemeKk/giphy.gif", answerSpeak : "Horse"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLWfUbnH_XuNiKcf6aiYcPzhW-GgKMLJhoXNt750CjfD1zdiN20WcA7rOsydWC08S3htMAxvIVIyiJKb4Gb3IySfXytkEFpZWOwKh1drioAs6TKJT5JSLidGJOYudfmfAnoHQZX95XTh9Y1zbucnl644sQ=w575-h297-no?authuser=0",
 	answerimage : "https://media1.giphy.com/media/B9yqVMxkcBpu0/200w.gif?cid=82a1493beqxdvialxl7rmxa0c1expcx601gswax2v860cyee&rid=200w.gif&ct=g", answerSpeak : "Tiger"}) ;
