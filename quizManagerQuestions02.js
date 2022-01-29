@@ -831,10 +831,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	answer : "Right is the real Katy Perry", image : "https://static.boredpanda.com/blog/wp-content/uploads/2019/10/26-5db2ded592581__700.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Is the person on the left or right the real celeb, and who is it?" ,
-	answer : "", image : "https://static.boredpanda.com/blog/wp-content/uploads/2019/10/2-5db2c42b80050__700.jpg"	});	
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Is the person on the left or right the real celeb, and who is it?" ,
-	answer : "Right is the real Elton", image : "https://static.boredpanda.com/blog/wp-content/uploads/2019/10/2-5db2c42b80050__700.jpg"	});	
+	answer : "Right is the real Elton John", image : "https://static.boredpanda.com/blog/wp-content/uploads/2019/10/2-5db2c42b80050__700.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Is the person on the left or right the real celeb, and who is it?" ,
 	answer : "Right is the real Robbie", image : "https://static.boredpanda.com/blog/wp-content/uploads/2019/10/16-5db28bacb5ef3__700.jpg"	});	
@@ -912,4 +909,53 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Is the person on the left or right the real celeb, and who is it?" ,
 	answer : "Right is the real Adele", image : "https://wl-brightside.cf.tsp.li/resize/728x/jpg/328/ccb/4da0fd5a439bbc4095d30324b6.jpg"	});	
+
+
+quests[++questIndexBuilder] = { 
+		name : "Rabbie Burns",
+		hoverover : "when he urinates",
+		tags : "2022-1-29,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Millie here (a rescue dog)  was rescued from dangerous mudflats in Havant, Hampshire by attaching what to a drone?" + Table4ColumnStart + "A Sausage</td><td>Some bacon</td><td>Her favourite toy</td><td>A picture of Kate Bush" + Table4ColumnEnd,
+	answer : 'It was a sausage </BR>   <iframe width="476" height="267" src="https://abc7ny.com/video/embed/?pid=11501438" frameborder="0" allowfullscreen></iframe> ', image : "https://i2-prod.mirror.co.uk/incoming/article26003707.ece/ALTERNATES/s615b/0_Stranded-dog-saved-from-rising-tide-after-rescuers-attach-sausage-to-drone.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Meat Loaf departed this earth last week. But what was his real name at his time of death?" + Table4ColumnStart + "Bernard William Fenton</td><td>Michael Lee Aday</td><td>Harry Rodger Webb</td><td>Keith Bush" + Table4ColumnEnd,
+	answer : "Michael Lee Aday", image : "https://i.makeagif.com/media/9-26-2015/HXOsEn.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Chinese authorities appear to have changed the ending to which classic 1999 movie when it's streamed online" + Table4ColumnStart + "The Sixth Sense</td><td>Fight Club</td><td>American Beauty</td><td>Wuthering Heights" + Table4ColumnEnd,
+	answer : "Fight Club - the final sequence of the movie has been replaced with a text card explaining that the authorities discovered the plot and shut it down", image : "https://thumbs.gfycat.com/ScalySerpentineBuzzard-size_restricted.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Canadian photographer Simone Engels was stunned when she appeared to see what floating in the sea off Vancouver Island" + Table4ColumnStart + "A pyramid</td><td>A 17th century ghost sailing ship</td><td>An iceberg</td><td>A dog chasing a picture of Kate Bush" + Table4ColumnEnd,
+	answer : "Due to an effect known as a 'superior mirage' caused during a temperature inversion, she says the top of the Cheam mountain range on the mainland of British Columbia, nearly 200km (124 miles) away looked as if it was floating on the sea, resembling an <b>iceberg</b>", 
+	image : "https://i.guim.co.uk/img/media/114e88a5510232283032df5132a8053ee4ebddb2/20_96_820_492/master/820.jpg?width=620&quality=85&auto=format&fit=max&s=282f0fcabcc29e72e4f6dc8b85ecf187"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which county has had to cancel it's knob-throwing contest for the third-year running?" + Table4ColumnStart + "Dorset</td><td>Devon</td><td>Durham</td><td>Derbyshire" + Table4ColumnEnd,
+	answer : "The <b>Dorset</b> knob-throwing contest involves competitors hurling a traditional Dorset knob - a hard biscuit - as far as they can", image : "https://c.tenor.com/ZiLQ3nnmC9kAAAAM/knob-polishing-cleaning.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Bollywood star Shilpa Shetty has been formally cleared of obscenity charges dating from when which Hollywood actor publicly kissed her at an Aids awareness event 15 years ago" + Table4ColumnStart + "Don Johnson</td><td>Richard Gere</td><td>Jeff Bridges</td><td>Heathcliffe" + Table4ColumnEnd,
+	answer : "Richard Gere - he grabbed and kissed the actress, and she was charged.", image : "https://i.guim.co.uk/img/media/1a636df035db39f3ce15854e44f1a6ea62f1dc0e/0_158_4544_2724/master/4544.jpg?width=620&quality=85&auto=format&fit=max&s=4c2895a4255922d1570b7cf621c1a4fe"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "In the movie The Wizard of Oz, Dorothy needs to click her ruby slippers to get home. What are they made of in L Frank Baum's original 1900 novel The Wonderful Wizard of Oz?" + Table4ColumnStart + "Diamond</td><td>Gold</td><td>Silver</td><td>Pearl" + Table4ColumnEnd,
+	answer : "Silver", image : "https://i.guim.co.uk/img/media/56d2d2ab67e288a9ba4611a388c44f88df6933df/0_147_5306_3184/master/5306.jpg?width=620&quality=85&auto=format&fit=max&s=73df5d9419777d68eb3d92fd2ce69c71"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Ruby Wax was born in Evanston, Illinois and is absolutely hilarious. But what was her surname at birth?" + Table4ColumnStart + "Wachs</td><td>Vinyl</td><td>Kandel</td><td>Sex" + Table4ColumnEnd,
+	answer : "Wachs", image : "https://i.guim.co.uk/img/media/0bb5517900f129e3e04d9bcfb9e81bce7e0976e2/553_569_4964_2978/master/4964.jpg?width=620&quality=85&auto=format&fit=max&s=5610ef73d78c1d9ede71ee01cd55ef04"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who had the UK No 1 single 40 years ago today on 27 January 1982" + Table4ColumnStart + "Bucks Fizz with The Land of Make Believe</td><td>Shakin' Stevens with Oh Julie</td><td>The Jam with Town Called Malice</td><td>Kate Bush with Wuthering Heights" + Table4ColumnEnd,
+	answer : "Our own Jules's favourite, of course it was 'Oh Julie' by Shakin' Stevens", image : "https://i.guim.co.uk/img/media/9d1a810226c51821d158304cc7375751d9c632cc/0_0_2000_1200/master/2000.jpg?width=620&quality=85&auto=format&fit=max&s=f28300c1860c8caa7514a4409fe57a99"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Having recently celebrated its 40th anniversay, which classic British sitcom featured Lennard Pearce, Roger Lloyd-Pack and Nicholas Lyndhurst among its regular cast" + Table4ColumnStart + "Goodnight Sweetheart</td><td>Sink Or Swim</td><td>Rings On Their Fingers</td><td>Only Fools And Horses" + Table4ColumnEnd,
+	answer : "Only Fools And Horses", image : "https://i.imgflip.com/xawew.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "WHO AM I? I'm a 40-year-old California-born actor who has found fame in movies about the band Queen and as a James Bond villain. I also appeared in Mr Robot. Who am I?" + Table4ColumnStart + "Martin Wallstrom</td><td>Rami Malek</td><td>Jamie Bell</td><td>Taron Egerton" + Table4ColumnEnd,
+	answer : "Rami Malek", image : "https://thumbs.gfycat.com/IdleSilkyJaeger-size_restricted.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "True or false - the temperature -40C is the same temperature as -40F?" ,
+	answer : "True", image : "https://i.guim.co.uk/img/media/99c8b06129db8d0034a933e4a9254e251fdb9472/0_371_5568_3341/master/5568.jpg?width=620&quality=85&auto=format&fit=max&s=201fa556c8cdc16cbe872687f1b9171e"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Anyone who has spoken to Ted this week will know there's a new Pokemon game out for the Nintendo Switch. What is it called?   Pokemon Legends: " + Table4ColumnStart + "Zelda</td><td>Stolen Sword and Shattered Shield</td><td>Squirtle Squad</td><td>Arceus" + Table4ColumnEnd,
+	answer : "Pokemon Legends: Arceus", image : "https://c.tenor.com/mCvvZ8MVFR8AAAAd/pokemon-arceus-arceus.gif"	});	
 
