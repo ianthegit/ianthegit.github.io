@@ -959,3 +959,18 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	question : "Anyone who has spoken to Ted this week will know there's a new Pokemon game out for the Nintendo Switch. What is it called?   Pokemon Legends: " + Table4ColumnStart + "Zelda</td><td>Stolen Sword and Shattered Shield</td><td>Squirtle Squad</td><td>Arceus" + Table4ColumnEnd,
 	answer : "Pokemon Legends: Arceus", image : "https://c.tenor.com/mCvvZ8MVFR8AAAAd/pokemon-arceus-arceus.gif"	});	
 
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Gems",
+		hoverover : "Songs about gemstones",
+		tags : "music,2022-1-29,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/2k68AehnZzkuFEmPyqGZDD?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+	answer : ''}) ;
+		
