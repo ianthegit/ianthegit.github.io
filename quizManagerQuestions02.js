@@ -974,3 +974,79 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/2k68AehnZzkuFEmPyqGZDD?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
 	answer : ''}) ;
 		
+
+
+quests[++questIndexBuilder] = { 
+		name : "Winter Rings",
+		hoverover : "Olympics start",
+		tags : "2022-2-5,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture, 	
+	question : "What musical used (part of) this stock photo for their promotional material?" ,
+	answer : 'Mama Mia! ', image : "https://pbs.twimg.com/media/D8fVq5sXUAAtR-M.jpg",answerimage : "https://media.istockphoto.com/photos/mamma-mia-on-broadway-new-york-city-picture-id458321737"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture, 	
+	question : "How much is a Butt load of wine?" + Table4ColumnStart + "2 Hogsheads</td><td>15 Firkins</td><td>4 Barrels </td><td>31 Pins" + Table4ColumnEnd,
+	answer : '2 Hogsheads', image : "https://miro.medium.com/max/1024/0*VGygGn3jS40b8dAQ.jpg", answerimage : "https://preview.redd.it/jmosfxdaf6n31.jpg?width=960&crop=smart&auto=webp&s=9d853fb3dd69fbc77a5ea86fdffc0f15606a8493"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture, 	
+	question : "Why are Aubergines called Eggplants?" ,
+	answer : 'Some types look like egges as they grow', image : "https://www.premierseedsdirect.com/wp-content/uploads/2017/02/41584165.jpg", answerimage : "https://static.boredpanda.com/blog/wp-content/uploads/2020/05/today-years-old-2-5ecbb623e0f60__700.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What are these?" ,
+	answer : 'Growing Cashews', image : "https://balconygardenweb-lhnfx0beomqvnhspx.netdna-ssl.com/wp-content/uploads/2015/10/cashew-nut-growing_mini.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Grant Wood's 'American Gothic' (Named after the style of house in the background) shows a farmer and...?" + Table4ColumnStart + "his wife</td><td>his daughter</td><td>his hoe</td><td>Kate Bush" + Table4ColumnEnd,
+	answer : 'His daughter', image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Grant_Wood_-_American_Gothic_-_Google_Art_Project.jpg/240px-Grant_Wood_-_American_Gothic_-_Google_Art_Project.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What is this?" + Table4ColumnStart + "A horse in a cloak</td><td>A Hammerhead Bat</td><td>A model from 'Alien'</td><td>Sarah Jessica Parker after a big night out" + Table4ColumnEnd,
+	answer : 'A hammerhead bat', image : "https://www.snopes.com/tachyon/2018/07/hammerheadbat.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Josh Wardle has sold his addictive creation Wordle to which US news organisation?" + Table4ColumnStart + "Washington Post</td><td>New York Times</td><td>Wall Street Journal</td><td>The Atlantic" + Table4ColumnEnd,
+	answer : 'New York Times', image : "https://i.etsystatic.com/17183229/r/il/053402/3638348138/il_794xN.3638348138_aw1d.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which of these combinations is the original Eurovision Song Contest winning lineup of Buck's Fizz?" + Table4ColumnStart + "Cheryl, Mike, David and Jay</td><td>Cheryl, Mike, Bobby and Jay</td><td>Cheryl, Bobby, Paul and Jayne</td><td>Kate, Kate, Kate and Kate" + Table4ColumnEnd,
+	answer : 'Cheryl, Mike, Bobby and Jay', image : "https://i.guim.co.uk/img/media/e2747cd4226fea401e917e23b64e60547a6ae5f3/0_0_2000_1200/master/2000.jpg?width=620&quality=85&auto=format&fit=max&s=5413a1ac9fa6cb51cc701c15bfb6812a"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "One stone has been removed from this picture of Norway's super-trouser Curling team - where was it?" + Table4ColumnStart + "A</td><td>B</td><td>C</td><td>D" + Table4ColumnEnd,
+	answer : 'C', image : "https://i.guim.co.uk/img/media/a08e94e973effdf26a21b9a812e481512bbc4b60/0_0_3870_5040/master/3870.jpg?width=620&quality=85&auto=format&fit=max&s=51dc033882691e89afdb5cf2734ea5f8"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Thursday was the anniversary of the air crash that killed Buddy Holly, Ritchie Valens and which other music star?" + Table4ColumnStart + "The Big Bopper</td><td>Eddie Cochran</td><td>Jim Reeves</td><td>Jim Croce" + Table4ColumnEnd,
+	answer : 'The Big Bopper', image : "https://i.guim.co.uk/img/media/a38593345f6f94282aef5c84267a6ece13a18f75/179_121_2125_1276/master/2125.jpg?width=620&quality=85&auto=format&fit=max&s=7c5bcbba9c6855eba024a4b8ae0da7a4"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Sweyn Forkbeard died on 3 February 1014. At the time he was king of Norway, king of England, and king of which other country?" + Table4ColumnStart + "Scotland</td><td>Denmark</td><td>Sweden</td><td>Finland" + Table4ColumnEnd,
+	answer : 'Denmark', image : "https://i.guim.co.uk/img/media/0666aed81593b9156e28209431ccc1007105e48e/300_1694_2900_1740/master/2900.jpg?width=620&quality=85&auto=format&fit=max&s=0899edcf588239feccf2bd260d8f26c2"	});	
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Liars",
+		hoverover : "Songs about liars etc",
+		tags : "music,2022-2-5,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/3XAGh5Ham78UkyuHWAmyw8?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+	answer : ''}) ;
+
+
+
+
+
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Olympian",
+		hoverover : "Songs about Snow, cold etc",
+		tags : "music,2022-2-12,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/3ROjzQ6etfkdXUjJwDfhOM?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+	answer : ''}) ;
+
