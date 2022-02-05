@@ -991,7 +991,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
 	answer : '2 Hogsheads', image : "https://miro.medium.com/max/1024/0*VGygGn3jS40b8dAQ.jpg", answerimage : "https://preview.redd.it/jmosfxdaf6n31.jpg?width=960&crop=smart&auto=webp&s=9d853fb3dd69fbc77a5ea86fdffc0f15606a8493"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture, 	
 	question : "Why are Aubergines called Eggplants?" ,
-	answer : 'Some types look like egges as they grow', image : "https://www.premierseedsdirect.com/wp-content/uploads/2017/02/41584165.jpg", answerimage : "https://static.boredpanda.com/blog/wp-content/uploads/2020/05/today-years-old-2-5ecbb623e0f60__700.jpg"	});	
+	answer : 'Some types look like egges as they grow', image : "https://www.simplyseed.co.uk/user/products/Aubergine%20Farmers%20Long.jpg", answerimage : "https://static.boredpanda.com/blog/wp-content/uploads/2020/05/today-years-old-2-5ecbb623e0f60__700.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "What are these?" ,
 	answer : 'Growing Cashews', image : "https://balconygardenweb-lhnfx0beomqvnhspx.netdna-ssl.com/wp-content/uploads/2015/10/cashew-nut-growing_mini.jpg"	});	
