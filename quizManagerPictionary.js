@@ -1297,6 +1297,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 
+
 quests[++questIndexBuilder] = { //
 		name : "Pictionary 46",
 		hoverover : "Pictionary on the theme of Winter Olympics",
@@ -1304,22 +1305,22 @@ quests[++questIndexBuilder] = { //
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLWBd7PjFLriV-yzC5KnlhPlvlV2_gk9GWFGDxwik3EjDPzenStve8q2Dq3xwN6BNiHL12zI6_J9xn5Y-oI5tJJ7Y7Bc9E7hLH2RUYaUSrEKjfapq-aDqbz5ruB4wNAIbOpUxJ2002AjqpfXv607k5oEag=w220-h163-no?authuser=0",
 	answerimage : "https://i.pinimg.com/originals/1d/e0/17/1de0170a24b04c4de8e2f4fd6608798b.gif", answerSpeak : "Curling"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLWdXZXHUNN-_LwJvfAjsVZlL0rOGbeQeru3MXRpxMJQPqYTC_6D0TMO46MqFAD9NSNs5bHGOufgKhCy3XoJOnZBhfBYTX0ehlwh6V4iRTgSmDdo80exmhxPTmFdh5VbHnG8RZrsSmPJaBczHEcHivS6xQ=w527-h432-no?authuser=0",
 	answerimage : "https://i.pinimg.com/originals/11/07/b6/1107b6113428829079feb3b39092a3ae.gif", answerSpeak : "Ice Skating"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVMHe0ZMbeVQ3-WaHoNuPbK10kcIvw7qJNhQwiUR5zJjfj_l7MWTuFqIMw7E-KMvQo-9Dn20qaasw-Nr3CT0A9o4pS1uzlyp4TaFoBAUSDgGFeQlwTOWBV3eRlezCoiP1myF_xRYQYq0X0rRF_uT0k9aQ=w331-h177-no?authuser=0",
 	answerimage : "https://thumbs.gfycat.com/UnfinishedCorruptCanvasback-size_restricted.gif", answerSpeak : "Bobsled"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLWf3QdWqcGQCHhQgV_K-LkZD5BNl4HwJrCDh9E0L_uAFaAGKGPF62_MMI4uyMC6OsWhrU2x4qRrry-ZvivagWja4NLxSsijarcmK9ulGP2KLIBL1-PUy6gIB1FoMO_HpDbNJCRp5EVsVKtpbjW1OZusEA=w733-h426-no?authuser=0",
 	answerimage : "https://media0.giphy.com/media/24bc6h4Mo05pG4XqaU/giphy.gif", answerSpeak : "Skiing"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVtb6dZ_kVsbFOrQPnrI5sygxz5M3mwWKQGBsZYSecc4iWo7Zxib9zGQ7RKM5YaMWwSWO3XcEMZRNdHZwGCnMpvrFksvXUE-eLhXHtk6-7tatFiaZhEgzR5M1ObkwRRCADO7WDZnE0bmRNldrx2por54w=w588-h510-no?authuser=0",
 	answerimage : "https://i.makeagif.com/media/3-11-2019/gGnLyT.gif", answerSpeak : "Ski Jumping"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUmX2tdmE6hadXoydx5lWR7fCg9FdyWOxO4ByPCEm33U7oHfvhALll4iYh3U3FBrOY0v4xl99X2ijtufaMeOxsUYwVzbqAGN32pdv04PiqbxVV9_osEDYHALvfheYJ9EoGsMoLXUeWGKnwpAxRQXchFkQ=w428-h591-no?authuser=0",
 	answerimage : "https://66.media.tumblr.com/d1f2d39ccfc9d2cab6e7e5299a50a79f/cc3fd6293e2adb75-1a/s400x600/5d5a65b87323b402b98476085000e2b3d203247e.gif", answerSpeak : "Snowboarding"}) ;
 
 
