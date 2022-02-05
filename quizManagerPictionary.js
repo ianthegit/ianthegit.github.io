@@ -1294,6 +1294,37 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLVkz9RCm2anCcTQnbX3DQ1dT6nq79XJ0FX0S21fblG7gdeSsEnJMnb5--d7pJDY_kv3-php3LxBjEa9u2FFgd-5Pmh5xYFlxuWH57xorkAtCNNFTYI_yeW_XLQ1FprHYp0KcJ8aXEtDhZBjQRXdFeownA=w330-h358-no?authuser=0",
 	answerimage : "https://media0.giphy.com/media/Lqmp9tVPIvtyyKQneQ/giphy.gif?cid=82a1493byrnjx3ueuu5809ymipquqdmhtdascxcqnws5vwc4&rid=giphy.gif&ct=g", answerSpeak : "Goat"}) ;
 	
+
+
+
+quests[++questIndexBuilder] = { //
+		name : "Pictionary 46",
+		hoverover : "Pictionary on the theme of Winter Olympics",
+		tags : "2022-2-5,pictionary",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://i.pinimg.com/originals/1d/e0/17/1de0170a24b04c4de8e2f4fd6608798b.gif", answerSpeak : "Curling"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://i.pinimg.com/originals/11/07/b6/1107b6113428829079feb3b39092a3ae.gif", answerSpeak : "Ice Skating"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://thumbs.gfycat.com/UnfinishedCorruptCanvasback-size_restricted.gif", answerSpeak : "Bobsled"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://media0.giphy.com/media/24bc6h4Mo05pG4XqaU/giphy.gif", answerSpeak : "Skiing"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://i.makeagif.com/media/3-11-2019/gGnLyT.gif", answerSpeak : "Ski Jumping"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://66.media.tumblr.com/d1f2d39ccfc9d2cab6e7e5299a50a79f/cc3fd6293e2adb75-1a/s400x600/5d5a65b87323b402b98476085000e2b3d203247e.gif", answerSpeak : "Snowboarding"}) ;
+
+
+
+
 /*
   
  quests[++questIndexBuilder] = { //
