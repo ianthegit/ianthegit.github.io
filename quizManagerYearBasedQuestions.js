@@ -183,6 +183,78 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Amy_Johnson_%28Our_Generation%2C_1938%29.jpg/220px-Amy_Johnson_%28Our_Generation%2C_1938%29.jpg" }) ;
 
 
+quests[++questIndexBuilder] = { 
+		name : "1952 Ins & Out",
+		hoverover : "It 70 years ago today that Elizabeth became Queen, roughly",
+		tags : "2022-2-12,saturday,InnerWheel,surfers,1952",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this, who died in 1952?",answer : "George VI",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/King_George_VI_LOC_matpc.14736_%28cleaned%29.jpg/220px-King_George_VI_LOC_matpc.14736_%28cleaned%29.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this, who was born in 1952?",answer : "Jenny Agutter",
+	image : "https://upload.wikimedia.org/wikipedia/commons/d/d6/Jenny_Agutter_%282%29.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this, who was born in 1952?",answer : "Clive Anderson",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Clive_Anderson_at_Selwyn_May_Ball_-21June2008.JPG/200px-Clive_Anderson_at_Selwyn_May_Ball_-21June2008.JPG" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this, who was born in 1952?",answer : "Mel Smith",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Mel_Smith_%28cropped%29.jpg/175px-Mel_Smith_%28cropped%29.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this, who was born in 1952?",answer : "Joe Strummer",
+	image : "https://iconicimages.net/app/uploads/2017/01/MIG_MU190.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this, who was born in 1952 - bottom right?",answer : "Alexei Sayle",
+	image : "https://i2-prod.mirror.co.uk/incoming/article21337313.ece/ALTERNATES/s1200c/1_FWROa.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this, who was born in 1952?",answer : "John Kettley (is a weathermen, a weatherman, a weatherman",
+	image : "https://markgorman.files.wordpress.com/2015/08/bbc-john-kettley_2786041k.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this author, who was born in 1952?",answer : "Douglas Adams",
+	image : "https://upload.wikimedia.org/wikipedia/commons/c/c0/Douglas_adams_portrait_cropped.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this, who was born in 1952?",answer : "Tim Healy",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Tim_Healy_%282007%29.jpg/220px-Tim_Healy_%282007%29.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this with Lysette Anthony, who was born in 1952?",answer : "Karl Howman",
+	image : "https://www.mediastorehouse.com/t/767/karl-howman-who-plays-jacko-situation-comedy-21372879.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this, who was born in 1952?",answer : "Jeff Goldblum",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Jeff_Goldblum_by_Gage_Skidmore_3.jpg/220px-Jeff_Goldblum_by_Gage_Skidmore_3.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this, who was born in 1952?",answer : "Sharon Osbourne",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Sharon_Osbourne_2%2C_2012.jpg/220px-Sharon_Osbourne_2%2C_2012.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this, who was born in 1952?",answer : "David Hasselhoff",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Hoff_3.jpg/220px-Hoff_3.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this, who was born in 1952?",answer : "Dan Aykroyd",
+	image : "https://www.looper.com/img/gallery/whatever-happened-to-dan-aykroyd/intro-1571245316.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this, who was born in 1952?",answer : "Alastair Stewart",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Alastair_Stewart_31.08.07.jpg/220px-Alastair_Stewart_31.08.07.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "Who is this, who was born in 1952 (here with her mother, Ingrid Bergman)?",answer : "Isabella Rossellini",
+	image : "https://i.guim.co.uk/img/media/67b69f2e66814b2dfde6e1bf86a33f7a549ab5f2/949_0_1451_1625/master/1451.jpg?width=620&quality=85&auto=format&fit=max&s=ab32172f53e0b95e9d335455bba79bac" ,
+	answerimage : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/tre-sor30ans-isabella-1-1591637713.jpg?resize=480:*"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this, pictured with Larry Grayson, who was born in 1952?",answer : "Isla St Clair",
+	image : "https://i2-prod.coventrytelegraph.net/incoming/article8392121.ece/ALTERNATES/s1227b/WA229521.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this, who was born in 1952?",answer : "Jean Paul Gaultier",
+	image : "https://upload.wikimedia.org/wikipedia/commons/c/c5/Jean-Paul_Gaultier.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this, who was born in 1952?",answer : "Gary Moore",
+	image : "https://m.media-amazon.com/images/I/510Qw-fTWgL._SL1000_.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this, who was born in 1952?",answer : "Dermot Morgan",
+	image : "https://upload.wikimedia.org/wikipedia/en/f/fa/Dermot_Morgan_February_1993_In_Dublin_magazine.jpg" }) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Who is this, who was born in 1952?",answer : "Peter Tatchell",
+	image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Peter_Tatchell_-_Red_Wall_-_8by10_-_2016-10-15.jpg/220px-Peter_Tatchell_-_Red_Wall_-_8by10_-_2016-10-15.jpg" }) ;
+
+
 
 quests[++questIndexBuilder] = { //84
 		name : "1954",
