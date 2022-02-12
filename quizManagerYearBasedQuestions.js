@@ -185,7 +185,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 quests[++questIndexBuilder] = { 
 		name : "1952 Ins & Out",
-		hoverover : "It 70 years ago today that Elizabeth became Queen, roughly",
+		hoverover : "It was 70 years ago today that Elizabeth became Queen, roughly",
 		tags : "2022-2-12,saturday,InnerWheel,surfers,1952",
 		questInfo: new Array()
 	};
