@@ -1325,6 +1325,43 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 
+quests[++questIndexBuilder] = { //
+		name : "Pictionary 47",
+		hoverover : "Pictionary",
+		tags : "2022-2-12,pictionary",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What is this that Ted drew? ",
+	image : "",
+	answerimage : "https://c.tenor.com/jtE13C4lBuYAAAAC/beauty-and-the-beast-rose.gif",
+	answerSpeak : "Red Roses"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What is this that Ian drew? ",
+	image : "",
+	answerimage : "https://c.tenor.com/tczs3LmpZLsAAAAC/cupid-arrow.gif",
+	answerSpeak : "Cupid"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What is this that Ted drew? ",
+	image : "",
+	answerimage : "https://media0.giphy.com/media/26xBRiIYbyjCzYMAU/200.gif",
+	answerSpeak : "Heart"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What is this that Ian drew? ",
+	image : "",
+	answerimage : "https://c.tenor.com/oCwArMlGkEIAAAAM/happyvalentines-chocolate.gif",
+	answerSpeak : "Box of Chocolates"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What is this that Ted drew? ",
+	image : "",
+	answerimage : "https://i.pinimg.com/originals/b2/ab/47/b2ab47e1b4a14814e977e5879fb4765a.gif",
+	answerSpeak : "Kiss"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
+	question : "What is this that Ian drew? ",
+	image : "",
+	answerimage : "https://c.tenor.com/N186b555lEwAAAAC/dancing-ewok.gif",
+	answerSpeak : "Ewok"}) ;
+
 
 /*
   
