@@ -1039,6 +1039,53 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { 
+		name : "Bambi died",
+		hoverover : "Bamber Gascoigne died this week",
+		tags : "2022-2-12,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture, 	
+	question : "Bamber Gascoigne passed away this week. Which British comedy featured a wonderful pastiche of him running an episode of University Challenge played by Griff Rhys Jones?" + Table4ColumnStart + "The Fast Show</td><td>The Young Ones</td><td>The Mighty Boosh</td><td>The Teletubbies" + Table4ColumnEnd,
+	answer : 'The Young Ones', image : "https://i.guim.co.uk/img/media/ce96ef906511d6f90583c7f9a94b30018cf78768/0_137_4781_2869/master/4781.jpg?width=620&quality=85&auto=format&fit=max&s=81c52509fbfa446eac63e45a399856a0",
+	answerimage : "https://i.makeagif.com/media/12-18-2017/uTDvo6.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "The Belgian government has added illustrations from the Tintin comics to which official documents?" + Table4ColumnStart + "ID Cards</td><td>Passports</td><td>Driving Licences</td><td>Birth cerificates" + Table4ColumnEnd,
+	answer : 'Passports', image : "https://i.guim.co.uk/img/media/be44aa53616b03e8d560575cd3be5db60fbe7f73/0_0_5000_3000/master/5000.jpg?width=620&quality=85&auto=format&fit=max&s=bbb0a37b6ddb1203a7a9a07058b844c3"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which website reported its first ever drop in daily user numbers in 18 years last week?" + Table4ColumnStart + "Facebook</td><td>Google</td><td>Amazon</td><td>This quiz" + Table4ColumnEnd,
+	answer : 'Facebook ', image : "https://lh3.googleusercontent.com/LuuRKujiUk5wJ_bM7YsLQ_kfHEFo-WkEIvSRBtbwMwAHEU7wIR0JvjjPnNFbf4SGM5QC0wvskrAS3pRMGTfw-3F9KP6iEMqPfASVFprmPd4PmEnvaixKUm-C1PlesmdwTJIC5BciEvzY4mcAzRjvbMM2q6hn9q12GC2mhTVm76jAu4uIlcnLbwmmizKl2ciPksVXr1F4mVgNIlGWY8_LEhQGmkQsHXQCZUxYDFh1WyuZ9FHIqMp70wjNOw6ak1X7YZoqwD3Jh68L8Rlni2k-y_IQNHWjWsdmGzq7AA6KH18cb535afVae6ky8eS_y2xWJoRHG1yh9tVyY-CAg5ccqfPOc1VDZU53DVrLJSFFCx5ubD6uDw8NYQO1e-QPyYXxbFIgO2bCiErmYXvh-MxpZYIlQOm98wP8wCm7Ghw6zVIR40RnzKUQrxU4GRWaXYeKOkdYV5cESYLnOl8KAemivLg4EqEDSNesSOeYzOQkTGPISoyG04_fYBzC6-x5iHdVBiY6NCVxZExrUjTVAazEghOTWhUSCjjNaqR6mkzLIvSh-OtuzHurT5lWCqfMPn0eEZY1GmWBmqDhh61FJmztNS5OA0utbUyS8afGPiSmT8Xp8Bjo8A7-p_rA-Orhlx113MDbA7Tx_mF8PUzJsyLh4SLxYPuWdxYRgU4uj7fWQFfLAILwz2l0mayFmigemCCxa-_IiHa9dQ9yWeoW7f8A8L4mIQ=w1345-h841-no?authuser=0"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Thursday would have been the 181st wedding anniversary of Queen Victoria and Prince Albert of Saxe-Coburg-Gotha. How many children did they have together?" + Table4ColumnStart + "3</td><td>6</td><td>9</td><td>12" + Table4ColumnEnd,
+	answer : '9.  She was amused for a bit of time...', image : "https://64.media.tumblr.com/4da69d414d66b8ffd29c595cb5b5e454/tumblr_pnym2tju6I1rizwyuo1_540.gifv"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Thursday was also Keeley Hawes' birthday.  She starred in a time-travelling detective series named after which David Bowie song?" + Table4ColumnStart + "Ashes To Ashes</td><td>Loving The Alien</td><td>Life On Mars</td><td>The Laughing Gnome" + Table4ColumnEnd,
+	answer : 'Ashes To Ashes', image : "https://64.media.tumblr.com/c1f773a14d16eba551ab99409f511649/f580094a5d8657c5-83/s400x600/e1dad779ff7bcfccbf7f06565f700e045a186f0f.gifv"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "TRUE OR FALSE: The force of the 1883 Krakatoa explosion was so severe that weather stations all around the world were still measuring the pressure wave it made five days later?" ,
+	answer : 'True', image : "https://i.guim.co.uk/img/media/75b15f6967541575c7d86a78eb25b586c81956da/0_13_5577_3346/master/5577.jpg?width=620&quality=85&auto=format&fit=max&s=63213ec5e7155c8792f8d2be9b0968ca"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "WHO AM I? Born in Michigan, and having had the surnames Judkins and Morris, I've won 25 Grammy Awards in a career which started when I released my first single in 1962 aged 12. Who am I better known as?" + Table4ColumnStart + "Aretha Franklin</td><td>Dionne Warwick</td><td>Ray Charles</td><td>Stevie Wonder" + Table4ColumnEnd,
+	answer : 'Stevie Wonder', image : "https://www.notnowmusic.com/wp-content/uploads/various-artists-blues-brothers-soul-sisters-2cd.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "The country of Iceland has announced that from 2024 it is going to stop what?" + Table4ColumnStart + "Commercial whaling</td><td>Petrol cars</td><td>Seal culls</td><td>Bjork singing" + Table4ColumnEnd,
+	answer : 'Commercial whaling', image : "https://i.guim.co.uk/img/media/49f1dcacbe45b4d089c6b093159a3d23e8222540/0_0_5500_3667/master/5500.jpg?width=620&quality=85&auto=format&fit=max&s=b71e0d45c783cc69f7a4f56065dfc41e"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Wiki Voyage lists 23 locations visited by fictional Phileas Fogg in Jules Verne's Around the World in Eighty Days. No 2 is Paris, France. But what is the current height of the Eiffel Tower according to its official website, in feet?" + Table4ColumnStart + "563</td><td>1063</td><td>1563</td><td>2063" + Table4ColumnEnd,
+	answer : '1063 feet', image : "https://i.imgur.com/3fNbaKw.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "SPOT THE BALL: The real position of the curling stone has been obscured in this picture of Italy in action at the Winter Olympics. Where was it?" + Table4ColumnStart + "D</td><td>C</td><td>B</td><td>A" + Table4ColumnEnd,
+	answer : 'B', image : "https://i.guim.co.uk/img/media/9693a389aa5cbc3088518d371cff6e5f769c6389/0_0_5437_6256/master/5437.jpg?width=620&quality=85&auto=format&fit=max&s=5cff5464fd9643f8640ac9ed154cc02e"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who had UK hit singles in the late 1980s with singles including I Get Weak, Circle In The Sand and Leave A Light On?" + Table4ColumnStart + "Tiffany</td><td>Debbie Gibson</td><td>Belinda Carlisle</td><td>Kate Bush" + Table4ColumnEnd,
+	answer : 'Belinda Carlisle', image : "https://i.guim.co.uk/img/media/4dd05af81aba4a6323722a8040d609d594beaacd/0_0_2000_1200/master/2000.jpg?width=620&quality=85&auto=format&fit=max&s=0b45dab1e29bbcdfaa203403b925fbad"	});	
+
+
+
+
+
+
+quests[++questIndexBuilder] = { 
 		name : "Olympian",
 		hoverover : "Songs about Snow, cold etc",
 		tags : "music,2022-2-12,InnerWheel,saturday",
@@ -1049,4 +1096,5 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	question : "",
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/3ROjzQ6etfkdXUjJwDfhOM?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
 	answer : ''}) ;
+
 
