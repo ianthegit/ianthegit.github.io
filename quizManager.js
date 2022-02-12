@@ -622,7 +622,7 @@ function SQIncludeQuiz(optionTagsString) {
 	URITagsCount = tagsFromURI().length;
 	URITags  =tagsFromURI();
 	for (var i = 0; i < optionTagsCount; i++) { //Store all tags
-		if (!optionTags[i].includes('/') && !optionTags[i].includes('-')) {
+		if (!optionTags[i].includes('/') && !optionTags[i].includes('-')  && !optionTags[i].includes('AXAXL')) {
 			tempTags.push(optionTags[i]);
 		}
 	}
