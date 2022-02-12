@@ -1333,34 +1333,34 @@ quests[++questIndexBuilder] = { //
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
 	question : "What is this that Ted drew? ",
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLWuZKl6T4LPIdo9wImM-6zrZgAvfzQMjNve9Oul-d02r9Z77ae39_bDUEJZiLqbKZiIJJ2YDRP_UP4OPmzUIt1K6t6Zd-NKjp0Fd9tvUda1pVysYkpBHWLGG03oDBpZZ-4R_oRTMCXFh070CsJYup90hA=w178-h291-no?authuser=0",
 	answerimage : "https://c.tenor.com/jtE13C4lBuYAAAAC/beauty-and-the-beast-rose.gif",
 	answerSpeak : "Red Roses"}) ;
 addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
 	question : "What is this that Ian drew? ",
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUhtLKhaSoiVFgxPz0Ck_rUMmNzn6Etshonll1A36j6ojz997WJTTze0O-M73JMbaq77iXsE8Boti6ZuVfvlLJ9qmVKgOuUt5Co0UVs0f8GzzNaw-oDbMzEST3DIEmlRL619DjP8j_ETX14ElpTmxCelw=w495-h638-no?authuser=0",
 	answerimage : "https://c.tenor.com/tczs3LmpZLsAAAAC/cupid-arrow.gif",
 	answerSpeak : "Cupid"}) ;
 addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
 	question : "What is this that Ted drew? ",
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUQ9a4204g6hZpGULtvV-foKTOqayNNC8Sm_rb3LiPZoBrUYdjn6rsCdYCKyktUoCYpXePEvBRzKEyo1RrXAEcdxS8NHEI1oG05NnNLrQz2Z5miPj-OdRJsX-raPRikaJ2rVznm1Gb1ad5X4Afq5KpINA=w452-h386-no?authuser=0",
 	answerimage : "https://media0.giphy.com/media/26xBRiIYbyjCzYMAU/200.gif",
 	answerSpeak : "Heart"}) ;
 addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
 	question : "What is this that Ian drew? ",
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXXE39ABE0XBhhac9KH4-28xvNg3cpTNFIbl8DNaNexLT2gxMRTyuQM_ZesNvVa9ey-zZsZYHRRV4lNQXHHdQGnllXTZU8bOy-UQWnw5HRXIfRR2rmvqFjAK293u24P3Gr66sLphJ3wzX_oT9c_xS7XrQ=w324-h387-no?authuser=0",
 	answerimage : "https://c.tenor.com/oCwArMlGkEIAAAAM/happyvalentines-chocolate.gif",
 	answerSpeak : "Box of Chocolates"}) ;
 addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
 	question : "What is this that Ted drew? ",
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVgaDIB-hI55JpPEp_vpZvhF6q3gXAl6UpSi2pzArNdskStLNcWA5-EYx6Fg0t7RMn2za-SEKwQuFIwPlSxxpQbIc29VrSXFje6x3Eo1hpLn2cNjX66JnlTyqfSfGUk17vr15OfhHlWwwHLALdyWPgTmg=w250-h358-no?authuser=0",
 	answerimage : "https://i.pinimg.com/originals/b2/ab/47/b2ab47e1b4a14814e977e5879fb4765a.gif",
 	answerSpeak : "Kiss"}) ;
 addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
 	question : "What is this that Ian drew? ",
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLW42T4zlnb8T0-_x8sJELg72vfOKZTF1WSDWOEcDz5N1hPhvHM0gvjiqkLB8xjol_7HjtbgO_3rofsvqCiqWNrK3ELdwpTmpe-ICLPrUccUeOUdTEdZqCyl1WDO0H2O-q7NkT8soO6Nx_g8ldBirn_zYA=w427-h558-no?authuser=0",
 	answerimage : "https://c.tenor.com/N186b555lEwAAAAC/dancing-ewok.gif",
-	answerSpeak : "Ewok"}) ;
+	answerSpeak : "Ewok / Teddy Bear"}) ;
 
 
 /*
