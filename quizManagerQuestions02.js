@@ -1211,3 +1211,17 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : ''}) ;
 
 
+quests[++questIndexBuilder] = { 
+		name : "Rain",
+		hoverover : "Have you ever seen the rain?",
+		splash : {splashType : splashTypeText , splashText : "'Have you ever seen the rain' has been covered many times.   You're about to hear 9 versions of it, by these people.  Match the version to the artist...</BR></BR> Johnny Cash, Ramones, Smokie, Willie Nelson, Boney M, Rod Stewart, Creedance Clearwater Revival, Belinda Carlisle, Bonnie Tyler" },
+		tags : "music,2022-2-20,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/7lfuop8hR0EaihnRIXFahw?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+	answer : ''}) ;
+
+
