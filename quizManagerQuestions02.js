@@ -1103,7 +1103,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 quests[++questIndexBuilder] = { 
 		name : "Weatherfolk",
-		hoverover : "Olympics start",
+		hoverover : "Recognise these smashers?",
 		tags : "2022-2-20,saturday,InnerWheel,surfers",
 		questInfo: new Array()
 	};
