@@ -1329,7 +1329,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
 	answerSpeak : "Ewok / Teddy Bear"}) ;
 
 
-
 quests[++questIndexBuilder] = { //
 		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary on the theme of weather",
@@ -1337,23 +1336,24 @@ quests[++questIndexBuilder] = { //
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLWhM3YswlSQyuAyUfkqRancvh_2UGW1G1XP13WGYmGwHbwhbabAqeaEUnlbK7lP0YWiDkyACEcsXvyKwLikyaiFuThzzAoZRW8Cr_XT0fupcEvHQrpj2xMvf517STGqCkXw0DVFe3S6bfJR_Fg4BdavIg=w479-h382-no?authuser=0",
 	answerimage : "https://media4.giphy.com/media/LGY967AFmrueY/200.gif", answerSpeak : "Hurricane"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVuCXSeXqcxkJ9ximyaw8QuUCwp33F1wYKGIz4vb_aJ2xqGrHf-2VnJav_nOyRkJGUE1DwxNZIXm10bxL0JCPmJIxFQPrJuVy_Ic3XPllw8GCSP5KwL-F_MXiCCmvvjAcLTLSjygeGjN1t3R2frJTyb_g=w787-h494-no?authuser=0",
 	answerimage : "https://media3.giphy.com/media/3oEduQYoiVW7Yz8wKI/giphy.gif?cid=6c09b9525a3b914331c587761ebb61c1fee4212b843bce89&rid=giphy.gif&ct=g", answerSpeak : "Snow"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXhb66Joax15NOOK3o5pYK5iD98PaI3N3aT0ip5v7QQKw_xQ4mbMyZvfzfujR5t15k7IjJrZgIGRHsGbHiYhorxH4U84y9CpetDByKie9YhU7uSZ_7nmYFprRMjuYo8qcz_LalUBATCrOXm0MQ6700V3g=w395-h310-no?authuser=0",
 	answerimage : "https://i.imgflip.com/fqrg3.gif", answerSpeak : "Tornado"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVIlCOCv31uNK_TQsTXsZOL3nTm33AG33hzeYhJnF0xBt01H2cPucQLab9cXpTuwhQNhDCP1pW25gL6jbHoWfMGA81AQQfkPl-4JS6nGTD8qaXXk1dBtHzIRHfMUT4WbSYD66eIVSJ3FkPXhcVI9UFZAg=w491-h412-no?authuser=0",
 	answerimage : "https://media0.giphy.com/media/H693hTHBOmC1YK3c5d/giphy.gif", answerSpeak : "Sun"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUKMTLTGD2N0YiI7p-1QbFhtlRhw8kyryNI30SUS9gALFNbZBEB7dN56PC_bqo-A2TcAjA1WCeuUEQgCwbFDBr8M6AZlj9FSKW5f2MXAQCYAwYyw0GPNZ9mO9BuN9uDED-y36eJjMl9-EWmLbRE70eAlQ=w487-h499-no?authuser=0",
 	answerimage : "https://media1.giphy.com/media/3o7qE4opCd6f1NJeuY/giphy.gif", answerSpeak : "Thunder and Lightning"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLWywkRl3mDNrCNJhLIGoNqs2OQmTUN6no6cwLx-udrC0goZkIcj2oJ42vq4XiA70hIW5BIYXCM8k_NsUNAUxbw1_7S3jZoVTx6Ldcw6naZHhAZo1r_Nw1pHMnNWUn3YymJFrakqbsph18HQepi_JITIBw=w680-h458-no?authuser=0",
 	answerimage : "https://i.makeagif.com/media/11-23-2014/5Z7UDv.gif", answerSpeak : "Fog"}) ;
+
 
 
 /*
