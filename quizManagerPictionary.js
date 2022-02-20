@@ -2,9 +2,10 @@
  * 
  */
 
+pictionaryCount=0;
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 01",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary ",
 		tags : "30/1/2021,pictionary",
 		questInfo: new Array()
@@ -42,7 +43,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
   
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 02",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary - Bonus Point - guess the theme ",
 		tags : "6/2/2021,pictionary",
 		questInfo: new Array()
@@ -90,9 +91,9 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 03",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary",
-		tags : "13/2/2021,pictionary,specialDay",
+		tags : "13/2/2021,pictionary",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
@@ -123,7 +124,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 04",
+		name : "Pictionary" + pictionaryCount++,
 		hoverover : "Pictionary",
 		tags : "20/2/2021,pictionary",
 		questInfo: new Array()
@@ -156,7 +157,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 05",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary",
 		tags : "2021-2-27,pictionary",
 		questInfo: new Array()
@@ -189,9 +190,9 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 06",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary",
-		tags : "2021-3-6,pictionary,logo",
+		tags : "2021-3-6,pictionary",
 		questInfo: new Array()
 	};
 
@@ -218,7 +219,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 07",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary",
 		tags : "2021-3-13,pictionary",
 		questInfo: new Array()
@@ -246,7 +247,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 08",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary",
 		tags : "2021-3-20,pictionary",
 		questInfo: new Array()
@@ -273,7 +274,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 09",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary",
 		tags : "2021-3-27,pictionary",
 		questInfo: new Array()
@@ -300,9 +301,9 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 10",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary",
-		tags : "2021-4-3,pictionary,specialDay",
+		tags : "2021-4-3,pictionary",
 		questInfo: new Array()
 	};
 
@@ -327,7 +328,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 11",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary on the Theme of Royals",
 		tags : "2021-4-10,pictionary",
 		questInfo: new Array()
@@ -355,7 +356,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 12",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary on the Theme of household goods",
 		tags : "2021-4-17,pictionary",
 		questInfo: new Array()
@@ -381,7 +382,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 13",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary on the Theme of MarioLand",
 		tags : "2021-4-24,pictionary",
 		questInfo: new Array()
@@ -409,9 +410,9 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 14",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary on the Theme of Banks",
-		tags : "2021-5-1,pictionary,logo",
+		tags : "2021-5-1,pictionary",
 		questInfo: new Array()
 	};
 
@@ -435,10 +436,11 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://1000logos.net/wp-content/uploads/2017/09/Santander-Logo-500x176.png", answer : "Santander", answerSpeak : "Santander"}) ;
 
 
+
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 15",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary on the Theme of Fast Food",
-		tags : "2021-5-8,pictionary,logo",
+		tags : "2021-5-8,pictionary",
 		questInfo: new Array()
 	};
 
@@ -463,34 +465,35 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 16",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary on the theme of Summer",
 		tags : "2021-5-15,pictionary",
 		questInfo: new Array()
 	};
 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "https://lh3.googleusercontent.com/pw/ACtC-3cXoctQGwzsBZ_mfzRstoB1qVYsZnyyYgQxlS9APRS5yk_nf5LHQ7L6BaCcXjd0wl_add61mTm4uZGlvO9dzRr--EmMjt7bZjCaZNw50JYv3JOqiUHu0ligEGw82KqJG9GQMLuR7eRu68mwebax2hzuAw=w325-h350-no?authuser=0",
+	image : "",
 	answerimage : "https://image.shutterstock.com/image-photo/pug-dog-waiting-play-ice-600w-541036300.jpg", answerSpeak : "Ice-cream"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "https://lh3.googleusercontent.com/pw/ACtC-3eYW8RQ9wKofCHdtt4mrdZ3ZRtAF9v6pWtZyLt7lE3H7y4v2yBhZu0VbuTKCq-qYOARjig05izc5KRGxiWfDZBS2InwxqOapWe3pFu5u9tg2leA1LMGjwNITLui6QG9VXrJe-kF_BNtbEOvxXktS0Ff5w=w1282-h519-no?authuser=0",
+	image : "",
 	answerimage : "https://www.comelol.com/uploads/2017/9//pitchatent_234323.png", answerSpeak : "Tent"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "https://lh3.googleusercontent.com/pw/ACtC-3ds0hbZOtACN6nxM0aalQRTIpYtakQDN9hKTTfxdfK8Php0CIaVoBBUEc10b5IlygVWvR3INsWk0hh1r5-SO4G73BrGHBGagZqWz1lSVSPvEv9NjSk1HhOqe0W1tp1v4zCaNl8jlHPW5qkpOigHBd-BHQ=w346-h331-no?authuser=0",
+	image : "",
 	answerimage : "https://external-preview.redd.it/10R8bMwbS8ZSM-fQzQYb6vMnCO7oYoMJsLbaVKJWsgw.jpg?auto=webp&s=dd0d5af18e36f5abeb53736e9d94fc916c7b0ae9", answerSpeak : "The Sun"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "https://lh3.googleusercontent.com/pw/ACtC-3fHMSC9aFu4BeobnPnR36lefksNaHDcQUXs6bKOy4WWa-xbFMhOz2rjLdpsZaCfUM5j8EKrAlNQpw21Fmp6DcDE2TfnrL4XOOJldx_nQ7aHK0isHg-aYvGGWQSTZjWhlZ9vhgaZVPnCQQOmFksThFCNVQ=w409-h315-no?authuser=0",
+	image : "",
 	answerimage : "https://i.redd.it/71zi900rszc21.jpg", answerSpeak : "Shorts"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "https://lh3.googleusercontent.com/pw/ACtC-3ctANbpeDgnPpYbFhR0NoPMNYJdAZDeNSAnrNds04H6-0RAdjdB7o50M56msT08ba61yIiipuQgAHc4FYsmvDSViMfUqjRr4IIrFC_2xAzkZ2OA_fyKAl9lrmMqUdcqw-987BNhilGc0RjIDVYOmIyhVA=w629-h470-no?authuser=0",
+	image : "",
 	answerimage : "https://previews.123rf.com/images/sonsedskaya/sonsedskaya1809/sonsedskaya180900027/109560957-portrait-of-a-funny-raccoon-in-sunglasses-showing-a-sign-of-peace-isolated-on-white-background.jpg", answerSpeak : "Sunglasses"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "https://lh3.googleusercontent.com/pw/ACtC-3dMpmXh5uE4ukwkgQ0GADwBxkY6kioEPaXfienJOV8_9PgnKBKv82_WfSzsgHLzQkl71IXuha6uAYK71FBzK1LrezlME3dSsU3AvAM-Y0ZDyECe97UFCVuDHx6sOFMR9Cv8EzHhraDjEier3oVUfmETKg=w876-h544-no?authuser=0",
+	image : "",
 	answerimage : "https://pic.ebid.net/upload_big/1/8/4/uo_1477150422-12567-64.jpg", answerSpeak : "Seaside"}) ;
 
 
+
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 17",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary on the theme of last 6 Eurovision winning countries",
 		tags : "2021-5-22,pictionary",
 		questInfo: new Array()
@@ -517,7 +520,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 18",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary on the theme of Dinosaurs",
 		tags : "2021-5-29,pictionary",
 		questInfo: new Array()
@@ -543,7 +546,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 19",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary on the theme of the best bits",
 		tags : "2021-6-5,pictionary",
 		questInfo: new Array()
@@ -580,9 +583,8 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
 	answerimage : "https://lh3.googleusercontent.com/gaSwOekLX2MdVeM41O7l22m99YsjExGFI-EoiRi_XQ3yJ4Vcihykc52rMr2IQeYC-yAcxC7OLEjhMvzOFjAqix6t7EOgX6mG_kQJQb4do05LsYSfA6Gxwuh7xQ7WEQ4BH-b0-t-3miw=w2400",
 	answerimage2 : "" }) ;
 
-
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 20",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary on the theme of the other G7 countries",
 		tags : "2021-6-12,pictionary",
 		questInfo: new Array()
@@ -608,7 +610,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 21",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary on the theme of balls",
 		tags : "2021-6-19,pictionary",
 		questInfo: new Array()
@@ -634,7 +636,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 22",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary on the theme of dogs",
 		tags : "2021-6-26,pictionary",
 		questInfo: new Array()
@@ -660,7 +662,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 23",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary on the theme of Schooldays",
 		tags : "2021-7-3,pictionary",
 		questInfo: new Array()
@@ -685,9 +687,8 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 	answer : "Music"}) ;
 
 
-
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 24",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary on the theme of British Animals - with respect to Eddy The Badger Merckx.",
 		tags : "2021-7-10,pictionary",
 		questInfo: new Array()
@@ -711,9 +712,8 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLXfmvJcmzML1DkrVptGffKigdqoDpEtXMbVDpUjP4Jh480BhpRScUhMeqPrMf4-JVkTAvfxQGgxJ59vftmLlpF2gOYBWEVbQzPHHs1Asn2pT1gnzHbjNIXp0Ol1pkcbcOAmNncDChRI_QQljQF0zuw6mQ=w355-h258-no?authuser=0",
 	answerimage : "https://image.shutterstock.com/image-photo/funny-face-pug-dog-lion-260nw-507738691.jpg", answerSpeak : "Lion"}) ;
 
-
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 25",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary on the theme of travel - because the boys have travelled home",
 		tags : "2021-7-17,pictionary",
 		questInfo: new Array()
@@ -738,14 +738,13 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://static.boredpanda.com/blog/wp-content/uploads/2017/07/funny-subway-people-40-597098395bc45__605.gif", answerSpeak : "Subway / Tube"}) ;
 
 
-
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 26",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary on the theme of Olympics",
 		tags : "2021-7-24,pictionary",
 		questInfo: new Array()
 	};
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLUKErMAhbiFqxqzN5vAJGYTxEvnFgwMOWk4cf95TSk87gThCBKWNYwEnvrH-nRc9X3NDWPvY2kHsVqzuh4lXzlKn3C9xzmZIcB4n_yByi74cQiCBa4ApJiq0ZwTp49ugcBduaBRGtiUhdwZEj2aTKJSsQ=w629-h409-no?authuser=0",
 	answerimage : "https://media.tenor.com/images/a1ed68a842b7f034693039cc03bc9667/tenor.gif", answerSpeak : "Javelin"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
@@ -766,7 +765,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 27",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary on the theme of more Olympic sports",
 		tags : "2021-7-31,pictionary",
 		questInfo: new Array()
@@ -791,9 +790,8 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://i.pinimg.com/originals/8c/7c/76/8c7c762eb7ea8fae8e2ad42edbe19a28.jpg", answerSpeak : "Surfing"}) ;
 
 
-
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 28",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary on the theme of even more Olympics",
 		tags : "2021-8-7,pictionary",
 		questInfo: new Array()
@@ -817,10 +815,8 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLUsi60g4a4fXCICFwXenkSSdjMX8kkjbZObinLR72FXA_E9FZd6XfpnRgdJuBxq02j7FyKNWMX8xlLWr7ottjhM-uRenJ22nwO9dBxO02Mi_xzeDQG2gqeXr655mLifOHZ2v08PjTJnXj28PTlak2B0gQ=w490-h418-no?authuser=0",
 	answerimage : "https://images.tennis.com/image/private/t_16-9_1920/tenniscom-prd/pzjkyjid88ns55v0eive.jpg", answerSpeak : "Paralympic  wheelchair  tennis"}) ;
 
-
-
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 29",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary on the theme of Holidays",
 		splash : {splashType : splashTypeText , splashText : "Pictures on the theme of things that get used on holiday"  },
 		tags : "2021-8-14,pictionary",
@@ -845,9 +841,8 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLXyvd_pNkFOwqI7UT1bgJhsjLt42rCySJ0UnbzJKInYs0SAifhnLLtgx6q0FezarRjVr90IgfNmqn40vjPKPVUVLvWvi-b9NtNlJwhi2BZ-P2IN6UT5pW4mMd13ywhUKfm8uk_xcDs4zA6QCB0bZeswWA=w344-h443-no?authuser=0",
 	answerimage : "https://images-na.ssl-images-amazon.com/images/I/61PWGrXbZqL._AC_UX679_.jpg", answerSpeak : "Swimming Trunks"}) ;
 
-
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 30",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary on the theme of back to school",
 		tags : "2021-9-4,pictionary",
 		questInfo: new Array()
@@ -857,7 +852,7 @@ quests[++questIndexBuilder] = { //
 	answerimage : "https://cdn3.vectorstock.com/i/1000x1000/94/57/funny-pencil-vector-4939457.jpg", answerSpeak : "Pencil"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLWmAoTt2PP96-EE-VyK6gPuKZoQ9fFel_3ShxyoKdk65mDrUzfE8iWT0yPLafYUx-MANrKh-AjSRNqgzsYMuokaYWk7xZOsY1oraozWfyO4uD_3pEwwJJeOGaVE1Woc3RLCjbAUOET4fIvjH0kyICf3zg=w351-h448-no?authuser=0",
-	answerimage : "https://i.pinimg.com/originals/24/19/bb/2419bbbde6d00253dbf257d82776ddeb.jpg", answerSpeak : "Book"}) ;
+	answerimage : "https://images-na.ssl-images-amazon.com/images/I/613Jvo104CL.jpg", answerSpeak : "Book"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLWU3_C3fwQhm2CycPd1S-pW3e2hU4k8xDzk460u0qiCZ55WIIG_r3_ZavnWom_G-gx4FMXoNVz0F1XPMbw04lKiyEhMRk-7ZJ20vKAEB6FzG3BIgnfnPGm-J9cliwCGWeb5025ySni8SR8VowNTPJHpMg=w687-h514-no?authuser=0",
 	answerimage : "https://image.shutterstock.com/image-vector/back-school-chalkboard-blackboard-hand-260nw-111505283.jpg", answerSpeak : "Chalk"}) ;
@@ -866,14 +861,14 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://i.makeagif.com/media/5-09-2017/eDVWcp.gif", answerSpeak : "Blackboard eraser"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLVk7w8x5eFb98QuU7BI8wdfjJEQgqINhJtQlUgmbMB2hcLNeLwRGh7RfFQN2a3A3uKHlb9kkYFoonDy-byk25n6Ipl2oElh1IBX-56F1hyUNSyUDBir3kqIXuJMrXfIwidg3NLkzp-OasM3-9Ic-5jkRQ=w745-h590-no?authuser=0",
-	answerimage : "https://img.huffingtonpost.com/asset/5d0224ea2500004e12e33a0d.jpeg?ops=scalefit_950_800_noupscale", answerSpeak : "Blackboard"}) ;
+	answerimage : "https://i.chzbgr.com/full/9089532160/hE4CE046C/contemplate-the-insigniacance-of-one-human-life-on-this-bau-of-swirling-gas-and-rock-pee-matsareke", answerSpeak : "Whiteboard"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLXl67bVt3fnyIjuFTEQwXJ9NR_s6dz08g8EdTbOOZjamPMBGA70A8YyvE5Z56Nh3EzqrcCYmQu688CqrDJB8bZl-WHwf8-DxEpz9KuhO-kTE1G8nBcqXHC38ZZ_xUdnzPNIzBxzsYcP8kpTCIrpsNXAjA=w845-h618-no?authuser=0",
-	answerimage : "https://i.chzbgr.com/full/9089532160/hE4CE046C/contemplate-the-insigniacance-of-one-human-life-on-this-bau-of-swirling-gas-and-rock-pee-matsareke", answerSpeak : "Whiteboard"}) ;
+	answerimage : "https://img.huffingtonpost.com/asset/5d0224ea2500004e12e33a0d.jpeg?ops=scalefit_950_800_noupscale", answerSpeak : "Blackboard"}) ;
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 31",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary on the theme of famous vehicles from TV and Movies",
 		tags : "2021-9-11,pictionary",
 		questInfo: new Array()
@@ -897,9 +892,8 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLUQ1Bh2V88n3nJLvn83SXvMRGiIZOEqjfJtTlqLNT3cv-TV8PeU1vPbR7OcMbjDU0LB6uL2emIV-W8stvC9Ap1N61vgEJSvHsEVSblXQlEDOeJT2IiUXBwNXY0acfezDjsddQzD9XsNHzEhN6Cb9qfTMQ=w726-h497-no?authuser=0",
 	answerimage : "https://www.independent.ie/migration_catalog/d2d97/25303377.ece/AUTOCROP/w1240h700/ET", answerSpeak : "ET's bike"}) ;
 
-
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 32",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary on the theme of British stereotypes",
 		tags : "2021-9-18,pictionary",
 		questInfo: new Array()
@@ -924,7 +918,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://cdn-o.fishpond.com/0286/242/138/1410651732/original.jpeg", answerSpeak : "Pint of beer"}) ;
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 33",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary on the theme of Famous historical figures",
 		tags : "2021-9-26,pictionary",
 		questInfo: new Array()
@@ -950,33 +944,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 34",
-		hoverover : "Pictionary on the theme of Bond, James Bond",
-		tags : "2021-10-3,pictionary",
-		questInfo: new Array()
-	};
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "https://lh3.googleusercontent.com/pw/AM-JKLVDSRbkSg6JuHVgkZIhjIen8j1SjZ6QM1qEdhMVP6o-QvcSRhsO48QvPZZjxYhViZ1dXsY5yUXlf3v-mcody6OopvX1fnkHwUykrm0oQ2MlZqzzBDVHqkjjVA4Si6ASH4q27xrgotJlOOgF-qKMmFE5YA=w598-h533-no?authuser=0",
-	answerimage : "https://static.independent.co.uk/s3fs-public/thumbnails/image/2020/03/06/09/james-bond-comp-0.jpg?width=990&auto=webp&quality=75", answerSpeak : "Gun"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "https://lh3.googleusercontent.com/pw/AM-JKLX8gCehRKSeuQACZ2KcjeZ-EFB06La_5TrrDAPtTIdIdPtEAAWYpYPvbjvJhJGll-ZEbau4CeU0mtk7DYC_4geK76k-6IC3Y-Nqa5h5RLOCEx_zybCJt-wohlEmFSy8qmGwljCWJGDKGAfoKwiIkh45GA=w369-h400-no?authuser=0",	answerimage : "", 
-	answer : '<iframe width="560" height="315" src="https://www.youtube.com/embed/OUUq5mRCimo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',  answerSpeak : "Martini, shaken not stirred"}) ;
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "https://lh3.googleusercontent.com/pw/AM-JKLVidsJKvQo24hBN4eDPotSjbdu5nM3xz9vGIuW_gZGYnc74BuAO-n9xVPIf9qHpxzQxULCgJy9fToKBdPV5KGpCA5EpKohIucJhNgisVWoXtX9Ur1KyeIqCzWrBU_RX2fCUgVt5UEtxZgzf5-dLoh4iow=w551-h268-no?authuser=0",
-	answerimage : "https://i.pinimg.com/originals/c4/eb/8c/c4eb8c4a7106b4bac4b9ab61bb25af82.jpg", answerSpeak : "Aston Martin"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "https://lh3.googleusercontent.com/pw/AM-JKLXFg5IwA1e4HNPD2vW0xIhAi-SB8VDPE7y0Vgv-Q2Tr5-e1XAY72Kj7c-nNk9kmvm7Lylxid23d_o0Ufn8XbOw460ODj9zz3JEParEIjqsTl__ZpHbIMic1PBUqaoC5VEuGfulmdaQLFwZKtLyZmW72IA=w775-h660-no?authuser=0",
-	answerimage : "https://www.gannett-cdn.com/-mm-/99678243ec47428d05e9303d907baf407c11a17d/c=0-116-3993-2372/local/-/media/2017/05/23/USATODAY/USATODAY/636311344714120851-XXX-GETTYIMAGES-607391786-MASTER-91131045.JPG", answerSpeak : "Pretty Women"}) ;
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "https://lh3.googleusercontent.com/pw/AM-JKLWo09eW99nrn9DKDlqm2VM_5k_i5HYxaHn02QYPYDfEhoKtEvWpPQJ7VBlKhr5llJuO1UbMW6jBXLe0cULaPTQJ6boqcwZnPlZuhHpMSWoDx0LlHjdDZugO1c8350lYlSOKGkmSIonkWu9drOx9mI7zcQ=w469-h243-no?authuser=0",
-	answerimage : "https://static.wikia.nocookie.net/p__/images/3/36/13911_883787808302798_7013617339755323866_n.jpg/revision/latest/scale-to-width-down/286?cb=20170227001403&path-prefix=protagonist", answerSpeak : "Q and M"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "https://lh3.googleusercontent.com/pw/AM-JKLXlbq-StTELdq8iT3e2M_TEagEpCay0Cm--g_N1axolHkR2CC-OxDwm0BJMxuw5q4eRwE9UHwrRkY3R6kDxeQVJwk_w9OeJuY1CiNHq7dEpkyK6rlQCC8ft1r2D_GmHBBe9W9p5D3cFqgCwdhnU8blHbQ=w454-h559-no?authuser=0",
-	answerimage : "https://www.primermagazine.com/wp-content/uploads/2020/09/james-bonds-tuxedos.jpg", answerSpeak : "Tuxedo"}) ;
-
-
-quests[++questIndexBuilder] = { //
-		name : "Pictionary 34",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary on the theme of Bond, James Bond",
 		tags : "2021-10-3,pictionary",
 		questInfo: new Array()
@@ -1001,8 +969,9 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://www.primermagazine.com/wp-content/uploads/2020/09/james-bonds-tuxedos.jpg", answerSpeak : "Tuxedo"}) ;
 
 
+
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 35",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary on the theme of The Squid Games - sea creatures",
 		tags : "2021-10-10,pictionary",
 		questInfo: new Array()
@@ -1028,7 +997,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 36",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary on the theme of Playground Games",
 		tags : "2021-10-17,pictionary",
 		questInfo: new Array()
@@ -1054,9 +1023,8 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 
-
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 37",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary on the theme of Halloween",
 		tags : "2021-10-24,pictionary",
 		questInfo: new Array()
@@ -1079,7 +1047,6 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLVWYc29KvQ7OPUjvaLutUlrDjzlLEX5U9bn-493fL6wGcPRou5My2FbCNDmpmlFeEzk0mOjnFxaOPKQgLxAeqKWVslXrlNnm4X98FXmZ2VlRhewCioAYC4bjxxCjzgN3EF-1S3v2nMw73y5IeWSlq9htw=w296-h316-no?authuser=0",
 	answerimage : "https://c.tenor.com/_0zRWyx38OYAAAAM/pumpkin-spice.gif", answerSpeak : "Pumpkin"}) ;
-
 
 
 
@@ -1110,6 +1077,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 
+
 quests[++questIndexBuilder] = { //
 		name : "Pictionary 39",
 		hoverover : "Pictionary on the theme of COP26 and Global Warming",
@@ -1117,53 +1085,55 @@ quests[++questIndexBuilder] = { //
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "https://lh3.googleusercontent.com/pw/AM-JKLVHsgm5D2BQXGWPTKb343_f8A1GI_VZOe9D3IY4Og4qXEpun5y3kaK3uCi-vsjJVVUsAgU2rP1PmRX0fAVZIgAsBWRt63LJ0OODCdmSLJOCtcfiwQNJK0Iq8KfPtCmDvA7sALm0bh_V5wLSxZiixr0OTw=w501-h513-no?authuser=0",
-	answerimage : "https://lh3.googleusercontent.com/proxy/MbOTJ39BrIt0qks47ckoyJG7kALmRcJ8ooRd7zxEhrOsRVUihMBh8lCpiQg5_xhjcISwRDgo_AB85pgSwe2pkAzrN7f8bwlsMBuROE0Cu-uoDZFQQtxuNVbm_vZtfDDf91AOlCFs_w8j1EPT7sMM2nmPldw", answerSpeak : "Gloves"}) ;
+	image : "",
+	answerimage : "https://lh3.googleusercontent.com/proxy/267DUsoJnSqavrDHIAxRn6HK6skZ813kItH_dLWxYsL2peV1DjAalyk2weQ2qOLr302K8KJcVywXw-Mc2JjfWbQO5Ld_AkE5_byOmZwDIMpWx4Sn5Cwi-YjpiZZstU5m3y8pGGfn7L2dhCv_TtTzPWLRXtw", answerSpeak : "Gloves"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "https://lh3.googleusercontent.com/pw/AM-JKLXcCVA12ph8TfzcFSN5PB9AMPOSTKR3F5EtXfMyYaC9sSFLVNB8Lw9muovjOIW2dljRdj0cYaJbd69o1YVXa5j3ie-EcvA2uEnUfLvS2C2GshL1vogOwz-keO-S32-hBw8LZDGhc-fS4dLnVJo0_aIfgw=w455-h432-no?authuser=0",
+	image : "",
 	answerimage : "https://media4.giphy.com/media/cNRem6vXQbMCL0hoGf/giphy.gif", answerSpeak : "Wooly bobble hat"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "https://lh3.googleusercontent.com/pw/AM-JKLXcCZPHSZTKmpxoi1qhVERGlYj9myzV_kKYPE0kWWc1-H9zDqmh0Gt2fNN8a93o9RTsgtW4aF0OmXIP72S6Ui7pI8qd1kUW53-ALvv145QDP9OJYO9jx8oU58l-SjHXSbUoUd9-eYfO0dVula6c9Y_R1A=w735-h620-no?authuser=0",
+	image : "",
 	answerimage : "https://static.onecms.io/wp-content/uploads/sites/20/2018/09/lenny-kravitz1.jpg", answerSpeak : "Scarf"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "https://lh3.googleusercontent.com/pw/AM-JKLVHdnhN6Ct09KimOOmZU8BK23fDfoIcRN-EhLKUBw2V2E2xQqTiW0dxYJcIJWsBSBmMY6bVNOqD8joKOBdOg9pQTcccGZyh7HEW47-H51SNwrqeZ0OFq-4Rln69jqSyLVzCkc8BBnhBOgg7B2qGy3SpCw=w595-h439-no?authuser=0",
+	image : "",
 	answerimage : "https://thumbs.gfycat.com/CleverUnitedIberianbarbel-max-1mb.gif", answerSpeak : "Flip-flops"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "https://lh3.googleusercontent.com/pw/AM-JKLV20-dzWSm50qncd6dkqu5n41bFJ-5vqreoXNw4EYdH_CQkOqzzaPrQIwu_gntvjTGtAsAm9HT2FcZx79RsEAyhNlcOE87gNFrH3ZFba5veAYZRs2Ij4v9OYToAmLHZ0Ilyzk_osmxPnYijvjAqIHgMtQ=w412-h294-no?authuser=0",
+	image : "",
 	answerimage : "https://i.imgur.com/aGx2xbc.gif?noredirect", answerSpeak : "Swimming trunks"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "https://lh3.googleusercontent.com/pw/AM-JKLXcsScOKmLx2vd0e5iSjvuQZhCizFT9O5boh7oxV-6zyXFtNIWY8k1BJRujToQsXq05-5_-pna_YfMmcjTb824FoCaLGhl1eeZyC7MekE7xoz3gZObQrdr3LAE5cH3M1WT4KVa-D0ZjcjnN_ndSCg6lDQ=w903-h445-no?authuser=0",
+	image : "",
 	answerimage : "https://c.tenor.com/iFr08qPaScgAAAAM/snorkeling-girl.gif", answerSpeak : "Snorkle"}) ;
 
 
+
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 40",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary on the theme of Cops",
 		tags : "2021-11-14,pictionary",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "https://lh3.googleusercontent.com/pw/AM-JKLUdEaVyjbCR8MU7e32Unu5joqr6iCt--KlpEn8wFLalgD9_YWYPmPLjEfdsh_jvb4VykPuOoFZCBId2Zi2Aw5HMa80v2xKScA7NoaPQCI_NYAjRzYIgil4Vjlm-eANNP9z74tJHLreCpSeVqMT-i0NJrQ=w356-h254-no?authuser=0",
+	image : "",
 	answerimage : "https://cdnmetv.metv.com/HatGw-1504815952-embed-tj-hooker-healthier-partner.gif", answerSpeak : "Donut"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "https://lh3.googleusercontent.com/pw/AM-JKLVRvPpNzPorSGL6xzOo943WVabVXi-ul6IrBZTxfNRQ8EKsKx5-msAAseu461syPlp5VE5voG1svXnJ0zOy-7e3TRrx9bKVPyfYdcCs723MYQzhT8OXeSVBgu4Pg8Cwiwy_WNRkn1XAXrOXjGKVDtQZGA=w417-h575-no?authuser=0",
+	image : "",
 	answerimage : "https://i.imgur.com/aBP01MR.gif", answerSpeak : "Helmet"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "https://lh3.googleusercontent.com/pw/AM-JKLWO8Yo3aMObbWWvupq88P8cnncjIbDjxTmwVy69qE2RM_56vgRbWYmLYTHqvmLCbufCBEUFjeSalZFIPvjV3pMlOV3SvLQUJ8IrWC7tMUuHoaSpf5YuIScKX5oTXAm3duRKvjbEOEVy1GX4pgOPL6uBEA=w460-h212-no?authuser=0",
+	image : "",
 	answerimage : "https://c.tenor.com/LuH2RKCgotwAAAAM/chandler-bing-friends.gif", answerSpeak : "Handcuffs"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "https://lh3.googleusercontent.com/pw/AM-JKLVxYAQKXquDzsiMM-ONMcuDBHiG4hO6-czra-rryCAZ-QYeBDK3UJMAT6K-C1Ki2_sq2W_c1H8i5R-DvLuUtLCb9oEyYe3-_uAM2nclEGdRbIviiqzH46dNoSohT6bu5o1Zb-zQOAFG2Fh5zEWJoZWg7w=w625-h216-no?authuser=0",
+	image : "",
 	answerimage : "https://thumbs.gfycat.com/FluidIllegalCats-max-1mb.gif", answerSpeak : "Trunchen"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "https://lh3.googleusercontent.com/pw/AM-JKLUaNFqLFFTHoFO0NpuX3BVhYRLgb_tzUaYZTOtZI2Do2Me2EOx0naSi-GcEJCSX2E9PjiC5DlHzMpcroQOV81r5EE8tUm-1B25FjfCghF_AvHMRzZKy2NFQpPbeKmlCwR9FmXXSgYckChLPZJbjzYhPCw=w248-h295-no?authuser=0",
+	image : "",
 	answerimage : "https://thumbs.gfycat.com/BleakPlayfulAlabamamapturtle-max-1mb.gif", answerSpeak : "Police Box"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "https://lh3.googleusercontent.com/pw/AM-JKLUlAhTQUZSATxtxIZ7rEbHHz1xoYryIxfk9lLvZE0sO7ecYdLytX-Asl4VlUOD4AHwDHAIRWdQQNYfnrPc_KrzdHoapf_7apJA6d_1YO3SldoIeyeBNgCrkDTekBZ1FOTUnuOaPdK9pHII6qfpBseCBgA=w460-h199-no?authuser=0",
+	image : "",
 	answerimage : "https://thumbs.gfycat.com/LinearCheerfulIberianemeraldlizard-max-1mb.gif", answerSpeak : "Police car"}) ;
 
 
+
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 41",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary on the theme of IACGMOOH",
 		tags : "2021-11-21,pictionary",
 		questInfo: new Array()
@@ -1189,9 +1159,8 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 
-
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 42",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary on the theme of Christmas Parties",
 		tags : "2021-12-5,pictionary",
 		questInfo: new Array()
@@ -1217,7 +1186,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 43",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary on the theme of Downing Street Work Events",
 		tags : "2022-1-15,pictionary",
 		questInfo: new Array()
@@ -1242,9 +1211,8 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://e3.365dm.com/21/10/1600x900/skynews-therese-coffey-work-and-pensions_5537124.jpg?20211006125453", answerSpeak : "Karaoke"}) ;
 
 
-
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 44",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary on the theme of double-barralled food",
 		tags : "2022-1-22,pictionary",
 		questInfo: new Array()
@@ -1270,14 +1238,14 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 45",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary on the theme of Chinese New Year",
 		tags : "2022-1-29,pictionary",
 		questInfo: new Array()
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLWchup3y4FJNGCdMg5EH2gkfltNq-XePCK-tNIEHRf6dDQ2201ozU_bya53zr-RKbuPVVAtExn7olLG5rEskPJ6Y5cNl4dAfixpHOwSgpnkLMIdkZWPt8CAihHpdkW4c-_p6q0_TMV-a0QkD_LZ1Szf9g=w500-h395-no?authuser=0",
-	 answerimage : "https://c.tenor.com/6Hd8Xfq0P0kAAAAC/boi-ox-chifrudo.gif",answerSpeak : "Ox"}) ;
+	answerimage : "https://c.tenor.com/6Hd8Xfq0P0kAAAAC/boi-ox-chifrudo.gif", answerSpeak : "Ox"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLWIp3C1DRPLhF5nKm8F-9vyiaY9221KBLJWe3eQFM5cFKtrdv7LHkmtTayVfMIxQMUt4EPO_e-Mhu1gNVP_uhNbBGjWrTzfXZPuhSOcGhGABI5ErxIrcagiTHkYQgfYImMupnwlT8TYkHx_6rpcxMhNqQ=w502-h524-no?authuser=0",
 	answerimage : "https://media0.giphy.com/media/l9mASFqtemeKk/giphy.gif", answerSpeak : "Horse"}) ;
@@ -1297,9 +1265,8 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 
-
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 46",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary on the theme of Winter Olympics",
 		tags : "2022-2-5,pictionary",
 		questInfo: new Array()
@@ -1324,10 +1291,9 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://66.media.tumblr.com/d1f2d39ccfc9d2cab6e7e5299a50a79f/cc3fd6293e2adb75-1a/s400x600/5d5a65b87323b402b98476085000e2b3d203247e.gif", answerSpeak : "Snowboarding"}) ;
 
 
-
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 47",
-		hoverover : "Pictionary",
+		name : "Pictionary " + pictionaryCount++,
+		hoverover : "Pictionary on the theme of lurve",
 		tags : "2022-2-12,pictionary",
 		questInfo: new Array()
 	};
@@ -1363,12 +1329,46 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
 	answerSpeak : "Ewok / Teddy Bear"}) ;
 
 
+
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " + pictionaryCount++,
+		hoverover : "Pictionary on the theme of weather",
+		tags : "2022-2-20,pictionary",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://media4.giphy.com/media/LGY967AFmrueY/200.gif", answerSpeak : "Hurricane"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://media3.giphy.com/media/3oEduQYoiVW7Yz8wKI/giphy.gif?cid=6c09b9525a3b914331c587761ebb61c1fee4212b843bce89&rid=giphy.gif&ct=g", answerSpeak : "Snow"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://i.imgflip.com/fqrg3.gif", answerSpeak : "Tornado"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://media0.giphy.com/media/H693hTHBOmC1YK3c5d/giphy.gif", answerSpeak : "Sun"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://media1.giphy.com/media/3o7qE4opCd6f1NJeuY/giphy.gif", answerSpeak : "Thunder and Lightning"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://i.makeagif.com/media/11-23-2014/5Z7UDv.gif", answerSpeak : "Fog"}) ;
+
+
 /*
-  
+ * 	image : "",
+	answerimage : "", answer : "Table"}) ;
+
+ * 
+  	image : "",
+	answerimage : ""
+ 	image : "",
+
  quests[++questIndexBuilder] = { //
-		name : "Pictionary ??",
+		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary on the theme of ??",
-		tags : "2021-?-?,pictionary",
+		tags : "2022-?-?,pictionary",
 		questInfo: new Array()
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
@@ -1389,5 +1389,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
 	image : "",
 	answerimage : "", answerSpeak : ""}) ;
+
+
 */
  
