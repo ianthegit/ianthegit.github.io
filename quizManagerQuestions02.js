@@ -1098,3 +1098,116 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : ''}) ;
 
 
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Weatherfolk",
+		hoverover : "Olympics start",
+		tags : "2022-2-20,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What is this weatherperson's name?" ,
+	answer : "Gateshead's own Wincey Willis", image : "https://i.pinimg.com/originals/92/e6/0b/92e60b678e1e51c2f2058adc0f29943c.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What is this weatherperson's name?" ,
+	answer : 'Trevor Baker', image : "https://ichef.bbci.co.uk/news/1024/branded_news/40A3/production/_90874561_mediaitem90874306.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What is this weatherperson's name?" ,
+	answer : 'Becky Mantin', image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Becky_Mantin_press_shot.jpg/220px-Becky_Mantin_press_shot.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What is this weatherperson's name?" ,
+	answer : "Suffolk's own Jim Bacon", image : "https://ichef.bbci.co.uk/images/ic/640x360/p01pn1m5.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What is this weatherperson's name?" ,
+	answer : 'Ian McCaskill', image : "https://ichef.bbci.co.uk/news/624/mcs/media/images/72170000/jpg/_72170772_forecasterianmccaskillasseenin1978.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What is this weatherperson's name?" ,
+	answer : 'Michael Fish', image : "https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/8/2018/07/rexfeatures_498763g_209637742_289246612.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What is this weatherperson's name?" ,
+	answer : 'Bill Giles OBE', image : "https://cdn.images.express.co.uk/img/dynamic/130/590x/secondary/BILL-GILES-1123043.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What is this weatherperson's name?" ,
+	answer : 'John Hammond', image : "https://pbs.twimg.com/media/BtiqwlhCAAI4Pii?format=jpg&name=large"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What is this weatherperson's name?" ,
+	answer : 'John Kettley', image : "https://markgorman.files.wordpress.com/2015/08/bbc-john-kettley_2786041k.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What is this weatherperson's name?" ,
+	answer : 'Carol Kirkwood', image : "https://www.thesun.co.uk/wp-content/uploads/2021/11/b522d2c6-8ae9-4bed-83c8-1d19dd05726a.jpg"	});	
+
+
+quests[++questIndexBuilder] = { 
+		name : "Mullets",
+		hoverover : "Seeing AC/Dcmade me hanker for my mullet days",
+		splash : {splashType : splashTypePictureAndText , splashText : "Seeing AC/DC made me hanker after the time I sported God's own haircut.  Do you recognise these other trendsetters...?", splashImage : "https://lh3.googleusercontent.com/ThdLe1i8Jk_PC3xSV5tN6cJglSXMm91qB1avLkXFCo_5HqS5u7qz5464-WUBJHW2bh5fAkig4dNmkRmcA9xRmmL6UHKVmotVM4AbZYkEXdzd928c3Bo1t8Y3I0WcYTHGCGAf5HEdLCFj2UJ6XTpCU4JRqW9I4g4jFCaGCuvM4_fIg13CpnhA-zm5yaN8CSMUCqPOp198BigOQ1eODHyFJpF5MuiKmx3yefRsaRW0yhRlYbjD01DIS-Mgp-dBBkcqhafrJlHnildUl8fUJ2MLlpDqXLyMYKMwftI-Z0jYLukD247fErOb8fF2l-Sa1-5vk-NZbvPMtD47b7Nbpszv4jlREWXARIb3hwt52rUkF7QR6PaoprMnO4OZGTHUiFzkexlGMQQoHK8fQYuIganoWCEaoHHgbO-ZDPj22GFqO24KnUQ2_aaNOcCGQnAs6lyi6XG0zT8PkMSVhXt0YskW_YwVsh1WK1-HSbQCO_z_ukX8ioWrkPUWKqjG8C96vfhh8GmMNRLWIVDYx-NOmTKy0UUTaiNNkJ0c46ATDVXu1zVmvK7yyz0Bi22LGsCM4EcGrh4SxnvsXX4bszrNyBiHfJE8vPpAmcVa9hD3kzfCS556TgSxvwej9E6VD87DXIFwjyvmZ1kgg1zx61xQeaqFjv3Tnu78fyjQErYLHkWY0i8iXaaQjnHyU0LckvC1Fpw5Ga9GQNkHPtUHm1istaUmHZ0YLQ=w219-h297-no?authuser=0" },
+		tags : "2022-2-20,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this sporting a wonderful mullet?" ,
+	answer : "Billy Ray Cyrus", image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/photo-of-billy-ray-cyrus-photo-by-michael-ochs-archives-news-photo-74259803-1567351950.jpg?crop=0.880xw:0.670xh;0.114xw,0.116xh&resize=768:*"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this sporting a small mullet?" ,
+	answer : "Charlie Sheen", image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-116311477-1567351542.jpg?crop=1.00xw:0.648xh;0,0.164xh&resize=768:*"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this sporting a wonderful mullet?" ,
+	answer : "Rob Lowe", image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/rob-lowe-news-photo-77158196-1567351988.jpg?crop=0.946xw:0.646xh;0.0536xw,0.0102xh&resize=768:*"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this sporting a wonderful mullet?" ,
+	answer : "Andre Agassi", image : "https://i2-prod.mirror.co.uk/incoming/article6942979.ece/ALTERNATES/n310p/Andre-Agassi.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this sporting a wonderful mullet?" ,
+	answer : "George Clooney", image : "https://i2-prod.mirror.co.uk/incoming/article6942983.ece/ALTERNATES/s615b/v.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this sporting a wonderful mullet?" ,
+	answer : "Michaal Bolton", image : "https://i2-prod.mirror.co.uk/incoming/article6942981.ece/ALTERNATES/n310p/Michael-Bolton.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this sporting a wonderful mullet?" ,
+	answer : "Carol Vorderman", image : "https://i2-prod.mirror.co.uk/incoming/article6942994.ece/ALTERNATES/n310p/Carol-Vorderman.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this sporting a wonderful mullet?" ,
+	answer : "Scarlett Johansson", image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/scarlett-johansson-at-the-santa-monica-beach-in-santa-news-photo-1567723643.jpg?crop=0.965xw:0.719xh;0.0349xw,0.0443xh&resize=768:*"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this sporting a wonderful mullet?" ,
+	answer : "Patrick Swayze", image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/patrick-swayze-attends-in-fashion-magazine-party-on-may-13-news-photo-681957690-1567351591.jpg?crop=1.00xw:0.624xh;0,0.0842xh&resize=768:*"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this sporting a wonderful mullet?" ,
+	answer : "Meryl Streep", image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/walt-disney-television-via-getty-images-motion-pictures-news-photo-463522962-1567456682.jpg?crop=0.858xw:0.584xh;0.103xw,0.0832xh&resize=768:*"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this sporting a wonderful mullet?" ,
+	answer : "Kurt Russell", image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/kurt-russell-mullet-1567721926.jpg?crop=0.411xw:0.619xh;0.146xw,0.102xh&resize=768:*"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this sporting a wonderful mullet?" ,
+	answer : "Ellen DeGeneres", image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/aired-2-11-87-pictured-ellen-degeneres-photo-by-alice-s-news-photo-140895809-1567448313.jpg?crop=0.815xw:0.536xh;0.0780xw,0.0459xh&resize=768:*"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this sporting a wonderful mullet?" ,
+	answer : "Hulk Hogan", image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/businessman-donald-trump-and-world-champion-wrestler-hulk-news-photo-810942786-1567351889.jpg?crop=0.448xw:0.544xh;0.515xw,0.117xh&resize=768:*"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this sporting a wonderful mullet?" ,
+	answer : "Kiefer Sutherland", image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-116736695-1567453235.jpg?crop=0.680xw:0.440xh;0.218xw,0.134xh&resize=768:*"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this sporting a wonderful mullet?" ,
+	answer : "David Beckham", image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/real-madrids-briton-david-beckham-and-teammate-brazilian-news-photo-1567724810.jpg?crop=0.713xw:0.754xh;0.251xw,0.00217xh&resize=768:*&keepGifs=1"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this sporting a wonderful mullet?" ,
+	answer : "David 'The Hoff' Hasselhoff", image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/john-schneider-and-david-hasselhoff-at-atlanta-motor-news-photo-615167556-1567457699.jpg?crop=0.376xw:0.561xh;0.476xw,0&resize=768:*&keepGifs=1"	});	
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Weather",
+		hoverover : "Songs about the weather",
+		tags : "music,2022-2-20,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/6yMm5y8CES7cJbIvaBhAlZ?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+	answer : ''}) ;
+
+
