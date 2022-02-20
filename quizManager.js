@@ -16,6 +16,7 @@ document.getElementsByTagName('head')[0].appendChild(meta);
 //https://www.edinburghnews.scotsman.com/whats-on/arts-and-entertainment/25-funny-pub-quiz-questions-2020-hilarious-and-quirky-trivia-ask-your-online-quiz-plus-answers-2540427
 //  https://www.mylondon.news/whats-on/family-kids-news/take-really-random-questions-quiz-18168558
 //  https://www.stokesentinel.co.uk/whats-on/whats-on-news/ultimate-virtual-pub-quiz-with-4141015
+//  http://www.celebritizer.com/   Who has worked with whom
 
 currQuestIndex = 0;
 currQuestStageIndex = -1;
@@ -183,8 +184,7 @@ function SQInit() {
 	showTags = SQShouldShowTags();
 	
 	document
-	.write("<div id='SQQuiz' class='SQQuizMain' ><span id='SQworkarea' class='grad'><table border='1'>"
-//	.write("<div id='SQQuiz' class='SQQuizMain' ><span id='SQworkarea' class='grad'><table border='0' width=80%><table border='1'>"
+	.write("<div id='SQQuiz' class='SQQuizMain' ><span id='SQworkarea' class='grad'><table border='0' ><table border='1'>"
 			+ "<tr><td><span id='SQmenu' STYLE='color: black'></span></td>"
 			+ "<td><span id='SQButtons'></span></td></tr></table>"
 			+ "<tr><td><span id='SQAnswer'></span></td></tr>"
@@ -253,12 +253,13 @@ function SQInitQuestData() {
 function SQStartQuizFromButton(quizIndex) {
 	
 	if (SQIsQuizTodays(quizIndex)) {
-		if (!passwordEntered) {
-			if (!passwordPasses()) {
-				return;
+		if (!SQIsNoPassword(quizIndex)) {
+			if (!passwordEntered) {
+				if (!passwordPasses()) {
+					return;
+				}
+				passwordEntered=true;
 			}
-			passwordEntered=true;
-			
 		}
 	}
 	naturalizedQuizIndex = quizIndex + 1;
@@ -267,7 +268,7 @@ function SQStartQuizFromButton(quizIndex) {
 		hoverText=quests[quizIndex].splash.splashText;
 	}
 	document.getElementById("SQmenu").innerHTML = '<span title="' + hoverText + '" class="visible"> (' + naturalizedQuizIndex + ') ' + quests[quizIndex].name + " - " + quests[quizIndex].hoverover + '</span>';
-		
+	
 	extraText='';
 	if (SQIs7DegreesOfHBC(quizIndex)){
 		extraText='</BR></BR>This is a 7 Degrees of Helena Bonham Carter quiz - There is an extra point for recognising whch film(s) also starred Helena Bonham Carter (only if you get the film name correct too)';
@@ -622,7 +623,7 @@ function SQIncludeQuiz(optionTagsString) {
 	URITagsCount = tagsFromURI().length;
 	URITags  =tagsFromURI();
 	for (var i = 0; i < optionTagsCount; i++) { //Store all tags
-		if (!optionTags[i].includes('/') && !optionTags[i].includes('-')  && !optionTags[i].includes('AXAXL')) {
+		if (!optionTags[i].includes('/') && !optionTags[i].includes('-') && !optionTags[i].includes('AXAXL') && !optionTags[i].includes('NoPassword')) {
 			tempTags.push(optionTags[i]);
 		}
 	}
@@ -656,7 +657,21 @@ function SQIsQuizMusic(quizIndex) {
 	}
 	return false;
 }
-
+function SQIsNoPassword(quizIndex) { 
+	
+	optionTagsString = quests[quizIndex].tags;
+	
+	optionTags = optionTagsString.split(",");
+	optionTagsCount = optionTags.length;
+	
+	for (var i = 0; i < optionTagsCount; i++) {
+		console.log(optionTags[i]);
+		if (optionTags[i] == 'NoPassword' ) {
+			return true;
+		}
+	}
+	return false;
+}
 function SQIs7DegreesOfHBC(quizIndex) { 
 	
 	optionTagsString = quests[quizIndex].tags;
