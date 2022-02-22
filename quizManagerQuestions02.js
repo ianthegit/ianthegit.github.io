@@ -1233,7 +1233,7 @@ quests[++questIndexBuilder] = {
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
-	question : "Autosomal-dominant Compelling Helioopthalmic Outburst Syndrome is characterized by uncontrollable what in response to the sudden exposure to bright light, typically intense sunlight??" ,
+	question : "Autosomal-dominant Compelling Helio Opthalmic Outburst Syndrome is characterized by uncontrollable what in response to the sudden exposure to bright light, typically intense sunlight??" ,
 	answer : "ACHOO Syndrome is characterized by uncontrollable sneezing."	});	
 
 
