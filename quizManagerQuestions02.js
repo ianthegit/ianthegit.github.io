@@ -1225,3 +1225,28 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : ''}) ;
 
 
+
+quests[++questIndexBuilder] = { 
+		name : "GK",
+		hoverover : "Blah Blah",
+		tags : "2022-2-27,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Autosomal-dominant Compelling Helioopthalmic Outburst Syndrome is characterized by uncontrollable what in response to the sudden exposure to bright light, typically intense sunlight??" ,
+	answer : "ACHOO Syndrome is characterized by uncontrollable sneezing."	});	
+
+
+quests[++questIndexBuilder] = { 
+		name : "Rockgrass",
+		hoverover : "Have you ever head the banjo?",
+		tags : "music,2022-2-27,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/3j7QUDefD0naJHt8sCyAjH?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+	answer : ''}) ;
+
+
