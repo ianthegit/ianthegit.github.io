@@ -774,6 +774,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	image : "https://lh3.googleusercontent.com/pw/ACtC-3faiNH2eb-Ad4HJRP5WBX-nxWvVhN00AXL0I7UyhD2_XCx1eePwNKNlMOKl-vOAtbLNX_T8pDzxUckXLzRZQz1Rrg2jQLJMW9RV0N_kvGl8e_HA_6u_xM3Sn-fjI6AEAewKEUE8Pcdg9pdIaFiGwJQx8w=w1162-h871-no?authuser=0"	}) ;
 
 
+
 quests[++questIndexBuilder] = { //
 		name : "Shorts",
 		hoverover : "Tiny Dancers?",
@@ -821,7 +822,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	question : "Who is this (Bonus point - who did he play in the Harry Potter movies)?", answer : "Toby Jones - 5'5\" - Dobby the house elf",
 	image : "https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8yNTE2NDE0OS9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTY1NDY4MTg0NX0.p2PSgX9jUdxUR-4ZegxQtIs-7SOH_GLkQTVe2YEDBXI/img.jpg?quality=80&width=683"	}) ;
 
-		
+
 
 quests[++questIndexBuilder] = { //
 		name : "Summer Sun",
@@ -892,7 +893,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
 }) ;
 
 quests[++questIndexBuilder] = { //
-		name : "R[ai|ei[g|]]n",
+		name : "Rain",
 		hoverover : "All types of rain/reign/rein",
 		tags : "2021-6-5,saturday,InnerWheel,surfers",
 		questInfo: new Array()
@@ -943,7 +944,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 
 quests[++questIndexBuilder] = { //
 		name : "Wet",
-		hoverover : "Who are these people, looking like they have been out in the rain?",
+		hoverover : "Who are these people, loking like they've been out in the rain?",
 		tags : "2021-6-5,saturday,InnerWheel,surfers",
 		questInfo: new Array()
 	};
@@ -1004,7 +1005,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	question : "",
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/5aQtHKqej3Ib1jRhK6HdDX" width="501" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
 	answer : ""}) ;
-
 
 quests[++questIndexBuilder] = { //
 		name : "Wildlife",
@@ -1133,7 +1133,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 quests[++questIndexBuilder] = { //
 		name : "Lost Pa",
 		hoverover : "Do you know the name of these places starting with Pa?",
-		tags : "2021-6-19,saturday,InnerWheel,surfers,specialDay",
+		tags : "2021-6-19,saturday,InnerWheel,surfers",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
@@ -1164,7 +1164,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 quests[++questIndexBuilder] = { //
 		name : "Famous Pa",
 		hoverover : "Do you know the name of these Pa s?",
-		tags : "2021-6-19,saturday,InnerWheel,surfers,specialDay",
+		tags : "2021-6-19,saturday,InnerWheel,surfers",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
@@ -1195,7 +1195,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
 quests[++questIndexBuilder] = { //
 		name : "Film Pa",
 		hoverover : "Do you know the name of these films?",
-		tags : "2021-6-19,saturday,InnerWheel,surfers,specialDay",
+		tags : "2021-6-19,saturday,InnerWheel,surfers",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
@@ -1234,7 +1234,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
 quests[++questIndexBuilder] = { //
 		name : "Pa songs",
 		hoverover : "Songs featuring the words Pa, Dad, Father",
-		tags : "music,2021-6-19,InnerWheel,saturday,specialDay",
+		tags : "music,2021-6-19,InnerWheel,saturday",
 		questInfo: new Array()
 	};
 
@@ -1408,6 +1408,7 @@ quests[++questIndexBuilder] = { //
 		tags : "2021-7-3,saturday,InnerWheel,surfers",
 		questInfo: new Array()
 	};
+
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "It emerged that tourists had been erroneously charged as much as " + gbp + "2,104.18 for visiting Brighton's pier. What was the reason given for the error?  " + Table4ColumnStart + "The company handling the transactions had been targeted by Bitcoin ransomware</td><td>The transactions had been processed using the date rather than the amount</td><td>A misplaced decimal point had rounded up every transaction by a factor of 100</td><td>Parents are used to paying ludicrous sums to keep their children amused at the seaside so they thought nobody would notice" + Table4ColumnEnd,
 	answer : "The transactions had been processed using the date rather than the amount"	,
@@ -1484,7 +1485,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	image : "https://img.buzzfeed.com/buzzfeed-static/static/2019-05/5/10/enhanced/buzzfeed-prod-web-05/enhanced-18381-1557066584-1.jpg?output-format=webp&output-quality=auto"});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Who lives here?",
-	answer : "Family Guy"	,
+	answer : "The Simpsons"	,
 	image : "https://img.buzzfeed.com/buzzfeed-static/static/2019-05/3/8/enhanced/buzzfeed-prod-web-04/enhanced-818-1556885031-1.jpg?output-format=webp&output-quality=auto"});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Who lives here?",
@@ -1677,6 +1678,18 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 
 quests[++questIndexBuilder] = { //
+		name : "Bike and Ball",
+		hoverover : "Songs about balls, bikes and wheels",
+		tags : "music,2021-7-10,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/0mpuT4NsOrHavSSSIQZeqf" width="501" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+	answer : ""}) ;
+
+quests[++questIndexBuilder] = { //
 		name : "No Sport",
 		hoverover : "One for the non-sports fans",
 		tags : "2021-7-10,saturday,InnerWheel,surfers",
@@ -1719,27 +1732,12 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 	answer : 'A python'	});
 
 
-
 quests[++questIndexBuilder] = { //
-		name : "Bike and Ball",
-		hoverover : "Songs about balls, bikes and wheels",
-		tags : "music,2021-7-10,InnerWheel,saturday",
-		questInfo: new Array()
-	};
-
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
-	question : "",
-	spotify : '<iframe src="https://open.spotify.com/embed/playlist/0mpuT4NsOrHavSSSIQZeqf" width="501" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
-	answer : ""}) ;
-
-
-quests[++questIndexBuilder] = { //
-		name : "Pub singer 0",
+		name : "Pub singer " + pubSingerCounter++,
 		hoverover : "Sit back, close your eyes, you could be at a live venue right now.  ",
-		tags : "2021-7-17,saturday,InnerWheel,surfers,pubSinger",
+		tags : "2021-7-17,saturday,InnerWheel,surfers,audio",
 		questInfo: new Array()
 	};
-
 
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
@@ -1772,7 +1770,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/survive.mp3' + endAudio ,
 	answer : '<iframe src="https://open.spotify.com/embed/track/5GGVL37gRgOMEAVGSP5O71" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>', answerSpeak : 'I Will Survive'	});
-
 
 
 quests[++questIndexBuilder] = { //
@@ -1920,9 +1917,9 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pub singer 1",
+		name : "Pub singer " + pubSingerCounter++,
 		hoverover : "Sit back, close your eyes, you could be at a live venue right now.  ",
-		tags : "2021-7-24,saturday,InnerWheel,surfers,pubSinger",
+		tags : "2021-7-24,saturday,InnerWheel,surfers,audio",
 		questInfo: new Array()
 	};
 
@@ -1978,6 +1975,10 @@ quests[++questIndexBuilder] = { //
 		questInfo: new Array()
 	};
 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "My wedding anniversary is on Monday.   True or False?" ,
+	answer : 'False'	,
+	image : "https://lh3.googleusercontent.com/B-noVXi21aiO8tAwCmuI1doK4Q__oy1fJlkjlGMY7C0VMgkCMxl8WLe-wKylNd8VZv7tMpOW4a3wgT60Pj6Ng2_grqXBtTFHQQmJtZlW6yymEYKmmRbntRPpxtJgt-SvRO4zFGd17SveR4cvtqh7mgy8DNtPGIOMp_ND3q1PY6UjDSPw16S1e3MhwHUTkzOqTkwMPjFfMoBrlvBOJMF6Er-u-fCYWAoqltfSBgUPQ7R3b5w8NzEaqt9BksFWeZFL-rEOEnhL7y_CdT6HbHVKvkUPhZJJYZtRPlXzc_MprMXHOE_SOHfBH9li3BU15GIxyyLSqEIhBbMUqj72jUrLOFclMHHfWg2eGVesk2o3Wiyqs72P9wmc5p1wiDu6_08quwBF6PFV4SPGmD7D_-QCG17iYSJN9maSGnJVgWaFYD3NJG39AlXVE43AIkwUq9U-dO_uMTzadbIEL-qdvAQLuBTKYamJY-LZgOXhYzAv0N9tHA5Euq77kCQ8sr4AOV-iIRw5f4LlII-6c9X-UaqCiHUWOE2XjMoReYGjAF4vqUv5j3kFv2sLJqA4bt5sBWQ8INAYKb2gXKTLZs2UDzX4Wu6OC1mdfE3LISTouldY1UlzY5086s9_pQnyVHHk_O1oJxHOxdmuXVJkUlYt_AtJPaWvUocKFXZD_gTvnwxSn9ruMx9RvZfpAwdjwFqJiEr-qWcgWApicw3mGoJE0Qw3pVnPug=w1162-h871-no?authuser=0"});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Dean Boxall, Ariarne Titmus's coach, won the celebration Olympics with this celebration... what sport does she compete in?"+ Table4ColumnStart + "Rhythmic Gymnastics</td><td>Swimming</td><td>Diving</td><td>Putting a shrimp on the barbie" + Table4ColumnEnd ,
 	answer : 'Swimming'	,
@@ -2047,13 +2048,10 @@ quests[++questIndexBuilder] = { //
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "My wedding anniversary is on Monday.   True or False?" ,
-	answer : 'False'	,
-	image : "https://lh3.googleusercontent.com/B-noVXi21aiO8tAwCmuI1doK4Q__oy1fJlkjlGMY7C0VMgkCMxl8WLe-wKylNd8VZv7tMpOW4a3wgT60Pj6Ng2_grqXBtTFHQQmJtZlW6yymEYKmmRbntRPpxtJgt-SvRO4zFGd17SveR4cvtqh7mgy8DNtPGIOMp_ND3q1PY6UjDSPw16S1e3MhwHUTkzOqTkwMPjFfMoBrlvBOJMF6Er-u-fCYWAoqltfSBgUPQ7R3b5w8NzEaqt9BksFWeZFL-rEOEnhL7y_CdT6HbHVKvkUPhZJJYZtRPlXzc_MprMXHOE_SOHfBH9li3BU15GIxyyLSqEIhBbMUqj72jUrLOFclMHHfWg2eGVesk2o3Wiyqs72P9wmc5p1wiDu6_08quwBF6PFV4SPGmD7D_-QCG17iYSJN9maSGnJVgWaFYD3NJG39AlXVE43AIkwUq9U-dO_uMTzadbIEL-qdvAQLuBTKYamJY-LZgOXhYzAv0N9tHA5Euq77kCQ8sr4AOV-iIRw5f4LlII-6c9X-UaqCiHUWOE2XjMoReYGjAF4vqUv5j3kFv2sLJqA4bt5sBWQ8INAYKb2gXKTLZs2UDzX4Wu6OC1mdfE3LISTouldY1UlzY5086s9_pQnyVHHk_O1oJxHOxdmuXVJkUlYt_AtJPaWvUocKFXZD_gTvnwxSn9ruMx9RvZfpAwdjwFqJiEr-qWcgWApicw3mGoJE0Qw3pVnPug=w1162-h871-no?authuser=0"});
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Dusty Hill, the bassist and 2nd vocalist from ZZ Top, died this week.  Complete the name of the 3 members:  Dusty Hill, Billy Gibbons, Frank..." ,
 	answer : "Beard"	,
 	image : "https://s.france24.com/media/display/7f92d9d6-efec-11eb-b284-005056bf30b7/w:980/p:16x9/000_9H39CT.webp"});
+
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : "What connects these four apparently random clues? A hammer and a feather; six US flags; Eugene Shoemaker's ashes; two golf balls?  " + Table4ColumnStart + "Featured in the 2016 Olympic opening ceremony</td><td>Depicted in Salvador Dali paintings</td><td>On the moon</td><td>In Donald Trump's Oval Office" + Table4ColumnEnd,
 	answer : "On the moon"	});
@@ -2088,9 +2086,9 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 		answer : "Waterloo"	, image : "https://i.guim.co.uk/img/media/5879c1386b510ba663af142232ed8b0eacba523b/197_423_6475_3888/master/6475.jpg?width=620&quality=85&auto=format&fit=max&s=9537661687b5d4293577c83aae2329ca"});
 
 quests[++questIndexBuilder] = { //
-		name : "Pub singer 2",
+		name : "Pub singer " + pubSingerCounter++,
 		hoverover : "Sit back, close your eyes, you could be at a live venue right now.  ",
-		tags : "2021-7-31,saturday,InnerWheel,surfers,pubSinger",
+		tags : "2021-7-31,saturday,InnerWheel,surfers,audio",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
@@ -2123,7 +2121,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w3-pianoMan.mp3' + endAudio ,
 	answer : '<iframe src="https://open.spotify.com/embed/track/70C4NyhjD5OZUMzvWZ3njJ" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>', answerSpeak : "Piano Man"	});
-
 
 quests[++questIndexBuilder] = { //
 		name : "Garden",
@@ -2228,13 +2225,12 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pub singer 3",
+		name : "Pub singer " + pubSingerCounter++,
 		hoverover : "Sit back, close your eyes, you could be at a live venue right now.  ",
-		tags : "2021-8-7,saturday,InnerWheel,surfers,pubSinger",
+		tags : "2021-8-7,saturday,InnerWheel,surfers,audio",
 		splash : {splashType : splashTypePictureAndText , splashText : "In honour of my 30th wedding anniversary, 10 songs you shouldn't play at a wedding", splashImage : "https://lh3.googleusercontent.com/_xe1vRE-ALbgYpUU_peFoR3jJ8M2BriIUusFvMPBe3dHTFX4lhjWnVuzNVopNhQ8TlCAoQny1zR4vblWXVYG9jInm8NV6si7nlCW0yPLH6_yyMtavSOFjZl1GTZU1v2KlUfLqTW29U_B9PrPDj2HsR4FugmmLg_2sEGyA163zR0fMmXyyJwMtvhgOg1HWsJkWTWtNe95HoZxr_DdO3O4fnco7wCfeJcT4IFJ-HPQq28RnlU_fsZtKvRO-2U8JfugqhCKcyBJKsVBSw3OoeKd1BNDUTZRcBZZkFQL2U0LXGfz3jM8cDunOPrXnXf_noS6Hr2G5xTSGrjkRKmcHj6cVoWYcwmovmZg82eLfd-gdck1MAqu1LouDx_O1MMPUWqCaZjzuU2IXPsGP1WjFV6jbGc7t09c1_UFZ1aRCuk9C05eNnhckvigQQmAGCRP31Ar7iExnofj429CxGO1HAkKD3MgR98R1UwL2ta_T35VSMn_2NxXBnNm0RaD4kt_X1Ao-GqGauBqHUpDnp0h6PeDwMEJ159itTJBC_53V18mTj18NfRCRSJOn2K6XIDYuUFz47op0oNEhc_g1PuDUz5NQKqOpn6uQt-SRxfVL4iVLwDjUgDx0ha84MtZ_FAeW4ST7r4IvcQ_z0w-HDe8zBmv9hna4rcpsIXMML3z63xDkOPZDg_NtSc_n-qkt-C3wIipx89HcMBJw7tr9cKOsqQKwe0e3w=s871-no?authuser=0" },
 		questInfo: new Array()
 	};
-
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/lookingfor.mp3' + endAudio ,
@@ -2349,10 +2345,10 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	answer : "John Squire", image : "https://i.guim.co.uk/img/media/4dc62d88326d6d8f1838c6aedb453e28485cd9d1/0_0_2000_1200/master/2000.jpg?width=620&quality=85&auto=format&fit=max&s=3b7c11a0c993b84614fad80d41fea5bc"	});
 
 quests[++questIndexBuilder] = { //
-		name : "Pub singer 4",
+		name : "Pub singer " + pubSingerCounter++,
 		hoverover : "Sit back, close your eyes, you could be at a live venue right now.  ",
-		tags : "2021-8-14,saturday,InnerWheel,surfers,pubSinger",
-		splash : {splashType : splashTypeText , splashText : "Tonight we have a guests - not quite the Von Traps, but not far off!!   The first 6 songs are from them, the final 5 were all #1s in 2003"  },
+		tags : "2021-8-14,saturday,InnerWheel,surfers,audio",
+		splash : {splashType : splashTypeText , splashText : "Tonight we have a guest singer!!   The first 6 songs are from them, the final 5 were all #1s in 2003"  },
 		questInfo: new Array()
 	};
 
@@ -2392,8 +2388,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 
 
 
-
-
 quests[++questIndexBuilder] = { //
 		name : "Holiday",
 		hoverover : "Songs which have a holiday theme",
@@ -2410,7 +2404,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 quests[++questIndexBuilder] = { //
 		name : "Turtally Brilliant",
 		hoverover : "Some turtles",
-		tags : "2021-10-3,saturday,InnerWheel,surfers",
+		tags : "2021-9-11,saturday,InnerWheel,surfers",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
@@ -2453,7 +2447,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 quests[++questIndexBuilder] = { //
 		name : "Wales 1",
 		hoverover : "Some specific questions",
-		tags : "2021-9-26,saturday,InnerWheel,surfers",
+		tags : "2021-9-11,saturday,InnerWheel,surfers",
 		questInfo: new Array()
 	};
 
@@ -2464,7 +2458,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 	question : "What is celebrated on 1st March in Wales?", // + Table4ColumnStart + "</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd,
 	answer : "St David's Day"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
-	question : "Who was given the surname Waterman?", // + Table4ColumnStart + "</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd,
+	question : "Who was given teh surname Waterman?", // + Table4ColumnStart + "</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd,
 	answer : "St David"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : "What did St David insist that his monks do for themselves, rather than use farm animals?   Pull the...", // + Table4ColumnStart + "</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd,
@@ -2487,7 +2481,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 quests[++questIndexBuilder] = { //
 		name : "Wales 2",
 		hoverover : "Some less specific questions",
-		tags : "2021-9-26,saturday,InnerWheel,surfers",
+		tags : "2021-9-11,saturday,InnerWheel,surfers",
 		questInfo: new Array()
 	};
 
@@ -2516,17 +2510,18 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	question : "Who is the Patron Saint of Wales and on which date are they celebrated?  " ,// + Table4ColumnStart + "?</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd,
 	answer : "St David Waterman, 1st March", image : "https://www.visitwales.com/sites/visit/files/styles/o_articleimage_small__4_3_xl_min_1x/public/media-library/2018-12/SVW-C28-1718-0006-small.jpg?h=8a0aa05d&itok=xmh8BJeH"	});	
 
+
 quests[++questIndexBuilder] = { //
 		name : "Cruising",
 		hoverover : "Tom and his curry",
-		tags : "2021-10-3,saturday,InnerWheel,surfers",
+		tags : "2021-9-11,saturday,InnerWheel,surfers",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "This bridge was meant to reopen in the middle of August 2021 after refurbishment, but got stuck fast and positively refused to swing. In which British city?" + Table4ColumnStart + "Glasgow</td><td>Belfast</td><td>Newcastle</td><td>Cardiff" + Table4ColumnEnd,
+	question : "This bridge was meant to reopen in the middle of August 2021 after refurbishment, but got stuck fast and positively refused to swing. In which British city?" + Table4ColumnStart + "Glasgow</td><td>Belfast</td><td>Newcastle</td><td>Cardif" + Table4ColumnEnd,
 	answer : "Newcastle", image : "https://i.guim.co.uk/img/media/7017c9afe240a893d90c175e89d553dc82e2bed9/0_91_5102_3060/master/5102.jpg?width=620&quality=85&auto=format&fit=max&s=57389415ccf5a566f222c4b7a86e7811"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Kathleen Jamie is Scotland’s national poet. What is the role called?" + Table4ColumnStart + "Mauner</td><td>Makar</td><td>Mara</td><td>Protagonist" + Table4ColumnEnd,
+	question : "Kathleen Jamie is Scotland’s national poet. What is the role called?" + Table4ColumnStart + "Mauner</td><td>Makar</td><td>Mara</td><td>Mostly boring" + Table4ColumnEnd,
 	answer : "Makar", image : "https://i.guim.co.uk/img/media/d7ff458a606126d1794d51fe50b3269db2430de9/0_351_8192_4918/master/8192.jpg?width=620&quality=85&auto=format&fit=max&s=16aaa52e260a323a6af163810b8e1136"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Which of these common substances has the highest pH value?" + Table4ColumnStart + "Lemon Juice</td><td>Beer</td><td>Milk</td><td>Toothpaste" + Table4ColumnEnd,
@@ -2540,6 +2535,9 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : "The captain of the Nautilus in Jules Verne's 1870 novel Twenty Thousand Leagues Under the Sea was - Captain...?" + Table4ColumnStart + "Nero</td><td>Nemo</td><td>Dory</td><td>Haddock" + Table4ColumnEnd,
 	answer : "Captain Nemo"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Tom Cruise went to Birmingham in the UK, and according to restaurant Asha's, he enjoyed eating his curry so much that he immediately ordered another one exactly the same. Which dish though?" + Table4ColumnStart + "Lamb bhuna</td><td>Vegan jackfruit massaman</td><td>Chicken tikka masala</td><td>Paneer jalfrezi" + Table4ColumnEnd,
+	answer : "Chicken tikka masala", image : "https://i.guim.co.uk/img/media/ab1881e018621d916d471b64e36bd3de79b66daa/769_151_2596_1558/master/2596.jpg?width=620&quality=85&auto=format&fit=max&s=ebb96ed93cfc65d1c4d1bde82d4c3aeb"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "From September Belgium is introducing a legal right to go and retrieve a lost ball or lost pet from a neighbour's garden - True or False?" ,
 	answer : "It’s true – provided it ended up there by accident", image : "https://i.guim.co.uk/img/media/e0c05c83c7c61a5dac44ef31e697ce6a14131036/0_352_5315_3191/master/5315.jpg?width=620&quality=85&auto=format&fit=max&s=15a7efad2b8b5c0c254e60b17aa1edd1"	});
@@ -2556,37 +2554,37 @@ quests[++questIndexBuilder] = { //
 		tags : "2021-9-11,saturday,InnerWheel,surfers",
 		questInfo: new Array()
 	};
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Who will look like this when they're older?", //
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Who will look like this then they're older?", //
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLVNupImeT0pAw1BcnIdHQNmUT3QvBQ6WPUliFMnRnt77ywMca1QPFAeKo0n2uFvjPsI1jhjXxZ36j-OelVZrwahW8h5VzWptjarMTaBOJ4KmSiTtJlLJz19822fCYC9vCLyJjqPA6ZQ-ZXmYd0R2nGCxg=w342-h549-no?authuser=0",
 	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLXSyu3IvUKCHXzhrk1iaZafsOoH8pNYuMFH4EuAZRVcDh2boVTOyWdWRWY411Ev8ULCUvfO8WPyBmNRWpWTVvrbk8OT4ufrgL-eCGMdbagweAjlxC5o0JP-IZYVKkOHZOVr_Jt9qoMuayJ82IymyECeaA=w700-h550-no?authuser=0"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Who will look like this when they're older?", //
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Who will look like this then they're older?", //
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLUi55EDHMuTHoLV8ouTRdnTFuEeF1pE4-f77umELEgHicA2Fo7aygw-vSy4nP3q5kHVnOhTzeyRO2b1evwU0XXLiu9x1uC2Gg_zxkw2SqLePelyA3plecgf168OiRHGV3QWvvLIW6CnLAOxncWJgq_wcA=w344-h550-no?authuser=0",
 	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLWtSqwZMtWJUHHNRfYgSHdDB91pjhrDbT_0ZN2qye-7JIgVfA4esCnwqsqps_jf1Hz9d7G0XhUkoOn-7pt8-4pm7UYv4Ce6AiyFrZe_VfoZ8IykogFDKP-kCvEap57xtock7Bt5-Txfc2vPonX60Btrcg=w700-h550-no?authuser=0"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Who will look like this when they're older?", //
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Who will look like this then they're older?", //
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLW05DX2e8SXFsIcfhQK6Jaz07Dh9e1pRqsqgDt8sXCEb79IXbMvcrbdDAuWISTU8RsHzcPXb4L1ivOroJ2hmGiFRmR7ku6L9TfO448SCSFoVSigpQKcKWvho-6rM5MSJBuEuTSMwJzr2HWv2qbf0uMmCQ=w343-h550-no?authuser=0",
 	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLVQnBq-xuEL699eG3pKBD6Wicp7-1cVZHX1vSiWWT4aB__2KMJtkO8H9ZMaTW6Es21cwxEo8CeX396rGee5cLBFzNXsbt7Rx0vXL2xYE7yT3aVIrMONFqUFQYzOaZRvCU18uMB-2-rNPXFT73118zxScQ=w700-h550-no?authuser=0"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Who will look like this when they're older?", //
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Who will look like this then they're older?", //
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLUsY02UOZcTnu6KzBuoJSP_sQxsQmBkT6U_mvvbiNkb9nTK5zMZ5WEPfL-zJ0GEwx8T4XzY1kwdH8XsvP9PsjlIu2Gwdj7TWBfA7ogU-Iqn_urbaZqqF2wt0NcE4zBWU6dLQvjMoy1u3dM5K8d_bexLMA=w347-h550-no?authuser=0",
 	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLU8nt2v2Onl0orX8qfU5fTkp2PQr1YIJiHIB3f32mygPai2YpqwXI6313XbE0cZABDVAgYMuFY7zNUKuMY5OZtR4RKV74wSuDOojSiSwLJYojvmkisOOAy9M3MRkNDNC5GFihg2sWlIUfUrjdikFTskdQ=w700-h550-no?authuser=0"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Who will look like this when they're older?", //
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Who will look like this then they're older?", //
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLW9sO2K0h7NDi2J7Ori8ZpLEVjBcrZt28Bu_e3hg1EEik5PblnK1h7VXDeszmOUWVHEQGKHaujXjNvClnkemvzQF2dG7zJEORFpjIxJeqcAic7rqJySdWGzWV-gUrknYf-UPHba-2lrCFMOEXvdpiuZGQ=w324-h550-no?authuser=0",
 	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLV2fSWFfMhmNF-WNfKQV1f0rB7tiYxr51wPq7I-cyjxa2XupKh_cHN61jP2f8Jrqvpc0jtW_Z7cPPa-qnoQgdpXkjWAnPXSxd79gd-0RY9NIHMUQfyK1zoSGxp7TaDfT4EJ7DMkeTYvgV32FCQu-eApUQ=w700-h550-no?authuser=0"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Who will look like this when they're older?", //
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Who will look like this then they're older?", //
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLWTNEmtWjSbtOOL2GQBmI8sLIsbi0UA1GgmE7T9hAbZiQycHYSL3Qw87gNI8-qZIHkW_GKm7rpJytQOtNpWBUgnbkcVXfBhGhWfyQxqk1QaYYN2NsSvmS3SWmL29k7CqgQ6wx5l_lJuMVvi5yXv6F1v8A=w345-h550-no?authuser=0",
 	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLWsdZNufd7RVCm6nbVNvwyvWxmtZ92R1dRuBRvyfl7pclAW6FZ_85hpEi63-VsNKOgW1UvaS5LkvCUZ75R2StcS9M8olaP4wzj1vzzka-4rK5T1ahSynZ0A8ADd0o0MFcNqtiWjrXDgB_D1s74SFcQwsw=w700-h550-no?authuser=0"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Who will look like this when they're older?", //
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Who will look like this then they're older?", //
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLVhtFmUcqxvqUsCygwSqTYFJH35fedFl7CcJinFQD4sgSvMQQKYVh2Dr77B_53yRw_91_R7IKCpOb2sOFzH5UrSWsujhQPbs6QORvy86pClHJ--h6LXILbYU2Is5r72lZCV4R1TUdPOfMcE2QF62IvvrA=w347-h550-no?authuser=0",
 	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLVJ7A1Hv6KswfCH05X4oF6c_ew5D5ZNzekI120C6JfYK_s_0GdCZfaOQ5pREg81svoWM7zibnVQ3hQ42SfoecupCIoKqsvoKKiAq5Du92tyIL0Y2zF57yJlSK0aAUEg6JnCcANrOJRxpz-h1wV4W2CLkA=w700-h550-no?authuser=0"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Who will look like this when they're older?", //
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Who will look like this then they're older?", //
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLU3cyCIC3PJz2ytcKrU4XfPycdKGXot9DbMAt4--3Yzc223Kq_m3yLpsbMgUG5-JXF-DzuN8SF4N0dhNe3p_jmBXbYH7jEixGaCcOQHmb6l32w3Gd1sxzU3c1itqukd0B9wS5rx8jlPGpj80WDOiulltA=w348-h550-no?authuser=0",
 	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLWqnPKrIpunsvtxnlTDVY1xh21XXeyObgbSC4C1ZSU3sbjWdOGB1gIjwgRrA0W8K6sX12IjIslGKurnJ4kzKyFucEyPkfnrnOyguwagyE0ygZ4RBT9JQ1uZTgzGROp-JMJHfNLSqGXWKFVdmBEtJW3eSQ=w700-h550-no?authuser=0"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Who will look like this when they're older?", //
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Who will look like this then they're older?", //
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLVudi4WMESUtMF4D3oZ4ZCohN_oppez6YmWdKYE5iDGIX8NUCp1CL5BkGQ0fohQS9kPo7QqKZcfnTYfuIAjVCNP-Xg9e-dnhU2OracPUXTZ-E1J5NOVEC52ZkFyKXc6qwhURJykw4Ikh2WNxUskRDAuuQ=w347-h550-no?authuser=0",
 	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLXC4HSyfo3JgkP45c8iCCn7J-BxKcJmdhY5mFZj26_NZQ9vaaODlht89vmRPJrm5XUmzt9weRBA8_KwkAZ9nHg8q_AdKFEwibQmC2jvsK-t7vkE_6GDa0dBR9zfeMQUkWkqRA7bZ-YxSsMs7sFJzUS7Xg=w700-h550-no?authuser=0"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Who will look like this when they're older?", //
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Who will look like this then they're older?", //
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLWhicUaJ9zWpNFcXiQon6gRQxRStIGGJquoAQ29me6byzJz1g_Z4DdZ-JyeLfaMB5mNPzpKQ0ncf5JRxBvyPizkM0rKWDPwRk5en8lmbqF3n7-HhhS26znwLlTpa9KPWkPiAGfCbKaLgSSuIVvsnYjj3g=w349-h550-no?authuser=0",
 	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLVKR4XImF0jayjXkye9tVA4UksWw9ObraX7AQNb1nWJNCey0AGVFP3VqexYjQzvfkTozfPUxtW0e7Ki_jeu4fkMR3lhzd_sk91fFfsJPex34y8AqMd8tmn5gdttkDFEwLUhtP4XJnNWjWdovcZTPYJZTg=w700-h550-no?authuser=0"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Who will look like this when they're older?", //
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Who will look like this then they're older?", //
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLXMIcxjtzBXY8xiegYkJtld0JCs8NIbascP5PiS5op2WMoLlbo9c37dZZjDr_xaOFG-IvtZyBSPnAGwhiTRtrveYuZ_hMCAc6eg2eSXbODjWuqcnQneAOUP_CAXGFmsnLgKlDPzdabC1fq_0oSh5PQlQw=w350-h550-no?authuser=0",
 	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLVCyk2Ark9BTiAX-K2Z--3PSjtnWWG7WUQQ2e5j8MG4QNjAXtnFg1U18NnBGNwE9bCIeA1RLwO6pIyN78BIGbknvfOfWbb_Tcv-n-rE3QXAUbHUjfBk1rkCwXUnIUzuWGSgwMbXtY3OhHji5RX7ax1M-A=w700-h550-no?authuser=0"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Who will look like this then they're older?", //
@@ -2597,7 +2595,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 quests[++questIndexBuilder] = { //
 		name : "Hidden Time Traveller",
 		hoverover : "Spot the hidden Dr Who reference for an extra point",
-		tags : "2021-10-3,saturday,InnerWheel,surfers",
+		tags : "2021-9-11,saturday,InnerWheel,surfers",
 		splash : {splashType : splashTypePictureAndText , splashText : "Shout out the hidden Dr Who reference and win a point", splashImage : "https://metro.co.uk/wp-content/uploads/2020/02/doctor-who-elisabeth-sladen-sarah-jane-smith_1582209527.png?w=1200&h=630&crop=1" },
 		questInfo: new Array()
 	};
@@ -2608,10 +2606,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	question : "In the 1860s Brussels covered up most of the river that runs through it, because it was a right old stinky mess - much like the vegetable the city is named after. After the removal of 1,966 tonnes of concrete, a 200-metre stretch is being exposed again. But which river is it that runs through Brussels?" + Table4ColumnStart + "Meuse</td><td>Scheldt</td><td>Senne</td><td>Semois" + Table4ColumnEnd,
 	answer : "Senne", image : "https://i.guim.co.uk/img/media/c8726391b2b9d4d69ebb9b3ee07832687029fafd/0_133_2953_1773/master/2953.jpg?width=620&quality=85&auto=format&fit=max&s=1127c3da4e401f845490cbbfac5aa396"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Tom Cruise went to Birmingham in the UK, and according to restaurant Asha's, he enjoyed eating his curry so much that he immediately ordered another one exactly the same. Which dish though?" + Table4ColumnStart + "Lamb bhuna</td><td>Vegan jackfruit massaman</td><td>Chicken tikka masala</td><td>Paneer jalfrezi" + Table4ColumnEnd,
-	answer : "Chicken tikka masala", image : "https://i.guim.co.uk/img/media/ab1881e018621d916d471b64e36bd3de79b66daa/769_151_2596_1558/master/2596.jpg?width=620&quality=85&auto=format&fit=max&s=ebb96ed93cfc65d1c4d1bde82d4c3aeb"	});
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "After Tom Cruise's curry gorging in Birmingham what happened that made the news next?" + Table4ColumnStart + "His car was stolen</td><td>His car was impounded for illegal parking</td><td>Someone crashed into his car</td><td>Kate Bush was seen in his car" + Table4ColumnEnd,
+	question : "Previously I asked you about Tom Cruise's curry escapades in Birmingham. What happened to him afte his curry gorging in Birmingham that made the news next?" + Table4ColumnStart + "His car was stolen</td><td>His car was impounded for illegal parking</td><td>Someone crashed into his car</td><td>Kate Bush was seen in his car" + Table4ColumnEnd,
 	answer : "His car was stolen", image : "https://i.guim.co.uk/img/media/ab1881e018621d916d471b64e36bd3de79b66daa/769_151_2596_1558/master/2596.jpg?width=620&quality=85&auto=format&fit=max&s=ebb96ed93cfc65d1c4d1bde82d4c3aeb"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Scientists claim to have discovered something near the North Pole which they have recommended be named Qeqertaq Avannarleq in the local language. What?" + Table4ColumnStart + "A new breed of Arctic penguin</td><td>A makeshift memorial to Captain Lawrence Oates</td><td>The remains of a wrecked Viking expedition</td><td>An island that is the world's northernmost point of land" + Table4ColumnEnd,
@@ -2632,8 +2627,11 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	question : "Which British sitcom features these actors as regular supporting characters? Kirsten Cooke, Arthur Bostrom and Guy Siner?" + Table4ColumnStart + "'Allo 'Allo</td><td>Brush Strokes</td><td>Hi-De-Hi</td><td>Keeping up Appearances" + Table4ColumnEnd,
 	answer : "'Allo 'Allo", image : "https://i.guim.co.uk/img/media/3842e4791d5a317de2aafdc5351f9ad9e49ae620/0_432_3236_1942/master/3236.jpg?width=620&quality=85&auto=format&fit=max&s=2d411038abd85985a64e94ae235f2ac0"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Which central American country started accepting Bitcoin as legal tender from 7 September?" + Table4ColumnStart + "Honduras</td><td>El Salvador</td><td>Belize</td><td>Nicaragua" + Table4ColumnEnd,
+	question : "Which central American country is preparing to start accepting Bitcoin as legal tender from 7 September?" + Table4ColumnStart + "Honduras</td><td>El Salvador</td><td>Belize</td><td>Nicaragua" + Table4ColumnEnd,
 	answer : "El Salvador (with Cuba a week later)", image : "https://i.guim.co.uk/img/media/cb447dc3cf01ce844eabe91ede8b4228ced4bb9e/3_0_1938_1163/master/1938.jpg?width=620&quality=85&auto=format&fit=max&s=22c7c3371446237ee11d1db3f2dbbfec"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Not every Pokemon is as cute as Pikachu. Which Pokemon has this worrying official description: 'People who approach this Pokemon are swallowed and turned into mummies. It loves to eat gold.'?" + Table4ColumnStart + "Cofagrigus</td><td>Yamask</td><td>Absol</td><td>Munna" + Table4ColumnEnd,
+	answer : "Cofagrigus", image : "https://i.guim.co.uk/img/media/049485d9d80d90edb0968f251959c1af0b43d451/0_309_5695_3417/master/5695.jpg?width=620&quality=85&auto=format&fit=max&s=61ab841d0a977ee40b8eccf578b51e40"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Kraftwerk famously sang that it's in the air for you and me, but when we are talking about radioactivity, what fraction of a radioisotope has decayed after two half-lives?" + Table4ColumnStart + "All of it</td><td>3/4</td><td>1/2</td><td>1/4" + Table4ColumnEnd,
 	answer : "3/4", image : "https://i.guim.co.uk/img/media/9a0385909a51dcb6518b41ab5f2bd47f8a0ff99e/0_157_3616_2170/master/3616.jpg?width=620&quality=85&auto=format&fit=max&s=52c75c4a20d18b1eab4738a73a94ec97"	});
@@ -2705,8 +2703,8 @@ addQuest(quests[questIndexBuilder],{type : quizQuestionTypePictureAnswer,	questi
 quests[++questIndexBuilder] = { //
 		name : "World Beard Day",
 		hoverover : "What do you know about your favourite facial fur?",
-		splash : {splashType : splashTypePictureAndText , splashText : "Answer the question, and say who owns the pictured facial hair" , splashImage : "https://lh3.googleusercontent.com/G4kneZFJMcXWJadRGLH0CW5n2uxP15DSiXnaVQCG8tZppDCQNchYkm3ngBOjWFuv9C8gHSqhyKscxxF_w7ao2p7Af2REBw2s4BQGAUW3EabpgCR15zDfJumu71P7541ZV32SDCdnGN6m-U1LysR9Oxi1xPt4CNXJukbSQRsIJ_zJVufoOGxA-MGsY3UgTCsEbxNEZJ4AD8_HoV39ItdCvS1f35TAosXWkmq_qeEjURbMRTEux2c9-YfoMCP5zc56jGo7ayovf6KThSPhNyj5mqoWNRx9J6oQHVBMXaVU4V7fjVCh_ZC-D0aIjMDy1bzdpkZlhes_ialaPGgaqAc5gE9gRvYy0Gc6UcBRWbxs6DHt4PcmQu6Cnppr88c6FkcVjyMGHylrWSLYBCuTG7Znm57Zo6rCiZxHI6Y5U17wb535AWR7OIGvgu-DJEQKVgodM-6nNZfxwTNmdlAbzoBDEg2g34oVN83Ym3IH2YrYMKzblnkX3YwVlsPKAbDF7CJnLUGhGsqCMniC64Cz1GVDl6xMDExYYykelGOcNc0FJrE5PQfyn8ITR0t1ZCYdBWDVWJyWDXmiFFWsGB3BZ2hofl3M7XaJ8lU3npWQoH3LjVRYA12nRyfY_5nzedFiNdtVrgUjymu6ZV8YkLvEOAkqZtzWlyzb0jrEEYifp2ozetQziAeOD-dHAhmIjKpS2QoTTdh96y7ecdugeFXlnaj49RpXKw=w644-h871-no?authuser=0" },
 		tags : "2021-9-4,saturday,InnerWheel,surfers,specialDay",
+		splash : {splashType : splashTypePictureAndText , splashText : "Answer the question, and say who owns the pictured facial hair" , splashImage : "https://lh3.googleusercontent.com/G4kneZFJMcXWJadRGLH0CW5n2uxP15DSiXnaVQCG8tZppDCQNchYkm3ngBOjWFuv9C8gHSqhyKscxxF_w7ao2p7Af2REBw2s4BQGAUW3EabpgCR15zDfJumu71P7541ZV32SDCdnGN6m-U1LysR9Oxi1xPt4CNXJukbSQRsIJ_zJVufoOGxA-MGsY3UgTCsEbxNEZJ4AD8_HoV39ItdCvS1f35TAosXWkmq_qeEjURbMRTEux2c9-YfoMCP5zc56jGo7ayovf6KThSPhNyj5mqoWNRx9J6oQHVBMXaVU4V7fjVCh_ZC-D0aIjMDy1bzdpkZlhes_ialaPGgaqAc5gE9gRvYy0Gc6UcBRWbxs6DHt4PcmQu6Cnppr88c6FkcVjyMGHylrWSLYBCuTG7Znm57Zo6rCiZxHI6Y5U17wb535AWR7OIGvgu-DJEQKVgodM-6nNZfxwTNmdlAbzoBDEg2g34oVN83Ym3IH2YrYMKzblnkX3YwVlsPKAbDF7CJnLUGhGsqCMniC64Cz1GVDl6xMDExYYykelGOcNc0FJrE5PQfyn8ITR0t1ZCYdBWDVWJyWDXmiFFWsGB3BZ2hofl3M7XaJ8lU3npWQoH3LjVRYA12nRyfY_5nzedFiNdtVrgUjymu6ZV8YkLvEOAkqZtzWlyzb0jrEEYifp2ozetQziAeOD-dHAhmIjKpS2QoTTdh96y7ecdugeFXlnaj49RpXKw=w644-h871-no?authuser=0" },
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
@@ -2741,9 +2739,9 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	answer : "Pay tax on them, Burt Reynolds", image : "https://img.playbuzz.com/image/upload/ar_1.5,c_crop/q_auto:good,f_auto,fl_lossy,w_640,c_limit,dpr_1/v1534257843/qallpxqlrzyow23aau2b.png"	});
 
 quests[++questIndexBuilder] = { //
-		name : "Pub singer 5",
+		name : "Pub singer " + pubSingerCounter++,
 		hoverover : "Sit back, close your eyes, you could be at a live venue right now.  ",
-		tags : "2021-9-4,saturday,InnerWheel,surfers,pubSinger",
+		tags : "2021-9-4,saturday,InnerWheel,surfers,audio",
 		splash : {splashType : splashTypePictureAndText , splashText : "Tonight we celebrate the return of the 70s pop icons ABBA", splashImage : "https://c.tenor.com/oIBAElorV70AAAAM/abba.gif"  },
 		questInfo: new Array()
 	};
@@ -2779,7 +2777,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	//
 	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/w5-sos.mp3' + endAudio ,
 	answer : '<iframe src="https://open.spotify.com/embed/track/1qg0zw8yNgfeClchuFXvWD" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
 
-
 quests[++questIndexBuilder] = { //
 		name : "They can all sing",
 		hoverover : "Welsh folk",
@@ -2800,7 +2797,7 @@ quests[++questIndexBuilder] = { ////https://quizly.co/can-you-guess-what-happens
 		tags : "2021-9-11,saturday,InnerWheel,surfers",
 		questInfo: new Array()
 	};
-  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?" + Table4ColumnStart + "He flew, in an assisted manner</td><td>He dodged everything</td><td>Nothing</td><td>The eagles rescued him" + Table4ColumnEnd, 
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?" + Table4ColumnStart + "He flew, in an assisted manner</td><td>He dodged everything</td><td>Nothing</td><td>The eagles rescued him" + Table4ColumnEnd, 
 	image : "https://cdn.quizly.co/wp-content/uploads/2015/10/02175811/Lucky-man-cover_BIG.jpg",
 	answerimage : "https://cdn.quizly.co/wp-content/uploads/2015/10/Win-1.gif"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?" + Table4ColumnStart + "His Dad pressed his face into the cake</td><td>The cake slid off the plate and onto the floor</td><td>The cake slid off the plate but his Dad caught it</td><td>Nothing" + Table4ColumnEnd, 
@@ -2832,45 +2829,44 @@ quests[++questIndexBuilder] = { ////https://quizly.co/can-you-guess-what-happens
 			name : "Next!",
 			hoverover : "What happens next",
 			splash : {splashType : splashTypePictureAndText , splashText : "In honour of the new Question of Sport and their famous 'What happened next?' round...", splashImage : "https://i.inews.co.uk/content/uploads/2021/09/PRI_197773633-640x360.jpg"  },
-			tags : "2021-10-3,saturday,InnerWheel,surfers",
+			tags : "2021-9-11,saturday,InnerWheel,surfers",
 			questInfo: new Array()
 		};
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?", 
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?"+ Table4ColumnStart + "?</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd, 
 		image : "https://learnhip.com/img/whnpics/1.gif",
 		answerimage : "https://learnhip.com/img/whnpics/1l.gif"}) ;
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?", 
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?"+ Table4ColumnStart + "?</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd, 
 		image : "https://learnhip.com/img/whnpics/2.gif",
 		answerimage : "https://learnhip.com/img/whnpics/2l.gif"}) ;
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?", 
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?"+ Table4ColumnStart + "?</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd, 
 		image : "https://learnhip.com/img/whnpics/3.gif",
 		answerimage : "https://learnhip.com/img/whnpics/3l.gif"}) ;
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?", 
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?"+ Table4ColumnStart + "?</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd, 
 		image : "https://learnhip.com/img/whnpics/4.gif",
 		answerimage : "https://learnhip.com/img/whnpics/4l.gif"}) ;
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?", 
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?"+ Table4ColumnStart + "?</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd, 
 		image : "https://learnhip.com/img/whnpics/5.gif",
 		answerimage : "https://learnhip.com/img/whnpics/5l.gif"}) ;
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?", 
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?"+ Table4ColumnStart + "?</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd, 
 		image : "https://learnhip.com/img/whnpics/6.gif",
 		answerimage : "https://learnhip.com/img/whnpics/6l.gif"}) ;
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?", 
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?"+ Table4ColumnStart + "?</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd, 
 		image : "https://learnhip.com/img/whnpics/7.gif",
 		answerimage : "https://learnhip.com/img/whnpics/7l.gif"}) ;
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?", 
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?"+ Table4ColumnStart + "?</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd, 
 		image : "https://learnhip.com/img/whnpics/8.gif",
 		answerimage : "https://learnhip.com/img/whnpics/8l.gif"}) ;
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?", 
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?"+ Table4ColumnStart + "?</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd, 
 		image : "https://learnhip.com/img/whnpics/9.gif",
 		answerimage : "https://learnhip.com/img/whnpics/9l.gif"}) ;
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?", 
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What happenned next...?"+ Table4ColumnStart + "?</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd, 
 		image : "https://learnhip.com/img/whnpics/10.gif",
 		answerimage : "https://learnhip.com/img/whnpics/10l.gif"}) ;
 
- 
 quests[++questIndexBuilder] = { //
-		name : "Pub singer 6",
+		name : "Pub singer " + pubSingerCounter++,
 		hoverover : "Sit back, close your eyes, you could be at a live venue right now.  ",
-		tags : "2021-9-11,saturday,InnerWheel,surfers,pubSinger",
+		tags : "2021-9-11,saturday,InnerWheel,surfers,audio",
 		splash : {splashType : splashTypePictureAndText , splashText : "This week we pay tribute to Sara Harding of Girls Aloud, and all great girl groups", splashImage : "https://images.8tracks.com/cover/i/010/330/840/uk_girl_group-1699.jpg?rect=325,0,949,949&q=98&fm=jpg&fit=max"  },
 		questInfo: new Array()
 	};
@@ -2916,7 +2912,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	//wa
 	answerimage : "https://static.standard.co.uk/s3fs-public/thumbnails/image/2017/06/21/12/o210years2106zo.jpg?width=640&auto=webp&quality=75&crop=2157%3A1438%2Csmart",
 	answer : '<iframe src="https://open.spotify.com/embed/track/1Je1IMUlBXcx1Fz0WE7oPT" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
 
-quests[++questIndexBuilder] = { //
+quests[++questIndexBuilder] = { //grl power
 		name : "Girrl Power",
 		hoverover : "Our best female artists",
 		tags : "music,2021-9-11,InnerWheel,saturday",
@@ -2928,7 +2924,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/2ZG4DBsLKai9DwRiJC6sSu" width="501" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
 	answer : ""}) ;
  
-
 
 quests[++questIndexBuilder] = { //
 		name : "Time Travel 2",
@@ -3075,6 +3070,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
 	answer : '<iframe src="https://open.spotify.com/embed/track/3yrSvpt2l1xhsV9Em88Pul" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'}) ;
 
 
+
 quests[++questIndexBuilder] = { //grl power
 		name : "Goodbye traffic lights",
 		hoverover : "As the UK rips up the traffic lights travel system, here are some Red/Amber(Yellow/Orange)/Green songs",
@@ -3086,8 +3082,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	question : "",
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/72acVRlAD2l0EiiMn1GYlO" width="501" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
 	answer : ""}) ;
-
-
 
 
 quests[++questIndexBuilder] = { //
@@ -3152,11 +3146,10 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 
-
 quests[++questIndexBuilder] = { 
 		name : "Eye know!",
 		hoverover : "Name the celeb",
-		tags : "2021-10-3,saturday",
+		tags : "2025-1-3,saturday",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
@@ -3239,8 +3232,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/17lZ4dFh6HTqxIB28gMKnz" width="501" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
 	answer : ""}) ;
 
-
-
 quests[++questIndexBuilder] = { 
 		name : "Quickfire",
 		hoverover : "Do I know what song this is",
@@ -3320,10 +3311,10 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pub singer 7",
+		name : "Pub singer " + pubSingerCounter++,
 		hoverover : "Sit back, close your eyes, you could be at a live venue right now.  ",
 		splash : {splashType : splashTypeText  , splashText : "A point for the song name, a point for the musical name" },
-		tags : "2021-10-10,saturday,InnerWheel,surfers,pubSinger",
+		tags : "2021-10-10,saturday,InnerWheel,surfers,audio",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
@@ -3359,10 +3350,11 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : ""}) ;
 
 
+
 quests[++questIndexBuilder] = { 
 		name : "Sitcom",
 		hoverover : "Winter is coming, time to watch more TV.  How many BBC sitcom sets do you recognise?",
-		tags : "2021-10-17,saturday,surfers",
+		tags : "2021-10-17,saturday",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
@@ -3400,7 +3392,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 quests[++questIndexBuilder] = { 
 		name : "Synonyms",
 		hoverover : "Can you recognise these synonym-swapped films?",
-		tags : "2021-10-17,saturday,surfers",
+		tags : "2021-10-17,saturday,InnerWheel,surfers",
 		splash : {splashType : splashTypePictureAndText  , splashText : "Guess the film", splashImage : "https://img.buzzfeed.com/buzzfeed-static/static/2018-02/12/17/asset/buzzfeed-prod-fastlane-03/sub-buzz-405-1518474339-2.jpg?downsize=700%3A%2A&output-quality=auto&output-format=auto" },
 		questInfo: new Array()
 	};
@@ -3447,11 +3439,24 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 } ); 
 
 
+
+quests[++questIndexBuilder] = { 
+		name : "TV Toonz",
+		hoverover : "TV theme toonz from (mainly) back in the day",
+		tags : "music,2021-10-17,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/49AqPISrqO5dCHS8GifZlN" width="501" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+	answer : ""}) ;
+
 quests[++questIndexBuilder] = { //
-		name : "Pub singer 8",
+		name : "Pub singer " + pubSingerCounter++,
 		hoverover : "Sit back, close your eyes, you could be at a live venue right now.  ",
 		splash : {splashType : splashTypeText  , splashText : "A point for the song name, a point for the usual singer's name" },
-		tags : "2021-10-17,saturday,InnerWheel,surfers,pubSinger",
+		tags : "2021-10-17,saturday,InnerWheel,surfers,audio",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
@@ -3486,19 +3491,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 	answer : "Oklahma, The Surry with the Fringe on Top", answerSpeak : ""	});
 
 
-quests[++questIndexBuilder] = { 
-		name : "TV Toonz",
-		hoverover : "TV theme toonz from (mainly) back in the day",
-		tags : "music,2021-10-17,InnerWheel,saturday",
-		questInfo: new Array()
-	};
-
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
-	question : "",
-	spotify : '<iframe src="https://open.spotify.com/embed/playlist/49AqPISrqO5dCHS8GifZlN" width="501" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
-	answer : ""}) ;
-
-
 
 quests[++questIndexBuilder] = { 
 		name : "Rare",
@@ -3516,7 +3508,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
 	answer : "35%",
 	image : "https://www.boredpanda.com/blog/wp-content/uploads/2021/10/clipimage-616e72049b1f8__700.jpg"} ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
-	question : "What percentage of the population is born with Heterochromia (2 different coloured eyes)?"+ Table4ColumnStart + "Less than 1%</td><td>5% to 8%</td><td>12% to 15%</td><td>100% as eyeballs are unique" + Table4ColumnEnd, 
+	question : "What percentage of the population is bortn with Heterochromia (2 different coloured eyes)?"+ Table4ColumnStart + "Less than 1%</td><td>5% to 8%</td><td>12% to 15%</td><td>100% as eyeballs are unique" + Table4ColumnEnd, 
 	answer : "Less than 1%",
 	image : "https://www.boredpanda.com/blog/wp-content/uploads/2021/10/clipimage-616e78401890f__700.jpg"} ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
@@ -3595,10 +3587,11 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 	answerimage : "https://img.huffingtonpost.com/asset/59246c2e2000004900cb2399.jpg?ops=scalefit_720_noupscale&format=webp"} ); 
 
 
+
 quests[++questIndexBuilder] = { 
 		name : "Scary Toonz",
 		hoverover : "Halloweenish songs",
-		tags : "music,2021-10-24,InnerWheel,saturday,specialDay",
+		tags : "music,2021-10-24,InnerWheel,saturday",
 		questInfo: new Array()
 	};
 
@@ -3608,11 +3601,10 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : ""}) ;
 
 
-
 quests[++questIndexBuilder] = { 
 		name : "Real or Fake",
 		hoverover : "Are these pictures real or fake?",
-		tags : "2021-10-31,saturday,InnerWheel,surfers",
+		tags : "2021-11-1,saturday,InnerWheel,surfers",
 		questInfo: new Array()
 	}; //https://triviaboss.com/real-or-fake/page/26/
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
@@ -3655,7 +3647,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
 quests[++questIndexBuilder] = { 
 		name : "This week(ish)",
 		hoverover : "Been reading the news this week?",
-		tags : "2021-10-31,saturday,InnerWheel,surfers",
+		tags : "2021-11-1,saturday,InnerWheel,surfers",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
@@ -3663,7 +3655,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
 	answer : "Built on an old cemetery",	image : "https://i.guim.co.uk/img/media/74bca093d526854f39e2b2865b4fdf4288475a4b/0_83_2324_1394/master/2324.jpg?width=620&quality=85&auto=format&fit=max&s=578cd135f36987db4a4e2804bff7cd7e"} ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
 	question : "The Simpsons' 'Treehouse Of Horror' Halloween special tradition began in 1990 with the episode of the same name. In the segment 'Bad Dream House', the Simpsons move into a suspiciously cheap old house that turns out to be fostering an evil spirit a la The Amityville Horror and Poltergeist. Which legendary actor provided the unusually mellifluous voice of the removal man who mutters 'I'm glad there's a curse on this place' after Homer tips him $1?" + Table4ColumnStart + "Vincent Price</td><td>James Earl Jones</td><td>Jeremy Irons</td><td>Morgan Freeman" + Table4ColumnEnd, 	
-	answer : "James Earl Jones",	image : "https://mediaproxy.tvtropes.org/width/350/https://static.tvtropes.org/pmwiki/pub/images/simpsonstreehouseofhorror1collage.jpg"} ); 
+	answer : "James Earl Jones",	image : "https://static.wikia.nocookie.net/simpsonstappedout/images/f/fa/Bad_Dream_House.jpg/revision/latest/scale-to-width-down/350?cb=20131106063419"} ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
 	question : "Scream queens Jamie Lee Curtis and her mother Janet Leigh have co-starred in two horror movies. What were they?" + Table4ColumnStart + "Halloween and Psycho</td><td>Halloween: H20 and The Fog</td><td>The Fog and Halloween: Resurrection</td><td>The Fog and Halloween" + Table4ColumnEnd, 	
 	answer : "Halloween: H20 and The Fog",	image : "https://i.guim.co.uk/img/media/98b9233c3171b647818152a8e08395cab931a05f/0_164_4768_2861/master/4768.jpg?width=620&quality=85&auto=format&fit=max&s=318d0fc8298ada4e5590cc89ceb7a3a5"} ); 
@@ -3691,9 +3683,9 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pub singer 9",
+		name : "Pub singer " + pubSingerCounter++,
 		hoverover : "Sit back, close your eyes, you could be at a live venue right now.  ",
-		tags : "2021-10-31,saturday,InnerWheel,surfers,pubSinger",
+		tags : "2021-11-1,saturday,InnerWheel,surfers,audio",
 		splash : {splashType : splashTypePictureAndText , splashText : "This week we pay tribute to 70's Disco greats the Bee Gees and Barry White.  Hold on for some lovin", splashImage : "https://s3.eu-west-3.amazonaws.com/media.cdn.brusselslife.be/38528/14518-agenda-image.jpg"  },
 		questInfo: new Array()
 	};
@@ -3734,7 +3726,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 quests[++questIndexBuilder] = { 
 		name : "Dr Who restarting",
 		hoverover : "Vague Dr Who related",
-		tags : "music,2021-10-31,InnerWheel,saturday",
+		tags : "music,2021-11-1,InnerWheel,saturday",
 		questInfo: new Array()
 	};
 
@@ -3791,10 +3783,13 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
 quests[++questIndexBuilder] = { //https://www.buzzfeed.com/bendzialdowski/robert-de-niro-quiz?ref=hpsplash
 		name : "Bobby",
 		hoverover : "We've all seen Bobby D-N in films, but can you recognise what films these stills are from...?",
-		splash : {splashType : splashTypePictureAndText , splashText : "We have all seen Bobby D-N in films, but can you recognise what films these stills are from...?", splashImage : "https://i.pinimg.com/originals/67/b3/61/67b3615598c1509493727efdefd72c3c.gif" },
+		splash : {splashType : splashTypePictureAndText , splashText : "We've all seen Bobby D-N in films, but can you recognise what films these stills are from...?", splashImage : "https://i.pinimg.com/originals/67/b3/61/67b3615598c1509493727efdefd72c3c.gif" },
 		tags : "2021-11-14,saturday,InnerWheel,surfers,7DegreesOfHBC",
 		questInfo: new Array()
 	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this from"+ Table4ColumnStart + "Raging Bull</td><td>Beauty and the Beast</td><td>Frankenstein</td><td>Bride of Frankenstein" + Table4ColumnEnd, // 
+	image : "https://cache.moviestillsdb.com/i/500x/yeqmapy0/frankenstein-lg.jpg",
+	answerimage : "https://66.media.tumblr.com/6c633e920d55e2ff8ef635f72dad7c43/tumblr_o2cgq9QUQc1rp0vkjo1_500.gif", answer : "Frankenstein (HBC point due here too)"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this from"+ Table4ColumnStart + "Goodfellas</td><td>Dominos</td><td>Pizza Express</td><td>Pizza Hut" + Table4ColumnEnd, // 
 	image : "https://img.buzzfeed.com/buzzfeed-static/static/2021-10/28/10/enhanced/42839ec2033f/enhanced-519-1635416368-3.png?output-format=auto&output-quality=auto",
 	answerimage : "https://c.tenor.com/mm-jYBApr78AAAAC/robert-de-niro-kick.gif", answer : "Goodfellas"}) ;
@@ -3804,9 +3799,6 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this from"+ Table4ColumnStart + "Bad Neighbours</td><td>Dirty Dancing</td><td>Dirty Grandpa</td><td>Italian Stallion" + Table4ColumnEnd, // 
 	image : "https://img.buzzfeed.com/buzzfeed-static/static/2021-11/1/11/enhanced/10f527de873a/enhanced-12498-1635766641-12.jpg?output-format=auto&output-quality=auto",
 	answerimage : "https://c.tenor.com/89QREkUrcdYAAAAC/dirty-grandpa-zac-efron.gif", answer : "Dirty Grandpa"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this from"+ Table4ColumnStart + "Raging Bull</td><td>Beauty and the Beast</td><td>Frankenstein</td><td>Bride of Frankenstein" + Table4ColumnEnd, // 
-	image : "https://cache.moviestillsdb.com/i/500x/yeqmapy0/frankenstein-lg.jpg",
-	answerimage : "https://66.media.tumblr.com/6c633e920d55e2ff8ef635f72dad7c43/tumblr_o2cgq9QUQc1rp0vkjo1_500.gif", answer : "Frankenstein (HBC point due here too if you got it)"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this from"+ Table4ColumnStart + "Cheaper by the dozen</td><td>The Irishman</td><td>Meet the Fockers</td><td>Meet the Parents" + Table4ColumnEnd, // 
 	image : "https://img.buzzfeed.com/buzzfeed-static/static/2021-11/1/11/enhanced/c8c168ecef21/enhanced-12291-1635766883-5.jpg?output-format=auto&output-quality=auto",
 	answerimage : "https://c.tenor.com/RCMb35wVWpoAAAAM/meet-the-parents-robert-de-niro.gif", answer : "Meet the Parents"}) ;
@@ -3828,8 +3820,8 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 quests[++questIndexBuilder] = { //https://www.buzzfeed.com/bendzialdowski/robert-de-niro-quiz?ref=hpsplash
 		name : "Hels Bells",
 		hoverover : "We've all seen the future Mrs Hopgood in films, but can you recognise what films these stills are from...?",
-		splash : {splashType : splashTypePictureAndText , splashText : "We have all seen the future Mrs Hopgood in films, but can you recognise what films these stills are from...?", splashImage : "https://i.gifer.com/origin/95/953e95f22cef08c407ed0b94458e3753_w200.gif" },
-		tags : "2021-11-7,saturday,InnerWheel,surfers,7DegreesOfHBC",
+		splash : {splashType : splashTypePictureAndText , splashText : "We've all seen the future Mrs Hopgood in films, but can you recognise what films these stills are from...?", splashImage : "https://i.gifer.com/origin/95/953e95f22cef08c407ed0b94458e3753_w200.gif" },
+		tags : "2021-11-7,saturday,InnerWheel,surfers",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this from"+ Table4ColumnStart + "Maurice</td><td>Room with a View</td><td>Where Angels Fear to Tread</td><td>Planet of the Apes" + Table4ColumnEnd, // 
@@ -3852,10 +3844,10 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://media.harrypotterfanzone.com/dan-radcliffe-and-helena-bonham-carter.jpg", answer : "Harry Potter"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this from"+ Table4ColumnStart + "Sweeny Todd</td><td>Harry Potter</td><td>Fight Club</td><td>Planet of the Apes" + Table4ColumnEnd, // 
 	image : "https://i.gifer.com/40SW.gif",
-	answerimage : "http://www.limitedruns.com/media/cache/65/c4/65c429d1c41e1ddea71ca8e362918f56.jpg", answer : "Sweeny Todd"}) ;
+	answerimage : "https://signedforcharity.org/wp-content/uploads/2020/06/Helena-Bonham-Carter-0007A-254cmx203cm-scaled.jpg", answer : "Sweeny Todd"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this from"+ Table4ColumnStart + "Harry Potter</td><td>Cinderella</td><td>Alice through the Looking Glass</td><td>Planet of the Apes" + Table4ColumnEnd, // 
 	image : "https://64.media.tumblr.com/8ec5bc496e785f004a10ddcb21e20f4f/tumblr_nkva4mxOLL1qblt13o1_500.gifv",
-	answerimage : "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1e725ce2-9195-451c-b155-0a1a3e19ee77/d88lauy-cac74528-8fc0-4a19-bf39-0fb882c0bb1e.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzFlNzI1Y2UyLTkxOTUtNDUxYy1iMTU1LTBhMWEzZTE5ZWU3N1wvZDg4bGF1eS1jYWM3NDUyOC04ZmMwLTRhMTktYmYzOS0wZmI4ODJjMGJiMWUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.W51rlqVFIPhCTsGaKVtaxemww-SK4v0rY5ZilvuSqZc", answer : ""}) ;
+	answerimage : "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1e725ce2-9195-451c-b155-0a1a3e19ee77/d88lauy-cac74528-8fc0-4a19-bf39-0fb882c0bb1e.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzFlNzI1Y2UyLTkxOTUtNDUxYy1iMTU1LTBhMWEzZTE5ZWU3N1wvZDg4bGF1eS1jYWM3NDUyOC04ZmMwLTRhMTktYmYzOS0wZmI4ODJjMGJiMWUuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.W51rlqVFIPhCTsGaKVtaxemww-SK4v0rY5ZilvuSqZc", answer : "Cinderella"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What film is this from"+ Table4ColumnStart + "Harry Potter</td><td>Cinderella</td><td>Alice through the Looking Glass</td><td>Planet of the Apes" + Table4ColumnEnd, // 
 	image : "https://c.tenor.com/wzpeVllHfOwAAAAd/queen-of-hearts-helena-bonham-carter.gif",
 	answerimage : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNIVHzrFvF4zq9MipNCcXCxWfWg0sDQdarTw&usqp=CAU", answer : "Alice through the Looking Glass"}) ;
@@ -3863,11 +3855,10 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	image : "https://i.pinimg.com/originals/da/fc/f4/dafcf42c1108b64f413d4ed905e96366.jpg",
 	answerimage : "https://upload.wikimedia.org/wikipedia/en/thumb/7/7d/Planet_of_the_Apes_%282001%29_poster.jpg/220px-Planet_of_the_Apes_%282001%29_poster.jpg", answer : "Planet of the Apes"}) ;
 
-
 quests[++questIndexBuilder] = { //
-		name : "Pub singer 10",
+		name : "Pub singer " + pubSingerCounter++,
 		hoverover : "Sit back, close your eyes, you could be at a live venue right now.  ",
-		tags : "2021-11-7,saturday,InnerWheel,surfers,pubSinger",
+		tags : "2021-11-7,saturday,InnerWheel,surfers,audio",
 		splash : {splashType : splashTypePictureAndText , splashText : "This week we pay tribute to the great crooners", splashImage : "https://www.propermusic.com/media/catalog/product/cache/770f7f65d519370eea7ae1a9215d2a64/5/7/572378_1.jpg"  },
 		questInfo: new Array()
 	};
@@ -3904,6 +3895,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 	answer : '<iframe src="https://open.spotify.com/embed/track/5hjXF13XHZ5d1lgF3YqyED" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>'	});
 
 
+
 quests[++questIndexBuilder] = { 
 		name : "COP 26",
 		hoverover : "Weather related songs",
@@ -3915,7 +3907,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	question : "",
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/16diyPwoSWYkfZDN3uuoh9" width="501" height="580" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
 	answer : ""}) ;
-
 
 
 quests[++questIndexBuilder] = { //https://en.wikipedia.org/wiki/List_of_Judi_Dench_performances
@@ -3970,11 +3961,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 
-
-
-
-
-
 quests[++questIndexBuilder] = { //https://www.reddit.com/r/AskReddit/comments/qop4mr/what_are_some_of_the_most_iconic_movie_quotes/    https://www.reddit.com/r/AskReddit/comments/o4tzin/what_short_movie_quote_can_people_instantly/
 		name : "Youwhat?",
 		hoverover : "What films are thes quotes from...?",
@@ -4017,11 +4003,12 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,	ques
 	answer : "I'm a Celebrity get me out of here"}) ;
 
 
+
 quests[++questIndexBuilder] = { //https://www.pocket-lint.com/apps/news/134579-worst-album-cover-art-of-all-time-you-won-t-believe-number-34
 		name : "Bad Albums",
 		hoverover : "Bad album covers, but which act has the most Spotify listens?",
 		splash : {splashType : splashTypePictureAndText , splashText : "Bad album covers, but which act has the most Spotify listens...?", splashImage : "https://scontent.fltn3-2.fna.fbcdn.net/v/t31.18172-8/14976849_1174228349338417_7115787037305981998_o.jpg?_nc_cat=106&ccb=1-5&_nc_sid=174925&_nc_ohc=AT_LBLxKOjsAX_nT_hl&_nc_ht=scontent.fltn3-2.fna&oh=60fefe5a7b0ddbd99fbdadd1c79364c4&oe=61BD5972" },
-		tags : "2021-11-21,saturday,InnerWheel,surfers,listens",
+		tags : "2021-11-21,saturday,InnerWheel,surfers",
 		questInfo: new Array()
 	};
 
@@ -4083,6 +4070,8 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionType2PictureQuestion,
 
 
 
+
+
 quests[++questIndexBuilder] = { 
 		name : "Jungle",
 		hoverover : "Name the song and singer ",
@@ -4094,6 +4083,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	question : "",
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/2npKrd3XiobvUhQvIZd1sn" width="501" height="580" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
 	answer : ""}) ;
+
 
 
 
@@ -4156,7 +4146,7 @@ quests[++questIndexBuilder] = { //https://en.wikipedia.org/wiki/List_of_Judi_Den
 		name : "Hey Jude",
 		hoverover : "We've all seen Dame Judy in films, but can you recognise what films these stills are from...?",
 		splash : {splashType : splashTypeText , splashText : "We've all seen Dame Judy in films, but can you recognise what films are from...?", splashImage : "https://media2.giphy.com/media/YplBZ0pxRAqRyVNVSU/giphy.gif" },
-		tags : "2021-11-28,saturday,InnerWheel,surfers,casting", //,7DegreesOfHBC",
+		tags : "2021-11-28,saturday,InnerWheel,surfers,casting,7DegreesOfHBC",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What film is this from"+ Table4ColumnStart + "Maurice</td><td>A Room with a View</td><td>Where Angels Fear to Tread</td><td>Planet of the Apes" + Table4ColumnEnd, // 
@@ -4205,3 +4195,151 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : ""}) ;
 
 
+/*
+ 
+ 
+audioOnlyYoutubeStart =	'<div style="position:relative;width:267px;height:25px;overflow:hidden;"> <div style="position:absolute;top:-276px;left:-5px"> <iframe width="300" height="300"  src="https://www.youtube.com/embed/';
+audioOnlyYoutubeEnd =	'?rel=0"> </iframe> </div> </div>' ;
+
+ 
+quests[++questIndexBuilder] = { //
+		name : "Test Alt speak",
+		hoverover : "Pictionary on the Theme of household goods",
+		tags : "2021-4-17,pictionary",
+		questInfo: new Array()
+	};
+	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "?  " + Table4ColumnStart + "?</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd,
+	answer : ""	, answerSpeak : ""});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "?  " + Table4ColumnStart + "?</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd,
+	answer : "", answerSpeak : "", image : ""	});	
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "", //
+	image : "",
+	answerimage : ""}) ;
+	
+	
+	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "Test speach",
+	answer : "written answer", answerSpeak : "spoken answer"} );
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "Test speach",
+	answer : "written answer"} );
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2PictureAnswer,
+	question : "What and who do you see here?",	answer : "" ,
+	image : "",
+	answerimage : "",
+	answerimage2 : ""
+}) ;
+
+  addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "",
+	answer : "", answerSpeak : "spoken answer"} );
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "?",
+	image : "",
+	answer : ""}) ;
+ 
+ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/?.mp3' + endAudio ,
+	answer : ""	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/?.mp3' + endAudio ,
+	answer : startYouTube + '' + endYouTube	, answerSpeak : ""});
+
+ quests[++questIndexBuilder] = { //
+		name : "Pictionary 12",
+		hoverover : "Pictionary on the Theme of ???",
+		tags : "2021-4-17,pictionary",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "", answer : "", answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "", answer : "", answerSpeak : ""}) ;
+ 
+ addQuest(quests[questIndexBuilder],{	type : quizQuestionType2PictureAnswer,
+	question : "What and who do you see here?",	answer : "" ,
+	image : "",
+	answerimage : "",
+	answerimage2 : ""
+}) ;
+ 
+quests[++questIndexBuilder] = { //
+		name : "Test new quiz builder",
+		hoverover : "Try out the quicker builder",
+		tags : "test",
+		splash : {splashType : splashTypeText / splashTypePictureAndText , splashText : "Test Text", splashImage : "" },
+		questInfo: new Array()
+	};
+
+quests[++questIndexBuilder] = {  //
+		name : "Test new month-based quiz builder",
+		hoverover : "Try out the quicker builder",
+		tags : "test,year,saturday",
+		questInfo: new Array()
+	};
+	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "?  " + Table4ColumnStart + "?</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd,
+	answer : ""	});
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "",
+	answer : ""    } );
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "What movie is being described",
+	image : "https://lh3.googleusercontent.com/Ftq4kmwf2ZMgm2Au1KHEirPcTYyA2MfoTe5ti0A2v6cPUAyexLjvfFtcovCeJDtF8oX8j6EXHIV9HMrZj41byAmnurxMK4mfRcSw695znXl608VK__rflaCyjX_fcVMXtxvgNfEU0NU=w1920-h1080",
+	answer : "Groundhog Day"
+}) ;
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : 'Name the products these songs were used to advertise',
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/7BQJ0lhgEX1NCPKBt6TlYm" width="500" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+	answer : "Cadbury, Levi's,Muller Light, Galaxy, Wrigleys, Guinness, Vauxhall, Nike, Levi's, Barclaycard,Quality Street  "
+}) ;
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : '',
+	spotify : '<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRm7q0c3dgVMI_pieDAUPcSHXQ8N3I20dHQytGEjaKsq2Pj-l2xHcRpud-McY2UhU_qrBcLyVRidpOJ/embed?start=false&loop=false&delayms=10000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>',
+	answer : "Click the presentation to move it along"
+} );
+
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+		question : "In August, who said (during a voice check for a radio broadcast) 'My fellow Americans, I'm pleased to tell you today that I've signed legislation that will outlaw Russia forever. We begin bombing in five minutes'?",
+		answer : "POTUS Ronald Reagan  <iframe width='560' height='315' src='https://www.youtube.com/embed/bBow1ToJBFE' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
+}) ;
+
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,
+		question : "What movie", //Brigadoon
+		image : "",
+		answerimage : ""
+}) ;
+
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+		question : "?",
+		answerimage : ""
+	} ); 
+	
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "Which actor has died most times on the big-screen (ie in films)? <BR/> (a) Danny Trejo, <BR/> (II) Vincent Price, <BR/> (3) Christopher Lee, <BR/> (Ivy) Dennis Hopper.",
+	answerimage : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Danny_Trejo_by_Gage_Skidmore.jpg/220px-Danny_Trejo_by_Gage_Skidmore.jpg"
+} ); 
+
+questIndexBuilder++;
+
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "who was born?",
+	answer : "Ted"
+} ); 
+
+questIndexBuilder++;
+*/
