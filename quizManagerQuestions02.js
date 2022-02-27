@@ -1226,15 +1226,63 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 
+
 quests[++questIndexBuilder] = { 
-		name : "GK",
-		hoverover : "Blah Blah",
+		name : "Palindromes " + palindromeCounter++,
+		splash : {splashType : splashTypeText , splashText : "Palindromes.  For example: </BR></BR>What does a baby wear to keep it's top clean?</BR></BR>BIB"},
+		hoverover : "Walking backwards for Christmas",
 		tags : "2022-2-27,saturday,InnerWheel,surfers",
 		questInfo: new Array()
 	};
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
-	question : "Autosomal-dominant Compelling Helio Opthalmic Outburst Syndrome is characterized by uncontrollable what in response to the sudden exposure to bright light, typically intense sunlight??" ,
-	answer : "ACHOO Syndrome is characterized by uncontrollable sneezing."	});	
+addQuest(quests[questIndexBuilder],{type : quizQuestionTypeText, question : "A holy woman?", answer : "NUN"});	
+addQuest(quests[questIndexBuilder],{type : quizQuestionTypeText, question : "What Niki Lauder and James Hunt drove?", answer : "RACECAR"});	
+addQuest(quests[questIndexBuilder],{type : quizQuestionTypeText, question : "What word is used relating to the duties or activities of people in relation to their town, city, or local area?", answer : "CIVIC"});	
+addQuest(quests[questIndexBuilder],{type : quizQuestionTypeText, question : "The name of a canoe of a type originally used by the Inuit and made of a light frame with a watertight covering having a small opening in the top to sit in?", answer : "KAYAK"});	
+addQuest(quests[questIndexBuilder],{type : quizQuestionTypeText, question : "What word is used to address or refer to a woman in a polite or respectful way, or a brothel owner?", answer : "MADAM"});	
+addQuest(quests[questIndexBuilder],{type : quizQuestionTypeText, question : "What word to describe a time of the day is the only palindromic time?", answer : "NOON"});	
+addQuest(quests[questIndexBuilder],{type : quizQuestionTypeText, question : "The whole reason for taking notes is so that you can do what to them?", answer : "REFER"});	
+addQuest(quests[questIndexBuilder],{type : quizQuestionTypeText, question : "A machine with rotating blades for breaking up or tilling soil is called a what?", answer : "ROTAVATOR"});	
+addQuest(quests[questIndexBuilder],{type : quizQuestionTypeText, question : "What are long stories of heroic achievement, especially a mediaeval prose narrative in Old Norse or Old Icelandic?", answer : "SAGAS"});	
+addQuest(quests[questIndexBuilder],{type : quizQuestionTypeText, question : "The title of a 2020 film directed by Christopher Nolan, and a principle or belief, especially one of the main principles of a religion or philosophy is a?", answer : "TENET"});	
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Last week",
+		hoverover : "What did you miss?",
+		tags : "2022-2-27,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "<strong>A</strong>utosomal-dominant <strong>C</strong>ompelling <strong>H</strong>elioopthalmic <strong>O</strong>utburst <strong>S</strong>yndrome is characterized by uncontrollable what in response to the sudden exposure to bright light, typically intense sunlight?" ,
+	answer : "ACHOO Syndrome is characterized by uncontrollable sneezing.", image : "https://memegenerator.net/img/images/12129393.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Forestry and Land Scotland is introducing which animal to act as a deterrent to grey squirrels moving north up the A9 corridor and invading?" + Table4ColumnStart + "Mink</td><td>Pine Martins</td><td>Ferrets</td><td>Rancors" + Table4ColumnEnd ,
+	answer : "Pine martens", image : "https://i.guim.co.uk/img/media/0b0bb54887016102986e59f8b7f2259c40d9c3db/0_148_2761_1656/master/2761.jpg?width=620&quality=85&auto=format&fit=max&s=09e299d07d1a15e914b7f7a42649579a"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Nasa has announced a new mission called HelioSWARM which will consist of nine small spacecraft that will fly in formation to simultaneously measure the conditions of what?" + Table4ColumnStart + "Polar ice caps on Mars</td><td>Micro-gravity on the moon</td><td>The solar wind</td><td>The wind from Uranus" + Table4ColumnEnd ,
+	answer : "The solar wind", image : "https://i.guim.co.uk/img/media/c33d7a50af14891086f0f59108cff1c8734115a2/0_19_4961_2975/master/4961.jpg?width=620&quality=85&auto=format&fit=max&s=9d90dcdd700b52a5b5f4c53492d356b7"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Last Friday British Twitter got gripped watching a live stream of planes attempting to land at Heathrow during Storm Eunice. What was the name of the channel?" + Table4ColumnStart + "Skynet</td><td>Speedbird TV</td><td>Big Jet TV</td><td>WHOAAAA TV" + Table4ColumnEnd ,
+	answer : "Big Jet TV", image : "https://thumbs.gfycat.com/AjarDenseBallpython-size_restricted.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Richard Ayoade, Edward Tudor-Pole and Richard O'Brien have all hosted which game show?" + Table4ColumnStart + "The Weakest Link</td><td>The Crystal Maze</td><td>The Krypton Factor</td><td>Fort Boyard" + Table4ColumnEnd ,
+	answer : "The Crystal Maze", image : "https://thumbs.gfycat.com/AggravatingPracticalDeinonychus-size_restricted.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which US city was first known as Terminus, and later Thrasherville, before adopting its current name in 1847?" + Table4ColumnStart + "Oklahoma City, Oklahoma</td><td>Sacramento, California</td><td>Atlanta, Georgia</td><td>Charleston, South Carolina" + Table4ColumnEnd ,
+	answer : "Atlanta, Georgia", image : "https://i.gifer.com/52SU.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Queen singer Freddie Mercury was born Farrokh Bulsara, but he released a 1973 single under which pseudonym?" + Table4ColumnStart + "Larry Lurex</td><td>Tommy Tomorrow</td><td>Peter Plastic</td><td>Simon Ferocious" + Table4ColumnEnd ,
+	answer : "Larry Lurex", image : "https://i.gifer.com/origin/43/436ea3decf77aa1e117e2417cafb169b_w200.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which of Northern Ireland's counties is Ballymena in?" + Table4ColumnStart + "Down</td><td>Armagh</td><td>Antrim</td><td>Fermanagh" + Table4ColumnEnd ,
+	answer : "Antrim", image : "https://i.guim.co.uk/img/media/1855797d3d3f50e447fd005f8a4f70cd4a6a5997/0_68_3500_2101/master/3500.jpg?width=620&quality=85&auto=format&fit=max&s=60117c850cf6e1c92cc8943a6dc4c7b5"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Last week a woman in Canada contacted the wrong police force 3,000 miles away during an emergency. Which English constabulary did she contact?  " + Table4ColumnStart + "Cheshire</td><td>Durham</td><td>Hampshire</td><td>Norfolk" + Table4ColumnEnd,
+	answer : "Durham", image : "https://i.makeagif.com/media/6-12-2015/a2Djhj.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which hugely successful artist released albums called Music Box, Daydream and Butterfly during the 1990s?" + Table4ColumnStart + "Mariah Carey</td><td>Whitney Houston</td><td>Celine Dion</td><td>Kate Bush" + Table4ColumnEnd ,
+	answer : "Mariah Carey", image : "https://i.guim.co.uk/img/media/3203b453ea966dc11e817c56c949c5d32e2bdce7/0_0_2000_1200/master/2000.jpg?width=620&quality=85&auto=format&fit=max&s=3ed80803c430ec7c559d4ed416266788"	});	
 
 
 quests[++questIndexBuilder] = { 
@@ -1245,8 +1293,10 @@ quests[++questIndexBuilder] = {
 	};
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
-	question : "",
+	question : "Name the song, and who you would expect to hear sing this",
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/3j7QUDefD0naJHt8sCyAjH?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
-	answer : ''}) ;
+	answer : 'Toto, Bee-Gees, Elvis (or Fine Young Cannibals), A-Ha!, Gloria Jones (or Soft Cell), Simon & Garfunkel, Eurythmics, ABBA, The Bangles, New Order '}) ;
+
+
 
 
