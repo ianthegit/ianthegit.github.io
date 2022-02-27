@@ -1355,6 +1355,32 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://i.makeagif.com/media/11-23-2014/5Z7UDv.gif", answerSpeak : "Fog"}) ;
 
 
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " + pictionaryCount++,
+		hoverover : "Pictionary on the theme of things you might see on a river",
+		tags : "2022-2-27,pictionary",
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://c.tenor.com/cV6N0r2odYEAAAAC/boat-fail-boat-accident.gif", answerSpeak : "Boats"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://y.yarn.co/9b22bc1f-2103-4194-957e-e54143168146_text.gif", answerSpeak : "Buoys"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://c.tenor.com/3w5USDcUEuAAAAAM/swan-peck.gif", answerSpeak : "Swans"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://media2.giphy.com/media/3cA4sh9SznEEU/giphy.gif", answerSpeak : "Rowing Boats"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://media4.giphy.com/media/le0xDZ7kpMtYQ/giphy-downsized-large.gif", answerSpeak : "Swimmers"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://media3.giphy.com/media/IcT6FV6PIHmp41PNXe/200.gif", answerSpeak : "Paddle Boarders"}) ;
+
+
 
 /*
  * 	image : "",
