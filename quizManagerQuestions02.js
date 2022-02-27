@@ -1254,7 +1254,7 @@ quests[++questIndexBuilder] = {
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "<strong>A</strong>utosomal-dominant <strong>C</strong>ompelling <strong>H</strong>elioopthalmic <strong>O</strong>utburst <strong>S</strong>yndrome is characterized by uncontrollable what in response to the sudden exposure to bright light, typically intense sunlight?" ,
+	question : "<strong>A</strong>utosomal-dominant <strong>C</strong>ompelling <strong>H</strong>elio <strong>O</strong>pthalmic <strong>O</strong>utburst <strong>S</strong>yndrome is characterized by uncontrollable what in response to the sudden exposure to bright light, typically intense sunlight?" ,
 	answer : "ACHOO Syndrome is characterized by uncontrollable sneezing.", image : "https://memegenerator.net/img/images/12129393.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Forestry and Land Scotland is introducing which animal to act as a deterrent to grey squirrels moving north up the A9 corridor and invading?" + Table4ColumnStart + "Mink</td><td>Pine Martins</td><td>Ferrets</td><td>Rancors" + Table4ColumnEnd ,
