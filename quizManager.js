@@ -19,6 +19,8 @@ document.getElementsByTagName('head')[0].appendChild(meta);
 //  http://www.celebritizer.com/   Who has worked with whom
 
 currQuestIndex = 0;
+palindromeCounter=0;
+pubSingerCounter=0;
 currQuestStageIndex = -1;
 discussionPointIndex=-1;
 resultText = '';
