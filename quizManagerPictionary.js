@@ -1379,6 +1379,30 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLXi-4Nr2WOwuPupleZkOBr0Bhk3TxKA6xeI5zDsS1AFtlWxOr18fRXV2_Kl3fuJFaU90XR8jlL3_62SGaGOpR8h8pnlPd-tJoUaPkriIFNw27ZJtzCIQ1QvSoLeRd6wwy3O_3XXGb_l5h1p9Qqn4otvcA=w878-h358-no?authuser=0",
 	answerimage : "https://media3.giphy.com/media/IcT6FV6PIHmp41PNXe/200.gif", answerSpeak : "Paddle Boarders"}) ;
 
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " + pictionaryCount++,
+		hoverover : "Pictionary on the theme of Spring",
+		tags : "2022-3-5,pictionary",
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXslCYfTMKSRnprO7bagff_NPdNIyxUuRA1O-14oT39izg4GZOk2z0heN9a8q2XVtsLkxkzhTIJ9fT8MnplMFsSfgSdrEOYo3vRJmkE1EL-fH-tsOKQdAXAnXT7Pu1y-8s7EUolPdnprWpmJ2uH4K-2AA=w462-h359-no?authuser=0",
+	answerimage : "https://media3.giphy.com/media/NUevhWb3aWuSyXz3FP/giphy-downsized-large.gif", answerSpeak : "Lambs"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLWR2rlxEf_oI7lZl5-K5ZFt5crj9UImeizyVZgheWIXu9tOY_L0MSXvAGpwy1lYBNELV8--C1G0ZM9qTLZSrhZHmzWH9azDu-lSyfLL1ctxVTeLJnpYGt8lHsa1k2DCboBXmT0AA14OgP-YTpTwCGAjqw=w698-h325-no?authuser=0",
+	answerimage : "https://media4.giphy.com/media/13ZzYXkeIjcZy0/200.gif", answerSpeak : "Blossom"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUi7ja25c_y0j6K4Fn_cewwFrDbzhV2vCWBzWH06brNcLAhRA1_l6Tk27NYrchCvnOJNfBI8IuxQru_YhKDc9EQh__i6m7v0mET8Am5ZoirF5-Mkz6gftB-GuQGerCQryJ-Vo-LXuqA-llOgP3snK20gQ=w702-h327-no?authuser=0",
+	answerimage : "https://i.gifer.com/g2zh.gif", answerSpeak : "Chicks"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXD__HypgdC0GW3BcqR5qFgqrpWGuEyTb4GMmhnQCGz0-T8-5WsWm0EfMu_e15nXsn7Nh6ttg9-6VH7PE2eQxpLmXNTcAAnHAkMxndq6xQG8viF8Jk0I1NITN-kJqsslzKn65nb4qhkbq2wznZXO11Lzg=w689-h326-no?authuser=0",
+	answerimage : "https://i.pinimg.com/originals/16/dc/69/16dc69a8d6e4fa402fc1cd7610d9d7dc.gif", answerSpeak : "Daffodils"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXTVvMzBcjd6mO01_jdou8zDngnXJB4HwV59NUFA-j3KU6IUh2K8KXN-YH6oRNMx6_4k1JSNuJ9NIieZGiCtenpcKf-ez7aNcXBAKPQKhcrb1-yW3uhRMjOo2ShjTwUqm1tCEf-k1zpPCYAmrnN7nTtdw=w259-h272-no?authuser=0",
+	answerimage : "https://media4.giphy.com/media/10fUNsbuaYB8eA/200w.gif?cid=82a1493bbzomyw54o2yh0d8a8rsdtyy1uwizwb188j8a21rb&rid=200w.gif&ct=g", answerSpeak : "Bunnies"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLWlU1qiGBPSxcElNQrgzc2mVJvV2AvP010w5wvYDezybDIjx1AnZDGXWahU0TJxqRZSe3WkV5t5Y_pr5QQ_q2lSs0-GKfwtxU9yH0WsqpQALm8FTxj3lrq9bFoQwYhovR9gzLEPiHKgaokWXFWa3ebfmQ=w716-h336-no?authuser=0",
+	answerimage : "https://media3.giphy.com/media/JWl9GrmcX49by/giphy.gif", answerSpeak : "Spring"}) ;
 
 
 /*
