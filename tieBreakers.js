@@ -4,8 +4,10 @@
 
 
 
+tiebreakerCount=0
+
 quests[++questIndexBuilder] = { 
-		name : "TieBreaker 0",
+		name : "TieBreaker " + tiebreakerCount++,
 		hoverover : "Choose a number",
 		tags : "surfers,InnerWheel,saturday,tieBreaker",
 		questInfo: new Array()
@@ -16,7 +18,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 
 
 quests[++questIndexBuilder] = { 
-		name : "TieBreaker 1",
+		name : "TieBreaker " + tiebreakerCount++,
 		hoverover : "Choose a number",
 		tags : "surfers,InnerWheel,saturday,tieBreaker",
 		questInfo: new Array()
@@ -26,30 +28,30 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	answer : "83"	});
 
 quests[++questIndexBuilder] = { 
-		name : "TieBreaker 2",
+		name : "TieBreaker " + tiebreakerCount++,
 		hoverover : "Choose a number",
 		tags : "surfers,InnerWheel,saturday,tieBreaker",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : 'How many countries are there which border both the Mediterranean Sea and Atlantic Ocean? ',
-	answer : '3 - France, Spain and Morocco  </BR> <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14822562.389280813!2d-1.4867759361753383!3d40.29735410503691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2suk!4v1638810588001!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>'	});
+	answer : "3 - France, Spain and Morocco"	});
 
 
 quests[++questIndexBuilder] = { 
-		name : "TieBreaker 3",
+		name : "TieBreaker " + tiebreakerCount++,
 		hoverover : "Choose a number",
 		tags : "surfers,InnerWheel,saturday,tieBreaker",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : 'How many stars in the Brazillian flag? ', image : "https://cdn.britannica.com/47/6847-004-7D668BB0/Flag-Brazil.jpg",
-	answer : "27"	});
+	answer : "3 - France, Spain and Morocco"	});
 
 
 
 quests[++questIndexBuilder] = { 
-		name : "TieBreaker 4",
+		name : "TieBreaker " + tiebreakerCount++,
 		hoverover : "Choose a number",
 		tags : "surfers,InnerWheel,saturday,tieBreaker",
 		questInfo: new Array()
@@ -61,7 +63,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 
 
 quests[++questIndexBuilder] = { 
-		name : "TieBreaker 5",
+		name : "TieBreaker " + tiebreakerCount++,
 		hoverover : "Choose a number",
 		tags : "surfers,InnerWheel,saturday,tieBreaker",
 		questInfo: new Array()
@@ -69,3 +71,16 @@ quests[++questIndexBuilder] = {
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : '"Thankful Villages" are villages in England & Wales from which all of their members of the armed forces survived World War I.  How many "Thankful Villages" have been identifed? ',
 	answer : "53"	});
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "TieBreaker " + tiebreakerCount++,
+		hoverover : "Choose a number",
+		tags : "surfers,InnerWheel,saturday,tieBreaker",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : 'When the mighty Status Quo opened Live Aid at Wembly Stadium in 1985, how many songs did they play? ',
+	answer : "3 - Rockin' All Over The World, Caroline, Don't Waste My Time", image : "http://image.guardian.co.uk/sys-images/Guardian/Pix/gallery/2004/10/15/quo.jpg"	});
+
