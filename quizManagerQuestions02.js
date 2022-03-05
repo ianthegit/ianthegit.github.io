@@ -1355,7 +1355,7 @@ quests[++questIndexBuilder] = {
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	question : "Name the song, and who you would expect to hear sing this",
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/2UWF1mwHcf54FWFzvZz6De?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
-	answer : 'The Darkness, J Geils Band, The Clash, Cliff Richard, Scissor Sisers, The Beatles, The Rolling Stones, Queen, The Cars, Status Quo '}) ;
+	answer : 'The Darkness, J Geils Band, The Clash, Cliff Richard, Scissor Sisters, The Beatles, The Rolling Stones, Queen, The Cars, Status Quo '}) ;
 
 
 
@@ -1369,7 +1369,7 @@ quests[++questIndexBuilder] = {
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	question : "Name the song, and who you would expect to hear sing this",
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/7AErOsmKiNti5dv01iP3su?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
-	answer : 'Motorhead, Aerosmith, Bon Jon Bovi, Queen, Bob Marley, Journey, Survivor, Bryan Adams, Def Leppard, Aerosmith  '}) ;
+	answer : 'Motorhead, Aerosmith, Bon Jon Bovi, Queen, Bob Marley & the Wailers, Journey, Survivor, Bryan Adams, Def Leppard, Aerosmith  '}) ;
 
 
 
