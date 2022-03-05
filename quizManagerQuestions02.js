@@ -1286,7 +1286,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 
 quests[++questIndexBuilder] = { 
-		name : "Rockgrass",
+		name : "Rockgrass 0",
 		hoverover : "Have you ever head the banjo?",
 		tags : "music,2022-2-27,InnerWheel,saturday",
 		questInfo: new Array()
@@ -1296,6 +1296,80 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	question : "Name the song, and who you would expect to hear sing this",
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/3j7QUDefD0naJHt8sCyAjH?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
 	answer : 'Toto, Bee-Gees, Elvis (or Fine Young Cannibals), A-Ha!, Gloria Jones (or Soft Cell), Simon & Garfunkel, Eurythmics, ABBA, The Bangles, New Order '}) ;
+
+
+quests[++questIndexBuilder] = { 
+		name : "Drive me Crazy",
+		hoverover : "What do these mean?",
+		tags : "2022-3-5,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What does this on your car dashboard symbol mean?"+ Table4ColumnStart + "Helicopter Approaching</td><td>Fuel Leak</td><td>Engine Management/Check Engine</td><td>Sat-Nav error" + Table4ColumnEnd ,
+	answer : "Engine Management/Check Engine", image : "https://involve-me.imgix.net/uploads/assets/941454e0-f419-468c-bb91-30c4c02c3286.png?q=75&dpr=1&w=800&fit=max"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What does this on your car dashboard symbol mean?"+ Table4ColumnStart + "Low Tyre Pressure</td><td>Unknown object in boot</td><td>Boot too full</td><td>Your Mother-in-Law is too heavy" + Table4ColumnEnd ,
+	answer : "Low Tyre Pressure", image : "https://involve-me.imgix.net/uploads/assets/318fc0b3-765b-4931-896e-a11b2c50ce6f.png?q=75&dpr=1&w=800&fit=max"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What does this on your car dashboard symbol mean?"+ Table4ColumnStart + "Suspension Error</td><td>Curvy road ahead</td><td>Glow plug warning</td><td>Julie's in the car" + Table4ColumnEnd ,
+	answer : "Glow plug warning", image : "https://involve-me.imgix.net/uploads/assets/7829bbe8-c5bf-4223-b611-5370b302fb6a.png?q=75&dpr=1&w=800&fit=max"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What does this on your car dashboard symbol mean you should do?"+ Table4ColumnStart + "Top up washer fluid</td><td>Top up Oil</td><td>Water your garden</td><td>Fill the blinker fluid reservoir" + Table4ColumnEnd ,
+	answer : "Top up Oil", image : "https://involve-me.imgix.net/uploads/assets/7935894a-03b5-418f-becb-0cbacf1c90fa.png?q=75&dpr=1&w=800&fit=max"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What does this on your car dashboard symbol mean?"+ Table4ColumnStart + "Look under the bonnet</td><td>Bonnet not closed</td><td>Windscreen loose</td><td>Mother-in-Law ahead, restrict your vision" + Table4ColumnEnd ,
+	answer : "Bonnet not closed", image : "https://involve-me.imgix.net/uploads/assets/8c80c561-b26b-496a-b11d-7dc0ea4fde16.png?q=75&dpr=1&w=800&fit=max"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What does this on your car dashboard symbol mean?"+ Table4ColumnStart + "Drinking fountain ahead</td><td>Top up washer fluid</td><td>Top up blinker fluid</td><td>Fuel leak" + Table4ColumnEnd ,
+	answer : "Top up washer fluid", image : "https://involve-me.imgix.net/uploads/assets/d6930e78-296c-4f20-9d27-0dce3de52951.png?q=75&dpr=1&w=800&fit=max"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What does this on your car dashboard symbol mean?"+ Table4ColumnStart + "Front fog lights are on</td><td>Rear fog lights are on</td><td>Brake pads worn</td><td>Green light - GO!" + Table4ColumnEnd ,
+	answer : "Front fog lights are on", image : "https://involve-me.imgix.net/uploads/assets/c90bbef3-43a6-4157-9b00-42e91c37cec6.png?q=75&dpr=1&w=800&fit=max"	});	
+	
+
+quests[++questIndexBuilder] = { 
+		name : "Palindromes " + palindromeCounter++,
+		splash : {splashType : splashTypeText , splashText : "Palindromes.  For example: </BR></BR>What do Americans call their female parent?</BR></BR>MOM"},
+		hoverover : "Walking backwards for Christmas",
+		tags : "2022-3-5,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{type : quizQuestionTypeText, question : "Not wonky.", answer : "LEVEL"});	
+addQuest(quests[questIndexBuilder],{type : quizQuestionTypeText, question : "Seeing in the dark.", answer : "RADAR"});	
+addQuest(quests[questIndexBuilder],{type : quizQuestionTypeText, question : "2nd time you paper the walls.", answer : "REPAPER"});	
+addQuest(quests[questIndexBuilder],{type : quizQuestionTypeText, question : "Engine part, it goes around.", answer : "ROTOR"});	
+addQuest(quests[questIndexBuilder],{type : quizQuestionTypeText, question : "Marylin's were 37-22-36.", answer : "STATS"});	
+addQuest(quests[questIndexBuilder],{type : quizQuestionTypeText, question : "Amazing!", answer : "WOW"});	
+addQuest(quests[questIndexBuilder],{type : quizQuestionTypeText, question : "Where I might go to get fit (2 words 2,3)?", answer : "MY GYM"});	
+addQuest(quests[questIndexBuilder],{type : quizQuestionTypeText, question : "Not the bottom place (2 words 3,4)", answer : "TOP SPOT"});	
+addQuest(quests[questIndexBuilder],{type : quizQuestionTypeText, question : "Disco band", answer : "ABBA"});	
+
+
+quests[++questIndexBuilder] = { 
+		name : "Rockgrass 1",
+		hoverover : "Have you ever head the banjo?",
+		tags : "music,2022-3-5,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "Name the song, and who you would expect to hear sing this",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/2UWF1mwHcf54FWFzvZz6De?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+	answer : 'The Darkness, J Geils Band, The Clash, Cliff Richard, Scissor Sisers, The Beatles, The Rolling Stones, Queen, The Cars, Status Quo '}) ;
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Rockgrass 1",
+		hoverover : "Have you ever head the banjo?",
+		tags : "music,2022-3-12,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "Name the song, and who you would expect to hear sing this",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/7AErOsmKiNti5dv01iP3su?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+	answer : 'Motorhead, Aerosmith, Bon Jon Bovi, Queen, Bob Marley, Journey, Survivor, Bryan Adams, Def Leppard, Aerosmith  '}) ;
 
 
 
