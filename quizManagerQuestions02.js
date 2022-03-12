@@ -1360,6 +1360,91 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { 
+		name : "Last week",
+		hoverover : "What did you miss?",
+		tags : "2022-3-12,saturday,InnerWheel,surfers",
+		questInfo: new Array()  };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "It was Daniel Craig's birthday last week. Happy birthday, Daniel. He is most famous for playing James Bond between 2006 and 2021, but in which 1992 film did he make his screen debut?" + Table4ColumnStart + "The Power of One</td><td>A Kid in King Arthur's Court</td><td>The Power of Three</td><td>Genghis Cohn" + Table4ColumnEnd ,
+	answer : "The Power of One", image : "https://i.guim.co.uk/img/media/a29e2eb70d3f6a2bc838200d4e1d8ced7f35b0a2/195_106_2701_1622/master/2701.jpg?width=1020&quality=85&auto=format&fit=max&s=6f9e36d32da507bfdbd6c14bbad15171"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "TRUE OR FALSE: Steps version of Tragedy actually did better in the UK charts than the Bee Gees original version?"  ,
+	answer : "It's false. Both versions of the song reached No 1.", image : "https://i.guim.co.uk/img/media/d3a4260bb915128619803d775c73565bfd5f58d8/0_17_1785_1071/master/1785.jpg?width=620&quality=85&auto=format&fit=max&s=f71e6b9fdd60f99bccd580deac32c139"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "How, roughly, did ancient Sumerians define one cubit?" + Table4ColumnStart + "The distance an adult can stride in three paces</td><td>The distance from head to toe of an adult human</td><td>The distance from the knee to the ankle</td><td>The distance from the elbow to the middle finger" + Table4ColumnEnd ,
+	answer : "The distance from the elbow to the middle finger", image : "https://i.guim.co.uk/img/media/8f77f14a8ffabe3617dae58d6eaeeceff6697e79/0_0_4080_2663/master/4080.jpg?width=620&quality=85&auto=format&fit=max&s=af61bfd925b4d48d1abedaec15948877"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "The Kelpies are an incredible 30-metre-high pair of horse-head sculptures by Andy Scott. But where in Scotland would you find them?" + Table4ColumnStart + "Dundee</td><td>Falkirk</td><td>Inverness</td><td>Fort William" + Table4ColumnEnd ,
+	answer : "Falkirk", image : "https://i.guim.co.uk/img/media/c05332c9d423b1fef4ca2b632175f4c3d2db7fff/0_179_6000_3600/master/6000.jpg?width=620&quality=85&auto=format&fit=max&s=88291c28c3011f2abb5ec19513ca923b"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which 80s pop star wrote the UK No 1 hit single The One And Only by British singer Chesney Hawkes?" + Table4ColumnStart + "Nik Kershaw</td><td>Phil Oakey</td><td>Midge Ure</td><td>Kate Bush" + Table4ColumnEnd ,
+	answer : "Nik Kershaw", image : "https://i.guim.co.uk/img/media/2711c7f5f5769e7e957a693b81d1630bd877dfa7/0_0_2000_1200/master/2000.jpg?width=620&quality=85&auto=format&fit=max&s=57e86a863bd08bd992521deb91b8bb68"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Shane Warne's family have accepted the offer of a state funeral from which Australian state, where he was born?" + Table4ColumnStart + "Queensland</td><td>New South Wales</td><td>Victoria</td><td>Tasmania" + Table4ColumnEnd ,
+	answer : "Victoria", image : "https://i.guim.co.uk/img/media/d7ee309be17702ff246f40b2b5c4e9727715a46d/0_0_3000_1801/master/3000.jpg?width=620&quality=85&auto=format&fit=max&s=2bff6f26cae665e4582990e6ef256f91"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, who passed away earlier this week?"  ,
+	answer : "Lynda Baron", image : "https://i.guim.co.uk/img/media/a227635e39bcbd2438eaf42d316677afe78c94d3/194_495_4499_2699/master/4499.jpg?width=620&quality=85&auto=format&fit=max&s=3a9c044d324bb448b53b8f5af5424341"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Thursday was the anniversary of the first successful telephone test by Alexander Graham Bell. What was the first thing he said?" + Table4ColumnStart + "Mr Watson, confirm please!</td><td>Mr Watson, come here, I want to see you!</td><td>Ahoy-hoy, Mr Watson!</td><td>Mr Watson!  Mr Watson!  I can see your house from up here" + Table4ColumnEnd ,
+	answer : "'Mr Watson, come here, I want to see you!'  ", image : "https://i.guim.co.uk/img/media/4473112290c4762eeca46d4d801bc5a09c8a95d1/0_177_5256_3154/master/5256.jpg?width=620&quality=85&auto=format&fit=max&s=788c895cd584da1ee66913507b8d8efc"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "In 1977 astronomers announced the discovery of rings around Uranus. Stop sniggering Charlie. How many rings around Uranus do astronomers currently say there are?" + Table4ColumnStart + "14</td><td>13</td><td>12</td><td>11" + Table4ColumnEnd ,
+	answer : "13", image : "https://i.guim.co.uk/img/media/8a394df50f1ec787ba2e9afded82874e5112cd0d/0_400_4000_2400/master/4000.jpg?width=620&quality=85&auto=format&fit=max&s=5087a11fafc9970e0babf9339a73be92"	});	
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question : "Swindon boasts a sculpture trail that includes works by Hideo Furuta and Jon Buck. But which glamorous movie and TV star from the town is celebrated with a statue outside a multiplex cinema at Shaw Ridge leisure park?"  + Table4ColumnStart + "Barbara Windsor</td><td>June Whitfield</td><td>Diana Dors</td><td>Hattie Jacques" + Table4ColumnEnd, 
+	image : "https://i.guim.co.uk/img/media/a7f52f2c6d040cd70b96daf01f02f01f6d9dc81f/0_810_2562_1537/master/2562.jpg?width=620&quality=85&auto=format&fit=max&s=ec041bf3d5bd41dadf4450021f5518b7",
+	answerimage : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Diana_Dors_statue%2C_Shaw_Ridge_Leisure_Park%2C_Swindon_%28geograph_893160%29.jpg/450px-Diana_Dors_statue%2C_Shaw_Ridge_Leisure_Park%2C_Swindon_%28geograph_893160%29.jpg"	,
+	answerSpeak : "Diana Dors"}); 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Thursday was celebrated by some people as Mario day, as if you look at the date Mar 10 and squint really hard it sort of looks like it spells Mario. But what was the early 1980s Nintendo game where Mario was unusually cast as the villain?" + Table4ColumnStart + "Donkey Kong</td><td>Donkey Kong Derby</td><td>Donkey Kong's Revenge</td><td>Donkey Kong Jr" + Table4ColumnEnd ,
+	answer : "Donkey Kong Jr", image : "https://i.guim.co.uk/img/media/2b5e881535efde147ba00a8a357278a703df6512/0_79_4913_2948/master/4913.jpg?width=620&quality=85&auto=format&fit=max&s=97bc08330f963e430c3d4dca951c6129"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which of these statements is true about the number two?" + Table4ColumnStart + "It is the smallest prime number</td><td>It is the only even prime number</td><td>It is one of only two prime numbers that are consecutive to each other</td><td>All three of the others are true" + Table4ColumnEnd ,
+	answer : "All three of the others are true", image : "https://i.guim.co.uk/img/media/8f77f14a8ffabe3617dae58d6eaeeceff6697e79/0_0_4080_2663/master/4080.jpg?width=620&quality=85&auto=format&fit=max&s=af61bfd925b4d48d1abedaec15948877"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which of these acts had a hugely successful album with It Takes a Nation of Millions to Hold Us Back?" + Table4ColumnStart + "Wu-Tang Clan</td><td>OutKast</td><td>Public Enemy</td><td>Kate Bush" + Table4ColumnEnd ,
+	answer : "Public Enemy", image : "https://i.guim.co.uk/img/media/93cf208f0004e180eaa2801c20591114c110be98/0_0_2000_1200/master/2000.jpg?width=620&quality=85&auto=format&fit=max&s=8ee24fb9068563b3337f3805e1f15996"	});	
+
+
+quests[++questIndexBuilder] = {
+		name : "Do it yourself",
+		hoverover : "Who wrote these?",
+		tags : "saturday,2022-3-12,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question : "Who wrote this literary masterpiece?", //Clary
+		image : "https://lh3.googleusercontent.com/pw/AM-JKLV4elCyml7CZhHCPfYeoekH1fXRDBZZatEz581WuUGBoRk6Kwrq4yIypY8YttOnvWJ5I9Ts_9vqww9g-JEWaVsa2uPw77IW7KbBrbMpsqJrBrAJb2a91co2xVRiBS89_MP-yrS9yZRxWXjuY8tqwekb1g=w318-h499-no?authuser=0",
+		answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLU697X-AjmGxTULiiv-w0yRMjdXEd_WJQOdp7GsyYZo1aabRWMZ_tX9eLtBvlUpTfNagKRviWM3DFdAopwFHqi3-EbkEeAtZ3q5klIAuqkOH5S1PzXcyBhj6uwum-xsWShfkVpCheywUY_NDdyhuhNRUQ=w318-h499-no?authuser=0"	}); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question : "Who wrote this literary masterpiece?", //Titchmarsh
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUEpwpT6DBmC6CswMBzfGJ_gVKZ0jhy_t1moCtdyVcLIC6cHbjmISSAqY6lnq8uF_tN2ECtSnatdEHlfT8kw0zgw1m2Vh0Fl1Q0sRGyUNzZrdlOB8MIkqQoFIp66h2EehpK7ydSP0EyBWDItnQ83h2eUw=w327-h500-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLUyoNZoibkXeewWgrHDyjNXDzjUtoonJRQbl86xmF9r0Zb6jKwXj9KxdiARQua7OiLybTOv51aS5uV7pZXInthYYprfjmyGdjGZ2RK1LhGKjluFRGwCt3aCbwmDZ84hXiqwxy95tHWuU0RuGj6gvEGMfg=w327-h500-no?authuser=0"	}); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question : "Who wrote this literary masterpiece?", //Lee
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXcIwC3hLb6ivge8FjKBs1nyTOxtLcz4ydHEf-6wXkTxrLFBxIhbe1O85DVB-devdPlrPHzIGPQ0cL7JS6htn7PW2h3h_sHOF3ys8vPTh-8iA_6R-dexAEzv1u9VZtQqeEXBMYn4Sd0QnZIIDuUDsonNQ=w333-h499-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLVHDFuABLMuoenVPcU8I2DBTzHABd1KDO9abI8X35851_syQZvt4mIPmWjV1rO8nRcq7091DwMPZU6YETWgNZDv81XXqrj0TsQDOZhWiEf3UT5aoFNQSKKB8qlB4W6qea6y7xmd7I4fo_Ao8GDDPUf6RQ=w333-h499-no?authuser=0"	}); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question : "Who wrote this literary masterpiece?", // Nimoy
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVoDQefNwZAD5sMsoyGtJpb1HuJZICrBhgquVa5Oz9UNbCw6gDHDhUBRjBE_oaUgXG4n2MrP48PO0J3Klfq4EKz_Ivef6t8iNGEr20sEwY-qRWV21C8WD1afi6ppOLEx3qCKVWgzefJhWtjTeRvAxz4Yg=w304-h499-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLUs4aYkx88EPvOz7vr_5I6gWk6YK-l9yhjGxNFQwq_rHpOdjiIvZ7ca3fBOB8Whe1k047AU16Vu_FHUc28rVXgpthb_9FL2M37nbjl-YghInuou1azYN-0ztWlwVAzsJPFpMhmspn_AYRixQSNNb__rVg=w304-h499-no?authuser=0"	}); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question : "Who wrote this literary masterpiece?", //Ritchie
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLWyy2nWhpVgHnHzJmNgroXgDTO9zg1Ee_1crVVuSmXhqZR2BcxYH8ciDcVT5rvMjJykmN5pqgZa2BRb7Do1_L4Qv-i5wtqosHujhaDIioIP39ss9-dUG9XAuPrz4Mu8-Sl1vMO-dj2O7nqHZxlUVEcK8A=w314-h474-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLWVAa_Bp4nsEpQkXivNYAgnFwsAzwkRVCm96NwRG6RAUyhfVbfB5sA9KMqK7cv_6rEb1qrQgUC8HVGy4V_T7RxoxdG4LPI_03BPyzfGQuaPjxgeFWgJMMc6dIE_zHy8vy9qs7Y8fH0pxv4mnJ-Xxlb5zA=w314-h474-no?authuser=0"	}); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question : "Who wrote this literary masterpiece?", //Brand
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLWgSXjPgVru_KbM_9o2xDLuRqN47gtOfnf8GwXRlE6sUxLPhzqbRwr7bgRQnpAZLKbCxoQ41AnP4ViVoXC2MpnRaSnAP1Y2wqgEjZS0kx1orXXTrnW_sbAZVLwoY2ju7ISSOLdJw2MHoY9sJPhr4k13Eg=w328-h500-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLXcJ6-fsjkbdcyVV3gaa2jj9fLsZ-tj8Yhwaz2JYt8YtWoihz8Vk5WDlD1xq80T8oWRrpWQRCzn4M-THLMAyIqQkZ2ROY65d_T7LtUf7iBQBqYLKvr9uEC85hHgnWhBiYwIxLa0_trq0c7-xJnKEIzD6Q=w328-h500-no?authuser=0"	}); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question : "Who wrote this literary masterpiece?", // Gene
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVDl68QJoVZXmnL2CQGDQMOyxm1MFRKulnenRDKXAJMHQybqJDm1V89WgbSdFuZmFad0DkNnolLlnoMvLr0_aQtLEXoP3UiacbYe6H-M4kzEU9q_-vUKt_5nazmHx-LnUjNGhhPz9eVR5RI8CVU-Ol5Bw=s500-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLWHtPiW4dvx1ajfRi_trFfDa329cHwEiUbnNAr5F88OeVEJEIUyCprUVVh7MA59180ijw0XEMMBk3GeIpRJqPc07_jv0zYXHBcc4DnOIyuBSmgobickFmmN4kXP0Om88Ra8tjsU3h6q7Ifz0mK5badDLw=s500-no?authuser=0"	}); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question : "Who wrote this literary masterpiece?",//PRyor
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVyRPVp4KbsaW0byx0czMmh21ft9sIU2na4Gcaw2BBKx8wRdkixYiVl7icU5XO2Q9KPoZu1bVr-47MRLLFNw0I2GdBtujhb8-VeEVVkZH72ZlkL3UlSqKfXhuU_YXB8Bj3hv37PwrkKXNysrORaf5y0VA=w333-h499-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLXwF-LSFxSIiN0JnZdlnofPEF5RU1FaVc1Kzt_3AbJgb04pr1-4DA2hXyT2z1vLbT2H1Z19bqfM2IndO9Gl9Lnm7Qb9FZX0WrsE5TWtNhXLO92u1V3tWGZcjywOu0doixFOCiYdcPF7-M9hSp260MUK2w=w333-h499-no?authuser=0"	}); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question : "Who wrote this literary masterpiece?", //Reeves
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUDKx3feTLDj634RuzswEcN2ZwAoCZF2VyESK3pXszNkCybz_tozVMxAAOpwHZWHci3Pa2G98bagVUcIKOCIglRb76I9uOi6FMUaUbK2jxhHePgXAapP2mTthQtYP9D2w3_EKtNchr2EkMZ9i-X3aHZWg=w335-h500-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLVEos_Ly4ItF97inLSRbArPz53CPmPijBE9tn_UV3QFb-J4laDcHkW-7s1DPR83Y2zGG2VfKbidAn5j7AiiP6NK6uflEWsl1BaXdkzb7E_V-4Ch9Sy3aZx2AkKVL7Nj1ftdVIUidXo3LpNClqhRHzPW7g=w335-h500-no?authuser=0"	}); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question : "Who wrote this literary masterpiece?", //Spelling
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLWrwvvTvpgp-tk1Qt9l8yJCkl7qC9z2Hcnf28ISJF_KoAZa6iyAwglRdHEBuu58ZYfkMp0rMoUIFJoQbrJFxVG0F4lGz4eYEQ59K7ATiB60F0U0ax5cUaF9tqnfX6RDxTod4ntopvQemfim360TALqMhA=w324-h499-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLXlyyvLdhaE7iMSbEL1cPPwckew7K32w2OwgcRR-Gld5iLLoEn5dvfTYS7FuTrrZEL3OoFqiCG1H2gwlXCsdLu2qJe9qvRlh08Hw6ve7BMBpgzNrUmIyVtVsFRvgr8rpsFx7_UxHRh-j5tEOZa9J545_g=w324-h499-no?authuser=0"	}); 
+
+quests[++questIndexBuilder] = { 
 		name : "Rockgrass 2",
 		hoverover : "Have you ever head the banjo?",
 		tags : "music,2022-3-12,InnerWheel,saturday",
@@ -1369,7 +1454,20 @@ quests[++questIndexBuilder] = {
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	question : "Name the song, and who you would expect to hear sing this",
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/7AErOsmKiNti5dv01iP3su?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
-	answer : 'Motorhead, Aerosmith, Bon Jon Bovi, Queen, Bob Marley & the Wailers, Journey, Survivor, Bryan Adams, Def Leppard, Aerosmith  '}) ;
+	answer : 'Motorhead, Aerosmith, Bon Jon Bovi, Queen, Bob Marley, Journey, Survivor, Bryan Adams, Def Leppard, Aerosmith  '}) ;
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Names",
+		hoverover : "Songs with names in the title?",
+		tags : "music,2022-3-19,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/1YRIez1TrmB7cpuU3dfzlj?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+	answer : ''}) ;
 
 
 
