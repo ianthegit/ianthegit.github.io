@@ -1413,22 +1413,22 @@ quests[++questIndexBuilder] = { //
 		questInfo: new Array()
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVon-XLM3b2MH9rATNF5FFlL7QBZciT92wf6wBkoT4NOnYqFBhFh0SBG6CuGoidC_pue8y1uePy5lvwG9JHjVShEFQmhPpY2_Vekxq7J6jkJ4VGwOBJXntI4wTGupYsG1iKywzZJ9-EYWcg8s6QEUdzOQ=w318-h366-no?authuser=0",
 	answerimage : "https://c.tenor.com/bchnzrtrklUAAAAM/koala-chewing.gif", answerSpeak : "Koala "}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLV3TIwf1bsF0dBiVmVTR5iHx4KCuUlLK-rYqiMdSmI2DeQfeOt3q3DNSlManzkEU0batln1e4C9PHGB8fViYUQFhyBkYF6ouP3yYzLWTP2tSx_dGmXATWy_LA9aosIZ5poTtZbEY5-9cPP32GOSB2lhUg=w579-h551-no?authuser=0",
 	answerimage : "https://i.pinimg.com/originals/21/43/9f/21439f00b08947e15c75121d62be1dfa.gif", answerSpeak : "Kangaroo "}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLX7eaNvX6_IPmadVd9DFgY8oYIET_Xss0xtTUoZVJCW56aWYLk-riOeU7ZdBGTfkoFTyBtmIDdlqP0e5GNCs4IVS2hqKzhkFzGh-zsFnS1Sb7huYPIeMTcyMlpbHOeM17nt3oAzVlfcMQLTV1Yk5y63aw=w404-h266-no?authuser=0",
 	answerimage : "https://thumbs.gfycat.com/BlackMindlessBoto-size_restricted.gif", answerSpeak : "Sydney Opera House"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUwU7IHp1ENN3LZMNouJLWDlXPYj4k8TUkQSJe38tcDLzS7sXNCbuLlHyHW2Nv3YS7dzvcFqfyG7tBgm8ZYmaefWy93nJh3I97-BQABprkrKdhyd_PHs7PPD3R-LQpbZXaj4DFtRF_W1lI-dajdVnJgww=w787-h339-no?authuser=0",
 	answerimage : "https://i.makeagif.com/media/9-13-2016/AA3gb3.gif", answerSpeak : "Uluru"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXqDooEIxM3V6TrTDd4fwJ_F0QdVRH6obbr-gI9lSqCqm1W51mKnqeuUY265KwZMx4a-DE5xXIrB0JeYNOI0IyeEJsUAkb_dpXOES294EEEv9JxXNsGAdBihxH6UYmREvHCLUBmJYwZ5-IpCQFotLD4GA=w652-h355-no?authuser=0",
 	answerimage : "https://thumbs.gfycat.com/HilariousJointFly-size_restricted.gif", answerSpeak : "Ant and Dec in the jungle"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXjW-ttqUpaWaT8u20uWdBJbO1l9I9oI4eZ4UDdrmJ60PCZ3PvbXwnkA8KgNM_tLKjcgqXNfiB2ZQAGHLB6TSujTDddJxTKqip59G0zbDGFUD6Lx3qZiurSEERwT3_vXdIDOsTg-yY9c0YHaxoUAdGJqw=w363-h289-no?authuser=0",
 	answerimage : "https://i.makeagif.com/media/1-04-2021/GG653e.gif", answerSpeak : "Fosters lager"}) ;
 
 
