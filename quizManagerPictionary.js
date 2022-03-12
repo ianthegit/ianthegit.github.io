@@ -1405,6 +1405,34 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://media3.giphy.com/media/JWl9GrmcX49by/giphy.gif", answerSpeak : "Spring"}) ;
 
 
+
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " + pictionaryCount++,
+		hoverover : "Pictionary on the theme of Australia",
+		tags : "2022-3-12,pictionary",
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://c.tenor.com/bchnzrtrklUAAAAM/koala-chewing.gif", answerSpeak : "Koala "}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://i.pinimg.com/originals/21/43/9f/21439f00b08947e15c75121d62be1dfa.gif", answerSpeak : "Kangaroo "}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://thumbs.gfycat.com/BlackMindlessBoto-size_restricted.gif", answerSpeak : "Sydney Opera House"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://i.makeagif.com/media/9-13-2016/AA3gb3.gif", answerSpeak : "Uluru"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://thumbs.gfycat.com/HilariousJointFly-size_restricted.gif", answerSpeak : "Ant and Dec in the jungle"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://i.makeagif.com/media/1-04-2021/GG653e.gif", answerSpeak : "Fosters lager"}) ;
+
+
+
 /*
  * 	image : "",
 	answerimage : "", answer : "Table"}) ;
