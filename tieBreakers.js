@@ -46,7 +46,7 @@ quests[++questIndexBuilder] = {
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : 'How many stars in the Brazillian flag? ', image : "https://cdn.britannica.com/47/6847-004-7D668BB0/Flag-Brazil.jpg",
-	answer : "3 - France, Spain and Morocco"	});
+	answer : "27 - they symbolize Brazil's 26 states and its federal district."	});
 
 
 
