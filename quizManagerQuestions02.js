@@ -1461,12 +1461,25 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 quests[++questIndexBuilder] = { 
 		name : "Names",
 		hoverover : "Songs with names in the title?",
-		tags : "music,2022-3-19,InnerWheel,saturday",
+		tags : "music,2022-3-12,InnerWheel,saturday",
 		questInfo: new Array()
 	};
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/1YRIez1TrmB7cpuU3dfzlj?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+	answer : '', question : ""}) ;
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Places",
+		hoverover : "Songs with Places in the title?",
+		tags : "music,2022-3-19,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/05DAnTrg4BQIZDQBdwbLVJ?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
 	answer : '', question : ""}) ;
 
 
