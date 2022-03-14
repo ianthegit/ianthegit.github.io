@@ -1472,6 +1472,42 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { 
+		name : "Lego",
+		hoverover : "Celebrating the plastic brick",
+		tags : "2022-3-19,saturday,InnerWheel,surfers",
+		questInfo: new Array()  };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "The name LEGO is an abbreviation of the words 'leg godt', which means 'play well' in which language?"  ,
+	answer : "Danish", image : "https://www.nationsonline.org/maps/Scandinavia-Map.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Released in 1978, what colour was the original LEGO Castle?"  ,
+	answer : "Yellow - more realistic grey castles first appeared in 1984", image : "https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/08/16/11/beckham-castle.jpg?quality=75&width=1200&auto=webp"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "How many combinations can you make using two 2x4 stud LEGO bricks?"  ,
+	answer : "24 - with three bricks you can make 1560 combinations and with only six bricks you can make a whopping 915,103,765 different combinations", image : "https://toppng.com/uploads/preview/the-small-brick-that-became-an-icon-2-lego-bricks-11563059179erfjfmtyge.png"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which product range for younger children takes its name from the Latin for 'double'?"  ,
+	answer : "DUPLO (from 'duplex')", image : "https://omniglot.com/images/writing/latin_archaic.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Imperial Outpost, Renegade Runner and Battle Cove are sets from which hugely popular LEGO theme?"  ,
+	answer : "Pirates", image : "https://jaysbrickblog.com/wp-content/uploads/2021/01/Collage-1024x649.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who played President Business and the Man Upstairs in 2014's The Lego Movie?"  ,
+	answer : "Will Ferrell", image : "https://static.wikia.nocookie.net/villains/images/2/21/Business_President.png/revision/latest?cb=20210504043521"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which science fantasy LEGO theme was set on the tropical island of Mata Nui?"  ,
+	answer : "Bionicle", image : "https://biosector01.com/w/images/bs01/a/a2/CGI_Mata_Nui_%28Island%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which superhero has had more individual LEGO minifigures than any other character?"  ,
+	answer : "Batman - thanks in no small part to The Lego Batman Movie", image : "https://assets.onbuy.com/i2/product/71b765e43079497ea0617003aaace943-m209205480/48pcs-dc-marvel-superheroes-minifigures-toys-fit-lego.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "'Lego House' was a 2011 hit for which English singer-songwriter?"  ,
+	answer : "Ed Sheeran", image : "https://i.ytimg.com/vi/D9hVtfx9D1U/maxresdefault.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Measuring 153cm long, LEGO's biggest set (in terms of size) is a replica of which ship?"  ,
+	answer : "The Titanic", image : "https://www.lego.com/cdn/cs/aboutus/assets/bltf8048e99129459c7/10294_Back_01.jpg?disable=upscale&width=1056&quality=50"	});	
+
+quests[++questIndexBuilder] = { 
 		name : "Places",
 		hoverover : "Songs with Places in the title?",
 		tags : "music,2022-3-19,InnerWheel,saturday",
