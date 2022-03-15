@@ -1516,7 +1516,7 @@ quests[++questIndexBuilder] = {
 		questInfo: new Array()  };
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : "Which English pop group from London formed in 1980 and had hits including 'Cruel Summer' and a cover of 'Venus'?"  ,
-	answer : "Banarama", image : ""	});	
+	answer : "Bananarama", image : ""	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : "Robert Matthew Van Winkle released 'To the Extreme' in 1990 which became the fastest-selling hip hop album of all time, by what name is he better known (his best known single contains 1 word from his name)?"  ,
 	answer : "Vanilla Ice", image : ""	});	
