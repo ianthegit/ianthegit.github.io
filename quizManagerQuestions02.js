@@ -1507,6 +1507,50 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	question : "Measuring 153cm long, LEGO's biggest set (in terms of size) is a replica of which ship?"  ,
 	answer : "The Titanic", image : "https://www.lego.com/cdn/cs/aboutus/assets/bltf8048e99129459c7/10294_Back_01.jpg?disable=upscale&width=1056&quality=50"	});	
 
+
+
+quests[++questIndexBuilder] = { 
+		name : "Food and Drink",
+		hoverover : "Bands named after food or drink",
+		tags : "2022-3-19,saturday,InnerWheel,surfers",
+		questInfo: new Array()  };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Which English pop group from London formed in 1980 and had hits including 'Cruel Summer' and a cover of 'Venus'?"  ,
+	answer : "Banarama", image : ""	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Robert Matthew Van Winkle released 'To the Extreme' in 1990 which became the fastest-selling hip hop album of all time, by what name is he better known (his best known single contains 1 word from his name)?"  ,
+	answer : "Vanilla Ice", image : ""	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Which British rock band formed in London in 1966 consisted of bassist Jack Bruce, guitarist Eric Clapton, and drummer Ginger Baker?"  ,
+	answer : "Cream", image : ""	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Formed by Errol Brown and Tony Wilson, which British soul band had at least one hit every year from 1970 to 1984?"  ,
+	answer : "Hot Chocolate", image : ""	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Noted for his powerful, wide-ranging voice and theatrical live shows, which singer is best known for his 'Bat Out of Hell' trilogy?"  ,
+	answer : "Meat Loaf", image : ""	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Best known for their song 'Play That Funky Music', what American funk rock band formed in Mingo Junction, Ohio, in 1970?"  ,
+	answer : "Wild Cherry", image : ""	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Which LA band features Flea on Bass and has a singer who appeared in the original Point Break?"  ,
+	answer : "Red Hot Chili Peppers", image : ""	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "One of the world's most successful girl bands of all time?"  ,
+	answer : "Spice Girls", image : ""	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Backing singers turned main act?"  ,
+	answer : "Pepsi & Shirlie", image : ""	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Band who told us to not be scared of the Grim Reaper?"  ,
+	answer : "Blue Oyster Cult", image : ""	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "They make a perfect sandwich filling at kids parties?"  ,
+	answer : "The Jam", image : ""	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Who had hits with 'Rich Girl', 'You make my Dreams', 'Maneater', 'Family Man'?"  ,
+	answer : "Hall & Oates", image : ""	});	
+
 quests[++questIndexBuilder] = { 
 		name : "Places",
 		hoverover : "Songs with Places in the title?",
