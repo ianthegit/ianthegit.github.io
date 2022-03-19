@@ -1439,22 +1439,22 @@ quests[++questIndexBuilder] = { //
 		questInfo: new Array()
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVHl6TiOlViqhlQv_0dk-P6tR1YAocnx42emxf-Ha4omyWMzBK_GujE14VBKkFAuMmWMvEoLSV6b-FeawQb8hAXNeis5HnyTPxotis4eQv0Bk2nZmzODkx1LPBowJaaM01i4fft6-5TWgza0lHGXcA8jw=w500-h391-no?authuser=0",
 	answerimage : "https://c.tenor.com/R9o9u_fcAk8AAAAM/ukrayna-ukraine-flag.gif", answerSpeak : "Ukrainian flag"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUVQlwZTVhvUf3l3KJWpxM74Qvfa0c42ODAcfXLXTE1GsdsRwY3pQt2vMV_OdkS60guTR6kexqTsEDHezrdT5FEhSOmBs0J25gYpd_iCIycb6sfeYqVavZR6hk0PJgonm0fpGBzfSkTS1yAyGdIdmlYYw=w513-h466-no?authuser=0",
 	answerimage : "https://qph.cf2.quoracdn.net/main-qimg-bb16002d5bc2c824898ba1c6011a3ff3-lq", answerSpeak : "Pig"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLWZxT8F6R0mu_40ZIJVrcw9tz1ul171aOFCvBHNGuSpDgB2ZaOGTyTIaAqmbJMio0Kwu84K1DlqJGFQUEAx_TZxJdKlrOnPL8BP-GEb1-X0Q3QQAZcJ-L11YmnclSZ8Om9d6tj4ukMFhCTNO3uOo1WqlQ=w403-h573-no?authuser=0",
 	answerimage : "https://media1.giphy.com/media/gHKndZ31j9Xo3C3cn1/giphy-downsized-large.gif", answerSpeak : "Sunflower"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXb5JIEICpe8n6qfL-yQvcdFOHOhOIRDeA3-yRJs1zLYNISSypf6MXDl-h4i0q4DJqSjbDONIuRrlQMrmL_13liEh6rESxkT-YChZOzA8VOwNT7l4gVNP8NpyX8DiLnBO8oyxJLMFkePzenXZOQkx1wxQ=w914-h448-no?authuser=0",
 	answerimage : "https://media0.giphy.com/media/lwDNqAXUQGm5C6nsXd/giphy.gif?cid=82a1493b4qytj3zkqryjpg84r0ap1tlaexe7pdwznkmn4zqf&rid=giphy.gif&ct=v", answerSpeak : "Tractor"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXONRzZLxZ3AD2rj56sYOSdrvwSLuUhwhmL1OKFzneUhgOmCtwahtY8g6voLHIe9upen_1YKQFerYSKoEVsxIyvn6BABNpPM0kMGMin2WzGZlJ92wluQ7XejDcOy_ThPXJ6U0tRAISE73SeWB0cg4ELHA=w293-h263-no?authuser=0",
 	answerimage : "https://i.makeagif.com/media/12-22-2016/OUcxbS.gif", answerSpeak : "Chernobyl"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXWk7trzba0BAfhQJrO_HZiaQCZyMRFbHAnHPP0AZCMUGn1Oz0Zzm5mVLQcaQ9-5Vc5GPBE64Y-KtvAACMqkiHUNzBNYoUz7RedjGiTJ1ABHcb4EYSkdxSmXc6TTMHLxHbZr4O3TS0Kxj2DwTSjopuTdA=w548-h518-no?authuser=0",
 	answer : '<iframe width="560" height="315" src="https://www.youtube.com/embed/HbmZrzN3WFE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', answerSpeak : "Zelenskyy playing piano"}) ;
 
 
