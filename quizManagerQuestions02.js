@@ -1493,7 +1493,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	answer : "Pirates", image : "https://jaysbrickblog.com/wp-content/uploads/2021/01/Collage-1024x649.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Who played President Business and the Man Upstairs in 2014's The Lego Movie?"  ,
-	answer : "Will Ferrell", image : "https://static.wikia.nocookie.net/villains/images/2/21/Business_President.png/revision/latest?cb=20210504043521"	});	
+	answer : "Will Ferrell", image : "https://i.ebayimg.com/images/g/cjkAAOSw1HpfB1yY/s-l300.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Which science fantasy LEGO theme was set on the tropical island of Mata Nui?"  ,
 	answer : "Bionicle", image : "https://biosector01.com/w/images/bs01/a/a2/CGI_Mata_Nui_%28Island%29.jpg"	});	
