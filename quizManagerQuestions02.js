@@ -1509,47 +1509,49 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 
 
+
 quests[++questIndexBuilder] = { 
 		name : "Food and Drink",
 		hoverover : "Bands named after food or drink",
 		tags : "2022-3-19,saturday,InnerWheel,surfers",
 		questInfo: new Array()  };
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Which English pop group from London formed in 1980 and had hits including 'Cruel Summer' and a cover of 'Venus'?"  ,
-	answer : "Bananarama", image : ""	});	
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	answer : "Bananarama", image : "https://www.worldhistory.org/img/r/p/500x600/711.jpg?v=1624466702"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Robert Matthew Van Winkle released 'To the Extreme' in 1990 which became the fastest-selling hip hop album of all time, by what name is he better known (his best known single contains 1 word from his name)?"  ,
-	answer : "Vanilla Ice", image : ""	});	
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	answer : "Vanilla Ice", image : "https://upload.wikimedia.org/wikipedia/commons/b/b2/Vanilla_Ice_2010_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Which British rock band formed in London in 1966 consisted of bassist Jack Bruce, guitarist Eric Clapton, and drummer Ginger Baker?"  ,
-	answer : "Cream", image : ""	});	
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	answer : "Cream", image : "https://media.gettyimages.com/photos/british-rock-group-cream-poses-for-a-portrait-in-1968-lr-eric-clapton-picture-id74286071?s=612x612"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Formed by Errol Brown and Tony Wilson, which British soul band had at least one hit every year from 1970 to 1984?"  ,
-	answer : "Hot Chocolate", image : ""	});	
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	answer : "Hot Chocolate", image : "https://createsongstyles.com/index.php?PHPSESSID=ff220g2js1ja94b2seu8e2jcl3&action=dlattach;topic=42912.0;attach=97741;image"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Noted for his powerful, wide-ranging voice and theatrical live shows, which singer is best known for his 'Bat Out of Hell' trilogy?"  ,
-	answer : "Meat Loaf", image : ""	});	
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	answer : "Meat Loaf", image : "https://i.pinimg.com/originals/73/d0/a1/73d0a1099ba29fb2d4b729a325d3e4f4.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Best known for their song 'Play That Funky Music', what American funk rock band formed in Mingo Junction, Ohio, in 1970?"  ,
-	answer : "Wild Cherry", image : ""	});	
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	answer : "Wild Cherry", image : "https://lastfm.freetls.fastly.net/i/u/ar0/1a9436374884408db4e7d4e67fb7e370.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Which LA band features Flea on Bass and has a singer who appeared in the original Point Break?"  ,
-	answer : "Red Hot Chili Peppers", image : ""	});	
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	answer : "Red Hot Chili Peppers", image : "https://i.insider.com/534ee8d6ecad045a4e4f2f1b?width=750&format=jpeg&auto=webp"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "One of the world's most successful girl bands of all time?"  ,
-	answer : "Spice Girls", image : ""	});	
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	answer : "Spice Girls", image : "https://ca.hellomagazine.com/imagenes//celebrities/20211116126372/geri-halliwell-extremely-rare-photos-christian-horner-kids/0-609-396/christian-horner-geri-horner-t.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Backing singers turned main act?"  ,
-	answer : "Pepsi & Shirlie", image : ""	});	
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	answer : "Pepsi & Shirlie", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Pepsi_and_Shirlie_at_the_Liverpool_Echo_Arena_25_June_2011.jpg/1200px-Pepsi_and_Shirlie_at_the_Liverpool_Echo_Arena_25_June_2011.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Band who told us to not be scared of the Grim Reaper?"  ,
-	answer : "Blue Oyster Cult", image : ""	});	
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	answer : "Blue Oyster Cult", image : "https://upload.wikimedia.org/wikipedia/commons/6/64/Blue_Oyster_Cult_1977_publicity_photo.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "They make a perfect sandwich filling at kids parties?"  ,
-	answer : "The Jam", image : ""	});	
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	answer : "The Jam", image : "https://media.gettyimages.com/photos/the-jam-music-group-22nd-april-1980-band-members-bruce-foxton-rick-picture-id639752360?s=612x612"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Who had hits with 'Rich Girl', 'You make my Dreams', 'Maneater', 'Family Man'?"  ,
-	answer : "Hall & Oates", image : ""	});	
+	answer : "Hall & Oates", image : "https://static.independent.co.uk/2020/09/29/14/hall-oates-main.jpg?width=1200"	});	
+	
 
 quests[++questIndexBuilder] = { 
 		name : "Places",
