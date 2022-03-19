@@ -1432,6 +1432,31 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://i.makeagif.com/media/1-04-2021/GG653e.gif", answerSpeak : "Fosters lager"}) ;
 
 
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " + pictionaryCount++,
+		hoverover : "Pictionary on the theme of the Ukraine",
+		tags : "2022-3-19,pictionary",
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://c.tenor.com/R9o9u_fcAk8AAAAM/ukrayna-ukraine-flag.gif", answerSpeak : "Ukrainian flag"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://qph.cf2.quoracdn.net/main-qimg-bb16002d5bc2c824898ba1c6011a3ff3-lq", answerSpeak : "Pig"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://media1.giphy.com/media/gHKndZ31j9Xo3C3cn1/giphy-downsized-large.gif", answerSpeak : "Sunflower"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://media0.giphy.com/media/lwDNqAXUQGm5C6nsXd/giphy.gif?cid=82a1493b4qytj3zkqryjpg84r0ap1tlaexe7pdwznkmn4zqf&rid=giphy.gif&ct=v", answerSpeak : "Tractor"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://i.makeagif.com/media/12-22-2016/OUcxbS.gif", answerSpeak : "Chernobyl"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "",
+	answer : '<iframe width="560" height="315" src="https://www.youtube.com/embed/HbmZrzN3WFE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', answerSpeak : "Zelenskyy playing piano"}) ;
+
 
 /*
  * 	image : "",
