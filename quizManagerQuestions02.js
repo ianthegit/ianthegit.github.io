@@ -470,7 +470,7 @@ quests[++questIndexBuilder] = {
 		name : "Mighty Swordspeople",
 		hoverover : "Do you recognise these people famous for their choppers?",
 		splash : {splashType : splashTypePictureAndText , splashText : "Do you recognise these people famous for their choppers?", splashImage : "https://lh3.googleusercontent.com/pw/AM-JKLVSf8Nml_XPn2LAxCmtr5qpPMsZvW5X3pWB1TtK6nYGqgFJWwEuNGA27xi_dmcZvIK2BOmpeFf5bdcHgz2U3ACu83Fjg9OaRACmQ9VQUBaEB9Bn0i1QXjkbuNXfPjoyZvtMlHJ66No4diUfQbvaGy1c1w=w750-h367-no?authuser=0" },
-		tags : "2022-1-22,saturday,InnerWheel,surfers,swords",
+		tags : "2022-3-26,saturday,InnerWheel,surfers,swords",
 		questInfo: new Array()
 	};
 
@@ -527,7 +527,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
 quests[++questIndexBuilder] = { 
 		name : "Witcher and Swords",
 		hoverover : "Songs loosely connected to The Witcher",
-		tags : "music,2022-1-22,InnerWheel,saturday,specialDay,swords",
+		tags : "music,2022-3-26,InnerWheel,saturday,specialDay,swords",
 		questInfo: new Array()
 	};
 
