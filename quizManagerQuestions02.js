@@ -1564,6 +1564,45 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/05DAnTrg4BQIZDQBdwbLVJ?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
 	answer : '', question : ""}) ;
 
+quests[++questIndexBuilder] = {
+		name : "Mishmash",
+		hoverover : "Losing the ablity to find questions",
+		tags : "saturday,2022-3-26,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+
+
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question : "Whose Railway set is this?" + Table4ColumnStart + "Anne Diamond</td><td>Eddie Izzard</td><td>Rod Stewart</td><td>Pete Waterman" + Table4ColumnEnd ,
+		image : "https://lh3.googleusercontent.com/pw/AM-JKLURwWPJTgHlViiIRWQ8nS1TJVnK9dAw2qlMC-OPiwoQTxjJs_4Sgx0KTA0BQ6QKjd3sZ40UKQwITw97xclts0RfIq5aCJ8vTaeOx2lUmS1M-YDagOlKaE2JeRJp_PPiQ7F_kJYjZxdqNRZ6DVxLBMSJow=w771-h576-no?authuser=0",
+		answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLU2A_JWEnU7W6IXw14HiEOslKR1cA_WVFCF69yb5dJRV7H6JnWSRUQ-ddP9xgm6wwo0rWkv06eekDhVrRnC6xeg7RPPfUjYgPg_vPcxyP5tEHx6iSGSTqsiyOH55K6TQ8ebPuQNfFzzzVva6GdAltZTuQ=w771-h576-no?authuser=0"	}); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,		question : "Thursday was Alyson Hannigan's birthday.  As well as playing Lily in HIMYM and regaling us with dodgy flute-based stories in American Pie, she rose to fame in Buffy the Vampire Slayer.  What was her character's name?" + Table4ColumnStart + "Cordelia Chase</td><td>Anya Jenkins</td><td>Willow Rosenberg</td><td>Rupert Giles" + Table4ColumnEnd ,
+	image : "https://64.media.tumblr.com/3600b439128351090d1a9307abb69d93/tumblr_inline_o5xoukukMZ1szaa83_250.gifv",
+	answer : "Willow Rosenberg"	}); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,		question : "Whose Railway set is this?" + Table4ColumnStart + "Anne Diamond</td><td>Eddie Izzard</td><td>Rod Stewart</td><td>Pete Waterman" + Table4ColumnEnd ,
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLU5MLR6Swv4JrCzdCIwue56otb1ID0gOgQijxk2blasFcI27H7LkhJxiQ5nZqWbzxB39NB7JJqzofzLJezQ58AOL0PQQ6BHHzhdzT5DEowAXLvtKlJhamvIEbXNGyJ8ah2H4ofwgw7w22KMyEEuUPAvAg=w595-h356-no?authuser=0",
+	answer : "Anne Diamond"	}); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,		question : "A court case in Ireland is debating whether the stained glass windows by the artist Harry Clarke are a movable work of art that can be sold, or an integral part of the structure, of which famous Dublin cafe?" + Table4ColumnStart + "Bentley's Cafe</td><td>Brady's Cafe</td><td>Bowle's Cafe</td><td>Bewley's Cafe" + Table4ColumnEnd ,
+	image : "https://i.guim.co.uk/img/media/0e50a44493b970069bdb1a0135985b7d6a18939a/0_1581_2848_1707/master/2848.jpg?width=620&quality=85&auto=format&fit=max&s=2ed9c1fe543a0b3e18dec3858d541288",
+	answer : "Bewley's Cafe, on Grafton Street"	}); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question : "Whose Railway set is this?" + Table4ColumnStart + "Anne Diamond</td><td>Eddie Izzard</td><td>Rod Stewart</td><td>Pete Waterman" + Table4ColumnEnd ,
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVvPYXrchMGUKH-xagLYU4zn8kJVq_fygCyKpb-CXFUVMp89eTPIFmRLU-JoAgOxBZ58RABOJrjPUYTh5WBjn5O-8UuPRcoQXgQSnK3rybSQ0N4VBkeDw0hpobG7PC226mKyYyjFcSipcBOwNhjYk0nwg=w912-h541-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLUwpt1vqwToBf9BsUibNzZbyUwvudx792bbP-cGebVhJ3cLp6gAWLM0U1Ka6WJP8Ts0s6JYJIBUnOD7qVkd2l4cFafyGg1pn3pPjfZMhCO1ftEHt7XxT3OevB3mdUhIhzxgWWV7hN-OluGRtaLx115pjA=w912-h541-no?authuser=0"	}); 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who recently won a "+ gbp + " 2.1m copyright appeal over her hit single Dark Horse?  " + Table4ColumnStart + "Taylor Swift</td><td>Billie Eilish</td><td>Katy Perry</td><td>Kate Bush" + Table4ColumnEnd,
+	answer : "Katy Perry", image : "https://i.guim.co.uk/img/media/bdb0a58511881e3f1a0d55dccbd1c35bd02228b7/0_0_2000_1200/master/2000.jpg?width=620&quality=85&auto=format&fit=max&s=170d2e300a26bb044460615301b9bfce"	});	
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,		question : "Whose Railway set is this?" + Table4ColumnStart + "Anne Diamond</td><td>Eddie Izzard</td><td>Rod Stewart</td><td>Pete Waterman" + Table4ColumnEnd ,
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVCPy9W9YocTbPfi98PR5O0G2pNsMFVWtD1V7Hxjho4Bm2mFCtVaSGMp7ljpuxt7JNNuhL3lnvPScIePxxPh-uB-P5qQWasXxvni-MsZz-jE9Iih7lUwS_xE6PJXD1OIE6fqD2vXfwACpCNOfPU1Wg6Og=w774-h526-no?authuser=0",
+	answer : "Rod Stewart"	}); 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "In 1990 a remix by DNA of an acapella song called Tom's Diner by which of these artist was a global smash hit?  " + Table4ColumnStart + "Alanis Morissette</td><td>Suzanne Vega</td><td>Sheryl Crow</td><td>Kate Bush" + Table4ColumnEnd,
+	answer : "Suzanne Vega", image : "https://i.guim.co.uk/img/media/3a3e5a582da6d8ed3955b5845a82dbd9d03506ee/0_0_2000_1200/master/2000.jpg?width=620&quality=85&auto=format&fit=max&s=24741bd55f33a5bdb37c42ade10a5fd4"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : " In modern times the River Nile is regarded as having three main tributaries - well, according to the National Geographic website, anyway. One of them is Atbara. What are the other two called?  " + Table4ColumnStart + "The Blue Nile and the White Nile</td><td>The Blue Nile and the Gold Nile</td><td>The Blue Nile and the Yellow Nile</td><td>The dress was Blue and Gold" + Table4ColumnEnd,
+	answer : "The Blue Nile and the White Nile", image : "https://i.guim.co.uk/img/media/e30951dfb25a35ad2d7e15a8c2aa0d99e69af3f5/0_39_3500_2102/master/3500.jpg?width=620&quality=85&auto=format&fit=max&s=4fd284852b428b616e9221c961a5d75a"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Two Thursday's ago it was Clare 'Gregory's Girl' Grogan's birthday - belated Happy Birthday!  But what was the name of the band she had the hit single Happy Birthday with?  " + Table4ColumnStart + "Aztec Camera</td><td>Alphaville</td><td>Altered Images</td><td>Alphabeat" + Table4ColumnEnd,
+	answer : "Altered Images", image : "https://c.tenor.com/VM7OSo4utHYAAAAd/gregorys-girl-scottish-comedy.gif"	});	
+
 
 
 
