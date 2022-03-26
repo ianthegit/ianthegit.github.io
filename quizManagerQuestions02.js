@@ -1604,6 +1604,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	answer : "Altered Images", image : "https://c.tenor.com/VM7OSo4utHYAAAAd/gregorys-girl-scottish-comedy.gif"	});	
 
 
+
 quests[++questIndexBuilder] = { 
 		name : "Kiss this guy",
 		hoverover : "What did they say!!!?",
@@ -1613,60 +1614,60 @@ quests[++questIndexBuilder] = {
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 			question : 'What should these lyrics be? ' + reRunButton  + "</BR></BR>" + "We built this city on sausage rolls", 
-			questionSpeak : "We built this city on sausage rolls",			answer : "We built this city on rock and roll",
+			questionSpeak : "We built this city on sausage rolls",			answer : "We built this city on rock and roll", answerSpeak : "",
 			image : "https://static.stacker.com/s3fs-public/styles/slide_desktop/s3/croppedGettyImages73993898RJVIjpg.JPEG"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : 'What should these lyrics be? ' + reRunButton  + "</BR></BR>" + "Saving his life from this warm sausage tea" , 
-	questionSpeak : "Saving his life from this warm sausage tea",			answer : "Spare him his life from this monstrosity",
-	image : "https://static.stacker.com/s3fs-public/styles/slide_desktop/s3/editedcroppedGettyImages3140196jpgJPEG.JPEG"	});
+	questionSpeak : "Saving his life from this warm sausage tea",			answer : "Spare him his life from this monstrosity", answerSpeak : "",
+	image : "https://c.tenor.com/6hnUDRqbDLoAAAAC/bohemian-rhapsody-queen.gif"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : 'What should these lyrics be? ' + reRunButton  + "</BR></BR>" + "I like big butts in a can of limes" , 
+	question : 'What should these lyrics be? ' + reRunButton  + "</BR></BR>" + "I like big butts in a can of limes", answerSpeak : "" , 
 	questionSpeak : "I like big butts in a can of limes",			answer : "I like big butts and I can not lie",
-	image : "https://static.stacker.com/s3fs-public/styles/slide_desktop/s3/croppedGettyImages1161954458BFZ6jpg.JPEG"	});
+	image : "https://i.pinimg.com/originals/f6/20/99/f62099b21d144b6a019e701b472120a1.gif"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : 'What should these lyrics be? ' + reRunButton  + "</BR></BR>" + "Then I saw her face, now I'm gonna leave her", 
-	questionSpeak : "Then I saw her face, now I'm gonna leave her",			answer : "Then I saw her face, now I'm a believer",
-	image : "https://static.stacker.com/s3fs-public/styles/slide_desktop/s3/editedGettyImages567046031jpgJPEG.JPEG"	});
+	questionSpeak : "Then I saw her face, now I'm gonna leave her",			answer : "Then I saw her face, now I'm a believer", answerSpeak : "",
+	image : "https://i.pinimg.com/originals/1f/e0/df/1fe0dfbdf1084f3969cb4533f31d4e05.gif"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : 'What should these lyrics be? ' + reRunButton  + "</BR></BR>" + "I travel the world in generic jeans" , 
-	questionSpeak : "I travel the world in generic jeans",			answer : "I travel the world and the seven seas",
-	image : "https://static.stacker.com/s3fs-public/styles/slide_desktop/s3/editedScreenShot20190806at95459PMpngPNG.PNG"	});
+	questionSpeak : "I travel the world in generic jeans",			answer : "I travel the world and the seven seas", answerSpeak : "",
+	image : "https://i.gifer.com/8BxZ.gif"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : 'What should these lyrics be? ' + reRunButton  + "</BR></BR>" + "See that girl, watch her scream, kicking the dancing queen", 
-	questionSpeak : "See that girl, watch her scream, kicking the dancing queen",			answer : "See that girl, watch that scene, dig in the dancing queen",
-	image : "https://static.stacker.com/s3fs-public/styles/slide_desktop/s3/editedcroppedGettyImages951902272jpgJPEG.JPEG"	});
+	questionSpeak : "See that girl, watch her scream, kicking the dancing queen",			answer : "See that girl, watch that scene, dig in the dancing queen", answerSpeak : "",
+	image : "https://media2.giphy.com/media/cmyriqv2nxD6u8c5ly/200w.gif"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : 'What should these lyrics be? ' + reRunButton  + "</BR></BR>" + "And the bakers gonna bake, bake, bake, bake, bake", 
-	questionSpeak : "And the bakers gonna bake, bake, bake, bake, bake",			answer : "And the haters gonna hate, hate, hate, hate, hate",
-	image : "https://static.stacker.com/s3fs-public/styles/slide_desktop/s3/croppedGettyImages510512874I8WKjpg.JPEG"	});
+	questionSpeak : "And the bakers gonna bake, bake, bake, bake, bake",			answer : "And the haters gonna hate, hate, hate, hate, hate", answerSpeak : "",
+	image : "https://media4.giphy.com/media/KDHkHNpM3Eht6/giphy.gif"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : 'What should these lyrics be? ' + reRunButton  + "</BR></BR>" + "The girl with colitis goes by", 
+	question : 'What should these lyrics be? ' + reRunButton  + "</BR></BR>" + "The girl with colitis goes by", answerSpeak : "", 
 	questionSpeak : "The girl with colitis goes by",			answer : "The girl with kaleidoscope eyes",
 	image : "https://static.stacker.com/s3fs-public/styles/slide_desktop/s3/editedGettyImages3297187jpgJPEG.JPEG"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : 'What should these lyrics be? ' + reRunButton  + "</BR></BR>" + "I can't stand Lorraine" , 
+	question : 'What should these lyrics be? ' + reRunButton  + "</BR></BR>" + "I can't stand Lorraine", answerSpeak : "" , 
 	questionSpeak : "I can't stand Lorraine",			answer : "I can't stand the rain",
 	image : "https://i.makeagif.com/media/4-02-2018/5-pHPK.gif"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : 'What should these lyrics be? ' + reRunButton  + "</BR></BR>" + "It doesn't make a difference if we're naked or not", 
+	question : 'What should these lyrics be? ' + reRunButton  + "</BR></BR>" + "It doesn't make a difference if we're naked or not", answerSpeak : "", 
 	questionSpeak : "It doesn't make a difference if we're naked or not",			answer : "It doesn't make a difference if we make it or not",
-	image : "https://static.stacker.com/s3fs-public/styles/slide_desktop/s3/croppedGettyImages593364065ZGZ6jpg.JPEG"	});
+	image : "https://i.gifer.com/CUTY.gif"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : 'What should these lyrics be? ' + reRunButton  + "</BR></BR>" + "Might as well face it, you're a dick with a glove" , 
+	question : 'What should these lyrics be? ' + reRunButton  + "</BR></BR>" + "Might as well face it, you're a dick with a glove", answerSpeak : "" , 
 	questionSpeak : "Might as well face it, you're a dick with a glove",			answer : "Might as well face it, you're addicted to love",
 	image : "https://media2.giphy.com/media/TN2W0Jf97zMIw/giphy.gif"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : 'What should these lyrics be? ' + reRunButton  + "</BR></BR>" + "I remove umbilicals", 
+	question : 'What should these lyrics be? ' + reRunButton  + "</BR></BR>" + "I remove umbilicals", answerSpeak : "", 
 	questionSpeak : "I remove umbilicals",			answer : "I believe in miracles",
 	image : "https://c.tenor.com/5sxPkB3jhkwAAAAC/where-you-from-you-sexy-thing.gif"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : 'What should these lyrics be? ' + reRunButton  + "</BR></BR>" + "Ohh, dyslexics on fire" , 
+	question : 'What should these lyrics be? ' + reRunButton  + "</BR></BR>" + "Ohh, dyslexics on fire" , answerSpeak : "", 
 	questionSpeak : "Ohh, dyslexics on fire",			answer : "Ohh, this sex is on fire",
-	image : "https://www.nme.com/wp-content/uploads/2016/10/2013KingsofLeonPress200313-6.jpg"	});
+	image : "https://thumbs.gfycat.com/HappyAfraidGalapagospenguin-size_restricted.gif"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : 'What should these lyrics be? ' + reRunButton  + "</BR></BR>" + "I got my first real sex dream" , 
+	question : 'What should these lyrics be? ' + reRunButton  + "</BR></BR>" + "I got my first real sex dream" , answerSpeak : "", 
 	questionSpeak : "I got my first real sex dream",			answer : "I got my first real six-string",
-	image : "https://www.nme.com/wp-content/uploads/2016/09/2008BryanAdamsPA280212.jpg"	});
+	image : "http://25.media.tumblr.com/3c88b043ca023e29384022d85ef7f11b/tumblr_mo8y65Hs7J1qhzxm5o1_500.gif"	});
 
 
 
