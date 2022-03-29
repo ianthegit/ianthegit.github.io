@@ -1671,3 +1671,25 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 
 
+
+quests[++questIndexBuilder] = { //https://spinditty.com/playlists/100-Best-Songs-With-Names-of-Cities-in-the-Title
+		name : "Foreign versions 0",
+		hoverover : "Songs you will know, in a language you will not?",
+		tags : "music,2022-4-2,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/09H2ee0flMFM8KoCf5TbHU?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+	answer : '', question : ""}) ;
+
+quests[++questIndexBuilder] = { //https://spinditty.com/playlists/100-Best-Songs-With-Names-of-Cities-in-the-Title
+		name : "Foreign versions 1",
+		hoverover : "Songs you will know, in a language you will not?",
+		tags : "music,2022-4-9,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/60RetzNN9FVAtYEVDZlWKH?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+	answer : '', question : ""}) ;
