@@ -36,6 +36,7 @@ quizQuestionType2Picture = '2picture';
 quizQuestionType2PictureAnswer = '2pictureAnswer'
 quizQuestionTypePictureAnswer = 'pictureAnswer';
 quizQuestionType2PictureQuestion = '2pictureQuestion'
+quizQuestionType4PictureQuestion = '4pictureQuestion'
 tags = new Array();
 tempTags = new Array();
 showAll = 'ShowAll';
@@ -400,7 +401,7 @@ function SQQuestion(questionType) {
 				+ questStageData[currQuestStageIndex].question + "</p>";
 		var imageArea = document.getElementById("SQImage");
 		imageArea.innerHTML = '';
-	} else if (questionType == quizQuestionTypePicture || questionType == quizQuestionType2Picture || questionType == quizQuestionType2PictureAnswer) {
+	} else if (questionType == quizQuestionTypePicture || questionType == quizQuestionType2Picture || questionType == quizQuestionType2PictureAnswer ) {
 		SQGetButtonsArea().innerHTML = buttonBar;
 		SQGetQuestArea().innerHTML = "<p " + questionStyle + ">"
 				+ questStageData[currQuestStageIndex].question + "</p>";
@@ -416,6 +417,15 @@ function SQQuestion(questionType) {
 		questionimage = questStageData[currQuestStageIndex].image;
 		questionimage2 = questStageData[currQuestStageIndex].image2;
 		sqInit2Picture(questionimage,questionimage2);
+	} else if (questionType == quizQuestionType4PictureQuestion) {
+		SQGetQuestArea().innerHTML = "<p " + questionStyle + ">"
+		+ questStageData[currQuestStageIndex].question + "</p>";
+		questionimage = questStageData[currQuestStageIndex].image;
+		questionimage2 = questStageData[currQuestStageIndex].image2;
+		questionimage3 = questStageData[currQuestStageIndex].image3;
+		questionimage4 = questStageData[currQuestStageIndex].image4;
+		sqInit4Picture(questionimage,questionimage2,questionimage3,questionimage4);
+		
 	} else if (questionType == quizQuestionTypeSpotify) {
 		sqInitSpotify(questStageData[currQuestStageIndex].spotify,
 				questStageData[currQuestStageIndex].question)
@@ -436,9 +446,20 @@ function sqInitPicture(imageSource) {
 			+ ' <img style="height:100%;border:0;" src="'
 			+ imageSource
 			+ '" /> ' + ' </a> ' + ' </div>';
-
 }
-
+function sqInit4Picture(imageSource1,imageSource2,imageSource3,imageSource4) {
+	var imageArea = document.getElementById("SQImage");
+	imageArea.innerHTML = '<div style="width:100%;height:480px;background-color:black;text-align:center;"> '
+		 + "<table style='font-family:verdana;color:Black;font-size:30px;topMargin=10px;bottomMargin=10px' width='95%' border='1'><tr><td>"
+	
+		+ ' <a href="' + imageSource1 + '" target="_blank"> <img style="width:50%;border:0;" src="' + imageSource1 + '" /> ' + ' </a> ' + '</td><td>'
+		+ ' <a href="' + imageSource2 + '" target="_blank"> <img style="width:50%;border:0;" src="' + imageSource2 + '" /> ' + ' </a> ' + '</td></tr><tr><td>'
+		+ ' <a href="' + imageSource3 + '" target="_blank"> <img style="width:50%;border:0;" src="' + imageSource3 + '" /> ' + ' </a> ' + '</td><td>'
+		+ ' <a href="' + imageSource4 + '" target="_blank"> <img style="width:50%;border:0;" src="' + imageSource4 + '" /> ' + ' </a> ' + '</td></tr>'
+			
+			+ " </td></tr></table>"
+			+ ' </div>'			;
+}
 function sqInit2Picture(imageSource1, imageSource2) {
 	var imageArea = document.getElementById("SQImage");
 	imageArea.innerHTML = '<div style="width:100%;height:480px;background-color:black;text-align:center;"> '
@@ -483,6 +504,14 @@ function SQAnswer(questionType) {
 		questionimage = questStageData[currQuestStageIndex].image;
 		questionimage2 = questStageData[currQuestStageIndex].image2;
 		sqInit2Picture(questionimage,questionimage2);
+	} else if (questionType == quizQuestionType4PictureQuestion) {
+		SQGetQuestArea().innerHTML = "<p " + questionStyle + ">"
+		+ questStageData[currQuestStageIndex].question + "</p>";
+		questionimage = questStageData[currQuestStageIndex].image;
+		questionimage2 = questStageData[currQuestStageIndex].image2;
+		questionimage3 = questStageData[currQuestStageIndex].image3;
+		questionimage4 = questStageData[currQuestStageIndex].image4;
+		sqInit4Picture(questionimage,questionimage2,questionimage3,questionimage4);
 	} else if (questionType == quizQuestionTypeSpotify) {
 		sqInitSpotify(questStageData[currQuestStageIndex].spotify,
 				questStageData[currQuestStageIndex].question)
