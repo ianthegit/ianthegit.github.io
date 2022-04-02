@@ -1458,6 +1458,31 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 	answer : '<iframe width="560" height="315" src="https://www.youtube.com/embed/HbmZrzN3WFE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', answerSpeak : "Zelenskyy playing piano"}) ;
 
 
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " + pictionaryCount++,
+		hoverover : "Pictionary on the theme of Scary Australian Sea Creatures",
+		tags : "2022-4-2,pictionary",
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVWyRTq8xdPz31BYNhLdLWhCEZLN-78DH9glnexSJTlzihbOPEH4SmQ_CaOCoPJB6L0joAentsDAT3wvgijMO9uUjPjrakznvdDGT6jPLhQhc0IqE4rQNEF3yeSQVGTjWPrK3EHbuqQucUCDEcsZJu68Q=w628-h535-no?authuser=0",
+	answerimage : "https://media3.giphy.com/media/xUOwG1GXJvJlajETMk/giphy.gif", answerSpeak : "Coral"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLV-WGVhPOppi7ZKIH9UKSPTF6PC-0gdVF1vq-kFr26HhHAlFZqaF6r_xva4fqHanm6ERSCrk_HhAZab8tsNq1bhXeLt0WBGXgN0E90tsZioVLhBWT1iq8GXGRCBTYq3R7kl1ykGsszHXG4wfvO-yBXpNg=w621-h521-no?authuser=0",
+	answerimage : "https://thumbs.gfycat.com/AffectionateCalculatingCanadagoose-max-1mb.gif", answerSpeak : "Dolphin"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXCDhPzdmdo7JS3vDo2QBRj-yOFrZcNf7mWkR3soL9Hd6vfVtakVz1ldGSToSJfXwjSf0EP8ZnokVH4Vpr1MGVIFkaYOtWo3R-37fXGhLJhUXlJMi4HBLqbbVa3KFOQptY87a5mxZZ8KcgdyEZAaPNu-g=w622-h481-no?authuser=0",
+	answerimage : "https://c.tenor.com/CE-iJh9ou8cAAAAC/shark-bite.gif", answerSpeak : "Shark"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUBACGjSPMfHgX56ziUUHPlsH9-tYPc9BP8sSzgP8OtGV7YMxULveopFsA74h1NJUAfRAFQp7AVK32skQQCGCA4V1Po10nSntR7BGZ38DLbI5Y0G4LBojeMmEATpU5ADnb8-5kBwjgHGlJoT9ymWrABqg=w688-h451-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLWn_oh9A018H8qQd1SXaM6R7jf_07lQRh2F6ft8CVnGC7DALyJgNK8MiopHOPszkHgCo-7PV7T0pu5eygTSJUNBZyxoH9si5DOEbyC_GzTfP5qBm9WCP_11fdAr7K_04M5YlKwjYEhtBsJ6vBZFp1dQcA=w600-h800-no?authuser=0", answerSpeak : "Divers"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVBCsb-yW7V4F2nq1-xref-GQN3oxjQbPKjj53SRBcrNkvBQiDOKzvMUYY25Bq_M8zOhJqnxZ6qu9bOUac-bTRoDuPO9GU_K44SnO35BNGEzH-DnI0LfrVzyTX4ggy4s10BHGgY4aw0JE6ilFvJAF04rw=w687-h444-no?authuser=0",
+	answerimage : "https://bestanimations.com/media/turtles/133641522turtle-gif-5.gif", answerSpeak : "Turtle"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVl1fObHSkU_LtuSeAPM8Mh9QWzOZ7u8Ll5ka_xtl7jQA1PC1L8GbzYkqFjDYgStVZEgKgFx9GWj6_y8Hb2_6yHaNU-7NU1sFXenj0vmV8X7EP9TG3q5-5nuT6ZquHlEeyYxKaPpQ9i5lrK2yNNOzFNEA=w818-h720-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLWef_sH3TdWBFtKVQcXpro-pu1ARsqAgg_KD-k9UdAAGpNtsho_EhHuhc_WIUL3VteFVwGHpRcPsKDiyJDrFLLDXKIRk5zSbsPKmuhtC6f9Bb_INILlIeacVvHAYvJOXlsrZhcIzPdn0umFqnoKF1z5rg=w600-h800-no?authuser=0", answerSpeak : "Sandra"}) ;
+
 /*
  * 	image : "",
 	answerimage : "", answer : "Table"}) ;
