@@ -1687,7 +1687,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Dagny Carlsson of Sweden has died. At the age of 109, she was described as the world's oldest what?" + Table4ColumnStart + "Nordic skier</td><td>Professional meatball chef</td><td>Blogger</td><td>Will Smith's boxing coach" + Table4ColumnEnd, 
 	answer : "Blogger",
-	image : "https://static.wikia.nocookie.net/gerontology/images/8/8a/DCarlsson5.jpg/revision/latest/scale-to-width-down/250?cb=20211002194813"	});
+	image : "https://i.guim.co.uk/img/media/bc014adba5cb565ab3e0929d887bad45793b566f/0_87_5120_3072/master/5120.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=d95dd1386f33ce18965b2ac1a97672d5"	});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "31 March was the anniversary of one of the largest 'poll tax riots' in the UK over the introduction of the community charge by the Conservative government of the day. But which year did the riot take place?" + Table4ColumnStart + "1989</td><td>1990</td><td>1991</td><td>1992" + Table4ColumnEnd, 
 	answer : "1990",
