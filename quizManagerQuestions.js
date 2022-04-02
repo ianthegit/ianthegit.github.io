@@ -737,7 +737,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	question :
 quests[++questIndexBuilder] = {  //quests[35] = {
 		name : "Get stoned & get yer rocks off",
 		hoverover : "Questions based on stones and rocks",
-		tags : "saturday,gin,19/10/2020,categoryLess,InnerWheel,surfers",
+		tags : "saturday,gin,19/10/2020,2022-4-2,,categoryLess,InnerWheel,surfers",
 		questInfo: new Array()
 	};
 
