@@ -1672,10 +1672,85 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 
 
-quests[++questIndexBuilder] = { //https://spinditty.com/playlists/100-Best-Songs-With-Names-of-Cities-in-the-Title
+
+
+quests[++questIndexBuilder] = { 
+		name : "What a week",
+		hoverover : "What has been going on?",
+		tags : "2022-4-2,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+			question : "Which film did Will Smith win his best actor gong for, just after he'd clocked Chris Rock with one? " + Table4ColumnStart + "Spies in Disguise</td><td>Bad Boys for Life</td><td>King Richard</td><td>Gemini Man" + Table4ColumnEnd, 
+			answer : "King Richard",
+			image : "https://c.tenor.com/dzfhf4ARTtMAAAAC/will-smith-chris-rock.gif"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Dagny Carlsson of Sweden has died. At the age of 109, she was described as the world's oldest what?" + Table4ColumnStart + "Nordic skier</td><td>Professional meatball chef</td><td>Blogger</td><td>Will Smith's boxing coach" + Table4ColumnEnd, 
+	answer : "Blogger",
+	image : "https://static.wikia.nocookie.net/gerontology/images/8/8a/DCarlsson5.jpg/revision/latest/scale-to-width-down/250?cb=20211002194813"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "31 March was the anniversary of one of the largest 'poll tax riots' in the UK over the introduction of the community charge by the Conservative government of the day. But which year did the riot take place?" + Table4ColumnStart + "1989</td><td>1990</td><td>1991</td><td>1992" + Table4ColumnEnd, 
+	answer : "1990",
+	image : "https://i.guim.co.uk/img/media/25f6360a3c84323bcf8c348a7e86e32a06f7648e/0_263_2600_1559/master/2600.jpg?width=620&quality=85&auto=format&fit=max&s=8ccbc2e6d24d3412e7629bb55272ee1a"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : 'Prince William and his wife, Kate, endured a less-than-unanimously-popular tour of the Caribbean. Which of these countries did they NOT visit? ' + Table4ColumnStart + "Barbados</td><td>Belize</td><td>Jamaica</td><td>Bahamas" + Table4ColumnEnd, 
+	answer : "Barbados",
+	image : "https://i.guim.co.uk/img/media/de6e4feb08382dad1e8d2f9090502e505dab6ec7/0_224_4023_2412/master/4023.jpg?width=620&quality=85&auto=format&fit=max&s=4eda0696cb54d86bab12cbfee1c67e13"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Despite them not having any, in the UK a horse's height is traditionally measured in 'hands'. How many inches are there to a hand? " + Table4ColumnStart + "6</td><td>5</td><td>4</td><td>3" + Table4ColumnEnd, 
+	answer : "4",
+	image : "https://i.guim.co.uk/img/media/58e5d0a7a2ec11a02ec198c5080cfa07471cc0ef/0_73_5184_3110/master/5184.jpg?width=620&quality=85&auto=format&fit=max&s=3cf91b95dd7f20279008ca3e743b8502"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : 'This road sign from Italy means what? ' + Table4ColumnStart + "Military artillery range nearby</td><td>No handcarts</td><td>Slow - historic battlefield site</td><td>Caution - rare Pokemon Unkown in the area" + Table4ColumnEnd, 
+	answer : "No handcarts",
+	image : "https://i.guim.co.uk/img/media/dd634036a06b3e41f99b20ab27dbc1b93705706e/0_0_2500_3000/master/2500.jpg?width=620&quality=85&auto=format&fit=max&s=1557268cc4cb58fc1ea12c8b6cac3b21"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "A pub in Devon has been accused of partaking in 'woke cancel culture' after putting what delicious sounding item on its menu? " + Table4ColumnStart + "Vegan scones with vegan jam and vegan cream</td><td>Goat-milk-free G'Oats' Cheese made with oats</td><td>Ploughperson's lunch</td><td>Anti-colonial Sanders chicken" + Table4ColumnEnd, 
+	answer : "Ploughperson's lunch",
+	image : "https://i.guim.co.uk/img/media/6a1bac8221d349deb3777e74d89085861e71e879/0_465_1440_864/master/1440.jpg?width=620&quality=85&auto=format&fit=max&s=be44f56aa0a58e85e4254d9436c19f9d"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : 'Who had a hit in 2005 with Wake Me Up When September Ends? ' + Table4ColumnStart + "Weezer</td><td>Green Day</td><td>Blink 182</td><td>Kate Bush" + Table4ColumnEnd, 
+	answer : "Green Day",
+	image : "https://i.guim.co.uk/img/media/15200295f37c05a55c9371a532c37b1cba8dcc84/0_0_2000_1200/master/2000.jpg?width=620&quality=85&auto=format&fit=max&s=af5ef4fbb8b6eeafaecfb14d9ad41d6e"	});
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question : "What is Pierce Brosnan's hobby?" + Table4ColumnStart + "Pottery</td><td>Collecting Barbies</td><td>Painting</td><td>Training his eyes to twinkle in the dark" + Table4ColumnEnd ,
+	image : "https://64.media.tumblr.com/c7364489a404f25a97ba33b0e5ed9572/tumblr_inline_pafhhzP6Sf1t3gh7j_250.gifv", answer : "Painting",
+	answerimage : "https://wl-brightside.cf.tsp.li/resize/728x/jpg/d9b/dfa/b4ad8c583886daeb3865afd8e1.jpg"	}); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question : "What is Johnny Depp's hobby?" + Table4ColumnStart + "Pottery</td><td>Collecting Barbies</td><td>Painting</td><td>Training his eyes to twinkle in the dark" + Table4ColumnEnd ,
+	image : "https://c.tenor.com/UL0gPGndlHMAAAAd/johnny-depp-helena-bonham-carter.gif", answer : "Collecting Barbies",
+	answerimage : "https://wl-brightside.cf.tsp.li/resize/728x/jpg/b59/f47/316fdd50f0842ef1961f8ad321.jpg"	}); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question : "What is Brad Pitt's hobby?" + Table4ColumnStart + "Pottery</td><td>Collecting Barbies</td><td>Painting</td><td>Training his eyes to twinkle in the dark" + Table4ColumnEnd ,
+	image : "https://c.tenor.com/tPM5T2F9VIAAAAAC/brad-pitt-helena-bonham-carter.gif", answer : "Pottery",
+	answerimage : "https://wl-brightside.cf.tsp.li/resize/728x/jpg/48e/c03/f291d157e2ba279fffe6411d9d.jpg"	}); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question : "What is Penelope Cruz's hobby?" + Table4ColumnStart + "Collecting other celebrities' hair</td><td>Knitting</td><td>Collecting coat hangers</td><td>Castles and dinosaur skulls" + Table4ColumnEnd ,
+	image : "https://i.pinimg.com/originals/11/70/a6/1170a615c49d0b67b65ad11e994f745c.gif", answer : "Collecting coat hangers",
+	answerimage : "https://wl-brightside.cf.tsp.li/resize/728x/jpg/9cb/b38/3ce2845d5285c386806a5c4f33.jpg"	}); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question : "What is Katy Perry's hobby?" + Table4ColumnStart + "Collecting other celebrities' hair</td><td>Knitting</td><td>Collecting coat hangers</td><td>Castles and dinosaur skulls" + Table4ColumnEnd ,
+	image : "https://c.tenor.com/jXD1s5obMCkAAAAC/katy-perry.gif", answer : "Collecting other celebrities' hair",
+	answerimage : "https://wl-brightside.cf.tsp.li/resize/728x/jpg/f06/d4b/85fc015935a807715fc19f7ea1.jpg"	}); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question : "What is Ryan Gosling's hobby?" + Table4ColumnStart + "Collecting other celebrities' hair</td><td>Knitting</td><td>Collecting coat hangers</td><td>Castles and dinosaur skulls" + Table4ColumnEnd ,
+	image : "https://media3.giphy.com/media/qg5pk8s2h5kJy/200.gif", answer : "Knitting",
+	answerimage : "https://wl-brightside.cf.tsp.li/resize/728x/jpg/cbd/aaa/3ebf005d9296ec5451aaa82a67.jpg"	}); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question : "What is Nick Cage's hobby?" + Table4ColumnStart + "Collecting other celebrities' hair</td><td>Knitting</td><td>Collecting coat hangers</td><td>Castles and dinosaur skulls" + Table4ColumnEnd ,
+	image : "https://media0.giphy.com/media/12A3hKKsewxtGE/giphy.gif", answer : "Castles and dinosaur skulls",
+	answerimage : "https://wl-brightside.cf.tsp.li/resize/728x/jpg/27f/106/131040541d984334e21a2ab609.jpg"	}); 
+
+
+quests[++questIndexBuilder] = { 
+		name : "Rock",
+		hoverover : "Songs about Rock, Will and Hits",
+		tags : "music,2022-4-2,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/2OKdAr8A4MnDk4wT6vpjdG?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+	answer : '', question : ""}) ;
+
+
+quests[++questIndexBuilder] = { 
 		name : "Foreign versions 0",
 		hoverover : "Songs you will know, in a language you will not?",
-		tags : "music,2022-4-2,InnerWheel,saturday",
+		tags : "music,2022-4-9,InnerWheel,saturday",
 		questInfo: new Array()
 	};
 
@@ -1683,13 +1758,24 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/09H2ee0flMFM8KoCf5TbHU?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
 	answer : '', question : ""}) ;
 
-quests[++questIndexBuilder] = { //https://spinditty.com/playlists/100-Best-Songs-With-Names-of-Cities-in-the-Title
+quests[++questIndexBuilder] = { 
 		name : "Foreign versions 1",
 		hoverover : "Songs you will know, in a language you will not?",
-		tags : "music,2022-4-9,InnerWheel,saturday",
+		tags : "music,2022-4-16,InnerWheel,saturday",
 		questInfo: new Array()
 	};
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/60RetzNN9FVAtYEVDZlWKH?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+	answer : '', question : ""}) ;
+
+quests[++questIndexBuilder] = { 
+		name : "Foreign versions 2",
+		hoverover : "Songs you will know, in a language you will not?",
+		tags : "music,2022-4-23,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/4KfVCv3ZszjOJjkx91MRFF?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
 	answer : '', question : ""}) ;
