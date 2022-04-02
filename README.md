@@ -117,7 +117,15 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2PictureAnswer,
 	answer : "", 
 	answerSpeak : ""}) ;
 ```
-
+Question with a Text question, a 4-picture question and a text answer
+```javascript
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType4PictureQuestion, question : "", // 
+	image : "",
+	image2: "",
+	image3 : "",
+	image4: "",
+	answer : ""  '}) ;
+```
 
 Question with a Text question, and a picture & text answer
 ```javascript	
