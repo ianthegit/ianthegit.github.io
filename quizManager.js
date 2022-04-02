@@ -37,6 +37,8 @@ quizQuestionType2PictureAnswer = '2pictureAnswer'
 quizQuestionTypePictureAnswer = 'pictureAnswer';
 quizQuestionType2PictureQuestion = '2pictureQuestion'
 quizQuestionType4PictureQuestion = '4pictureQuestion'
+quizQuestionType4PictureQuestionWithText='quizQuestionType4PictureQuestionWithText'
+		
 tags = new Array();
 tempTags = new Array();
 showAll = 'ShowAll';
@@ -425,7 +427,19 @@ function SQQuestion(questionType) {
 		questionimage3 = questStageData[currQuestStageIndex].image3;
 		questionimage4 = questStageData[currQuestStageIndex].image4;
 		sqInit4Picture(questionimage,questionimage2,questionimage3,questionimage4);
-		
+	} else if (questionType == quizQuestionType4PictureQuestionWithText) {
+		SQGetQuestArea().innerHTML = "<p " + questionStyle + ">"
+		+ questStageData[currQuestStageIndex].question + "</p>";
+		questionimage = questStageData[currQuestStageIndex].image;
+		questionimage2 = questStageData[currQuestStageIndex].image2;
+		questionimage3 = questStageData[currQuestStageIndex].image3;
+		questionimage4 = questStageData[currQuestStageIndex].image4;
+		caption = questStageData[currQuestStageIndex].caption;
+		caption2 = questStageData[currQuestStageIndex].caption2;
+		caption3 = questStageData[currQuestStageIndex].caption3;
+		caption4 = questStageData[currQuestStageIndex].caption4;
+		sqInit4PictureWithText(questionimage,questionimage2,questionimage3,questionimage4,caption, caption2, caption3, caption4);
+			
 	} else if (questionType == quizQuestionTypeSpotify) {
 		sqInitSpotify(questStageData[currQuestStageIndex].spotify,
 				questStageData[currQuestStageIndex].question)
@@ -449,7 +463,7 @@ function sqInitPicture(imageSource) {
 }
 function sqInit4Picture(imageSource1,imageSource2,imageSource3,imageSource4) {
 	var imageArea = document.getElementById("SQImage");
-	imageArea.innerHTML = '<div style="width:100%;height:480px;background-color:black;text-align:center;"> '
+	imageArea.innerHTML = '<div class="container" style="width:100%;height:480px;background-color:black;text-align:center;"> '
 		 + "<table style='font-family:verdana;color:Black;font-size:30px;topMargin=10px;bottomMargin=10px' width='95%' border='1'><tr><td>"
 	
 		+ ' <a href="' + imageSource1 + '" target="_blank"> <img style="width:50%;border:0;" src="' + imageSource1 + '" /> ' + ' </a> ' + '</td><td>'
@@ -460,6 +474,25 @@ function sqInit4Picture(imageSource1,imageSource2,imageSource3,imageSource4) {
 			+ " </td></tr></table>"
 			+ ' </div>'			;
 }
+
+function sqInit4PictureWithText(imageSource1,imageSource2,imageSource3,imageSource4, text1, text2,text3,text4) {
+	var imageArea = document.getElementById("SQImage");
+	imageArea.innerHTML = '<div class="container" style="width:100%;height:480px;background-color:black;text-align:center;"> '
+		 + "<table style='font-family:verdana;color:Black;font-size:30px;topMargin=10px;bottomMargin=10px' width='95%' border='1'><tr><td>"
+	
+		+ ' <a href="' + imageSource1 + '" target="_blank"> <img style="width:50%;border:0;" src="' + imageSource1 + '" /> ' + ' </a> ' + '</td><td>'
+		+ ' <a href="' + imageSource2 + '" target="_blank"> <img style="width:50%;border:0;" src="' + imageSource2 + '" /> ' + ' </a> ' + '</td></tr><tr><td>'
+		+ ' <a href="' + imageSource3 + '" target="_blank"> <img style="width:50%;border:0;" src="' + imageSource3 + '" /> ' + ' </a> ' + '</td><td>'
+		+ ' <a href="' + imageSource4 + '" target="_blank"> <img style="width:50%;border:0;" src="' + imageSource4 + '" /> ' + ' </a> ' + '</td></tr>'
+			
+			+ " </td></tr></table>"
+			+ '<div class="bottom-left">'+text3+'</div>'
+			+ '  <div class="top-left">'+text1+'</div>'
+			+ '  <div class="top-right">'+text2+'</div>'
+			+ ' <div class="bottom-right">'+text4+'</div>'
+			+ ' </div>'			;
+}
+
 function sqInit2Picture(imageSource1, imageSource2) {
 	var imageArea = document.getElementById("SQImage");
 	imageArea.innerHTML = '<div style="width:100%;height:480px;background-color:black;text-align:center;"> '
@@ -512,6 +545,19 @@ function SQAnswer(questionType) {
 		questionimage3 = questStageData[currQuestStageIndex].image3;
 		questionimage4 = questStageData[currQuestStageIndex].image4;
 		sqInit4Picture(questionimage,questionimage2,questionimage3,questionimage4);
+	} else if (questionType == quizQuestionType4PictureQuestionWithText) {
+		SQGetQuestArea().innerHTML = "<p " + questionStyle + ">"
+		+ questStageData[currQuestStageIndex].question + "</p>";
+		questionimage = questStageData[currQuestStageIndex].image;
+		questionimage2 = questStageData[currQuestStageIndex].image2;
+		questionimage3 = questStageData[currQuestStageIndex].image3;
+		questionimage4 = questStageData[currQuestStageIndex].image4;
+		caption = questStageData[currQuestStageIndex].caption;
+		caption2 = questStageData[currQuestStageIndex].caption2;
+		caption3 = questStageData[currQuestStageIndex].caption3;
+		caption4 = questStageData[currQuestStageIndex].caption4;
+		sqInit4PictureWithText(questionimage,questionimage2,questionimage3,questionimage4,caption, caption2, caption3, caption4);
+			
 	} else if (questionType == quizQuestionTypeSpotify) {
 		sqInitSpotify(questStageData[currQuestStageIndex].spotify,
 				questStageData[currQuestStageIndex].question)
