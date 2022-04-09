@@ -1872,7 +1872,7 @@ quests[++questIndexBuilder] = {
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/09H2ee0flMFM8KoCf5TbHU?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
-	answer : 'Heart of Glass, Blondie.  Smoke on the Water, Deep Purple.  Let it Be, The Beatles.  Rock the Casbah, The Clash.  The Sound of Silence, Simon & Garfunkel.  Starman, David Bowie.  La Vie en Rose, Edith Piaf.  Ruby Tuesday, The Rolling Stones.   Light my Fire, The Doors.  Fever, Pegy Lee', question : "", answerSpeak : ""}) ;
+	answer : 'Heart of Glass, Blondie.  Smoke on the Water, Deep Purple.  Let it Be, The Beatles.  Rock the Casbah, The Clash.  The Sound of Silence, Simon & Garfunkel.  Starman, David Bowie.  La Vie en Rose, Edith Piaf.  Ruby Tuesday, The Rolling Stones.   Light my Fire, The Doors.  Fever, Peggy Lee', question : "", answerSpeak : ""}) ;
 
 
 quests[++questIndexBuilder] = { 
