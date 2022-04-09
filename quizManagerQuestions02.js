@@ -1747,6 +1747,122 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : '', question : ""}) ;
 
 
+
+
+quests[++questIndexBuilder] = { 
+		name : "What a week, again",
+		hoverover : "What has been going on?",
+		tags : "2022-4-9,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType4PictureQuestionWithText,	question : "Who is this?", // 
+	image : "https://i2-prod.irishmirror.ie/incoming/article9802474.ece/ALTERNATES/s810/SUNDAYMIRROR-PROD-June-Brown.jpg",
+	image2: "https://i2-prod.mirror.co.uk/incoming/article21546182.ece/ALTERNATES/s338a/0_Actress-June-Brown-Alias-Dot-Cotton-From-Television-Programme-Eastenders.jpg",
+	image3 : "https://ichef.bbci.co.uk/news/976/cpsprodpb/15278/production/_100684668_mediaitem94659872.jpg",
+	image4: "https://i.guim.co.uk/img/media/47d32ebaab7be0836770f000ec8f76117f4799a6/197_409_2165_2164/master/2165.jpg?width=620&quality=85&auto=format&fit=max&s=3b2438a962fcb6f3b2a8055ca640fec8",
+	caption: " ",	caption2: " ",	caption3: " ",	caption4: " ",	answer : 'June Brown / Dot Cotton',
+	answerimage : "https://i.guim.co.uk/img/media/e66dbc4d20494872ad5b69b49500389b6af30422/26_0_1696_1018/master/1696.jpg?width=620&quality=85&auto=format&fit=max&s=4dbf7c200e1d1dfe0bb680a5816cebb2"	}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Last week it was the draw for the 2022 Fifa World Cup. Which of these teams did NOT end up drawn into the same group as England?  " + Table4ColumnStart + "USA</td><td>Iran</td><td>Scotland</td><td>Italy" + Table4ColumnEnd,
+	answer : "Italy", image : "https://i.guim.co.uk/img/media/0d289afa9c9c3832479d8292b5d006fed9ee588d/0_59_2955_1773/master/2955.jpg?width=620&quality=85&auto=format&fit=max&s=76085b40dd1cfc71c51852af81c758db"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Released 50 years ago, which iconic movie featured Malcolm McDowell, Patrick Magee, Michael Bates and Warren Clarke?  " + Table4ColumnStart + "A Clockwork Orange</td><td>Dirty Harry</td><td>The French Connection</td><td>Flashman" + Table4ColumnEnd,
+	answer : "A Clockwork Orange", image : "https://i.guim.co.uk/img/media/b03571f0d56ecb2ba7524856b30707bbc8e1ccb5/61_232_3446_2067/master/3446.jpg?width=1020&quality=85&auto=format&fit=max&s=c6ef044f11d59f15739bf7602ba7f557"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Hundreds of adults and children with type 1 diabetes in England have been fitted with an artificial WHAT that experts say could become the 'holy grail' for managing the disease?  " + Table4ColumnStart + "Spleen</td><td>Pancreas</td><td>Liver</td><td>Kidney" + Table4ColumnEnd,
+	answer : "Pancreas", image : "https://c.tenor.com/eOkZeR_N2NcAAAAC/operation-game.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "A flamingo that escaped a zoo in Kansas 17 years ago has been spotted alive and well in Texas. But what was his name?  " + Table4ColumnStart + "Legs Eleven</td><td>Pinkie Pop</td><td>Bruce</td><td>Pink Floyd" + Table4ColumnEnd,
+	answer : "Pink Floyd", image : "https://i.guim.co.uk/img/media/34b77b097f8d1d7694232a14997653d004885858/318_119_2474_1484/master/2474.jpg?width=620&quality=85&auto=format&fit=max&s=78310c4888710ac6968d64820fd73925"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "This road sign from parts of Canada means what?  " + Table4ColumnStart + "Pedestrian crossing during the day</td><td>Area of outstanding natural beauty</td><td>Crosswalk with flashing lights ahead</td><td>Pedestrians must wear sunscreen" + Table4ColumnEnd,
+	answer : "Crosswalk with flashing lights ahead", image : "https://i.guim.co.uk/img/media/c7d400b7eec79ff9aecf5861a7ca38a17246853c/0_0_2500_3000/master/2500.jpg?width=620&quality=85&auto=format&fit=max&s=7099a509f329ef9571d47676dcabde3c"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Cambridge University library is rejoicing after two stolen journals were returned in a pink gift bag alongside a 'Happy Easter' note addressed to the librarian. Whose journals were they?  " + Table4ColumnStart + "Adrian Mole</td><td>Michael Faraday</td><td>Oliver Cromwell</td><td>Charles Darwin" + Table4ColumnEnd,
+	answer : "Charles Darwin", image : "https://i.guim.co.uk/img/media/cc26763924f1f9a8cf4c50e62f01d771cf4fc879/0_270_5200_3120/master/5200.jpg?width=620&quality=85&auto=format&fit=max&s=efb1fbcb921eb76cc8ad4db383fd9b60"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "The town of Carrickfergus - you can see the castle and statue of William III here - sits on which of these bodies of water in Northern Ireland?  " + Table4ColumnStart + "Lough Eric</td><td>Lough Erne</td><td>Lough Neaghs</td><td>Belfast Lough" + Table4ColumnEnd,
+	answer : "Belfast Lough", image : "https://i.guim.co.uk/img/media/805f213183aba994e53460d4a23878da4256e0bc/0_254_3118_1871/master/3118.jpg?width=620&quality=85&auto=format&fit=max&s=c54370f6abb8dea7dda98dd94860c7dd"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which of these words describes extreme fear of 13 being an unlucky number?  " + Table4ColumnStart + "Tonitrophobia</td><td>Tetraphobia</td><td>Triskaidekaphobia</td><td>Trichophobia" + Table4ColumnEnd,
+	answer : "Triskaidekaphobia", image : "https://i.gifer.com/origin/91/91b2a2fb5a5b66e6eb8e5e080744c37b_w200.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Odd fears.  Is cloistrophobia a fear of...  " + Table4ColumnStart + "the number 33 1/3</td><td>monks</td><td>fluffy rabbits</td><td>It's made up you idiot" + Table4ColumnEnd,
+	answer : "It's made up, I'm an idiot"	});	
+
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType4PictureQuestionWithText,	question : "In 2015, who collaborated with psychedelic rock band The Flaming Lips on an album named after herself and 'Her Dead Petz'", // 
+	image : "https://c.tenor.com/t1H89Asrq4YAAAAM/miley-cyrus-thumbs-up.gif",
+	image2: "https://i.pinimg.com/originals/93/ef/f7/93eff7897ec0c8dd9bd577d9150d8e0a.gif",
+	image3 : "https://c.tenor.com/7-uT4kRS-FAAAAAd/suzanne-vega-luka.gif",
+	image4: "https://media0.giphy.com/media/tuWFzgwRYpfa0/200.gif",
+	caption: "Miley Cyrus",	caption2: "Billie Eilish",	caption3: "Suzanne Vega",	caption4: "Kate Bush",	answer : 'Miley Cyrus'}) ;
+
+
+quests[++questIndexBuilder] = { 
+		name : "Miss(ed me)",
+		hoverover : "Famous Miss?",
+		tags : "2022-4-9,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+question : "AT THE START OF SKYFALL, SHE AWKWARDLY SHOOTS BOND - Miss...?  " ,
+answer : "Moneypenny", answerSpeak : "", image : "https://64.media.tumblr.com/b7315c53f0382b1fa3bbee00b38c1fa0/503d7ade503b2c44-d9/s540x810/ed061217523af7241a7b8d5f6c65be726798e2f2.gifv"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "INDOMITABLE DETECTIVE PLAYED BY ANGELA LANSBURY, JULIA McKENZIE AND OTHERS.   Miss...?  " ,
+	answer : "Marple", answerSpeak : "", image : "https://25.media.tumblr.com/6286a766fd6a128e10df489a49e031ae/tumblr_mznq0f1h6q1rd9jbko1_250.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "INDOMITABLE EDINBURGH EDUCATOR PLAYED BY MAGGIE SMITH IN HER PRIME?   Miss..." ,
+	answer : "Jean Brodie", answerSpeak : "", image : "http://24.media.tumblr.com/tumblr_m4hq9va56v1rswi63o1_500.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "INDOMITABLE TEXAN MOTHER TO GARY, BOBBY AND J.R.?  Miss..." ,
+	answer : "Ellie", answerSpeak : "", image : "https://i.pinimg.com/originals/40/da/43/40da43e12f2b319017f46e96c207e412.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "SHE MARRIED AN AMPHIBIAN IN 1984?  Miss..." ,
+	answer : "Piggy", answerSpeak : "", image : "https://media2.giphy.com/media/A49qRTnZhaZDW/giphy.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "HOKE IS DRIVING THIS RETIRED TEACHER IN A 1989 COMEDY-DRAMA?   Miss... " ,
+	answer : "Daisy", answerSpeak : "", image : "https://media4.giphy.com/media/Hx6JDG5RWp4uQ/giphy.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "SHE REALLY MUST TAKE THAT WEDDING DRESS TO THE DRY CLEANERS?  Miss..." ,
+	answer : "Havisham", answerSpeak : "", image : "https://img.buzzfeed.com/buzzfeed-static/static/2015-03/12/12/enhanced/webdr12/anigif_enhanced-17427-1426178314-50.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Little Richard sang about her?  Miss..." ,
+	answer : "Molly", answerSpeak : "", image : "https://i.pinimg.com/originals/5c/ef/c1/5cefc1b2ca0d35763b57728d2ca486e9.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Americans love a pageant.  Are these real or made up - are they a Parade or a Charade?  MISS TOBACCO" ,
+	answer : "Charade", answerSpeak : "", image : "https://c.tenor.com/hHqJ_PBfv_QAAAAC/little-beauty.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Americans love a pageant.  Are these real or made up - are they a Parade or a Charade?  MISS STRAIGHTEST TEETH" ,
+	answer : "Charade", answerSpeak : "", image : "https://i.makeagif.com/media/10-06-2015/JSMWq0.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Americans love a pageant.  Are these real or made up - are they a Parade or a Charade?  MISS KLINGON" ,
+	answer : "Parade", answerSpeak : "", image : "https://i.gifer.com/embedded/download/Y3qG.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Americans love a pageant.  Are these real or made up - are they a Parade or a Charade?  MISS WHITTLING" ,
+	answer : "Charade", answerSpeak : "", image : "https://i.makeagif.com/media/7-06-2018/eKGc3x.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Americans love a pageant.  Are these real or made up - are they a Parade or a Charade?  MISS AMERICAN VAMPIRE" ,
+	answer : "Parade", answerSpeak : "", image : "https://j.gifs.com/Kj0ARZ.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Americans love a pageant.  Are these real or made up - are they a Parade or a Charade?  MISS ATOM BOMB" ,
+	answer : "Parade", answerSpeak : "", image : "https://media1.giphy.com/media/4PZkTgkVNCiRy/200.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Americans love a pageant.  Are these real or made up - are they a Parade or a Charade?  MISS BUTTON NOSE" ,
+	answer : "Charade", answerSpeak : "", image : "http://78.media.tumblr.com/407b12b04f6b9587d00a48ebbd0b7c44/tumblr_p2tlt9gVZH1u6n38po1_250.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Americans love a pageant.  Are these real or made up - are they a Parade or a Charade?  MISS PRETTIEST ANKLES" ,
+	answer : "Parade", answerSpeak : "", image : "https://miro.medium.com/max/996/1*WxihNVmAQydG72uMNiyMPw.gif"	});	
+
+
+//addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+//	question : "?  " + Table4ColumnStart + "?</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd,
+//	answer : "", answerSpeak : "", image : ""	});	
+//addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+//	question : "?  " + Table4ColumnStart + "?</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd,
+//	answer : "", answerSpeak : "", image : ""	});	
+
+
+
+
 quests[++questIndexBuilder] = { 
 		name : "Foreign versions 0",
 		hoverover : "Songs you will know, in a language you will not?",
@@ -1756,7 +1872,8 @@ quests[++questIndexBuilder] = {
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/09H2ee0flMFM8KoCf5TbHU?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
-	answer : '', question : ""}) ;
+	answer : 'Heart of Glass, Blondie.  Smoke on the Water, Deep Purple.  Let it Be, The Beatles.  Rock the Casbah, The Clash.  The Sound of Silence, Simon & Garfunkel.  Starman, David Bowie.  La Vie en Rose, Edith Piaf.  Ruby Tuesday, The Rolling Stones.   Light my Fire, The Doors.  Fever, Pegy Lee', question : "", answerSpeak : ""}) ;
+
 
 quests[++questIndexBuilder] = { 
 		name : "Foreign versions 1",
