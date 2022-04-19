@@ -1930,7 +1930,7 @@ quests[++questIndexBuilder] = {
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/60RetzNN9FVAtYEVDZlWKH?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
-	answer : '', question : ""}) ;
+	answer : 'Baby Love, The Supremes.  Hotel California, The Eagles.  Take On Me, A-Ha.  Life on Mars, David Bowie.  Paint it Black, The Rolling Stones.  Stairway to Heaven, Led Zeppelin.  Changes, David Bowie.  Somebody to Love, Queen.  Stand By Me, Ben E King.   Light My Fire, The Doors', question : ""}) ;
 
 quests[++questIndexBuilder] = { 
 		name : "Foreign versions 2",
