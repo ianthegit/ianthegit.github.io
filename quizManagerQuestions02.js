@@ -1882,7 +1882,7 @@ quests[++questIndexBuilder] = {
 		questInfo: new Array() };
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 	question : 'Who wrote this? </BR><iframe width="560" height="315" src="https://www.youtube.com/embed/GidtHaaV0Ig" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-		+ Table4ColumnStart + "Michael J Fox</td><td>Bruce Willis</td><td>Anyhony Kiedis</td><td>Kate Bush" + Table4ColumnEnd,
+		+ Table4ColumnStart + "Michael J Fox</td><td>Bruce Willis</td><td>Anthony Kiedis</td><td>Kate Bush" + Table4ColumnEnd,
 	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLWi9AuYsLQrqfXKItc7parjUACPEbpFNMALITVKJJnzOd_jPXPjpGFGVD1eu5TcXw4zo6hzmQMGbjyKA2nt-DMp6zIQmZw_lREBMziHf30dshQABJNx4NLOmAMAjK0MCaZXQO7dwCW-irJeIMGweY3ucQ=w654-h871-no?authuser=0"
 } ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
