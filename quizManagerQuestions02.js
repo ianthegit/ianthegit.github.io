@@ -1865,7 +1865,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 quests[++questIndexBuilder] = { 
 		name : "Foreign versions 0",
-		hoverover : "Songs you will know, in a language you will not?",
+		hoverover : "Songs you will know, in a language you will not",
 		tags : "music,2022-4-9,InnerWheel,saturday",
 		questInfo: new Array()
 	};
@@ -1877,8 +1877,8 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 quests[++questIndexBuilder] = { 
 		name : "Who wrote it",
-		hoverover : "Famous autobiobraphies?",
-		tags : "2022-4-23,saturday,InnerWheel,surfers", 
+		hoverover : "Famous autobiobraphies",
+		tags : "2022-4-23,saturday", 
 		questInfo: new Array() };
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 	question : 'Who wrote this? </BR><iframe width="560" height="315" src="https://www.youtube.com/embed/GidtHaaV0Ig" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
@@ -1923,7 +1923,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 quests[++questIndexBuilder] = { 
 		name : "Foreign versions 1",
-		hoverover : "Songs you will know, in a language you will not?",
+		hoverover : "Songs you will know, in a language you will not",
 		tags : "music,2022-4-23,InnerWheel,saturday",
 		questInfo: new Array()
 	};
@@ -1934,7 +1934,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 quests[++questIndexBuilder] = { 
 		name : "Foreign versions 2",
-		hoverover : "Songs you will know, in a language you will not?",
+		hoverover : "Songs you will know, in a language you will not",
 		tags : "music,2022-4-30,InnerWheel,saturday",
 		questInfo: new Array()
 	};
