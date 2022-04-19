@@ -1876,9 +1876,55 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { 
+		name : "Who wrote it",
+		hoverover : "Famous autobiobraphies?",
+		tags : "2022-4-23,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : 'Who wrote this? </BR><iframe width="560" height="315" src="https://www.youtube.com/embed/GidtHaaV0Ig" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+		+ Table4ColumnStart + "Michael J Fox</td><td>Bruce Willis</td><td>Anyhony Kiedis</td><td>Kate Bush" + Table4ColumnEnd,
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLWi9AuYsLQrqfXKItc7parjUACPEbpFNMALITVKJJnzOd_jPXPjpGFGVD1eu5TcXw4zo6hzmQMGbjyKA2nt-DMp6zIQmZw_lREBMziHf30dshQABJNx4NLOmAMAjK0MCaZXQO7dwCW-irJeIMGweY3ucQ=w654-h871-no?authuser=0"
+} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : 'Who wrote this? </BR><iframe width="560" height="315" src="https://www.youtube.com/embed/FEak97ozYzc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+		+ Table4ColumnStart + "Keanu Reeves</td><td>Dave Grohl</td><td>Elton John</td><td>Kate Bush" + Table4ColumnEnd,
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLU3UcWquuIjqd56K5_Y4uIx9cmlpad0TYkaWfPhIM7e71-i3bOF8c4pj9zRpiqxHRWgmP1504MJ9A31HvgWUP50go2KkhmyhX1fPZJMU-5KzomDBONmBen6tApqygjVh6yM3x6DrbBu8toVGMxS_NVqtQ=w654-h871-no?authuser=0"
+} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : 'Who wrote this? </BR><iframe width="560" height="315" src="https://www.youtube.com/embed/l1tLVdS_szQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+		+ Table4ColumnStart + "Murray Walker</td><td>John Motson</td><td>Cark 'Foggy' Fogarty</td><td>Kate Bush" + Table4ColumnEnd,
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLVc3NEob9nZjO0wEMzRabLlX1mE2a-mabnqmLcbVvhN5kgRglc9kZL08_nUkEMyLnfnKi-eksTWfHalx6ch0AujS1ZCEYypN8l4nPSKdetE39fenjUQPX8FYpIL8AuNEsttcbS2xXubXeAvREaBVyCvWA=w654-h871-no?authuser=0"
+} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : 'Who wrote this? </BR><iframe width="560" height="315" src="https://www.youtube.com/embed/IlEYI3_pRAg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+		+ Table4ColumnStart + "Ronnie Corbett</td><td>Ronnie Barker</td><td>Ronnie Wood</td><td>Kate Bush" + Table4ColumnEnd,
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLX7xkZZvqX10dslDu7PxWgzIie2JD11MkS6eeV9a0hOwaBh0BPyac1qaPs4bhTpg-rHXXtHnPsX9XpGjR2Y0RxgFL9-tybgV52wFv21Sgml08cJSpWtX7rsxu6L_Lf5d9uAjQ_a0BQicBFyFOtoBBaBzw=w654-h871-no?authuser=0"
+} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : 'Who wrote this? </BR><iframe width="560" height="315" src="https://www.youtube.com/embed/8ZGtAaypcfA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+		+ Table4ColumnStart + "Harry Secombe</td><td>Peter Sellers</td><td>Spike Milligan</td><td>Kate Bush" + Table4ColumnEnd,
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLWAIILXkDfjz3z1oYeyHMfnyxUSSMJ5nkFI7lNldN-X85xdRlHktIhwOM7NqJQCy1e8JfUaPNNYGltyX76PmngUrj7yF-tDXkRG0JSqZb6OG3aJLgOVweEAkzYPtfuzAuKGC_0Gq7AGHgTHQhnmcuB-DA=w654-h871-no?authuser=0"
+} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : 'Who wrote this? </BR><iframe width="560" height="315" src="https://www.youtube.com/embed/TRNcfM4nzdc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+		+ Table4ColumnStart + "Alan Davis</td><td>John Peel</td><td>Elton John</td><td>Kate Bush" + Table4ColumnEnd,
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLW3JpBmU-s8Rm0XgXFErnxY9kaw544O-wkrO_QNuK29-8hshBNvaZlJBv-4Z2o8W3mFEs2WLxdSTm8FjLZ0vCADptZljSZyvBjaQlZlXywSuEDJo7rm4BjrRKWhtrP5tUSO4r-4rxCk1EjVNMNwwp7l-Q=w654-h871-no?authuser=0"
+} ); 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "How many biscuits were in Charlie's pockets 5 minutes before this picture was taken?  " + Table4ColumnStart + "0</td><td>7</td><td>10</td><td>12" + Table4ColumnEnd,
+	answer : "0", image : "https://lh3.googleusercontent.com/pw/AM-JKLXfI29_oJQ_dYuzHiGNHe26fiIFlGK06-OxPQBHbWlS5iLOMKdcf6ticD1jlFCKZDXQq9WkPlH0oW022mWuiRDRJATyKX2znGSMGGfngoMocx_ZViVu2ZA3zQUz1-ViOQoqejJl5mh_TjeXTSgMtJuKbQ=w654-h871-no?authuser=0"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "How many biscuits were in Charlie's pockets when this picture was taken?  " + Table4ColumnStart + "0</td><td>7</td><td>10</td><td>12" + Table4ColumnEnd,
+	answer : "10", image : "https://lh3.googleusercontent.com/pw/AM-JKLXfI29_oJQ_dYuzHiGNHe26fiIFlGK06-OxPQBHbWlS5iLOMKdcf6ticD1jlFCKZDXQq9WkPlH0oW022mWuiRDRJATyKX2znGSMGGfngoMocx_ZViVu2ZA3zQUz1-ViOQoqejJl5mh_TjeXTSgMtJuKbQ=w654-h871-no?authuser=0"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "How many biscuits were in Charlie's pockets 5 minutes after this picture was taken?  " + Table4ColumnStart + "0</td><td>7</td><td>10</td><td>12" + Table4ColumnEnd,
+	answer : "0", image : "https://lh3.googleusercontent.com/pw/AM-JKLXfI29_oJQ_dYuzHiGNHe26fiIFlGK06-OxPQBHbWlS5iLOMKdcf6ticD1jlFCKZDXQq9WkPlH0oW022mWuiRDRJATyKX2znGSMGGfngoMocx_ZViVu2ZA3zQUz1-ViOQoqejJl5mh_TjeXTSgMtJuKbQ=w654-h871-no?authuser=0"	});	
+
+
+quests[++questIndexBuilder] = { 
 		name : "Foreign versions 1",
 		hoverover : "Songs you will know, in a language you will not?",
-		tags : "music,2022-4-16,InnerWheel,saturday",
+		tags : "music,2022-4-23,InnerWheel,saturday",
 		questInfo: new Array()
 	};
 
@@ -1889,7 +1935,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 quests[++questIndexBuilder] = { 
 		name : "Foreign versions 2",
 		hoverover : "Songs you will know, in a language you will not?",
-		tags : "music,2022-4-23,InnerWheel,saturday",
+		tags : "music,2022-4-30,InnerWheel,saturday",
 		questInfo: new Array()
 	};
 
