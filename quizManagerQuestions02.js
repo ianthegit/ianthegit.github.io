@@ -1875,9 +1875,10 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : 'Heart of Glass, Blondie.  Smoke on the Water, Deep Purple.  Let it Be, The Beatles.  Rock the Casbah, The Clash.  The Sound of Silence, Simon & Garfunkel.  Starman, David Bowie.  La Vie en Rose, Edith Piaf.  Ruby Tuesday, The Rolling Stones.   Light my Fire, The Doors.  Fever, Peggy Lee', question : "", answerSpeak : ""}) ;
 
 
+
 quests[++questIndexBuilder] = { 
 		name : "Who wrote it",
-		hoverover : "Famous autobiobraphies",
+		hoverover : "Famous autobiobraphies?",
 		tags : "2022-4-23,saturday", 
 		questInfo: new Array() };
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
@@ -1885,16 +1886,25 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 		+ Table4ColumnStart + "Michael J Fox</td><td>Bruce Willis</td><td>Anthony Kiedis</td><td>Kate Bush" + Table4ColumnEnd,
 	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLWi9AuYsLQrqfXKItc7parjUACPEbpFNMALITVKJJnzOd_jPXPjpGFGVD1eu5TcXw4zo6hzmQMGbjyKA2nt-DMp6zIQmZw_lREBMziHf30dshQABJNx4NLOmAMAjK0MCaZXQO7dwCW-irJeIMGweY3ucQ=w654-h871-no?authuser=0"
 } ); 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "How many biscuits were in Charlie's pockets 5 minutes before this picture was taken?  " + Table4ColumnStart + "0</td><td>7</td><td>10</td><td>12" + Table4ColumnEnd,
+	answer : "0", image : "https://lh3.googleusercontent.com/pw/AM-JKLXfI29_oJQ_dYuzHiGNHe26fiIFlGK06-OxPQBHbWlS5iLOMKdcf6ticD1jlFCKZDXQq9WkPlH0oW022mWuiRDRJATyKX2znGSMGGfngoMocx_ZViVu2ZA3zQUz1-ViOQoqejJl5mh_TjeXTSgMtJuKbQ=w654-h871-no?authuser=0"	});	
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 	question : 'Who wrote this? </BR><iframe width="560" height="315" src="https://www.youtube.com/embed/FEak97ozYzc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
 		+ Table4ColumnStart + "Keanu Reeves</td><td>Dave Grohl</td><td>Elton John</td><td>Kate Bush" + Table4ColumnEnd,
 	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLU3UcWquuIjqd56K5_Y4uIx9cmlpad0TYkaWfPhIM7e71-i3bOF8c4pj9zRpiqxHRWgmP1504MJ9A31HvgWUP50go2KkhmyhX1fPZJMU-5KzomDBONmBen6tApqygjVh6yM3x6DrbBu8toVGMxS_NVqtQ=w654-h871-no?authuser=0"
 } ); 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "How many biscuits were in Charlie's pockets when this picture was taken?  " + Table4ColumnStart + "0</td><td>7</td><td>10</td><td>12" + Table4ColumnEnd,
+	answer : "10", image : "https://lh3.googleusercontent.com/pw/AM-JKLXfI29_oJQ_dYuzHiGNHe26fiIFlGK06-OxPQBHbWlS5iLOMKdcf6ticD1jlFCKZDXQq9WkPlH0oW022mWuiRDRJATyKX2znGSMGGfngoMocx_ZViVu2ZA3zQUz1-ViOQoqejJl5mh_TjeXTSgMtJuKbQ=w654-h871-no?authuser=0"	});	
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 	question : 'Who wrote this? </BR><iframe width="560" height="315" src="https://www.youtube.com/embed/l1tLVdS_szQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
 		+ Table4ColumnStart + "Murray Walker</td><td>John Motson</td><td>Cark 'Foggy' Fogarty</td><td>Kate Bush" + Table4ColumnEnd,
 	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLVc3NEob9nZjO0wEMzRabLlX1mE2a-mabnqmLcbVvhN5kgRglc9kZL08_nUkEMyLnfnKi-eksTWfHalx6ch0AujS1ZCEYypN8l4nPSKdetE39fenjUQPX8FYpIL8AuNEsttcbS2xXubXeAvREaBVyCvWA=w654-h871-no?authuser=0"
 } ); 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "How many biscuits were in Charlie's pockets 5 minutes after this picture was taken?  " + Table4ColumnStart + "0</td><td>7</td><td>10</td><td>12" + Table4ColumnEnd,
+	answer : "0", image : "https://lh3.googleusercontent.com/pw/AM-JKLXfI29_oJQ_dYuzHiGNHe26fiIFlGK06-OxPQBHbWlS5iLOMKdcf6ticD1jlFCKZDXQq9WkPlH0oW022mWuiRDRJATyKX2znGSMGGfngoMocx_ZViVu2ZA3zQUz1-ViOQoqejJl5mh_TjeXTSgMtJuKbQ=w654-h871-no?authuser=0"	});	
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 	question : 'Who wrote this? </BR><iframe width="560" height="315" src="https://www.youtube.com/embed/IlEYI3_pRAg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
 		+ Table4ColumnStart + "Ronnie Corbett</td><td>Ronnie Barker</td><td>Ronnie Wood</td><td>Kate Bush" + Table4ColumnEnd,
@@ -1910,27 +1920,64 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 		+ Table4ColumnStart + "Alan Davis</td><td>John Peel</td><td>Elton John</td><td>Kate Bush" + Table4ColumnEnd,
 	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLW3JpBmU-s8Rm0XgXFErnxY9kaw544O-wkrO_QNuK29-8hshBNvaZlJBv-4Z2o8W3mFEs2WLxdSTm8FjLZ0vCADptZljSZyvBjaQlZlXywSuEDJo7rm4BjrRKWhtrP5tUSO4r-4rxCk1EjVNMNwwp7l-Q=w654-h871-no?authuser=0"
 } ); 
+
+quests[++questIndexBuilder] = { 
+		name : "Topicalish",
+		hoverover : "Some topical stuf, some general knowledge",
+		tags : "2022-4-23,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "How many biscuits were in Charlie's pockets 5 minutes before this picture was taken?  " + Table4ColumnStart + "0</td><td>7</td><td>10</td><td>12" + Table4ColumnEnd,
-	answer : "0", image : "https://lh3.googleusercontent.com/pw/AM-JKLXfI29_oJQ_dYuzHiGNHe26fiIFlGK06-OxPQBHbWlS5iLOMKdcf6ticD1jlFCKZDXQq9WkPlH0oW022mWuiRDRJATyKX2znGSMGGfngoMocx_ZViVu2ZA3zQUz1-ViOQoqejJl5mh_TjeXTSgMtJuKbQ=w654-h871-no?authuser=0"	});	
+	question : "What did they find under the floor of the Notre-Dame in Paris during an archaeological dig after the fire?  " + Table4ColumnStart + "A vial said to contain the blood of Jesus - probably cursed</td><td>An urn containing a burnt parchment - probably cursed</td><td>A medieval candle marked with Nordic runes not seen in France before - probably cursed</td><td>A body-shaped lead sarcophagus - probably cursed" + Table4ColumnEnd,
+	answer : "A body-shaped lead sarcophagus - probably cursed", answerSpeak : "", image : "https://i.gifer.com/Fd9n.gif"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "How many biscuits were in Charlie's pockets when this picture was taken?  " + Table4ColumnStart + "0</td><td>7</td><td>10</td><td>12" + Table4ColumnEnd,
-	answer : "10", image : "https://lh3.googleusercontent.com/pw/AM-JKLXfI29_oJQ_dYuzHiGNHe26fiIFlGK06-OxPQBHbWlS5iLOMKdcf6ticD1jlFCKZDXQq9WkPlH0oW022mWuiRDRJATyKX2znGSMGGfngoMocx_ZViVu2ZA3zQUz1-ViOQoqejJl5mh_TjeXTSgMtJuKbQ=w654-h871-no?authuser=0"	});	
+	question : "The former editor of El Pais travel supplement Andres Rubio has caused a scene with his new book Espana Fea. What does the title mean in English?  " + Table4ColumnStart + "Ugly Spain</td><td>Fearful Spain</td><td>Smelly Spain</td><td>Selfish Spain" + Table4ColumnEnd,
+	answer : "Ugly Spain", answerSpeak : "", image : "https://media1.giphy.com/media/mb410b43HO7aU/giphy.gif"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "How many biscuits were in Charlie's pockets 5 minutes after this picture was taken?  " + Table4ColumnStart + "0</td><td>7</td><td>10</td><td>12" + Table4ColumnEnd,
-	answer : "0", image : "https://lh3.googleusercontent.com/pw/AM-JKLXfI29_oJQ_dYuzHiGNHe26fiIFlGK06-OxPQBHbWlS5iLOMKdcf6ticD1jlFCKZDXQq9WkPlH0oW022mWuiRDRJATyKX2znGSMGGfngoMocx_ZViVu2ZA3zQUz1-ViOQoqejJl5mh_TjeXTSgMtJuKbQ=w654-h871-no?authuser=0"	});	
+	question : "If you are measuring things contained within a cell, then you would most likely be measuring in micrometres. How long is one micrometre?  " + Table4ColumnStart + "One billionth of a metre</td><td>One millionth of a metre</td><td>One hundred thousandth of a metre</td><td>One thousandth of a metre" + Table4ColumnEnd,
+	answer : "One millionth of a metre", answerSpeak : "", image : "https://c.tenor.com/09TPphdwuQAAAAAC/red-blood-cells-national-geographic.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "The late Jeremy Bulloch appeared in the Star Wars movies and amassed a huge collection of memorabilia that is being auctioned next month. It includes a lifesize statue of his character. Which character did he play?  " + Table4ColumnStart + "Lando Calrissian</td><td>Admiral Ozzel</td><td>Wedge Antilles</td><td>Boba Fett" + Table4ColumnEnd,
+	answer : "Boba Fett", answerSpeak : "", image : "https://thumbs.gfycat.com/MammothDecisiveDavidstiger-max-1mb.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "The constellation of Gemini is one of the signs of the zodiac, and its two brightest stars are named after which twins from mythology?  " + Table4ColumnStart + "Apollo and Artemis</td><td>Romulus and Remus</td><td>Castor and Pollux</td><td>Luke and Leia" + Table4ColumnEnd,
+	answer : "Castor and Pollux", answerSpeak : "", image : "https://64.media.tumblr.com/tumblr_mdtquwLBHc1rlapeio2_500.gifv"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which talking horse was owned by Wilbur Post in the US sitcom that ran from 1961 to 1966 and bore the horse's name?  " + Table4ColumnStart + "Mister Ned</td><td>Mister Ted</td><td>Mister Fred</td><td>Mister Ed" + Table4ColumnEnd,
+	answer : "Mister Ed", answerSpeak : "", image : "https://thumbs.gfycat.com/ImmenseAngelicHart-max-1mb.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which European city has announced that from June it will carry out a six-month pilot of charging day-trippers up to " + euro + "10 to visit?  " + Table4ColumnStart + "Athens</td><td>Barcelona</td><td>Naples</td><td>Venice" + Table4ColumnEnd,
+	answer : "Venice", answerSpeak : "", image : "https://i.gifer.com/fyCo.gif"	});	
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType4PictureQuestionWithText,	question : "Who had a hit in the UK in 2010 with a cover version of an Elton John song that also featured in a John Lewis TV advert", // 
+	image : "https://thumbs.gfycat.com/AcidicThisGermanwirehairedpointer-max-1mb.gif",
+	image2: "https://i.pinimg.com/originals/84/f9/d2/84f9d296dd4e32eb1ed1d7b84fa1d968.gif",
+	image3 : "http://media.tumblr.com/tumblr_mciz8lTAMI1rwxy6j.gif",
+	image4: "https://c.tenor.com/yMfDkWlap6oAAAAC/kate-bush-dance.gif",
+	caption: "Sinead O'Connor with Sacrifice",
+	caption2: "Katy Perry with Candle in the Wind",
+	caption3: "Ellie Goulding with Your Song",
+	caption4: "Kate Bush with Rocket Man",
+	answer : 'Ellie Goulding with Your Song'}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Rattray Head lighthouse, Buchan Ness lighthouse and South Breakwater lighthouse are all located near which Scottish port and harbour?  " + Table4ColumnStart + "Lerwick</td><td>Leith</td><td>Inverness</td><td>Peterhead" + Table4ColumnEnd,
+	answer : "Peterhead", answerSpeak : "", image : "https://i.pinimg.com/originals/4c/b6/27/4cb6275b47fb39de3723aad21a512459.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "After many years, the BBC has finally admitted that it faked elements of what?  " + Table4ColumnStart + "The 1924 duet between a cello and a nightingale</td><td>The 1932 radio address by King George V used to inaugurate the start of BBC Empire Service</td><td>The 1967 live round-the-world satellite link-up of television that featured the Beatles performing All You Need Is Love</td><td>The Teletubbies" + Table4ColumnEnd,
+	answer : "The 1924 duet between a cello and a nightingale", answerSpeak : "", image : "https://c.tenor.com/uIorgaD4_cUAAAAC/fake-news-point.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What was the name of the famous grey horse that won the King George VI Chase four times between 1986 and 1990?  " + Table4ColumnStart + "Dessert Orchid</td><td>Desert Rose</td><td>Desert Orchid</td><td>Dobbin" + Table4ColumnEnd,
+	answer : "Desert Orchid", answerSpeak : "", image : "https://www.mediastorehouse.co.uk/p/210/desert-orchid-way-winning-1989-cheltenham-gold-5312471.jpg.webp"	});	
 
 
 quests[++questIndexBuilder] = { 
 		name : "Foreign versions 1",
-		hoverover : "Songs you will know, in a language you will not",
+		hoverover : "Songs you will know, in a language you will not.",
 		tags : "music,2022-4-23,InnerWheel,saturday",
 		questInfo: new Array()
 	};
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/60RetzNN9FVAtYEVDZlWKH?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
-	answer : 'Baby Love, The Supremes.  Hotel California, The Eagles.  Take On Me, A-Ha.  Life on Mars, David Bowie.  Paint it Black, The Rolling Stones.  Stairway to Heaven, Led Zeppelin.  Changes, David Bowie.  Somebody to Love, Queen.  Stand By Me, Ben E King.   Light My Fire, The Doors', question : ""}) ;
+	answer : 'Baby Love, The Supremes.  Hotel California, The Eagles.  Take On Me, A-Ha.  Life on Mars, David Bowie.  Paint it Black, The Rolling Stones.  Stairway to Heaven, Led Zeppelin.  Changes, David Bowie.  Somebody to Love, Queen.  Stand by Me, Ben E King.   Light My Fire, The Doors ', answerSpeak : "", question : ""}) ;
 
 quests[++questIndexBuilder] = { 
 		name : "Foreign versions 2",
