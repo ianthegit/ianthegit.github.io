@@ -1535,6 +1535,33 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLXhc6ajbkZdQBd54JfEGLpuLhJeSfFKtHDeT9LMHJno1I2Ol1yFX-fRxEwSaQK0EepqNln1Pcdn0Ag2862z3_pBiaux5-R0LLq4SiAT9tpjlGcXikdSEfoTDEBdyzJIA9tsfkblCGRmCwgGkMVckQthvw=w661-h342-no?authuser=0",
 	answerimage : "https://lh3.googleusercontent.com/S0nZVKqSPwpxC11tix5QUW_sRw3f_bYw5NPLghuwaPXOtz4Z2zhRPcJQDWZ_Owa03LgLlrentVe_ZbXYl1MpLNFlT5xp1iYBEy9IUrMj7e5FQ_zQIUrEf0cDEwlPNSEqK1srBkfau2ZSuQPEy985l333nx2A7dIv391I14Mutbsdfpiznex0MnkkkRd9mYrcSJBd11HSX4XZFh_MBQMHbQoILkooykaFF6G_CzEYoaE4EjAGyfYhnEFDn44lIXu5L2AvFb86svbZxAPVytKIxDCJD4W_KDtoSyp8nAwviiOsj1LvgAcYYsWCYF4DOE1o3D8SggBr-1AizgN2iEByJjG4nMhsvNz8H-VyhoNioLmrCdERTvwBszG-qTq_51cpNgsvB01ts20NDkIFN3GBr4KyqdUf1A3IWX_nWM1eE5DVMWKpfKGl1FBSyLZ3vUaWCTALHd8-TwHLfs8_aCMa9aqKv02IBot3R9Qx-xJ4EIhcaZezlIYY1esRES6jWZEUVqfOutEpVe7ELq60JVhEXyUcoTna_j32_HUsIrVctoqvzw_InQ82OnHxxZ8bQZrVbV34DmcVlYKwsUFdSdLQJKekkyd0iTEle3PH-Ald26m010aYh_tBU24pdgcB4TA2O9xAlUcHyCFps2DSeYTP-dm9pU8dGFO61h53KtmRhtsf1-P6qMfT8HMp6dEVWp52pfPqIuXKepgW6RCPa-jLQGM0hLhyR1Qms5XzdPTobAbS5D9XF6RDVY8gAbZj_4I=w1162-h871-no?authuser=0", answerSpeak : "Ship"}) ;
 
+
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " + pictionaryCount++,
+		hoverover : "Pictionary on the theme of what I did last weekend",
+		tags : "2022-5-8,pictionary",
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLUlrtwrmcIgTNFGyXRGPKzrwt8DDFzdV3qq3qEpSb55hlI2RotHpiuhCn4B8O3PetsBEPCh8tWMKAkZ0HI9DbESOv6SI_8Wo2_gDerXhkSOGw0uzaG4cHUpIUfWeJQyYFQzqmS2rQ28rMe7mm-W3rgYuA=w1280-h640-no?authuser=0", answerSpeak : "Mountain Biking"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLXhjIQzZ3OMzY-J4Il8M9oTQ3lRW5-zmW_WKGozqZeWAphM1a6ehOxU96AGV2OZ2fpA3rnxHC8ITui1l4wLVPLkzYDME-_m816FiDI8lUqj4TsOAALEfMNe5Kn9hzQ9MosbELLswLRXPyGxsJO6HxhiPg=w654-h872-no?authuser=0", answerSpeak : "Track Cycling"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLXyZ_2fJETuoU4lqedyo2d5dQinXyz6U9L82aCaEAZPyzNEIjfxM6iGafEnj3Gqut2g10o22yRvMMcqXPpH-OQEXS1xf72rRImvC9vj1u8NkoGGtfZP1vJgFZMpBSEQigD-0CNpcnyUEydiro3NQt7tpg=w1162-h871-no?authuser=0", answerSpeak : "Swimming"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLXcb1-0w0quPxewoPDrBSrEAQ0plAvFLJgyZX5XFx52oiaSjgaR5v17X53qE2amYawSEsKuhYYn0AndKctjKvGGEMp81DmpPnrpMWqpj-0iLT5OX0IO_qEw33dBeViP3wA1BHLXSKK73ze7OTEkQ8JNPw=w1024-h768-no?authuser=0", answerSpeak : "Hill Walking"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLVEKcmjaRmYC9GEA7Amu8qWlKrYYUXxgYDf0kmPqEfU5Qz8-PdWSUBiTXjYefm6_Y7eDEPojyIv1IX03gVLm_PyeV8c2ouMXFuEKxTOTVXlM96iMK7eIrkMtwlSDG7KA5xMBeFM63oxMXfUUVTo8IRiWA=w1162-h871-no?authuser=0", answerSpeak : "Drinking"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLVMNLcGA9QxjFzzZ3qFuG1f7Xx7OuuZV7fNpHCnQBDKuIwjS0ommskBgLu_HnQUDxtMkZFDU0ZXbJrTQcGZI8l6zDkjYnBzMgg86LgoUGOsbzC-iTqgH0akQaKfYlTiSrAwcLK0i8WLDN0GVoBE4CfTlg=w1024-h768-no?authuser=0", answerSpeak : "Dancing"}) ;
+
+
 /*
  * 	image : "",
 	answerimage : "", answer : "Table"}) ;
