@@ -1979,13 +1979,102 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/60RetzNN9FVAtYEVDZlWKH?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
 	answer : 'Baby Love, The Supremes.  Hotel California, The Eagles.  Take On Me, A-Ha.  Life on Mars, David Bowie.  Paint it Black, The Rolling Stones.  Stairway to Heaven, Led Zeppelin.  Changes, David Bowie.  Somebody to Love, Queen.  Stand by Me, Ben E King.   Light My Fire, The Doors ', answerSpeak : "", question : ""}) ;
 
+
+quests[++questIndexBuilder] = { 
+		name : "Preggers or Fat Beggers",
+		hoverover : "Beer Belly or Baby Belly",
+		splash : {splashType : splashTypePictureAndText , splashText : "You're about to see some pictures, are they of Beer Bellies or Pregnant Ladies...?", splashImage : "https://external-preview.redd.it/QV7uauQwXpxcbC8Vpz4djZu909P13r1PnoObc5zaujI.jpg?auto=webp&s=46d092bb7a43fed8564c69f8ae960e4873ced734" },
+		tags : "2022-5-8,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Is this a Beer or Baby belly?" ,
+	answer : "Beer", image : "https://static0.thequizimages.com/wordpress/wp-content/uploads/2017/11/beer8-1.jpg?q=50&fit=crop&w=963&h=481"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Is this a Beer or Baby belly?" ,
+	answer : "Beer", image : "https://static1.thequizimages.com/wordpress/wp-content/uploads/2017/11/beer4.jpg?q=50&fit=crop&w=963&h=481"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Is this a Beer or Baby belly?" ,
+	answer : "Baby", image : "https://static1.thequizimages.com/wordpress/wp-content/uploads/2017/11/preg17.jpg?q=50&fit=crop&w=963&h=481"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Is this a Beer or Baby belly?" ,
+	answer : "Beer", image : "https://static1.thequizimages.com/wordpress/wp-content/uploads/2017/11/beer3.jpg?q=50&fit=crop&w=963&h=481"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Is this a Beer or Baby belly?" ,
+	answer : "Baby", image : "https://static1.thequizimages.com/wordpress/wp-content/uploads/2017/11/preg12.jpg?q=50&fit=crop&w=963&h=481"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Is this a Beer or Baby belly?" ,
+	answer : "Beer", image : "https://static0.thequizimages.com/wordpress/wp-content/uploads/2017/11/beer6.png?q=50&fit=crop&w=963&h=481"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Is this a Beer or Baby belly?" ,
+	answer : "Baby", image : "https://static0.thequizimages.com/wordpress/wp-content/uploads/2017/11/preg4.jpg?q=50&fit=crop&w=963&h=481"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Is this a Beer or Baby belly?" ,
+	answer : "Baby", image : "https://static1.thequizimages.com/wordpress/wp-content/uploads/2017/11/preg-2.jpg?q=50&fit=crop&w=963&h=481"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Is this a Beer or Baby belly?" ,
+	answer : "Baby", image : "https://static1.thequizimages.com/wordpress/wp-content/uploads/2017/11/preg16.jpg?q=50&fit=crop&w=963&h=481"	});	
+
+
+quests[++questIndexBuilder] = { 
+		name : "Topicalish",
+		hoverover : "Some topical stuf, some general knowledge",
+		tags : "2022-5-8,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Last week it would have been the greately missed Sir Terry Pratchett's birthday.  How many Discworld novels have been published?  " + Table4ColumnStart + "29</td><td>36</td><td>41</td><td>48" + Table4ColumnEnd,
+	answer : "41", image : "https://c.tenor.com/san6UgucFpIAAAAC/going-postal-terry-pratchett.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Ones of the great missing comma jokes is about Panda's, who eat shoots and leaves.  Which of these families of mammals do giant pandas belong to?  " + Table4ColumnStart + "Procyonidae</td><td>Peramelidae</td><td>Otariidae</td><td>Ursidae" + Table4ColumnEnd,
+	answer : "Ursidae", answerSpeak : "I can't bloody pronounce that", image : "https://c.tenor.com/_TV6qVC4toAAAAAM/panda-dancing.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which world leader was inexplicably greeted in Japan by some mournfully dancing kiwi fruit last week?  " + Table4ColumnStart + "Australia's prime minister Scott Morrison</td><td>South Africa's president Cyril Ramaphosa</td><td>Brazil's president Jair Bolsonaro</td><td>New Zealand's prime minister Jacinda Ardern" + Table4ColumnEnd,
+	answer : "New Zealand's prime minister Jacinda Ardern", answerSpeak : "Jacinda Ardern", image : "https://i.guim.co.uk/img/media/c9528c56e5d2290de2e218a308093d6be8208b20/0_0_741_339/master/741.jpg?width=620&quality=85&auto=format&fit=max&s=1ef7e3ea5b54cad7f4027b26b59ebfd4"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "A six mile sculpture trail that models the solar system to scale called Our Place in Space is opening where in the UK?  " + Table4ColumnStart + "Derry</td><td>Wolverhampton</td><td>Inverness</td><td>Bangor" + Table4ColumnEnd,
+	answer : "Derry", image : "https://thumbs.gfycat.com/AbsoluteUnfortunateGuillemot-size_restricted.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "'One-eyed Joe', a Scottish cat that went missing for five years, was reunited with his owner after being found where?  (Extra point for knowing why I chose this gif...) " + Table4ColumnStart + "Edinburgh Castle</td><td>An offshore oil rig</td><td>Inside the Scottish Parliament Building in Holyrood</td><td>At Faslane's nuclear submarine base" + Table4ColumnEnd,
+	answer : "An offshore oil rig (and the gif is from 'Cotton Eyed-Joe')", image : "https://i.makeagif.com/media/3-13-2015/DZSYo1.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Saint Andrew is a patron saint of Barbados, Georgia, Cyprus and Scotland among other places. But traditionally what did he do before becoming one of the disciples of Jesus?  " + Table4ColumnStart + "Fisherman</td><td>Carpenter</td><td>Soldier</td><td>Innkeeper" + Table4ColumnEnd,
+	answer : "Fisherman", image : "https://i.guim.co.uk/img/media/0cf6fcf31c546633f9d4fb5125495c6a3b1ac61e/795_254_1890_1134/master/1890.jpg?width=620&quality=85&auto=format&fit=max&s=3b0db77a694aad6b9b906e31cebbab20"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "A horse's respiratory system is described as demonstrating 'obligate nasal breathing'. What does that mean?  " + Table4ColumnStart + "They only exhale from the nostrils, and inhale through the mouth</td><td>They alternate breathing through different nostrils</td><td>They have a special membrane that makes the nostrils water-tight when they are under water</td><td>They can only breath through their nostrils, and not their mouth" + Table4ColumnEnd,
+	answer : "They can only breath through their nostrils, and not their mouth", image : "https://i.chzbgr.com/full/9324124672/h58260323/a-muscular-brown-horse-running-fast-through-a-field"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Residents on the Isles of Scilly face a difficult, expensive and long journey for a vital public service now after it was announced the very last WHAT on the island was closing?  " + Table4ColumnStart + "Post office</td><td>Bank branch</td><td>Pub</td><td>Library" + Table4ColumnEnd,
+	answer : "Bank branch - A letter to Lloyds' customers said that, following the closure, the nearest branch would be 44 miles away and accessible by the ferry to Penzance, Cornwall", answerSpeak : "Bank branch", image : "https://i.gifer.com/origin/fa/fab1ef12f1d17cee7b0b7f4fd5f29f74_w200.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "The US army has given back something it stole from the village of San Pietro near Vicenza in northern Italy during the second world war. What was it?  " + Table4ColumnStart + "A statue of Saint Peter that used to stand in the village square</td><td>A hoard of 337 silver Roman coins belonging to the local museum</td><td>A 13-year-old girl's birthday cake stolen from a windowsill</td><td>A painting of the Fallen Madonna by Van Clomp that used to hang in the village cafe" + Table4ColumnEnd,
+	answer : "A 13-year-old girl's birthday cake stolen from a windowsill", image : "https://i.guim.co.uk/img/media/6231f8f794e69cdcbf035adc2551115031dd4343/0_239_4678_2807/master/4678.jpg?width=620&quality=85&auto=format&fit=max&s=d875c9a7eb5ca8058d3f26f87ef4b126"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "A rare copy of a 'wicked' 1631 Bible has been found in New Zealand. Due to an unfortunate typographical error, which of the Ten Commandments has been mangled in it?  " + Table4ColumnStart + "Thou shalt kill</td><td>Thou shalt commit adultery</td><td>Thou shalt steal</td><td>Thou shalt covet Kate Bush's ass" + Table4ColumnEnd,
+	answer : "Thou shalt commit adultery", image : "https://thumbs.gfycat.com/AggressiveRawCockatiel-size_restricted.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "The judge in the Johnny Depp-Amber Heard defamation trial was left temporarily lost for words last week after the court was shown the pre-recorded deposition of a doorman who was doing what?  " + Table4ColumnStart + "Driving and vaping while giving his testimony</td><td>Clipping his finger nails while giving his testimony</td><td>Delivering his testimony as a rap</td><td>The same thing that Amber did in bed" + Table4ColumnEnd,
+	answer : "Driving and vaping while giving his testimony", answerSpeak : "", image : "https://i.gifer.com/e26.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "As Charlie would have known, Thursday was Henry Cavill's birthday today. But what is the name of the character he plays in The Witcher?  " + Table4ColumnStart + "Count de Luverten</td><td>Geralt of Rivia</td><td>Emhyr var Emreis</td><td>Henry van Statten" + Table4ColumnEnd,
+	answer : "Geralt of Rivia", image : "https://media2.giphy.com/media/dWSy8T6SyDVj4ey7qX/200.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "If a simple electrical circuit contains three resistors in series of 4 ohms, 8 ohms and 2 ohms in that order and nothing else, what is the total resistance?  " + Table4ColumnStart + "4 divided by 8 divided by 2 to give 0.25 ohms</td><td>The average of the three resistors to give 4.6 ohms</td><td>The sum of the three resistors to give 14 ohms</td><td>The value of the largest resistor, giving 8 ohms" + Table4ColumnEnd,
+	answer : "The sum of the three resistors to give 14 ohms", image : "https://www.flippingphysics.com/uploads/2/1/1/0/21103672/0376-short-circuit-gif_orig.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Ric Parnell, the drummer in the movie This Is Spinal Tap, has sadly passed away. Which 1981 hit single did he play on?  " + Table4ColumnStart + "Hey Mickey by Toni Basil</td><td>Shaddap You Face by Joe Dolce</td><td>Japanese Boy by Aneka</td><td>Sat in Your Lap by Kate Bush" + Table4ColumnEnd,
+	answer : "Hey Mickey by Toni Basil", answerSpeak : "Hey Mickey you're so fine, you're so fine you blow my mind.  HEY MICKEY!", image : "https://thumbs.gfycat.com/IndelibleQuarterlyHorsefly-size_restricted.gif"	});	
+
+
+
+
+
 quests[++questIndexBuilder] = { 
 		name : "Foreign versions 2",
-		hoverover : "Songs you will know, in a language you will not",
-		tags : "music,2022-4-30,InnerWheel,saturday",
+		hoverover : "Songs you will know, in a language you will not.",
+		tags : "music,2022-5-8,InnerWheel,saturday",
 		questInfo: new Array()
 	};
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/4KfVCv3ZszjOJjkx91MRFF?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
-	answer : '', question : ""}) ;
+	answer : "Psycho Killer, Talking Heads.  Road to Nowhere, Talking Heads.  Just can't get enough, Depeche Mode.  I can't get no Satisfaction, Rolling Stones.  Highway to Hell, AC/DC.  Sympathy for the Devil, Rolling Stones.  Come Together, the Beatles.  The Sound of Silence,  Simon & Garfunkel.  In the Ghetto, Elvis.  I'm too sexy, Right Said Fred.", answerSpeak : "", question : ""}) ;
+
