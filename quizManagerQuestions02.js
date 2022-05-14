@@ -2136,7 +2136,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	answer : "Douze points", image : "https://wiwibloggs.com/wp-content/uploads/2014/11/Jedward-Gif-Lipstick-Eurovision-2011-2012-2015.gif"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "What was the name of the Italian band (pictured) who won the 2021 contest?  " + Table4ColumnStart + "Hooverphonic</td><td>Maneskin</td><td>Blind Channel</td><td>Coke Fiends" + Table4ColumnEnd,
-	answer : "Maneskin", image : "https://i.guim.co.uk/img/media/65957afb67419dd063d17fc5fe854aa23234e83a/0_0_3201_1921/master/3201.jpg?width=620&quality=85&auto=format&fit=max&s=6a6a5b69f598adce1d46b99c0a775323"	});	
+	answer : "Maneskin", image : "https://i.makeagif.com/media/5-23-2021/Ufz17q.gif"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "James Newman represented the UK last year. How many points did he score?  " + Table4ColumnStart + "Nul points</td><td>Sept points</td><td>Douze points</td><td>Soixante Neuf points" + Table4ColumnEnd,
 	answer : "Nul points", image : "https://i.guim.co.uk/img/media/43eaa051b91bbddbc0c738692731e0e1c3c3c201/0_0_3500_2382/master/3500.jpg?width=620&quality=85&auto=format&fit=max&s=42815fada4525fd2ff3b655d78515491"	});	
