@@ -2128,6 +2128,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 quests[++questIndexBuilder] = { 
 		name : "Eurovision",
 		hoverover : "Some topical stuf, some general knowledge",
+		splash : {splashType :  splashTypePictureAndText , splashText : "Good evening, Europe!  This is London calling.  How much do you know about the greatest high-camp celebration since Ian opened a bottle of Rose?", splashImage : "https://i.guim.co.uk/img/media/97d22b42db3e0784300d5b9528579a306500e543/0_0_4000_2400/master/4000.jpg?width=1020&quality=85&auto=format&fit=max&s=7b38d0defb041486567233edfd5ede13" },
 		tags : "2022-5-15,saturday,InnerWheel,surfers,specialDay", 
 		questInfo: new Array() };
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
