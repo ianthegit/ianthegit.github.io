@@ -2063,10 +2063,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	question : "Ric Parnell, the drummer in the movie This Is Spinal Tap, has sadly passed away. Which 1981 hit single did he play on?  " + Table4ColumnStart + "Hey Mickey by Toni Basil</td><td>Shaddap You Face by Joe Dolce</td><td>Japanese Boy by Aneka</td><td>Sat in Your Lap by Kate Bush" + Table4ColumnEnd,
 	answer : "Hey Mickey by Toni Basil", answerSpeak : "Hey Mickey you're so fine, you're so fine you blow my mind.  HEY MICKEY!", image : "https://thumbs.gfycat.com/IndelibleQuarterlyHorsefly-size_restricted.gif"	});	
 
-
-
-
-
 quests[++questIndexBuilder] = { 
 		name : "Foreign versions 2",
 		hoverover : "Songs you will know, in a language you will not.",
@@ -2077,4 +2073,116 @@ quests[++questIndexBuilder] = {
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/4KfVCv3ZszjOJjkx91MRFF?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
 	answer : "Psycho Killer, Talking Heads.  Road to Nowhere, Talking Heads.  Just can't get enough, Depeche Mode.  I can't get no Satisfaction, Rolling Stones.  Highway to Hell, AC/DC.  Sympathy for the Devil, Rolling Stones.  Come Together, the Beatles.  The Sound of Silence,  Simon & Garfunkel.  In the Ghetto, Elvis.  I'm too sexy, Right Said Fred.", answerSpeak : "", question : ""}) ;
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Topicalish",
+		hoverover : "Some topical stuff, some general knowledge",
+		tags : "2022-5-15,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "OMG, Ncuti Gatwa will take over from Jodie Whittaker as the Time Lord in Doctor Who. In which Netflix series does he star as Eric Effiong?  " + Table4ColumnStart + "Stranger Things</td><td>Emily in Paris</td><td>Sex Education</td><td>Bridgerton" + Table4ColumnEnd,
+	answer : "Sex Education", image : "https://c.tenor.com/mbOjCbzv9iIAAAAd/sex-education-omg.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Irene Demas and her husband Tony, from Ontario, look set to be able to retire after putting up for auction this painting that they swapped with an artist for what in the 1970s?  " + Table4ColumnStart + "Some large salmon</td><td>Grilled cheese sandwiches</td><td>A set of deckchairs</td><td>A small gold ring with the words 'Ash nazg durbatuluk' engraved on it" + Table4ColumnEnd,
+	answer : "Grilled cheese sandwiches", image : "https://globalnews.ca/wp-content/uploads/2022/05/IMG-6402.jpg?w=2048"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "The wild boars of Rome have been at it again. What have been forbidden in a large swathe of northern Rome to help people avoid contact with the animals?  " + Table4ColumnStart + "Picnics - boars are attracted to the food</td><td>Letting dogs off the lead - the feral hogs have been attacking family pets</td><td>Fruit trees without netting - to prevent fruit dropping to the floor where it makes a tasty boar treat</td><td>Kate Bush - Italian wild boars are notoriously partial to a good old sing-song" + Table4ColumnEnd,
+	answer : "Picnics - boars are attracted to the food", image : "https://media0.giphy.com/media/mgmqtuvSDog9zT9zfW/200.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What does a potometer measure?  " + Table4ColumnStart + "Carbon dioxide diffusion into the blood</td><td>Glucose uptake into the blood</td><td>Oxygen diffusion into the lungs</td><td>Water uptake in a plant" + Table4ColumnEnd,
+	answer : "Water uptake in a plant", image : "https://i.ebayimg.com/images/g/olgAAOSwMdVf~Sjp/s-l500.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "George Elliot's Middlemarch is set between 1829 and 1832. But when was it first published?  In 8 installments in..." + Table4ColumnStart + "1851 and 1852</td><td>1871 and 1872</td><td>1891 and 1892</td><td>1901 and 1902" + Table4ColumnEnd,
+	answer : "In eight instalments in 1871 and 1872", image : "https://i.guim.co.uk/img/media/c7fe3c75c6a4b2db869d92e31e1be5c0d4e3b278/0_471_6000_3598/master/6000.jpg?width=620&quality=85&auto=format&fit=max&s=96d3363f84a980e03730750b351d8862"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "A Virgin Atlantic transatlantic flight had to turn back last week after what amateur shenanigans happened on board?  " + Table4ColumnStart + "It turned out the first officer had not completed his final flying test</td><td>Two TikTok influencers tried to film themselves joining the Mile High Club in first class</td><td>A group of lads on a stag do got stuck after trying to see how many of them could get into the same toilet at once</td><td>Kate Bush wasn't allowed into first class" + Table4ColumnEnd,
+	answer : "It turned out the first officer had not completed his final flying test", image : "https://c.tenor.com/QfKhnFckKbMAAAAC/lot-flying-plane.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "A Massachusetts family got a surprise when they found a stray puppy and brought it home. What did it turn out to be?  " + Table4ColumnStart + "A baby racoon</td><td>A baby brown bear</td><td>A baby coyote</td><td>A baby Sasquatch" + Table4ColumnEnd,
+	answer : "A baby coyote", image : "https://comb.io/B4ASqN.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "This road sign from Brazil means what?  " + Table4ColumnStart + "No electric vehicles</td><td>No parking</td><td>End of the expressway</td><td>No Ebeneezer Goode" + Table4ColumnEnd,
+	answer : "No parking.  The 'e' is for estacionamento, Portuguese for parking", image : "https://i.guim.co.uk/img/media/aa7ff79cc014227384e57d1387c33675057c3542/0_0_2500_3000/master/2500.jpg?width=620&quality=85&auto=format&fit=max&s=6eedd59b9654dc0b473efec5fe1525ca"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "144 is the square of which number?  " + Table4ColumnStart + "12</td><td>64</td><td>1,440</td><td>20,736" + Table4ColumnEnd,
+	answer : "12", image : "https://c.tenor.com/5vo_w_jDfwgAAAAM/calculation-math.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which city in north-east England is based around settlements formerly known as Pons Aelius and Munucceaster, which is sometimes modernised as Monkchester?  " + Table4ColumnStart + "Newcastle upon Tyne</td><td>Durham</td><td>Leadworth</td><td>Sunderland" + Table4ColumnEnd,
+	answer : "Newcastle upon Tyne - Pons Aelius means 'Hadrian's bridge' and was a Roman fort at a crossing of the Tyne. Munucceaster was part of the kingdom of Northumbria, but got wrecked by war. A castle erected by Robert Curthose, son of William the Conqueror, in 1080 gave rise to the modern name", 
+	answerSpeak : "Newcastle upon Tyne",  image : "https://c.tenor.com/BWX953Y-aEQAAAAM/fail-failed.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "A standard 40m x 20m dressage arena has which letters clockwise around the edge of the arena (sequence starting at the entrance)?  " + Table4ColumnStart + "V, C, E, H, F, M, B, G</td><td>A, K, E, H, C, M, B, F</td><td>D, X, G, H, F, M, B, K</td><td>H, O, R, S, E, Y   D A N C E" + Table4ColumnEnd,
+	answer : "A, K, E, H, C, M, B, F.  No-one knows why, as horses can't read.", image : "https://c.tenor.com/VPEzxPTDZL4AAAAM/turn-around-charlotte-dujardin.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "John Kelly, a 37-year-old data scientist, broke the record for scaling all Wainwright fells in the Lake District in five and a half days. How many are there?  " + Table4ColumnStart + "214</td><td>164</td><td>114</td><td>84" + Table4ColumnEnd,
+	answer : "214", image : "http://31.media.tumblr.com/b5f812451fe49ae41c5fb0fad50a0b1f/tumblr_mq1c0aBhdl1r8epnko1_250.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What is the name of the two old guys in the balcony who are always heckling Fozzie Bear in The Muppet Show?  " + Table4ColumnStart + "Randalls and Staten</td><td>Tesla and Edison</td><td>Hudson and Vanderbilt</td><td>Statler and Waldorf" + Table4ColumnEnd,
+	answer : "Statler and Waldorf", image : "https://c.tenor.com/RACogtnLp00AAAAC/muppets-statler-and-waldorf.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which artist celebrated their 60th birthday this week by putting " + gbp + " 1,000 behind the bar for fans in 60 different pubs?  " + Table4ColumnStart + "Dave Gahan of Depeche Mode</td><td>Shaun Ryder of Happy Mondays</td><td>Paul Heaton of The Housemartins and The Beautiful South</td><td>Kate Bush of teenage dreams" + Table4ColumnEnd,
+	answer : "Paul Heaton of The Housemartins and The Beautiful South", image : "https://gifimage.net/wp-content/uploads/2018/11/shawn-of-the-dead-gif.gif"	});	
+
+quests[++questIndexBuilder] = { 
+		name : "Eurovision",
+		hoverover : "Some topical stuf, some general knowledge",
+		tags : "2022-5-15,saturday,InnerWheel,surfers,specialDay", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What is the maximum score that a song can be given by a single jury?  " + Table4ColumnStart + "Dix points</td><td>Douze points</td><td>Quatorze points</td><td>Quinze points" + Table4ColumnEnd,
+	answer : "Douze points", image : "https://wiwibloggs.com/wp-content/uploads/2014/11/Jedward-Gif-Lipstick-Eurovision-2011-2012-2015.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What was the name of the Italian band (pictured) who won the 2021 contest?  " + Table4ColumnStart + "Hooverphonic</td><td>Maneskin</td><td>Blind Channel</td><td>Coke Fiends" + Table4ColumnEnd,
+	answer : "Maneskin", image : "https://i.guim.co.uk/img/media/65957afb67419dd063d17fc5fe854aa23234e83a/0_0_3201_1921/master/3201.jpg?width=620&quality=85&auto=format&fit=max&s=6a6a5b69f598adce1d46b99c0a775323"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "James Newman represented the UK last year. How many points did he score?  " + Table4ColumnStart + "Nul points</td><td>Sept points</td><td>Douze points</td><td>Soixante Neuf points" + Table4ColumnEnd,
+	answer : "Nul points", image : "https://i.guim.co.uk/img/media/43eaa051b91bbddbc0c738692731e0e1c3c3c201/0_0_3500_2382/master/3500.jpg?width=620&quality=85&auto=format&fit=max&s=42815fada4525fd2ff3b655d78515491"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "The 'big five' qualify automatically for the final because they deliver large TV audiences and a big chunk of cash to the Eurovision coffers. Which countries are they?  " + Table4ColumnStart + "Italy, Germany, Netherlands, Spain and the UK</td><td>Italy, France, Germany, Poland and the UK</td><td>Italy, France, Germany, Spain and the UK</td><td>Italy, France, Germany, Sweden and the UK" + Table4ColumnEnd,
+	answer : "Italy, France, Germany, Spain and the UK", image : "https://64.media.tumblr.com/acefb724a9a70c9910696f3d6ead7e6b/tumblr_p8mqqjPJBU1u7uduwo1_540.gifv"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "In 1982, the UK tried to emulate the success of Bucks Fizz the previous year with the song One Step Further by a singing duo (centre, in white). What were they called?  " + Table4ColumnStart + "Monro</td><td>Bardo</td><td>Fonda</td><td>Bushy" + Table4ColumnEnd,
+	answer : "Bardo", image : "https://i.guim.co.uk/img/media/1559ee109d34ab83b277bd5c7c797752e5b63402/0_0_3030_1990/master/3030.jpg?width=620&quality=85&auto=format&fit=max&s=a6dad200688c7170d21d2709731a3d9c"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What will happen for the first time at this year's Eurovision?  " + Table4ColumnStart + "It will be broadcast in the US</td><td>It will be broadcast in 4K UHD</td><td>It will be hosted by Italy</td><td>San Marino will compete" + Table4ColumnEnd,
+	answer : "It will be broadcast in 4K UHD", image : "https://wiwibloggs.com/wp-content/uploads/2015/07/memba-bucks-fizz.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "In which year did Terry Wogan commentate for the BBC on his last Eurovision?  " + Table4ColumnStart + "2004</td><td>2008</td><td>2011</td><td>2015" + Table4ColumnEnd,
+	answer : "2008", image : "https://c.tenor.com/JiOMVKJwuXcAAAAd/terry-wogan-floral-dance.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Since Eurovision began, how many countries have competed?  " + Table4ColumnStart + "32</td><td>42</td><td>52</td><td>62" + Table4ColumnEnd,
+	answer : "52", image : "https://i.guim.co.uk/img/media/5e8b9f2fe28afca0256fb2e39f8b710540d092ce/0_0_4288_2573/master/4288.jpg?width=620&quality=85&auto=format&fit=max&s=5313d1ef586b632965babe786d309dde"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Ireland's Johnny Logan has been involved with three winning Eurovision songs as a performer or a writer. But to which of these Irish winning entries did he not contribute?  " + Table4ColumnStart + "In Your Eyes</td><td>Hold Me Now</td><td>Why Me?</td><td>What's Another Year" + Table4ColumnEnd,
+	answer : "In Your Eyes", image : "https://i.makeagif.com/media/5-10-2018/v25euW.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What was special about the presentation of Azerbaijan's 2017 entry, sung by Dihaj?  " + Table4ColumnStart + "It featured someone doing live sand sculptures</td><td>It featured a piano that burst into flames</td><td>It featured a man standing on a ladder wearing a horse's head</td><td>It featured a singing turkey puppet" + Table4ColumnEnd,
+	answer : "It featured a man standing on a ladder wearing a horse's head", image : "https://thumbs.gfycat.com/PlainAngryDingo-max-1mb.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which Cliff Richard song came second in 1968?  " + Table4ColumnStart + "Power to All Our Friends</td><td>Congratulations</td><td>The Day I Met Marie</td><td>Summer Holiday" + Table4ColumnEnd,
+	answer : "Congratulations", image : "https://c.tenor.com/ZMTLFNbkSAwAAAAC/cliff-richard-we-dont-talk-anymore.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What is the time limit for a Eurovision entry?  " + Table4ColumnStart + "2 Minutes 45 Seconds</td><td>3 Minutes</td><td>3 Minutes 15 Seconds</td><td>3 Minutes 30 Seconds" + Table4ColumnEnd,
+	answer : "3 Minutes", image : "https://media4.giphy.com/media/l0MYD9sm1ytXJZDri/giphy.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "In 1969, because no one had considered what might happen if the scores were tied, there were four winners. Among them was Lulu. What was her song?  " + Table4ColumnStart + "Boom Bang-a-Bang</td><td>Ding-a-dong</td><td>La, la, la</td><td>Who cares, she'll make a living screaming Weeeeeeeelllll for the next 50 years" + Table4ColumnEnd,
+	answer : "Boom Bang-a-Bang", image : "https://static.eurovision.tv/hb-cgi/images/8d917d6b-21aa-42f9-8e07-a30405f04a45/card.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "And finally: among this year's entries, what do Norway's Subwoolfer say you need to give to the wolf to stop it eating their grandma?  " + Table4ColumnStart + "An Apple</td><td>A bone</td><td>A banana</td><td>A signed copy of Wuthering Heights by Kate Bush" + Table4ColumnEnd,
+	answer : "A banana", image : "https://c.tenor.com/RjkFd1GGsKkAAAAd/subwoolfer-esc.gif"	});	
+
+
+quests[++questIndexBuilder] = { 
+		name : "Foreign versions 3",
+		hoverover : "Songs you will know, in a language you will not.",
+		tags : "music,2022-5-15,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/5ZOu7wBj1XxhfYLtmTIASz?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+	answer : "The Wall, Pink Floyd.  Come as you are, Nirvana.  Everybody's Talkin, Simon & Garfunkel.   Close to Me, The Cure.  Road to Nowhere, Talking Heads.  Unchain my Heart, Bobby Sharp (Joe Cocker, Ray Charles).  Bang Bang (My baby shot me down), Nancy Sinatra.  I can't get no Satisfaction, The Rolling Stones.  Teenage Kicks, The Undertones.  Ever Fallen in Love, The Buzzcocks", answerSpeak : "", question : ""}) ;
+
 
