@@ -1562,6 +1562,30 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLV7QW7A1F9wY4KGdQVswDivYAP8hM3y5S67NwzNZey72q3CSBEzy2-VBr47YMxqnPAUqKvJbTEkWa-l_79pfT9h4duQe3tuj-WOTRPbcuywt6iEgcvKP9tVkejfmgsj___KYqlKlHUtsLN9x4I6ZSaoMA=w538-h523-no?authuser=0",
 	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLVMNLcGA9QxjFzzZ3qFuG1f7Xx7OuuZV7fNpHCnQBDKuIwjS0ommskBgLu_HnQUDxtMkZFDU0ZXbJrTQcGZI8l6zDkjYnBzMgg86LgoUGOsbzC-iTqgH0akQaKfYlTiSrAwcLK0i8WLDN0GVoBE4CfTlg=w1024-h768-no?authuser=0", answerSpeak : "Dancing"}) ;
 
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " + pictionaryCount++,
+		hoverover : "Pictionary on the theme of last 6 Eurovision winning countries, a year later",
+		tags : "2022-5-15,pictionary,specialDay",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw on 22 May 2021 at 8:40", // 
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3fmQ6NtO5VNsD-jvHmw6RWKxY7tIeibI3LukvnbmyRpijSgFstoujowjy3aYUE6mK0B8-l36rsqckfWH0Wy8S6jcqTd0gpn23iwLfw1YS4Oe4P72mhyHUcdxMkjXABvWEFGoL7RnD3fftMA7FcbkPek_w=w794-h871-no?authuser=0",
+	answerimage : "https://cdn.britannica.com/83/2983-050-78046F59/Netherlands-boundaries-map-cities-locator.jpg", answerSpeak : "The Netherlands"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw on 22 May 2021 at 8:41", // 
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3fxaYX59m7NrT7LeEM2gUecf_pBjAOcWjk0OWLR6rmS07XJPLthqU4H33LntnQkqkS4V0Jk6UN_8bYXKus9tAk97rjsX1oEvb__0VsOdKbsLtDebiVATab7CrFytZ_YEqxf8FLdPuyEgpN62M3qkzwTLQ=w552-h871-no?authuser=0",
+	answerimage : "https://cdn.britannica.com/54/1754-050-7696913C/Israel.jpg", answerSpeak : "Israel"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw on 22 May 2021 at 8:42", // 
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3dkkyzuchn5xoSbu0b_o3-woMMGfJ76S25SKoWBqkobA33V6wxD7yDPX_Y4fm0AkT-fULDO7VrZ7tSu25tcPHyWGAndQma3sCGma35aHVsYqQTNzq5ZFbIfe4bH0Po99Fgc51xur-zF8cfmz3b11RlLlQ=w664-h871-no?authuser=0",
+	answerimage : "https://cdn.britannica.com/89/3589-050-1C16055D/Portugal-map-cities-boundaries-Azores-locator-Madeira.jpg", answerSpeak : "Portugal"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw on 22 May 2021 at 8:43", // 
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3e1YtWlhl5DMBqMow6KUm8sZpAsW6UQxk-Pob66uqCzfLesL7vNZwi05sb8trKgYfHfWxOfMAyhmvb5LSLKB9tvCAJde_4fu9qhgpIukqJz9-jjB5o1MC5Y7UVy9kzbxxAoq63v44wa0rLAr6hh1VvD3w=w854-h723-no?authuser=0",
+	answerimage : "https://cdn.britannica.com/15/4815-050-F533DB64/Ukraine.jpg", answerSpeak : "Ukraine"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw on 22 May 2021 at 8:44", // 
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3erSTH6SQHbyCKa-GCNkhCNrOK_PBe6jFqWur54VKu7syQs0EdpmrvGPV3dW1ZTXgyjmxH8SvfEUVhN3O4b3G86I8fDGERFfeUTeqwoclJLdVwNl4L57HhAZDdw-SmtNtT7PiwPA1OEfPRiaK6iY11r-w=w699-h871-no?authuser=0",
+	answerimage : "https://cdn.britannica.com/31/4531-050-7E780BAC/Sweden-map-boundaries-cities-locator.jpg", answerSpeak : "Sweden"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw on 22 May 2021 at 8:45", // 
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3fYTsF2Bm2ZCgOoCcH1vx9E5FlbNcHnljMFA-PFUBQVxOunP-urxbBKmxYJM_Y0jEVf6uNtylJHEmTGOf2BtXLn1LQYbNpPob33RPPqu2PPDTeYD8prItXaqQeIHulzcD3enlGJsyBi5SljV100CRMhEA=w702-h472-no?authuser=0",
+	answerimage : "https://cdn.britannica.com/74/6074-050-B5DDC4E0/Austria.jpg", answerSpeak : "Austria"}) ;
 
 
 /*
