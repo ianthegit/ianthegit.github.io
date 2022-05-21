@@ -1587,7 +1587,30 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	image : "https://lh3.googleusercontent.com/pw/ACtC-3fYTsF2Bm2ZCgOoCcH1vx9E5FlbNcHnljMFA-PFUBQVxOunP-urxbBKmxYJM_Y0jEVf6uNtylJHEmTGOf2BtXLn1LQYbNpPob33RPPqu2PPDTeYD8prItXaqQeIHulzcD3enlGJsyBi5SljV100CRMhEA=w702-h472-no?authuser=0",
 	answerimage : "https://cdn.britannica.com/74/6074-050-B5DDC4E0/Austria.jpg", answerSpeak : "Austria"}) ;
 
-
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " + pictionaryCount++,
+		hoverover : "Pictionary on the theme of Superheroes",
+		tags : "2022-5-22,pictionary",
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://media1.giphy.com/media/Bz4NxK0OJrcti/200.gif", answerSpeak : "Spiderman"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://c.tenor.com/cgmN_BOyfPEAAAAM/s%C3%BCperman-selam-superman.gif", answerSpeak : "Superman"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://37.media.tumblr.com/8f53005fcddd32dd9c01605bf06b4cdc/tumblr_n51vkdEWAx1s2wio8o1_500.gif", answerSpeak : "The Hulk"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://media1.giphy.com/media/HyUtD3Dx0VQk0/giphy.gif", answerSpeak : "Batman"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://c.tenor.com/LylZhtnUFs0AAAAd/thor-fat-thor.gif", answerSpeak : "Thor"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://c.tenor.com/mukNjKxtHqoAAAAM/holy-bat.gif", answerSpeak : "Robin"}) ;
 /*
  * 	image : "",
 	answerimage : "", answer : "Table"}) ;
