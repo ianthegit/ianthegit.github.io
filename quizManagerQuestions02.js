@@ -2187,3 +2187,58 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : "The Wall, Pink Floyd.  Come as you are, Nirvana.  Everybody's Talkin, Simon & Garfunkel.   Close to Me, The Cure.  Road to Nowhere, Talking Heads.  Unchain my Heart, Bobby Sharp (Joe Cocker, Ray Charles).  Bang Bang (My baby shot me down), Nancy Sinatra.  I can't get no Satisfaction, The Rolling Stones.  Teenage Kicks, The Undertones.  Ever Fallen in Love, The Buzzcocks", answerSpeak : "", question : ""}) ;
 
 
+
+quests[++questIndexBuilder] = { 
+		name : "Topicalish",
+		hoverover : "Some topical stuf, some general knowledge",
+		tags : "2022-5-22,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Kalush Orchestra won the Eurovision song contest for Ukraine, but what was the name of their song?  " + Table4ColumnStart + "Jovanka</td><td>Kateryna</td><td>Anastasiya</td><td>Stefania" + Table4ColumnEnd,
+	answer : "Stefania", image : "https://c.tenor.com/f1d7TNlwrw8AAAAC/eurovision-kalush-orchestra.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Sam Ryder came second at Eurovision with his song Space Man. But what was the name of the first British woman in space?" + Table4ColumnStart + "Sally Ride</td><td>Jan Davis</td><td>Helen Sharman</td><td>Eileen Collins" + Table4ColumnEnd,
+	answer : "Helen Sharman", image : "https://static.independent.co.uk/2022/05/14/22/AP22134700742580.jpg?quality=75&width=1200&auto=webp"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Scientists have produced the very first image of the black hole that lurks at the centre of our galaxy, the Milky Way. But what is the black hole called?" + Table4ColumnStart + "Sagittarius A*</td><td>Capricorn A*</td><td>Rassilon A*</td><td>Aquarius A*" + Table4ColumnEnd,
+	answer : "Sagittarius A*", image : "https://i.guim.co.uk/img/media/3398b22cf642a9fd4f6787cb962613a430cdba48/0_857_4076_2446/master/4076.jpg?width=620&quality=85&auto=format&fit=max&s=b6763967a8f832c737582f1d44967f8b"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "It was Grace Jones' birthday on Thursday. But where was she born?" + Table4ColumnStart + "Barbados</td><td>Jamaica</td><td>Puerto Rico</td><td>Montserrat" + Table4ColumnEnd,
+	answer : "Jamaica", image : "https://www.hungertv.com/app/uploads/2017/12/grace5.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "On 19 May 1499, Catherine of Aragon got married for the first time. Who to?" + Table4ColumnStart + "Marcel of Rouen</td><td>Henry, Duke of Cornwall</td><td>Henry VIII, King of England</td><td>Arthur, Prince of Wales" + Table4ColumnEnd,
+	answer : "Arthur, Prince of Wales - Henry VIII's older brother", image : "https://i.guim.co.uk/img/media/2263fcf8926d73e59ffcfcbe267fb169ef6e8d37/0_0_2953_3500/master/2953.jpg?width=620&quality=85&auto=format&fit=max&s=7580b1c6992e1c02cf4c6120ae45acc8"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "A statue of Margaret Thatcher was pelted with eggs within hours of being unveiled. But where is it?" + Table4ColumnStart + "Grantham, where she was born</td><td>Oxford, where she studied</td><td>Colchester, where she worked as a research chemist</td><td>Finchley, where she was MP" + Table4ColumnEnd,
+	answer : "Grantham, where she was born", image : "https://media1.giphy.com/media/NVtsBsgtnvsbe/giphy.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "A painting spotted in the background of Imelda Marcos' home appeared to be a 'missing' work by which artist?" + Table4ColumnStart + "Matisse</td><td>Kahlo</td><td>Picasso</td><td>Van Clomp" + Table4ColumnEnd,
+	answer : "Picasso", image : "https://news.artnet.com/app/news-upload/2022/05/GettyImages-77262669.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Netflix is about to show new seasons of shows Ted & I love - but going back to last year's hit - Kang Sae-byeok was 067, Cho Sang-woo was 218 and the old man Oh Il-nam was 001. But in Squid Game, what number was Seong Gi-hun, the first player we met on the outside world, played by Lee Jung-jae?" + Table4ColumnStart + "356</td><td>456</td><td>465</td><td>546" + Table4ColumnEnd,
+	answer : "456", image : "https://c.tenor.com/fApcMs5eR1AAAAAC/squid-game-seong-gi-hun.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What is the name of Woody and Jessie's horse introduced in the movie Toy Story 2?" + Table4ColumnStart + "Billyboy</td><td>Butler</td><td>Belljar</td><td>Bullseye" + Table4ColumnEnd,
+	answer : "Bullseye", image : "https://c.tenor.com/MzWLA7CGlIoAAAAC/bullseye-toy-story.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What was the nickname of the famous dinosaur skeleton unearthed nearby to Medicine Bow, Wyoming, US?" + Table4ColumnStart + "Dippy</td><td>Twinky</td><td>Dave</td><td>Big Al" + Table4ColumnEnd,
+	answer : "Dippy", image : "https://media1.giphy.com/media/ukgjc6estKZuguKb2T/giphy.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : " Liverpool won the FA Cup final last weekend. But when was the first FA Cup final?" + Table4ColumnStart + "1862 - 160 years ago</td><td>1872 - 150 years ago</td><td>1892 - 130 years ago</td><td>1897 - 125 years ago" + Table4ColumnEnd,
+	answer : "1872 - 150 years ago", image : "https://pbs.twimg.com/media/FIrkwwwXEAA7cGF?format=jpg&name=4096x4096"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Vic Reeves has been exhibiting his bird paintings in London, but under his real name. What is the name he is using for the exhibtion?" + Table4ColumnStart + "Jim Moir</td><td>Chris Sievey</td><td>Andrew Dawson</td><td>Kate Bush" + Table4ColumnEnd,
+	answer : "Jim Moir", image : "https://i.makeagif.com/media/8-09-2021/Tfof8K.gif"	});	
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers 0",
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2022-5-22,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/5BnFOgDMJrZBfnVFVyiZ7r?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+	answer : "Don't you want me, The Human League.  The Boys are back in town, Thin Lizzy.  Love will tear us apart, Joy Division.  Come Together, The Beatles.  Baby one more time, Britney Spears.  Hounds of Love, Kate Bush.  Lucy in the sky with diamonds, The Beatles.  These Boots are made for walking, Nancy Sinatra.   Imagine, John Lennon.  Faith, George Michael.", answerSpeak : "", question : ""}) ;
+
+
