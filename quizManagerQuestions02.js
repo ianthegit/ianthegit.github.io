@@ -2234,6 +2234,39 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	answer : "Halifax", image : "https://img.wattpad.com/e4d7c862503a3cc6cd6f414394d33f31fc5ebb93/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f6f43367744645748374e4c6732673d3d2d3638313539343433392e313537396431343030366463663162373936353139353337343132332e676966"	});	
 
 quests[++questIndexBuilder] = { 
+		name : "Old pictures",
+		hoverover : "Who are these people?",
+		tags : "2022-5-22,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Who is this?",  
+	answer : "Betty White, 1948", image : "https://www.boredpanda.com/blog/wp-content/uploads/2022/05/6278e0e0e8d80_a4sw1d63nx881__700.jpg"	}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Who is this holding Peanut the Guinea Pig in 1972?",  
+	answer : "Lady Diana Spencer", image : "https://www.boredpanda.com/blog/wp-content/uploads/2022/05/6278e4eda669c_musfq1hm7uf71__700.jpg"	}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Who are these 2, mother and daughter, 1961 (One point each correct name)?",  
+	answer : "Debie Reynolds and Carrie Fisher", image : "https://www.boredpanda.com/blog/wp-content/uploads/2022/05/6278e9fb3df01_b9iietandb881__700.jpg"	}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Who is this lady?",  
+	answer : "Dolly Parton, circa 1966", image : "https://www.boredpanda.com/blog/wp-content/uploads/2022/05/6278e812a1462_7whf0vnsj5m31__700.jpg"	}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Who are these two (1 point per correct name)?",  
+	answer : "Warwick Davis (13 years old) and Carrie Fisher, 1983", image : "https://www.boredpanda.com/blog/wp-content/uploads/2022/05/6278e7b688153_sf70mfg6yyr61__700.jpg"	}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Who is this?",  
+	answer : "Whitney Houston, 1982", image : "https://www.boredpanda.com/blog/wp-content/uploads/2022/05/6278e6f16492c_bgkz0rnj5iw61__700.jpg"	}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Who is this?",  
+	answer : "Meryl Streep, 1966", image : "https://www.boredpanda.com/blog/wp-content/uploads/2022/05/6278e5d710f51_Q2w4vMR__700.jpg"	}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Where are this bunch of scruffy hippies stood in 1969?",  
+	answer : "Abbey Road", image : "https://www.boredpanda.com/blog/wp-content/uploads/2022/05/6278e0e5bb67c_3hjnnlfymcr61__700.jpg"	}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Who is this?",  
+	answer : "Sean Connery, 1963", image : "https://www.boredpanda.com/blog/wp-content/uploads/2022/05/6278ea252a256_m03pwk1lycu31__700.jpg"	}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Who is this?",  
+	answer : "Danny Devito, 1961", image : "https://www.boredpanda.com/blog/wp-content/uploads/2022/05/6278e114242d4_09LpASA-png__700.jpg"	}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Who is this?",  
+	answer : "Jack Nicholson, 1972", image : "https://www.boredpanda.com/blog/wp-content/uploads/2022/05/6278e4d40d805_W71md55-png__700.jpg"	}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Who is this with his wife Marilou in 1978?",  
+	answer : "Mark Hamill", image : "https://www.boredpanda.com/blog/wp-content/uploads/2022/05/6278e1aa801a8_9j7c6mswhq371__700.jpg"	}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Who is this?",  
+	answer : "Kate Bush", image : "https://i.gifer.com/4q7o.gif"	}) ;
+
+
+quests[++questIndexBuilder] = { 
 		name : "Bad Covers 0",
 		hoverover : "Songs you will know, but wish you did not after this.",
 		tags : "music,2022-5-22,InnerWheel,saturday",
