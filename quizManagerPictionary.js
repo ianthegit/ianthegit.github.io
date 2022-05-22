@@ -1594,23 +1594,25 @@ quests[++questIndexBuilder] = { //
 		questInfo: new Array()
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXjpgQOozYSUmgssbJIMwPcKKhh_-gysfumv8ffz2zuyLvD0H-O3a0GCkqvRz7cp034VBj_TBP6ksMpYVKoZnWzoi6hEx6ZlA2MwGr3EHkUsiai0VcWKL65G539iTwk3H9IP2laR4sWZwqUfPaIjZgPyw=w658-h557-no?authuser=0",
 	answerimage : "https://media1.giphy.com/media/Bz4NxK0OJrcti/200.gif", answerSpeak : "Spiderman"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUFVfr3J1D_nKjQe_rubJ-7jfMijGHSkoSZ8tinpu63eEA3kI8bbNU8sbNEYdj_6eKd63YQCzgyVgCUHcdCNjUyqByxqRe-A0JGD7K--V5vx7AQJ5YPt358VJxu6fnXD615qVoeuJQeeCvUNzA-R4o4pQ=w370-h347-no?authuser=0",
 	answerimage : "https://c.tenor.com/cgmN_BOyfPEAAAAM/s%C3%BCperman-selam-superman.gif", answerSpeak : "Superman"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLWO518qaibQinTLnSZU9XywwOy8_60scu7blRrXQa5JO22VPtnc8bveH9V_h0QFzyV8TbVWUPvQ4jx-sfJvge4W1Mzd9X79pKFunJy6PsjMPHuvpINALRIfxy-Ym08SI8OjJrp__OGPTWrO0BFv97mmZQ=w310-h475-no?authuser=0",
 	answerimage : "https://37.media.tumblr.com/8f53005fcddd32dd9c01605bf06b4cdc/tumblr_n51vkdEWAx1s2wio8o1_500.gif", answerSpeak : "The Hulk"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUxKf-gyFCmuOEdqZHq0UiJgieHYPqHDA1StymGdK9ixR8wDuQygrbzLzUVvPMA1qhlOvMz81topLcuuyRBquY-csn84D958-brjHRy5LtDGX9H6SnyjpBIEMKGaJaCwriuMErZ9JJkKeW1w0I1f7ryYA=w251-h302-no?authuser=0",
 	answerimage : "https://media1.giphy.com/media/HyUtD3Dx0VQk0/giphy.gif", answerSpeak : "Batman"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLU9wGnmm4KMQMG4a2NgobV6Z1SC3dGoO6XSM_BtWQ1j6YQJ7z6JTwc_gVFsehvpvAZAiQTI0U4x02d_ocs_Iml1U3bwlTLgknF3x73NaO-63V_Mu_DERDRHQg2PRGfyq9_S3GVndpHqqSMB5ZfotELucg=w929-h589-no?authuser=0",
 	answerimage : "https://c.tenor.com/LylZhtnUFs0AAAAd/thor-fat-thor.gif", answerSpeak : "Thor"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLU8FNIuHugYH79UwvI6dpIcrNutdZlJuRO6218f4Z2SHyKVybvii6QH6qMvcXIXcQS2ohYa19yAFE5eKDySnLKR-8_bLUAJU8d4kOg4x2mMVsy8UDqCJihdN-ZzAvsaFil0DN_qvksHzHvS4k6r2FEiPg=w744-h604-no?authuser=0",
 	answerimage : "https://c.tenor.com/mukNjKxtHqoAAAAM/holy-bat.gif", answerSpeak : "Robin"}) ;
+
+
 /*
  * 	image : "",
 	answerimage : "", answer : "Table"}) ;
