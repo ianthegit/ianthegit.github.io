@@ -1613,6 +1613,30 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://c.tenor.com/mukNjKxtHqoAAAAM/holy-bat.gif", answerSpeak : "Robin"}) ;
 
 
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " + pictionaryCount++,
+		hoverover : "Pictionary on the theme of Jubilee and things you probably will not see",
+		tags : "2022-5-28,pictionary",
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://i.gifer.com/origin/dd/ddc4dfa3196ef11163c37c6c3659532c_w200.webp", answerSpeak : "Corgis"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://i.redd.it/ijbg5apvh3o71.jpg", answerSpeak : "Prince Andrew"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://c.tenor.com/Z3y4RldQIocAAAAC/trying-it-on-claire-foy.gif", answerSpeak : "Crown"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://c.tenor.com/AVNqprngsZIAAAAC/queen-queen-elisabeth.gif", answerSpeak : "Horses"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://stockhead.com.au/wp-content/uploads/2021/08/arise-2-720x405.gif", answerSpeak : "Making Knights"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://thumbs.gfycat.com/PlayfulGreedyClumber-size_restricted.gif", answerSpeak : "Freddie Mercury's moustache"}) ;
 /*
  * 	image : "",
 	answerimage : "", answer : "Table"}) ;
