@@ -1923,7 +1923,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 
 quests[++questIndexBuilder] = { 
 		name : "Topicalish",
-		hoverover : "Some topical stuf, some general knowledge",
+		hoverover : "Some topical stuff, some general knowledge",
 		tags : "2022-4-23,saturday,InnerWheel,surfers", 
 		questInfo: new Array() };
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
@@ -2017,7 +2017,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 quests[++questIndexBuilder] = { 
 		name : "Topicalish",
-		hoverover : "Some topical stuf, some general knowledge",
+		hoverover : "Some topical stuff, some general knowledge",
 		tags : "2022-5-8,saturday,InnerWheel,surfers", 
 		questInfo: new Array() };
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
@@ -2127,7 +2127,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 quests[++questIndexBuilder] = { 
 		name : "Eurovision",
-		hoverover : "Some topical stuf, some general knowledge",
+		hoverover : "Some topical stuff, some general knowledge",
 		splash : {splashType :  splashTypePictureAndText , splashText : "Good evening, Europe!  This is London calling.  How much do you know about the greatest high-camp celebration since Ian opened a bottle of Rose?", splashImage : "https://i.guim.co.uk/img/media/97d22b42db3e0784300d5b9528579a306500e543/0_0_4000_2400/master/4000.jpg?width=1020&quality=85&auto=format&fit=max&s=7b38d0defb041486567233edfd5ede13" },
 		tags : "2022-5-15,saturday,InnerWheel,surfers,specialDay", 
 		questInfo: new Array() };
@@ -2190,7 +2190,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 quests[++questIndexBuilder] = { 
 		name : "Topicalish",
-		hoverover : "Some topical stuf, some general knowledge",
+		hoverover : "Some topical stuff, some general knowledge",
 		tags : "2022-5-22,saturday,InnerWheel,surfers", 
 		questInfo: new Array() };
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
@@ -2276,5 +2276,95 @@ quests[++questIndexBuilder] = {
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/5BnFOgDMJrZBfnVFVyiZ7r?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
 	answer : "Don't you want me, The Human League.  The Boys are back in town, Thin Lizzy.  Love will tear us apart, Joy Division.  Come Together, The Beatles.  Baby one more time, Britney Spears.  Hounds of Love, Kate Bush.  Lucy in the sky with diamonds, The Beatles.  These Boots are made for walking, Nancy Sinatra.   Imagine, John Lennon.  Faith, George Michael.", answerSpeak : "", question : ""}) ;
+
+
+quests[++questIndexBuilder] = { 
+		name : "Topicalish",
+		hoverover : "Some topical stuff, some general knowledge",
+		tags : "2022-5-29,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Australia has a new prime minister. What is his name?  " + Table4ColumnStart + "Jim Chalmers</td><td>Anthony Albanese</td><td>Richard Marles</td><td>Les Patterson" + Table4ColumnEnd,
+	answer : "Anthony Albanese", image : "https://c.tenor.com/VuLzvfgL3kwAAAAC/politician-sleeze.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Eight new cities have been declared in the UK in time for the Queen's platinum jubilee. Which of these was NOT one of them?  " + Table4ColumnStart + "Doncaster</td><td>Milton Keynes</td><td>Dunfermline</td><td>Cheltenham" + Table4ColumnEnd,
+	answer : "Cheltenham - Colchester, Doncaster and Milton Keynes in England, Dunfermline in Scotland, Bangor in Northern Ireland and Wrexham in Wales alongside Stanley in the Falklands and Douglas in the Isle of Man", answerSpeak : "Cheltenham", image : "https://c.tenor.com/69Wn_GhdDRoAAAAC/prince-harry-queen.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which US golfer won the 2022 US PGA Championship at the weekend?  " + Table4ColumnStart + "Will Zalatoris</td><td>Cameron Young</td><td>Justin Thomas</td><td>Canton Everett Delaware III" + Table4ColumnEnd,
+	answer : "Justin Thomas", image : "https://c.tenor.com/mg1xkdyjw-YAAAAC/justin-thomas.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What is 377 in Roman numerals?  " + Table4ColumnStart + "CCCLXXVII</td><td>LMXXVII</td><td>DLXXVII</td><td>CMXVII" + Table4ColumnEnd,
+	answer : "CCCLXXVII - That is three hundreds, one fifty, two tens, a five and two ones", image : "https://community.alteryx.com/t5/image/serverpage/image-id/80306iF0FF928D8FF95F54/image-size/medium?v=v2&px=400"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which European Prime Minister is this?  " + Table4ColumnStart + "Sweden's PM, Magdalena Andersson</td><td>Finland's PM, Sanna Marin</td><td>Denmark's PM, Mette Frederiksen</td><td>Estonia's PM, Kaja Kallas" + Table4ColumnEnd,
+	answer : "Sweden's prime minister, Magdalena Andersson", image : "https://i.guim.co.uk/img/media/954a36625c35e65f5e6102c91ac11292ba54d347/0_0_3500_2351/master/3500.jpg?width=620&quality=85&auto=format&fit=max&s=1055608d4137e6f7537693bc41490082"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is reprising their role as Anakin Skywalker (not pictured) after a gap of 17 years in the new Disney+ series Obi-Wan Kenobi?  " + Table4ColumnStart + "Ewan McGregor</td><td>Samuel L Jackson</td><td>Hayden Christensen</td><td>Kate Bush" + Table4ColumnEnd,
+	answer : "Hayden Christensen", image : "https://media0.giphy.com/media/tuWFzgwRYpfa0/200.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "When an atom loses one or more electrons, what does it become?  " + Table4ColumnStart + "A positive ion</td><td>A negative ion</td><td>A new isotope</td><td>An alloy" + Table4ColumnEnd,
+	answer : "A positive ion", image : "https://media4.giphy.com/media/gLQslDCTCupVZa6apV/giphy-downsized-large.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "The BBC had to apologise this week after some text a trainee was typing into a system appeared live on screen by mistake. What did the BBC News channel inform readers?  " + Table4ColumnStart + "Prince Andrew sweats</td><td>Oasis to reform for Queen's jubilee</td><td>Kate Bush now known as Kate Shrubbery</td><td>Manchester United are rubbish" + Table4ColumnEnd,
+	answer : "Manchester United are rubbish", image : "https://thumbs.gfycat.com/EnormousNervousElephant-max-1mb.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "When was dressage introduced as an Olympic sport?  " + Table4ColumnStart + "1900 in Paris</td><td>1912 in Stockholm</td><td>1936 in Berlin</td><td>1948 in London" + Table4ColumnEnd,
+	answer : "1912 in Stockholm", image : "https://c.tenor.com/qpbHbNNTf8YAAAAC/galloping-charlotte-dujardin.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "It was Stevie Nicks' birthday this week.  She was a vital part of the success of Fleetwood Mac's Rumours album. But what was the name of the first Fleetwood Mac album she appeared on?  " + Table4ColumnStart + "Fleetwood Mac</td><td>Mystery to Me</td><td>Behind The Mask</td><td>Heroes Are Hard to Find" + Table4ColumnEnd,
+	answer : "Fleetwood Mac", image : "https://c.tenor.com/cNfuL8awAm0AAAAC/stevie-nicks-twirl.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who had a massive international hit in the early 1980s with a song called the Safety Dance?  " + Table4ColumnStart + "Midnight Oil</td><td>Men Without Hats</td><td>Mental As Anything</td><td>Kate Shrubbery" + Table4ColumnEnd,
+	answer : "Men Without Hats", image : "https://c.tenor.com/E8zxUEFHa6IAAAAd/safety-dance-men-without-hats.gif"	});	
+
+quests[++questIndexBuilder] = { 
+		name : "Langer, Harder, Faster",
+		hoverover : "What is more",
+		tags : "2022-5-29,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which of these is the most numerous?  " + Table4ColumnStart + "Games played in longest-ever tennis match (Isner v Mahut at Wimbledon 2010)</td><td>Number of aircraft carriers that have been constructed</td><td>Number of buildings in New York City higher than 150 metres</td><td>Number of bones in the human body" + Table4ColumnEnd,
+	answer : "Number of buildings in New York City higher than 150 metres - 257 buildings, followed by 206 bones, followed by 183 games in Isner v Mahut, followed by 146 aircraft carriers (of which only 20 now in service).", image : "https://i.guim.co.uk/img/media/59de81c12bb251ec4039f610f57b55405d802201/0_38_3708_2225/master/3708.jpg?width=620&quality=85&auto=format&fit=max&s=7a6d5be34d99bd966e1a532105e85b64"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which of these is the biggest?  " + Table4ColumnStart + "Length of a London bus</td><td>Estimated length of Tyrannosaurus rex</td><td>Distance a kangaroo can jump</td><td>Width of a football goal" + Table4ColumnEnd,
+	answer : "Distance a kangaroo can jump - 13.5 metres, followed by the T rex at 12.3 metres, the London bus at 11.23 metres, and the width of a goal at 7.32 metres", image : "https://i.guim.co.uk/img/media/32ff661a3fa9ed1f166d27b30147957f655e21f5/0_268_5568_3341/master/5568.jpg?width=620&quality=85&auto=format&fit=max&s=64aab4a685371435389380a6782a391f"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which of these has the greatest mass?  " + Table4ColumnStart + "An Airbus A380 airliner (maximum takeoff weight)</td><td>The Statue of Liberty</td><td>A combat-ready Challenger 2 tank</td><td>The International Space Station" + Table4ColumnEnd,
+	answer : "An Airbus A380 airliner - 575,000kg, followed by the International Space Station at 420,000kg, followed by Liberty at 201,400kg, followed by the tank at 62,500kg", image : "https://i.guim.co.uk/img/media/351e29a5b69d6d074e626ed5c183e744df1e059e/0_62_2214_1328/master/2214.jpg?width=620&quality=85&auto=format&fit=max&s=4e6b5f92b21ebbe7663a79eef6e56d0c"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which of these is the smallest?  " + Table4ColumnStart + "Distance from the sun to Neptune</td><td>Distance from the sun to Neptune</td><td>Length (circumference) of Earth's orbit around the sun</td><td>Halley's comet's closest distance from the sun (perihelion" + Table4ColumnEnd,
+	answer : "Halley's comet's closest distance from the sun (perihelion) - 87.7m km, followed by Earth’s orbit at 940m km, followed by Sun to Neptune at 4.5bn km, followed by a light year at 9.46trn km", image : "https://i.guim.co.uk/img/media/f97b489d60e8bef310b0af5ca39319d80fadf395/0_2_3292_1975/master/3292.jpg?width=620&quality=85&auto=format&fit=max&s=5124d3d0eb6ff9831d58bf91d8112a6f"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which of these is the fastest?  " + Table4ColumnStart + "Fastest speed attained by a human-powered aircraft</td><td>Top speed of a giraffe</td><td>Fastest speed attained by a human-powered watercraft</td><td>Top speed of a great white shark" + Table4ColumnEnd,
+	answer : "Top speed of a giraffe - 52 km/h, followed by the aircraft at 44.3 km/h, followed by the shark at 40km/h, followed by the watercraft at 34.3 km/h", image : "https://c.tenor.com/nZ1AGkhZFu0AAAAM/chased-by-ostrich-this-is-happening.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which of these is the most numerous?  " + Table4ColumnStart + "The population of Chongqing, China</td><td>The population of Austria (2017)</td><td>Estimated world population of blue duiker antelope</td><td>Number of articles in Wikipedia (as of 22 June 2018)" + Table4ColumnEnd,
+	answer : "The population of Austria (2017) - 8.75m, followed by Chongqing at 8.19m, followed by the blue duikers at 7m, followed by Wikipedia at 5.66m", image : "https://thumbs.gfycat.com/DismalBitterHairstreak-size_restricted.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which of these is the smallest?  " + Table4ColumnStart + "Height of the Leaning Tower of Pisa</td><td>Height of the US Presidents' heads carved into Mount Rushmore</td><td>Height of Beachy Head cliff on the south coast of England</td><td>Height of the Elizabeth Tower (home to Big Ben) in London" + Table4ColumnEnd,
+	answer : "Height of the US Presidents' heads carved into Mount Rushmore - 18 metres, followed by the Tower of Pisa at 57 metres, followed by Big Ben at 96 metres, followed by Beachy Head at 162 metres", image : "https://media2.giphy.com/media/9x8RufVCVUplP8SlNq/giphy.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which of these is the shortest vertical distance?  " + Table4ColumnStart + "Highest ascent by a hot air balloon (2004)</td><td>Depth of the deepest part of the ocean, the Mariana trench</td><td>Height of Mount Everest</td><td>Depth of the deepest mine in the world - Mponeng gold mine in South Africa" + Table4ColumnEnd,
+	answer : "Depth of the deepest mine in the world - 3.9km, followed by the balloon at 6.61km, followed by Everest at 8.85km, followed by the Mariana Trench at 10.99km", image : "https://i.pinimg.com/originals/c3/71/b4/c371b4076606cb45a2e1959778049ce4.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which of these has the smallest population?  " + Table4ColumnStart + "Estonia</td><td>The Gaza Strip</td><td>Jamaica</td><td>Luxembourg" + Table4ColumnEnd,
+	answer : "Luxembourg - 594,100, followed by Estonia at 1.252 million, followed by the Gaza strip at 1.795 million, followed by Jamaica at 2.78 million", image : "https://i0.wp.com/jimmurtytraveltraveltravel.com/wp-content/uploads/2020/09/tenor-1-1.gif?resize=498%2C280&ssl=1"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which of these is the greatest distance?  " + Table4ColumnStart + "Distance from London to New York</td><td>Length of the Nile river</td><td>Length of the US/Canada border</td><td>Length of the Chile/Argentina border" + Table4ColumnEnd,
+	answer : "Length of the US/Canada border - 8,890km, followed by the Nile at 6,850km, followed by London-New York at 5,580km, followed by Chile/Argentina at 5,150km", image : "https://c.tenor.com/ObAon4unwwsAAAAd/niagara-falls-nature.gif"	});	
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers 1",
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2022-5-29,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/0sXQ9SIpiWwIHK0rJHGMXD?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+	answer : "Satisfaction, Rolling Stones.  I love Rock 'n Roll, Joan Jett.  American Pie, Don McLean.  Fat Bottomed Girls, Queen.  The Man With The Child In His Eyes, Kate Bush.  Wild Horses, Rolling Stones. Ooops!  I did it again, Britney Spears.  Saturday Night, Elton John.  Let It Be, The Beatles.   Viva Las Vegas,  Elvis ", answerSpeak : "", question : ""}) ;
+
 
 
