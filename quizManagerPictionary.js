@@ -1616,7 +1616,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 quests[++questIndexBuilder] = { //
 		name : "Pictionary " + pictionaryCount++,
 		hoverover : "Pictionary on the theme of Jubilee and things you probably will not see",
-		tags : "2022-5-28,pictionary",
+		tags : "2022-5-29,pictionary",
 		questInfo: new Array()
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
