@@ -1620,22 +1620,22 @@ quests[++questIndexBuilder] = { //
 		questInfo: new Array()
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXvJvjhH-Em2NfKOOQ5jLpwkmSLV6EkA97G9FT3m0XssnFKTKAYfnVbes4XyLnXpfh9QVuAHBVtQ7TJwbJtrgzz1gp7yxzAhDh-BudU7PH0t2aWwTpfk2tKIMCwaLYgewTq7znXUXzkGA6rkfn-DW_2Ag=w321-h243-no?authuser=0",
 	answerimage : "https://i.gifer.com/origin/dd/ddc4dfa3196ef11163c37c6c3659532c_w200.webp", answerSpeak : "Corgis"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUtUa2h32bWSmgYy4J0-nElrq2RLnKnLs0RQAB_nkRJycEPMONeip0Aud70r4rJd4YguevzV4jmFuYIMHM6d5FXd_kBlQzgai_ASK4s_aW5GMxcuvCF6QPxQapi1o9vvUJTvbjU8Bv1mwfLNCDSNAyVBw=w366-h364-no?authuser=0",
 	answerimage : "https://i.redd.it/ijbg5apvh3o71.jpg", answerSpeak : "Prince Andrew"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLWhglCOt0EuYns8RbD2W8QFPhF6d_3FItdcVkTqMgBJh1SKHXwXh1u1SvOnw_cNgQlFmH3fZm-XzDjj9FH-I6CY88b7yXGdHd4YWiV_Zoo8XX18giSLZlKGdpU-84EhTHoXd43UazQGRHrOddkTw-LSbw=w405-h321-no?authuser=0",
 	answerimage : "https://c.tenor.com/Z3y4RldQIocAAAAC/trying-it-on-claire-foy.gif", answerSpeak : "Crown"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
-	answerimage : "https://c.tenor.com/AVNqprngsZIAAAAC/queen-queen-elisabeth.gif", answerSpeak : "Horses"}) ;
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVGb7Nsij0ljcl7Zv95R6zVXo4q3DGbgHhUQNa8HJyuWzhtHhaF7F73yMUuTfXOPuNl9Kg09zkpQ97-9bGhK6FwZy1FaBXLIkkX9epKVR0zZtm4r_e6zgZ5qE9dAcp9gJH_zuylmXsZ0CftIKxib3dA_Q=w492-h453-no?authuser=0",
+	answerimage : "https://c.tenor.com/AVNqprngsZIAAAAC/queen-queen-elisabeth.gif", answerSpeak : "Queen riding a horse"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLV0kWTGI6Cnktknc7vRIRn2SXjFbgflb6ISkDIadml31UMycNQ7Jh5AocjKtlR6mBLGYljWI1tTdy4nGr-Ink6yM-EaJP_LXj84v3aGUVeg_7AAhvlYwv-cp90EPefjg95FayBdePEllSjyBcbL8TJY2A=w419-h345-no?authuser=0",
 	answerimage : "https://stockhead.com.au/wp-content/uploads/2021/08/arise-2-720x405.gif", answerSpeak : "Making Knights"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLX94y3il31PtiFvNiCuI00IYOBkpFMbKm6-mwlbJorud4T3Fhudm5jBtE694QVHcGn18Mms0OMitXhzwE93FsC6LzM9n4YgvBK4Shh8pgCsl0Zr7o86m2AWmMca3pdivNkHmZdC0lfaP-og7COcR9KH2A=w287-h338-no?authuser=0",
 	answerimage : "https://thumbs.gfycat.com/PlayfulGreedyClumber-size_restricted.gif", answerSpeak : "Freddie Mercury's moustache"}) ;
 /*
  * 	image : "",
