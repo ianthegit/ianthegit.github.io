@@ -2316,9 +2316,12 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Who had a massive international hit in the early 1980s with a song called the Safety Dance?  " + Table4ColumnStart + "Midnight Oil</td><td>Men Without Hats</td><td>Mental As Anything</td><td>Kate Shrubbery" + Table4ColumnEnd,
 	answer : "Men Without Hats", image : "https://c.tenor.com/E8zxUEFHa6IAAAAd/safety-dance-men-without-hats.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Finally, Leser Piggott died this weekend aged 86.  In 1987 he was stripped of his OBE and spent a year in jail for " + gbp + " 1.7M tax evasion.  Where was the court case held?  " + Table4ColumnStart + "Cheltenham</td><td>Newmarket</td><td>Aintree</td><td>Ipswich" + Table4ColumnEnd,
+	answer : "Ipswich", image : "https://i.guim.co.uk/img/media/e3d679bb71ed27e0ebb0a1a7d85a48dd6aef495f/0_156_1442_865/master/1442.jpg?width=620&quality=85&auto=format&fit=max&s=6aac84e73444e0438e62a73c685cd3ea"	});	
 
 quests[++questIndexBuilder] = { 
-		name : "Langer, Harder, Faster",
+		name : "Longer, Harder, Faster",
 		hoverover : "What is more",
 		tags : "2022-5-29,saturday,InnerWheel,surfers", 
 		questInfo: new Array() };
