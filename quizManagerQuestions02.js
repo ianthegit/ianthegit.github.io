@@ -2370,4 +2370,100 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : "Satisfaction, Rolling Stones.  I love Rock 'n Roll, Joan Jett.  American Pie, Don McLean.  Fat Bottomed Girls, Queen.  The Man With The Child In His Eyes, Kate Bush.  Wild Horses, Rolling Stones. Ooops!  I did it again, Britney Spears.  Saturday Night, Elton John.  Let It Be, The Beatles.   Viva Las Vegas,  Elvis ", answerSpeak : "", question : ""}) ;
 
 
+quests[++questIndexBuilder] = { 
+		name : "Topicalish",
+		hoverover : "Some topical stuff, some general knowledge",
+		tags : "2022-6-5,saturday,InnerWheel,surfers", 
+		splash : {splashType : splashTypePictureAndText , splashText : "Jubilee Weekend fun...?", splashImage : "https://thumbs.gfycat.com/UnrulyContentBassethound-size_restricted.gif"},
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "In which city was Queen Elizabeth II born?  " + Table4ColumnStart + "Edinburgh, Scotland</td><td>London, England</td><td>Cape Town, South Africa</td><td>York, England" + Table4ColumnEnd,
+	answer : "London, England", answerSpeak : "", image : "https://i.guim.co.uk/img/media/83c40313a7132afb30fe50dc49e4ce3c7a327f2d/0_334_2797_1679/master/2797.jpg?width=620&quality=85&auto=format&fit=max&s=fabbf55524997d0f54e44253507b6699"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who provided the BBC television commentary from Westminster Abbey for the Queen's coronation in 1953?  " + Table4ColumnStart + "Richard Attenborough</td><td>David Attenborough</td><td>Richard Dimbleby</td><td>David Dimbleby" + Table4ColumnEnd,
+	answer : "Richard Dimbleby", answerSpeak : "", image : "https://i.guim.co.uk/img/media/e45d4c4a54f9e2aa4f41b16e778749dcd428e791/0_63_2491_1493/master/2491.jpg?width=620&quality=85&auto=format&fit=max&s=2a15edc2fccb23b85eff4cd348c8e0cb"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture, 	
+	question : "Which of these things has the Queen had?  " + Table4ColumnStart + "A driver's licence</td><td>A licence plate on vehicles</td><td>A passport</td><td>A Dorgi" + Table4ColumnEnd,
+	answer : "Dorgi - Allegedly Princess Margaret's dachshund Pipkin mated with one of the Queen's corgis", answerSpeak : "", image : "https://cdn.shopify.com/s/files/1/0267/3639/4417/products/Freddie-Mercury-screen-print-black-frame-ws_860x.jpg?v=1636552257"	,
+		answerimage : "https://static.onecms.io/wp-content/uploads/sites/20/2020/12/04/queen-elizabeth-1.jpg"});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who was Queen Elizabeth II's father?  " + Table4ColumnStart + "George IV</td><td>George V</td><td>George VI</td><td>George VII" + Table4ColumnEnd,
+	answer : "George VI", answerSpeak : "", image : "https://i.guim.co.uk/img/media/d0bff45e7570819094623df1f1dd7f9098fabc4d/264_0_2474_1485/master/2474.jpg?width=620&quality=85&auto=format&fit=max&s=d0afc2d90e70ddd74972d7ce4a3371ad"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Taiwan is considering a change in the law after a limit on the number of times people can change their name has left some people stuck with what as their name, after they changed it to get free sushi in a promotional event?  " + Table4ColumnStart + "Salmon</td><td>Seaweed</td><td>Crabmeat</td><td>Wasabi" + Table4ColumnEnd,
+	answer : "Salmon", answerSpeak : "", image : "https://i.guim.co.uk/img/media/7926db875e3b68a3f4bf9f630d2cc2369fbb0745/0_251_5834_3501/master/5834.jpg?width=620&quality=85&auto=format&fit=max&s=2f732c92d821324d5084513162910557"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which city was this week announced to have won the competition to be named the UK's City of Culture for 2025?  " + Table4ColumnStart + "Coventry</td><td>Wrexham</td><td>Bradford</td><td>County Durham" + Table4ColumnEnd,
+	answer : "Bradford", answerSpeak : "", image : "https://i.guim.co.uk/img/media/4da79bb75cdc55a1a04556c2c76f3fc205cd915a/0_134_3500_2101/master/3500.jpg?width=620&quality=85&auto=format&fit=max&s=4a4c92db566a3c5a226dcd4b73979bd0"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which of these was NOT a D-Day beach codename?  " + Table4ColumnStart + "Juno</td><td>Gold</td><td>Sword</td><td>Iowa" + Table4ColumnEnd,
+	answer : "Iowa (it was Utah)", answerSpeak : "", image : "https://lp-cms-production.imgix.net/features/2019/06/gold-beach-442fe615bd1b.jpg?auto=format&ar=16%3A9&q=40&w=1920&h=1080&dpr=1"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which artist this week had a 1985 single propelled to the top of the charts on iTunes and become their most streamed song ever on Spotify after it appeared in the new season of Stranger Things?  " + Table4ColumnStart + "Freddie Mercury</td><td>Howard Jones</td><td>Toyah</td><td>Kate Bush" + Table4ColumnEnd,
+	answer : "Kate Bush", answerSpeak : "", image : "https://media3.giphy.com/media/VJNszmPL0GzOqm0mz4/giphy.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : " Local councillor Billy Gannon from Pembroke Dock, west Wales, has had to resign after repeated accusations he has a secret identity. As what?  " + Table4ColumnStart + "Undercover police officer</td><td>The artist Banksy</td><td>Latvian spy</td><td>Kate Bush" + Table4ColumnEnd,
+	answer : "The artist Banksy", answerSpeak : "", image : "https://i.guim.co.uk/img/media/59161f4c2d6b911f6879af612f773c0d33d3c6dd/490_1389_5117_3067/master/5117.jpg?width=620&quality=85&auto=format&fit=max&s=b01c3023a7aa5ba8ec631cc8e6b372be"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "According to her cousin Margaret Rhodes, what does the Queen enjoy every night before bed?  " + Table4ColumnStart + "A gin and dubonnet with lemon and ice</td><td>A glass of wine</td><td>A dry gin martini</td><td>A glass of champagne" + Table4ColumnEnd,
+	answer : "A glass of champagne", answerSpeak : "", image : "https://media.vanityfair.com/photos/616861b2a2c31a080b094306/3:4/w_999,h_1332,c_limit/queen-elizabeth-ii-no-more-alcohol.jpg"	});	
+
+
+quests[++questIndexBuilder] = { 
+		name : "Imperial",
+		hoverover : "Weights and measures, old-skool",
+		tags : "2022-6-5,saturday,InnerWheel,surfers", 
+		splash : {splashType : splashTypePictureAndText , splashText : "Weights and measures are fun...?", splashImage : "https://blogs.loc.gov/law/files/2015/09/cupcakes-scales-of-justice.jpg"},
+		questInfo: new Array() };
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "How many inches in a foot?  " + Table4ColumnStart + "9</td><td>12</td><td>14</td><td>16" + Table4ColumnEnd,
+	answer : "12", answerSpeak : ""	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "And how many ounces are there in a pound?  " + Table4ColumnStart +  "9</td><td>12</td><td>14</td><td>16" + Table4ColumnEnd,
+	answer : "16", answerSpeak : ""	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "And how many pounds are there in a stone?  " + Table4ColumnStart +  "9</td><td>12</td><td>14</td><td>16" + Table4ColumnEnd,
+	answer : "14", answerSpeak : ""	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "When you weigh something in stones, pounds and ounces, what is the correct abbreviation of pound?  " + Table4ColumnStart + "lb</td><td>pb</td><td>pd</td><td>pnd" + Table4ColumnEnd,
+	answer : "lb", answerSpeak : ""	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Which is hotter? 20 degrees Celsius, or 68 degrees Fahrenheit?  " + Table4ColumnStart + "20 degrees Celsius</td><td>68 degrees Fahrenheit</td><td>Roughly the same</td><td>Kate Bush" + Table4ColumnEnd,
+	answer : "Roughly the same", answerSpeak : ""	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Mostly used by horses, according to the UK's weights and measures act 1985, how many yards are in a furlong?  " + Table4ColumnStart + "110</td><td>220</td><td>330</td><td>440" + Table4ColumnEnd,
+	answer : "220", answerSpeak : ""	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "If you order a pound of sausages, approximately how many grams of sausages are you getting?  " + Table4ColumnStart + "250g</td><td>350g</td><td>450g</td><td>550g" + Table4ColumnEnd,
+	answer : "450g", answerSpeak : ""	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "If you are measuring capacity in the UK, how many gallons are there in a peck?  " + Table4ColumnStart + "2</td><td>4</td><td>6</td><td>12" + Table4ColumnEnd,
+	answer : "2", answerSpeak : ""	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Which is more - four pints or three litres?  " + Table4ColumnStart + "4 pints</td><td>3 litres</td><td>They are roughly the same</td><td>Kate Bushell" + Table4ColumnEnd,
+	answer : "3 litres", answerSpeak : ""	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "How much is a dram?  " + Table4ColumnStart + "1/16 ounce</td><td>1/16 pecks</td><td>1/16 inches</td><td>About " + gbp + "15 in London" + Table4ColumnEnd,
+	answer : "1/16 ounce", answerSpeak : ""	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "How many grains are in a pennyweight?  " + Table4ColumnStart + "12</td><td>24</td><td>36</td><td>48" + Table4ColumnEnd,
+	answer : "24", answerSpeak : ""	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "The UK's weights and measures act 1985 also legislates how electricity is measured. What is this the legal definition of: 'the power which in one second gives rise to energy of 1 joule'?  " + Table4ColumnStart + "Watt</td><td>Ohm</td><td>Volt</td><td>Ampere" + Table4ColumnEnd,
+	answer : "Watt", answerSpeak : ""	});	
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers 2",
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2022-6-5,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/4mar1kKboewbowrUIEkeji?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+	answer : "The Sound of Silence, Simon & Garfunkel.  Smalltown Boy, Bronski Beat.   Girls Just Wanna Have Fun, Cyndi Lauper.  Johnny B. Goode, Chuck Berry (-1 point if Ted says Marty McFly). Don't Give Up, Kate Bush.  Sultans of Swing, Dire Straits.  Suspicious Minds, Elvis.  Like a Prayer, Madonna.  Gohstbusters, Ray Parker Jr.  Walk of Life, Dire Straits ", answerSpeak : "", question : ""}) ;
+
+
 
