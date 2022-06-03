@@ -1637,6 +1637,37 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLX94y3il31PtiFvNiCuI00IYOBkpFMbKm6-mwlbJorud4T3Fhudm5jBtE694QVHcGn18Mms0OMitXhzwE93FsC6LzM9n4YgvBK4Shh8pgCsl0Zr7o86m2AWmMca3pdivNkHmZdC0lfaP-og7COcR9KH2A=w287-h338-no?authuser=0",
 	answerimage : "https://thumbs.gfycat.com/PlayfulGreedyClumber-size_restricted.gif", answerSpeak : "Freddie Mercury's moustache"}) ;
+
+
+
+
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " + pictionaryCount++,
+		hoverover : "Pictionary on the theme of Fish Restraunt staples",
+		tags : "2022-6-5,pictionary",
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://www.oakhousefoods.co.uk/media/catalog/product/cache/336111bc363ebdc007831e2145326566/8/0/807_ovenonly_2019.jpg", answerSpeak : "Chips"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://img.taste.com.au/BlidSJYU/w720-h480-cfill-q80/taste/2016/11/crispy-fish-batter-98823-1.jpeg", answerSpeak : "Fish"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://www.daringgourmet.com/wp-content/uploads/2018/10/Mushy-Peas-1-square.jpg", answerSpeak : "Mushy Peas"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://pbs.twimg.com/media/D7wSferWkAA7d7R.jpg", answerSpeak : "Gravy"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg", answerSpeak : "Vegetarian option"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://media-cdn.tripadvisor.com/media/photo-s/0e/70/8d/c5/our-yummy-and-crunchy.jpg", answerSpeak : "Sausage"}) ;
+
+
+
 /*
  * 	image : "",
 	answerimage : "", answer : "Table"}) ;
