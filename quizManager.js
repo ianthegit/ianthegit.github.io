@@ -54,7 +54,8 @@ showTagsURI='showTags=1';
 splashTypeText='text';
 splashTypePictureAndText = 'pictureAndText';
 HBCgif = 'https://i.gifer.com/origin/95/953e95f22cef08c407ed0b94458e3753_w200.gif'
-	
+approvedVoices = [0,1,2,4,5,6];
+
 questionStyle = 'style="font-family:verdana;color:Black;font-size:30px;topMargin=10px;bottomMargin=10px"';
 answerStyle = 'style="font-family:Courier New;color:Black;font-size:30px;topMargin=0px;bottomMargin=0px;"';
 previousButton = "<input type='button' class='userBtnStop' value='Previous' title='Previous' id='Previous' onclick='runPreviousQuestStage()' />";
@@ -604,14 +605,18 @@ function SQSpeakAnswer(){
 	}
 	window.speechSynthesis.cancel();
 	voices = speechSynthesis.getVoices();
+	
 	if (!speakText.includes("iframe")|| fullAnswer.includes("target='_blank'")) {
 		var msg = new SpeechSynthesisUtterance();
-		msg.voice = voices[Math.floor(Math.random() * voices.length)];
+		
+		msg.voice = voices[approvedVoices[Math.floor(Math.random() * approvedVoices.length)]];
+//		msg.voice = voices[Math.floor(Math.random() * voices.length)];
 		msg.text = speakText;
 		window.speechSynthesis.speak(msg);
 	}
 }
-//if (questStageData[currQuestStageIndex].hasOwnProperty('answerList')) {
+
+
 function SQWriteAnswer() {
 	if (!fullAnswer) {
 		return;
