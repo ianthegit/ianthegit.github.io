@@ -2407,6 +2407,9 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "According to her cousin Margaret Rhodes, what does the Queen enjoy every night before bed?  " + Table4ColumnStart + "A gin and dubonnet with lemon and ice</td><td>A glass of wine</td><td>A dry gin martini</td><td>A glass of champagne" + Table4ColumnEnd,
 	answer : "A glass of champagne", answerSpeak : "", image : "https://media.vanityfair.com/photos/616861b2a2c31a080b094306/3:4/w_999,h_1332,c_limit/queen-elizabeth-ii-no-more-alcohol.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
+	question : "Who had a fish & chip supper in South Shields on Thursday night and then spoke at Harton Academy?  " + Table4ColumnStart + "Harrison Ford</td><td>Hilary Clinton</td><td>Cassius Clay</td><td>Kate Bush" + Table4ColumnEnd,
+	answer : "Hilary Clinton", answerSpeak : "", answerimage : "https://ichef.bbci.co.uk/news/976/cpsprodpb/C022/production/_125268194_mediaitem125268193.jpg"	});	
 
 
 quests[++questIndexBuilder] = { 
