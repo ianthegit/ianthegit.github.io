@@ -1645,7 +1645,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 quests[++questIndexBuilder] = { //
 		name : "Pictionary " + pictionaryCount++,
-		hoverover : "Pictionary on the theme of Fish Restraunt staples",
+		hoverover : "Pictionary on the theme of Fish Restaurant staples",
 		tags : "2022-6-5,pictionary",
 		questInfo: new Array()
 	};
