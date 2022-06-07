@@ -53,7 +53,7 @@ function speakVoice(voiceNumber){
 
 	var msg = new SpeechSynthesisUtterance();
 	msg.voice = voices[voiceNumber];
-	msg.text = "This is voice number " + voiceNumber + " reminding you that Adi sucks hairy balls";
+	msg.text = "This is voice number " + voiceNumber + " reminding you that A D sucks hairy balls";
 	window.speechSynthesis.speak(msg);
 	
 }
