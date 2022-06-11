@@ -2469,4 +2469,86 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : "The Sound of Silence, Simon & Garfunkel.  Smalltown Boy, Bronski Beat.   Girls Just Wanna Have Fun, Cyndi Lauper.  Johnny B. Goode, Chuck Berry (-1 point if Ted says Marty McFly). Don't Give Up, Kate Bush.  Sultans of Swing, Dire Straits.  Suspicious Minds, Elvis.  Like a Prayer, Madonna.  Gohstbusters, Ray Parker Jr.  Walk of Life, Dire Straits ", answerSpeak : "", question : ""}) ;
 
 
+quests[++questIndexBuilder] = { 
+		name : "Topicalish",
+		hoverover : "Some topical stuff, some general knowledge",
+		tags : "2022-6-12,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "The government's Food Strategy report has been leaked ahead of Monday's official release.  What is the major announcement it contains, an attempt to help families with the rising cost of living?  " + Table4ColumnStart + "look to increase the use of responsibly sourced vegetables</td><td>look to increase the use of responsibly sourced fruit and vegetables</td><td>look to increase the use of responsibly sourced local food chains</td><td>look to increase the use of responsibly sourced wild venison" + Table4ColumnEnd,
+	answer : "look to increase the use of responsibly sourced wild venison", answerSpeak : "", image : "https://i.guim.co.uk/img/media/b6df52e68223a7cfc99a22af95229c2c746178de/0_618_3541_2124/master/3541.jpg?width=620&quality=85&auto=format&fit=max&s=49bd7f786d4bbe37d6e868090fcb9b82"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "The first plane flight full of migrants seeking asylum in the UK will take place on Tuesday (criticised even by 'non-political' Prince Charles), unless further court action succeeeds.  Where will it take them for processing?  " + Table4ColumnStart + "Glasgow</td><td>Edinburgh</td><td>Belfast</td><td>Rwanda" + Table4ColumnEnd,
+	answer : "Rwanda", answerSpeak : "", image : "https://i.guim.co.uk/img/media/a1adc41741be44ec4200ab36d57a46edff726180/413_52_2176_1306/master/2176.jpg?width=620&quality=85&auto=format&fit=max&s=bf1e2dc747affc8bc76d05e645939355"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "When Johnson finally leaves #10, how much do experts say he'll make per year on the lecture circuit?  " + Table4ColumnStart + gbp +"8M</td><td>"+gbp+"5M</td><td>"+gbp+"3M</td><td>"+gbp+"1M" + Table4ColumnEnd,
+	answer : gbp +"5M", answerSpeak : "", image : "https://i.guim.co.uk/img/media/657884447c49c8ad20e91c267e29d3301669b316/282_221_4282_2569/master/4282.jpg?width=620&quality=85&auto=format&fit=max&s=ad579dbf169e09ea4af87f93341ef18a"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
+	question : "Why has Justin Beiber had to cancel his current tour?  " + Table4ColumnStart + "He's been attacked by taste</td><td>A virus has left 1/2 his face paralysed</td><td>Ed Sheeran hit him with a golf club</td><td>He's broken hs nose" + Table4ColumnEnd,
+	answer : "A virus has left 1/2 his face paralysed", answerSpeak : "", answerimage : "https://i.guim.co.uk/img/media/9b7038a6d3914e970aa66b0c073977ff23209853/24_217_1015_609/master/1015.jpg?width=700&quality=85&auto=format&fit=max&s=03b83338fb4fabff7be1c3a0123505e3"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which high-grossing movie of 2022 is being sued for copyright infringement by the family of Ehud Yonay, whose writing they claim inspired it?  " + Table4ColumnStart + "Jackass Forever</td><td>Death on the Nile</td><td>Top Gun: Maverick</td><td>The Secrets of Dumbledore" + Table4ColumnEnd,
+	answer : "Top Gun: Maverick", answerSpeak : "", image : "https://s3.amazonaws.com/static.rogerebert.com/uploads/movie/movie_poster/jackass-forever-2022/large_jackass-forever-poster.jpeg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Kenichi Horie, 83, has become the oldest known person to do what?  " + Table4ColumnStart + "Reach the summit of Chomolungma, also known as Mt Everest</td><td>Father a child</td><td>Sail solo non-stop across the Pacific Ocean</td><td>Break Justin Beiber's nose" + Table4ColumnEnd,
+	answer : "Sail solo non-stop across the Pacific Ocean", answerSpeak : "", image : "https://p.potaufeu.asahi.com/8915-p/picture/26496566/d6bb63f9c2462fa585fe334578bda3b4.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "71-year-old artist Antony Gormley has said he is expecting a passport to arrive shortly for his citizenship of which country, after deciding to apply for one having being 'embarrassed about Brexit'?  " + Table4ColumnStart + "Germany</td><td>Ireland</td><td>Malta</td><td>Rwanda" + Table4ColumnEnd,
+	answer : "Germany", answerSpeak : "", image : "https://cdn.britannica.com/06/223206-050-D98BEF46/Sir-Antony-Gormley-Look-II-Plymouth-England-2020.jpg?w=400&h=300&c=crop"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Ted and I are watching 'Kenobi' at the moment, NOT featuring (yet) Natalie Portman, Padme from Star Wars.  It was her birthday on Thursday - where was she born?  " + Table4ColumnStart + "Jakku</td><td>Jerusalem</td><td>Jacksonville</td><td>Johannesburg" + Table4ColumnEnd,
+	answer : "Jerusalem", answerSpeak : "", image : "https://i.guim.co.uk/img/media/37d8c108ae79811510716474d4cfaa1296420195/497_813_3313_1988/master/3313.jpg?width=620&quality=85&auto=format&fit=max&s=f74a1a9caaf17692f383594bf27b19e4"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Sweet Cheeses this quiz is good.  Which of these options is NOT a cheese originating from France (NOT pictured - that's Casu Marzu)?  " + Table4ColumnStart + "Beauceron</td><td>Brillat-Savarin</td><td>Pelardon</td><td>Brie de Meaux" + Table4ColumnEnd,
+	answer : "Beauceron", answerSpeak : "", image : "https://media0.giphy.com/media/ZwrpJqGW6JHuiaFxoS/giphy.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "An artist (not pictured) restoring a famous tourist attraction (not pictured) has been accused of obscuring original details by - hilariously - putting in the faces of their friends (not pictured). What were they restoring?  " + Table4ColumnStart + "The astrological clock in Prague</td><td>The altarpiece in Berlin Cathedral</td><td>A mural in Park Guell in Barcelona</td><td>The painting of the Fallen Madonna (with the big boobies) by Van Clomp in the Rijksmuseum Amsterdam" + Table4ColumnEnd,
+	answer : "The astrological clock in Prague", answerSpeak : "", image : "https://c.tenor.com/YGWwTOTIO4EAAAAC/friends.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Rumours are swirling that Pope Francis might step down. But what was the title taken by his predecessor, Pope Benedict XVI, when he retired from the role in 2013?  " + Table4ColumnStart + "Pope renuntiatio</td><td>Pope abdicatio</td><td>Pope emeritus</td><td>Pope saeculum" + Table4ColumnEnd,
+	answer : "Pope emeritus", answerSpeak : "", image : "https://images3.memedroid.com/images/UPLOADED671/603fb1bc1c01a.jpeg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who painted this?  " + Table4ColumnStart + "Claude Manet</td><td>Claude Monet</td><td>Edouard Manet</td><td>Edouard Monet" + Table4ColumnEnd,
+	answer : "Edouard Manet", answerSpeak : "", image : "https://i.guim.co.uk/img/media/7d61cfdf7cc473462445aecfca31e464543e58b2/0_276_4767_2861/master/4767.jpg?width=620&quality=85&auto=format&fit=max&s=20c98983b63de0b4eb74150f6a85f355"	});	
+
+quests[++questIndexBuilder] = { 
+		name : "How many",
+		hoverover : "Have you got enough mates to form a team?",
+		splash : {splashType : splashTypeText , splashText : "Here are the answers...Just make sure you only use each one once. </BR></BR>4, 5, 6, 7, 9, 10, 11, 12, 15, 18?" },
+		tags : "2022-6-12,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : 'How many players in a Netball team?',	answer : "7"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : 'How many players in a Basketball team?',	answer : "5"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : 'How many players in an American Football team?',	answer : "11"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : 'How many players in an Ice Hockey team?',	answer : "6"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : 'How many players in a Polo team?',	answer : "4"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : 'How many players in a Rugby Union team?',	answer : "15"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "How many players in a Men's Lacrosse team?",	answer : "10"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "How many players in a Woman's Lacrosse team?",	answer : "12"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : 'How many players in an Australian Football team?',	answer : "18"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : 'How many players in a Baseball team?',	answer : "9"}) ;
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers 3",
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2022-6-12,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/0XrcoLx50iYczrsefac8EW?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+	answer : "You're the one that I want, Olivia Newton-John and John Travolta. Livin' thing, ELO.  Don't fear the reaper, Blue Oyster Cult.  Don't stop moving, S Club 7.  Blitzkreig Bop, The Ramones.  Wuthering Heights, Kate Bush.  Should I stay or should I go, the Clash.  Super Trooper, ABBA.  Money for Nothing, Dire Straits.  Wake me up, Wham! ", answerSpeak : "", question : ""}) ;
+
+
 
