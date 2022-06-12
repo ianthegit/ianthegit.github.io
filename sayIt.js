@@ -35,7 +35,7 @@ var insults = [ "If I had a face like yours I'd sue my parents",
 	,"You are a fart factory"
 	,"You have a face made for radio"
 	,"You push a lot of doors that say 'pull', don't you"
-	,"Mirrors can’t talk. Lucky for you, they can’t laugh, either"
+	,"Mirrors can't talk. Lucky for you, they can't laugh, either"
 	,"It's impossible to underestimate you"
 	,"Hey, you have something on your chin. No, the 3rd one down"
 	,"You look like something I would draw with my left hand"
@@ -45,10 +45,18 @@ var insults = [ "If I had a face like yours I'd sue my parents",
 	,"I know a mind reader who would charge you half price"
 	,"Clunge"
 	,"Bellend"
+	,"You look nice       NOT"
+	,"Your face"
+	,"Tool"
+	,"Wanker"
+	,"Tit"
 	];
 function createScreen() {
 	document.write("<div id='voicePickerDiv'  ><span id='voicePickerSetup' >Touch me</span><span id='voicePicker' ></span></div>");
-	
+	extraWord = SQGetURIString();
+	if (extraWord != '') {
+		insults.push(extraWord);
+	}
 	setTimeout(speakVoice, 3000);
 }
 
