@@ -1668,6 +1668,30 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLXzm81N7Hqq7u7PZEw8Hlisq4HkDOZtC1nphID8Zb86sBVKSOyMWfxqvqMcOYbsXOTE8tS0ndcSfVW7KLGjmyZSVVEZCJLlGkBG46tYUSBILdwTl745PA42mjhKwK8zpuFPDd9pIIzg1fGWgP5iRhFLgQ=w481-h272-no?authuser=0",
 	answerimage : "https://media-cdn.tripadvisor.com/media/photo-s/0e/70/8d/c5/our-yummy-and-crunchy.jpg", answerSpeak : "Sausage"}) ;
 
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " + pictionaryCount++,
+		hoverover : "Pictionary on the theme of pizza toppings Ted and I have had",
+		tags : "2022-6-12,pictionary",
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLW4pkMaE4wC6p5Kgr-RsBI3gwiKNuWrsm7Itt-hHMFha7587ADJ3mq13HtVixpqfT4qfPtYB_qnA16sJRTDqOhuxUjRnmO8R58y9IfoOeW3GSkayUdWgTU279AB6AedomyMzaCh46VQTz5qyLH6NZgJPw=w207-h335-no?authuser=0",
+	answerimage : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/sweet-pepper-colorful-sweet-bell-peppers-natural-royalty-free-image-1611355757.", answerSpeak : "Peppers"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLW3NDsjhSYd6CfW__9ioMGzJaChRHuBnkVeBuCIfuKOnBbByZH9TPZirdIa192JaD94Oq80QPCXmHwM4K4jgjB5aiWI6TeuhbxX58AGoKUEHoSr3FBBYo3L6hnaIlP2SVsxJnOSoAwYHdQ7RGaZnaDlVA=w349-h354-no?authuser=0",
+	answerimage : "https://webassets.cyranecloud.com/dhh/wiltshire-boneless-ham-WCDX.jpg", answerSpeak : "Ham"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLX_PZYsk52zxIlNbwa9ge_9rgleUKiZK09itlLrQ3U73JyGUOSxCs230WzI9DJ9dICXAvdsIuJRZlZwBz5dl5RaPVNiN08eSsldRti7l2BYGQwz4Zo1ki9vAIqWB9nbBycJ7L1tP_EigDVgzjVoWVWjKw=w310-h308-no?authuser=0",
+	answerimage : "https://media-cdn.tripadvisor.com/media/photo-s/1a/53/87/51/extra-cheese-pizza-if.jpg", answerSpeak : "Extra cheese"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLV_4OGOnfuvz12bmEDVUDIDbc4etESaXSOXfV7mrxrpBBWNWLTi0uyr4vNmQ61ZKSvxwKjAouzAqxmU0mXoCwJCZtzkBjUBgnOlywZSC2AK_Busg4fPOKxRk4Gg093xJIxYrzYlEPV7X6otCVayhe_KVQ=w351-h286-no?authuser=0",
+	answerimage : "https://c.tenor.com/99BCNoiwD10AAAAC/joey-friends.gif", answerSpeak : "Chicken"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLV2Wd22yy5XZex9atHIWFBrXVTLe0ybtzPT_pfhzhaMuAjTEp390qYpCmfDZf1rkujhfn9rDd7IntdokGx1JmZFBNcPAmb2utuf5OHDQI5SHwy3quxZ3NdRoJOz2qw-CKuyEAi6yjk7D4RoJdCytJQEgg=w458-h365-no?authuser=0",
+	answerimage : "https://img.taste.com.au/Bm08ivvI/taste/2016/11/pineapple-maple-glazed-ham-92443-1.jpeg", answerSpeak : "Ham and Pineapple"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLV68_8QRGQSC53mpMPC3dRWAXjCmQH4CeX-JoBo7o86KrFdQgoHQB3zoXvypl72E24Leim1sk2ksUWls8sjlXn_s4jOzEIiezq139sxozH3-rtlD1zuwHODB75zDbtdjlmBrecAirNpoWG0hipoMICecA=w447-h377-no?authuser=0",
+	answerimage : "https://pizzatoday.com/wp-content/uploads/2019/12/Nutella_pizza.jpg", answerSpeak : "Banana and chocolate"}) ;
 
 
 
