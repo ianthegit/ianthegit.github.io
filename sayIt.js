@@ -84,6 +84,6 @@ function speakVoice(){
 	msg.text = speachText;
 	window.speechSynthesis.speak(msg);
 	
-	setTimeout(speakVoice, 4500);
+	setTimeout(speakVoice, 5000);
 }
 
