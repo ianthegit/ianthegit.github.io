@@ -2551,4 +2551,36 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : "You're the one that I want, Olivia Newton-John and John Travolta. Livin' thing, ELO.  Don't fear the reaper, Blue Oyster Cult.  Don't stop moving, S Club 7.  Blitzkreig Bop, The Ramones.  Wuthering Heights, Kate Bush.  Should I stay or should I go, the Clash.  Super Trooper, ABBA.  Money for Nothing, Dire Straits.  Wake me up, Wham! ", answerSpeak : "", question : ""}) ;
 
 
+quests[++questIndexBuilder] = { 
+		name : "Topicalish",
+		hoverover : "Some topical stuff, some general knowledge",
+		tags : "2022-6-19,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture, 	
+	question : " Daisy, a 12-week-old Bichon Frise cross, has 'broken a new record' for what this week?  " + Table4ColumnStart + "Chasing parked cars</td><td>Coin consumption</td><td>Slippers chewed</td><td>Shitting on the floor" + Table4ColumnEnd,
+	answer : "Coin Consumption", answerSpeak : "", image : "https://i.guim.co.uk/img/media/108ff1145db9881f53b0d53081b890b23ef841f8/0_400_2553_2294/master/2553.jpg?width=380&quality=85&auto=format&fit=max&s=41bef0455d5ed9701b7a44d293a6ad9b",
+	answerimage : "https://i.guim.co.uk/img/media/5ad5b36d54f8608a1beadc5b9ece04ef0ef005ce/0_0_4032_3024/master/4032.jpg?width=620&quality=85&auto=format&fit=max&s=ef93309ec919cd46cf96d71e6b9d732d"});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Nancy Crampton Brophy, a self-published romance novelist who once wrote an online essay called How to Murder Your Husband was convicted recently for what?  " + Table4ColumnStart + "Trashy writing</td><td>Sexual misconduct</td><td>Financial impropriety</td><td>Murdering her husband" + Table4ColumnEnd,
+	answer : "Murdering her husband", answerSpeak : "", image : "https://i.guim.co.uk/img/media/dbb84a82f1f7733ddcbe42a931f4aec0cbad6d5f/0_55_2500_1500/master/2500.jpg?width=620&quality=85&auto=format&fit=max&s=b5ca5a03bf9046b35e978e0727bd6c0e"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "The bit of crumpet that is Max Beesley was in the papers this week.  What did he do before he became an actor?  " + Table4ColumnStart + "Surgeon</td><td>Lawyer</td><td>Toured as a percussionist for Robbie Williams and Stevie Wonder amongst others</td><td>Hotel Manager" + Table4ColumnEnd,
+	answer : "Toured as a percussionist for Robbie Williams and Stevie Wonder amongst others (The rest were all acting roles he has had)", answerSpeak : "", image : "https://i.dailymail.co.uk/i/pix/2014/01/23/article-2544567-1AD8CB8800000578-974_306x364.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Following the first ever auction of VHS tapes, a sealed tape of the hit 1980s movie Back to the Future has sold for how much?  " + Table4ColumnStart + dollar + " 25,000</td><td>" + dollar + " 50,000</td><td>" + dollar + " 75,000</td><td>" + dollar + " 100,000" + Table4ColumnEnd,
+	answer :  dollar + " 75,000", answerSpeak : "", image : "https://i.guim.co.uk/img/media/d53bf249816f85625ede17e79c899f4cf9ccc746/0_88_3382_2031/master/3382.jpg?width=620&quality=85&auto=format&fit=max&s=f37a1873443c2c958ab80ffde8743bea"	});	
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers 4",
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2022-6-9,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/53aRfcDP1ZG5azOD2i180a?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Running up that Hill, Kate Bush.  Rolling in the Deep, Adele.  The winner takes it all, ABBA.  Jump, Van Halen.  Sweet Chold O Mine, Guns 'n' Roses.  Umbrella, Rihanna.  Billie Jean, Michael Jackson.  Call Me, Blondie.  Times like these, Foo Fighters.  Killer Queen, Queen", answerSpeak : "", question : ""}) ;
+
 
