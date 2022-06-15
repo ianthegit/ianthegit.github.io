@@ -151,6 +151,7 @@ audioOnlyYoutubeEnd =	'?rel=0"> </iframe> </div> </div>' ;
 
 gbp="&#163 ";
 euro="&#8364 ";
+dollar=" &#x24";
 quests = new Array();
 
 function getMonthName(index) {
