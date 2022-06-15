@@ -2569,6 +2569,9 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Following the first ever auction of VHS tapes, a sealed tape of the hit 1980s movie Back to the Future has sold for how much?  " + Table4ColumnStart + dollar + " 25,000</td><td>" + dollar + " 50,000</td><td>" + dollar + " 75,000</td><td>" + dollar + " 100,000" + Table4ColumnEnd,
 	answer :  dollar + " 75,000", answerSpeak : "", image : "https://i.guim.co.uk/img/media/d53bf249816f85625ede17e79c899f4cf9ccc746/0_88_3382_2031/master/3382.jpg?width=620&quality=85&auto=format&fit=max&s=f37a1873443c2c958ab80ffde8743bea"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Kim Kardashian has been accused of causing permanent damage to a dress she wore to walk the red carpet at the Met Gala.  Who did it previously belong to?  " + Table4ColumnStart + "Roseanne Barr</td><td>Jayne Mansfield</td><td>Marilyn Monroe</td><td>Kate Bush" + Table4ColumnEnd,
+	answer : "Marilyn Monroe", answerSpeak : "", image : "https://i.guim.co.uk/img/media/f2f82e2f291c04335f5723fa56ee2b07108c4caa/0_1568_5760_3456/master/5760.jpg?width=620&quality=85&auto=format&fit=max&s=ac32d8e009319d9d29c8c6e48fbd4c20"	});	
 
 
 
