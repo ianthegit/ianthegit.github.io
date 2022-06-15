@@ -2578,7 +2578,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 quests[++questIndexBuilder] = { 
 		name : "Bad Covers 4",
 		hoverover : "Songs you will know, but wish you did not after this.",
-		tags : "music,2022-6-9,InnerWheel,saturday",
+		tags : "music,2022-6-19,InnerWheel,saturday",
 		questInfo: new Array()
 	};
 
