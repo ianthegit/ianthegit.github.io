@@ -2554,11 +2554,12 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 quests[++questIndexBuilder] = { 
 		name : "Topicalish",
 		hoverover : "Some topical stuff, some general knowledge",
+		splash : {splashType : splashTypePictureAndText , splashText : "In the week a Google engineer claimed that it's AI chatbot has become sentient andis scared of being turned off, what else has happened?", splashImage : "https://c.tenor.com/dR6vK_dQ1UgAAAAC/%C3%B3culos-escuro.gif" },
 		tags : "2022-6-19,saturday,InnerWheel,surfers", 
 		questInfo: new Array() };
 addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture, 	
 	question : " Daisy, a 12-week-old Bichon Frise cross, has 'broken a new record' for what this week?  " + Table4ColumnStart + "Chasing parked cars</td><td>Coin consumption</td><td>Slippers chewed</td><td>Shitting on the floor" + Table4ColumnEnd,
-	answer : "Coin Consumption", answerSpeak : "", image : "https://i.guim.co.uk/img/media/108ff1145db9881f53b0d53081b890b23ef841f8/0_400_2553_2294/master/2553.jpg?width=380&quality=85&auto=format&fit=max&s=41bef0455d5ed9701b7a44d293a6ad9b",
+	answer : "Coin Consumption - 20 in fact - when asked how she was, the vet said 'No change', I hope...", answerSpeak : "", image : "https://i.guim.co.uk/img/media/108ff1145db9881f53b0d53081b890b23ef841f8/0_400_2553_2294/master/2553.jpg?width=380&quality=85&auto=format&fit=max&s=41bef0455d5ed9701b7a44d293a6ad9b",
 	answerimage : "https://i.guim.co.uk/img/media/5ad5b36d54f8608a1beadc5b9ece04ef0ef005ce/0_0_4032_3024/master/4032.jpg?width=620&quality=85&auto=format&fit=max&s=ef93309ec919cd46cf96d71e6b9d732d"});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Nancy Crampton Brophy, a self-published romance novelist who once wrote an online essay called How to Murder Your Husband was convicted recently for what?  " + Table4ColumnStart + "Trashy writing</td><td>Sexual misconduct</td><td>Financial impropriety</td><td>Murdering her husband" + Table4ColumnEnd,
@@ -2572,7 +2573,27 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Kim Kardashian has been accused of causing permanent damage to a dress she wore to walk the red carpet at the Met Gala.  Who did it previously belong to?  " + Table4ColumnStart + "Roseanne Barr</td><td>Jayne Mansfield</td><td>Marilyn Monroe</td><td>Kate Bush" + Table4ColumnEnd,
 	answer : "Marilyn Monroe", answerSpeak : "", image : "https://i.guim.co.uk/img/media/f2f82e2f291c04335f5723fa56ee2b07108c4caa/0_1568_5760_3456/master/5760.jpg?width=620&quality=85&auto=format&fit=max&s=ac32d8e009319d9d29c8c6e48fbd4c20"	});	
-
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Sue Barker has announced this year will be her last year broadcasting from Wimbledon. But when did she retire as a professional tennis player?  " + Table4ColumnStart + "1984</td><td>1983</td><td>1982</td><td>1981" + Table4ColumnEnd,
+	answer : "1984", answerSpeak : "", image : "https://i.guim.co.uk/img/media/e4d8da2573a5ddc4dc3022003e8ffe9020945ed5/239_81_1110_665/master/1110.jpg?width=620&quality=85&auto=format&fit=max&s=a177b9ca809e8dccf581a58239921510"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Thursday marked what would have been comedian Stan Laurel's birthday today. But where was he (pictured, left) born?  " + Table4ColumnStart + "Old Greenwich, Connecticut, USA</td><td>Lucknow, Uttar Pradesh, India</td><td>Nairn, Nairnshire, Scotland</td><td>Ulverston, Lancashire, England" + Table4ColumnEnd,
+	answer : "Ulverston, Lancashire, England", answerSpeak : "", image : "https://i.guim.co.uk/img/media/cc53bcaf06a0dedc18b7695024c00cec7d9acd73/0_249_4915_2950/master/4915.jpg?width=620&quality=85&auto=format&fit=max&s=fffef0fa7537ce7644103ce03d1ab337"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Which of these actions causes there to be a chemical reaction?  " + Table4ColumnStart + "Adding vinegar to water</td><td>Mixing salt with water</td><td>Stirring sugar into a cup of tea</td><td>Leaving milk to go sour" + Table4ColumnEnd,
+	answer : "Leaving milk to go sour", answerSpeak : "", image : ""	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "McDonald's restaurants in Russia have begun reopening with a new logo and under the new name Vkusno & tochka, which (roughly) translates to what?  " + Table4ColumnStart + "Burgers and that's it</td><td>Tasty and that's it</td><td>Fast food and that's it</td><td>Clown-free and that's it" + Table4ColumnEnd,
+	answer : "Tasty and that's it", answerSpeak : "", image : "https://i.guim.co.uk/img/media/a3e858702ebd22bc7a987709e072e0e8a57184f9/1825_433_3290_1974/master/3290.jpg?width=620&quality=85&auto=format&fit=max&s=9cbc531c3a0d11b0c494aaf116d70f13"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Lady Gaga is going to be starring in the sequel to the miserabilist multi-award-winning Joker movie. Who will she be playing?  " + Table4ColumnStart + "Batgirl</td><td>Harley Quinn</td><td>Poison Ivy</td><td>The Anchoress" + Table4ColumnEnd,
+	answer : "Harley Quinn", answerSpeak : "", image : "https://i.guim.co.uk/img/media/c978021f8d03528fee03ab6cf921da581e27b443/799_0_3697_2218/master/3697.jpg?width=620&quality=85&auto=format&fit=max&s=2db70c7fbf11c547645e0c59db89b545"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which rock star's childhood stamp collection will be going on display at the Postal Museum in London in July?  " + Table4ColumnStart + "Rod Stewart</td><td>Freddie Mercury</td><td>Roger Daltrey</td><td>Kate Bush" + Table4ColumnEnd,
+	answer : "Freddie Mercury", answerSpeak : "", image : "https://cdn.shopify.com/s/files/1/0267/3639/4417/products/Freddie-Mercury-screen-print-black-frame-ws_860x.jpg?v=1636552257"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "It has been recommended that the smoking age in England should rise by a year, each and every year, to extinguish the habit. Which other country has previously announced this policy?  " + Table4ColumnStart + "Japan</td><td>Switzerland</td><td>Australia</td><td>New Zealand" + Table4ColumnEnd,
+	answer : "New Zealand", answerSpeak : "", image : ""	});	
 
 
 quests[++questIndexBuilder] = { 
