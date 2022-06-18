@@ -2550,6 +2550,31 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/0XrcoLx50iYczrsefac8EW?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
 	answer : "You're the one that I want, Olivia Newton-John and John Travolta. Livin' thing, ELO.  Don't fear the reaper, Blue Oyster Cult.  Don't stop moving, S Club 7.  Blitzkreig Bop, The Ramones.  Wuthering Heights, Kate Bush.  Should I stay or should I go, the Clash.  Super Trooper, ABBA.  Money for Nothing, Dire Straits.  Wake me up, Wham! ", answerSpeak : "", question : ""}) ;
 
+quests[++questIndexBuilder] = { 
+		name : "O!  My it is hot.",
+		hoverover : "O based questions",
+		tags : "2022-6-19,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What 'O' is a musical written by the duo of Rodgers and Hammerstein and shares its name with a U.S. State?", 
+	answer : "Oklahoma"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What 'O' is also called 'Ladies Fingers', which can get a bit slimy when the seed pods are cooked?", 
+	answer : "Okra"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What 'O' is the 5th Great Lake - Lake Superior, Lake Erie, Lake Huron, Lake Michigan & Lake ?", 
+	answer : "Ontario"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What 'O' is the plant which natural vanilla flavouring comes from, the flower's name being derived from the Greek word for testicle ?", 
+	answer : "Orchid"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What 'O' is a herb used to flavour tomato based sauces, often on a pizza, also known as Wild Marjoram?", 
+	answer : "Oregano"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "The Ballad Of Reading Gaol & De Profundis, were written from the experiences of which 'O', while in gaol?", 
+	answer : "Oscar Wilde"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What 'O' is a major source of 'withies', used in basketwork, a small Eurasian willow which grows mostly in wet habitats?", 
+	answer : "Osier"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What 'O', as well as being a unit of measurement, is another name for the snow leopard ?", 
+	answer : "Ounce"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What 'O' is a morsel of meat found in a fowl's back, reckoned by some to be the tastiest, named after a sea creature?", 
+	answer : "Oyster"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "Which 'O' underwent treatment for rabies following an incident in which he bit the head off a live bat ?", 
+	answer : "Ozzy Osbourne"}) ;
 
 quests[++questIndexBuilder] = { 
 		name : "Topicalish",
