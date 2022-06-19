@@ -1,4 +1,5 @@
 
+
 quests[++questIndexBuilder] = { //https://www.buzzfeed.com/ivyrichardson1/not-nice-sweets-brits   https://www.buzzfeed.com/moonlightskies/how-many-of-these-holiday-films-have-you-seen-alre-aq7jys05t5
 		name : "Goggely-eyed",
 		hoverover : "Do you recognise these?",
@@ -69,7 +70,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "The northernmost point of Brazil is closest to "+ Table4ColumnStart + "Canada</td><td>the Southernmost point of Brazil</td><td>Iceland</td><td>Portugal" + Table4ColumnEnd, // 
 	image : "https://thumbs.gfycat.com/LimitedSameChipmunk-max-1mb.gif",
 	answer : 'Canada'}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Is the Atlantic entry point of the Panama Canal further West or further East than the Pacific entry point?", // 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Is the Western (Atlantic) entry point of the Panama Canal further West or further East than the Eastern (Pacific) entry point?", // 
 	image : "https://thumbs.gfycat.com/LimitedSameChipmunk-max-1mb.gif",
 	answer : 'West </BR><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d504290.5506851502!2d-79.80959006896994!3d9.084712135182862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fab5f4b31cd492d%3A0xd9dd11e7a14a0960!2sPanama%20Canal!5e0!3m2!1sen!2suk!4v1638628643744!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe> '}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Is the Northen (Mediterranean Sea) entry point to the Suez Canal further North or further South than the Southern (Gulf of Suez) entry point?", // 
@@ -203,8 +204,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	question : "Christmas songs from the ultimate Christmas film according to Ted.   Bonus point for the film name",
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/1cSFs3dYeHBjl3jETZ4hK8?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
 	answer : 'National Lampoons Christmas Vacation </BR> <iframe width="560" height="315" src="https://www.youtube.com/embed/3G3kVIsTgKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'}) ;
-
-
+		
 
 
 quests[++questIndexBuilder] = { 
@@ -253,7 +253,6 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 
 
 
-
 quests[++questIndexBuilder] = { 
 		name : "Elf-in-the-Fridge",
 		hoverover : "Everyone has heard of Elf-on-the-shelf, but do you know which chef owns which fridge...?",
@@ -280,16 +279,13 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Who owns this fridge?" + Table4ColumnStart + "Angela Hartnett</td><td>Ravneet Gill</td><td>Rukmini Iyer</td><td>Jules" + Table4ColumnEnd, // 
 	image : "https://i.guim.co.uk/img/media/d27378dcdcbd389cfd3f9ab08086dc13934a0340/0_0_5031_3550/master/5031.jpg?width=620&quality=85&auto=format&fit=max&s=6a03194f8d7169153d17aabdfea2dd0d",
 	answerSpeak : "Angela Hartnett", answer : "Angela Hartnett - My fridge is never without parmesan, anchovies, mayonnaise, mustard, piccalilli and homemade vinaigrette. The ideal ingredients to lift any savoury meal"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Who owns this fridge?" + Table4ColumnStart + "Angela Hartnett</td><td>Ravneet Gill</td><td>Rukmini Iyer</td><td>Jules" + Table4ColumnEnd, // 
-	image : "https://lh3.googleusercontent.com/pw/AM-JKLVctlGun5Zo782D6o-QUy4mm6PPoLSVDbqWL6mfFdLVeaSpGqSpC0qPRnOiTK_GMBoom5K2YUnfTlyE9cNou-sWktd3ad45hEUz8CLnjOwzojcdoxFp8iAjg57iqEQIfkKe8spRuNM3Kkb5yIwkjwBDCw=w1162-h871-no?authuser=0",
-	answerSpeak : "Jules", answer : "Jules - My fridge, my rules"}) ;
 
 
 quests[++questIndexBuilder] = { 
 		name : "Overheard-by-the-Elf",
 		hoverover : "Everyone has heard of Elf-on-the-shelf, but do you know who said what in 2021...?",
 		splash : {splashType : splashTypePictureAndText , splashText : "Everyone has heard of Elf-on-the-shelf, but do you know who said what in 2021", splashImage : "https://i.guim.co.uk/img/media/f902ce8e51195c0f8b1f60211c219530afcbd5c4/0_0_5000_3000/master/5000.jpg?width=1020&quality=85&auto=format&fit=max&s=0d90c43d5867d4de486afe627e45edd1" },
-		tags : "2021-12-19,saturday,InnerWheel,surfers,2021",
+		tags : "2021-12-19,saturday,InnerWheel,surfers",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
@@ -306,7 +302,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 } ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 	question : "Who said...</BR></BR>The problem with the wife who has known you since way before you were king of the world is that she sees through your facade ?"+ Table4ColumnStart + "Samantha Cameron</td><td>Melania Trump</td><td>Sarah Vine</td><td>Jules" + Table4ColumnEnd,
-	answer : "Sarah Vine - shortly before divorcing Michael Gove", answerimage : "https://www.thesun.co.uk/wp-content/uploads/2021/08/GIF-Gove-v2.gif?strip=all&w=600&h=400&crop=1"
+	answer : "Sarah Vine - shorty before divorcing Michael Gove", answerimage : "https://www.thesun.co.uk/wp-content/uploads/2021/08/GIF-Gove-v2.gif?strip=all&w=600&h=400&crop=1"
 } ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 	question : "Who said...</BR></BR>Level up? You can't even fill up! ?"+ Table4ColumnStart + "Ian on the way to Wales</td><td>Jimmy Carr</td><td>Eddie Stobart</td><td>Keir Starmer" + Table4ColumnEnd,
@@ -336,6 +332,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 
 
 
+
 quests[++questIndexBuilder] = { 
 		name : "Christmas Film 2",
 		hoverover : "Christmas songs from another Christmas film franchise soundtrack.   Bonus point for the film name ",
@@ -347,6 +344,10 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	question : "Christmas songs from another Christmas film franchise soundtrack.   Bonus point for the film name",
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/1tl6175ZP5j3lkL3EosT7b?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
 	answer : 'Bad Santa'}) ;
+		
+
+
+
 
 
 
@@ -361,7 +362,9 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	question : "",
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/1nAPcphZRZ6LB0xvwiSe2x?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
 	answer : ''}) ;
-	
+		
+
+
 
 
 
@@ -425,7 +428,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Naval warfare was revolutionised in the 1850s and 1860s making images like this a thing of the past as countries scrambled to launch ironclad and iron-hulled warships. But who had the first ironclad warship?"+ Table4ColumnStart + "United Kingdom</td><td>United States</td><td>France</td><td>Spain" + Table4ColumnEnd , // 
 	image : "https://i.guim.co.uk/img/media/c59c30ec5087428460e95ee8518dd0805fafe537/101_159_5084_3053/master/5084.jpg?width=620&quality=85&auto=format&fit=max&s=5a9cfd42e7b60fedde43d60b11630b41",
 	answerSpeak : "France", answer : "France"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Girls Aloud, featuring the much-mourned Sarah Harding who died earlier this year, were formed on which TV talent show?"+ Table4ColumnStart + "Fame Academy</td><td>Popstars: The Rivals</td><td>The Voice UK</td><td>The X Factor" + Table4ColumnEnd , // 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Girls Aloud, featuring the much-mourned Sarah Harding who died last year, were formed on which TV talent show?"+ Table4ColumnStart + "Fame Academy</td><td>Popstars: The Rivals</td><td>The Voice UK</td><td>The X Factor" + Table4ColumnEnd , // 
 	image : "https://i.gifer.com/BF6n.gif",
 	answerSpeak : "Popstars: The Rivals", answer : "Popstars: The Rivals - way back in 2002"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "The Doctor Who New Year's Day special this year is called Eve of the Daleks. But who created the Daleks?"+ Table4ColumnStart + "Sydney Newman</td><td>Terry Nation</td><td>Douglas Adams</td><td>Russell T Davies" + Table4ColumnEnd , // 
@@ -437,7 +440,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "He was big and strong, in his eyes a flaming glow, but 30 December is also the anniversary of the murder of adviser to the Tsar Grigori Rasputin. In which year was Boney M's all-time disco banger Rasputin released?"+ Table4ColumnStart + "1975</td><td>1978</td><td>1980</td><td>1981" + Table4ColumnEnd , // 
 	image : "https://thumbs.gfycat.com/AgonizingThunderousEskimodog-size_restricted.gif",
 	 answer : "1978"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Iron Maiden had their only UK No 1 hit single - Bring Your Daughter To The Slaughter - in the singles chart that ran from 30 December 1990 to 5 January 1991. But who had they replaced at No 1 from the previous week?"+ Table4ColumnStart + "Band Aid, with a reissue of Do They Know It's Christmas</td><td>Queen, with a reissue of Bohemian Rhapsody coupled with These Are the Days of Our Lives</td><td>Cliff Richard, with Saviour's Day</td><td>Kate Bush, with December Will Be Magic Again" + Table4ColumnEnd , // 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Iron Maiden had their only UK No 1 hit single - Bring Your Daughter To The Slaughter - in the singles chart that ran from 30 December 1990 to 5 January 1991. But who had they replaced at No 1 from the previous week?"+ Table4ColumnStart + "Band Aid, with a reissue of Do They Know It's Christmas</td><td>Queen, with a reissue of Bohemian Rhapsody coupled with These Are the Days of Our Lives</td><td>Cliff Richard, with Saviou's Day</td><td>Kate Bush, with December Will Be Magic Again" + Table4ColumnEnd , // 
 	image : "https://i.guim.co.uk/img/media/ebdc5e022f3485aee430f23ad4592e69bee1f3b3/0_0_2000_1200/master/2000.jpg?width=620&quality=85&auto=format&fit=max&s=2d5ed295d0cbaea34ffbfa54b84fbd28",
 	 answer : "Cliff Richard, with Saviour's Day"}) ;
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
@@ -449,7 +452,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "There was controversy after an Amazon Alexa device suggested to a 10 year old child to do which stupid stunt when asked for 'a challenge'?  " + Table4ColumnStart + "Eat a Tide pod</td><td>Eat a spoonful of ground cinnamon</td><td>Crack an egg over someone's head</td><td>Stick a penny into an electric socket" + Table4ColumnEnd,
 	answer : "Stick a penny into an electric socket", image : "https://i.guim.co.uk/img/media/912a9dad985cf3a5e3a5df39cfee1ffee77b39bc/0_165_3500_2101/master/3500.jpg?width=620&quality=85&auto=format&fit=max&s=ae28da4e1e9971d2e3f5f1d200d33d4f"	});	
-
 
 
 quests[++questIndexBuilder] = { 
@@ -535,6 +537,48 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	question : "",
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/6F3AIOy152FVyHZNH7io2W?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
 	answer : ''}) ;
+		
+
+
+quests[++questIndexBuilder] = { 
+		name : "General stuff",
+		hoverover : "What has been going on, and other stuff",
+		tags : "2022-1-15,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "It was Orlando Bloom's birthday on Thursday. He first came to global prominence in the Lord of the Rings movies as Legolas, but what is the name of his character in the Pirates of the Caribbean film series?  " + Table4ColumnStart + "Will Turner</td><td>Will Turner-few-heads</td><td>Will Tedflower</td><td>Will Writer" + Table4ColumnEnd,
+	answer : "Will Turner", image : "https://www.usmagazine.com/wp-content/uploads/2018/11/MAIN.jpg?w=1370&quality=86&strip=all"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Ursula K Le Guin is regarded as one of the foremost science fiction writers of the 20th century. But which of these ISN'T the title of one of her book series?  " + Table4ColumnStart + "The Earthsea Cycle</td><td>Hainish Cycle</td><td>Discworld</td><td>Annals of the Western Shore" + Table4ColumnEnd,
+	answer : "Discworld", image : "https://i.guim.co.uk/img/media/38ffaa4fe8050c888d8a70681911f615e2d17359/0_396_2855_1713/master/2855.jpg?width=620&quality=85&auto=format&fit=max&s=fee83abae710d0b3435b55d26ebc4174"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "In the modern periodic table, how are the elements of a period arranged from left to right?  " + Table4ColumnStart + "In order of boiling point in degrees Kelvin</td><td>In order of discovery</td><td>In order of increasing atomic number</td><td>In alphabetical order of their name in Latin" + Table4ColumnEnd,
+	answer : "In order of increasing atomic number", image : "https://m.media-amazon.com/images/I/71iOasBCeXL._AC_SS130_.jpg"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "The Royal Order of the Seraphim is a chivalry order that appoints knights. Where?  " + Table4ColumnStart + "Sweden</td><td>Rome</td><td>The James Bond novels</td><td>Some science-fiction book no-one has read unless they're under 12 or work in IT" + Table4ColumnEnd,
+	answer : "Sweden"	, image : "https://astronlogia.com/wp-content/uploads/2020/12/seraphim-angels.webp"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "China upset the UK's security forces by releasing a spoof video featuring which spy?  " + Table4ColumnStart + "Jane Bond</td><td>Jennie Bond</td><td>James Pond</td><td>James Wrong" + Table4ColumnEnd,
+	answer : 'James Pond </BR></BR> <iframe width="560" height="315" src="https://www.youtube.com/embed/6og10hBza04" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : " In AD532 rival factions of chariot race supporters triggered the Nika riots, which, it is claimed, destroyed nearly half of which city?  " + Table4ColumnStart + "Constantinople</td><td>Rome</td><td>Athens</td><td>Arbeia" + Table4ColumnEnd,
+	answer : "Constantinople - allegedly as many as 30,000 rioters were killed"	, image : "https://i.ytimg.com/vi/4plmljU0-2E/maxresdefault.jpg"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "The Greek flag - notably not pictured here - features a white cross on a blue background in the top left-hand corner. Ignoring that bit, how many BLUE stripes does it have on the main body of the flag?  " + Table4ColumnStart + "3</td><td>5</td><td>7</td><td>9" + Table4ColumnEnd,
+	answer : "5 - There are nine stripes in total - said to represent the nine syllables of the phrase 'Freedom or Death' - but that is five blue stripes and four white ones", image : "https://i.guim.co.uk/img/media/8ce45e37e8d251afe7ae89f7f86039684b9de766/0_384_5760_3456/master/5760.jpg?width=620&quality=85&auto=format&fit=max&s=fe46aa6f2f3694a3abb12d268f75f3db"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "It has been announced that the first new plant to be officially named in 2022 - this small was tree discovered in the Ebo forest in Cameroon, don't look up or you'll miss it - has been named after which famous Hollywood actor for their environmental campaigning?  " + Table4ColumnStart + "Meryl Streep</td><td>Jennifer Lawrence</td><td>Leonardo DiCaprio</td><td>Theresa Russell" + Table4ColumnEnd,
+	answer : "Leonardo DiCaprio"	, image : "https://i.guim.co.uk/img/media/75f70f944688a1005e0b607d29b79fed23265946/0_436_2848_1708/master/2848.jpg?width=620&quality=85&auto=format&fit=max&s=83267033f57cdc58f31b0940d7127bbb"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Britain's nuclear weapons are carried by four submarines as part of the Trident programme. What are their names?  " + Table4ColumnStart + "Endeavour, Endurance, Enterprise and Excalibur</td><td>Nautilus, Nelson, Nemesis and Neptune</td><td>Vanguard, Vengeance, Victorious and Vigilant</td><td>John, Paul, George and Subby McSubface" + Table4ColumnEnd,
+	answer : "Vanguard, Vengeance, Victorious and Vigilant"	, image : "https://i.guim.co.uk/img/media/779a4fb49f1f3e44767b7726bad601949acdd457/1_710_2152_1292/master/2152.jpg?width=620&quality=85&auto=format&fit=max&s=c8882f1cfe2b030ec4511161675d93b3"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "WHO AM I? I was one of Phil Spector's first Wall Of Sound singers who died last week (Pictured with Bruce)?  " + Table4ColumnStart + "Regina Spector</td><td>Ronnie Spector</td><td>Reggie Spector</td><td>Blofeld" + Table4ColumnEnd,
+	answer : "Ronnie Spector"	, image : "https://i.guim.co.uk/img/media/1ca83ff3f7ee824147b75c853a011b5e0e096746/0_65_3926_2354/master/3926.jpg?width=380&quality=85&auto=format&fit=max&s=8ebcdf415ba80bc295f098e3b37cab17"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "In 1988, Peter Gabriel guested on whose album, titled Chalk Mark in a Rain Storm?  " + Table4ColumnStart + "Joni Mitchell</td><td>Stevie Nicks</td><td>Marianne Faithfull</td><td>Kate Bush" + Table4ColumnEnd,
+	answer : "Joni Mitchell"	, image : "https://i.guim.co.uk/img/media/71813a1ce760206f1384e9bfbea4d63960becfaf/0_0_2000_1200/master/2000.jpg?width=620&quality=85&auto=format&fit=max&s=a4e4bee79cd9d42d634445c846f2893d"});
 
 
 
@@ -594,49 +638,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
 	question : "What is the name of the original film?",	answer : "Bateries Not Included" ,
 	image : "http://www2.b3ta.com/host/creative/38966/1641765549/usbcablenotincluded.jpg",
 	answerimage : "https://m.media-amazon.com/images/I/91MB0OPqqKL._AC_SL1500_.jpg"}) ;
-
-
-
-quests[++questIndexBuilder] = { 
-		name : "General stuff",
-		hoverover : "What has been going on, and other stuff",
-		tags : "2022-1-15,saturday,InnerWheel,surfers",
-		questInfo: new Array()
-	};
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "It was Orlando Bloom's birthday on Thursday. He first came to global prominence in the Lord of the Rings movies as Legolas, but what is the name of his character in the Pirates of the Caribbean film series?  " + Table4ColumnStart + "Will Turner</td><td>Will Turner-few-heads</td><td>Will Tedflower</td><td>Will Writer" + Table4ColumnEnd,
-	answer : "Will Turner", image : "https://www.usmagazine.com/wp-content/uploads/2018/11/MAIN.jpg?w=1370&quality=86&strip=all"});
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Ursula K Le Guin is regarded as one of the foremost science fiction writers of the 20th century. But which of these ISN'T the title of one of her book series?  " + Table4ColumnStart + "The Earthsea Cycle</td><td>Hainish Cycle</td><td>Discworld</td><td>Annals of the Western Shore" + Table4ColumnEnd,
-	answer : "Discworld", image : "https://i.guim.co.uk/img/media/38ffaa4fe8050c888d8a70681911f615e2d17359/0_396_2855_1713/master/2855.jpg?width=620&quality=85&auto=format&fit=max&s=fee83abae710d0b3435b55d26ebc4174"});
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "In the modern periodic table, how are the elements of a period arranged from left to right?  " + Table4ColumnStart + "In order of boiling point in degrees Kelvin</td><td>In order of discovery</td><td>In order of increasing atomic number</td><td>In alphabetical order of their name in Latin" + Table4ColumnEnd,
-	answer : "In order of increasing atomic number", image : "https://m.media-amazon.com/images/I/71iOasBCeXL._AC_SS130_.jpg"});
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "The Royal Order of the Seraphim is a chivalry order that appoints knights. Where?  " + Table4ColumnStart + "Sweden</td><td>Rome</td><td>The James Bond novels</td><td>Some science-fiction book no-one has read unless they're under 12 or work in IT" + Table4ColumnEnd,
-	answer : "Sweden"	, image : "https://astronlogia.com/wp-content/uploads/2020/12/seraphim-angels.webp"});
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
-	question : "China upset the UK's security forces by releasing a spoof video featuring which spy?  " + Table4ColumnStart + "Jane Bond</td><td>Jennie Bond</td><td>James Pond</td><td>James Wrong" + Table4ColumnEnd,
-	answer : 'James Pond </BR></BR> <iframe width="560" height="315" src="https://www.youtube.com/embed/6og10hBza04" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'});
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : " In AD532 rival factions of chariot race supporters triggered the Nika riots, which, it is claimed, destroyed nearly half of which city?  " + Table4ColumnStart + "Constantinople</td><td>Rome</td><td>Athens</td><td>Arbeia" + Table4ColumnEnd,
-	answer : "Constantinople - allegedly as many as 30,000 rioters were killed"	, image : "https://i.ytimg.com/vi/4plmljU0-2E/maxresdefault.jpg"});
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "The Greek flag - notably not pictured here - features a white cross on a blue background in the top left-hand corner. Ignoring that bit, how many BLUE stripes does it have on the main body of the flag?  " + Table4ColumnStart + "3</td><td>5</td><td>7</td><td>9" + Table4ColumnEnd,
-	answer : "5 - There are nine stripes in total - said to represent the nine syllables of the phrase 'Freedom or Death' - but that is five blue stripes and four white ones", image : "https://i.guim.co.uk/img/media/8ce45e37e8d251afe7ae89f7f86039684b9de766/0_384_5760_3456/master/5760.jpg?width=620&quality=85&auto=format&fit=max&s=fe46aa6f2f3694a3abb12d268f75f3db"});
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "It has been announced that the first new plant to be officially named in 2022 - this small tree was discovered in the Ebo forest in Cameroon, don't look up or you'll miss it - has been named after which famous Hollywood actor for their environmental campaigning?  " + Table4ColumnStart + "Meryl Streep</td><td>Jennifer Lawrence</td><td>Leonardo DiCaprio</td><td>Theresa Russell" + Table4ColumnEnd,
-	answer : "Leonardo DiCaprio"	, image : "https://i.guim.co.uk/img/media/75f70f944688a1005e0b607d29b79fed23265946/0_436_2848_1708/master/2848.jpg?width=620&quality=85&auto=format&fit=max&s=83267033f57cdc58f31b0940d7127bbb"});
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Britain's nuclear weapons are carried by four submarines as part of the Trident programme. What are their names?  " + Table4ColumnStart + "Endeavour, Endurance, Enterprise and Excalibur</td><td>Nautilus, Nelson, Nemesis and Neptune</td><td>Vanguard, Vengeance, Victorious and Vigilant</td><td>John, Paul, George and Subby McSubface" + Table4ColumnEnd,
-	answer : "Vanguard, Vengeance, Victorious and Vigilant"	, image : "https://i.guim.co.uk/img/media/779a4fb49f1f3e44767b7726bad601949acdd457/1_710_2152_1292/master/2152.jpg?width=620&quality=85&auto=format&fit=max&s=c8882f1cfe2b030ec4511161675d93b3"});
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "WHO AM I? I was one of Phil Spector's first Wall Of Sound singers who died last week (Pictured with Bruce)?  " + Table4ColumnStart + "Regina Spector</td><td>Ronnie Spector</td><td>Reggie Spector</td><td>Blofeld" + Table4ColumnEnd,
-	answer : "Ronnie Spector"	, image : "https://i.guim.co.uk/img/media/1ca83ff3f7ee824147b75c853a011b5e0e096746/0_65_3926_2354/master/3926.jpg?width=380&quality=85&auto=format&fit=max&s=8ebcdf415ba80bc295f098e3b37cab17"});
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "In 1988, Peter Gabriel guested on whose album, titled Chalk Mark in a Rain Storm?  " + Table4ColumnStart + "Joni Mitchell</td><td>Stevie Nicks</td><td>Marianne Faithfull</td><td>Kate Bush" + Table4ColumnEnd,
-	answer : "Joni Mitchell"	, image : "https://i.guim.co.uk/img/media/71813a1ce760206f1384e9bfbea4d63960becfaf/0_0_2000_1200/master/2000.jpg?width=620&quality=85&auto=format&fit=max&s=a4e4bee79cd9d42d634445c846f2893d"});
-
 
 
 quests[++questIndexBuilder] = { 
@@ -752,13 +753,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/451iPKwE1ZLTsjrPMy874I?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
 	answer : 'Queen, The Beatles, Queen & David Bowie, Elton John, The Beatles, Queen, Elton John, Elton John & Kiki Dee, Queen, Queen'}) ;
 		
-
-
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
-	question : "",
-	spotify : '<iframe src="https://open.spotify.com/embed/playlist/451iPKwE1ZLTsjrPMy874I?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
-	answer : 'Queen, The Beatles, Queen & David Bowie, Elton John, The Beatles, Queen, Elton John, Elton John & Kiki Dee, Queen, Queen'}) ;
-		
 quests[++questIndexBuilder] = { 
 		name : "On Yer Bike 0",
 		hoverover : "Who is on their bike",
@@ -797,7 +791,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Who is on their bike?" ,
 	answer : "Alec Baldwin", image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-491228018-master-1511367019.jpg?crop=1xw:1xh;center,top&resize=980:*"	});	
-
 
 
 quests[++questIndexBuilder] = { 
@@ -871,45 +864,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	question : "Who is on their bike?" ,
 	answer : "Brad Pitt", image : "https://www.usmagazine.com/wp-content/uploads/2019/03/brad-pitt-biking.jpg?w=700&quality=86&strip=all"	});	
 
-quests[++questIndexBuilder] = { 
-		name : "Seeing Double 1",
-		hoverover : "Who is the real celeb",
-		splash : {splashType : splashTypePictureAndText , splashText : "Questions about celebrity doppelgangers - Indicate Left or Right for the real celeb, and name the celeb", splashImage : "https://wl-brightside.cf.tsp.li/resize/728x/jpg/658/fed/ea33765197a10d5d8c06b2531f.jpg" },
-		tags : "2022-2-5,saturday,InnerWheel,surfers",
-		questInfo: new Array()
-	};
-
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Is the person on the left or right the real celeb, and who is it?" ,
-	answer : "Right is the real Daniel Craig", image : "https://static.boredpanda.com/blog/wp-content/uploads/2019/10/25-5db2dd8736eee__700.jpg"	});	
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Is the person on the left or right the real celeb, and who is it?" ,
-	answer : "Right is thereal Johnny Depp", image : "https://static.boredpanda.com/blog/wp-content/uploads/2019/10/14-5db2c76b787bf__700.jpg"	});	
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Is the person on the left or right the real celeb, and who is it?" ,
-	answer : "Right is the real Jason Statham", image : "https://static.boredpanda.com/blog/wp-content/uploads/2019/10/27-5db2df56472cf__700.jpg"	});	
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Is the person on the left or right the real celeb, and who is it?" ,
-	answer : "Right is the real Mariah Carrey", image : "https://static.boredpanda.com/blog/wp-content/uploads/2019/10/18-5db2d5f8e8780__700.jpg"	});	
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Is the person on the left or right the real celeb, and who is it?" ,
-	answer : "Right is the real Rihanna", image : "https://static.boredpanda.com/blog/wp-content/uploads/2019/10/24-5db2dcddd2941__700.jpg"	});	
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Is the person on the left or right the real celeb, and who is it?" ,
-	answer : "Right is the real Justin Timberlake", image : "https://static.boredpanda.com/blog/wp-content/uploads/2019/10/20-5db2d8caf15cf__700.jpg"	});	
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Is the person on the left or right the real celeb, and who is it?" ,
-	answer : "Right is the real Andew Lincoln", image : "https://static.boredpanda.com/blog/wp-content/uploads/2019/10/17-5db2d56ed72aa__700.jpg"	});	
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Is the person on the left or right the real celeb, and who is it?" ,
-	answer : "Right is the real Katy Perry", image : "https://wl-brightside.cf.tsp.li/resize/728x/jpg/027/085/f470fc506fa2dda8e4098dceb9.jpg"	});	
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Is the person on the left or right the real celeb, and who is it?" ,
-	answer : "Right is teh real Emma Watson", image : "https://wl-brightside.cf.tsp.li/resize/728x/jpg/21c/fba/31b18a5d1dbfb9af1a3b1766b0.jpg"	});	
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Is the person on the left or right the real celeb, and who is it?" ,
-	answer : "Right is the real Adele", image : "https://wl-brightside.cf.tsp.li/resize/728x/jpg/328/ccb/4da0fd5a439bbc4095d30324b6.jpg"	});	
-
 
 quests[++questIndexBuilder] = { 
 		name : "Rabbie Burns",
@@ -963,6 +917,49 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 
 quests[++questIndexBuilder] = { 
+		name : "Seeing Double 1",
+		hoverover : "Who is the real celeb",
+		splash : {splashType : splashTypePictureAndText , splashText : "Questions about celebrity doppelgangers - Indicate Left or Right for the real celeb, and name the celeb", splashImage : "https://wl-brightside.cf.tsp.li/resize/728x/jpg/658/fed/ea33765197a10d5d8c06b2531f.jpg" },
+		tags : "2022-2-5,saturday,InnerWheel,surfers",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Is the person on the left or right the real celeb, and who is it?" ,
+	answer : "Right is the real Daniel Craig", image : "https://static.boredpanda.com/blog/wp-content/uploads/2019/10/25-5db2dd8736eee__700.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Is the person on the left or right the real celeb, and who is it?" ,
+	answer : "Right is thereal Johnny Depp", image : "https://static.boredpanda.com/blog/wp-content/uploads/2019/10/14-5db2c76b787bf__700.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Is the person on the left or right the real celeb, and who is it?" ,
+	answer : "Right is the real Jason Statham", image : "https://static.boredpanda.com/blog/wp-content/uploads/2019/10/27-5db2df56472cf__700.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Is the person on the left or right the real celeb, and who is it?" ,
+	answer : "Right is the real Mariah Carrey", image : "https://static.boredpanda.com/blog/wp-content/uploads/2019/10/18-5db2d5f8e8780__700.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Is the person on the left or right the real celeb, and who is it?" ,
+	answer : "Right is the real Rihanna", image : "https://static.boredpanda.com/blog/wp-content/uploads/2019/10/24-5db2dcddd2941__700.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Is the person on the left or right the real celeb, and who is it?" ,
+	answer : "Right is the real Justin Timberlake", image : "https://static.boredpanda.com/blog/wp-content/uploads/2019/10/20-5db2d8caf15cf__700.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Is the person on the left or right the real celeb, and who is it?" ,
+	answer : "Right is the real Andew Lincoln", image : "https://static.boredpanda.com/blog/wp-content/uploads/2019/10/17-5db2d56ed72aa__700.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Is the person on the left or right the real celeb, and who is it?" ,
+	answer : "Right is the real Katy Perry", image : "https://wl-brightside.cf.tsp.li/resize/728x/jpg/027/085/f470fc506fa2dda8e4098dceb9.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Is the person on the left or right the real celeb, and who is it?" ,
+	answer : "Right is teh real Emma Watson", image : "https://wl-brightside.cf.tsp.li/resize/728x/jpg/21c/fba/31b18a5d1dbfb9af1a3b1766b0.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Is the person on the left or right the real celeb, and who is it?" ,
+	answer : "Right is the real Adele", image : "https://wl-brightside.cf.tsp.li/resize/728x/jpg/328/ccb/4da0fd5a439bbc4095d30324b6.jpg"	});	
+
+
+
+
+
+quests[++questIndexBuilder] = { 
 		name : "Gems",
 		hoverover : "Songs about gemstones",
 		tags : "music,2022-1-29,InnerWheel,saturday",
@@ -974,7 +971,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/2k68AehnZzkuFEmPyqGZDD?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
 	answer : ''}) ;
 		
-
 
 quests[++questIndexBuilder] = { 
 		name : "Winter Rings",
@@ -991,7 +987,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
 	answer : '2 Hogsheads', image : "https://miro.medium.com/max/1024/0*VGygGn3jS40b8dAQ.jpg", answerimage : "https://preview.redd.it/jmosfxdaf6n31.jpg?width=960&crop=smart&auto=webp&s=9d853fb3dd69fbc77a5ea86fdffc0f15606a8493"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture, 	
 	question : "Why are Aubergines called Eggplants?" ,
-	answer : 'Some types look like eggs as they grow', image : "https://www.simplyseed.co.uk/user/products/Aubergine%20Farmers%20Long.jpg", answerimage : "https://static.boredpanda.com/blog/wp-content/uploads/2020/05/today-years-old-2-5ecbb623e0f60__700.jpg"	});	
+	answer : 'Some types look like egges as they grow', image : "https://www.simplyseed.co.uk/user/products/Aubergine%20Farmers%20Long.jpg", answerimage : "https://static.boredpanda.com/blog/wp-content/uploads/2020/05/today-years-old-2-5ecbb623e0f60__700.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "What are these?" ,
 	answer : 'Growing Cashews', image : "https://balconygardenweb-lhnfx0beomqvnhspx.netdna-ssl.com/wp-content/uploads/2015/10/cashew-nut-growing_mini.jpg"	});	
@@ -1030,10 +1026,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	question : "",
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/3XAGh5Ham78UkyuHWAmyw8?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
 	answer : ''}) ;
-
-
-
-
 
 
 
@@ -1101,9 +1093,11 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 
+
+
 quests[++questIndexBuilder] = { 
 		name : "Weatherfolk",
-		hoverover : "Recognise these smashers?",
+		hoverover : "Olympics start",
 		tags : "2022-2-20,saturday,InnerWheel,surfers",
 		questInfo: new Array()
 	};
@@ -1226,9 +1220,8 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 
-
 quests[++questIndexBuilder] = { 
-		name : "Palindromes " + palindromeCounter++,
+		name : "Palindromes " + +getAndIncrementCounterForType("Palindrome"),
 		splash : {splashType : splashTypeText , splashText : "Palindromes.  For example: </BR></BR>What does a baby wear to keep it's top clean?</BR></BR>BIB"},
 		hoverover : "Walking backwards for Christmas",
 		tags : "2022-2-27,saturday,InnerWheel,surfers",
@@ -1328,7 +1321,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	
 
 quests[++questIndexBuilder] = { 
-		name : "Palindromes " + palindromeCounter++,
+		name : "Palindromes " + +getAndIncrementCounterForType("Palindrome"),
 		splash : {splashType : splashTypeText , splashText : "Palindromes.  For example: </BR></BR>What do Americans call their female parent?</BR></BR>MOM"},
 		hoverover : "Walking backwards for Christmas",
 		tags : "2022-3-5,saturday,InnerWheel,surfers",
@@ -1356,7 +1349,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	question : "Name the song, and who you would expect to hear sing this",
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/2UWF1mwHcf54FWFzvZz6De?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
 	answer : 'The Darkness, J Geils Band, The Clash, Cliff Richard, Scissor Sisters, The Beatles, The Rolling Stones, Queen, The Cars, Status Quo '}) ;
-
 
 
 quests[++questIndexBuilder] = { 
@@ -1453,7 +1445,7 @@ quests[++questIndexBuilder] = {
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	question : "Name the song, and who you would expect to hear sing this",
-	spotify : '<iframe src="https://open.spotify.com/embed/playlist/7AErOsmKiNti5dv01iP3su?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7AErOsmKiNti5dv01iP3su?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
 	answer : 'Motorhead, Aerosmith, Bon Jon Bovi, Queen, Bob Marley, Journey, Survivor, Bryan Adams, Def Leppard, Aerosmith  '}) ;
 
 
@@ -1509,7 +1501,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 
 
-
 quests[++questIndexBuilder] = { 
 		name : "Food and Drink",
 		hoverover : "Bands named after food or drink",
@@ -1551,9 +1542,8 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Who had hits with 'Rich Girl', 'You make my Dreams', 'Maneater', 'Family Man'?"  ,
 	answer : "Hall & Oates", image : "https://static.independent.co.uk/2020/09/29/14/hall-oates-main.jpg?width=1200"	});	
-	
 
-quests[++questIndexBuilder] = { 
+quests[++questIndexBuilder] = { //https://spinditty.com/playlists/100-Best-Songs-With-Names-of-Cities-in-the-Title
 		name : "Places",
 		hoverover : "Songs with Places in the title?",
 		tags : "music,2022-3-19,InnerWheel,saturday",
@@ -1563,6 +1553,10 @@ quests[++questIndexBuilder] = {
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/05DAnTrg4BQIZDQBdwbLVJ?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
 	answer : '', question : ""}) ;
+
+
+
+
 
 quests[++questIndexBuilder] = {
 		name : "Mishmash",
@@ -1602,7 +1596,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Two Thursday's ago it was Clare 'Gregory's Girl' Grogan's birthday - belated Happy Birthday!  But what was the name of the band she had the hit single Happy Birthday with?  " + Table4ColumnStart + "Aztec Camera</td><td>Alphaville</td><td>Altered Images</td><td>Alphabeat" + Table4ColumnEnd,
 	answer : "Altered Images", image : "https://c.tenor.com/VM7OSo4utHYAAAAd/gregorys-girl-scottish-comedy.gif"	});	
-
 
 
 quests[++questIndexBuilder] = { 
@@ -1668,9 +1661,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	question : 'What should these lyrics be? ' + reRunButton  + "</BR></BR>" + "I got my first real sex dream" , answerSpeak : "", 
 	questionSpeak : "I got my first real sex dream",			answer : "I got my first real six-string",
 	image : "http://25.media.tumblr.com/3c88b043ca023e29384022d85ef7f11b/tumblr_mo8y65Hs7J1qhzxm5o1_500.gif"	});
-
-
-
 
 
 
@@ -1741,11 +1731,9 @@ quests[++questIndexBuilder] = {
 		tags : "music,2022-4-2,InnerWheel,saturday",
 		questInfo: new Array()
 	};
-
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/2OKdAr8A4MnDk4wT6vpjdG?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
 	answer : '', question : ""}) ;
-
 
 
 
@@ -1852,28 +1840,16 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	question : "Americans love a pageant.  Are these real or made up - are they a Parade or a Charade?  MISS PRETTIEST ANKLES" ,
 	answer : "Parade", answerSpeak : "", image : "https://miro.medium.com/max/996/1*WxihNVmAQydG72uMNiyMPw.gif"	});	
 
-
-//addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-//	question : "?  " + Table4ColumnStart + "?</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd,
-//	answer : "", answerSpeak : "", image : ""	});	
-//addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-//	question : "?  " + Table4ColumnStart + "?</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd,
-//	answer : "", answerSpeak : "", image : ""	});	
-
-
-
-
 quests[++questIndexBuilder] = { 
-		name : "Foreign versions 0",
-		hoverover : "Songs you will know, in a language you will not",
+		name : "Foreign versions " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, in a language you will not?",
 		tags : "music,2022-4-9,InnerWheel,saturday",
 		questInfo: new Array()
 	};
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe src="https://open.spotify.com/embed/playlist/09H2ee0flMFM8KoCf5TbHU?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
-	answer : 'Heart of Glass, Blondie.  Smoke on the Water, Deep Purple.  Let it Be, The Beatles.  Rock the Casbah, The Clash.  The Sound of Silence, Simon & Garfunkel.  Starman, David Bowie.  La Vie en Rose, Edith Piaf.  Ruby Tuesday, The Rolling Stones.   Light my Fire, The Doors.  Fever, Peggy Lee', question : "", answerSpeak : ""}) ;
-
+	answer : 'Heart of Glass, Blondie.  Smoke on the Water, Deep Purple.  Let it Be, The Beatles.  Rock the Casbah, The Clash.  The Sound of Silence, Simon & Garfunkel.  Starman, David Bowie.  La Vie en Rose, Edith Piaf.  Ruby Tuesday, The Rolling Stones.   Light my Fire, The Doors.  Fever, Pegy Lee', question : "", answerSpeak : ""}) ;
 
 
 quests[++questIndexBuilder] = { 
@@ -1922,7 +1898,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 } ); 
 
 quests[++questIndexBuilder] = { 
-		name : "Topicalish",
+		name : "Topicalish " +getAndIncrementCounterForType("Topicalish "),
 		hoverover : "Some topical stuff, some general knowledge",
 		tags : "2022-4-23,saturday,InnerWheel,surfers", 
 		questInfo: new Array() };
@@ -1969,7 +1945,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 
 quests[++questIndexBuilder] = { 
-		name : "Foreign versions 1",
+		name : "Foreign versions " +getAndIncrementCounterForType("BadCovers"),
 		hoverover : "Songs you will know, in a language you will not.",
 		tags : "music,2022-4-23,InnerWheel,saturday",
 		questInfo: new Array()
@@ -2016,7 +1992,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 
 quests[++questIndexBuilder] = { 
-		name : "Topicalish",
+		name : "Topicalish "+getAndIncrementCounterForType("Topicalish "),
 		hoverover : "Some topical stuff, some general knowledge",
 		tags : "2022-5-8,saturday,InnerWheel,surfers", 
 		questInfo: new Array() };
@@ -2063,8 +2039,10 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	question : "Ric Parnell, the drummer in the movie This Is Spinal Tap, has sadly passed away. Which 1981 hit single did he play on?  " + Table4ColumnStart + "Hey Mickey by Toni Basil</td><td>Shaddap You Face by Joe Dolce</td><td>Japanese Boy by Aneka</td><td>Sat in Your Lap by Kate Bush" + Table4ColumnEnd,
 	answer : "Hey Mickey by Toni Basil", answerSpeak : "Hey Mickey you're so fine, you're so fine you blow my mind.  HEY MICKEY!", image : "https://thumbs.gfycat.com/IndelibleQuarterlyHorsefly-size_restricted.gif"	});	
 
+
+
 quests[++questIndexBuilder] = { 
-		name : "Foreign versions 2",
+		name : "Foreign versions " +getAndIncrementCounterForType("BadCovers"),
 		hoverover : "Songs you will know, in a language you will not.",
 		tags : "music,2022-5-8,InnerWheel,saturday",
 		questInfo: new Array()
@@ -2077,7 +2055,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { 
-		name : "Topicalish",
+		name : "Topicalish "+getAndIncrementCounterForType("Topicalish "),
 		hoverover : "Some topical stuff, some general knowledge",
 		tags : "2022-5-15,saturday,InnerWheel,surfers", 
 		questInfo: new Array() };
@@ -2127,7 +2105,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 quests[++questIndexBuilder] = { 
 		name : "Eurovision",
-		hoverover : "Some topical stuff, some general knowledge",
+		hoverover : "Some topical stuf, some general knowledge",
 		splash : {splashType :  splashTypePictureAndText , splashText : "Good evening, Europe!  This is London calling.  How much do you know about the greatest high-camp celebration since Ian opened a bottle of Rose?", splashImage : "https://i.guim.co.uk/img/media/97d22b42db3e0784300d5b9528579a306500e543/0_0_4000_2400/master/4000.jpg?width=1020&quality=85&auto=format&fit=max&s=7b38d0defb041486567233edfd5ede13" },
 		tags : "2022-5-15,saturday,InnerWheel,surfers,specialDay", 
 		questInfo: new Array() };
@@ -2176,7 +2154,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 
 quests[++questIndexBuilder] = { 
-		name : "Foreign versions 3",
+		name : "Foreign versions " +getAndIncrementCounterForType("BadCovers"),
 		hoverover : "Songs you will know, in a language you will not.",
 		tags : "music,2022-5-15,InnerWheel,saturday",
 		questInfo: new Array()
@@ -2189,8 +2167,8 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { 
-		name : "Topicalish",
-		hoverover : "Some topical stuff, some general knowledge",
+		name : "Topicalish "+getAndIncrementCounterForType("Topicalish "),
+		hoverover : "Some topical stuf, some general knowledge",
 		tags : "2022-5-22,saturday,InnerWheel,surfers", 
 		questInfo: new Array() };
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
@@ -2233,6 +2211,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	question : "Finally, Ed Sheeran & Cherry Seaborn have announced the birth of their second daughter.  But where was Ed born?  " + Table4ColumnStart + "Ipswich</td><td>Manchester</td><td>Halifax</td><td>Harrogate" + Table4ColumnEnd,
 	answer : "Halifax", image : "https://img.wattpad.com/e4d7c862503a3cc6cd6f414394d33f31fc5ebb93/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f6f43367744645748374e4c6732673d3d2d3638313539343433392e313537396431343030366463663162373936353139353337343132332e676966"	});	
 
+
 quests[++questIndexBuilder] = { 
 		name : "Old pictures",
 		hoverover : "Who are these people?",
@@ -2266,8 +2245,9 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 	answer : "Kate Bush", image : "https://i.gifer.com/4q7o.gif"	}) ;
 
 
+
 quests[++questIndexBuilder] = { 
-		name : "Bad Covers 0",
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
 		hoverover : "Songs you will know, but wish you did not after this.",
 		tags : "music,2022-5-22,InnerWheel,saturday",
 		questInfo: new Array()
@@ -2279,7 +2259,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { 
-		name : "Topicalish",
+		name : "Topicalish "+getAndIncrementCounterForType("Topicalish "),
 		hoverover : "Some topical stuff, some general knowledge",
 		tags : "2022-5-29,saturday,InnerWheel,surfers", 
 		questInfo: new Array() };
@@ -2359,7 +2339,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 
 quests[++questIndexBuilder] = { 
-		name : "Bad Covers 1",
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
 		hoverover : "Songs you will know, but wish you did not after this.",
 		tags : "music,2022-5-29,InnerWheel,saturday",
 		questInfo: new Array()
@@ -2371,7 +2351,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { 
-		name : "Topicalish",
+		name : "Topicalish "+getAndIncrementCounterForType("Topicalish "),
 		hoverover : "Some topical stuff, some general knowledge",
 		tags : "2022-6-5,saturday,InnerWheel,surfers", 
 		splash : {splashType : splashTypePictureAndText , splashText : "Jubilee Weekend fun...?", splashImage : "https://thumbs.gfycat.com/UnrulyContentBassethound-size_restricted.gif"},
@@ -2410,7 +2390,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
 	question : "Who had a fish & chip supper in South Shields on Thursday night and then spoke at Harton Academy?  " + Table4ColumnStart + "Harrison Ford</td><td>Hilary Clinton</td><td>Cassius Clay</td><td>Kate Bush" + Table4ColumnEnd,
 	answer : "Hilary Clinton", answerSpeak : "", answerimage : "https://ichef.bbci.co.uk/news/976/cpsprodpb/C022/production/_125268194_mediaitem125268193.jpg"	});	
-
 
 quests[++questIndexBuilder] = { 
 		name : "Imperial",
@@ -2458,7 +2437,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 
 
 quests[++questIndexBuilder] = { 
-		name : "Bad Covers 2",
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
 		hoverover : "Songs you will know, but wish you did not after this.",
 		tags : "music,2022-6-5,InnerWheel,saturday",
 		questInfo: new Array()
@@ -2469,8 +2448,9 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : "The Sound of Silence, Simon & Garfunkel.  Smalltown Boy, Bronski Beat.   Girls Just Wanna Have Fun, Cyndi Lauper.  Johnny B. Goode, Chuck Berry (-1 point if Ted says Marty McFly). Don't Give Up, Kate Bush.  Sultans of Swing, Dire Straits.  Suspicious Minds, Elvis.  Like a Prayer, Madonna.  Gohstbusters, Ray Parker Jr.  Walk of Life, Dire Straits ", answerSpeak : "", question : ""}) ;
 
 
+
 quests[++questIndexBuilder] = { 
-		name : "Topicalish",
+		name : "Topicalish "+getAndIncrementCounterForType("Topicalish "),
 		hoverover : "Some topical stuff, some general knowledge",
 		tags : "2022-6-12,saturday,InnerWheel,surfers", 
 		questInfo: new Array() };
@@ -2484,7 +2464,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	question : "When Johnson finally leaves #10, how much do experts say he'll make per year on the lecture circuit?  " + Table4ColumnStart + gbp +"8M</td><td>"+gbp+"5M</td><td>"+gbp+"3M</td><td>"+gbp+"1M" + Table4ColumnEnd,
 	answer : gbp +"5M", answerSpeak : "", image : "https://i.guim.co.uk/img/media/657884447c49c8ad20e91c267e29d3301669b316/282_221_4282_2569/master/4282.jpg?width=620&quality=85&auto=format&fit=max&s=ad579dbf169e09ea4af87f93341ef18a"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
-	question : "Why has Justin Beiber had to cancel his current tour?  " + Table4ColumnStart + "He's been attacked by taste</td><td>A virus has left 1/2 his face paralysed</td><td>Ed Sheeran hit him with a golf club</td><td>He's broken his nose" + Table4ColumnEnd,
+	question : "Why has Justin Beiber had to cancel his current tour?  " + Table4ColumnStart + "He's been attacked by taste</td><td>A virus has left 1/2 his face paralysed</td><td>Ed Sheeran hit him with a golf club</td><td>He's broken hs nose" + Table4ColumnEnd,
 	answer : "A virus has left 1/2 his face paralysed", answerSpeak : "", answerimage : "https://i.guim.co.uk/img/media/9b7038a6d3914e970aa66b0c073977ff23209853/24_217_1015_609/master/1015.jpg?width=700&quality=85&auto=format&fit=max&s=03b83338fb4fabff7be1c3a0123505e3"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Which high-grossing movie of 2022 is being sued for copyright infringement by the family of Ehud Yonay, whose writing they claim inspired it?  " + Table4ColumnStart + "Jackass Forever</td><td>Death on the Nile</td><td>Top Gun: Maverick</td><td>The Secrets of Dumbledore" + Table4ColumnEnd,
@@ -2540,14 +2520,15 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 
 
 quests[++questIndexBuilder] = { 
-		name : "Bad Covers 3",
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
 		hoverover : "Songs you will know, but wish you did not after this.",
 		tags : "music,2022-6-12,InnerWheel,saturday",
 		questInfo: new Array()
 	};
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
-	spotify : '<iframe src="https://open.spotify.com/embed/playlist/0XrcoLx50iYczrsefac8EW?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0XrcoLx50iYczrsefac8EW?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	//spotify : '<iframe src="https://open.spotify.com/embed/playlist/0XrcoLx50iYczrsefac8EW?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media"></iframe>',
 	answer : "You're the one that I want, Olivia Newton-John and John Travolta. Livin' thing, ELO.  Don't fear the reaper, Blue Oyster Cult.  Don't stop moving, S Club 7.  Blitzkreig Bop, The Ramones.  Wuthering Heights, Kate Bush.  Should I stay or should I go, the Clash.  Super Trooper, ABBA.  Money for Nothing, Dire Straits.  Wake me up, Wham! ", answerSpeak : "", question : ""}) ;
 
 quests[++questIndexBuilder] = { 
@@ -2576,8 +2557,10 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "W
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "Which 'O' underwent treatment for rabies following an incident in which he bit the head off a live bat ?", 
 	answer : "Ozzy Osbourne"}) ;
 
+
+
 quests[++questIndexBuilder] = { 
-		name : "Topicalish",
+		name : "Topicalish "+getAndIncrementCounterForType("Topicalish "),
 		hoverover : "Some topical stuff, some general knowledge",
 		splash : {splashType : splashTypePictureAndText , splashText : "In the week a Google engineer claimed that it's AI chatbot has become sentient and is scared of being turned off, what else has happened?", splashImage : "https://c.tenor.com/dR6vK_dQ1UgAAAAC/%C3%B3culos-escuro.gif" },
 		tags : "2022-6-19,saturday,InnerWheel,surfers", 
@@ -2616,13 +2599,13 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Which rock star's childhood stamp collection will be going on display at the Postal Museum in London in July?  " + Table4ColumnStart + "Rod Stewart</td><td>Freddie Mercury</td><td>Roger Daltrey</td><td>Kate Bush" + Table4ColumnEnd,
 	answer : "Freddie Mercury", answerSpeak : "", image : "https://cdn.shopify.com/s/files/1/0267/3639/4417/products/Freddie-Mercury-screen-print-black-frame-ws_860x.jpg?v=1636552257"	});	
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "It has been recommended that the smoking age in England should rise by a year, each and every year, to extinguish the habit. Which other country has previously announced this policy?  " + Table4ColumnStart + "Japan</td><td>Switzerland</td><td>Australia</td><td>New Zealand" + Table4ColumnEnd,
-	answer : "New Zealand", answerSpeak : "", image : ""	});	
+	answer : "New Zealand", answerSpeak : "", image : "https://c.tenor.com/e5xw3g6tGEEAAAAC/smoking.gif"	});	
 
 
 quests[++questIndexBuilder] = { 
-		name : "Bad Covers 4",
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
 		hoverover : "Songs you will know, but wish you did not after this.",
 		tags : "music,2022-6-19,InnerWheel,saturday",
 		questInfo: new Array()
@@ -2630,6 +2613,230 @@ quests[++questIndexBuilder] = {
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/53aRfcDP1ZG5azOD2i180a?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
-	answer : "Running up that Hill, Kate Bush.  Rolling in the Deep, Adele.  The winner takes it all, ABBA.  Jump, Van Halen.  Sweet Chold O Mine, Guns 'n' Roses.  Umbrella, Rihanna.  Billie Jean, Michael Jackson.  Call Me, Blondie.  Times like these, Foo Fighters.  Killer Queen, Queen", answerSpeak : "", question : ""}) ;
+	//spotify : '<iframe src="https://open.spotify.com/embed/playlist/0XrcoLx50iYczrsefac8EW?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media"></iframe>',
+	answer : "Running up that Hill, Kate Bush.  Rolling in the Deep, Adele.  The winner takes it all, ABBA.  Jump, Van Halen.  Sweet Child O Mine, Guns 'n' Roses.  Umbrella, Rihanna.  Billie Jean, Michael Jackson.  Call Me, Blondie.  Times like these, Foo Fighters.  Killer Queen, Queen", answerSpeak : "", question : ""}) ;
 
 
+
+// More modern films https://b3ta.com/challenge/modernizefilms/popular/page2
+
+/*
+
+
+
+quests[++questIndexBuilder] = { //https://www.buzzfeed.com/ivyrichardson1/not-nice-sweets-brits   https://www.buzzfeed.com/moonlightskies/how-many-of-these-holiday-films-have-you-seen-alre-aq7jys05t5
+		name : "test",
+		hoverover : "Emojis",
+//		splash : {splashType : splashTypeText splashTypePictureAndText , splashText : "We've all seen Dame Judy in films, but can you recognise what films are from...?", splashImage : "https://media2.giphy.com/media/YplBZ0pxRAqRyVNVSU/giphy.gif" },
+		tags : "2000-12-5,saturday,InnerWheel,surfers", //,7DegreesOfHBC",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What Christmas film is this from?", // 
+	question : "What are these emoji's?" + emoji.bigSmile,
+	answer : "The Polar Express"}) ;
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : 'What sound is this? </BR> ' +
+	 '<iframe src="https://open.spotify.com/embed/track/13Di1SPvSSmxJ734ZXlgxZ?utm_source=generator" width="80" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+	answer : "Archer"}) ;
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : 'What sound is this? </BR> ' +
+	 '<iframe src="https://open.spotify.com/embed/track/4EQ8AAl4rNqAvTIvcNANnE?utm_source=generator" width="80" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>',
+	answer : "Long neck goose"}) ;
+
+
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType4PictureQuestion,	question : "", // 
+	image : "",
+	image2: "",
+	image3 : "",
+	image4: "",
+	answer : ''}) ;
+
+
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType4PictureQuestionWithText,	question : "Which act has the most Spotify listens per month", // 
+	image : "https://static.stacker.com/s3fs-public/styles/slide_desktop/s3/croppedGettyImages73993898RJVIjpg.JPEG",
+	image2: "https://static.stacker.com/s3fs-public/styles/slide_desktop/s3/croppedGettyImages73993898RJVIjpg.JPEG",
+	image3 : "https://static.stacker.com/s3fs-public/styles/slide_desktop/s3/croppedGettyImages73993898RJVIjpg.JPEG",
+	image4: "https://static.stacker.com/s3fs-public/styles/slide_desktop/s3/croppedGettyImages73993898RJVIjpg.JPEG",
+	caption: "Cap1",
+	caption2: "Cap2",
+	caption3: "Cap3",
+	caption4: "Cap4",
+	answer : ''}) ;
+
+
+quests[++questIndexBuilder] = {  //  https://www.buzzfeed.com/moonlightskies/how-many-of-these-holiday-films-have-you-seen-alre-aq7jys05t5
+		name : "Goggely-eyed 2",
+		hoverover : "Do you recognise these?",
+//		splash : {splashType : splashTypeText / splashTypePictureAndText , splashText : "We've all seen Dame Judy in films, but can you recognise what films are from...?", splashImage : "https://media2.giphy.com/media/YplBZ0pxRAqRyVNVSU/giphy.gif" },
+		tags : "2021-12-12,saturday,InnerWheel,surfers", //,7DegreesOfHBC",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What Christmas film is this from?", // 
+	image : "",
+	answer : ""}) ;
+
+
+/*
+quests[++questIndexBuilder] = { 
+		name : "Chris",
+		hoverover : "In homage to Chris Whitty coming back onto our screens ",
+		tags : "music,2021-11-28,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : "",
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/7cbiHgrw75A3flDW9AZTB2" width="501" height="580" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+	answer : ""}) ;
+
+
+/*
+ 
+ 
+audioOnlyYoutubeStart =	'<div style="position:relative;width:267px;height:25px;overflow:hidden;"> <div style="position:absolute;top:-276px;left:-5px"> <iframe width="300" height="300"  src="https://www.youtube.com/embed/';
+audioOnlyYoutubeEnd =	'?rel=0"> </iframe> </div> </div>' ;
+
+ 
+quests[++questIndexBuilder] = { //
+		name : "Test Alt speak",
+		hoverover : "Pictionary on the Theme of household goods",
+		tags : "2021-4-17,pictionary",
+		questInfo: new Array()
+	};
+	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "?  " + Table4ColumnStart + "?</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd,
+	answer : ""	, answerSpeak : ""});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "?  " + Table4ColumnStart + "?</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd,
+	answer : "", answerSpeak : "", image : ""	});	
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "", //
+	image : "",
+	answerimage : ""}) ;
+	
+	
+	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "Test speach",
+	answer : "written answer", answerSpeak : "spoken answer"} );
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "Test speach",
+	answer : "written answer"} );
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2PictureAnswer,
+	question : "What and who do you see here?",	answer : "" ,
+	image : "",
+	answerimage : "",
+	answerimage2 : ""
+}) ;
+
+  addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "",
+	answer : "", answerSpeak : "spoken answer"} );
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "?",
+	image : "",
+	answer : ""}) ;
+ 
+ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/?.mp3' + endAudio ,
+	answer : ""	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'What am I singing? ' + beginAudio + 'https://github.com/ianthegit/ianthegit.github.io/blob/main/audio/?.mp3' + endAudio ,
+	answer : startYouTube + '' + endYouTube	, answerSpeak : ""});
+
+ quests[++questIndexBuilder] = { //
+		name : "Pictionary 12",
+		hoverover : "Pictionary on the Theme of ???",
+		tags : "2021-4-17,pictionary",
+		questInfo: new Array()
+	};
+
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "", answer : "", answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "", answer : "", answerSpeak : ""}) ;
+ 
+ addQuest(quests[questIndexBuilder],{	type : quizQuestionType2PictureAnswer,
+	question : "What and who do you see here?",	answer : "" ,
+	image : "",
+	answerimage : "",
+	answerimage2 : ""
+}) ;
+ 
+quests[++questIndexBuilder] = { //
+		name : "Test new quiz builder",
+		hoverover : "Try out the quicker builder",
+		tags : "test",
+		splash : {splashType : splashTypeText / splashTypePictureAndText , splashText : "Test Text", splashImage : "" },
+		questInfo: new Array()
+	};
+
+quests[++questIndexBuilder] = {  //
+		name : "Test new month-based quiz builder",
+		hoverover : "Try out the quicker builder",
+		tags : "test,year,saturday",
+		questInfo: new Array()
+	};
+	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "?  " + Table4ColumnStart + "?</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd,
+	answer : ""	});
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
+	question : "",
+	answer : ""    } );
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "What movie is being described",
+	image : "https://lh3.googleusercontent.com/Ftq4kmwf2ZMgm2Au1KHEirPcTYyA2MfoTe5ti0A2v6cPUAyexLjvfFtcovCeJDtF8oX8j6EXHIV9HMrZj41byAmnurxMK4mfRcSw695znXl608VK__rflaCyjX_fcVMXtxvgNfEU0NU=w1920-h1080",
+	answer : "Groundhog Day"
+}) ;
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : 'Name the products these songs were used to advertise',
+	spotify : '<iframe src="https://open.spotify.com/embed/playlist/7BQJ0lhgEX1NCPKBt6TlYm" width="500" height="500" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>',
+	answer : "Cadbury, Levi's,Muller Light, Galaxy, Wrigleys, Guinness, Vauxhall, Nike, Levi's, Barclaycard,Quality Street  "
+}) ;
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	question : '',
+	spotify : '<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRm7q0c3dgVMI_pieDAUPcSHXQ8N3I20dHQytGEjaKsq2Pj-l2xHcRpud-McY2UhU_qrBcLyVRidpOJ/embed?start=false&loop=false&delayms=10000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>',
+	answer : "Click the presentation to move it along"
+} );
+
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+		question : "In August, who said (during a voice check for a radio broadcast) 'My fellow Americans, I'm pleased to tell you today that I've signed legislation that will outlaw Russia forever. We begin bombing in five minutes'?",
+		answer : "POTUS Ronald Reagan  <iframe width='560' height='315' src='https://www.youtube.com/embed/bBow1ToJBFE' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
+}) ;
+
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,
+		question : "What movie", //Brigadoon
+		image : "",
+		answerimage : ""
+}) ;
+
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+		question : "?",
+		answerimage : ""
+	} ); 
+	
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "Which actor has died most times on the big-screen (ie in films)? <BR/> (a) Danny Trejo, <BR/> (II) Vincent Price, <BR/> (3) Christopher Lee, <BR/> (Ivy) Dennis Hopper.",
+	answerimage : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Danny_Trejo_by_Gage_Skidmore.jpg/220px-Danny_Trejo_by_Gage_Skidmore.jpg"
+} ); 
+
+questIndexBuilder++;
+
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "who was born?",
+	answer : "Ted"
+} ); 
+
+questIndexBuilder++;
+*/
