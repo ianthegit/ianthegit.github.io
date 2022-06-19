@@ -1733,7 +1733,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pub singer " + pubSingerCounter++,
+		name : "Pub singer " + getAndIncrementCounterForType("Pub Singer"),
 		hoverover : "Sit back, close your eyes, you could be at a live venue right now.  ",
 		tags : "2021-7-17,saturday,InnerWheel,surfers,audio",
 		questInfo: new Array()
@@ -1917,7 +1917,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pub singer " + pubSingerCounter++,
+		name : "Pub singer " + getAndIncrementCounterForType("Pub Singer"),
 		hoverover : "Sit back, close your eyes, you could be at a live venue right now.  ",
 		tags : "2021-7-24,saturday,InnerWheel,surfers,audio",
 		questInfo: new Array()
@@ -2086,7 +2086,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 		answer : "Waterloo"	, image : "https://i.guim.co.uk/img/media/5879c1386b510ba663af142232ed8b0eacba523b/197_423_6475_3888/master/6475.jpg?width=620&quality=85&auto=format&fit=max&s=9537661687b5d4293577c83aae2329ca"});
 
 quests[++questIndexBuilder] = { //
-		name : "Pub singer " + pubSingerCounter++,
+		name : "Pub singer " + getAndIncrementCounterForType("Pub Singer"),
 		hoverover : "Sit back, close your eyes, you could be at a live venue right now.  ",
 		tags : "2021-7-31,saturday,InnerWheel,surfers,audio",
 		questInfo: new Array()
@@ -2225,7 +2225,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pub singer " + pubSingerCounter++,
+		name : "Pub singer " + getAndIncrementCounterForType("Pub Singer"),
 		hoverover : "Sit back, close your eyes, you could be at a live venue right now.  ",
 		tags : "2021-8-7,saturday,InnerWheel,surfers,audio",
 		splash : {splashType : splashTypePictureAndText , splashText : "In honour of my 30th wedding anniversary, 10 songs you shouldn't play at a wedding", splashImage : "https://lh3.googleusercontent.com/_xe1vRE-ALbgYpUU_peFoR3jJ8M2BriIUusFvMPBe3dHTFX4lhjWnVuzNVopNhQ8TlCAoQny1zR4vblWXVYG9jInm8NV6si7nlCW0yPLH6_yyMtavSOFjZl1GTZU1v2KlUfLqTW29U_B9PrPDj2HsR4FugmmLg_2sEGyA163zR0fMmXyyJwMtvhgOg1HWsJkWTWtNe95HoZxr_DdO3O4fnco7wCfeJcT4IFJ-HPQq28RnlU_fsZtKvRO-2U8JfugqhCKcyBJKsVBSw3OoeKd1BNDUTZRcBZZkFQL2U0LXGfz3jM8cDunOPrXnXf_noS6Hr2G5xTSGrjkRKmcHj6cVoWYcwmovmZg82eLfd-gdck1MAqu1LouDx_O1MMPUWqCaZjzuU2IXPsGP1WjFV6jbGc7t09c1_UFZ1aRCuk9C05eNnhckvigQQmAGCRP31Ar7iExnofj429CxGO1HAkKD3MgR98R1UwL2ta_T35VSMn_2NxXBnNm0RaD4kt_X1Ao-GqGauBqHUpDnp0h6PeDwMEJ159itTJBC_53V18mTj18NfRCRSJOn2K6XIDYuUFz47op0oNEhc_g1PuDUz5NQKqOpn6uQt-SRxfVL4iVLwDjUgDx0ha84MtZ_FAeW4ST7r4IvcQ_z0w-HDe8zBmv9hna4rcpsIXMML3z63xDkOPZDg_NtSc_n-qkt-C3wIipx89HcMBJw7tr9cKOsqQKwe0e3w=s871-no?authuser=0" },
@@ -2345,7 +2345,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	answer : "John Squire", image : "https://i.guim.co.uk/img/media/4dc62d88326d6d8f1838c6aedb453e28485cd9d1/0_0_2000_1200/master/2000.jpg?width=620&quality=85&auto=format&fit=max&s=3b7c11a0c993b84614fad80d41fea5bc"	});
 
 quests[++questIndexBuilder] = { //
-		name : "Pub singer " + pubSingerCounter++,
+		name : "Pub singer " + getAndIncrementCounterForType("Pub Singer"),
 		hoverover : "Sit back, close your eyes, you could be at a live venue right now.  ",
 		tags : "2021-8-14,saturday,InnerWheel,surfers,audio",
 		splash : {splashType : splashTypeText , splashText : "Tonight we have a guest singer!!   The first 6 songs are from them, the final 5 were all #1s in 2003"  },
@@ -2739,7 +2739,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	answer : "Pay tax on them, Burt Reynolds", image : "https://img.playbuzz.com/image/upload/ar_1.5,c_crop/q_auto:good,f_auto,fl_lossy,w_640,c_limit,dpr_1/v1534257843/qallpxqlrzyow23aau2b.png"	});
 
 quests[++questIndexBuilder] = { //
-		name : "Pub singer " + pubSingerCounter++,
+		name : "Pub singer " + getAndIncrementCounterForType("Pub Singer"),
 		hoverover : "Sit back, close your eyes, you could be at a live venue right now.  ",
 		tags : "2021-9-4,saturday,InnerWheel,surfers,audio",
 		splash : {splashType : splashTypePictureAndText , splashText : "Tonight we celebrate the return of the 70s pop icons ABBA", splashImage : "https://c.tenor.com/oIBAElorV70AAAAM/abba.gif"  },
@@ -2864,7 +2864,7 @@ quests[++questIndexBuilder] = { ////https://quizly.co/can-you-guess-what-happens
 		answerimage : "https://learnhip.com/img/whnpics/10l.gif"}) ;
 
 quests[++questIndexBuilder] = { //
-		name : "Pub singer " + pubSingerCounter++,
+		name : "Pub singer " + getAndIncrementCounterForType("Pub Singer"),
 		hoverover : "Sit back, close your eyes, you could be at a live venue right now.  ",
 		tags : "2021-9-11,saturday,InnerWheel,surfers,audio",
 		splash : {splashType : splashTypePictureAndText , splashText : "This week we pay tribute to Sara Harding of Girls Aloud, and all great girl groups", splashImage : "https://images.8tracks.com/cover/i/010/330/840/uk_girl_group-1699.jpg?rect=325,0,949,949&q=98&fm=jpg&fit=max"  },
@@ -3311,7 +3311,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pub singer " + pubSingerCounter++,
+		name : "Pub singer " + getAndIncrementCounterForType("Pub Singer"),
 		hoverover : "Sit back, close your eyes, you could be at a live venue right now.  ",
 		splash : {splashType : splashTypeText  , splashText : "A point for the song name, a point for the musical name" },
 		tags : "2021-10-10,saturday,InnerWheel,surfers,audio",
@@ -3453,7 +3453,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : ""}) ;
 
 quests[++questIndexBuilder] = { //
-		name : "Pub singer " + pubSingerCounter++,
+		name : "Pub singer " + getAndIncrementCounterForType("Pub Singer"),
 		hoverover : "Sit back, close your eyes, you could be at a live venue right now.  ",
 		splash : {splashType : splashTypeText  , splashText : "A point for the song name, a point for the usual singer's name" },
 		tags : "2021-10-17,saturday,InnerWheel,surfers,audio",
@@ -3683,7 +3683,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pub singer " + pubSingerCounter++,
+		name : "Pub singer " + getAndIncrementCounterForType("Pub Singer"),
 		hoverover : "Sit back, close your eyes, you could be at a live venue right now.  ",
 		tags : "2021-11-1,saturday,InnerWheel,surfers,audio",
 		splash : {splashType : splashTypePictureAndText , splashText : "This week we pay tribute to 70's Disco greats the Bee Gees and Barry White.  Hold on for some lovin", splashImage : "https://s3.eu-west-3.amazonaws.com/media.cdn.brusselslife.be/38528/14518-agenda-image.jpg"  },
@@ -3856,7 +3856,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://upload.wikimedia.org/wikipedia/en/thumb/7/7d/Planet_of_the_Apes_%282001%29_poster.jpg/220px-Planet_of_the_Apes_%282001%29_poster.jpg", answer : "Planet of the Apes"}) ;
 
 quests[++questIndexBuilder] = { //
-		name : "Pub singer " + pubSingerCounter++,
+		name : "Pub singer " + getAndIncrementCounterForType("Pub Singer"),
 		hoverover : "Sit back, close your eyes, you could be at a live venue right now.  ",
 		tags : "2021-11-7,saturday,InnerWheel,surfers,audio",
 		splash : {splashType : splashTypePictureAndText , splashText : "This week we pay tribute to the great crooners", splashImage : "https://www.propermusic.com/media/catalog/product/cache/770f7f65d519370eea7ae1a9215d2a64/5/7/572378_1.jpg"  },
