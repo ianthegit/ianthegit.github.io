@@ -73,6 +73,15 @@ Optional - splash screen Text and picture
 ```javascript
 ,splash : {splashType : splashTypePictureAndText, splashText : "Splash Screen Text" , splashImage : "Image URL"}
 ```
+To add a counter to the name of the round (where <round identifier> is any string used to group rounds together
+```javascript
+quests[++questIndexBuilder] = { //
+		name : "Round Name " +getAndIncrementCounterForType("<round identifier>")
+		,hoverover : "Hoverover text"
+		,tags : "comma separated tag list"
+		,questInfo: new Array()
+	};
+```
 
 If the tags contain 'year' then add up to 12 questions and each will be prepended by the appropriate month (January - December) - otherwise each question will be numbered 1 to \<length>
 
