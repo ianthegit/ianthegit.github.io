@@ -2,12 +2,8 @@
  * https://www.radiotimes.com/quizzes/pub-quiz-tie-breaker/
  */
 
-
-
-tiebreakerCount=0
-
 quests[++questIndexBuilder] = { 
-		name : "TieBreaker " + tiebreakerCount++,
+		name : "TieBreaker " + getAndIncrementCounterForType("Tiebreaker"),
 		hoverover : "Choose a number",
 		tags : "surfers,InnerWheel,saturday,tieBreaker",
 		questInfo: new Array()
@@ -18,7 +14,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 
 
 quests[++questIndexBuilder] = { 
-		name : "TieBreaker " + tiebreakerCount++,
+		name : "TieBreaker " + getAndIncrementCounterForType("Tiebreaker"),
 		hoverover : "Choose a number",
 		tags : "surfers,InnerWheel,saturday,tieBreaker",
 		questInfo: new Array()
@@ -28,7 +24,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	answer : "83"	});
 
 quests[++questIndexBuilder] = { 
-		name : "TieBreaker " + tiebreakerCount++,
+		name : "TieBreaker " + getAndIncrementCounterForType("Tiebreaker"),
 		hoverover : "Choose a number",
 		tags : "surfers,InnerWheel,saturday,tieBreaker",
 		questInfo: new Array()
@@ -39,19 +35,19 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 
 
 quests[++questIndexBuilder] = { 
-		name : "TieBreaker " + tiebreakerCount++,
+		name : "TieBreaker " + getAndIncrementCounterForType("Tiebreaker"),
 		hoverover : "Choose a number",
 		tags : "surfers,InnerWheel,saturday,tieBreaker",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : 'How many stars in the Brazillian flag? ', image : "https://cdn.britannica.com/47/6847-004-7D668BB0/Flag-Brazil.jpg",
-	answer : "27 - they symbolize Brazil's 26 states and its federal district."	});
+	answer : "3 - France, Spain and Morocco"	});
 
 
 
 quests[++questIndexBuilder] = { 
-		name : "TieBreaker " + tiebreakerCount++,
+		name : "TieBreaker " + getAndIncrementCounterForType("Tiebreaker"),
 		hoverover : "Choose a number",
 		tags : "surfers,InnerWheel,saturday,tieBreaker",
 		questInfo: new Array()
@@ -63,7 +59,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 
 
 quests[++questIndexBuilder] = { 
-		name : "TieBreaker " + tiebreakerCount++,
+		name : "TieBreaker " + getAndIncrementCounterForType("Tiebreaker"),
 		hoverover : "Choose a number",
 		tags : "surfers,InnerWheel,saturday,tieBreaker",
 		questInfo: new Array()
@@ -75,7 +71,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 
 
 quests[++questIndexBuilder] = { 
-		name : "TieBreaker " + tiebreakerCount++,
+		name : "TieBreaker " + getAndIncrementCounterForType("Tiebreaker"),
 		hoverover : "Choose a number",
 		tags : "surfers,InnerWheel,saturday,tieBreaker",
 		questInfo: new Array()
