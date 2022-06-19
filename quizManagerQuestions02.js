@@ -2618,6 +2618,43 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2022-6-26,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6DXzSKMqUpXpOKFAhax8Af?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Smells like teen spirit, Nirvana.   Rocket Man, Elton John.  Cloudbursting, Kate bush.  Ticket to ride, The Beatles.  Go your own way, Fleetwood Mac.  I get around, The Beach Boys.  Hello, I love you, The Doors.  I don't like Mondays, TheBoomtown Rats.   Do you really want to hurt me?  Culture CLub.  A teenager in Love, Dion & the Belmonts (Marty Wilde too)", answerSpeak : "", question : ""}) ;
+
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2022-7-3,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2kty4r4PuVg2kFQWZdkV1F?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Suspicious Minds, Elvis.   Rock and Roll music, Chuck Berry (The Beatles).  You spin me right round, Dead or Alive.  Maggie May, Rod Stewart.  Babooshka, Kate Bush.  Tiny Dancer, Elton John.  Sweet child o' mine, Guns 'N' Roses.  Raindrops keep falling on my head, B J Thomas. Can't take my eyes off you.  Frankie Valli.   Last Christmas, Wham!  ", answerSpeak : "", question : ""}) ;
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2022-7-10,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4exIbxRVFLhik73SIj675Z?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Maggie May, Rod Stewart.   Sweet Home Alabama, Lynyrd Skynyrd.   Aint no mountain high enough,  Marvin Gaye (Diana Ross).  What's love got to do with it, Tina Turner.  Don't you (Forget about me), Simple Minds.  Army Dreamers, Kate Bush.  You're so vain, Carly Simon.  Hey Jude, The Beatles.  Road to Nowhere, Talking Heads.   The Locomotion, Little Eva (Kylie Minogue)", answerSpeak : "", question : ""}) ;
+
+
+
 // More modern films https://b3ta.com/challenge/modernizefilms/popular/page2
 
 /*
