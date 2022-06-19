@@ -5,7 +5,7 @@
 pictionaryCount=0;
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " + getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary ",
 		tags : "30/1/2021,pictionary",
 		questInfo: new Array()
@@ -43,7 +43,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
   
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary - Bonus Point - guess the theme ",
 		tags : "6/2/2021,pictionary",
 		questInfo: new Array()
@@ -91,7 +91,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary",
 		tags : "13/2/2021,pictionary",
 		questInfo: new Array()
@@ -124,7 +124,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary" + pictionaryCount++,
+		name : "Pictionary" +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary",
 		tags : "20/2/2021,pictionary",
 		questInfo: new Array()
@@ -157,7 +157,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary",
 		tags : "2021-2-27,pictionary",
 		questInfo: new Array()
@@ -190,7 +190,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary",
 		tags : "2021-3-6,pictionary",
 		questInfo: new Array()
@@ -219,7 +219,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary",
 		tags : "2021-3-13,pictionary",
 		questInfo: new Array()
@@ -247,7 +247,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary",
 		tags : "2021-3-20,pictionary",
 		questInfo: new Array()
@@ -274,7 +274,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary",
 		tags : "2021-3-27,pictionary",
 		questInfo: new Array()
@@ -301,7 +301,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary",
 		tags : "2021-4-3,pictionary",
 		questInfo: new Array()
@@ -328,7 +328,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,		question
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the Theme of Royals",
 		tags : "2021-4-10,pictionary",
 		questInfo: new Array()
@@ -356,7 +356,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the Theme of household goods",
 		tags : "2021-4-17,pictionary",
 		questInfo: new Array()
@@ -382,7 +382,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the Theme of MarioLand",
 		tags : "2021-4-24,pictionary",
 		questInfo: new Array()
@@ -410,7 +410,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the Theme of Banks",
 		tags : "2021-5-1,pictionary",
 		questInfo: new Array()
@@ -438,7 +438,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the Theme of Fast Food",
 		tags : "2021-5-8,pictionary",
 		questInfo: new Array()
@@ -465,7 +465,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of Summer",
 		tags : "2021-5-15,pictionary",
 		questInfo: new Array()
@@ -493,7 +493,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of last 6 Eurovision winning countries",
 		tags : "2021-5-22,pictionary",
 		questInfo: new Array()
@@ -520,7 +520,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of Dinosaurs",
 		tags : "2021-5-29,pictionary",
 		questInfo: new Array()
@@ -546,7 +546,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of the best bits",
 		tags : "2021-6-5,pictionary",
 		questInfo: new Array()
@@ -584,7 +584,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
 	answerimage2 : "" }) ;
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of the other G7 countries",
 		tags : "2021-6-12,pictionary",
 		questInfo: new Array()
@@ -610,7 +610,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of balls",
 		tags : "2021-6-19,pictionary",
 		questInfo: new Array()
@@ -636,7 +636,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of dogs",
 		tags : "2021-6-26,pictionary",
 		questInfo: new Array()
@@ -662,7 +662,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of Schooldays",
 		tags : "2021-7-3,pictionary",
 		questInfo: new Array()
@@ -688,7 +688,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of British Animals - with respect to Eddy The Badger Merckx.",
 		tags : "2021-7-10,pictionary",
 		questInfo: new Array()
@@ -713,7 +713,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://image.shutterstock.com/image-photo/funny-face-pug-dog-lion-260nw-507738691.jpg", answerSpeak : "Lion"}) ;
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of travel - because the boys have travelled home",
 		tags : "2021-7-17,pictionary",
 		questInfo: new Array()
@@ -739,7 +739,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of Olympics",
 		tags : "2021-7-24,pictionary",
 		questInfo: new Array()
@@ -765,7 +765,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of more Olympic sports",
 		tags : "2021-7-31,pictionary",
 		questInfo: new Array()
@@ -791,7 +791,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of even more Olympics",
 		tags : "2021-8-7,pictionary",
 		questInfo: new Array()
@@ -816,7 +816,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://images.tennis.com/image/private/t_16-9_1920/tenniscom-prd/pzjkyjid88ns55v0eive.jpg", answerSpeak : "Paralympic  wheelchair  tennis"}) ;
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of Holidays",
 		splash : {splashType : splashTypeText , splashText : "Pictures on the theme of things that get used on holiday"  },
 		tags : "2021-8-14,pictionary",
@@ -842,7 +842,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://images-na.ssl-images-amazon.com/images/I/61PWGrXbZqL._AC_UX679_.jpg", answerSpeak : "Swimming Trunks"}) ;
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of back to school",
 		tags : "2021-9-4,pictionary",
 		questInfo: new Array()
@@ -868,7 +868,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of famous vehicles from TV and Movies",
 		tags : "2021-9-11,pictionary",
 		questInfo: new Array()
@@ -893,7 +893,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://www.independent.ie/migration_catalog/d2d97/25303377.ece/AUTOCROP/w1240h700/ET", answerSpeak : "ET's bike"}) ;
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of British stereotypes",
 		tags : "2021-9-18,pictionary",
 		questInfo: new Array()
@@ -918,7 +918,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://cdn-o.fishpond.com/0286/242/138/1410651732/original.jpeg", answerSpeak : "Pint of beer"}) ;
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of Famous historical figures",
 		tags : "2021-9-26,pictionary",
 		questInfo: new Array()
@@ -944,7 +944,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of Bond, James Bond",
 		tags : "2021-10-3,pictionary",
 		questInfo: new Array()
@@ -971,7 +971,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of The Squid Games - sea creatures",
 		tags : "2021-10-10,pictionary",
 		questInfo: new Array()
@@ -997,7 +997,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of Playground Games",
 		tags : "2021-10-17,pictionary",
 		questInfo: new Array()
@@ -1024,7 +1024,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of Halloween",
 		tags : "2021-10-24,pictionary",
 		questInfo: new Array()
@@ -1051,7 +1051,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 38",
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of Dr Who",
 		tags : "2021-10-31,pictionary",
 		questInfo: new Array()
@@ -1079,7 +1079,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary 39",
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of COP26 and Global Warming",
 		tags : "2021-11-7,pictionary",
 		questInfo: new Array()
@@ -1106,7 +1106,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of Cops",
 		tags : "2021-11-14,pictionary",
 		questInfo: new Array()
@@ -1133,7 +1133,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of IACGMOOH",
 		tags : "2021-11-21,pictionary",
 		questInfo: new Array()
@@ -1160,7 +1160,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of Christmas Parties",
 		tags : "2021-12-5,pictionary",
 		questInfo: new Array()
@@ -1186,7 +1186,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of Downing Street Work Events",
 		tags : "2022-1-15,pictionary",
 		questInfo: new Array()
@@ -1212,7 +1212,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of double-barralled food",
 		tags : "2022-1-22,pictionary",
 		questInfo: new Array()
@@ -1238,7 +1238,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of Chinese New Year",
 		tags : "2022-1-29,pictionary",
 		questInfo: new Array()
@@ -1266,7 +1266,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of Winter Olympics",
 		tags : "2022-2-5,pictionary",
 		questInfo: new Array()
@@ -1292,7 +1292,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of lurve",
 		tags : "2022-2-12,pictionary",
 		questInfo: new Array()
@@ -1329,8 +1329,9 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
 	answerSpeak : "Ewok / Teddy Bear"}) ;
 
 
+
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of weather",
 		tags : "2022-2-20,pictionary",
 		questInfo: new Array()
@@ -1354,8 +1355,10 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLWywkRl3mDNrCNJhLIGoNqs2OQmTUN6no6cwLx-udrC0goZkIcj2oJ42vq4XiA70hIW5BIYXCM8k_NsUNAUxbw1_7S3jZoVTx6Ldcw6naZHhAZo1r_Nw1pHMnNWUn3YymJFrakqbsph18HQepi_JITIBw=w680-h458-no?authuser=0",
 	answerimage : "https://i.makeagif.com/media/11-23-2014/5Z7UDv.gif", answerSpeak : "Fog"}) ;
 
+
+
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of things you might see on a river",
 		tags : "2022-2-27,pictionary",
 		questInfo: new Array()
@@ -1380,7 +1383,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://media3.giphy.com/media/IcT6FV6PIHmp41PNXe/200.gif", answerSpeak : "Paddle Boarders"}) ;
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of Spring",
 		tags : "2022-3-5,pictionary",
 		questInfo: new Array()
@@ -1405,14 +1408,13 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://media3.giphy.com/media/JWl9GrmcX49by/giphy.gif", answerSpeak : "Spring"}) ;
 
 
-
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of Australia",
 		tags : "2022-3-12,pictionary",
 		questInfo: new Array()
 	};
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLVon-XLM3b2MH9rATNF5FFlL7QBZciT92wf6wBkoT4NOnYqFBhFh0SBG6CuGoidC_pue8y1uePy5lvwG9JHjVShEFQmhPpY2_Vekxq7J6jkJ4VGwOBJXntI4wTGupYsG1iKywzZJ9-EYWcg8s6QEUdzOQ=w318-h366-no?authuser=0",
 	answerimage : "https://c.tenor.com/bchnzrtrklUAAAAM/koala-chewing.gif", answerSpeak : "Koala "}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
@@ -1432,34 +1434,34 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://i.makeagif.com/media/1-04-2021/GG653e.gif", answerSpeak : "Fosters lager"}) ;
 
 
+
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of the Ukraine",
 		tags : "2022-3-19,pictionary",
 		questInfo: new Array()
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "https://lh3.googleusercontent.com/pw/AM-JKLVHl6TiOlViqhlQv_0dk-P6tR1YAocnx42emxf-Ha4omyWMzBK_GujE14VBKkFAuMmWMvEoLSV6b-FeawQb8hAXNeis5HnyTPxotis4eQv0Bk2nZmzODkx1LPBowJaaM01i4fft6-5TWgza0lHGXcA8jw=w500-h391-no?authuser=0",
+	image : "",
 	answerimage : "https://c.tenor.com/R9o9u_fcAk8AAAAM/ukrayna-ukraine-flag.gif", answerSpeak : "Ukrainian flag"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "https://lh3.googleusercontent.com/pw/AM-JKLUVQlwZTVhvUf3l3KJWpxM74Qvfa0c42ODAcfXLXTE1GsdsRwY3pQt2vMV_OdkS60guTR6kexqTsEDHezrdT5FEhSOmBs0J25gYpd_iCIycb6sfeYqVavZR6hk0PJgonm0fpGBzfSkTS1yAyGdIdmlYYw=w513-h466-no?authuser=0",
+	image : "",
 	answerimage : "https://qph.cf2.quoracdn.net/main-qimg-bb16002d5bc2c824898ba1c6011a3ff3-lq", answerSpeak : "Pig"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "https://lh3.googleusercontent.com/pw/AM-JKLWZxT8F6R0mu_40ZIJVrcw9tz1ul171aOFCvBHNGuSpDgB2ZaOGTyTIaAqmbJMio0Kwu84K1DlqJGFQUEAx_TZxJdKlrOnPL8BP-GEb1-X0Q3QQAZcJ-L11YmnclSZ8Om9d6tj4ukMFhCTNO3uOo1WqlQ=w403-h573-no?authuser=0",
+	image : "",
 	answerimage : "https://media1.giphy.com/media/gHKndZ31j9Xo3C3cn1/giphy-downsized-large.gif", answerSpeak : "Sunflower"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "https://lh3.googleusercontent.com/pw/AM-JKLXb5JIEICpe8n6qfL-yQvcdFOHOhOIRDeA3-yRJs1zLYNISSypf6MXDl-h4i0q4DJqSjbDONIuRrlQMrmL_13liEh6rESxkT-YChZOzA8VOwNT7l4gVNP8NpyX8DiLnBO8oyxJLMFkePzenXZOQkx1wxQ=w914-h448-no?authuser=0",
+	image : "",
 	answerimage : "https://media0.giphy.com/media/lwDNqAXUQGm5C6nsXd/giphy.gif?cid=82a1493b4qytj3zkqryjpg84r0ap1tlaexe7pdwznkmn4zqf&rid=giphy.gif&ct=v", answerSpeak : "Tractor"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "https://lh3.googleusercontent.com/pw/AM-JKLXONRzZLxZ3AD2rj56sYOSdrvwSLuUhwhmL1OKFzneUhgOmCtwahtY8g6voLHIe9upen_1YKQFerYSKoEVsxIyvn6BABNpPM0kMGMin2WzGZlJ92wluQ7XejDcOy_ThPXJ6U0tRAISE73SeWB0cg4ELHA=w293-h263-no?authuser=0",
+	image : "",
 	answerimage : "https://i.makeagif.com/media/12-22-2016/OUcxbS.gif", answerSpeak : "Chernobyl"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "https://lh3.googleusercontent.com/pw/AM-JKLXWk7trzba0BAfhQJrO_HZiaQCZyMRFbHAnHPP0AZCMUGn1Oz0Zzm5mVLQcaQ9-5Vc5GPBE64Y-KtvAACMqkiHUNzBNYoUz7RedjGiTJ1ABHcb4EYSkdxSmXc6TTMHLxHbZr4O3TS0Kxj2DwTSjopuTdA=w548-h518-no?authuser=0",
+	image : "",
 	answer : '<iframe width="560" height="315" src="https://www.youtube.com/embed/HbmZrzN3WFE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>', answerSpeak : "Zelenskyy playing piano"}) ;
 
-
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of Scary Australian Sea Creatures",
 		tags : "2022-4-2,pictionary",
 		questInfo: new Array()
@@ -1484,8 +1486,9 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLWef_sH3TdWBFtKVQcXpro-pu1ARsqAgg_KD-k9UdAAGpNtsho_EhHuhc_WIUL3VteFVwGHpRcPsKDiyJDrFLLDXKIRk5zSbsPKmuhtC6f9Bb_INILlIeacVvHAYvJOXlsrZhcIzPdn0umFqnoKF1z5rg=w600-h800-no?authuser=0", answerSpeak : "Sandra"}) ;
 
 
+
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of Woodbridge",
 		tags : "2022-4-9,pictionary",
 		questInfo: new Array()
@@ -1511,7 +1514,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of Saxon hoards",
 		tags : "2022-4-23,pictionary",
 		questInfo: new Array()
@@ -1538,7 +1541,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of what I did last weekend",
 		tags : "2022-5-8,pictionary",
 		questInfo: new Array()
@@ -1562,8 +1565,9 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLV7QW7A1F9wY4KGdQVswDivYAP8hM3y5S67NwzNZey72q3CSBEzy2-VBr47YMxqnPAUqKvJbTEkWa-l_79pfT9h4duQe3tuj-WOTRPbcuywt6iEgcvKP9tVkejfmgsj___KYqlKlHUtsLN9x4I6ZSaoMA=w538-h523-no?authuser=0",
 	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLVMNLcGA9QxjFzzZ3qFuG1f7Xx7OuuZV7fNpHCnQBDKuIwjS0ommskBgLu_HnQUDxtMkZFDU0ZXbJrTQcGZI8l6zDkjYnBzMgg86LgoUGOsbzC-iTqgH0akQaKfYlTiSrAwcLK0i8WLDN0GVoBE4CfTlg=w1024-h768-no?authuser=0", answerSpeak : "Dancing"}) ;
 
+
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of last 6 Eurovision winning countries, a year later",
 		tags : "2022-5-15,pictionary,specialDay",
 		questInfo: new Array()
@@ -1588,7 +1592,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://cdn.britannica.com/74/6074-050-B5DDC4E0/Austria.jpg", answerSpeak : "Austria"}) ;
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of Superheroes",
 		tags : "2022-5-22,pictionary",
 		questInfo: new Array()
@@ -1614,9 +1618,9 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of Jubilee and things you probably will not see",
-		tags : "2022-5-29,pictionary",
+		tags : "2022-5-28,pictionary",
 		questInfo: new Array()
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
@@ -1640,12 +1644,9 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 
-
-
-
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
-		hoverover : "Pictionary on the theme of Fish Restaurant staples",
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of Fish Restraunt staples",
 		tags : "2022-6-5,pictionary",
 		questInfo: new Array()
 	};
@@ -1669,7 +1670,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://media-cdn.tripadvisor.com/media/photo-s/0e/70/8d/c5/our-yummy-and-crunchy.jpg", answerSpeak : "Sausage"}) ;
 
 quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of pizza toppings Ted and I have had",
 		tags : "2022-6-12,pictionary",
 		questInfo: new Array()
@@ -1694,6 +1695,30 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://pizzatoday.com/wp-content/uploads/2019/12/Nutella_pizza.jpg", answerSpeak : "Banana and chocolate"}) ;
 
 
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of why my rains have ben delayed",
+		tags : "2022-6-19,pictionary",
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVEpoMcVYreVz0dk68tcFN_WLhKjRSAEVa8_bK5ej5-gBR6c3GjBJfn9o-vmp9P7hh_DE-ITY5byAZR9m9KSjfNVWOShh6oXE0f0IOKlzpQGAAkFyOlB_CFpDmqghZBe1MWAsFE3CtN9G3SQR8ZXwwEig=w785-h589-no?authuser=0",
+	answerimage : "https://media2.giphy.com/media/xUPGceEHfzaKQrugx2/200.gif", answerSpeak : "Snow"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLWi3Jk8wEqLlrLLJ6z99_gcKXFf8t20QCsehYdYVFtfNY23l04Phqth4K-fyOhVaMZqXTQjwHcEwbQK_pC5g07QpYA6R29mJJHpxF_w3ElPrz-_4-52VpftWPF4WW-Oc57HxptNKgoOVZzyUBs2ngJAdw=w299-h223-no?authuser=0",
+	answerimage : "https://i.imgur.com/jjape.jpg", answerSpeak : "Leaves"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXtTFDyy45FQOtiRIbwwR_gTSOat3Os8_Fh6fLD7jnYadX96nxYzlf062hRjF73WTsL2YyZKTPDtpCAAuWRcHSE0l-Y5gc6Uhvd5UwYct1uqJ70cwXAkgrQCyCm2r9lsv1PMeK6R-d816tNsebYCysrkA=w466-h371-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/2_4yjlBCNhWCSAOxVhTBww1vDpiQ3hQUp6AZQH83Y82-11tPjufHVgXAeU0EDE4ZrrZg4n0UDVbEadketOer35kItd9HXISVOYF6cmFjpMfzu-D7GVMI4z37T6oLrf422vMF6KG2WMpVh8rUGj_hTs9oGWs0c9rDfqUzO5ciTLqlaCzkmJw9XQV2Dzuz3HKnicjFpx_zqeBcyWxUMVJdqa6dhSa9G39p3bTLg0oiC3qYQcll-HnVLEgFwbsxzX98ZEfJ_V0O17vyHrRpi2-3VUCyXTBq9zWq1Ab-waIhwZrbSc9bA3a-RRCPNCZzhI444Zx-nPWKGTnCgwNTTfW7beWRlIGRHa1xRvp4Bo47Grf83onizTng3O2DttFwsmXYB5eV5wF8wwh2dylX-5eVRpONUCfSg78P7K9CNtmrXaFDEFKxyXFq14mdbArYqd7XlZOYXKXxSyvpSWKGouJVncGioFn6u6QTM6v6ziXKl3DCf3QqRGL_GMZTGsDgscx0HMtAUpd-NIGVL5mzQh5NJoJCEVNaUGhaR2PkzJUdXawMe9kW6iDHAsrT53OQBNrDIpAZ632jTKz3aX7L6I5A5PiOksIZrWHKaRhPAQOIqir2QGr1uG6w_S_96CZboxnaegQBuhP8Ex8RqA9q62WqnGK52x84tn0r80ekZO-RU0PjZ3blMelU6XZpK2f90imD5nBVVyR2cM6DKszOTmZz9wTVTlFUJcn5eGL78cksb7M5lqAMCa0Qpwbvt4bzo-Y=w490-h871-no?authuser=0", answerSpeak : "No driver"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVhaQYTGoB8I2I_1XicK-gB8kioLAdioz6vhywVX-l-M1aKgmik2VvcbvPazuEILovjdDeGryB8DQCum-EpWy7l-hz94pKLm-dlW4wpcp_IC-39JFzmq_JTkVDS5b1oWfExkAipLMWpmyNyAKcCvAqlzg=w749-h508-no?authuser=0",
+	answerimage : "https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/08/17/17/france-train-crash.gif?width=1200", answerSpeak : "Tree on the line"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXt9A2x6F4xJiODRKki6LeIOnWRxdwhu_btU31cZIcMwyR3omr6ILfSQAuf8--KoX2P2bssJICXqOLZlz3Dt2Wxs0kYQ_FXXU5Zc3TePcvEDjINGx--R2zpArLdKyGrZW3OFxQEDS2EoY2Q4mOusWB5jA=w635-h409-no?authuser=0",
+	answerimage : "https://cdn.ca.emap.com/wp-content/uploads/sites/9/2018/06/tracksbuckle.jpg", answerSpeak : "Heat buckled rails"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXaIIG_l6CCTr_2VqrWhebQVPQ-AJxoPPF_CBVrcaD2LPvgmrh5u43yQ8lpYzSl8ghf_rr8BMdh_dw9VKgtdjPohhkqSUXgDqeyD5h4xf_iKts7Mf67XftX1iucn5BlzTssewhTGaSzBjVrZW2PjLCklg=w972-h522-no?authuser=0",
+	answerimage : "https://metro.co.uk/wp-content/uploads/2017/01/swan-on-track-2.gif", answerSpeak : "Swan on the line"}) ;
 
 /*
  * 	image : "",
@@ -1705,7 +1730,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
  	image : "",
 
  quests[++questIndexBuilder] = { //
-		name : "Pictionary " + pictionaryCount++,
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of ??",
 		tags : "2022-?-?,pictionary",
 		questInfo: new Array()
