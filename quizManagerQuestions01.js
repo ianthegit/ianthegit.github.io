@@ -1403,7 +1403,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : ""}) ;
 
 quests[++questIndexBuilder] = { //
-		name : "Last week in June",
+		name : "Topicalish "+getAndIncrementCounterForType("Topicalish"),
 		hoverover : "Do you remember what happened end of June 2021?",
 		tags : "2021-7-3,saturday,InnerWheel,surfers",
 		questInfo: new Array()
@@ -1690,7 +1690,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : ""}) ;
 
 quests[++questIndexBuilder] = { //
-		name : "No Sport",
+		name : "Topicalish "+getAndIncrementCounterForType("Topicalish"),
 		hoverover : "One for the non-sports fans",
 		tags : "2021-7-10,saturday,InnerWheel,surfers",
 		questInfo: new Array()
@@ -1773,7 +1773,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 
 
 quests[++questIndexBuilder] = { //
-		name : "Trivia",
+		name : "Topicalish "+getAndIncrementCounterForType("Topicalish"),
 		hoverover : "Bits and Bobs",
 		tags : "2021-7-17,saturday,InnerWheel,surfers",
 		questInfo: new Array()
@@ -1866,7 +1866,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { //
-		name : "Weekly Trivia",
+		name : "Topicalish "+getAndIncrementCounterForType("Topicalish"),
 		hoverover : "Bits and Bobs",
 		tags : "2021-7-24,saturday,InnerWheel,surfers",
 		questInfo: new Array()
@@ -2042,7 +2042,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 
 quests[++questIndexBuilder] = { //
-		name : "Dusty",
+		name : "Topicalish "+getAndIncrementCounterForType("Topicalish"),
 		hoverover : "Mixing it up",
 		tags : "2021-7-31,saturday,InnerWheel,surfers",
 		questInfo: new Array()
@@ -2135,7 +2135,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : ""}) ;
 
 quests[++questIndexBuilder] = { //
-		name : "August pretentions",
+		name : "Topicalish "+getAndIncrementCounterForType("Topicalish"),
 		hoverover : "Mixing it up",
 		tags : "2021-8-7,saturday,InnerWheel,surfers",
 		questInfo: new Array()
@@ -2308,7 +2308,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 	answer : "He had hiccups"});
 
 quests[++questIndexBuilder] = { //
-		name : "Mixed bag",
+		name : "Topicalish "+getAndIncrementCounterForType("Topicalish"),
 		hoverover : "Mixing it up",
 		tags : "2021-8-14,saturday,InnerWheel,surfers",
 		questInfo: new Array()
@@ -2402,7 +2402,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { //
-		name : "Turtally Brilliant",
+		name : "Topicalish "+getAndIncrementCounterForType("Topicalish"),
 		hoverover : "Some turtles",
 		tags : "2021-9-11,saturday,InnerWheel,surfers",
 		questInfo: new Array()
@@ -2445,7 +2445,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	answer : "Fawlty Towers", image : "https://i.guim.co.uk/img/media/3842e4791d5a317de2aafdc5351f9ad9e49ae620/0_432_3236_1942/master/3236.jpg?width=620&quality=85&auto=format&fit=max&s=2d411038abd85985a64e94ae235f2ac0"	});
 
 quests[++questIndexBuilder] = { //
-		name : "Wales 1",
+		name : "Wales "+getAndIncrementCounterForType("Wales"),
 		hoverover : "Some specific questions",
 		tags : "2021-9-11,saturday,InnerWheel,surfers",
 		questInfo: new Array()
@@ -2479,7 +2479,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 
 
 quests[++questIndexBuilder] = { //
-		name : "Wales 2",
+		name : "Wales "+getAndIncrementCounterForType("Wales"),
 		hoverover : "Some less specific questions",
 		tags : "2021-9-11,saturday,InnerWheel,surfers",
 		questInfo: new Array()
@@ -2512,7 +2512,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 
 quests[++questIndexBuilder] = { //
-		name : "Cruising",
+		name : "Topicalish "+getAndIncrementCounterForType("Topicalish"),
 		hoverover : "Tom and his curry",
 		tags : "2021-9-11,saturday,InnerWheel,surfers",
 		questInfo: new Array()
@@ -2549,7 +2549,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 	answer : "It had decreased by 27%"	});
 
 quests[++questIndexBuilder] = { //
-		name : "Time Travel",
+		name : "Time Travel "+getAndIncrementCounterForType("Time Travel"),
 		hoverover : "Who will look like this in the future",
 		tags : "2021-9-11,saturday,InnerWheel,surfers",
 		questInfo: new Array()
@@ -2593,7 +2593,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 quests[++questIndexBuilder] = { //
-		name : "Hidden Time Traveller",
+		name : "Topicalish "+getAndIncrementCounterForType("Topicalish"),
 		hoverover : "Spot the hidden Dr Who reference for an extra point",
 		tags : "2021-9-11,saturday,InnerWheel,surfers",
 		splash : {splashType : splashTypePictureAndText , splashText : "Shout out the hidden Dr Who reference and win a point", splashImage : "https://metro.co.uk/wp-content/uploads/2020/02/doctor-who-elisabeth-sladen-sarah-jane-smith_1582209527.png?w=1200&h=630&crop=1" },
@@ -2791,7 +2791,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { ////https://quizly.co/can-you-guess-what-happens-next/?utm_source=PlayAgain&utm_medium=Quiz
-		name : "Next!",
+		name : "Next! "+getAndIncrementCounterForType("Next"),
 		hoverover : "What happens next",
 		splash : {splashType : splashTypePictureAndText , splashText : "In honour of the new Question of Sport and their famous 'What happened next?' round...", splashImage : "https://i2-prod.mirror.co.uk/incoming/article1742301.ece/ALTERNATES/s1200c/David%20Coleman.jpg"  },
 		tags : "2021-9-11,saturday,InnerWheel,surfers",
@@ -2826,7 +2826,7 @@ quests[++questIndexBuilder] = { ////https://quizly.co/can-you-guess-what-happens
 		answerimage : "https://cdn.quizly.co/wp-content/uploads/2012/10/Win-9.gif"}) ;
  
  quests[++questIndexBuilder] = { ////https://quizly.co/can-you-guess-what-happens-next/?utm_source=PlayAgain&utm_medium=Quiz
-			name : "Next!",
+			name : "Next! "+getAndIncrementCounterForType("Next"),
 			hoverover : "What happens next",
 			splash : {splashType : splashTypePictureAndText , splashText : "In honour of the new Question of Sport and their famous 'What happened next?' round...", splashImage : "https://i.inews.co.uk/content/uploads/2021/09/PRI_197773633-640x360.jpg"  },
 			tags : "2021-9-11,saturday,InnerWheel,surfers",
@@ -2926,7 +2926,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
  
 
 quests[++questIndexBuilder] = { //
-		name : "Time Travel 2",
+		name : "Time Travel "+getAndIncrementCounterForType("Time Travel"),
 		hoverover : "Who did look like this in the past",
 		tags : "2021-9-18,saturday,InnerWheel,surfers",
 		questInfo: new Array()
@@ -3542,7 +3542,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
 
 
 quests[++questIndexBuilder] = { 
-		name : "Real or Fake",
+		name : "Real or Fake "+getAndIncrementCounterForType("Real Fake"),
 		hoverover : "Are these business names real or fake?",
 		tags : "2021-10-24,saturday,InnerWheel,surfers",
 		splash : {splashType : splashTypePictureAndText  , splashText : "Carrie Fisher ran 'Curl up and Dye' in The Blues Brothers, but are these business names real or fake?", splashImage : "https://i.pinimg.com/originals/29/7f/36/297f36de3019440222f046f3918c5895.jpg" },
@@ -3602,7 +3602,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { 
-		name : "Real or Fake",
+		name : "Real or Fake "+getAndIncrementCounterForType("Real Fake"),
 		hoverover : "Are these pictures real or fake?",
 		tags : "2021-11-1,saturday,InnerWheel,surfers",
 		questInfo: new Array()
@@ -3645,7 +3645,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
 	image : "https://triviaboss.com/static/739272d0bc0d12b4e3af3bedf5c3447c/52f06/q5bd6e43a-1d83-4909-ab67-7f06bf529ffb_21-16.jpg"} ); 
 
 quests[++questIndexBuilder] = { 
-		name : "This week(ish)",
+		name : "Topicalish "+getAndIncrementCounterForType("Topicalish"),
 		hoverover : "Been reading the news this week?",
 		tags : "2021-11-1,saturday,InnerWheel,surfers",
 		questInfo: new Array()
@@ -4005,7 +4005,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,	ques
 
 
 quests[++questIndexBuilder] = { //https://www.pocket-lint.com/apps/news/134579-worst-album-cover-art-of-all-time-you-won-t-believe-number-34
-		name : "Bad Albums",
+		name : "Bad Albums "+getAndIncrementCounterForType("Bad albums"),
 		hoverover : "Bad album covers, but which act has the most Spotify listens?",
 		splash : {splashType : splashTypePictureAndText , splashText : "Bad album covers, but which act has the most Spotify listens...?", splashImage : "https://scontent.fltn3-2.fna.fbcdn.net/v/t31.18172-8/14976849_1174228349338417_7115787037305981998_o.jpg?_nc_cat=106&ccb=1-5&_nc_sid=174925&_nc_ohc=AT_LBLxKOjsAX_nT_hl&_nc_ht=scontent.fltn3-2.fna&oh=60fefe5a7b0ddbd99fbdadd1c79364c4&oe=61BD5972" },
 		tags : "2021-11-21,saturday,InnerWheel,surfers",
@@ -4088,7 +4088,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { //https://www.pocket-lint.com/apps/news/134579-worst-album-cover-art-of-all-time-you-won-t-believe-number-34
-		name : "Bad Albums",
+		name : "Bad Albums "+getAndIncrementCounterForType("Bad albums"),
 		hoverover : "Bad album covers, but which act has the most Spotify listens?",
 		splash : {splashType : splashTypePictureAndText , splashText : "Bad album covers, but which act has the most Spotify listens...?", splashImage : "https://scontent.fltn3-2.fna.fbcdn.net/v/t31.18172-8/14976849_1174228349338417_7115787037305981998_o.jpg?_nc_cat=106&ccb=1-5&_nc_sid=174925&_nc_ohc=AT_LBLxKOjsAX_nT_hl&_nc_ht=scontent.fltn3-2.fna&oh=60fefe5a7b0ddbd99fbdadd1c79364c4&oe=61BD5972" },
 		tags : "2021-11-28,saturday,InnerWheel,surfers",
