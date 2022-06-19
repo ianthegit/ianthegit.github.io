@@ -19,8 +19,8 @@ document.getElementsByTagName('head')[0].appendChild(meta);
 //  http://www.celebritizer.com/   Who has worked with whom
 
 currQuestIndex = 0;
-palindromeCounter=0;
-pubSingerCounter=0;
+genericCounterHolder= new Array();
+genericCounterHolder.push({name:' ', counterValue:-1})
 currQuestStageIndex = -1;
 discussionPointIndex=-1;
 resultText = '';
@@ -152,7 +152,25 @@ audioOnlyYoutubeEnd =	'?rel=0"> </iframe> </div> </div>' ;
 gbp="&#163 ";
 euro="&#8364 ";
 dollar=" &#x24";
+
 quests = new Array();
+
+function getAndIncrementCounterForType(counterType){
+	counterValue = 0;
+	counterHolderSize = genericCounterHolder.length;
+	//console.log(" counterType =" + counterType + "  holderSize=" + counterHolderSize)
+	for (var i = 0; i < counterHolderSize; i++) {
+		//console.log("Row = " + i + " counterType =" + counterType + "  rowName=" + genericCounterHolder[i].name)
+		if ( genericCounterHolder[i].name == counterType ){ 
+			counterValue = genericCounterHolder[i].counterValue;
+			genericCounterHolder[i].counterValue = ++counterValue;
+		}
+	}
+	if (counterValue == 0){
+		genericCounterHolder.push({name:counterType, counterValue:0})
+	}
+	return counterValue;
+}
 
 function getMonthName(index) {
 	mlist = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
