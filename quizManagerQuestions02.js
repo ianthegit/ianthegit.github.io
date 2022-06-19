@@ -96,7 +96,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 
 
 quests[++questIndexBuilder] = { 
-		name : "Christmas Film 0",
+		name : "Christmas Film " +getAndIncrementCounterForType("Christmas Film"),
 		hoverover : "Christmas songs from the ultimate Christmas film.   Bonus point for the film name ",
 		tags : "music,2021-12-5,InnerWheel,saturday",
 		questInfo: new Array()
@@ -152,7 +152,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 
 
 quests[++questIndexBuilder] = { 
-		name : "Elf-on-the-Shelf 0",
+		name : "Elf-on-the-Shelf " +getAndIncrementCounterForType("Shelf Elf"),
 		hoverover : "Everyone has heard of Elf-on-the-shelf, but do you know these...?",
 		splash : {splashType : splashTypePictureAndText , splashText : "For instance... Ghost on the Toast", splashImage : "https://i.redd.it/1wmdoikfw2rz.jpg" },
 		tags : "2021-12-13,saturday,InnerWheel,surfers",
@@ -194,7 +194,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 
 
 quests[++questIndexBuilder] = { 
-		name : "Christmas Film 1",
+		name : "Christmas Film " +getAndIncrementCounterForType("Christmas Film"),
 		hoverover : "Christmas songs from the ultimate Christmas film according to Ted.   Bonus point for the film name ",
 		tags : "music,2021-12-13,InnerWheel,saturday",
 		questInfo: new Array()
@@ -208,7 +208,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { 
-		name : "Elf-on-the-Shelf 1",
+		name : "Elf-on-the-Shelf " +getAndIncrementCounterForType("Shelf Elf"),
 		hoverover : "Everyone has heard of Elf-on-the-shelf, but do you know these...?",
 		splash : {splashType : splashTypePictureAndText , splashText : "For instance... Fogle inside Chernobyl", splashImage : "https://pbs.twimg.com/media/FGyGgchX0AA2jyt?format=jpg&name=small" },
 		tags : "2021-12-19,saturday,InnerWheel,surfers",
@@ -334,7 +334,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 
 
 quests[++questIndexBuilder] = { 
-		name : "Christmas Film 2",
+		name : "Christmas Film " +getAndIncrementCounterForType("Christmas Film"),
 		hoverover : "Christmas songs from another Christmas film franchise soundtrack.   Bonus point for the film name ",
 		tags : "music,2021-12-19,InnerWheel,saturday",
 		questInfo: new Array()
@@ -541,7 +541,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { 
-		name : "General stuff",
+		name : "Topicalish " +getAndIncrementCounterForType("Topicalish"),
 		hoverover : "What has been going on, and other stuff",
 		tags : "2022-1-15,saturday,InnerWheel,surfers",
 		questInfo: new Array()
@@ -754,7 +754,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : 'Queen, The Beatles, Queen & David Bowie, Elton John, The Beatles, Queen, Elton John, Elton John & Kiki Dee, Queen, Queen'}) ;
 		
 quests[++questIndexBuilder] = { 
-		name : "On Yer Bike 0",
+		name : "On Yer Bike " +getAndIncrementCounterForType("On Yer Bike"),
 		hoverover : "Who is on their bike",
 		splash : {splashType : splashTypePictureAndText , splashText : "Here is Jimmy Fallon and Bono riding along - who else can you name?", splashImage : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/spl1016113-001-1511367715.jpg?crop=1xw:1xh;center,top&resize=980:*" },
 		tags : "2022-1-29,saturday,InnerWheel,surfers",
@@ -794,7 +794,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 
 quests[++questIndexBuilder] = { 
-		name : "Seeing Double 0",
+		name : "Seeing Double " +getAndIncrementCounterForType("Seeing Double"),
 		hoverover : "Who is the real celeb",
 		splash : {splashType : splashTypePictureAndText , splashText : "Questions about celebrity doppelgangers - Indicate Left or Right for the real celeb, and name the celeb", splashImage : "https://akns-images.eonline.com/eol_images/Entire_Site/2017229/rs_1024x759-170329095846-1024-ed-sheeran-baby.jpg?fit=around%7C776:576&output-quality=90&crop=776:576;center,top" },
 		tags : "2022-1-29,saturday,InnerWheel,surfers",
@@ -833,7 +833,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 
 quests[++questIndexBuilder] = { 
-		name : "On Yer Bike1",
+		name : "On Yer Bike" +getAndIncrementCounterForType("On Yer Bike"),
 		hoverover : "Who is on their bike",
 		splash : {splashType : splashTypePictureAndText , splashText : "Here is Jimmy Fallon and Bono riding along - who else can you name?", splashImage : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/spl1016113-001-1511367715.jpg?crop=1xw:1xh;center,top&resize=980:*" },
 		tags : "2022-2-5,saturday,InnerWheel,surfers",
@@ -866,7 +866,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 
 quests[++questIndexBuilder] = { 
-		name : "Rabbie Burns",
+		name : "Rabbie Burns -Topicalish " +getAndIncrementCounterForType("Topicalish"),
 		hoverover : "when he urinates",
 		tags : "2022-1-29,saturday,InnerWheel,surfers",
 		questInfo: new Array()
@@ -917,7 +917,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 
 quests[++questIndexBuilder] = { 
-		name : "Seeing Double 1",
+		name : "Seeing Double " +getAndIncrementCounterForType("Seeing Double"),
 		hoverover : "Who is the real celeb",
 		splash : {splashType : splashTypePictureAndText , splashText : "Questions about celebrity doppelgangers - Indicate Left or Right for the real celeb, and name the celeb", splashImage : "https://wl-brightside.cf.tsp.li/resize/728x/jpg/658/fed/ea33765197a10d5d8c06b2531f.jpg" },
 		tags : "2022-2-5,saturday,InnerWheel,surfers",
@@ -973,7 +973,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 		
 
 quests[++questIndexBuilder] = { 
-		name : "Winter Rings",
+		name : "Winter Rings - Topicalish " +getAndIncrementCounterForType("Topicalish"),
 		hoverover : "Olympics start",
 		tags : "2022-2-5,saturday,InnerWheel,surfers",
 		questInfo: new Array()
@@ -1031,7 +1031,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { 
-		name : "Bambi died",
+		name : "Topicalish " +getAndIncrementCounterForType("Topicalish"),
 		hoverover : "Bamber Gascoigne died this week",
 		tags : "2022-2-12,saturday,InnerWheel,surfers",
 		questInfo: new Array()
@@ -1241,7 +1241,7 @@ addQuest(quests[questIndexBuilder],{type : quizQuestionTypeText, question : "The
 
 
 quests[++questIndexBuilder] = { 
-		name : "Last week",
+		name : "Topicalish " +getAndIncrementCounterForType("Topicalish"),
 		hoverover : "What did you miss?",
 		tags : "2022-2-27,saturday,InnerWheel,surfers",
 		questInfo: new Array()
@@ -1352,7 +1352,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { 
-		name : "Last week",
+		name : "Topicalish " +getAndIncrementCounterForType("Topicalish"),
 		hoverover : "What did you miss?",
 		tags : "2022-3-12,saturday,InnerWheel,surfers",
 		questInfo: new Array()  };
@@ -1559,7 +1559,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = {
-		name : "Mishmash",
+		name : "Topicalish " +getAndIncrementCounterForType("Topicalish"),
 		hoverover : "Losing the ablity to find questions",
 		tags : "saturday,2022-3-26,InnerWheel,surfers",
 		questInfo: new Array()
@@ -1665,7 +1665,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 
 quests[++questIndexBuilder] = { 
-		name : "What a week",
+		name : "Topicalish " +getAndIncrementCounterForType("Topicalish"),
 		hoverover : "What has been going on?",
 		tags : "2022-4-2,saturday,InnerWheel,surfers", 
 		questInfo: new Array() };
@@ -1738,7 +1738,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { 
-		name : "What a week, again",
+		name : "Topicalish " +getAndIncrementCounterForType("Topicalish"),
 		hoverover : "What has been going on?",
 		tags : "2022-4-9,saturday,InnerWheel,surfers", 
 		questInfo: new Array() };
@@ -1898,7 +1898,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 } ); 
 
 quests[++questIndexBuilder] = { 
-		name : "Topicalish " +getAndIncrementCounterForType("Topicalish "),
+		name : "Topicalish " +getAndIncrementCounterForType("Topicalish"),
 		hoverover : "Some topical stuff, some general knowledge",
 		tags : "2022-4-23,saturday,InnerWheel,surfers", 
 		questInfo: new Array() };
@@ -1992,7 +1992,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 
 quests[++questIndexBuilder] = { 
-		name : "Topicalish "+getAndIncrementCounterForType("Topicalish "),
+		name : "Topicalish "+getAndIncrementCounterForType("Topicalish"),
 		hoverover : "Some topical stuff, some general knowledge",
 		tags : "2022-5-8,saturday,InnerWheel,surfers", 
 		questInfo: new Array() };
@@ -2055,7 +2055,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { 
-		name : "Topicalish "+getAndIncrementCounterForType("Topicalish "),
+		name : "Topicalish "+getAndIncrementCounterForType("Topicalish"),
 		hoverover : "Some topical stuff, some general knowledge",
 		tags : "2022-5-15,saturday,InnerWheel,surfers", 
 		questInfo: new Array() };
@@ -2167,7 +2167,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { 
-		name : "Topicalish "+getAndIncrementCounterForType("Topicalish "),
+		name : "Topicalish "+getAndIncrementCounterForType("Topicalish"),
 		hoverover : "Some topical stuf, some general knowledge",
 		tags : "2022-5-22,saturday,InnerWheel,surfers", 
 		questInfo: new Array() };
@@ -2259,7 +2259,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { 
-		name : "Topicalish "+getAndIncrementCounterForType("Topicalish "),
+		name : "Topicalish "+getAndIncrementCounterForType("Topicalish"),
 		hoverover : "Some topical stuff, some general knowledge",
 		tags : "2022-5-29,saturday,InnerWheel,surfers", 
 		questInfo: new Array() };
@@ -2351,7 +2351,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { 
-		name : "Topicalish "+getAndIncrementCounterForType("Topicalish "),
+		name : "Topicalish "+getAndIncrementCounterForType("Topicalish"),
 		hoverover : "Some topical stuff, some general knowledge",
 		tags : "2022-6-5,saturday,InnerWheel,surfers", 
 		splash : {splashType : splashTypePictureAndText , splashText : "Jubilee Weekend fun...?", splashImage : "https://thumbs.gfycat.com/UnrulyContentBassethound-size_restricted.gif"},
@@ -2450,7 +2450,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { 
-		name : "Topicalish "+getAndIncrementCounterForType("Topicalish "),
+		name : "Topicalish "+getAndIncrementCounterForType("Topicalish"),
 		hoverover : "Some topical stuff, some general knowledge",
 		tags : "2022-6-12,saturday,InnerWheel,surfers", 
 		questInfo: new Array() };
@@ -2560,7 +2560,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "W
 
 
 quests[++questIndexBuilder] = { 
-		name : "Topicalish "+getAndIncrementCounterForType("Topicalish "),
+		name : "Topicalish "+getAndIncrementCounterForType("Topicalish"),
 		hoverover : "Some topical stuff, some general knowledge",
 		splash : {splashType : splashTypePictureAndText , splashText : "In the week a Google engineer claimed that it's AI chatbot has become sentient and is scared of being turned off, what else has happened?", splashImage : "https://c.tenor.com/dR6vK_dQ1UgAAAAC/%C3%B3culos-escuro.gif" },
 		tags : "2022-6-19,saturday,InnerWheel,surfers", 
@@ -2652,6 +2652,9 @@ quests[++questIndexBuilder] = {
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4exIbxRVFLhik73SIj675Z?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
 	answer : "Maggie May, Rod Stewart.   Sweet Home Alabama, Lynyrd Skynyrd.   Aint no mountain high enough,  Marvin Gaye (Diana Ross).  What's love got to do with it, Tina Turner.  Don't you (Forget about me), Simple Minds.  Army Dreamers, Kate Bush.  You're so vain, Carly Simon.  Hey Jude, The Beatles.  Road to Nowhere, Talking Heads.   The Locomotion, Little Eva (Kylie Minogue)", answerSpeak : "", question : ""}) ;
+
+
+
 
 
 
