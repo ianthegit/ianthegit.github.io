@@ -2617,6 +2617,21 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : "Running up that Hill, Kate Bush.  Rolling in the Deep, Adele.  The winner takes it all, ABBA.  Jump, Van Halen.  Sweet Child O Mine, Guns 'n' Roses.  Umbrella, Rihanna.  Billie Jean, Michael Jackson.  Call Me, Blondie.  Times like these, Foo Fighters.  Killer Queen, Queen", answerSpeak : "", question : ""}) ;
 
 
+quests[++questIndexBuilder] = { 
+		name : "Topicalish "+getAndIncrementCounterForType("Topicalish"),
+		hoverover : "Some topical stuff, some general knowledge",
+		//splash : {splashType : splashTypePictureAndText , splashText : "In the week a Google engineer claimed that it's AI chatbot has become sentient and is scared of being turned off, what else has happened?", splashImage : "https://c.tenor.com/dR6vK_dQ1UgAAAAC/%C3%B3culos-escuro.gif" },
+		tags : "2022-6-26,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture, 	
+	question : "A new species of (fluffy) crab has been found in Ausralia.   What does it wear on it's head for protection?  " + Table4ColumnStart + "Sea Sponges</td><td>Shark poop</td><td>Seaweed</td><td>A hat with corks dangling from the brim" + Table4ColumnEnd,
+	answer : "Seas Sponges and ascidians - animals including sea squirts", answerSpeak : "", image : "https://i.guim.co.uk/img/media/bbfabfba0e296ddd43da94726a553294a81eab42/0_258_2673_1603/master/2673.jpg?width=620&quality=85&auto=format&fit=max&s=1ce8f3703e9d27cdd0cace1f412462f9",
+	answerimage : "https://i.guim.co.uk/img/media/c8112bb1423f4a53ed88c947009039bcf82d52e9/91_0_2357_1416/master/2357.jpg?width=620&quality=85&auto=format&fit=max&s=35203fe315194df8d589b43888fbfdab"});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture, 	
+	question : "People who can't do 1 specific thing for 10 seconds are more than twice as likely to die within 10 years.  What is that 1 thing?  " + Table4ColumnStart + "Fart</td><td>Hold their breath</td><td>Stand on 1 leg</td><td>Lie convincingly to their partner about their love for Kate Bush" + Table4ColumnEnd,
+	answer : "Stand on 1 leg", answerSpeak : "", image : "https://media0.giphy.com/media/dUMo7xp22xadq/giphy.gif",
+	answerimage : "https://i.guim.co.uk/img/media/03abb8972eabf80faeba3a8b927b3f9a0b24a652/0_192_5760_3456/master/5760.jpg?width=620&quality=85&auto=format&fit=max&s=fd30791adc8b0905edc59b47f7d080b2"});	
+
 
 quests[++questIndexBuilder] = { 
 		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
