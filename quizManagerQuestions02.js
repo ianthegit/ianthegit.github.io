@@ -2675,6 +2675,10 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
 	question : "People who can't do 1 specific thing for 10 seconds are more than twice as likely to die within 10 years.  What is that 1 thing?  " + Table4ColumnStart + "Fart</td><td>Hold their breath</td><td>Stand on 1 leg</td><td>Lie convincingly to their partner about their love for Kate Bush" + Table4ColumnEnd,
 	answer : "Stand on 1 leg", answerSpeak : "", image : "https://media0.giphy.com/media/dUMo7xp22xadq/giphy.gif",
 	answerimage : "https://i.guim.co.uk/img/media/03abb8972eabf80faeba3a8b927b3f9a0b24a652/0_192_5760_3456/master/5760.jpg?width=620&quality=85&auto=format&fit=max&s=fd30791adc8b0905edc59b47f7d080b2"});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What did 92 year old Derek Skipper run out of time doing this week?  " + Table4ColumnStart + "Running his 100th marathon</td><td>Painting his dentists waiting room</td><td>Sitting his maths GCSE</td><td>Listening to Kate Bush before his wife got home" + Table4ColumnEnd,
+	answer : "Sitting his maths GCSE", answerSpeak : "", image : "https://i.guim.co.uk/img/media/2c001a9ce0f288b02626c4272c41da260bd8371b/0_17_2588_1552/master/2588.jpg?width=620&quality=85&auto=format&fit=max&s=a66257c6482bc63d2fa6d3c814642ffb"	});	
+
 
 
 quests[++questIndexBuilder] = { 
