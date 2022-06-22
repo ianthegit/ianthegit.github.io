@@ -2618,6 +2618,50 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { 
+		name : "Who were they",
+		hoverover : "Real names",
+		//splash : {splashType : splashTypePictureAndText , splashText : "In the week a Google engineer claimed that it's AI chatbot has become sentient and is scared of being turned off, what else has happened?", splashImage : "https://c.tenor.com/dR6vK_dQ1UgAAAAC/%C3%B3culos-escuro.gif" },
+		tags : "2022-6-26,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Norma Jeane Mortenson is better known as who?  " + Table4ColumnStart + "Diana Dors</td><td>Bette Middler</td><td>Marilyn Monroe</td><td>Kate Bush" + Table4ColumnEnd,
+	answer : "Marilyn Monroe", answerSpeak : "", image : "https://metro.co.uk/wp-content/uploads/2022/06/SEC_107888168.jpg?quality=90&strip=all&zoom=1&resize=480%2C252"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "which of these was Judy Garland's real name?  " + Table4ColumnStart + "Frances Ethel Gumm</td><td>Joan Alexandra Molinsky</td><td>Julia Elizabeth Wells</td><td>Kate Garland" + Table4ColumnEnd,
+	answer : "Frances Ethel Gumm", answerSpeak : "", image : "https://i.guim.co.uk/img/media/63cfda88318a54e30a72413c6e8532ddd4717b84/0_133_1292_774/master/1292.jpg?width=620&quality=85&auto=format&fit=max&s=3fb899dceda21d605358d02ce29eebc3"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What is Whoopi Goldberg's real name?  " + Table4ColumnStart + "Caryn Elaine Johnson</td><td>Katheryn Elizabeth Hudson</td><td>Olivia Jane Cockburn</td><td>Jacqualine Flash" + Table4ColumnEnd,
+	answer : "Caryn Elaine Johnson", answerSpeak : "", image : "https://i.guim.co.uk/img/media/b975ccb7a5eb7e103553404e5f66fb8fe85efef6/0_361_2082_1248/master/2082.jpg?width=620&quality=85&auto=format&fit=max&s=e18adf90d4c8329ae47562460e46179a"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What was Jamie Foxx's real name?  " + Table4ColumnStart + "Willard Carroll Smith Jr</td><td>Tracy Lauren Marrow</td><td>Eric Marlon Bishop</td><td>Ray Reynard" + Table4ColumnEnd,
+	answer : "Eric Marlon Bishop", answerSpeak : "", image : "https://i.guim.co.uk/img/media/f0e9843f9465cd6870f98adb365d24505b56eb30/0_18_1826_1095/master/1826.jpg?width=620&quality=85&auto=format&fit=max&s=3412fac1a926066f4e15c3b9f675fedc"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What name did Meghan Markle receive at birth?  " + Table4ColumnStart + "Monica</td><td>Rachel</td><td>Phoebe</td><td>Janice" + Table4ColumnEnd,
+	answer : "Rachel", answerSpeak : "", image : "https://i.guim.co.uk/img/media/81f4fc97b7edf15f93700863f002f346fc0f591b/0_257_1705_1022/master/1705.jpg?width=620&quality=85&auto=format&fit=max&s=c67502c48e5dcf198f38d3067cd3e7cb"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What was Jude Law's original first name?  " + Table4ColumnStart + "David</td><td>Richard</td><td>Ringo</td><td>Tingo" + Table4ColumnEnd,
+	answer : "David", answerSpeak : "", image : "https://i.guim.co.uk/img/media/8cbf617d5f52f6580f58b6a5de680ab23fe41cc9/0_95_2400_1746/master/2400.jpg?width=620&quality=85&auto=format&fit=max&s=77341929a6533630c73f5725dff82179"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Nicolas Cage changed his name to distance himself from the famous name he was related to. Who?  " + Table4ColumnStart + "Ingmar Bergman</td><td>Martin Scorsese</td><td>Francis Ford Coppola</td><td>Kate Box" + Table4ColumnEnd,
+	answer : "Francis Ford Coppola", answerSpeak : "", image : "https://i.guim.co.uk/img/media/90d97241e883714eacca50e1454f64a881355424/0_130_1608_1607/master/1608.jpg?width=620&quality=85&auto=format&fit=max&s=7944d207a335eed1af1def2c972c15b3"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Horror movie giant Boris Karloff had a mildly rude English real name. What was it?  " + Table4ColumnStart + "William Henry Pratt</td><td>William Henry Dingle</td><td>William Henry Cock</td><td>William Henry Balls" + Table4ColumnEnd,
+	answer : "William Henry Cock", answerSpeak : "", image : "https://i.guim.co.uk/img/media/0f02d110bc63d3ecb6b9d724dd60f6b337fc845f/0_359_1796_1077/master/1796.jpg?width=620&quality=85&auto=format&fit=max&s=c9151ca61c5a3cd6d6d9cc7e1b091cee"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Joaquin Phoenix was born Joaquin Rafael what?  " + Table4ColumnStart + "Boner</td><td>Belch</td><td>Bottom</td><td>Bigun" + Table4ColumnEnd,
+	answer : "Bottom", answerSpeak : "", image : "https://i.guim.co.uk/img/media/54d100179584c85f50d8c001166a9ec1e7a3cc51/0_5_2121_2120/master/2121.jpg?width=620&quality=85&auto=format&fit=max&s=d5a9ecdacb313ac68fe790dcf21b0249"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Which British actor and national treasure was born Ilyena Lydia Vasilievna Mironov?  " + Table4ColumnStart + "Sienna Miller</td><td>Hayley Mills</td><td>Helen Mirren</td><td>Babooshka Bush" + Table4ColumnEnd,
+	answer : "Helen Mirren", answerSpeak : "", image : ""	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Whose name originally ended 'Mapother IV'?  " + Table4ColumnStart + "Matt Dillon</td><td>Tom Cruise</td><td>Patrick Swayze</td><td>Kurt Russell" + Table4ColumnEnd,
+	answer : "Thomas Cruise Mapother IV ", answerSpeak : "", image : ""	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Michael Caine, was known as what when he was born?  " + Table4ColumnStart + "Christopher Catesby Harington</td><td>Gordon Matthew Thomas</td><td>Maurice Joseph Micklewhite</td><td>Charles Croker" + Table4ColumnEnd,
+	answer : "Maurice Joseph Micklewhite", answerSpeak : "", image : "https://i.guim.co.uk/img/media/7105603bacc9bf6d0225f25d52eae03d1f00bf94/0_0_2400_3000/master/2400.jpg?width=620&quality=85&auto=format&fit=max&s=57f79871a325bb0ef35bf2f4b5b582a9"	});	
+
+
+quests[++questIndexBuilder] = { 
 		name : "Topicalish "+getAndIncrementCounterForType("Topicalish"),
 		hoverover : "Some topical stuff, some general knowledge",
 		//splash : {splashType : splashTypePictureAndText , splashText : "In the week a Google engineer claimed that it's AI chatbot has become sentient and is scared of being turned off, what else has happened?", splashImage : "https://c.tenor.com/dR6vK_dQ1UgAAAAC/%C3%B3culos-escuro.gif" },
