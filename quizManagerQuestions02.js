@@ -2617,17 +2617,18 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : "Running up that Hill, Kate Bush.  Rolling in the Deep, Adele.  The winner takes it all, ABBA.  Jump, Van Halen.  Sweet Child O Mine, Guns 'n' Roses.  Umbrella, Rihanna.  Billie Jean, Michael Jackson.  Call Me, Blondie.  Times like these, Foo Fighters.  Killer Queen, Queen", answerSpeak : "", question : ""}) ;
 
 
+
 quests[++questIndexBuilder] = { 
 		name : "Who were they",
 		hoverover : "Real names",
-		//splash : {splashType : splashTypePictureAndText , splashText : "In the week a Google engineer claimed that it's AI chatbot has become sentient and is scared of being turned off, what else has happened?", splashImage : "https://c.tenor.com/dR6vK_dQ1UgAAAAC/%C3%B3culos-escuro.gif" },
+		splash : {splashType : splashTypePictureAndText , splashText : "In the week Martin Sheen says he regrets changing his name from Ramon Estevez, can you recognise these real names?", splashImage : "https://i.guim.co.uk/img/media/dfe107e63cc3a39d061d2752c9a29470cfb4a3f0/735_335_1829_1098/master/1829.jpg?width=620&quality=85&auto=format&fit=max&s=c9c2e8cb62dca2d1d404cca19f9d7369" },
 		tags : "2022-6-26,saturday,InnerWheel,surfers", 
 		questInfo: new Array() };
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Norma Jeane Mortenson is better known as who?  " + Table4ColumnStart + "Diana Dors</td><td>Bette Middler</td><td>Marilyn Monroe</td><td>Kate Bush" + Table4ColumnEnd,
 	answer : "Marilyn Monroe", answerSpeak : "", image : "https://metro.co.uk/wp-content/uploads/2022/06/SEC_107888168.jpg?quality=90&strip=all&zoom=1&resize=480%2C252"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "which of these was Judy Garland's real name?  " + Table4ColumnStart + "Frances Ethel Gumm</td><td>Joan Alexandra Molinsky</td><td>Julia Elizabeth Wells</td><td>Kate Garland" + Table4ColumnEnd,
+	question : "Which of these was Judy Garland's real name?  " + Table4ColumnStart + "Frances Ethel Gumm</td><td>Joan Alexandra Molinsky</td><td>Julia Elizabeth Wells</td><td>Kate Garland" + Table4ColumnEnd,
 	answer : "Frances Ethel Gumm", answerSpeak : "", image : "https://i.guim.co.uk/img/media/63cfda88318a54e30a72413c6e8532ddd4717b84/0_133_1292_774/master/1292.jpg?width=620&quality=85&auto=format&fit=max&s=3fb899dceda21d605358d02ce29eebc3"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "What is Whoopi Goldberg's real name?  " + Table4ColumnStart + "Caryn Elaine Johnson</td><td>Katheryn Elizabeth Hudson</td><td>Olivia Jane Cockburn</td><td>Jacqualine Flash" + Table4ColumnEnd,
@@ -2658,7 +2659,9 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 	answer : "Thomas Cruise Mapother IV ", answerSpeak : "", image : ""	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Michael Caine, was known as what when he was born?  " + Table4ColumnStart + "Christopher Catesby Harington</td><td>Gordon Matthew Thomas</td><td>Maurice Joseph Micklewhite</td><td>Charles Croker" + Table4ColumnEnd,
-	answer : "Maurice Joseph Micklewhite", answerSpeak : "", image : "https://i.guim.co.uk/img/media/7105603bacc9bf6d0225f25d52eae03d1f00bf94/0_0_2400_3000/master/2400.jpg?width=620&quality=85&auto=format&fit=max&s=57f79871a325bb0ef35bf2f4b5b582a9"	});	
+	answer : "Maurice Joseph Micklewhite", answerSpeak : "Not a lot of people know that", image : "https://i.guim.co.uk/img/media/7105603bacc9bf6d0225f25d52eae03d1f00bf94/0_0_2400_3000/master/2400.jpg?width=620&quality=85&auto=format&fit=max&s=57f79871a325bb0ef35bf2f4b5b582a9"	});	
+
+
 
 
 quests[++questIndexBuilder] = { 
@@ -2678,6 +2681,31 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "What did 92 year old Derek Skipper run out of time doing this week?  " + Table4ColumnStart + "Running his 100th marathon</td><td>Painting his dentists waiting room</td><td>Sitting his maths GCSE</td><td>Listening to Kate Bush before his wife got home" + Table4ColumnEnd,
 	answer : "Sitting his maths GCSE", answerSpeak : "", image : "https://i.guim.co.uk/img/media/2c001a9ce0f288b02626c4272c41da260bd8371b/0_17_2588_1552/master/2588.jpg?width=620&quality=85&auto=format&fit=max&s=a66257c6482bc63d2fa6d3c814642ffb"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which comedian this week claimed he had to speak to the police after somebody complained about one of his jokes, leading to him 'putting the words giant donkey dick' into a message to a police detective?  " + Table4ColumnStart + "Rhod Gilbert</td><td>Joe Lycett</td><td>Lee Mack</td><td>Greg Davis" + Table4ColumnEnd,
+	answer : "Joe Lycett", answerSpeak : "", image : "https://i.guim.co.uk/img/media/4ddc0303072f464deca19baeeb6cdf59327045a0/541_94_2778_1667/master/2778.jpg?width=620&quality=85&auto=format&fit=max&s=cb0ed4f12b05c17f2dc48dcbe8bca377"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Sir Paul McCartney turned 80 lat weekend.   How many times (as of Sunday 26th June 2022) has Paul played Glastonbury?  " + Table4ColumnStart + "4</td><td>3</td><td>2</td><td>1" + Table4ColumnEnd,
+	answer : "2 - 2004 & 2022", answerSpeak : "", image : "https://i.guim.co.uk/img/media/135a9e15414755b11eb0a6628ec53f2ea2adb1d4/0_379_5223_3134/master/5223.jpg?width=620&quality=85&auto=format&fit=max&s=fe3872c9ce90e46dc8df2eaa6d5ad8b7"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Talking of Glastonbury, the festival started life as the Pilton Pop, Blues & Folk Festival. When?  " + Table4ColumnStart + "1972</td><td>1971</td><td>1970</td><td>1969" + Table4ColumnEnd,
+	answer : "1970", answerSpeak : "", image : "https://images.radiox.co.uk/images/246567?width=1400&crop=1_1&signature=KKy6rAvB2oN4VS7XvjNntmqkWzc="	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "This time last year we were gearing up to go to Wales - which of these is NOT a Welsh cheese?  " + Table4ColumnStart + "Sealyham</td><td>Pant-Ys-Gawn</td><td>Brefu Bach</td><td>Golden Cenarth" + Table4ColumnEnd,
+	answer : "Sealyham", answerSpeak : "", image : "https://i.guim.co.uk/img/media/c2af2ffb0870722c9aae294fc32c0af14772ecd4/0_26_2000_1200/master/2000.jpg?width=620&quality=85&auto=format&fit=max&s=ce6f2a6801c0899846f00637365bcf6b"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "There is a new project to try and find out what happened to all the bodies left behind on the battlefield at Waterloo in 1815. But which present-day country is the battlefield of Waterloo located in?  " + Table4ColumnStart + "Netherlands</td><td>Belgium</td><td>France</td><td>Luxembourg" + Table4ColumnEnd,
+	answer : "Belgium", answerSpeak : "", image : "https://i.guim.co.uk/img/media/4bd7843b45b2540920c69c08ca77eb7ef21011a4/82_550_5358_3215/master/5358.jpg?width=620&quality=85&auto=format&fit=max&s=3e0f11717d438c4baa3344e082252eaf"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What is going on here?  " ,
+	answer : "Coach Andrea Fuentes swims to rescue USA's Anita Alvarez from the bottom of the pool after she lost consciousness during her routine in the women's solo free artistic swimming finals.  'A rescue' will get a point.", answerSpeak : "", image : "https://i.guim.co.uk/img/media/26f6f72f561f76af4ac4334dfa320ad9aa3e369b/0_0_5085_3390/master/5085.jpg?width=1010&quality=85&auto=format&fit=max&s=b4eff672ec4e0fff6db16b11796eb509"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "In a recent interview, who said 'Benedictine monks didn't really prepare me for the life I have lived'?  " + Table4ColumnStart + "Jack Nicholson</td><td>Pope Francis</td><td>Julian Clary</td><td>Kate Bush" + Table4ColumnEnd,
+	answer : "Julian Clary", answerSpeak : "", image : "https://i.guim.co.uk/img/media/1fe9458f2504765757cc44af217491b861d1ea22/297_2312_2059_1235/master/2059.jpg?width=620&quality=85&auto=format&fit=max&s=df5610345887de359ada189e32abeebf"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "In a recent interview, who, when asked 'What single thing would improve the quality of your life?' replied 'Jamie Dornan'?  " + Table4ColumnStart + "Jack Nicholson</td><td>Pope Francis</td><td>Julian Clary</td><td>Kate Bush" + Table4ColumnEnd,
+	answer : "Julian Clary", answerSpeak : "", image : "https://c.tenor.com/nJzThGzaMUkAAAAC/christian-grey-jamie-dornan.gif"	});	
+
 
 
 
