@@ -2705,6 +2705,9 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "In a recent interview, who, when asked 'What single thing would improve the quality of your life?' replied 'Jamie Dornan'?  " + Table4ColumnStart + "Jack Nicholson</td><td>Pope Francis</td><td>Julian Clary</td><td>Kate Bush" + Table4ColumnEnd,
 	answer : "Julian Clary", answerSpeak : "", image : "https://c.tenor.com/nJzThGzaMUkAAAAC/christian-grey-jamie-dornan.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What is the name of Fred Sirieix's champagne guzzling girlfriend?  " + Table4ColumnStart + "Rooty-Tooty-Fruity</td><td>Fruitbat</td><td>Fruitcake</td><td>Kate Bush" + Table4ColumnEnd,
+	answer : "Fruitbat", answerSpeak : "", image : "https://cdn.entertainmentdaily.com/2022/06/25095009/Screen-Shot-2022-06-25-at-09.48.57-400x219.png"	});	
 
 
 
