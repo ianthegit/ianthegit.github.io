@@ -2671,7 +2671,7 @@ quests[++questIndexBuilder] = {
 		tags : "2022-6-26,saturday,InnerWheel,surfers", 
 		questInfo: new Array() };
 addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture, 	
-	question : "A new species of (fluffy) crab has been found in Ausralia.   What does it wear on it's head for protection?  " + Table4ColumnStart + "Sea Sponges</td><td>Shark poop</td><td>Seaweed</td><td>A hat with corks dangling from the brim" + Table4ColumnEnd,
+	question : "A new species of (fluffy) crab has been found in Australia.   What does it wear on it's head for protection?  " + Table4ColumnStart + "Sea Sponges</td><td>Shark poop</td><td>Seaweed</td><td>A hat with corks dangling from the brim" + Table4ColumnEnd,
 	answer : "Seas Sponges and ascidians - animals including sea squirts", answerSpeak : "", image : "https://i.guim.co.uk/img/media/bbfabfba0e296ddd43da94726a553294a81eab42/0_258_2673_1603/master/2673.jpg?width=620&quality=85&auto=format&fit=max&s=1ce8f3703e9d27cdd0cace1f412462f9",
 	answerimage : "https://i.guim.co.uk/img/media/c8112bb1423f4a53ed88c947009039bcf82d52e9/91_0_2357_1416/master/2357.jpg?width=620&quality=85&auto=format&fit=max&s=35203fe315194df8d589b43888fbfdab"});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture, 	
