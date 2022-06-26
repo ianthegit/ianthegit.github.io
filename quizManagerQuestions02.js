@@ -2720,7 +2720,7 @@ quests[++questIndexBuilder] = {
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6DXzSKMqUpXpOKFAhax8Af?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
-	answer : "Smells like teen spirit, Nirvana.   Rocket Man, Elton John.  Cloudbursting, Kate bush.  Ticket to ride, The Beatles.  Go your own way, Fleetwood Mac.  I get around, The Beach Boys.  Hello, I love you, The Doors.  I don't like Mondays, TheBoomtown Rats.   Do you really want to hurt me?  Culture CLub.  A teenager in Love, Dion & the Belmonts (Marty Wilde too)", answerSpeak : "", question : ""}) ;
+	answer : "Smells like teen spirit, Nirvana.   Rocket Man, Elton John.  Cloudbusting, Kate bush.  Ticket to ride, The Beatles.  Go your own way, Fleetwood Mac.  I get around, The Beach Boys.  Hello, I love you, The Doors.  I don't like Mondays, TheBoomtown Rats.   Do you really want to hurt me?  Culture CLub.  A teenager in Love, Dion & the Belmonts (Marty Wilde too)", answerSpeak : "", question : ""}) ;
 
 
 
