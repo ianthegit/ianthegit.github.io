@@ -2685,7 +2685,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	question : "Which comedian this week claimed he had to speak to the police after somebody complained about one of his jokes, leading to him 'putting the words giant donkey dick' into a message to a police detective?  " + Table4ColumnStart + "Rhod Gilbert</td><td>Joe Lycett</td><td>Lee Mack</td><td>Greg Davis" + Table4ColumnEnd,
 	answer : "Joe Lycett", answerSpeak : "", image : "https://i.guim.co.uk/img/media/4ddc0303072f464deca19baeeb6cdf59327045a0/541_94_2778_1667/master/2778.jpg?width=620&quality=85&auto=format&fit=max&s=cb0ed4f12b05c17f2dc48dcbe8bca377"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Sir Paul McCartney turned 80 lat weekend.   How many times (as of Sunday 26th June 2022) has Paul played Glastonbury?  " + Table4ColumnStart + "4</td><td>3</td><td>2</td><td>1" + Table4ColumnEnd,
+	question : "Sir Paul McCartney turned 80 last weekend.   How many times (as of Sunday 26th June 2022) has Paul played Glastonbury?  " + Table4ColumnStart + "4</td><td>3</td><td>2</td><td>1" + Table4ColumnEnd,
 	answer : "2 - 2004 & 2022", answerSpeak : "", image : "https://i.guim.co.uk/img/media/135a9e15414755b11eb0a6628ec53f2ea2adb1d4/0_379_5223_3134/master/5223.jpg?width=620&quality=85&auto=format&fit=max&s=fe3872c9ce90e46dc8df2eaa6d5ad8b7"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Talking of Glastonbury, the festival started life as the Pilton Pop, Blues & Folk Festival. When?  " + Table4ColumnStart + "1972</td><td>1971</td><td>1970</td><td>1969" + Table4ColumnEnd,
@@ -2707,7 +2707,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	answer : "Julian Clary", answerSpeak : "", image : "https://c.tenor.com/nJzThGzaMUkAAAAC/christian-grey-jamie-dornan.gif"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "What is the name of Fred Sirieix's champagne guzzling girlfriend?  " + Table4ColumnStart + "Rooty-Tooty-Fruity</td><td>Fruitbat</td><td>Fruitcake</td><td>Kate Bush" + Table4ColumnEnd,
-	answer : "Fruitbat", answerSpeak : "", image : "https://cdn.entertainmentdaily.com/2022/06/25095009/Screen-Shot-2022-06-25-at-09.48.57-400x219.png"	});	
+	answer : "Fruitcake", answerSpeak : "", image : "https://cdn.entertainmentdaily.com/2022/06/25095009/Screen-Shot-2022-06-25-at-09.48.57-400x219.png"	});	
 
 
 
@@ -2720,7 +2720,7 @@ quests[++questIndexBuilder] = {
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6DXzSKMqUpXpOKFAhax8Af?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
-	answer : "Smells like teen spirit, Nirvana.   Rocket Man, Elton John.  Cloudbusting, Kate bush.  Ticket to ride, The Beatles.  Go your own way, Fleetwood Mac.  I get around, The Beach Boys.  Hello, I love you, The Doors.  I don't like Mondays, TheBoomtown Rats.   Do you really want to hurt me?  Culture CLub.  A teenager in Love, Dion & the Belmonts (Marty Wilde too)", answerSpeak : "", question : ""}) ;
+	answer : "Smells like teen spirit, Nirvana.   Rocket Man, Elton John.  Cloudbusting, Kate Bush.  Ticket to ride, The Beatles.  Go your own way, Fleetwood Mac.  I get around, The Beach Boys.  Hello, I love you, The Doors.  I don't like Mondays, TheBoomtown Rats.   Do you really want to hurt me?  Culture CLub.  A teenager in Love, Dion & the Belmonts (Marty Wilde too)", answerSpeak : "", question : ""}) ;
 
 
 
