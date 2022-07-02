@@ -2726,6 +2726,99 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { 
+		name : "Queueing",
+		hoverover : "All the Q words",
+		splash : {splashType : splashTypePictureAndText , splashText : "All the answers here start with the letter Q", splashImage : "https://thumbs.gfycat.com/DarlingValuableAsianconstablebutterfly-max-1mb.gif" },
+		tags : "2022-7-3,saturday,InnerWheel,surfers", //,7DegreesOfHBC",
+		questInfo: new Array()
+	};
+	
+	addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "What is the standard keyboard layout used in the UK?  " ,	answer : "QWERTY"	, answerSpeak : ""});
+	addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+		question : "What is the standard keyboard layout used in Germany?  " ,	answer : "QWERTZ"	, answerSpeak : ""});
+	addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+		question : "American Football position, throwing the ball here?  " ,	answer : "Quarterback"	, answerSpeak : "", image : "https://i.gifer.com/Mv9L.gif" });
+	addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+		question : "In land armies, who is generally a senior soldier who supervises stores and distributes supplies and provisions?  " ,	answer : "Quartermaster"	, answerSpeak : ""});
+	addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+		question : "What traditional European pole weapon was especially prominent in England during the Early Modern period?  " ,	answer : "Quarterstaff"	, answerSpeak : ""});
+	addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+		question : "In materials science, what is the rapid cooling of a workpiece in water, oil or air to obtain certain material properties?  " ,	answer : "Quenching"	, answerSpeak : ""});
+	addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+		question : "Which English cartoonist, caricaturist, illustrator and children's writer has illustrated 18 books written by Roald Dahl?  " ,	answer : "Quinten Blake"	, answerSpeak : ""});
+	addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+		question : "Similar to a pompadour, what is a classic men's haircut featuring long hair on the top, especially in the front, and trimmed hair at the back and sides?  " ,	answer : "Quiff"	, answerSpeak : ""});
+	addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+		question : "What is another word for 'A witty remark'?  " ,	answer : "Quip"	, answerSpeak : ""});
+	addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+		question : "The hollow sharp spines of a porcupine, hedgehog, or other spiny mammal?  " ,	answer : "Quill"	, answerSpeak : ""});
+
+quests[++questIndexBuilder] = { 
+		name : "Topicalish "+getAndIncrementCounterForType("Topicalish"),
+		hoverover : "Some topical stuff, some general knowledge",
+		splash : {splashType : splashTypePictureAndText , splashText : "In the week Henman Hill or Murray Mound wasn't renamed Raducanu Rise, what else has happened?", splashImage : "https://media1.giphy.com/media/VHkcNzbZHji2ytZCUc/giphy.gif" },
+		tags : "2022-7-3,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "'Our Graham' - Graham Skidmore of Blind Date voiceover fame - passed away recently at the age of 90.  Which of these was he NOT in?  " + Table4ColumnStart + "The Pure Hell of St Trinians</td><td>Shooting Stars</td><td>Star Wars</td><td>Monty Python's Flying Circus" + Table4ColumnEnd,
+	answer : "Star Wars", answerSpeak : "", image : "https://i.guim.co.uk/img/media/e60b94d661e5880c22af8c918d6e1d96e113626a/182_0_2818_1691/master/2818.jpg?width=620&quality=85&auto=format&fit=max&s=7df0e6389165e76b8954bf7dfb9b1266"});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "'Skimpflation' is in the news this week.  What is it?  " + Table4ColumnStart + "Hemlines go up as stock prices go up</td><td>Same price, fewer Hobnobs</td><td>Same price, shoddier goods/service</td><td>Skimming stones get bigger" + Table4ColumnEnd,
+	answer : "Same price, shoddier goods/service.  #1 is called The Hemline Index, and #2 is called Shrinkflation.  #4 is rubbish.", answerSpeak : "", image : "https://c.tenor.com/SiUEF2jeQWUAAAAC/stone.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What are MPs Ian Duncan Smith & Wes Streeting trying here?  " + Table4ColumnStart + "The new cross-party gillet</td><td>A gillet that mimics menopause symptoms</td><td>The new Westminster stab vest</td><td>Face slapping for idiots training" + Table4ColumnEnd,
+	answer : "A gillet that mimics menopause symptoms.  They didn't enjoy the experience", answerSpeak : "", image : "https://i.guim.co.uk/img/media/01623fb073c8a255c78e36bcb2df02425f873bec/374_508_7445_4467/master/7445.jpg?width=380&quality=85&auto=format&fit=max&s=54b83a64e9e26ecf020477c901fafd99"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture, 	
+	question : "3 point question.   Where is this (roughly 1 point, accurate 2 points) and what is going on?  " ,
+	answer : "The Tyne (1 point), a few hundred metres down river from the North Shields Ferry landing (2 points), next to the North Shields Fish Quay.  A swimmer was offered help by the lifeboat, but refused, exited the water and ran away", answerSpeak : "", 
+	image : "https://i2-prod.chroniclelive.co.uk/news/north-east-news/article24356914.ece/ALTERNATES/s810/0_Pilot-Boat-approaching-unauthorised-swimmer.png", answerimage : "https://i2-prod.chroniclelive.co.uk/news/north-east-news/article24356911.ece/ALTERNATES/s615b/1_Man-swimming-across-River-Tyne.png"	});	
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "Where were 'A Grandfather clock and person 'asleep under pile of clothes'', amongst other things, found this week? ", answer : "Glastonbury, during the cleanup",
+	answerimage : "https://1159025897.rsc.cdn77.org/data/images/full/81521/glastonbury-festival.jpg"} ); 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "The G7 summit was this week, but which venue was hosting?  " + Table4ColumnStart + "Bavaria in Germany</td><td>Lombardy in Italy</td><td>Hautes-Alpes in France</td><td>Madrid in Spain" + Table4ColumnEnd,
+	answer : "Bavaria in Germany", answerSpeak : "", image : "https://i.guim.co.uk/img/media/cb717bc6366ed3d3fe246e43cea2240e32a49f00/0_170_7757_4657/master/7757.jpg?width=620&quality=85&auto=format&fit=max&s=0a5b7e0b853af3e647bf6e13b5a8123a"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "It was also the Nato summit this week. But where was that?  " + Table4ColumnStart + "Bavaria in Germany</td><td>Lombardy in Italy</td><td>Hautes-Alpes in France</td><td>Madrid in Spain" + Table4ColumnEnd,
+	answer : "Madrid in Spain", answerSpeak : "", image : "https://www.nato.int/nato_static_fl2014/assets/pictures/images_mfu/2022/3/24b-summit-photo/220324b-001_rdax_775x440s.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Thanks to a climate crisis-induced heatwave, the mayor of Castenaso, near Bologna in Italy, is imposing a " + euro + "500 fine for doing what with water?  " + Table4ColumnStart + "Putting out bowls of water for stray cats and dogs</td><td>Companies using water in public fountains and water features</td><td>Boiling pasta for longer than seven minutes</td><td>Hairdressers and barbers shampooing their customers' hair twice" + Table4ColumnEnd,
+	answer : "Hairdressers and barbers shampooing their customers' hair twice", answerSpeak : "", image : ""	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Emma Raducanu lost early on this week.  Her father is from Romania, her mother from China.  She speaks Mandarin, Romanian and English, and suppports Spurs.  But how many passports does she hold (extra point if you list them all)?  " + Table4ColumnStart + "4</td><td>3</td><td>2</td><td>1" + Table4ColumnEnd,
+	answer : "2 - British & Canadian", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Raducanu_WMQ18_%2816%29_%2842834286534%29.jpg/170px-Raducanu_WMQ18_%2816%29_%2842834286534%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Talking of Wimbledon - what is the All England Lawn Tennis & Croquet Club testing to try and broaden the appeal of the sport?  " + Table4ColumnStart + "Larger-sized tennis racquets</td><td>Hybrid plastic grass</td><td>Genetically-modified giant strawberries with giant cream</td><td>Tickets to see Kate Bush" + Table4ColumnEnd,
+	answer : "Hybrid plastic grass", answerSpeak : "", image : "https://media2.giphy.com/media/8vHXWgIlCR9nDjKSyG/giphy.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "The SNP has announced it will hold a Scottish independence referendum. Flower of Scotland celebrates a Scottish victory over Edward II of England, but who was monarch when the Acts of Union came into effect to form Great Britain in 1707?  " + Table4ColumnStart + "King James VII of Scotland and II of England</td><td>King George I</td><td>Queen Anne</td><td>Queen Mary II" + Table4ColumnEnd,
+	answer : "Queen Anne", answerSpeak : "", image : "http://www.davidmckinlay.com/Scottish_Kings/Introduction_files/shapeimage_2.png"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Susie Dent's weird word corner - According to the Cambridge online dictionary, what does ballute mean?  " + Table4ColumnStart + "A type of inflatable device resembling a cross between a parachute and a balloon, designed to slow descent rapidly</td><td>A joke or a line in a script intended to get a laugh</td><td>A bone found within the penis of certain mammals, including many primates, rodents and bats</td><td>A heavy coarse napped cotton or wool fabric" + Table4ColumnEnd,
+	answer : "A type of inflatable device resembling a cross between a parachute and a balloon, designed to slow descent rapidly", answerSpeak : "", image : "https://i.pinimg.com/originals/42/32/62/42326203215df53354de316f515103b5.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What is the name of the substance that spiritualists believe is exuded physically by some mediums when they are contacting the dead?  " + Table4ColumnStart + "Alembroth</td><td>Mesothorium</td><td>Phlogiston</td><td>Ectoplasm" + Table4ColumnEnd,
+	answer : "Ectoplasm", answerSpeak : "", image : "https://thumbs.gfycat.com/CrazyLividGermanspaniel-size_restricted.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "This is Willow, she is a dachshund. What does dachshund mean in German?  " + Table4ColumnStart + "Squirrel dog</td><td>Pigeon dog</td><td>Rat dog</td><td>Badger dog" + Table4ColumnEnd,
+	answer : "Badger dog", answerSpeak : "", image : "https://i.guim.co.uk/img/media/75b1d8a6e2db5e2f270ecdc0c17aa246de9c62d0/0_280_1200_1200/master/1200.jpg?width=620&quality=85&auto=format&fit=max&s=e9b41c786d75879d4a3fe44a853fe4a5"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Pet Shop Boys were a Glastonbury highlight for some, and they played Losing My Mind, a hit for Liza Minnelli when they recorded it with her in 1989. Who wrote it?  " + Table4ColumnStart + "Stephen Sondheim</td><td>George and Ira Gershwin</td><td>Neil Tennant and Chris Lowe</td><td>Kate Bush" + Table4ColumnEnd,
+	answer : "Stephen Sondheim", answerSpeak : "", image : "https://i.guim.co.uk/img/media/1fe9458f2504765757cc44af217491b861d1ea22/297_2312_2059_1235/master/2059.jpg?width=620&quality=85&auto=format&fit=max&s=df5610345887de359ada189e32abeebf"	});	
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2022-7-3,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2kty4r4PuVg2kFQWZdkV1F?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Suspicious Minds, Elvis.   Rock and Roll music, Chuck Berry (The Beatles).  You spin me right round, Dead or Alive.  Maggie May, Rod Stewart.  Babooshka, Kate Bush.  Tiny Dancer, Elton John.  Sweet child o' mine, Guns 'N' Roses.  Raindrops keep falling on my head, B J Thomas. Can't take my eyes off you.  Frankie Valli.   Last Christmas, Wham!  ", answerSpeak : "", question : ""}) ;
+
+quests[++questIndexBuilder] = { 
 		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
 		hoverover : "Songs you will know, but wish you did not after this.",
 		tags : "music,2022-7-3,InnerWheel,saturday",
