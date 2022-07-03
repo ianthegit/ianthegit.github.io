@@ -1746,6 +1746,30 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLUUhQyWzdVQ_3XacdgBxC3Xugafz-8Azf4CQa1hSlE7M6on1N0b0bKdHxJPeNWsHJPYv3PHmtApFTEuIJJMCHLGrBx19espQFxB_1Q_JfejKxSI_5yFXp_0vHVWt7rxWdzzt29hNUEzleEynOyj84zQ8Q=w398-h492-no?authuser=0",
 	answerimage : "https://ajournalofmusicalthings.com/wp-content/uploads/portapotty-girl1.png", answerSpeak : "Disgusting toilets"}) ;
 
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of Wimbledon",
+		tags : "2022-7-3,pictionary",
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLX7PxCaJcaMxI0aqGBNiFZIUZzMFmPARP7YnSyRf69y5glsnZ8aGcSC1SikbS65DFO2hVoCPH389hHqsAe2aMp-ZoqYUjOC22QJ5qfP6dst0rRWiR1Tge-SIAiarcxf-6_EM37JH8JftTYMMbLtq7ezbQ=w251-h238-no?authuser=0",
+	answerimage : "https://c.tenor.com/9SdVSh6Z1ykAAAAd/tennis-ball-spinning.gif", answerSpeak : "Ball"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLV8LaJupjjIK6XSXDUevOSAZzb0rHsrYxIGCwXgABWjlTO_iRsmGun06qYMMG6zHJy_29Zc1f81Toh7Fscn_dBKObcm7r6Mc_PScWTkKHqFDfsDQ-4nSghXaAU85he1cDDHVew2vfctu0BPcQGLrUbvvw=w391-h245-no?authuser=0",
+	answerimage : "https://thumbs.gfycat.com/DefinitiveLikableFiddlercrab-size_restricted.gif", answerSpeak : "Net"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLWxB7HtVeVgWgNvfpxipa-O3USwTRcAOB2wJVyAJ1PcrqbMmMBlzL1BDf4-025pTJBEuB6Bu1wKpxrpzIXgYHqsfHzlveChRkdnrNZUsvSal89j2pBeqt3aKRiTDKLynqO6kX8Hy8WIg_mV9bqQ1UOYcw=w211-h231-no?authuser=0",
+	answerimage : "https://media2.giphy.com/media/ROw1plykNcXrdQMFYu/giphy.gif", answerSpeak : "Strawberries"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw for Ian", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXsHtQFuEoB3OiwzwPU_WZMxbvZX9RhJBDv-x35fvHnlEvA3YVz0Tq-PlJEuSFlvf4t1FJGtkgOYIauZw2zwKleeQmOdG6PefuZTat2V3tXmJQ1w5oN-FF55EIDrXykxT3EJhCEXssV8D58ZrVJPzi3Vg=w338-h347-no?authuser=0",
+	answerimage : "https://media2.giphy.com/media/l0ExbLIvrI5VD58D6/giphy.gif", answerSpeak : "Racket"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUcvzUUzbzSjytDc3Pq773azjQONRMIox6PUsV5FuSWz0a-JahOqh52N_ZHb6rCYVqqgEnVPyhqrHGbB-oVgqK0VJ6qL3Y99B2Gjj-63_p9_UoallI7PQggzzbDudjJsOT1pjaCVjKJk2fhO609V5lN5w=w365-h271-no?authuser=0",
+	answerimage : "https://i.gifer.com/origin/08/08817cdf09b34c7f0049beca9dde8253_w200.gif", answerSpeak : "Cream"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXQxwU7QkGohrX0YGNaEDeo-iH5RS1i6fLfPXIVb-y443fzftk6eQTvHCXzkbEiDB2aI39M0irTRmE2XrPat-0PRyX0xQ5ffc6VFHUea89RS0POc6ZApbyGt8OY69EYnJkMS2TdP814q_ajuZbqoa1WWQ=w842-h467-no?authuser=0",
+	answerimage : "https://media1.giphy.com/media/smyBe7dnV52I8/200.gif", answerSpeak : "Henman Hill, Murray Mound"}) ;
 
 /*
  * 	image : "",
