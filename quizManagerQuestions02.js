@@ -2831,6 +2831,101 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { 
+		name : "Topicalish "+getAndIncrementCounterForType("Topicalish"),
+		hoverover : "Some topical stuff, some general knowledge",
+		splash : {splashType : splashTypePictureAndText , splashText : "In the week Boris said Bye-Bye and Kate Bush lost her #1 spot, what else has happened?", splashImage : "https://lh3.googleusercontent.com/pw/AM-JKLVAGvYmy0FS7tljHxtDLo7iFwIwb12goHXuoqJjZ46r1rV5-JY3W8jDWepptXp6j_Hxo6nBRnwPFrWcbUBuxwLulXvIKDbV7FBWAciiWRmEan7r7Y68a6wGfM0fyUZJdWD4Ku2vSvCgEtEWGO2QVj8x7g=w500-h459-no?authuser=0" },
+		tags : "2022-7-10,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "How many ministers resigned this week (roughly, it's a moving feast)?  " + Table4ColumnStart + "29</td><td>39</td><td>49</td><td>59" + Table4ColumnEnd,
+	answer : "59"	, answerSpeak : ""});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "How much of their annual salary are ministers entitled to if they resign?  " + Table4ColumnStart + "10%</td><td>15%</td><td>20%</td><td>25%" + Table4ColumnEnd,
+	answer : "25% - including Michelle Donelan, the MP for Chippenham, who was promoted to Education Secretary on 5 July which comes with a salary of more than " + gbp + " 67,000. However she stood down from the post on 7 July after roughly 36 hours"	, answerSpeak : ""});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : 'What were Ed Balls and Susanna Reid dancing to this week?   ' + Table4ColumnStart + "Bye-Bye Boris</td><td>Think I'd better Go Now</td><td>Careless Whisper</td><td>Good Riddance (Time of your Life)" + Table4ColumnEnd,
+	answer : 'Bye Bye Boris </BR> <a href="https://twitter.com/GMB/status/1544579271246729216">Dancing</a>   </BR>', answerSpeak : "", image : "https://img.maximummedia.ie/joe_co_uk/eyJkYXRhIjoie1widXJsXCI6XCJodHRwOlxcXC9cXFwvbWVkaWEtam9lY291ay5tYXhpbXVtbWVkaWEuaWUuczMuYW1hem9uYXdzLmNvbVxcXC93cC1jb250ZW50XFxcL3VwbG9hZHNcXFwvMjAyMlxcXC8wN1xcXC8wNjEwNTMwNFxcXC9lZC1iYWxscy1hbmQtc3VzYW5uYS1yZWlkLWRhbmNpbmctdG8tYnllLWJ5ZS1ib3Jpcy5wbmdcIixcIndpZHRoXCI6NjQwLFwiaGVpZ2h0XCI6MzYwLFwiZGVmYXVsdFwiOlwiaHR0cHM6XFxcL1xcXC93d3cuam9lLmNvLnVrXFxcL2Fzc2V0c1xcXC9pbWFnZXNcXFwvam9lY291a1xcXC9uby1pbWFnZS5wbmc_aWQ9MGE4OTc2MWQwYTNjNmY1MWY3ZDZcIixcIm9wdGlvbnNcIjpbXX0iLCJoYXNoIjoiOTBlMGIxYTkyMzBkYWEwOGY4ZjNmOTczNGE1MmE5NWM2MTIxNjA4OSJ9/ed-balls-and-susanna-reid-dancing-to-bye-bye-boris.png"});	
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "True or False.  Did potential next PM Andrea Jenkyns (and new Education Minister) stick her middle finger up to crowds outside Downing Street?",
+	answerimage : "https://pbs.twimg.com/media/FXNOvSQXwAEBjWO?format=jpg&name=small"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "Susie Dent's word of the day question.  On July 6th Susie's WotD was 'filipendulous'.  What does it mean?"+ Table4ColumnStart + "Hanging by a thread</td><td>Swinging appendeges</td><td>Refusing to go</td><td>Hanging Philipino people" + Table4ColumnEnd,
+	answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLXqKotqfqpzulvqOTL7itdIckCOb7EX76lw1VCLwo4xu9aIXwMv7WDPpXhlMJUgX25khOHr5_A2ygAZIuMIXLHN0cPg-8YYW6dmimmoAFqxPgDts_ssFQFWmFebKfT6ULyWlUvYM3QreZr3SPxq3Bp9fQ=w730-h307-no?authuser=0"} ); 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Mona Hammond died this week.  But which soap didn't she appear in?  " + Table4ColumnStart + "Eastenders</td><td>Emmerdale</td><td>Coronation Street</td><td>Holby City" + Table4ColumnEnd,
+	answer : "Emmerdale", answerSpeak : "", image : "https://i.guim.co.uk/img/media/bf6e83195bb00c65cc8c2cdc69614baa76b66150/0_215_1306_783/master/1306.jpg?width=620&quality=85&fit=max&s=33ce1ffdf350c2387b5c40022be71e8c"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "True or False.  Sandhaven beach has been selected as The Times' 2022 Beach of the Year?  " ,
+	answer : "True", answerSpeak : "", image : "https://www.shieldsgazette.com/webimg/b25lY21zOjAwZjhhNzg2LTA5MTItNGE5Yi1hYWE0LTFhYWZjYWQ1OTI4NjphNjEzOGMyNi1jNWZmLTQ2NjctODE2NS05MDMyODhhZTUzMGY=.jpg?quality=65&smart&width=640"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Wimbledon has had to ask players and coaching staff to stop maxing out their daily food allowance at the various restraunts on site after 1 coach walked away with 27 probiotic yoghurts.  How much (in " + gbp + " ) per day do players and coaches get respectively?  " + Table4ColumnStart + "60 and 30</td><td>70 and 35</td><td>80 and 40</td><td>90 and 45" + Table4ColumnEnd,
+	answer : "90 and 45", answerSpeak : "", image : "https://i.guim.co.uk/img/media/8494a0691bf61494ed09b9488500ba9621504893/0_209_3500_2101/master/3500.jpg?width=620&quality=85&fit=max&s=fe2554db79bfb994d8ac824ea68b6158"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Teenage boys in suits have been banned from some cinemas after rowdy behaviour whilst watching 'Minions: The Rise of Gru'.  What do they call themselves?  " + Table4ColumnStart + "Minionaires</td><td>Grunups</td><td>Gentleminions</td><td>Kate Bush" + Table4ColumnEnd,
+	answer : "Gentleminions", answerSpeak : "", image : "https://i.guim.co.uk/img/media/9c99a49fe85535d8199b1bc2dfa8f7abcee755da/12_0_3921_2354/master/3921.jpg?width=620&quality=85&fit=max&s=e89bdb473e05cdeaa74f43c28aab6fba"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "True or False.  Amazon is now using small vans powered by internal bicycles to deliver in town and city centres?  " ,
+	answer : "True", answerSpeak : "", image : "https://i.guim.co.uk/img/media/d04f3dfced96c19bf5e229ac22f3b1968959c9df/0_419_4000_2400/master/4000.jpg?width=620&quality=85&fit=max&s=99917cc0886d0f165df6ca99d608e089"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "New Zealand wants to tighten up a law that allows what?  " + Table4ColumnStart + "Mandatory 2 hours of rugby practise for all under 15's every week</td><td>Defecating anywhere in public as long as no-one is watching</td><td>Mandatory thongs (flip-flops) from November 3rd - February 21st</td><td>Listening to Kate Bush for more than 30 minutes each day" + Table4ColumnEnd,
+	answer : "Defecating anywhere in public as long as no-one is watching", answerSpeak : "", image : "https://media4.giphy.com/media/dTzxyGfsXph9jUwQDz/200.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "The world's largest what has been identified at London's Kew Gardens this week?  " + Table4ColumnStart + "Cactus</td><td>Dragonfly</td><td>Waterlily</td><td>Kate Bush fan" + Table4ColumnEnd,
+	answer : "Waterlily", answerSpeak : "", image : "https://media.istockphoto.com/photos/greenhouse-in-kew-botanical-gardens-london-united-kingdom-picture-id1068691122?k=20&m=1068691122&s=612x612&w=0&h=0pTqTDSP78kDW6L8xNlq2lMZmCrr-BbWy7FPyVlEkYA="	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What is being offered to young people in Japan this week to encourage them to turn out for elections?  " + Table4ColumnStart + "Free noodles</td><td>Free pens</td><td>Free condoms</td><td>Free Kate Bush CDs" + Table4ColumnEnd,
+	answer : "Free noodles", answerSpeak : "", image : "https://i.guim.co.uk/img/media/4032a11b23fd69e14015947604588e39d6d1e3b7/0_189_3329_1997/master/3329.jpg?width=620&quality=85&auto=format&fit=max&s=df4a8e8e7ce15cc06a70307b4449a982"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "A thread about the relative areas of pizza went viral on Twitter last week. Which of these purchases gives you more pizza by area?  " + Table4ColumnStart + 'Buying one 10" pizza</td><td>Buying two 8" pizzas</td><td>Buying three 6" pizzas</td><td>Who cares. Get a Chinese' + Table4ColumnEnd,
+	answer : 'Buying two 8" pizzas', answerSpeak : "", image : "https://i.guim.co.uk/img/media/6b8ab6a73d181e8e132ca1f8586b34a3908f90ae/0_323_7360_4414/master/7360.jpg?width=620&quality=85&auto=format&fit=max&s=d09b562ce2a5179e32d5641c36d9cfe5"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which of these metals can be found abundantly on planet earth in its elemental metallic state?  " + Table4ColumnStart + "Lithium</td><td>Gold</td><td>Potassium</td><td>Calcium" + Table4ColumnEnd,
+	answer : "Gold.  The rest need processing to retrieve them", answerSpeak : "", image : "https://www.weareclassicrockers.com/sites/classicrockers.rock.tools/files/2020-04/GettyImages-696698978.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Talking of metal, what, according to a leaked report this week, is riddled with rust and in need of repair?  " + Table4ColumnStart + "Space Needle in Seattle, Washington, US</td><td>Eiffel Tower in Paris, France</td><td>Burj Khalifa in Dubai, UAE</td><td>Kate Bush's replacement knee (after running up that hill for years)" + Table4ColumnEnd,
+	answer : "Eiffel Tower in Paris, France", answerSpeak : "", image : "https://i.guim.co.uk/img/media/e1fc6f6bf48a1844162f2651a974811d8f936d2c/1245_509_2259_1356/master/2259.jpg?width=620&quality=85&auto=format&fit=max&s=c917e8a66aa9f4110f8c6ecd3c4b5803"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Black Beauty was immediately successful when published in 1877. But who wrote it?  " + Table4ColumnStart + "Anna Sewell</td><td>E Nesbit</td><td>Gwendoline Pritchard</td><td>Enid Blyton" + Table4ColumnEnd,
+	answer : "Anna Sewell", answerSpeak : "", image : "https://i.ytimg.com/vi/APwU54tswp0/hqdefault.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "MANET OR MONET: Who painted this?  " + Table4ColumnStart + "Claude Manet</td><td>Claude Monet</td><td>Edouard Manet</td><td>Edouard Monet" + Table4ColumnEnd,
+	answer : "Edouard Manet", answerSpeak : "", image : "https://i.guim.co.uk/img/media/7355f7c49b4e39e296b7a4090bcd6c8296313803/342_162_1780_1415/master/1780.jpg?width=620&quality=85&auto=format&fit=max&s=eb7c154023235d55732e70586bef696f"	});	
+
+
+quests[++questIndexBuilder] = { 
+		name : "Cad Dad",
+		hoverover : "Who said it, a cartoon Dad or cad-Dad Boris",
+		splash : {splashType : splashTypePictureAndText , splashText : "Who said the following phrases, Cartoon Dads, or cad-Dad Boris?", splashImage : "https://images.ctfassets.net/pjshm78m9jt4/5w6wUGeJYaGgDpCDreDwJE/b69de23afcbd446bbb815aa5cea26ce1/PA-55179666.jpg?fm=jpg&fit=fill&w=650&h=433&q=80" },
+		tags : "2022-7-10,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Cartoon or Cad? </BR></BR> No one obeys the speed limit except a motorised rickshaw"  ,	answer : "Cad Dad Boris", answerSpeak : ""});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Cartoon or Cad? </BR></BR> My policy on cake is pro having it and pro eating it."  ,	answer : "Cad Dad Boris", answerSpeak : ""});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Cartoon or Cad? </BR></BR> Why do the economically challenged always have to screw up everything"  ,	answer : "Cartoon Dad 'Randy Marsh'", answerSpeak : ""});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Cartoon or Cad? </BR></BR> Marriage is like a coffin and each kid is another nail."  ,	answer : "Cartoon Dad Homer Simpson", answerSpeak : ""});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Cartoon or Cad? </BR></BR> When a woman says there's nothing wrong, it means everything's wrong. And when a woman says everything's wrong, it means everything's wrong."  ,	answer : "Cartoon Dad Homer Simpson", answerSpeak : ""});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Cartoon or Cad? </BR></BR> Any problem caused by a tank can be solved by a tank"  ,	answer : "Cartoon Dad Peter Griffin", answerSpeak : ""});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Cartoon or Cad? </BR></BR> If God wanted me to not sleep with my wife he would have made me John Travolta."  ,	answer : "Cartoon Dad Peter Griffin", answerSpeak : ""});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Cartoon or Cad? </BR></BR> Stupidity got us into this mess. And stupidity will get us out"  ,	answer : "Cartoon Dad Homer Simpson", answerSpeak : ""});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Cartoon or Cad? </BR></BR> You would need a heart of stone not to have been moved by the little Aids-ridden choristers."  ,	answer : "Cad Dad Boris", answerSpeak : ""});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Cartoon or Cad? </BR></BR> [He is] queer as a coot."  ,	answer : "Cad Dad Boris", answerSpeak : ""});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Cartoon or Cad? </BR></BR> Now I may be an idiot, but there's one thing I am not sir, and that sir, is an idiot."  ,	answer : "Cartoon Dad Peter Griffin", answerSpeak : ""});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Cartoon or Cad? </BR></BR> I think I was once given cocaine but I sneezed so it didn't go up my nose. In fact, it may have been icing sugar."  ,	answer : "Cad Dad Boris", answerSpeak : ""});	
+
+
+quests[++questIndexBuilder] = { 
 		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
 		hoverover : "Songs you will know, but wish you did not after this.",
 		tags : "music,2022-7-17,InnerWheel,saturday",
