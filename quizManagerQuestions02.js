@@ -2818,16 +2818,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2kty4r4PuVg2kFQWZdkV1F?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
 	answer : "Suspicious Minds, Elvis.   Rock and Roll music, Chuck Berry (The Beatles).  You spin me right round, Dead or Alive.  Maggie May, Rod Stewart.  Babooshka, Kate Bush.  Tiny Dancer, Elton John.  Sweet child o' mine, Guns 'N' Roses.  Raindrops keep falling on my head, B J Thomas. Can't take my eyes off you.  Frankie Valli.   Last Christmas, Wham!  ", answerSpeak : "", question : ""}) ;
 
-quests[++questIndexBuilder] = { 
-		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
-		hoverover : "Songs you will know, but wish you did not after this.",
-		tags : "music,2022-7-10,InnerWheel,saturday",
-		questInfo: new Array()
-	};
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
-	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2kty4r4PuVg2kFQWZdkV1F?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
-	answer : "Suspicious Minds, Elvis.   Rock and Roll music, Chuck Berry (The Beatles).  You spin me right round, Dead or Alive.  Maggie May, Rod Stewart.  Babooshka, Kate Bush.  Tiny Dancer, Elton John.  Sweet child o' mine, Guns 'N' Roses.  Raindrops keep falling on my head, B J Thomas. Can't take my eyes off you.  Frankie Valli.   Last Christmas, Wham!  ", answerSpeak : "", question : ""}) ;
-
 
 
 quests[++questIndexBuilder] = { 
@@ -2923,6 +2913,17 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 	question : "Cartoon or Cad? </BR></BR> Now I may be an idiot, but there's one thing I am not sir, and that sir, is an idiot."  ,	answer : "Cartoon Dad Peter Griffin", answerSpeak : ""});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : "Cartoon or Cad? </BR></BR> I think I was once given cocaine but I sneezed so it didn't go up my nose. In fact, it may have been icing sugar."  ,	answer : "Cad Dad Boris", answerSpeak : ""});	
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2022-7-10,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3WWFQ1STjoSzJUzpX7yw33?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Running to stand still, U2.   Heroes, David Bowie.  Straight to Hell, The Clash.  Superstition, Stevie Wonder.   Sheena is a Punk Rocker, The Ramones.  20th Century Boy, T-Rex.  Daddy Cool, Boney M. Mr Blue Sky, ELO.  Call Me, Blondie.  Cars, Gary Numan ", answerSpeak : "", question : ""}) ;
+
 
 
 quests[++questIndexBuilder] = { 
