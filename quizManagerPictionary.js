@@ -1771,6 +1771,31 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLXQxwU7QkGohrX0YGNaEDeo-iH5RS1i6fLfPXIVb-y443fzftk6eQTvHCXzkbEiDB2aI39M0irTRmE2XrPat-0PRyX0xQ5ffc6VFHUea89RS0POc6ZApbyGt8OY69EYnJkMS2TdP814q_ajuZbqoa1WWQ=w842-h467-no?authuser=0",
 	answerimage : "https://media1.giphy.com/media/smyBe7dnV52I8/200.gif", answerSpeak : "Henman Hill, Murray Mound"}) ;
 
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of the lows of Boris Johnson",
+		tags : "2022-7-10,pictionary",
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLWRfD8q9cSuFT6wVrFm8L9FiaT01mYj5mCmecTNxDkX5TcV9L3nqMJo9xKVUhKGtx9EnUFU9H4zKEAzsBDIkv2VfEfBtNiqIk5jl6Allmfao3us2E4l9BgBHuledx8GCP74Dlr3MNJxztiB3FdzqsP8ow=w910-h223-no?authuser=0",
+	answerimage : "https://c.tenor.com/678K-ndXHuIAAAAd/boris-zip-line.gif", answerSpeak : "Zipwire"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUgacgHS9zZ2lpBTNsgHRC6eVSrO9E75R0iCQ8i3cSCPDikaw9sDF95_K-cgIi7VG2rRrd9F-i4_Hpq0f2tWFSp13tjn55tng8n1emoEIsIbbvDIJxFdk5WNlxnC3HlFNZ2dSWMjWU1akJPGQJYnz5gCA=w902-h478-no?authuser=0",
+	answerimage : "https://media3.giphy.com/media/dovLKmIW1t2cE/200.gif", answerSpeak : "Loads of children"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUZGyxKYcNx_k_bVePdereQsB87y17LaNZOXVX1sWWOBmCLn3nmB7jbgpYW530bwAgh_a8uCN8WNxyhcGv1BjwBQZd6L0oKObfolVuW7t9QNA4VS6G67b-jqrQnnWo1fkT7jELD-KPJmNrEMpzQX4VpAg=w431-h357-no?authuser=0",
+	answerimage : "https://www.indy100.com/media-library/britain-s-prime-minister-boris-johnson-enjoys-a-ride-with-his-wife-carrie-johnson-and-son-at-peppa-pig-world-near-ower.jpg?id=28851142&width=776&quality=80", answerSpeak : "Peppa Pig"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLW6oE6WHK6RaAGMaf5tnLT8qygV6BmBo_EAYfef1o-E-TMpXjB8SScAx17-9JrKljqs3YEkZG_wRSoSOh_Uz4va11XtMj4VblvngeR14rNl0nzSZAU8AXTEr8c2gQkWsW4P5wDT5Q52HlndDK76nO-FOw=w581-h605-no?authuser=0",
+	answerimage : "https://i2-prod.mirror.co.uk/incoming/article21077892.ece/ALTERNATES/s1200b/0_JS201040314.jpg", answerSpeak : "Fridge hiding"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLWXWFK35Jz-to1fIAvgzB2nEaGyFHK1qiPTlrSGpfVkzJkkcOjdP98DgNIRETX4re3BtQcWsdBHmegFcr6EFeXADhQxSp82lq4zBXupf3yKvFc9NjDN4pqUf9jKC51pDZJVhhp40ewE0TYI-WpTEwnJ4g=w429-h461-no?authuser=0",
+	answerimage : "https://www.reuters.com/resizer/fGt8dDW-RbqzQr5XgJVrlPsN2sA=/960x0/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/5RQZI2HBN5JOJATONS3H5W6QNM.jpg", answerSpeak : "Covid hospitalisation"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLVQK2CAKvO1JdLfFh3kp57TDN6Y7SzcwQvgcx-R6d0u4t31gGwI39xygy4iPKS_2NJOZgBoDm1Q3HdXBzFIDjllPXaBrokFnTJ1dyA3kMjWve9Vy43avaWx0ixd6vRejLOEaEQIN6Fj_FSHj-zOiJ-tcA=w589-h542-no?authuser=0",
+	answerimage : "https://metro.co.uk/wp-content/uploads/2021/05/SEI_79540035.jpg?quality=90&strip=all&zoom=1&resize=644%2C338", answerSpeak : "Expensive wallpaper"}) ;
+
 /*
  * 	image : "",
 	answerimage : "", answer : "Table"}) ;
