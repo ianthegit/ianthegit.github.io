@@ -1796,6 +1796,36 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLVQK2CAKvO1JdLfFh3kp57TDN6Y7SzcwQvgcx-R6d0u4t31gGwI39xygy4iPKS_2NJOZgBoDm1Q3HdXBzFIDjllPXaBrokFnTJ1dyA3kMjWve9Vy43avaWx0ixd6vRejLOEaEQIN6Fj_FSHj-zOiJ-tcA=w589-h542-no?authuser=0",
 	answerimage : "https://metro.co.uk/wp-content/uploads/2021/05/SEI_79540035.jpg?quality=90&strip=all&zoom=1&resize=644%2C338", answerSpeak : "Expensive wallpaper"}) ;
 
+
+
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of staying awake",
+		tags : "2022-7-17,pictionary",
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUtlJTEli2fmbi1inkJW88x6n2tXDtukmzkPhUtUD9RDNDXoPAS2D10G80BarbyNqhscB5KKGeQY_c0xgwZZTNt0DsX4bzsQ-JnX4ynx1VF1MBdFRORId98zNbqzTi_-rYKQgQqXzJcIiULCVoch3blJQ=w301-h235-no?authuser=0",
+	answerimage : "https://ychef.files.bbci.co.uk/1600x900/p0c51g1j.webp", answerSpeak : "Coffee"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLX-UcIzw5e_wK-aAwRnqn6udoSadZEAIYQOOCuXT61RILuNW487dtSUBpIfquBrAOXvNXYE4NfBY2z8Rkm0RnbqVAgfz82q9NnoDAXyiEenMyHKVrjcIKGJphtHWjYLzfAHphIv3Cu1iG2CdHbo9dCDkQ=w591-h269-no?authuser=0",
+	answerimage : "https://upload.wikimedia.org/wikipedia/commons/3/37/Nice_Cup_of_Tea.jpg", answerSpeak : "Tea"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUI4MUtxKY0JC1wNv-Ab7wfiHK80F25G6ZtwfEd7aixLG8NRsSEP3nUL2BXoKDz0GbxnUVY6O_Zpmn525rhLQ5ZFaNPlJGvCkrxgxS_LSqClP2y-rQDG0GRcy7iNtjUS4vZgK1vR0EW1zBqhGaGqIJ_jQ=w307-h302-no?authuser=0",
+	answerimage : "https://c.tenor.com/E2w09s7FbYQAAAAM/slow-motion.gif", answerSpeak : "Slap your face"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLWrkl3ZLLz4XuurW10kxqWACBBg1cHf72N4Bz-FciBXnfR8UMIjNFB50IDZsjJAu1GVi6aeWhZmyNo0fXQUZ1osonnIbI45SN8-hsTNnm-PZH4d7qw2orG5RtHrj93XW5gSM4hWN4l7IBblsDztSfZEEg=w320-h335-no?authuser=0",
+	answerimage : "https://c.tenor.com/PLBQ-SLsycAAAAAM/sleepy-tired.gif", answerSpeak : "Matchsticks under your eyelids"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLUyHfvMZOC5DGR56wl2z_wiIxiEMmhLhw11RE4Pi93EmIy1cgbrxoqYYzoRbX6j_sWuC72AwENfpaclQGhUb85sOf9wl2Iywx1SqhV-L0p9spfKDwc9UrTwvU_VK6NgmhVDLpRY0xfDWIMSqf-06A86hw=w513-h354-no?authuser=0",
+	answerimage : "https://i2-prod.mirror.co.uk/incoming/article1386202.ece/ALTERNATES/s615b/Pro%20Plus%20tablets", answerSpeak : "Pills"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLW6Mr2UpVt7aCSSi9M_nuqvbDO0f8CwcisiNBEhGAFssf9vwwuKbIS3_oKZXCj2jt-IUQm-xCy3lYzd1-EaipeJmnf1e_Lx8_2z9tsJnkdi6eZzFB-5_Bl6O6zigOhaM8GWvGGI8u07Zf5zQJ-3QYCJzA=w477-h332-no?authuser=0",
+	answerimage : "https://i.makeagif.com/media/5-11-2016/wNsn_P.gif", answerSpeak : "Water on your face"}) ;
+
+
+
+
 /*
  * 	image : "",
 	answerimage : "", answer : "Table"}) ;
