@@ -2927,6 +2927,85 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { 
+		name : "Topicalish "+getAndIncrementCounterForType("Topicalish"),
+		hoverover : "Some topical stuff, some general knowledge",
+		splash : {splashType : splashTypePictureAndText , splashText : "In the week I cycled through the night, what else has happened?", splashImage : "https://lh3.googleusercontent.com/pw/AM-JKLUaCVA3EAjWKUiO-q0xn7PjsNtxsuktCkf6FA2qQeJafODnpfHIq0ug0DbgXWEX_v-PA2051WWITaZOcX2fiJApL0-Amgex4YeBjQ8y81LEpY-dtcbwvzXJPsdFsFW8M1Np0WKir0lwcvJTLJYBlMnnLg=w1160-h871-no?authuser=0" },
+		tags : "2022-7-17,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "In the news this week is the German phrase 'Schlager Louts'.  What does it mean?  " + Table4ColumnStart + "German lager louts</td><td>Bawdy German songs from Mallorca</td><td>English people booking poolside chairs with towels</td><td>Kate Bush lettting go on holiday" + Table4ColumnEnd,
+	answer : "Bawdy German songs - such as 'Sex With a Bavarian' to 'Big Tits Potato Salad'"	, answerSpeak : "", image : "https://i.guim.co.uk/img/media/6aca22c7df43f070b42feb79c57c7f0aadebe72c/0_268_5094_3059/master/5094.jpg?width=620&quality=85&fit=max&s=821ab9e23426cc937b57a2cb604c9d4f"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Who is 'Stewart Lewis' who was in the news this week?  " + Table4ColumnStart + "The 5th Beatle</td><td>A newsreader who is the latest to mispronounce Jeremy Hunt</td><td>A made up Tory leader hopeful who more people said they knew 'a great deal about' than Kemi Badenoch and Suella Braverman</td><td>Kate Bush's new husband" + Table4ColumnEnd,
+	answer : "A made up Tory leader hopeful"	, answerSpeak : ""});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "The image on the left was discovered by x-ray'ing the painting on the right.  Who is it of?  " + Table4ColumnStart + "Edouard Manet</td><td>Claud Monet</td><td>Vincent Van Gogh</td><td>Kate Bush" + Table4ColumnEnd,
+	answer : "Vincent Van Gogh"	, answerSpeak : "", image : "https://i.guim.co.uk/img/media/1c7041b71943d630023df8588b2fe127bf7da74f/127_84_6311_3787/master/6311.jpg?width=620&quality=85&fit=max&s=6743a8104dfa0b836a75deebbf67af29"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Where has been voted the 2nd worse place in the world to live (bottom was Kuwait)?  " + Table4ColumnStart + "New Zealand</td><td>The Ukraine</td><td>Gaza Strip</td><td>England" + Table4ColumnEnd,
+	answer : "New Zealand"	, answerSpeak : ""});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "It was revealed this week that 3/4's of adults cannot do what?  " + Table4ColumnStart + "Lick their left elbow</td><td>Read a map</td><td>Hop on their left foot</td><td>Stand Kate Bush" + Table4ColumnEnd,
+	answer : "Read a map"	, answerSpeak : ""});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
+	question : "'Godzilla is chasing them' is a phrase used in the news this week.  Why?  " + Table4ColumnStart + "Metallica go up the charts after Stranger Things song appearance</td><td>Idris Elba chased away fans</td><td>2 Sea Lions were chasing people on a San Diego beach</td><td>A video of Ian on his bike went viral" + Table4ColumnEnd,
+	answer : "2 Sea Lions were chasing people on a San Diego beach"	, answerSpeak : "", answerimage : "https://i.guim.co.uk/img/media/ec4cccf231124727cffcd28f69aa36ed3b0549af/0_153_3500_2101/master/3500.jpg?width=620&quality=85&fit=max&s=31e99cf949ae5c6398f94e54e91f96ed"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "TRUE or FALSE?  Mo Farah is an illegal immigrant. " ,
+	answer : "True"	, answerSpeak : "", image : "https://i.guim.co.uk/img/media/3514668f686c9b28d72e2f41a4f1c7c47b387dbe/0_42_3000_1800/master/3000.jpg?width=700&quality=85&auto=format&fit=max&s=b00f8b888f109182970f1225b16b1cc6"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "A kid goat called Simba with extraordinarily long ears has become famous. Where does it live?  " + Table4ColumnStart + "Iran</td><td>India</td><td>Afghanistan</td><td>Pakistan" + Table4ColumnEnd,
+	answer : "Pakistan"	, answerSpeak : "", image : "https://i.guim.co.uk/img/media/41c3bf834f2923b2a098c82c70af2d1d3ed1262b/225_724_3949_2369/master/3949.jpg?width=620&quality=85&auto=format&fit=max&s=16e5cfc47d6a2d598f15d4df9048272f"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "A new one-off recording by Bob Dylan was auctioned for $1.5m last week. Which song did he record?  " + Table4ColumnStart + "Like a Rolling Stone</td><td>Blowin' in the Wind</td><td>A Hard Rain's A-Gonna Fall</td><td>Running up that hill" + Table4ColumnEnd,
+	answer : "Blowin' in the Wind", answerSpeak : "", image : "https://i.guim.co.uk/img/media/65836f31845aba0325427d2fbb1e6331718c18e8/0_0_1908_1145/master/1908.jpg?width=620&quality=85&auto=format&fit=max&s=52c54cf3cf34186bfc248be6ea1c9a43"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : " On Monday night, England's women set a new record for scoring the most goals in a single game in a European Championship finals match. How many did they net against Norway?  " + Table4ColumnStart + "10</td><td>9</td><td>8</td><td>7" + Table4ColumnEnd,
+	answer : "8", answerSpeak : "", image : "https://i.guim.co.uk/img/media/a07cf20c6245d6a752e3d3c46278243997e65b8b/0_0_3549_2366/master/3549.jpg?width=620&quality=85&auto=format&fit=max&s=0d48b2f3efb2c4f74955ccaf8a2deae5"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Which pests in the UK might be given oral contraceptives by scientists to stop them multiplying and being a nuisance?  " + Table4ColumnStart + "Pigeons</td><td>Rats</td><td>Grey squirrels</td><td>Tory leadership candidates" + Table4ColumnEnd,
+	answer : "Grey squirrels", answerSpeak : "", image : ""	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Nasa's brand new James Webb Space Telescope gizmo has taken one of the greatest astronomy photographs of all time (pictured). How far back in time do scientists say the furthest light in it originates?  " + Table4ColumnStart + "13bn years</td><td>18bn years</td><td>21bn years</td><td>As long as Kate Bush has been my running joke" + Table4ColumnEnd,
+	answer : "13bn years", answerSpeak : "", image : "https://i.guim.co.uk/img/media/b716c953348f164cd6015d7dc80829a0e3106bdd/0_771_4537_2722/master/4537.jpg?width=620&quality=85&auto=format&fit=max&s=48a5a97f9cfaee26888accc3bba97e84"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "A gang has been caught faking an entire sporting league - even live streaming it on YouTube - to con money out of Russian gamblers. Which league?  " + Table4ColumnStart + "Indian cricket league</td><td>Japanese baseball league</td><td>US college football league</td><td>Bradford North racing pigeon league" + Table4ColumnEnd,
+	answer : "Indian cricket league", answerSpeak : "", image : ""	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
+	question : "Susie Dent's word of the day.  What does 'Susurrus' mean?  " + Table4ColumnStart + "The sound of scraping a scratchcard</td><td>The sound of a bottle top being prised off</td><td>Low, soft whispering of the trees on a summers day</td><td>Suspected lie from a Tory leader candidate" + Table4ColumnEnd,
+	answer : "", answerSpeak : "", answerimage : "https://lh3.googleusercontent.com/pw/AM-JKLWAPanbdFOvX8JcwRwvRPnx5sH4CQGmilfSwO2t2W-_3jDuWWqFJcohcbqTMxSLGVVGr18eB83tXSXR6dkTBGKna4m9aXkIzFCM1gbGk_IXcjdHOCZQTYR-1jo1RcakMyZ3ATPCgPDkxkxN39mxlWNh0A=w710-h248-no?authuser=0"	});	
+
+quests[++questIndexBuilder] = {
+		name : "General Ignorance",
+		hoverover : "Will you get lucky",
+//		splash : {splashType : splashTypeText splashTypePictureAndText , splashText : "We've all seen Dame Judy in films, but can you recognise what films are from...?", splashImage : "https://media2.giphy.com/media/YplBZ0pxRAqRyVNVSU/giphy.gif" },
+		tags : "2022-7-17,saturday,InnerWheel,surfers", //,7DegreesOfHBC",
+		questInfo: new Array()
+	};
+	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "In which decade was Madonna born?  " ,	answer : "1950's (1958 to be exact)"	, answerSpeak : ""});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "What is the most sold flavour of Walker's crisps?  " ,	answer : "Cheese and Onion"	, answerSpeak : ""});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Which country is brie cheese originally from?  " ,	answer : "France"	, answerSpeak : ""});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "What does IPA stand for?  " ,	answer : "Indian Pale Ale"	, answerSpeak : ""});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Which fashion designer reportedly had a relationship with Winston Churchill?  " ,	answer : "Coco Chanel"	, answerSpeak : ""});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "What's a baby rabbit called?  " ,	answer : "A kit"	, answerSpeak : ""});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Typically, what's the strongest muscle in the human body?  " ,	answer : "The masseter - the main jaw muscle"	, answerSpeak : ""});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "In cockney rhyming slang, what is a 'dog and bone'?  " ,	answer : "Phone"	, answerSpeak : ""});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "Who is older Jeremy Corbyn or Theresa May?  " ,	answer : "Jeremy Corbyn (born 1949, Theresa May was born 1956)"	, answerSpeak : ""});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "What is the name for a donkey crossed with a zebra?  " ,	answer : "A zeedonk"	, answerSpeak : ""});
+
+quests[++questIndexBuilder] = { 
 		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
 		hoverover : "Songs you will know, but wish you did not after this.",
 		tags : "music,2022-7-17,InnerWheel,saturday",
