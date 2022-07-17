@@ -2995,7 +2995,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : "Which fashion designer reportedly had a relationship with Winston Churchill?  " ,	answer : "Coco Chanel"	, answerSpeak : ""});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
-	question : "What's a baby rabbit called?  " ,	answer : "A kit"	, answerSpeak : ""});
+	question : "What's a baby rabbit called?  " ,	answer : "A kitten"	, answerSpeak : ""});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
 	question : "Typically, what's the strongest muscle in the human body?  " ,	answer : "The masseter - the main jaw muscle"	, answerSpeak : ""});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
