@@ -3018,6 +3018,93 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 
+quests[++questIndexBuilder] = { 
+		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
+		hoverover : "What sinks, what floats",
+		tags : "2022-7-24,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Apple" ,	answer : "Float"	, answerSpeak : ""});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Lemon" ,	answer : "Float"	, answerSpeak : ""});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Lime" ,		answer : "Sink"	, answerSpeak : ""});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Pumpkin" ,	answer : "Float"	, answerSpeak : ""});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Grape" ,	answer : "Sink"	, answerSpeak : ""});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Watermelon" ,	answer : "Float"	, answerSpeak : ""});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Pear" ,		answer : "Sink"	, answerSpeak : ""});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Coconut" ,	answer : "Float"	, answerSpeak : ""});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Orange" ,	answer : "Sink"	, answerSpeak : ""});
+
+
+quests[++questIndexBuilder] = { 
+		name : "Topicalish "+getAndIncrementCounterForType("Topicalish"),
+		hoverover : "Some topical stuff, some general knowledge",
+		splash : {splashType : splashTypePictureAndText , splashText : "In the week we met young Charlie's beard, what else happened?", splashImage : "https://lh3.googleusercontent.com/pw/AM-JKLV1rFDLpP571Kab78NuPv4XclbqRs9QiTl09FP1AWbVOOjbj4cyMaQdQlRqly4xbvnyNNgsHLCjsPEzLl6DBJeM6ZLjVWe_bX2uboqKFHqDMHeCIBFG577RNC3pZjkU5eSrZPEGeGZ7U1qqISuluMBwpw=w1162-h871-no?authuser=0" },
+		tags : "2022-7-24,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "The Wilder Blean project, near Canterbury, has released the first wild what (not pictured) to roam in Britain in thousands of years?  " + Table4ColumnStart + "Wolves</td><td>Bears</td><td>Bison</td><td>Kate Bush" + Table4ColumnEnd,
+	answer : "Bison", answerSpeak : "", image : "https://i.guim.co.uk/img/media/f1cdf720af3cc082893331afc4c6fb2b45ef5e47/0_464_8256_4954/master/8256.jpg?width=620&quality=85&auto=format&fit=max&s=1e37e08b895dc58e3c05588d3f89566e"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What is the highest maximum legal temperature you can be made to still work in, in England and Wales?  " + Table4ColumnStart + "36C (96.8F)</td><td>39C (102.2F)</td><td>42C (107.6F)</td><td>There isn't one" + Table4ColumnEnd,
+	answer : "There isn't one", answerSpeak : "", image : "https://i.guim.co.uk/img/media/fc8dbdb0a5297673f3456075cefd10e976cc3e3d/0_0_3500_2334/master/3500.jpg?width=620&quality=85&auto=format&fit=max&s=24634f3a7f809f7b4bd41553037a71cc"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Jennifer Lopez got married in Las Vegas this week. To whom?  " + Table4ColumnStart + "Brad Pitt</td><td>Ben Affleck</td><td>Matt Damon</td><td>Kate Bush" + Table4ColumnEnd,
+	answer : "Ben Affleck", answerSpeak : "", image : "https://media.vogue.co.uk/photos/5dad8c22f8a5a8000831e02a/master/w_2325,h_3100,c_limit/GettyImages-1176503937.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Rugby Australia have banned a man for life after he made his way to the roof of the SCG in Sydney during the third rugby union Test against England and appeared to do what?  " + Table4ColumnStart + "Make obscene gestures</td><td>Insult the Queen</td><td>Urinate</td><td>Sing 'Babooshka' out of tune" + Table4ColumnEnd,
+	answer : "Urinate", answerSpeak : "", image : "https://i.guim.co.uk/img/media/7984a911c93b0d65144d649ea3dd6fbd24365b37/0_107_4230_2538/master/4230.jpg?width=620&quality=85&auto=format&fit=max&s=7230b73018c5163ae3240da350f82022"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "The women's Euro 2022 championship continues in England. One of the 16 teams (not pictured) was a late replacement after Russia were expelled. Which team?  " + Table4ColumnStart + "The Ukraine</td><td>Portugal</td><td>Denmark</td><td>Switzerland" + Table4ColumnEnd,
+	answer : "Portugal", answerSpeak : "", image : "https://ichef.bbci.co.uk/news/976/cpsprodpb/B9CF/production/_107576574_gettyimages-1152461181-1.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "The infamous Operation Julie, a police drug bust in mid-Wales that broke up a global LSD supply ring in the 70s, is being turned into what?  " + Table4ColumnStart + "A play by Nina Raine for the Royal National Theatre</td><td>A Netflix prestige drama starring Gwyneth Paltrow</td><td>A musical by the writer and director by Geinor Styles</td><td>An interactive hallucinogenic art installation in Aberystwyth" + Table4ColumnEnd,
+	answer : "A musical by the writer and director by Geinor Styles", answerSpeak : "", image : "https://i.guim.co.uk/img/media/44e6716a47729c6a28223ee6257548d2ea8b6fa1/0_169_4821_2893/master/4821.jpg?width=620&quality=85&fit=max&s=f31b0e3bb3f6f7a4768b2119ab7fe48e"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "It was Steven Demetre Georgiou's birthday on Thursday. Happy birthday Cat Stevens / Yusuf Islam! But which of these is one of his famous albums?  " + Table4ColumnStart + "Tea for the Tillerman</td><td>Lionheart</td><td>The Dreaming</td><td>Hounds of Love" + Table4ColumnEnd,
+	answer : "Tea for the Tillerman", answerSpeak : "", image : "https://i.guim.co.uk/img/media/e7d5291e47cc5001e09dfe9e7df2527ed88bc56d/116_693_3380_3377/master/3380.jpg?width=620&quality=85&auto=format&fit=max&s=726ddf9793ff800deabc246f53e85ad4"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "21 July 356BC is sometimes given as the date of the destruction of one of the seven wonders of the ancient world (not pictured). It was located in Ephesus. What was it?  " + Table4ColumnStart + "Temple of Artemis</td><td>Statue of Zeus</td><td>Hanging Gardens</td><td>A lighthouse" + Table4ColumnEnd,
+	answer : "Temple of Artemis", answerSpeak : "", image : "https://i.guim.co.uk/img/media/87fc8fd47bdfa0890816ad29dfb183f493332c91/0_358_6720_4032/master/6720.jpg?width=620&quality=85&auto=format&fit=max&s=38190b7a365904dcc069c9bbd2b40fbf"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "More cheese Grommit?  Which of these options is NOT a variety of cheese produced in England?  " + Table4ColumnStart + "Suffolk Punch</td><td>Berkswell</td><td>Stinking Bishop</td><td>Ticklemore" + Table4ColumnEnd,
+	answer : "Suffolk Punch", answerSpeak : "", image : "https://i.guim.co.uk/img/media/c2af2ffb0870722c9aae294fc32c0af14772ecd4/0_26_2000_1200/master/2000.jpg?width=620&quality=85&auto=format&fit=max&s=ce6f2a6801c0899846f00637365bcf6b"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which Scottish city is based on a stronghold that used to be known as Din Eidyn (not pictured)?  " + Table4ColumnStart + "Dumbarton</td><td>Dumfries</td><td>Dundee</td><td>Edinburgh" + Table4ColumnEnd,
+	answer : "Edinburgh", answerSpeak : "", image : "https://www.planetware.com/wpimages/2020/01/scotland-in-pictures-beautiful-places-to-photograph-kilchurn-castle.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "MANET OR MONET: Who painted this?  " + Table4ColumnStart + "Claude Manet</td><td>Claude Monet</td><td>Edouard Manet</td><td>Edouard Monet" + Table4ColumnEnd,
+	answer : "Claude Monet", answerSpeak : "", image : "https://i.guim.co.uk/img/media/1badf7d2f0a54b94ba3ff6c51d2a7f03ff00f8df/0_0_4000_3110/master/4000.jpg?width=620&quality=85&auto=format&fit=max&s=ec24ac12b3dfe1b23659612ef2b2ff7c"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Kate Bush made a rare public statement last week, saying a cover version by a choir of her hit Running Up That Hill that went viral was 'utterly, utterly wonderful'. Where were the choir singing it?  " + Table4ColumnStart + "Melbourne</td><td>Sydney</td><td>Brisbane</td><td>Adelaide" + Table4ColumnEnd,
+	answer : "Brisbane", answerSpeak : "", image : "https://i.guim.co.uk/img/media/6f3968b3a2d5949eb279e44cd7da6cbae6dabd61/849_513_2600_1559/master/2600.jpg?width=620&quality=85&auto=format&fit=max&s=1e19b1f5c14db5935802b0737748621c"	});	
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers") + " Hellish ones",
+		hoverover : "Songs you will know, but wish you did not after this - Lucifer cast.",
+		tags : "music,2022-7-24,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2XE1LhQWIvg9sU2cSQzQyC?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Another one bites the dust, Queen.  Every Breath you take, The Police.  Just the two of us, Bill Withers.  I dreamed a dream, Les Miserables.  Eternal Flame, The Bangles.  I will survive, Gloria Gaynor.   Wonderwall, Oasis.  My Way, Frank Sinatra.  Luck be a Lady, Frank Sinatra.   All along the watchtower, Bob Dylan (Jimmy Hendrix) ", answerSpeak : "", question : ""}) ;
+
+
+quests[++questIndexBuilder] = { 
+		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
+		hoverover : "What sinks, what floats",
+		tags : "2022-7-31,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Kiwi" ,	answerSpeak : ""	, answer : "Sink"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Banana" ,	answerSpeak : ""	, answer : "Float"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Strawberry" ,	answerSpeak : ""	, answer : "Float"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Plum" ,	answerSpeak : ""	, answer : "Sink"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Cranberry" ,	answerSpeak : ""	, answer : "Float"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Pineapple" ,	answerSpeak : ""	, answer : "Float"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Peach" ,	answerSpeak : ""	, answer : "Sink"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Cherry" ,	answerSpeak : ""	, answer : "Float"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Tomato" ,	answerSpeak : ""	, answer : "Float"});
+
+
 
 
 // More modern films https://b3ta.com/challenge/modernizefilms/popular/page2
