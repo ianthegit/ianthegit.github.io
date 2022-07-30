@@ -3089,10 +3089,99 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : "Another one bites the dust, Queen.  Every Breath you take, The Police.  Just the two of us, Bill Withers.  I dreamed a dream, Les Miserables.  Eternal Flame, The Bangles.  I will survive, Gloria Gaynor.   Wonderwall, Oasis.  My Way, Frank Sinatra.  Luck be a Lady, Frank Sinatra.   All along the watchtower, Bob Dylan (Jimmy Hendrix) ", answerSpeak : "", question : ""}) ;
 
 
+
+quests[++questIndexBuilder] = { 
+		name : "Birthday ",
+		hoverover : "Who else was born on July 30th",
+		tags : "2022-7-31,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born July 30th 1991?  " ,	answer : "Diana Vickers", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/DianaVickersWiki.jpg/220px-DianaVickersWiki.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born July 30th 1974?  " ,	answer : "Hilary Swank", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Hilary_Swank_at_28th_Tokyo_International_Film_Festival.jpg/220px-Hilary_Swank_at_28th_Tokyo_International_Film_Festival.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born July 30th 1968?  " ,	answer : "Terry Crews", answerSpeak : "", image : "https://media0.giphy.com/media/xTka03huVb4f0mYBpu/200.gif?cid=95b279440db89c10051ea9a08a277e106eae8175903b9409&rid=200.gif&ct=g"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born July 30th 1964?  " ,	answer : "Jurgen Klinsmann", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/2019-06-11_Fu%C3%9Fball%2C_M%C3%A4nner%2C_L%C3%A4nderspiel%2C_Deutschland-Estland_StP_2039_LR10_by_Stepro-2.jpg/220px-2019-06-11_Fu%C3%9Fball%2C_M%C3%A4nner%2C_L%C3%A4nderspiel%2C_Deutschland-Estland_StP_2039_LR10_by_Stepro-2.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born July 30th 1961?  " ,	answer : "Laurence Fishburne", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/National_Memorial_Day_Concert_2017_%2834117818524%29_%28cropped%29.jpg/220px-National_Memorial_Day_Concert_2017_%2834117818524%29_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born July 30th 1941?  " ,	answer : "Paul Anka", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Paul_Anka_1995.jpg/330px-Paul_Anka_1995.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born July 30th 1940?  " ,	answer : "Sir Clive Sinclair", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/c/c0/Sinclair.600pix.crop.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born July 30th 1944?  " ,	answer : "Frances de la Tour", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Frances_de_la_Tour_at_the_British_Library.jpg/220px-Frances_de_la_Tour_at_the_British_Library.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born July 30th 1947?  " ,	answer : "Arnold Schwarzenegger", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Arnold_Schwarzenegger_by_Gage_Skidmore_4.jpg/220px-Arnold_Schwarzenegger_by_Gage_Skidmore_4.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born July 30th 1950?  " ,	answer : "Harriot Harman", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Official_portrait_of_Rt_Hon_Harriet_Harman_QC_MP_crop_2.jpg/220px-Official_portrait_of_Rt_Hon_Harriet_Harman_QC_MP_crop_2.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born July 30th 1958?  " ,	answer : "Daley Thompson", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/e/e0/Daley_Thomson_2007_Laureus_day.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born July 30th 1963?  " ,	answer : "Lisa Kudrow", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Lisa_Kudrow_crop.jpg/220px-Lisa_Kudrow_crop.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born July 30th 1958?  " ,	answer : "Kate Bush", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Kate_Bush_at_1986_Comic_Relief_%28cropped%29.png/220px-Kate_Bush_at_1986_Comic_Relief_%28cropped%29.png"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What is happening here, July 30th 1966?  " ,	answer : "England win the World Cup", answerSpeak : "", image : "https://thumbs.gfycat.com/ClearComfortableElephantbeetle-size_restricted.gif"	});	
+
+quests[++questIndexBuilder] = { 
+		name : "Bushy ",
+		hoverover : "Related to Kate Bush",
+		splash : {splashType : splashTypePictureAndText , splashText : "In the week Kate Bush celebrated her birthday, what else happened in a way I can crowbar a Kate Bush reference into every question?", splashImage : "https://i.guim.co.uk/img/media/656b16defbe95b0e77520b410ffac1188fa2f5b0/160_0_1866_1120/master/1866.jpg?width=620&quality=85&fit=max&s=e9a2d2945fc0473d6c8627aa8380c327" },
+		tags : "2022-7-31,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "A strange phenomenon (song on KBs debut album) that happened last week was a weird pink glow in the sky in Australia. What was it?  " + Table4ColumnStart + "A rare lighting effect of the Aurora Australis</td><td>An experimental light show by contemporary artist Bianca Hester</td><td>Someone forgot to put the blinds down on a cannabis factory</td><td>Aliens" + Table4ColumnEnd,
+	answer : "Someone forgot to put the blinds down on a cannabis factory", answerSpeak : "", image : "https://i.guim.co.uk/img/media/87d89f25a0e4d2bd0832a0150bef1ba6819fb1df/0_10_3500_2100/master/3500.jpg?width=620&quality=85&auto=format&fit=max&s=704d55712af4286b658cd9b74c26d1e1"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "BABOOSHKA: Kate's Russian-themed song. Last week the US said it may have found one of the rare Faberge eggs on an impounded oligarch yacht. How many Imperial Easter eggs do Faberge say were created for the Russian Imperial family from 1885 to 1916?  " + Table4ColumnStart + "60</td><td>50</td><td>40</td><td>30" + Table4ColumnEnd,
+	answer : "50", answerSpeak : "", image : "https://i.guim.co.uk/img/media/ee569751b7c56f60632f24f5b1fef1c4c65d9839/0_0_6101_4000/master/6101.jpg?width=620&quality=85&auto=format&fit=max&s=5f86dacc0c33f6c65e9d2dc233afbae7"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "BAMBOO-SHKA: (OK, this referencing thing is tough) An An (pictured), the world's oldest captive male giant panda, died in Hong Kong zoo last week. How old was An An?  " + Table4ColumnStart + "45</td><td>35</td><td>25</td><td>15" + Table4ColumnEnd,
+	answer : "35", answerSpeak : "", image : "https://i.guim.co.uk/img/media/cfeee72067c9757e3a14794e0350ec87ccfaa484/0_114_1732_1040/master/1732.jpg?width=620&quality=85&auto=format&fit=max&s=3f8d7884c3ac99f24c4295fe0ace5e75"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "OH ENGLAND MY LIONHEART: This song was sort of the title track of Kate's second album, Lionheart. But how did Richard I of England (engraved), often known as Richard the Lionheart, die?  " + Table4ColumnStart + "A crossbow bolt through the shoulder while in France</td><td>Fell off a horse in a hunting accident while in Lombardy</td><td>Unexpectedly in his sleep while in Sicily</td><td>Heart attack whilst running up that hill" + Table4ColumnEnd,
+	answer : "A crossbow bolt through the shoulder while in France", answerSpeak : "", image : "https://i.guim.co.uk/img/media/5ab1f538f4707fe5ecd2a2bad8cf5ec301ddd0bc/0_214_3082_3081/master/3082.jpg?width=620&quality=85&auto=format&fit=max&s=1140315577e69cb94559f2a80ad8fe30"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "LAKE TAHOE: Is a ghost story featuring a dog on Kate Bush's 50 Words For Snow album. But where is the real Lake Tahoe situated - 1/2 in California, and 1/2 in...?  " + Table4ColumnStart + "Nevada, USA</td><td>Oregon, USA</td><td>British Columbia, Canada</td><td>New Mexico, USA" + Table4ColumnEnd,
+	answer : "Nevada, USA", answerSpeak : "", image : "https://i.guim.co.uk/img/media/ecdd181750792111e228a15b0bcb8149de84dc3a/0_42_4424_2655/master/4424.jpg?width=620&quality=85&auto=format&fit=max&s=14bb830b00fbd05bddeef55217870c2c"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "IN SEARCH OF PETER PAN: Is a song about a child whose life is so terrible he wants to grow up to be Peter Pan. But who created the character of Peter Pan?  " + Table4ColumnStart + "C S Lewis</td><td>Lewis Carroll</td><td>J M Barrie</td><td>J R Hartley" + Table4ColumnEnd,
+	answer : "J M Barrie", answerSpeak : "", image : "https://c.tenor.com/aB9q4YTJc24AAAAC/peter-pan-disney.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "HAMMER HORROR: In Hammer Horror Kate tells the story of a leading actor haunted by the ghost of the man whose role he stole. But who (not pictured) used to star a lot as Count Dracula in the Hammer Horror movies?  " + Table4ColumnStart + "Peter Cushing</td><td>Christopher Lee</td><td>David Prowse</td><td>Michael Gough" + Table4ColumnEnd,
+	answer : "Christopher Lee", answerSpeak : "", image : "https://i.pinimg.com/originals/01/98/76/019876d2cec43830807b60616536940a.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "On her album Aerial, Kate Bush performs a song called Pi during which she recites the value of " + pi + " at some considerable length. Which of these is the correct first six digits of the value of " + pi + "?  " + Table4ColumnStart + "3.41519</td><td>3.18158</td><td>3.16142</td><td>3.14159?" + Table4ColumnEnd,
+	answer : "3.14159", answerSpeak : "", image : "https://food-images.files.bbci.co.uk/food/recipes/stargazey_pie_95306_16x9.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "JOANNI: Joanni is also on Kate's album Aerial. Where was Joan of Arc put on trial by the English in 1431?  " + Table4ColumnStart + "Rouen</td><td>Reims</td><td>Rennes</td><td>Rochester" + Table4ColumnEnd,
+	answer : "Rouen", answerSpeak : "", image : "https://i.guim.co.uk/img/media/708d56d01b735e8265ebcde16017f38c234f030b/0_242_3267_1960/master/3267.jpg?width=620&quality=85&auto=format&fit=max&s=6f01edcc82d93584a85b35dc71d344a5"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "THE SAXOPHONE SONG: A not very imaginatively-titled track from Kate's debut album features a saxophone. The instrument was patented by Adolphe Sax. But when?  " + Table4ColumnStart + "1796</td><td>1846</td><td>1896</td><td>1916" + Table4ColumnEnd,
+	answer : "1846", answerSpeak : "", image : "https://akns-images.eonline.com/eol_images/Entire_Site/2011513/300.Clemons.Springsteen.tg.061311.jpg?fit=around%7C700:700&output-quality=90&crop=700:700;center,top"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "KASHKA FROM BAGHDAD: This song was about a mysterious couple in a small town that nobody knows anything about, but everyone is curious. To shoehorn that into a question, which river flows through Baghdad (founded July 30th 762)?  " + Table4ColumnStart + "Euphrates</td><td>Jordan</td><td>Tigris</td><td>Androzani" + Table4ColumnEnd,
+	answer : "Tigris", answerSpeak : "", image : "https://i.pinimg.com/originals/7d/88/d6/7d88d6b0c1ad4210cea9d5880a14e21c.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "WUTHERING HEIGHTS: No Kate Bush-themed quiz would be complete without a question about this novel. It was originally published under the pen name Ellis Bell. But which Bronte sister wrote it?  " + Table4ColumnStart + "Elizabeth</td><td>Charlotte</td><td>Emily</td><td>Kate" + Table4ColumnEnd,
+	answer : "Emily", answerSpeak : "", image : "https://thumbs.gfycat.com/AnguishedPhonyFrilledlizard-max-1mb.gif"	});	
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2022-7-31,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7ktCtcZH6uKunR97fmscKT?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Time after Time, Cyndi Lauper.  Mr Brighside, The Killers.  Waiting for a girl like you, Foreigner.  Heaven, Bryan Adams.  Eye of the tiger, Survivor.  Wonderwall, Oasis.  It's a sin, Pet Shop Boys.  Jump, Van Halen.  Lovecats, The Cure.  The way you make me feel, Michael Jackson", answerSpeak : "", question : ""}) ;
+
 quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
 		hoverover : "What sinks, what floats",
-		tags : "2022-7-31,saturday,InnerWheel,surfers", 
+		tags : "2022-8-6,saturday,InnerWheel,surfers", 
 		questInfo: new Array() };
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Kiwi" ,	answerSpeak : ""	, answer : "Sink"});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Banana" ,	answerSpeak : ""	, answer : "Float"});
@@ -3103,6 +3192,16 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Do
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Peach" ,	answerSpeak : ""	, answer : "Sink"});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Cherry" ,	answerSpeak : ""	, answer : "Float"});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Tomato" ,	answerSpeak : ""	, answer : "Float"});
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2022-8-6,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2tY8eMwKzNINDdti9EgVUs?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Tainted Love, Gloria Jones (Depeche Mode). Don't stop beleivin', Journey.  Need you tonight, INXS.  I kissed a girl, Katy Perry.  In the air tonight, Phil Collins.  We didn't start the fire, Billy Joel.  If you leave, OMD.  Don't look back in anger, Oasis.  Back for good, Take That.  Careless Whispers, George Michael.   ", answerSpeak : "", question : ""}) ;
 
 
 
