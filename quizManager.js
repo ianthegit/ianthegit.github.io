@@ -152,6 +152,7 @@ audioOnlyYoutubeEnd =	'?rel=0"> </iframe> </div> </div>' ;
 gbp="&#163 ";
 euro="&#8364 ";
 dollar=" &#x24";
+pi=" &#x3A0";
 
 quests = new Array();
 
