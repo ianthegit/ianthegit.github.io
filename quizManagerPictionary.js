@@ -1825,6 +1825,31 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of birthdays",
+		tags : "2022-7-31,pictionary",
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEXYFi2o0c7c7AVYsDbzeX3qScTwhxvXhzDjje7u1Lu-h0twwf-ryrxQZ0fnP9Tk-TiByWyUZcPwEb1vWwO6PNDo3o8zJUjUDzP8Z_62ZFtD-ueS7kQndhKzpujLa2X7Rh3gH8t2wCOyYJqre4Zv-YBS5w=w286-h280-no?authuser=0",
+	answerimage : "https://burlexe.com/wp-content/uploads/2013/08/Dirty-Martini-Burlesque.gif", answerSpeak : "Balloons"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEWeKUwqBUq7RJDjoehWCwo4VltJt2JW0XAZSElUuh0I3XlOQ3SFYDTYPh_DGp7zqNmTZRlRGRhVirto_lxq3cX0tWV8X7ygt7OZ8HDvcM1dxRFy8wJntwNEMy3u_2NKIZHLl7HQ6hxScUXd94hDyyjx2w=w432-h230-no?authuser=0",
+	answerimage : "https://media3.giphy.com/media/3oEhmNLxk9uiTbL9Be/giphy.gif?cid=ecf05e47r5n6s7u80wka4sgy1thgquduwjzmiqrqjgahem4i&rid=giphy.gif&ct=g", answerSpeak : "Cake"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEWGATSCVPxE95NqePcfr9vnkEJQYbnYYEt31z2civqrohv4Ra7lgdriIpskMdi4iE7yh4q_W3QgWlHur71JKR34kPoNZ9bSDamlPRl66xKazWz1UXgzxLMHeHnY0SccRkPctiZW80LObLqnYqi3rKq5MA=w453-h277-no?authuser=0",
+	answerimage : "https://c.tenor.com/YGWwTOTIO4EAAAAC/friends.gif", answerSpeak : "Friends and family"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEVPe_7zLUpBPhqzodFPZnTtHD2kkWYvQ-t5XHS-MnnwmgEWnoR3o_v8x4GKjGrwXJTeYsoQlHXOMwl9KL8HArofCx5aNjTzlW7539YT3m76Xdd0zZXi2RKGmFVMr31917TSsrR3uH2LvoXNKg82RGyMRA=w446-h283-no?authuser=0",
+	answerimage : "https://i.gifer.com/2mtE.gif", answerSpeak : "Drink"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEX9stKWAuD5tXgxBURoU0NZgp0mG6wMRnvHJ799OMBZPVJ_UnOunB9qeGF5lpLxjWmh5FYIl9qaIFtEnxk7R3yAFCXPnVHCa48B-5BS5oTk9nn_hHipDpB9b937V7Ecb-lfdUV2KlxnuzAdk-2qyRJR7A=w343-h301-no?authuser=0",
+	answerimage : "https://thumbs.gfycat.com/EdibleDiscreteHydra-max-1mb.gif", answerSpeak : "Games"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEV8T1vDyoF_CLxijERZT2m8Q1RlWEjD5DsNHRYVnWJMLzXauu7Cn8TXgWytZWu2rwYIB0rqcLopx169NEgxRdc-J69dD8WjD65v45FZyRU6HZGz8ZZ73Yt4kuJcvuDo6IB8KrYCaDWq2ZUYZOOAP1ggzg=w573-h405-no?authuser=0",
+	answerimage : "https://c.tenor.com/OYNYCgY6Z6cAAAAC/dance-dancing.gif", answerSpeak : "Dancing"}) ;
+
 
 /*
  * 	image : "",
