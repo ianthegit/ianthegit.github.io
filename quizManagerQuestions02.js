@@ -3240,7 +3240,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
 	answerimage : "https://i2-prod.dailystar.co.uk/incoming/article27646308.ece/ALTERNATES/s615b/0_FY7E_trWIAAypJ7.jpg"});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Finally, Nichelle Nichols also passed away this week. But what was the first name of her trailblazing Star Trek character Lt Uhura?  " + Table4ColumnStart + "Penda</td><td>Samara</td><td>Nyota</td><td>Kate" + Table4ColumnEnd,
-	answer : "Nyota", answerSpeak : "", image : "https://i.guim.co.uk/img/media/d506b8be3b1616bdda39091e3248062d0c26532f/0_407_2196_1317/master/2196.jpg?width=620&quality=85&auto=format&fit=max&s=95108cd88b39c997883b850c75fab1a7"	});	
+	answer : "Nyota", answerSpeak : "", image : "https://www.startrek.com/sites/default/files/images/2020-02/nichelle_nichols_001.png"	});	
 
 
 quests[++questIndexBuilder] = { 
