@@ -3231,6 +3231,9 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Cribbins narrated Bertie the Bat in the 1990s. But how many species of bats are there in the world, according to the Bat Conservation Trust?  " + Table4ColumnStart + "13</td><td>130</td><td>1,300</td><td>13,000" + Table4ColumnEnd,
 	answer : "1,300", answerSpeak : "", image : "https://www.animatedimages.org/data/media/196/animated-bat-image-0012.gif"	});	
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Bernard Cribbins featured in Run For Your Wife - but why did runner Alberto Noni come last in the Decathlon 400M race in the World Championships this week?" + Table4ColumnStart + "He had broken his arm earlier</td><td>His shoes fell apart</td><td>His penis fell out of his shorts</td><td>He was running up that hill" + Table4ColumnEnd, //
+	image : "https://www.thesun.co.uk/wp-content/uploads/2022/08/68566d34-ca7f-448a-abb8-2d73de2680a6.jpg?w=620",
+	answerimage : "https://www.thesun.co.uk/wp-content/uploads/2022/08/56cdb485-ef61-4a10-9976-1916c9210b60.jpg?w=620", answer : "His penis fell out of his shorts"}) ;
 addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture, 	
 	question : "I can find nothing linking Bernard Cribbins to Southend, but why did Southend Football Club need to rename it's West Stand after it's sponsorship deal with estate agency 'Gilbert & Rose'?  ",
 	answer : "The 'Gilbert and Rose West Stand' had a poor ring to it...", answerSpeak : "", image : "https://static.independent.co.uk/2022/08/04/07/GettyImages-1283331337.jpg?width=1200",
