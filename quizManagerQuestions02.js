@@ -3178,10 +3178,11 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7ktCtcZH6uKunR97fmscKT?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
 	answer : "Time after Time, Cyndi Lauper.  Mr Brighside, The Killers.  Waiting for a girl like you, Foreigner.  Heaven, Bryan Adams.  Eye of the tiger, Survivor.  Wonderwall, Oasis.  It's a sin, Pet Shop Boys.  Jump, Van Halen.  Lovecats, The Cure.  The way you make me feel, Michael Jackson", answerSpeak : "", question : ""}) ;
 
+
 quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
 		hoverover : "What sinks, what floats",
-		tags : "2022-8-6,saturday,InnerWheel,surfers", 
+		tags : "2022-8-7,saturday,InnerWheel,surfers", 
 		questInfo: new Array() };
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Kiwi" ,	answerSpeak : ""	, answer : "Sink"});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Banana" ,	answerSpeak : ""	, answer : "Float"});
@@ -3194,14 +3195,60 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Do
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Tomato" ,	answerSpeak : ""	, answer : "Float"});
 
 quests[++questIndexBuilder] = { 
+		name : "Cribbing",
+		hoverover : "Related to Bernard Cribbins",
+		splash : {splashType : splashTypePictureAndText , splashText : "In the week we lost Bernard Cribbins, what else happened in a way I can crowbar a Bernard Cribbins reference into every question?", 
+			splashImage : "https://i.scdn.co/image/ab67616d0000b273f1c83d0391c3b5a87b0857d0" },
+		tags : "2022-8-7,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Cribbins was Albert Perks in the much-loved film The Railway Children, but what hazard caused trains to be halted between Norwich and Stansted this week?  " + Table4ColumnStart + "A giant beaver</td><td>A giant badger</td><td>A giant tortoise</td><td>A giant panda" + Table4ColumnEnd,
+	answer : "A giant tortoise", answerSpeak : "", image : "https://i.guim.co.uk/img/media/045919beaf8c132b955a4e7aefb4dcf9d0c96c3b/0_0_3475_2489/master/3475.jpg?width=620&quality=85&auto=format&fit=max&s=a5630de209ae9257406050b128827b3a"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "In 1965 Cribbins appeared as a police officer in the film Cup Fever. But who scored the winning goal on Sunday in the Euro 2022 final to inspire cup fever for England?  " + Table4ColumnStart + "Alessia Russo</td><td>Chloe Kelly</td><td>Lucy Bronze</td><td>Kate Bush" + Table4ColumnEnd,
+	answer : "Chloe Kelly", answerSpeak : "", image : "https://i.guim.co.uk/img/media/a98c5c3fcae8656cbb6a8c79fba1fc7d5df7712b/0_0_5396_2930/master/5396.jpg?width=620&quality=85&auto=format&fit=max&s=63832cba9c744bd21c6ec64fee4d6a51"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "An adaptation of David Copperfield for TV was one of Cribbins' earliest appearances. But which of these is NOT a character from the novel David Copperfield?  " + Table4ColumnStart + "Betsey Trotwood</td><td>Regis Creakle</td><td>Wilkins Micawber</td><td>Nelly Dean" + Table4ColumnEnd,
+	answer : "Nelly Dean (She's from Wuthering Heights)", answerSpeak : "", image : "https://i.guim.co.uk/img/media/0955aa3d5447bf27f1494ed91fdd934804d957d8/374_1207_4073_2444/master/4073.jpg?width=620&quality=85&auto=format&fit=max&s=978f1fa53b8eb4415ca79ad892dcdae4"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "In Cribbins' 1962 hit single Right Said Fred, what do Fred, Charlie and the narrator keep stopping to do while trying to move a piano?  " + Table4ColumnStart + "Have a cup of tea</td><td>Have a cup of coffee</td><td>Have a swig of beer</td><td>Listen to some Kate Bush" + Table4ColumnEnd,
+	answer : "Have a cup of tea", answerSpeak : "", image : "https://i.guim.co.uk/img/media/0629f2fe6884199f16dfd62551e117cde9c3ca97/0_319_3500_2100/master/3500.jpg?width=620&quality=85&auto=format&fit=max&s=22b200851ecb8e3cd3f8b3e43c19d34c"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Cribbins appeared in a 1978 film version of The Water Babies by Charles Kingsley. But how much does one litre of water weigh?  " + Table4ColumnStart + "0.1 kilograms</td><td>1 kilogram</td><td>10 kilograms</td><td>1 Bushell" + Table4ColumnEnd,
+	answer : "1 kilogram", answerSpeak : "", image : "https://images.immediate.co.uk/remote/images.atlas.metabroadcast.com/api.pressassociation.com/content/21893a27-2679-5a9a-975b-b44c065e0958.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Cribbins played Pereira in the 1961 movie Passport To China. But which of these Chinese cities is the furthest south?  " + Table4ColumnStart + "Shenzhen</td><td>Shanghai</td><td>Beijing</td><td>Chengdu" + Table4ColumnEnd,
+	answer : "Shenzhen", answerSpeak : "", image : "https://m.media-amazon.com/images/M/MV5BZDc1ODdhYjItYTEzMS00ZGQyLTkzZTEtNDI5YTNiNzU1ZWQ4XkEyXkFqcGdeQXVyMzAwOTU1MTk@._V1_.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "One of the first bits of film work Cribbins did was as an uncredited 'thirsty sailor' in a 1958 film called Dunkirk. But what was the codename of the evacuation of Dunkirk in 1940?  Operation... " + Table4ColumnStart + "Juno</td><td>Dynamo</td><td>Swordfish</td><td>Ulysses" + Table4ColumnEnd,
+	answer : "Operation Dynamo", answerSpeak : "", image : "https://i.guim.co.uk/img/media/3494cf6e5b8abbbfd4ed7e69b3759f464bdef37c/0_335_4800_2880/master/4800.jpg?width=620&quality=85&auto=format&fit=max&s=e726bc56bdd6d80b3979ff1694ef8131"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Cribbins appeared in a 1963 movie called the Mouse on the Moon. But what type of creatures did an Israeli probe spill on the moon in 2019?  " + Table4ColumnStart + "Onychophora</td><td>Pauropoda</td><td>Tardigrades</td><td>Cockroaches" + Table4ColumnEnd,
+	answer : "Tardigrades", answerSpeak : "", image : "https://i.guim.co.uk/img/media/bce21b43f44ed17f39d29fb65b653961fa0bcbc6/0_102_2997_1799/master/2997.jpg?width=620&quality=85&auto=format&fit=max&s=5e3221eaee04b983afe13b16921b9093"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Cribbins guested in a episode of Worzel Gummidge in 1981. But who wrote the Worzel Gummidge books on which the TV series was based?  " + Table4ColumnStart + "Barbara Euphan Todd</td><td>Enid Blyton</td><td>Judith Kerr</td><td>Mary Wright Sewell" + Table4ColumnEnd,
+	answer : "Barbara Euphan Todd", answerSpeak : "", image : "https://i.guim.co.uk/img/media/44d708ae3e2cf919d47116d46b6ab19ec3971b44/0_176_2334_2333/master/2334.jpg?width=620&quality=85&auto=format&fit=max&s=757e5733acf5f32df4b5269269e2669e"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Cribbins narrated Bertie the Bat in the 1990s. But how many species of bats are there in the world, according to the Bat Conservation Trust?  " + Table4ColumnStart + "13</td><td>130</td><td>1,300</td><td>13,000" + Table4ColumnEnd,
+	answer : "1,300", answerSpeak : "", image : "https://www.animatedimages.org/data/media/196/animated-bat-image-0012.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture, 	
+	question : "I can find nothing linking Bernard Cribbins to Southend, but why did Southend Football Club need to rename it's West Stand after it's sponsorship deal with estate agency 'Gilbert & Rose'?  ",
+	answer : "The 'Gilbert and Rose West Stand' had a poor ring to it...", answerSpeak : "", image : "https://static.independent.co.uk/2022/08/04/07/GettyImages-1283331337.jpg?width=1200",
+	answerimage : "https://i2-prod.dailystar.co.uk/incoming/article27646308.ece/ALTERNATES/s615b/0_FY7E_trWIAAypJ7.jpg"});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Finally, Nichelle Nichols also passed away this week. But what was the first name of her trailblazing Star Trek character Lt Uhura?  " + Table4ColumnStart + "Penda</td><td>Samara</td><td>Nyota</td><td>Kate" + Table4ColumnEnd,
+	answer : "Nyota", answerSpeak : "", image : "https://i.guim.co.uk/img/media/d506b8be3b1616bdda39091e3248062d0c26532f/0_407_2196_1317/master/2196.jpg?width=620&quality=85&auto=format&fit=max&s=95108cd88b39c997883b850c75fab1a7"	});	
+
+
+quests[++questIndexBuilder] = { 
 		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
 		hoverover : "Songs you will know, but wish you did not after this.",
-		tags : "music,2022-8-6,InnerWheel,saturday",
+		tags : "music,2022-8-7,InnerWheel,saturday",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2tY8eMwKzNINDdti9EgVUs?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
-	answer : "Tainted Love, Gloria Jones (Depeche Mode). Don't stop beleivin', Journey.  Need you tonight, INXS.  I kissed a girl, Katy Perry.  In the air tonight, Phil Collins.  We didn't start the fire, Billy Joel.  If you leave, OMD.  Don't look back in anger, Oasis.  Back for good, Take That.  Careless Whispers, George Michael.   ", answerSpeak : "", question : ""}) ;
+	answer : "Tainted Love, Gloria Jones (Soft Cell). Don't stop beleivin', Journey.  Need you tonight, INXS.  I kissed a girl, Katy Perry.  In the air tonight, Phil Collins.  We didn't start the fire, Billy Joel.  If you leave, OMD.  Don't look back in anger, Oasis.  Back for good, Take That.  Careless Whispers, George Michael.   ", answerSpeak : "", question : ""}) ;
 
 
 
