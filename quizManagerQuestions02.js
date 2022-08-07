@@ -3091,9 +3091,9 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { 
-		name : "Birthday ",
+		name : "Birthday "+getAndIncrementCounterForType("Birthdays"),
 		hoverover : "Who else was born on July 30th",
-		tags : "2022-7-31,saturday,InnerWheel,surfers", 
+		tags : "2022-7-31,saturday,InnerWheel,surfers,birthdays", 
 		questInfo: new Array() };
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Who is this, born July 30th 1991?  " ,	answer : "Diana Vickers", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/DianaVickersWiki.jpg/220px-DianaVickersWiki.jpg"	});	
@@ -3180,19 +3180,35 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { 
-		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
-		hoverover : "What sinks, what floats",
-		tags : "2022-8-7,saturday,InnerWheel,surfers", 
+		name : "Birthday "+getAndIncrementCounterForType("Birthdays"),
+		hoverover : "In honour of Jimmy Wales, Wikipedia founder without which this quiz would be impossible, who else was born on August 6th or 7th",
+		splash : {splashType : splashTypePictureAndText , splashText : "In honour of Jimmy Wales, Wikipedia founder without which this quiz would be impossible, who else was born on August 6th or 7th?", splashImage : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Jimmy_Wales_-_August_2019_%28cropped%29.jpg/220px-Jimmy_Wales_-_August_2019_%28cropped%29.jpg" },
+		tags : "2022-8-7,saturday,InnerWheel,surfers,birthdays", 
 		questInfo: new Array() };
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Kiwi" ,	answerSpeak : ""	, answer : "Sink"});
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Banana" ,	answerSpeak : ""	, answer : "Float"});
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Strawberry" ,	answerSpeak : ""	, answer : "Float"});
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Plum" ,	answerSpeak : ""	, answer : "Sink"});
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Cranberry" ,	answerSpeak : ""	, answer : "Float"});
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Pineapple" ,	answerSpeak : ""	, answer : "Float"});
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Peach" ,	answerSpeak : ""	, answer : "Sink"});
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Cherry" ,	answerSpeak : ""	, answer : "Float"});
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Tomato" ,	answerSpeak : ""	, answer : "Float"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born August 6th 1911  " ,	answer : "Lucille Ball", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/LDBALL1950s.jpg/220px-LDBALL1950s.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born August 6th 1926?  " ,	answer : "Frank Finlay", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/en/b/b7/Frank_Finlay.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born August 6th 1928  " ,	answer : "Andy Warhol", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Andy_Warhol_1975.jpg/220px-Andy_Warhol_1975.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born August 6th 1937  " ,	answer : "Barbara Windsor", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Barbara_Windsor_Maryebone_Tree.JPG/220px-Barbara_Windsor_Maryebone_Tree.JPG"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born August 7th 1949  " ,	answer : "Matthew Parris", answerSpeak : "", image : "https://i.guim.co.uk/img/media/47a22e2e71ec492e8e7901c144ec28866268a1fa/0_225_4858_2916/master/4858.jpg?width=620&quality=85&fit=max&s=dbcaee8205ceb55892088bba54e8bd92"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born August 7th 1952  " ,	answer : "Alexi Sayle", answerSpeak : "", image : "https://i.guim.co.uk/img/media/717edfc0ee8aaa79fc383b235ed1949877647206/0_37_4800_2881/master/4800.jpg?width=620&quality=85&fit=max&s=43c5739039e538fe51c0284645b56a29"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born August 7th 1958  " ,	answer : "Bruce Dickinson", answerSpeak : "", image : "https://townsquare.media/site/366/files/2020/08/Bruce-Dickinson2.jpg?w=980&q=75"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born August 7th 1960  " ,	answer : "David Duchovny", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/David_Duchovny_by_Gage_Skidmore.jpg/220px-David_Duchovny_by_Gage_Skidmore.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born August 7th 1961  " ,	answer : "Brian Conley", answerSpeak : "", image : "https://ichef.bbci.co.uk/news/976/cpsprodpb/17D42/production/_114920679_conleycut1.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born August 7th 1966  " ,	answer : "Shobna Gulati", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Shobna_Gulati_2012.jpg/220px-Shobna_Gulati_2012.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born August 7th 1975  " ,	answer : "Charlize Theron", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Charlize_Theron_in_2017.jpg/1200px-Charlize_Theron_in_2017.jpg"	});	
+
+
 
 quests[++questIndexBuilder] = { 
 		name : "Cribbing",
@@ -3254,6 +3270,22 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : "Tainted Love, Gloria Jones (Soft Cell). Don't stop beleivin', Journey.  Need you tonight, INXS.  I kissed a girl, Katy Perry.  In the air tonight, Phil Collins.  We didn't start the fire, Billy Joel.  If you leave, OMD.  Don't look back in anger, Oasis.  Back for good, Take That.  Careless Whispers, George Michael.   ", answerSpeak : "", question : ""}) ;
 
 
+
+
+quests[++questIndexBuilder] = { 
+		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
+		hoverover : "What sinks, what floats",
+		tags : "2022-8-14,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Kiwi" ,	answerSpeak : ""	, answer : "Sink"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Banana" ,	answerSpeak : ""	, answer : "Float"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Strawberry" ,	answerSpeak : ""	, answer : "Float"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Plum" ,	answerSpeak : ""	, answer : "Sink"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Cranberry" ,	answerSpeak : ""	, answer : "Float"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Pineapple" ,	answerSpeak : ""	, answer : "Float"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Peach" ,	answerSpeak : ""	, answer : "Sink"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Cherry" ,	answerSpeak : ""	, answer : "Float"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Tomato" ,	answerSpeak : ""	, answer : "Float"});
 
 
 // More modern films https://b3ta.com/challenge/modernizefilms/popular/page2
