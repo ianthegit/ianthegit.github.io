@@ -3271,11 +3271,122 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 
+quests[++questIndexBuilder] = { 
+		name : "Summer Lovin",
+		hoverover : "Olivia Newton John",
+		splash : {splashType : splashTypePictureAndText , splashText : "In the week we lost Olivia Newton John, what else happened and some stuff about her", 
+			splashImage : "https://live-production.wcms.abc-cdn.net.au/8f78222a4d17dff04a70e8572f9c58d4?impolicy=wcms_crop_resize&cropH=1080&cropW=1920&xPos=0&yPos=0&width=862&height=485" },
+		tags : "2022-8-14,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Why have New Yorker's been told to 'not panic about Splooting squirrels'?" + Table4ColumnStart + "Because there's good eating on one of them</td><td>Becuase they make good gloves</td><td>Becuase it's hot</td><td>Because Kate Bush does it too" + Table4ColumnEnd, //
+	image : "https://media2.giphy.com/media/ZuCJ9OzW9dBnO/200.gif",
+	answerimage : "https://i.guim.co.uk/img/media/6d67989b98c2601e850168161df8160c69266781/0_317_4752_2851/master/4752.jpg?width=620&quality=85&fit=max&s=f59c5f98d44c4a4e2c86f8a2c1f4f195", answer : "Because it's hot and they do it to cool down", answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "But which city has been hosting the Commonwealth Games, which ended on Monday?  " + Table4ColumnStart + "Brisbane, Australia</td><td>Bengaluru, India</td><td>Birmingham, UK</td><td>Belleville, Canada" + Table4ColumnEnd,
+	answer : "Birmingham, UK", answerSpeak : "", image : "https://i.guim.co.uk/img/media/647c15accc28604d1093d447c6a713061d29236b/0_0_7102_4735/master/7102.jpg?width=620&quality=85&auto=format&fit=max&s=7f476bf2a1953c640661063317849770"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Edith Piaf got her stage name from a nickname - La Mome Piaf - which was Parisian slang for what  " + Table4ColumnStart + "The little nightingale</td><td>The little sparrow</td><td>The little goldfinch</td><td>Kate Bush" + Table4ColumnEnd,
+	answer : "The little sparrow", answerSpeak : "", image : "https://i.guim.co.uk/img/media/e3325a9f55ad5476a3e892cd49a93f44d05e7477/0_116_2570_1542/master/2570.jpg?width=620&quality=85&auto=format&fit=max&s=08cc20a5601f8fd33850cfac3d93163b"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who used to voice the character of Bugs Bunny?  " + Table4ColumnStart + "Mel Jaune</td><td>Mel Rouge</td><td>Mel Blanc</td><td>Melton Mowbray" + Table4ColumnEnd,
+	answer : "Mel Blanc", answerSpeak : "", image : "https://media0.giphy.com/media/3oFzm7MaLnMdD1T6tG/200.gif?cid=ecf05e470ogpj6m0jo49cd4mzikfsdsqv76bzhdafq0v54n6&rid=200.gif&ct=g"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "In 2005 the BBC generated a previously unprecedented 16,000 complaints to broadcasting regulator Ofcom after it showed what on television?  " + Table4ColumnStart + "Janet Jackson's wardrobe malfunction at the Super Bowl</td><td>Jerry Springer: The Opera</td><td>The Book of Mormon</td><td>Me singing" + Table4ColumnEnd,
+	answer : "Jerry Springer: The Opera", answerSpeak : "", image : "https://i.guim.co.uk/img/media/f7faf6cd3265ec1bc9b9b86e934577157bc3e9bb/0_0_3500_2335/master/3500.jpg?width=620&quality=85&auto=format&fit=max&s=b25966f3ccd8fae08cc6466a4b8d262a"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "The Super Bowl is the second largest event for American food consumption, but what is first?  " + Table4ColumnStart + "Independence Day (4th of July)</td><td>Christmas</td><td>National Siblings Day</td><td>Thanksgiving" + Table4ColumnEnd,
+	answer : "Thanksgiving", answerSpeak : "", image : "https://c.tenor.com/_kTLa5mBddUAAAAM/mr-bean-food.gif"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which country did Olivia Newton-John represent in the 1974 Eurovision Song Contest?  " + Table4ColumnStart + "Austria</td><td>Australia</td><td>United Kingdom</td><td>Sweden" + Table4ColumnEnd,
+	answer : "United Kingdom (4th behind winners ABBA)", answerSpeak : "", image : "https://live-production.wcms.abc-cdn.net.au/a5690648c89266625e5061ab189faed0?impolicy=wcms_crop_resize&cropH=2304&cropW=4096&xPos=0&yPos=309&width=862&height=485"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Sandy's final outfit in Grease became instantly iconic. Which of the following are true?  " + Table4ColumnStart + "The pants were vintage 1950s</td><td>The zipper on the pants was broken</td><td>Olivia had to be sewn into them</td><td>The pants and leather jacket sold at auction for" + dollar + " 405,000" + Table4ColumnEnd,
+	answer : "All of them - a point for each you got", answerSpeak : "", image : "https://i.gifer.com/R1nd.gif"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Since her diagnosis in the 1990s, Olivia had been a breast cancer advocate and opened the Olivia Newton-John Cancer and Wellness Centre. Where is the centre located?  " + Table4ColumnStart + "Brisbane</td><td>Sydney</td><td>Melbourne</td><td>Rydell" + Table4ColumnEnd,
+	answer : "Melbourne", answerSpeak : "", image : "https://live-production.wcms.abc-cdn.net.au/9722908e957b80be681f256e1b633a3c?impolicy=wcms_crop_resize&cropH=2813&cropW=5000&xPos=0&yPos=0&width=862&height=485"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "In Grease the movie Olivia played a 17 year old girl but her actual age at the time was?  " + Table4ColumnStart + "30</td><td>29</td><td>28</td><td>27" + Table4ColumnEnd,
+	answer : "29", answerSpeak : "", image : "https://media3.giphy.com/media/a7bBXGMVDB1naJCeEE/200.gif"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Olivia's & John's names in the movie Grease were?  " ,
+	answer : "Sandy & Danny", answerSpeak : "", image : "https://c.tenor.com/878-kyfWjrYAAAAC/grease-sandy.gif"	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'Complete the lyrics (1 word)? ' + reRunButton  , 
+	questionSpeak : "I got chills, they're multiplying And I'm losing control, Cause the power you're supplying it's",
+	answer : "Electrifying", 
+	answerSpeak : ""	});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : 'Complete the lyrics (1 word)? ' + reRunButton  , 
+	questionSpeak : "Took her bowlin' at the arcade, we went strollin, drank",
+	answer : "Lemonade", 
+	answerSpeak : ""	});
+
+quests[++questIndexBuilder] = { 
+		name : "Question your memory",
+		hoverover : "What do you remember?",
+		tags : "2022-8-14,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "Does Shaggy (from Scooby Doo) have a protruding Adams apple?",	answer : "No" ,
+	answerimage : "https://img.buzzfeed.com/buzzfeed-static/static/2022-01/23/20/asset/22a49f7b3f10/sub-buzz-10135-1642969171-15.png?downsize=700%3A%2A&output-quality=auto&output-format=auto"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "Is it 'Febreze' or 'Febreeze'?",	answer : "Febreze" ,
+	answerimage : "https://img.buzzfeed.com/buzzfeed-static/static/2022-01/23/20/asset/22a49f7b3f10/sub-buzz-10170-1642970650-10.png?downsize=600:*&output-format=auto&output-quality=auto"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "Is it 'Kit-Kat' or 'KitKat'?",	answer : "KitKat" ,
+	answerimage : "https://img.buzzfeed.com/buzzfeed-static/static/2022-01/23/20/asset/f3c5146d79bc/sub-buzz-9623-1642970834-1.png?downsize=600:*&output-format=auto&output-quality=auto"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "Is it 'Sex in the City' or 'Sex and the City'?",	answer : "Sex and the City" , image : "https://wme-gep-drupal-hbo-prod.s3.amazonaws.com/content/dam/hbodata/series/sex-and-the-city/SATC-header.jpg",
+	answerimage : "https://m.media-amazon.com/images/M/MV5BNGEyNDRjM2QtY2VlYy00OWRhLWI4N2UtZTM4NDc0MGM0YzBkXkEyXkFqcGdeQXVyNjk1Njg5NTA@._V1_.jpg"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "Does the Monopoly Man (Uncle Pennybags) have a Monocle?",	answer : "No" ,
+	answerimage : "https://img.buzzfeed.com/buzzfeed-static/static/2016-10/11/16/asset/buzzfeed-prod-fastlane02/sub-buzz-7165-1476217730-1.jpg?crop=700:505;700,0&downsize=600:*&output-format=auto&output-quality=auto"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "Is the tip of Pikachu's tail black?",	answer : "No" ,
+	answerimage : "https://static.wikia.nocookie.net/wii/images/8/89/Pikachu.jpg/revision/latest?cb=20140209205851"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Was Ben Franklin ever President of the United States?",	answer : "No" ,
+	image : "https://img.buzzfeed.com/buzzfeed-static/static/2022-07/22/22/asset/70d4ce582204/sub-buzz-4547-1658530409-14.jpg?downsize=600:*&output-format=auto&output-quality=auto"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "In the original Star Wars film, does C-3PO have 1 or 2 gold legs?",	answer : "1 - the other is silver" ,
+	answerimage : "https://img.buzzfeed.com/buzzfeed-static/static/2022-08/8/21/asset/0dbb9d7bd5a6/sub-buzz-10888-1659994380-10.jpg?downsize=600:*&output-format=auto&output-quality=auto"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "Is it 'Fruit Loops' or 'Froot Loops'?",	answer : "Froot Loops" ,
+	answerimage : "https://img.buzzfeed.com/buzzfeed-static/static/2016-10/11/16/asset/buzzfeed-prod-fastlane01/sub-buzz-31008-1476219598-9.jpg?crop=700:700;700,0&downsize=600:*&output-format=auto&output-quality=auto"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Is it 'Life is like a box of chocolates' or 'Life was like a box of chocolates'?",	answer : "Life was like a box of chocolates" ,
+	image : "https://img.buzzfeed.com/buzzfeed-static/static/2016-10/11/14/asset/buzzfeed-prod-fastlane02/sub-buzz-28889-1476209882-1.jpg?downsize=600:*&output-format=auto&output-quality=auto"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "When Hannibal first meets Clarice Starling, does he say 'Hello Clarice' or 'Good morning'?",	answer : "Good Morning" ,
+	answerimage : "https://www.looper.com/img/gallery/hannibal-lecters-backstory-explained/intro-1568920260.jpg"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
+	question : "Did the Queen in Snow White say 'Mirror, mirror on the wall, who is the fairest of them all?' or 'Magic mirror on the wall, who is the fairest one of all'?",	answer : "Magic mirror on the wall, who is the fairest one of all" ,
+	image : "https://img.buzzfeed.com/buzzfeed-static/static/2016-10/11/14/asset/buzzfeed-prod-fastlane01/sub-buzz-19396-1476210168-6.jpg?downsize=600:*&output-format=auto&output-quality=auto"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "Is it 'Looney Tunes' or 'Looney Toons'?",	answer : "Looney Tunes" ,
+	answerimage : "https://img.buzzfeed.com/buzzfeed-static/static/2020-01/29/18/asset/336c00422b8d/sub-buzz-3436-1580322615-18.jpg?crop=507:490;473,0&downsize=600:*&output-format=auto&output-quality=auto"}) ;
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
+	question : "Is Tony the Tiger's nose Blue or Black on the Kellog's Frosties packet?",	answer : "Blue" ,
+	answerimage : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjvfkEyjVYsbsjQ1neFkn2J5CBHUd-fJgSlg&usqp=CAU"}) ;
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2022-8-14,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3HyYwqccjzG6MJdRsejkBO?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "I think we're alone now, Tommy James and the Shondells (Tiffany, Lene Lovich, Girls Aloud).  Somebody to Love, Queen.  My Girl, The Temptations.  I wanna hold your hand, the Beatles.  Have you ever seen the rain?  Creedance Clearwater Revival (Bonnie Tyler, Rod Stewart).  Hit the road Jack, Ray Charles.  Total eclipse of the heart, Bonnie Tyler.  Here comes the sun, The Beatles.  Rock around the clock, Bill Hayley. Be my baby, The Ronettes (The Bay City Rollers) ", answerSpeak : "", question : ""}) ;
+
+
 
 quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
 		hoverover : "What sinks, what floats",
-		tags : "2022-8-14,saturday,InnerWheel,surfers", 
+		tags : "2022-8-21,saturday,InnerWheel,surfers", 
 		questInfo: new Array() };
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Kiwi" ,	answerSpeak : ""	, answer : "Sink"});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Banana" ,	answerSpeak : ""	, answer : "Float"});
