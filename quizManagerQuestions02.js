@@ -3401,7 +3401,7 @@ quests[++questIndexBuilder] = {
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
-	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3HyYwqccjzG6MJdRsejkBO?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1S7XQprZnLnAsrxoFsjvC9?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
 	answer : "I think we're alone now, Tommy James and the Shondells (Tiffany, Lene Lovich, Girls Aloud).  Somebody to Love, Queen.  My Girl, The Temptations.  I wanna hold your hand, the Beatles.  Have you ever seen the rain?  Creedance Clearwater Revival (Bonnie Tyler, Rod Stewart).  Hit the road Jack, Ray Charles.  Total eclipse of the heart, Bonnie Tyler.  Here comes the sun, The Beatles.  Rock around the clock, Bill Hayley. Be my baby, The Ronettes (The Bay City Rollers) ", answerSpeak : "", question : ""}) ;
 
 
