@@ -3370,6 +3370,29 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
 	question : "Is Tony the Tiger's nose Blue or Black on the Kellog's Frosties packet?",	answer : "Blue" ,
 	answerimage : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjvfkEyjVYsbsjQ1neFkn2J5CBHUd-fJgSlg&usqp=CAU"}) ;
 
+quests[++questIndexBuilder] = { 
+		name : "Birthday "+getAndIncrementCounterForType("Birthdays"),
+		hoverover : "Who was born on August 13th or 14th",
+		tags : "2022-8-14,saturday,InnerWheel,surfers,birthdays", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born August 13th 1970  " ,	answer : "Alan Shearer", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Alan_Shearer_1998.jpg/170px-Alan_Shearer_1998.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born August 13th 1958  " ,	answer : "Feargal Sharkey", answerSpeak : "", image : "https://80sneverend.com/wp-content/uploads/2015/11/211015-Feargal-Sharkey-A-good-heart.png"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born August 13th 1930  " ,	answer : "Bernard Manning", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Bernard_manning.jpg/220px-Bernard_manning.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born August 13th 1899  " ,	answer : "Alfred Hitchcock", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Hitchcock%2C_Alfred_02.jpg/220px-Hitchcock%2C_Alfred_02.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born August 14th 1984  " ,	answer : "Nick Grimshaw", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Nick_Grimshaw_2014.jpg/220px-Nick_Grimshaw_2014.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born August 14th 1966  " ,	answer : "Halle Berry", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Halle_Berry_by_Gage_Skidmore_2.jpg/220px-Halle_Berry_by_Gage_Skidmore_2.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this (on the right), born August 14th 1960  " ,	answer : "Sarah Brightman", answerSpeak : "", image : "https://people.com/thmb/zJMRGvJ5gENWrxEqTk9AcEZ-qW8=/2000x1333/filters:fill(auto,1)/sarah-brightman-4-2000-f64be9e0e0d2453395187827390b47d5.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this cartoonist, born August 14th 1950  " ,	answer : "Gary Larson", answerSpeak : "", image : "https://i.guim.co.uk/img/media/ad5af105d20e2fc55b78530f7a11f2cf8965f521/192_166_946_567/master/946.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=7019e34a3b60c5422eda89d284576687"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born August 14th 1945  " ,	answer : "Steve Martin", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Steve_Martin_HS_Yearbook.jpeg/170px-Steve_Martin_HS_Yearbook.jpeg"	});	
 
 quests[++questIndexBuilder] = { 
 		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
