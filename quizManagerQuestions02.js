@@ -3344,7 +3344,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
 	answerimage : "https://img.buzzfeed.com/buzzfeed-static/static/2016-10/11/16/asset/buzzfeed-prod-fastlane02/sub-buzz-7165-1476217730-1.jpg?crop=700:505;700,0&downsize=600:*&output-format=auto&output-quality=auto"}) ;
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer,
 	question : "Is the tip of Pikachu's tail black?",	answer : "No" ,
-	answerimage : "https://static.wikia.nocookie.net/wii/images/8/89/Pikachu.jpg/revision/latest?cb=20140209205851"}) ;
+	answerimage : "https://www.denofgeek.com/wp-content/uploads/2021/04/Pikachu.png?resize=768%2C432"}) ;
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	question : "Was Ben Franklin ever President of the United States?",	answer : "No" ,
 	image : "https://img.buzzfeed.com/buzzfeed-static/static/2022-07/22/22/asset/70d4ce582204/sub-buzz-4547-1658530409-14.jpg?downsize=600:*&output-format=auto&output-quality=auto"}) ;
@@ -3359,7 +3359,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	image : "https://img.buzzfeed.com/buzzfeed-static/static/2016-10/11/14/asset/buzzfeed-prod-fastlane02/sub-buzz-28889-1476209882-1.jpg?downsize=600:*&output-format=auto&output-quality=auto"}) ;
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	question : "When Hannibal first meets Clarice Starling, does he say 'Hello Clarice' or 'Good morning'?",	answer : "Good Morning" ,
-	answerimage : "https://www.looper.com/img/gallery/hannibal-lecters-backstory-explained/intro-1568920260.jpg"}) ;
+	image : "https://www.looper.com/img/gallery/hannibal-lecters-backstory-explained/intro-1568920260.jpg"}) ;
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	question : "Did the Queen in Snow White say 'Mirror, mirror on the wall, who is the fairest of them all?' or 'Magic mirror on the wall, who is the fairest one of all'?",	answer : "Magic mirror on the wall, who is the fairest one of all" ,
 	image : "https://img.buzzfeed.com/buzzfeed-static/static/2016-10/11/14/asset/buzzfeed-prod-fastlane01/sub-buzz-19396-1476210168-6.jpg?downsize=600:*&output-format=auto&output-quality=auto"}) ;
