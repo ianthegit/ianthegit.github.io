@@ -3462,7 +3462,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Who is this, born August 20th 1943  " ,	answer : "Sylvester McCoy", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Sylvester_McCoy_2014_%28cropped%29.jpg/220px-Sylvester_McCoy_2014_%28cropped%29.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "Who is this, born August 20th 1927  " ,	answer : "Yootha Joyce", answerSpeak : "", image : "https://static.wikia.nocookie.net/the-ultimate-british-classic-comedy/images/5/5f/Yootha_Joyce.jpg/revision/latest?cb=20190308181939"	});	
+	question : "Who is this, born August 20th 1927  " ,	answer : "Yootha Joyce", answerSpeak : "", image : "https://networkonair.com/features/wp-content/uploads/2020/03/vlcsnap-2019-01-28-10h06m19s58.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Who is this boxing promoter, born August 20th 1931  " ,	answer : "Don King", answerSpeak : "", image : "http://reemusboxing.com/wp-content/uploads/2017/04/don-king-portrait-2-213x300.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
