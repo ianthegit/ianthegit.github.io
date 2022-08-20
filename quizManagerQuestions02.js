@@ -3405,11 +3405,95 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : "I think we're alone now, Tommy James and the Shondells (Tiffany, Lene Lovich, Girls Aloud).  Somebody to Love, Queen.  My Girl, The Temptations.  I wanna hold your hand, the Beatles.  Have you ever seen the rain?  Creedance Clearwater Revival (Bonnie Tyler, Rod Stewart).  Hit the road Jack, Ray Charles.  Total eclipse of the heart, Bonnie Tyler.  Here comes the sun, The Beatles.  Rock around the clock, Bill Hayley. Be my baby, The Ronettes (The Bay City Rollers) ", answerSpeak : "", question : ""}) ;
 
 
+quests[++questIndexBuilder] = { 
+		name : "Sea jobbies",
+		hoverover : "The week sewage flushing became an issue",
+		splash : {splashType : splashTypePictureAndText , splashText : "In the week after we lost Anne Heche and water companies flushed raw sewage into our seas, what else happened", 
+			splashImage : "https://i.guim.co.uk/img/media/50cabf23a77c6a19015d5eecc9b888d8f70cf30f/0_499_1890_1132/master/1890.jpg?width=620&quality=85&fit=max&s=2ec49af665a803cccc663752291e9f66" },
+		tags : "2022-8-21,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "It was Huw Edwards' birthday on Thursday.   Happy Birthday Huw the news guru.  In which James Bond film did he make a cameo appearance as himself, reading a news story relevant to the plot of the movie?" + Table4ColumnStart + "Quantum of Solace</td><td>The Living Daylights</td><td>Spectre</td><td>Skyfall" + Table4ColumnEnd, //
+	image : "https://i.guim.co.uk/img/media/93ebcc379b695544dce326488ef24acb29801a21/92_92_1901_1900/master/1901.jpg?width=620&quality=85&auto=format&fit=max&s=f233dcaba8a8e53f47867c797e3fc03b",
+	answer : "Skyfall", answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "It would have been Patrick Swayze's birthday on Thursday too.  What was the name of the creepy character, preying on young girls, he played in Dirty Dancing?" + Table4ColumnStart + "Jake Houseman</td><td>Johnny Castle</td><td>Jack Torrance</td><td>Frank Houseman" + Table4ColumnEnd, //
+	image : "https://i.guim.co.uk/img/media/ba28d28d11f369807e4f98fdde9e00d7fc450527/0_212_3504_2101/master/3504.jpg?width=620&quality=85&auto=format&fit=max&s=38d132dd115ade5dc34bcb5e4954ede1",
+	answer : "Johnny Castle", answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "On 18 August 1612 one of England's most famous witch trials began - pitting the Demdike and the Chattox families against each other. What was the name of the Lancashire hill that lends its name to the trial?" + Table4ColumnStart + "Devil's Hump</td><td>Fair Snape Fell</td><td>Pendle Hill</td><td>Jonah Hill" + Table4ColumnEnd, //
+	image : "https://i.guim.co.uk/img/media/34cabde684898b7bfdaaefb9c56c384a5d8e4e10/495_949_4501_2701/master/4501.jpg?width=620&quality=85&auto=format&fit=max&s=4af8d3b5cbd367df3a496083be8ea246",
+	answer : "Pendle Hill", answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "The US produces more cheese than any other country in the world, despite being completely terrible at it. Which of these options is NOT a variety of cheese produced in the US?" + Table4ColumnStart + "Humboldt Fog</td><td>Cougar Gold</td><td>Monterey Jack</td><td>Missouri Fox Trotter" + Table4ColumnEnd, //
+	image : "https://i.guim.co.uk/img/media/c2af2ffb0870722c9aae294fc32c0af14772ecd4/0_26_2000_1200/master/2000.jpg?width=620&quality=85&auto=format&fit=max&s=ce6f2a6801c0899846f00637365bcf6b",
+	answer : "Missouri Fox Trotter", answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Tammy Wynette had a hit single with D-I-V-O-R-C-E in 1968. But which D is the capital of Senegal?" + Table4ColumnStart + "Dakar</td><td>Dar es Salaam</td><td>Dodoma</td><td>Djibouti" + Table4ColumnEnd, //
+	image : "https://i.guim.co.uk/img/media/9501b5ba0dfe82392bf489972b4a50501fbb6939/0_319_4831_2900/master/4831.jpg?width=620&quality=85&auto=format&fit=max&s=b0c095ea59ec344745bdf025aa0c8149",
+	answer : "Dakar", answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "In the Fleetwood Mac song Dreams, Stevie Nicks claims that thunder only happens when it is raining. Is that true or false?" , //
+	image : "https://i.guim.co.uk/img/media/06bfbf1617eff60694ac8e150db13e5ce14f39c2/0_10_2233_2233/master/2233.jpg?width=620&quality=85&auto=format&fit=max&s=8b46d6229da53afeb822e9ff2e1b07d2",
+	answer : "False.  The University of Melbourne wrote about this in 2018, and concluded that it would be more accurate to say 'Thunder can occur in instances of precipitation or as an evaporative effect on cloud condensation'", answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What, according to the Collins online English dictionary, does 'kippage' mean?" + Table4ColumnStart + "A small brown rat, Rattus exulans, native to New Zealand</td><td>Old-fashioned Scottish dialect for a state of anger or excitement</td><td>A measurement of how long an afternoon nap has been</td><td>The measure of how wide a tie is" + Table4ColumnEnd, //
+	image : "https://i.guim.co.uk/img/media/02480d73be314c44a3f87f913d788ec815c2de5b/0_567_2163_1298/master/2163.jpg?width=620&quality=85&auto=format&fit=max&s=f8bc4c635f44d29f14a31bb9b4dbd745",
+	answer : "Old-fashioned Scottish dialect for a state of anger or excitement", answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Ricky Wilson, Rita Ora and Boy George have all been judges on which UK talent show?" + Table4ColumnStart + "Britain's Got Talent</td><td>X-Factor</td><td>The Masked Singer</td><td>The Voice UK" + Table4ColumnEnd, //
+	image : "https://upload.wikimedia.org/wikipedia/commons/3/38/Hughie_Green_1955.jpg",
+	answer : "The Voice UK", answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "How much, according to the factsheet about it from the local government, does the Angel of the North statue weigh (in tonnes)?" + Table4ColumnStart + "2.8</td><td>28</td><td>208</td><td>2,080" + Table4ColumnEnd, //
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEV8N8L_-9FfCeUt8eQGZT0BcAUwB9B5tT7chLwLJTCyY_18LUhkKEOMGd4n3pYcn93UiHyHunyOY1rNq-LnGBtT5FVKSH7Icx-QU6opw4FbWBqygP1_Gb2mJEPMZh869HS2YQy4lLwbhhnEsC7kMMLifQ=w1708-h783-no?authuser=0",
+	answer : "208", answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Kate Bush enjoyed her well-deserved two UK No 1 singles 44 years apart. Which of these pairs of events was also 44 years apart?" + Table4ColumnStart + "The Beatles play their last ever US concert and the iPhone is released</td><td>The Beatles play their last ever US concert and the Treaty of Lisbon comes into force</td><td>The Beatles play their last ever US concert and the Occupy Wall Street protests begin</td><td>The Beatles play their last ever US concert and Spain win the men's Fifa World Cup" + Table4ColumnEnd, //
+	image : "https://i.guim.co.uk/img/media/1fe9458f2504765757cc44af217491b861d1ea22/297_2312_2059_1235/master/2059.jpg?width=620&quality=85&auto=format&fit=max&s=df5610345887de359ada189e32abeebf",
+	answer : "The Beatles play their last ever US concert and Spain win the men's Fifa World Cup - 1966 and 2010", answerSpeak : ""}) ;
+
+
+quests[++questIndexBuilder] = { 
+		name : "Birthday "+getAndIncrementCounterForType("Birthdays"),
+		hoverover : "Who was born on August 20th or 21st",
+		tags : "2022-8-21,saturday,InnerWheel,surfers,birthdays", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born August 20th 1983  " ,	answer : "Andrew Garfield", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Andrew_Garfield_by_Gage_Skidmore_%28cropped%29.jpg/220px-Andrew_Garfield_by_Gage_Skidmore_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this chap (seen here with his wife), born August 20th 1979  ", answer : "Jamie Cullum", answerSpeak : "", image : "https://hips.hearstapps.com/digitalspyuk.cdnds.net/12/44/showbiz_harpers_bazaar_woty_awards_9.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born August 20th 1971  " ,	answer : "David Walliams", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Ashleigh_and_David_Walliams_%28the_voice_of_Pudsey_in_the_movie%29_%28cropped%29.JPG/220px-Ashleigh_and_David_Walliams_%28the_voice_of_Pudsey_in_the_movie%29_%28cropped%29.JPG"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born August 20th 1949  " ,	answer : "Phil Lynott", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Thin_lizzy_22041980_01_400.jpg/240px-Thin_lizzy_22041980_01_400.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born August 20th 1948  " ,	answer : "Robert Plant", answerSpeak : "", image : "https://i.guim.co.uk/img/media/2767b52840bd045e2ac9421c228b790ac19e438e/0_0_2929_4571/master/2929.jpg?width=620&quality=85&fit=max&s=774fd165cb33730a9c16e916ea65e49b"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born August 20th 1943  " ,	answer : "Sylvester McCoy", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Sylvester_McCoy_2014_%28cropped%29.jpg/220px-Sylvester_McCoy_2014_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born August 20th 1927  " ,	answer : "Yootha Joyce", answerSpeak : "", image : "https://static.wikia.nocookie.net/the-ultimate-british-classic-comedy/images/5/5f/Yootha_Joyce.jpg/revision/latest?cb=20190308181939"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this boxing promoter, born August 20th 1931  " ,	answer : "Don King", answerSpeak : "", image : "http://reemusboxing.com/wp-content/uploads/2017/04/don-king-portrait-2-213x300.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this (winning), born August 21st 1986  " ,	answer : "Usain Bolt", answerSpeak : "", image : "https://d2r55xnwy6nx47.cloudfront.net/uploads/2019/04/Bolt_2880x1620_Lede.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture, 	
+	question : "Who is this, born August 21st 1956  " ,	answer : "Kim Cattrall", answerSpeak : "", image : "https://m.media-amazon.com/images/I/41OXzaNih2L._AC_.jpg", answerimage : "https://www.emmys.com/sites/default/files/bios/kim-cattrall-photofest-450x600.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born August 21st 1952  " ,	answer : "Joe Strummer", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/JoeStrummer1980_%28cropped%29.jpg/220px-JoeStrummer1980_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born August 21st 1938  " ,	answer : "Kenny Rogers", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/KennyRogers_%28cropped%29.jpg/220px-KennyRogers_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born August 21st 1933  " ,	answer : "Barry Norman", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/en/a/ae/Barry_Norman_2012.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born August 21st 1930  " ,	answer : "Princess Margaret", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Prinses_Margaret_%2C_Lord_Snowdon_en_Prins_Bernhard_in_de_Hoovercraft%2C_Prinses_Mar%2C_Bestanddeelnr_917-7816_%28cropped%29.jpg/220px-Prinses_Margaret_%2C_Lord_Snowdon_en_Prins_Bernhard_in_de_Hoovercraft%2C_Prinses_Mar%2C_Bestanddeelnr_917-7816_%28cropped%29.jpg"	});	
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2022-8-21,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37n0w8eFmtANMDYnXbJ5Yo?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Killng me softly, Carly Simon.  All I want for Christmas, Mariah Carey.  Barbie Girl, Aqua.  Highway to Hell, AC/DC.  The Final Countdown, Europe.  Take on Me, Ah-ha.  Eye of the Tiger, Survivor.  Wonderwall, Oasis.   We are the Champions, Queen. Africa, Toto", answerSpeak : "", question : ""}) ;
+
+
 
 quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
 		hoverover : "What sinks, what floats",
-		tags : "2022-8-21,saturday,InnerWheel,surfers", 
+		tags : "2022-8-28,saturday,InnerWheel,surfers", 
 		questInfo: new Array() };
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Kiwi" ,	answerSpeak : ""	, answer : "Sink"});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Banana" ,	answerSpeak : ""	, answer : "Float"});
