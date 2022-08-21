@@ -1851,6 +1851,32 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://c.tenor.com/OYNYCgY6Z6cAAAAC/dance-dancing.gif", answerSpeak : "Dancing"}) ;
 
 
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of water masses",
+		tags : "2022-8-21,pictionary",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEXoSsXwIuF1eJ6KIGuArpMk-pZi3jXlk7ncMRfy4FUS1iXkS5-IyUli5Nc3Agvn9wTnrkJ4NmhKFMlu-gUSf_IbKQlQTd9pE5PZg5BrcVFD46FcN_QJIR_5HJojE9QrEAkvlmXfo87DYKIu-WKBUZYfYg=w473-h490-no?authuser=0",
+	answerimage : "https://lh3.googleusercontent.com/pw/AL9nZEWAMQRqdZ2vIGOyDh85_nMdJXESq-yvklCOrI6FiFgYWW5_iy417ZuIw3dMF9NgW0eWFIMVWJLknl1Fdjx2iP8MRWSgJSlFlLad7epzlteuJ-vglZ-9RXoR3cUgOJShye5GCSh45JgAZg1sCdHSkb3EkQ=w1162-h871-no?authuser=0", answerSpeak : "", answer : "River"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEXMvfJPr2mi1Il-limTAzgYdvCCNlsGYSgki5Li7Ho-V7dR2VKNQdr1YtF2n4RoAuTKP4GkOM78GrL1V-zC7TwkS98AooHlUIsOxBJtvR7uHm_x1sHCdIrklf_cxsygyFIwGyww2AlIJpevUPRc_eq2yQ=w465-h432-no?authuser=0",
+	answerimage : "https://www.urdesignmag.com/wp-content/uploads/2020/09/12-reasons-why-you-should-have-ponds-in-your-home-1.jpg", answerSpeak : "", answer : "Pond"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEUAq8oP5W5IjL7_UClrEg5HTxKplUIHoOEVE1oZLAz0xhiiFjm_4WaxZ-juVirsrv8eXAmmLJgLXHGlUFMgNf2-cy8fOHEdGAA9f3DF1S5iVPtq41ELRl0GjLVdNwewoJwzig-4ENjTuvzuefhVnV6Fdg=w707-h563-no?authuser=0",
+	answerimage : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrUQEODa6htXH9Rj2AhiWW7AZLm6hA499pQ5nA-rNYwUeYxLqyYHWll0dchIxXg92lCSQ&usqp=CAU", answerSpeak : "", answer : "Ocean"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEW_BTdkLCD5qX9RINijZAvR5RHH4aZKEj2GPx7X-dxcd6aPD5RVGGeRjJRBpOZKm366i4W4vLC_rs-drrwd-mP2Ky79VVOnuwHyfOsEZS2ioFLwHTqVyxZx-3hjv19JNCS3H1mI2TTv5QiuhZrtN1n_uA=w824-h513-no?authuser=0",
+	answerimage : "https://media.cntraveler.com/photos/5eb1cdd479397e1bac70bdf3/master/w_4032,h_2688,c_limit/Crater-Lake-GettyImages-1158150928.jpg", answerSpeak : "", answer : "Lake"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEWcGjfx977Br2WnqwakcxTzp3rmk4-eeK_jQA1E3xsd3CcwMwPB7nUkmAtFyKg92sDwM1sHNdHXrQQcu0Tr9cBPT2ALXg57tEaIf92a5ki_U9137KPPwBMPPTjamvUk5iUGbcwvuSM9C1Ju4omz2if5Zg=w578-h362-no?authuser=0",
+	answerimage : "https://media.istockphoto.com/photos/beautiful-waterfall-in-forest-at-erawan-national-park-in-thailand-picture-id1323033650?b=1&k=20&m=1323033650&s=170667a&w=0&h=ZXxTlFUI62q-o2mpVHlpeQEgDBa3ehFJars-IQRvuSQ=", answerSpeak : "", answer : "Waterfall"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEUfVUsOKb_qx5Lz1x7b7CE6LIX8b-ZyPW74pETpETsZPNRYK7IL2NmTPmqtMxj27ugWS485vcJ4aDZNaQEGxqk6Lo8h-57ofRXgJEsA52lZyDOGWDWfbw7K08B7Yb_5HUtaMpEzjgDoZE0Nou8xE7cdVA=w626-h488-no?authuser=0",
+	answerimage : "https://www.thoughtco.com/thmb/mxRx6YXF8mTV2RnWDWLMrbOFppM=/3879x2567/filters:fill(auto,1)/GettyImages-103401770-58b59a3e5f9b5860467e5591.jpg", answerSpeak : "", answer : "Oxbow lake"}) ;
+
+
 /*
  * 	image : "",
 	answerimage : "", answer : "Table"}) ;
