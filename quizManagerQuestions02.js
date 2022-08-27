@@ -3490,10 +3490,89 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 
+
+
+quests[++questIndexBuilder] = { 
+		name : "Have you ever seen",
+		hoverover : "First rain in months",
+		splash : {splashType : splashTypePictureAndText , splashText : "In the week we saw some rain, what else happened?", 
+			splashImage : "https://media2.giphy.com/media/c8CX04yt56lDW/200.gif" },
+		tags : "2022-8-28,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Derek Skipper could have become the oldest man to do what this week?  " + Table4ColumnStart + "Pass wind louder than a Jumbo Jet</td><td>Pass a rugby ball at Twickenham</td><td>Pass a GCSE exam</td><td>Make a pass at Kate Bush" + Table4ColumnEnd,
+	answer : "Pass a GCSE exam", answerSpeak : "", image : "https://i.guim.co.uk/img/media/43c476dd8277bfc2f22fc209d159393b84a90495/0_198_5942_3565/master/5942.jpg?width=620&quality=85&fit=max&s=9065478a2c39fdefea65c033d323e1d8"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What is this?  " + Table4ColumnStart + "Slow Norris</td><td>Fast Loris</td><td>Slow Loris</td><td>Sloth" + Table4ColumnEnd,
+	answer : "Slow Loris", answerSpeak : "", image : "https://i.guim.co.uk/img/media/1b221024b95f5495ccc28071d0de0f60d0df7b4e/0_0_4647_3098/master/4647.jpg?width=1010&quality=85&auto=format&fit=max&s=b667f64a70cbb48f2870051597b2ced9"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What are these?  " + Table4ColumnStart + "Baby Polar Bears</td><td>Baby Pandas</td><td>Baby Beavers</td><td>Baby Makems" + Table4ColumnEnd,
+	answer : "Baby Pandas", answerSpeak : "", image : "https://i.guim.co.uk/img/media/c0f76080a9ade35a5f9cca41c077cfba2694ffc3/0_0_5000_3333/master/5000.jpg?width=1010&quality=85&auto=format&fit=max&s=2a07faa7c36cfcb423d8b11e61d0228d"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "True or False.   This is an Asian Water Buffalo.   Do you get Mozzarella from them?" ,
+	answer : "True", answerSpeak : "", image : "https://i.guim.co.uk/img/media/d237610a856657cca2cb7c390d2ec543659cc567/0_0_2857_1905/master/2857.jpg?width=1010&quality=85&auto=format&fit=max&s=58f0ed1fec053292c1510519635d79f1"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "These are hippos.  How many humans do they eat on average per year?  " + Table4ColumnStart + "40</td><td>30</td><td>20</td><td>10" + Table4ColumnEnd,
+	answer : "40", answerSpeak : "", image : "https://cdn.vox-cdn.com/thumbor/3wkelGacZTfSE_edx7EyzwgOHMQ=/0x0:4752x3168/920x0/filters:focal(0x0:4752x3168):format(webp):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/3436008/455511736.0.0.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "These are otters.  What do they do with stones?  " + Table4ColumnStart + "Collect them</td><td>Put them in their pockets</td><td>Juggle them</td><td>Drink pints of it when they can't get any John Smiths" + Table4ColumnEnd,
+	answer : "Juggle them", answerSpeak : "", image : "https://i.cbc.ca/1.5560048.1588878707!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_780/72144869.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Why did billionaire Richard Caring close part of Onslow Square in Kensington for 2 weeks?  " + Table4ColumnStart + "He needed a good nights sleep</td><td>Having his cars cleaned</td><td>Having dozens of trees delivered to his garden</td><td>A tribute to Kate Bush" + Table4ColumnEnd,
+	answer : "Having dozens of trees delivered to his garden", answerSpeak : "", image : "https://i.guim.co.uk/img/media/4c897ab8e6d9584c27a3ed3242cb945045a377b0/0_372_6720_4032/master/6720.jpg?width=620&quality=85&fit=max&s=850a5024e755525868570d2053e50847"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "These are Gray Langur monkeys, from Rajasthan.  Have I been to Rajasthan?  " ,
+	answer : "No", answerSpeak : "", image : "https://i.guim.co.uk/img/media/273ce652146f802f447e88b5235a8caf6bacf1e3/0_0_3936_2624/master/3936.jpg?width=1010&quality=85&auto=format&fit=max&s=1de9c27072b498aea005d41fac4f5c1e"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "On 25 August 1991, Linus Torvalds announced the first version of what would become which computer operating system?  " + Table4ColumnStart + "Linux</td><td>LDAP</td><td>HTML</td><td>DOS" + Table4ColumnEnd,
+	answer : "Linux", answerSpeak : "", image : "https://media3.giphy.com/media/gU25raLP4pUu4/giphy.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "In 1966 England had won the World Cup 30 days ago.  Who was Prime Minister back then?  " + Table4ColumnStart + "Sir Alec Douglas-Home</td><td>Harold Macmillan</td><td>Harold Wilson</td><td>Edward Heath" + Table4ColumnEnd,
+	answer : "Harold Wilson", answerSpeak : "", image : "https://i.guim.co.uk/img/media/946c8c8fa5a829d279adb5d13066b9cfb0041f29/0_0_3000_2142/master/3000.jpg?width=620&quality=85&auto=format&fit=max&s=b069257904a27213837530528eef83bc"	});	
+
+
+quests[++questIndexBuilder] = { 
+		name : "Birthday "+getAndIncrementCounterForType("Birthdays"),
+		hoverover : "Who was born on August 27th or 28th",
+		tags : "2022-8-28,saturday,InnerWheel,surfers,birthdays", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born August 27th 1972" ,	answer : "Denise Lewis", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Denise_Lewis_%28cropped%29.jpg/220px-Denise_Lewis_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born August 27th 1979" ,	answer : "Aaron Paul", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Aaron_Paul_by_Gage_Skidmore_3.jpg/220px-Aaron_Paul_by_Gage_Skidmore_3.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born August 27th 1976" ,	answer : "Mark Webber", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Mark_Webber_2017_Malaysian_GP_podium.jpg/180px-Mark_Webber_2017_Malaysian_GP_podium.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born August 27th 1969" ,	answer : "Reece Shearsmith", answerSpeak : "", image : "https://cloudfront-eu-central-1.images.arcpublishing.com/irishtimes/DN6WXXNXRBGWRW2OAXHHDPF4GU.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born August 27th 1959" ,	answer : "Jeanette Winterson", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Installation_of_Chancellor_Professor_Jackie_Kay_MBE_-_University_of_Salford%2C_Peel_Hall_%2817136470459%29_%28cropped%29.jpg/220px-Installation_of_Chancellor_Professor_Jackie_Kay_MBE_-_University_of_Salford%2C_Peel_Hall_%2817136470459%29_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born August 28th 1969" ,	answer : "Jack Black", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/2016_RiP_Tenacious_D_-_Jack_Black_-_by_2eight_-_8SC8891.jpg/220px-2016_RiP_Tenacious_D_-_Jack_Black_-_by_2eight_-_8SC8891.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born August 28th 1969" ,	answer : "Jason Priestly", answerSpeak : "", image : "https://www.usmagazine.com/wp-content/uploads/2020/05/Jason-Priestley-Beverly-Hills-90210-Then-and-Now.jpg?w=1600&quality=86&strip=all"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born August 28th 1968" ,	answer : "Billy Boyd", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Billy_Boyd.jpg/220px-Billy_Boyd.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born August 28th 1986" ,	answer : "Florence Welch", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Florence_and_the_Machine_12_09_2018_-32_%2832834280768%29_%28cropped%29.jpg/220px-Florence_and_the_Machine_12_09_2018_-32_%2832834280768%29_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born August 28th 1947" ,	answer : "Emlyn Hughes", answerSpeak : "", image : "https://www.bigredbook.info/images/emlynhughes.jpg"	});	
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2022-8-28,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7pu8x6Mi7lVjuG0kgr3GP6?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Baby One More Time, Britney Spears.  Last Christmas, Wham!  No Woman No Cry, Bob Marley.  Seven Nation Army, White Stripes.  Bohemian Rhapsody, Queen.  Crazy In Love, Beyonce.  Billie Jean, Michael Jackson.  Moves Like Jagger, Maroon Five.  Thriller, Michael Jackson.  Never Gonna Give You Up, Rick Astely", answerSpeak : "", question : ""}) ;
+
+
 quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
 		hoverover : "What sinks, what floats",
-		tags : "2022-8-28,saturday,InnerWheel,surfers", 
+		tags : "2022-9-4,saturday,InnerWheel,surfers", 
 		questInfo: new Array() };
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Kiwi" ,	answerSpeak : ""	, answer : "Sink"});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Banana" ,	answerSpeak : ""	, answer : "Float"});
