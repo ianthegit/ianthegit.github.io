@@ -1877,6 +1877,32 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://www.thoughtco.com/thmb/mxRx6YXF8mTV2RnWDWLMrbOFppM=/3879x2567/filters:fill(auto,1)/GettyImages-103401770-58b59a3e5f9b5860467e5591.jpg", answerSpeak : "", answer : "Oxbow lake"}) ;
 
 
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of Bank Holiday",
+		tags : "2022-8-28,pictionary",
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEW7Cp-Kt7A8gGsuMcTvGR3cibRUnh1EOlq5cQZ4lqDIH9k3U297KaXE3kLTbSTCuKEe0rd7PpeBftpFUP7-uJbTSAzQExSkFxMx-d3VLs-ORXOu2UezjE05Z3vGz-LLOPRxue4ZP-8MGAfPmaSdX9oMxw=w304-h294-no?authuser=0",
+	answer : "British Pound sign" + gbp, answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEXU1FLLbhscjsKVdHkdSmD_GTNZovNTWFLYKOb04826UNbjhSQVySE0apYKmBQ8GTUFia2K2cYd2aCQJlNtf56KH4IsX4ue_VT2tG_PgMOjFWj7Fb6aR7wmkwAFGr3jLIRmRVo0KDKCTi3uCqs1J4C6OQ=w325-h373-no?authuser=0",
+	answer : "French Franc", answerSpeak : ""}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEVIOlTy7RkBa5gft3UASoX9coXXFNwbaQGoqp7etxnA3dukjEYjwQmnmR8ZL-anHkXoKb0Y6obBFJHtgGT1O_t_LAv2p1K-ok5ZkchTJlwT3ructI-eAtQ17MBk1PCV1ekgWDDJ1e7kb7shU2D_CCSUJw=w513-h427-no?authuser=0",
+	answer : "Euro", answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEUxBoDiIeCfhjTcmcDqcxvZcuruKYds4CBEgqR8PzhaaumuM0FHs23k2-S7teOtbWjd-9CEXDKhfvxt5bgP0CplDpPOqz8LQBLYbTWBUCUwZ16JOZUbB0cc083cnbb_dLodpIBKxr9wed07oKlmhY51Rw=w375-h364-no?authuser=0",
+	answer : "Japanese Yen", answerSpeak : ""}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEXTYgCKZlvof-1lg7gYFQUUhuUr8V_4fnqcAHa0OnDR-Y9lwkSVAtsF9I9MgInjNqVJ2gacCufA_BCmcNQB75VqNysrFTlOFLf7alUT_tqtzlDeRx8ZjjSRsQUkaU_Jdd2ONJt4YWZI2wpRoICsBxtu0Q=w264-h377-no?authuser=0",
+	answer : "American Dollar", answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEWAcbbtS0WLMWug6q76XnBcyi40piBos-jpkhfeZN-K5dqBjsLik5pLRj1jSvNniwvuCWlON2MuP9H5TeXtMBea-Ycd3OG_DIGsXmp5IN3JZExxPa50y32iskHxGdvzZxRHb0b2XoWK3vMO4SWVkB4N9w=w387-h234-no?authuser=0",
+	answer : "Deutsche Mark", answerSpeak : ""}) ;
+
+
 /*
  * 	image : "",
 	answerimage : "", answer : "Table"}) ;
