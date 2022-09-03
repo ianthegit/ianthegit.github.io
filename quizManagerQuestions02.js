@@ -3570,9 +3570,85 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { 
+		name : "General stuff",
+		hoverover : "A bit topical, a bit general",
+		tags : "2022-9-4,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Oh My Gourd!  What did Duane Hansen from Nebraska do for 11 hours in a Pumpkin?  " + Table4ColumnStart + "Eat it</td><td>Attempt to carve Donald Trumps face</td><td>Paddle 38 miles</td><td>Listen to Kate Bush" + Table4ColumnEnd,
+	answer : "Paddle 38 miles - a new world record", answerSpeak : "", image : "https://i.guim.co.uk/img/media/e4d89c10d4ea1264822a09552c635a15e828c753/120_0_1800_1080/master/1800.jpg?width=620&quality=85&fit=max&s=56116badd92c17b5ed36557d31d3ea4c"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Why are these (and others) names in a newly published list this week - Cillian, Khalid, Owain, Tobias, Daisy?  " + Table4ColumnStart + "Most popular names of 2021</td><td>2023 Storm names</td><td>New Famous Five Woke version</td><td>Most likely to subscribe to my Only Fans" + Table4ColumnEnd,
+	answer : "Storm Names for 2023", answerSpeak : "", image : "https://cdn.imgbin.com/1/14/20/imgbin-bunch-of-people-jump-up-wS4C4TzA3EZ41PivNgY4z6GS3.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Before heading out into deep space to become very cold and lonely, on 1 September 1979 the space probe Pioneer 11 made its closest approach to which planet?  " + Table4ColumnStart + "Saturn</td><td>Uranus</td><td>Neptune</td><td>Pluto" + Table4ColumnEnd,
+	answer : "Saturn.  ", answerSpeak : "It never got to probe Uranus.", image : "https://i.guim.co.uk/img/media/de3e576fb63fb9fc83f5a9923ff922575a34870e/0_108_368_368/master/368.jpg?width=620&quality=85&auto=format&fit=max&s=b1bfe5b94ee2b1163038a5ae1c35c2cb"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Thursday marked the anniversary of the publication of Ernest Hemingway's Pulitzer Prize winning novel about a Cuban fisherman and his days-long struggle to land a prize marlin. What is it called?  " + Table4ColumnStart + "The Sea, The Sea</td><td>The Sun Also Rises</td><td>The Sea of Death</td><td>The Old Man and the Sea" + Table4ColumnEnd,
+	answer : "The Old Man and the Sea", answerSpeak : "", image : "https://i.guim.co.uk/img/media/546b571f9ef5cbf3664b9de44bc34eb8c84c2d0b/695_79_3258_1954/master/3258.jpg?width=620&quality=85&auto=format&fit=max&s=493819b1d1f00ac979b9dacedad1b1d7"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Thursday was Bruce Foxton's Birthday - Who did he used to play bass guitar for?  " + Table4ColumnStart + "The Jam</td><td>The Cure</td><td>The Police</td><td>Kate Bush" + Table4ColumnEnd,
+	answer : "The Jam", answerSpeak : "", image : "https://i2-prod.mirror.co.uk/incoming/article19120954.ece/ALTERNATES/s615/1_JIP_MDG_010919Jam_08654JPG.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Thursday was also Zendaya's birthday.  What was the name of the character she plays in Spiderman?  " + Table4ColumnStart + "Anne Wheeler</td><td>Michelle</td><td>Rue Bennett</td><td>NJ" + Table4ColumnEnd,
+	answer : "Michelle", answerSpeak : "", image : "https://images.popbuzz.com/images/275856?crop=16_9&width=660&relax=1&signature=TTKeWLZL-2_kS2dTceanXISWxO4="	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "SWEET BABY CHEESES: Which one of these options is NOT a variety of cheese produced in Ireland?  " + Table4ColumnStart + "Bilberry</td><td>Coolea</td><td>Knockanore Smoked</td><td>Gubbeen" + Table4ColumnEnd,
+	answer : "Bilberry - it's a type of goat", answerSpeak : "", image : "https://i.guim.co.uk/img/media/c2af2ffb0870722c9aae294fc32c0af14772ecd4/0_26_2000_1200/master/2000.jpg?width=620&quality=85&auto=format&fit=max&s=ce6f2a6801c0899846f00637365bcf6b"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "How many metres high is the Monument to the Great Fire of London at the junction of Monument Street and Fish Street Hill?  " + Table4ColumnStart + "61 metres</td><td>81 metres</td><td>101 metres</td><td>121 metres" + Table4ColumnEnd,
+	answer : "61 metres - the exact distance between it and the site in Pudding Lane where the fire began", answerSpeak : "", image : "https://i.guim.co.uk/img/media/7a788a3f59aa5c4b9ba7152d376982f505302ef4/399_394_1992_1196/master/1992.jpg?width=620&quality=85&auto=format&fit=max&s=5a3c580dffd3dcfad91e491557549060"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Global anti-union bland-coffee chain Starbucks opened its first store in Seattle. When?  " + Table4ColumnStart + "1961</td><td>1971</td><td>1981</td><td>1991" + Table4ColumnEnd,
+	answer : "1971", answerSpeak : "", image : "https://i.guim.co.uk/img/media/da70fe72c2fe1d67bb45071691559ddf434360dd/0_24_8192_4918/master/8192.jpg?width=620&quality=85&auto=format&fit=max&s=98a1126891d35a3a44859df50c1334d0"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which legendary showperson was born as Erik Weisz?  " + Table4ColumnStart + "Charlie Chaplin</td><td>P T Barnum</td><td>Harry Houdini</td><td>Kate Bush" + Table4ColumnEnd,
+	answer : "Harry Houdini", answerSpeak : "", image : "https://static.stereogum.com/uploads/2022/06/kate-bush-chris-moorhouse-hulton-archive-getty-images-3-1655899444.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who recorded Old Shep, a song about a dog who has 'gone where the good doggies go', in 1956?  " + Table4ColumnStart + "Cliff Richard</td><td>Elvis Presley</td><td>Billy Fury</td><td>Kate Bush" + Table4ColumnEnd,
+	answer : "Elvis Presley", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/ShepDogFortBenton.jpg/220px-ShepDogFortBenton.jpg"	});	
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Birthday "+getAndIncrementCounterForType("Birthdays"),
+		hoverover : "Who was born on September 3rd and 4th",
+		tags : "2022-9-4,saturday,InnerWheel,surfers,birthdays", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born September 3rd 1981" ,	answer : "Fearne Cotton", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Fearne_Cotton_2014.jpg/220px-Fearne_Cotton_2014.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born September 3rd 1970" ,	answer : "Gareth Southgate", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/ENG-PAN_%2822%29_%28cropped%29.jpg/220px-ENG-PAN_%2822%29_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born September 3rd 1965" ,	answer : "Charlie Sheen", answerSpeak : "", image : "https://images.mubicdn.net/images/cast_member/3224/cache-3638-1620901528/image-w856.jpg?size=800x"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this (who went to university with my friend Keith), born September 3rd 1965" ,	answer : "Rachel Johnson", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Rachel_Johnson_in_2014.jpg/220px-Rachel_Johnson_in_2014.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born September 3rd 1940" ,	answer : "Pauline Collins", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Pauline_Collins_in_November_2012.jpg/220px-Pauline_Collins_in_November_2012.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this (on the right), born September 3rd 1955" ,	answer : "Steve Jones", answerSpeak : "", image : "https://static.independent.co.uk/2022/06/02/10/newFile-8.jpg?quality=75&width=982&height=726&auto=webp"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born September 4th 1981" ,	answer : "Beyonce", answerSpeak : "", image : "https://cdn.vox-cdn.com/thumbor/_Fh2jrpRm9Mr4Q37mRm2-ECkr7w=/0x0:443x644/920x0/filters:focal(0x0:443x644):format(webp):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/7933449/Screen_Shot_2017_02_05_at_11.21.48_AM.png"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is man, born September 4th 1975" ,	answer : "Mark Ronson", answerSpeak : "", image : "https://townsquare.media/site/443/files/2012/05/amy-mark.jpg?w=980&q=75"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this (on the left), born September 4th 1972" ,	answer : "Steve Leonard", answerSpeak : "", image : "https://images.squarespace-cdn.com/content/v1/55f96d2fe4b088dd004c8775/1442663272798-5NREJMZBETVXL9OQQTYR/steveleonard01.jpg"	});	
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2022-9-4,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1qYoDRNUCRDcu5ho8MqIZi?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Umbrella, Rihanna</BR>Hot N Cold, Katy Perry</BR>Don't Worry, be happy, Bobby McFerrin</BR>Like a Virgin, Madonna</BR>Rock me Amadeus, Falco</BR>Paparazzi, Lady Gaga</BR>Bleeding Love, Leona Lewis</BR>Kids in America, Kim Wilde</BR>Jump, Van Halen</BR>Super Trooper, ABBA", answerSpeak : "", question : ""}) ;
+
+
+quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
 		hoverover : "What sinks, what floats",
-		tags : "2022-9-4,saturday,InnerWheel,surfers", 
+		tags : "2022-9-11,saturday,InnerWheel,surfers", 
 		questInfo: new Array() };
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Kiwi" ,	answerSpeak : ""	, answer : "Sink"});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Banana" ,	answerSpeak : ""	, answer : "Float"});
