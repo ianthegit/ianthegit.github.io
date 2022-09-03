@@ -3645,6 +3645,87 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : "Umbrella, Rihanna</BR>Hot N Cold, Katy Perry</BR>Don't Worry, be happy, Bobby McFerrin</BR>Like a Virgin, Madonna</BR>Rock me Amadeus, Falco</BR>Paparazzi, Lady Gaga</BR>Bleeding Love, Leona Lewis</BR>Kids in America, Kim Wilde</BR>Jump, Van Halen</BR>Super Trooper, ABBA", answerSpeak : "", question : ""}) ;
 
 
+
+
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Geordie",
+		hoverover : "Think you're a Geordie?",
+		tags : "2022-10-2,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "In which location did Newcastle United plan to build a new 65,000 stadium in 1997, but failed to get planning permission?  " + Table3ColumnStart + "Castle Leazes</td><td>Exhibition Park</td><td>Heaton Park" + Table4ColumnEnd,
+	answer : "Castle Leazes", answerSpeak : "", image : "https://i2-prod.chroniclelive.co.uk/incoming/article24874841.ece/ALTERNATES/s615/0_Newcastle-United-v-Atalanta-Pre-Season-Friendly.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What was the name of Tim Healy's character in Auf Wiedersehen, Pet?  " + Table3ColumnStart + "Barry</td><td>Dennis</td><td>Oz" + Table4ColumnEnd,
+	answer : "Dennis", answerSpeak : "", image : "https://i2-prod.chroniclelive.co.uk/incoming/article6058299.ece/ALTERNATES/s615/aufmain.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "How many steps are there in total to the top of Grey's Monument?  " + Table3ColumnStart + "167</td><td>173</td><td>178" + Table4ColumnEnd,
+	answer : "167", answerSpeak : "", image : "https://ca1-newcastle-gateshead.dccdn.net/assets/images/events/_1200x630_crop_center-center_82_none/hq_newcastle_10.jpg?v=1639500234"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who were the first ever band to play at St James' Park?  " + Table3ColumnStart + "The Who</td><td>The Rolling Stones</td><td>Queen" + Table4ColumnEnd,
+	answer : "The Rolling Stones", answerSpeak : "", image : "https://i2-prod.chroniclelive.co.uk/incoming/article24875226.ece/ALTERNATES/s615/0_Queen_2.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What was the name of the lead character in GOAL?  " + Table3ColumnStart + "Kuno Becker</td><td>Santiago Munoz</td><td>Alessandro Nivola" + Table4ColumnEnd,
+	answer : "Santiago Munoz", answerSpeak : "", image : "https://ichef.bbci.co.uk/onesport/cps/624/cpsprodpb/C740/production/_120380015_munoz.png"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What did the Tiger Hornsby bar used to be called?  " + Table3ColumnStart + "Julie's Nightclub</td><td>Rosie's Bar</td><td>Suzie's Pub" + Table4ColumnEnd,
+	answer : "Julie's Nightclub", answerSpeak : "", image : "https://i2-prod.chroniclelive.co.uk/incoming/article24875043.ece/ALTERNATES/s615/0_Tiger-Hornsby-GV.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What is the official name of this building?  " + Table3ColumnStart + "The Maritime Centre</td><td>Tyne House</td><td>Hadrian's Tower" + Table4ColumnEnd,
+	answer : "Hadrian's Tower", answerSpeak : "", image : "https://i2-prod.chroniclelive.co.uk/incoming/article24875290.ece/ALTERNATES/s615/0_IBP_NEC_200320hadrians_tower_26JPG.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What was the name of Cheryl's debut solo single?  " + Table3ColumnStart + "Call My Name</td><td>3 Words</td><td>Fight For This Love" + Table4ColumnEnd,
+	answer : "Fight For This Love", answerSpeak : "", image : "https://i2-prod.chroniclelive.co.uk/incoming/article24874946.ece/ALTERNATES/s615/0_Cheryl-Coles-Night-In.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What famous drink was invented by William Owen in Newcastle in 1927?  " + Table3ColumnStart + "Ginger Beer</td><td>Herbal Tea</td><td>Lucozade" + Table4ColumnEnd,
+	answer : "Lucozade", answerSpeak : "", image : "https://i2-prod.chroniclelive.co.uk/incoming/article24875121.ece/ALTERNATES/s615/0_Healthy-medicinal-drink-nettle-tea-in-a-glass-cup-decorated-with-fresh-leaves.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "When was Newcastle upon Tyne officially granted city status?  " + Table3ColumnStart + "1867</td><td>1882</td><td>1904" + Table4ColumnEnd,
+	answer : "1882", answerSpeak : "", image : "https://i2-prod.chroniclelive.co.uk/incoming/article24875241.ece/ALTERNATES/s615/0_DMR_NEC_210222north_01.jpg"	});	
+
+quests[++questIndexBuilder] = { 
+		name : "Birthday "+getAndIncrementCounterForType("Birthdays"),
+		hoverover : "Who was born on October 1st and 2nd",
+		tags : "2022-10-2,saturday,InnerWheel,surfers,birthdays", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 1st 1969" ,	answer : "Zach Galifianakis", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Zach_Galifianakis_2012_%28cropped%29.jpg/220px-Zach_Galifianakis_2012_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 1st 1964" ,	answer : "Harry Hill", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Harry_Hill_at_the_Action_Duchenne_international_research_conference%2C_November_2016_%28cropped%29.jpg/220px-Harry_Hill_at_the_Action_Duchenne_international_research_conference%2C_November_2016_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 1st 1956" ,	answer : "Theresa May", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Theresa_May_%282016%29.jpg/220px-Theresa_May_%282016%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 1st 1939" ,	answer : "Geoffrey Whitehead", answerSpeak : "", image : "https://www.themoviedb.org/t/p/w500/wyXXovNtZSMwlP8UftDTqt4Ql7l.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 1st 1935" ,	answer : "Julie Andrews", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Julie_Andrews_Park_Hyatt%2C_Sydney%2C_Australia_2013.jpg/220px-Julie_Andrews_Park_Hyatt%2C_Sydney%2C_Australia_2013.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 1st 1930" ,	answer : "Richard Harris", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/f/fc/2001_Richard_Harris.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 2nd 1945" ,	answer : "Don McLean", answerSpeak : "", image : "https://i.guim.co.uk/img/media/c8b67a4d7e15e2e5f0746cbd2024dc18a3023169/147_47_2044_1226/master/2044.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&s=8934e56733159841484b49b318fd3df6"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 2nd 1955" ,	answer : "Philip Oakey", answerSpeak : "", image : "https://sonicmoremusic.files.wordpress.com/2016/10/phil-oakey-comp.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 2nd 1951" ,	answer : "Sting", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sting_in_April_2018.jpg/220px-Sting_in_April_2018.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 2nd 1948" ,	answer : "Trevor Brooking", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Sir_Trevor_Brooking_in_2014.jpg/220px-Sir_Trevor_Brooking_in_2014.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 2nd 1943" ,	answer : "Anna Ford", answerSpeak : "", image : "https://i.dailymail.co.uk/i/pix/2015/09/03/01/00D05CB600000190-3220156-The_successful_newscaster_pictured_here_in_1978_captivated_count-a-6_1441239709262.jpg"	});	
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2022-10-2,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4Fa8Fh1JIpgKPSTLQzCqVj?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Take on Me, A-Ha</BR>Wake me up, Wham!</BR>Ghostbusters, Ray Parker Jnr</BR>Time of my Life, Bill Medly & Jennifer Warnes</BR>Boys don't cry, The Cure</BR>Paradise City, Guns 'n' Roses</BR>I don't feel like dancin', Scissor Sisters</BR>Survivor, Destiny's Child</BR>Torn, Natalie Imbruglia</BR>Chasing Cars, Snow Patrol ", answerSpeak : "", question : ""}) ;
+
+
 quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
 		hoverover : "What sinks, what floats",
