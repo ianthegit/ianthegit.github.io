@@ -1906,7 +1906,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 quests[++questIndexBuilder] = { //
 		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of Back to School",
-		tags : "2022-?-?,pictionary",
+		tags : "2022-9-4,pictionary",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
