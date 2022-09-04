@@ -1903,6 +1903,32 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 	answer : "Deutsche Mark", answerSpeak : ""}) ;
 
 
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of Back to School",
+		tags : "2022-?-?,pictionary",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEW8sHcAXsQduOyD5ZZSWcL0sUp4KUM8BaotUbeev3QKklXR59LQJba4hrGkCYKJ4IsTJKGHwoHqqL9ciKdn4N-trz-sVB4SpWeSB1VPj9SS_H-oFnCs1pB96sTger824tTbYYr_Wc4hals9zs0KI79D1w=w278-h227-no?authuser=0",
+	answerimage : "", answer : "Pencil", answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEW0pb3_wjvzPC5EygnFOyKakVvHhVVH1jOyi9nmhwH22Dyqs_YD3O9awpcjuZz4WlnB1c35yLG72xCTqiA-LXhAYIGc4ptTDxPEFdKRN0NI79-SKt3Gx1Ee73ovpNFQ7dySmL0fWAqrIuHfgMzWbEH4lg=w661-h378-no?authuser=0",
+	answerimage : "", answer : "Ruler",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEWWMCV_F8iyGo7w-LDjqm6NGOU3ZJhsrKBYdgOmCHPUyy8dYC0qLjXp3UV7BKOaFEBzHmZoGbb3gtt_Ve7X-LMPUrXl_JaPGpJmkrhhjKvhes_GcKAaAYXmOVgvkZ01L8zu2H92RoXYbXZO2IKRe4_91w=w375-h359-no?authuser=0",
+	answerimage : "", answer : "Uniform",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEXucMEEXwj_zQfmGKfRzOwtn3_bnXQIPuvDi7VNyOpbOjgMO58kDMHR9RjplnKWrFV7uDb3QF4SzfR6yts8oa_Is20v5NcFyA83lsuWKKwZJvmkAAFDy1dwqbb57nKwdI8-vhVauo6Dxy_odqaC0ltb9A=w407-h174-no?authuser=0",
+	answerimage : "", answer : "Eraser",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEXjuAxlefzhVfpzRFjYTZL6XPZP2s0j1PuMYgQE82l4A1lej1iRpaHfIjsv2m7bZbloazQzxd1zlyI6XLAjnZ6LQ-rKA7ey-Uk6uY2F4oDcVk4X8CJ3_zV4LhWc-nP5rYxsBbVwQmF8nlo1Q6FMq52bDw=w393-h285-no?authuser=0",
+	answerimage : "", answer : "Crayons",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEWWRzQc4ACPwdB6rXlP52BhJsLP7WC8codCEFo3f1yYUUVXaOmLLkqk3eJOkVykRii2BQwOmhAR3jh4W_wXByzqXyfHP8cFYEknV6uF35lDl0sdjPF2UJsVvJIYHC6vYByiprdhq-rCeglldRyl2IsKVQ=w622-h353-no?authuser=0",
+	answerimage : "", answer : "Tissues",  answerSpeak : ""}) ;
+
+
 /*
  * 	image : "",
 	answerimage : "", answer : "Table"}) ;
