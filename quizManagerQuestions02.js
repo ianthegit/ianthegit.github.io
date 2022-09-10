@@ -3648,6 +3648,97 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 
+quests[++questIndexBuilder] = { 
+		name : "Topicalish "+getAndIncrementCounterForType("Topicalish"),
+		hoverover : "First rain in months",
+		splash : {splashType : splashTypePictureAndText , splashText : "In the week we said goodbye to Bill Turnbull, what else happened?", 
+			splashImage : "https://static.independent.co.uk/2022/09/01/11/newFile-3.jpg?width=1200" },
+		tags : "2022-9-11,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What was the name of the book Bill Turnbull published about one of his hobbies?  " + Table4ColumnStart + "How To Build a Motorbike</td><td>The Bad Beekeepers Club</td><td>Weathering for Railway Modellers</td><td>Cloud Busting - Kate Bush fan-fiction" + Table4ColumnEnd,
+	answer : "The Bad Beekeepers Club"	, answerSpeak : "", image : "https://i.guim.co.uk/img/media/3a9637fba7c02e8ffd4ec44eaded1c97e27d0438/2_1157_2656_1591/master/2656.jpg?width=620&quality=85&auto=format&fit=max&s=e866993e93f121b9a8d7f87701c7fb1f"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which music star has decided after many years to sue the FBI to see the contents of the files kept about them?  " + Table4ColumnStart + "Graham Nash of Crosby, Stills, Nash & Young</td><td>Dave Grohl of Foo Fighters</td><td>Micky Dolenz of the Monkees</td><td>Kate Bush of Kate Bush" + Table4ColumnEnd,
+	answer : "Micky Dolenz of the Monkees"	, answerSpeak : "", image : "https://i.guim.co.uk/img/media/fd58e522adafe1ec0622aba53745b689b1c18866/374_1029_3285_1971/master/3285.jpg?width=620&quality=85&auto=format&fit=max&s=a22c83bc76ea19d53ef20f169b0c89ce"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which country's digital minister is trying to eliminate the floppy discs that are still required for 1,900 government-related procedures such as submitting applications and other documents?  " + Table4ColumnStart + "Japan</td><td>Slovakia</td><td>India</td><td>Argentina" + Table4ColumnEnd,
+	answer : "Japan"	, answerSpeak : "", image : "https://i.guim.co.uk/img/media/3e5d0bbaef54a73d5b200f1dae525e85ba336fbe/35_591_3489_2091/master/3489.jpg?width=620&quality=85&auto=format&fit=max&s=d3fb9b01227752e42efb4e23d916a992"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "The Swedish prime minister sent congratulations to the wrong Liz Truss on Twitter. Who is Sweden's prime minister?  " + Table4ColumnStart + "Ms Kottbullar</td><td>Jenny Lind</td><td>Mads Mikklesen</td><td>Magdalena Andersson" + Table4ColumnEnd,
+	answer : "Magdalena Andersson"	, answerSpeak : "", image : "https://www.indy100.com/media-library/king-charles-tells-prime-minister-liz-truss-he-had-been-dreading-death.jpg?id=31640700&width=1200&height=600&coordinates=0%2C22%2C0%2C140"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "8 September 1504 is often given as the date the Renaissance sculpture masterpiece David was unveiled to the public outside the Palazzo Vecchio in Florence. Who sculpted it?  " + Table4ColumnStart + "Leonardo da Vinci</td><td>Michelangelo</td><td>Sandro Botticelli</td><td>Donatello" + Table4ColumnEnd,
+	answer : "Michelangelo"	, answerSpeak : "", image : "https://i.guim.co.uk/img/media/0d2bc91dd9f6481dbf148be14c918b3965af6464/0_310_2000_1200/master/2000.jpg?width=620&quality=85&auto=format&fit=max&s=1055adf44bc3c42967b11c57cefc14d4"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Recently beatified by Pope Francis, for how long (in days) was John Paul I the pope in 1978?  " + Table4ColumnStart + "43</td><td>33</td><td>23</td><td>13" + Table4ColumnEnd,
+	answer : "33"	, answerSpeak : "", image : "https://i.guim.co.uk/img/media/6377fde33ce281c3be25978182d11a16d00d1027/719_0_1400_1401/master/1400.jpg?width=620&quality=85&auto=format&fit=max&s=9728a7432e7eb45db41617bc51e58f0d"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Gold Dust Woman was written and sung by Stevie on Fleetwood Mac's Rumours album. But what is the atomic number of gold?  " + Table4ColumnStart + "19</td><td>39</td><td>59</td><td>79" + Table4ColumnEnd,
+	answer : "79"	, answerSpeak : "", image : "https://i.guim.co.uk/img/media/06bfbf1617eff60694ac8e150db13e5ce14f39c2/0_10_2233_2233/master/2233.jpg?width=620&quality=85&auto=format&fit=max&s=8b46d6229da53afeb822e9ff2e1b07d2"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What does the EMI stand for in the name of the record label EMI?  " + Table4ColumnStart + "Electric and Musical Industries</td><td>Electrogram and Magnetic Industries</td><td>English Music Industries</td><td>E Makes Imprints" + Table4ColumnEnd,
+	answer : "Electric and Musical Industries"	, answerSpeak : "", image : "https://i.guim.co.uk/img/media/2c11d0d88694c8c726b055ff08bd1d64bae14b54/0_383_8128_4877/master/8128.jpg?width=620&quality=85&auto=format&fit=max&s=cfcce114056c0fcce994aa594e449b5b"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which of these words, according to the Collins dictionary online, means 'an ornament at the top of a piece of furniture'?  " + Table4ColumnStart + "Frobly-mobly</td><td>Flarnecking</td><td>Fanon</td><td>Finial" + Table4ColumnEnd,
+	answer : "Finial"	, answerSpeak : "", image : "https://i.guim.co.uk/img/media/02480d73be314c44a3f87f913d788ec815c2de5b/0_567_2163_1298/master/2163.jpg?width=620&quality=85&auto=format&fit=max&s=f8bc4c635f44d29f14a31bb9b4dbd745"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who this week announced they would be releasing their first dedicated Christmas album in nearly two decades?  " + Table4ColumnStart + "Sir Cliff Richard</td><td>Michael Buble</td><td>Michael Ball</td><td>Kate Bush" + Table4ColumnEnd,
+	answer : "Sir Cliff Richard"	, answerSpeak : "", image : "https://media.newyorker.com/photos/5bf2f3869b932021f2eaca96/16:9/w_1280,c_limit/Talbot-Kate-Bush.jpg"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Tammy Wynette had a hit single with D-I-V-O-R-C-E in 1968. But which O was in the Wombles ?  " + Table4ColumnStart + "Odesa</td><td>Orinoco</td><td>Orcini</td><td>Okanogan" + Table4ColumnEnd,
+	answer : "Orinoco"	, answerSpeak : "", image : "https://i.guim.co.uk/img/media/9501b5ba0dfe82392bf489972b4a50501fbb6939/0_319_4831_2900/master/4831.jpg?width=620&quality=85&auto=format&fit=max&s=b0c095ea59ec344745bdf025aa0c8149"});
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Bonus Wombles question - How do Wombles get their names?  " ,
+	answer : "They stand in front of Great Uncle Bulgaria's English language atlas and point"	, answerSpeak : "", image : "https://images.squarespace-cdn.com/content/v1/5dd4164d27cd1842f6013931/1614944244662-2DY82ENWNRUJX0C2TB0U/The+Wombles.jpg"});
+
+
+quests[++questIndexBuilder] = { 
+		name : "Birthday "+getAndIncrementCounterForType("Birthdays"),
+		hoverover : "Who was born on September 10th and 11th",
+		tags : "2022-9-11,saturday,InnerWheel,surfers,birthdays", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born September 11th 1917?" ,	answer : "Herbert Lom", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/en/6/66/Herbert_Lom.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born September 11th 1950?" ,	answer : "Barry Sheene", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Barry_Sheene_winner.jpg/220px-Barry_Sheene_winner.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this chap, born September 11th 1967?" ,	answer : "Harry Connick Jr", answerSpeak : "", image : "https://i.dailymail.co.uk/1s/2019/11/19/12/21198842-0-image-a-11_1574166852869.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born September 11th 1965?" ,	answer : "Moby", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Moby_12_17_2018_-16_%2831743191557%29.jpg/220px-Moby_12_17_2018_-16_%2831743191557%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who drew this, born September 10th 1926?" ,	answer : "Beryl Cook", answerSpeak : "", image : "https://www.berylcookprints.co.uk/wp-content/uploads/2018/07/Beryl-Cook-party-girls.jpeg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born September 10th 1929?" ,	answer : "Arnold Palmer", answerSpeak : "", image : "https://static01.nyt.com/images/2016/03/12/sports/arnold-palmer-obituary-slide-5566/arnold-palmer-obituary-slide-5566-jumbo.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born September 10th 1933?" ,	answer : "Karl Lagerfield", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Karl_Lagerfeld_2014.jpg/220px-Karl_Lagerfeld_2014.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born September 10th 1957?" ,	answer : "Carol Decker (T'Pau singer for 1/2 point)", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/e/ee/T%27Pau_2010_cropped.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born September 10th 1960?" ,	answer : "Colin Firth", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Colin_Firth_%2836124162705%29_%28cropped%29.jpg/220px-Colin_Firth_%2836124162705%29_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born September 10th 1968?" ,	answer : "Guy Ritchie", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/GuyRitchiebyKathyHutchins.jpg/220px-GuyRitchiebyKathyHutchins.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born September 10th 1978?" ,	answer : "Alex Horne", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Alex_Horne_20181206.jpg/220px-Alex_Horne_20181206.jpg"	});	
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2022-9-11,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1rrjemUMJvoJVfvZUIGIdw?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Don't stop believing, Journey</BR>Use Somebody, Kings of Leon</BR>Sweet Dreams, Eurythmics</BR>Fix You, Coldplay</BR>Fat Bottomed Girls, Queen</BR>Chasing Cars, Snow Patrol</BR>Radio Ga Ga, Queen</BR>Let me entertain you, Robbie Williams</BR>Gimme all your loving, ZZ Top</BR>The Lion Sleeps Tonight, Jimmy Dorsey, The Tokens, Tight Fit & many, many more", answerSpeak : "", question : ""}) ;
+
+
+
+
+
+
+
+
 
 
 quests[++questIndexBuilder] = { 
@@ -3729,7 +3820,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
 		hoverover : "What sinks, what floats",
-		tags : "2022-9-11,saturday,InnerWheel,surfers", 
+		tags : "2022-9-18,saturday,InnerWheel,surfers", 
 		questInfo: new Array() };
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Kiwi" ,	answerSpeak : ""	, answer : "Sink"});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Banana" ,	answerSpeak : ""	, answer : "Float"});
