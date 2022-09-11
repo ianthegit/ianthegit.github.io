@@ -1929,6 +1929,32 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 	answerimage : "", answer : "Tissues",  answerSpeak : ""}) ;
 
 
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of Queen",
+		tags : "2022-9-11,pictionary",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEVc9XXLHX_DElm-sACxjVFKFyPM8P6__3jdqO408H2D4eqyNYL61flmLExhhDg_BxmvfvT2-Qao0mAunxZ2zcccAa-FImL-MRNSz4ZRNZHoXK14_xo-cTkV4n80blf3KetTilVw4sAUpP2DEOCck-epkQ=w520-h327-no?authuser=0",
+	answerimage : "", answer : "Freddie Mercury", answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEXx2n1reEBKTLUFT8GxJljiB4ukzVKUBKe-vXu7eEq85ygNh4dVKaaHHDXakuBK6f69LPct3D7Asb0zxF1a9-UiErwXvMRhdbddrxI6UR0eHUyMzkItBlKZC2vUam5KN6CXFkQLOiaoEeMim8vuCgudlA=w317-h255-no?authuser=0",
+	answerimage : "", answer : "Brian May",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEVK0WeY7-nralCaSa5Y0GOHmyKTWSUYjJtNa4WdAbUkWrwN2P2nBEpHT8_bjTXlYHKDjNVSQYrixi5WXlAUb4fUUwzJcu269FETjN7x7byg-eMARBkscZag6HgdQQ2YedeQbiThYCOy_H8FfGwB_eWxCQ=w619-h203-no?authuser=0",
+	answerimage : "", answer : "We Will Rock You",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEV-Rx2Lk65dab5UuM08zwzuGTCxNVt2J-gXYkpee1MDYaFcayqxsdnQPmnRGKxpLd0zJ1jyzj53uOBV79CczKYAGSH8QA_tMUYU2U0csz_X0pDTKkgV__obhhjHffa1GDglyF7IEPwoK9aMnu4I76n4pQ=w603-h245-no?authuser=0",
+	answerimage : "", answer : "Radio Ga Ga",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEUDgG6aWGbPpwOC7zXYJsU-zFm2ylYnPqIfBLn8l_ZeYvF0n24H4JiQ4KRKOH77gWJf6aacXq5WStxRmg--JD9QXH_Ds7EQLYBckOtfzYuiCJ-E0NVcny7kuUxy8jCg3tqxPDQXIdCalRWprhagI6SzuA=w645-h314-no?authuser=0",
+	answerimage : "", answer : "Roger Taylor",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEXonzXMiQrbYn0RZzYXfW3GVQMOBdhtf3GzZ6qidT_1SK3CAofK7ow-0n4yP72E_YxJsfNxrcEv84JkwZs2wCKFL3ZpqQ3xQDPVFtYwD9sW37zPMx3D9ZvhPbO4nDFmZ1DKnXUCKFOOF7PsignzV0OYTg=w581-h486-no?authuser=0",
+	answerimage : "", answer : "John Deacon",  answerSpeak : ""}) ;
+
+
 /*
  * 	image : "",
 	answerimage : "", answer : "Table"}) ;
