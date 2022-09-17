@@ -3734,6 +3734,115 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 
+quests[++questIndexBuilder] = { 
+		name : "Topicalish "+getAndIncrementCounterForType("Topicalish"),
+		hoverover : "The Queue to end all queues",
+		splash : {splashType : splashTypePictureAndText , splashText : "In the week we said hello to the most British queue ever, what else happened?", 
+			splashImage : "https://lh3.googleusercontent.com/pw/AL9nZEVR9bQLyq7cflv2TzT1YgcfvLvDxk8ZmpEzoz3lTB3nBEPZCMt4Te_u82XWRZubNq4wAIs0w1Lhj4FTtobErercxhU-DEM1p88xki1L4Z8ogtYkEE4RGWjYdGcHFEu4ht0_kp6TAlH0h9gNiCqnpeEN7Q=w965-h520-no?authuser=0" },
+		tags : "2022-9-18,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Margrethe II marked a muted jubilee at the weekend after she became Europe's only crowned queen following the death of Queen Elizabeth II. Where is Margrethe II the queen?  " + Table4ColumnStart + "Denmark</td><td>Netherlands</td><td>Luxembourg</td><td>Sweden" + Table4ColumnEnd,
+	answer : "Denmark", answerSpeak : "", image : "https://i.guim.co.uk/img/media/04465fdc54f55e83af7bf62f9c2ba7a4c7de3f7e/1175_148_1271_763/master/1271.jpg?width=620&quality=85&auto=format&fit=max&s=1dbc56bd091e8575eff9c9bca2d012f5"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Peppa Pig is to introduce its first same-sex couple. But which type of animal is going to be introduced as 'my mummy and my other mummy'?  " + Table4ColumnStart + "Porcupines</td><td>Polar bears</td><td>Penguins</td><td>Parrots" + Table4ColumnEnd,
+	answer : "Polar bears", answerSpeak : "", image : "https://i.guim.co.uk/img/media/97ef1652ca36d1c2e553628ffca8cf95e6d01c03/470_814_4479_2688/master/4479.jpg?width=620&quality=85&auto=format&fit=max&s=8a07dc7aabe7fcc66f0631a1d2081752"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which animal was spotted in London for the first time in more than a century by a London Zoo camera intended for spotting hedgehogs?  " + Table4ColumnStart + "Polecat</td><td>Badger</td><td>Pine marten</td><td>(Kate) Bushbaby" + Table4ColumnEnd,
+	answer : "Pine marten", answerSpeak : "", image : "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/6b/da/0e/into-africa.jpg?w=1200&h=1200&s=1"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Prince William has been named the new Prince of Wales. But which Prince of Wales was executed on the orders of Edward I on 3 October 1283, with the English King later awarding the title to his own son and heir?  " + Table4ColumnStart + "Owain Gwynedd</td><td>Dafydd ap Gruffydd</td><td>Blaidd Drwg</td><td>Treblig ap Rhodri" + Table4ColumnEnd,
+	answer : "Dafydd ap Gruffydd", answerSpeak : "", image : "https://i.guim.co.uk/img/media/1f687cff5740add1c8ed81d28f5a6d05359ba3b1/0_14_2202_1322/master/2202.jpg?width=620&quality=85&auto=format&fit=max&s=40d76364cdd7027daebaba247b6b8d5a"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "On 15 September 1978 Muhammad Ali became a world heavyweight boxing champion for the third time, after defeating whom at the Superdome in New Orleans, Louisiana in front of 70,000 people?  " + Table4ColumnStart + "Leon Spinks</td><td>Joe Frazier</td><td>George Foreman</td><td>Joe Bugner" + Table4ColumnEnd,
+	answer : "Leon Spinks", answerSpeak : "", image : "https://i.guim.co.uk/img/media/b398747babbddd4f2531ec06602323d798d37681/0_486_3579_2148/master/3579.jpg?width=620&quality=85&auto=format&fit=max&s=e7340aa308edb95d2c8f21d31bcd74d7"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : " Marco Polo was born on this day in 1254, famed for boring Rustichello da Pisa so much with his travel stories that the latter eventually wrote it all down in a book. But where was Marco Polo born?  " + Table4ColumnStart + "Milan</td><td>Turin</td><td>Rome</td><td>Venice" + Table4ColumnEnd,
+	answer : "Venice", answerSpeak : "", image : "https://i.guim.co.uk/img/media/be41390d3aaf4209b1c251bfcbad65f7ce484488/0_729_3858_2314/master/3858.jpg?width=620&quality=85&auto=format&fit=max&s=6f4f7b69eaba83942047d4d3dea46182"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "A rare signed edition of The Catcher in the Rye is up for sale for " + gbp + " 225,000. Who wrote it?  " + Table4ColumnStart + "Stephen King</td><td>William Golding</td><td>Aldous Huxley</td><td>JD Salinger" + Table4ColumnEnd,
+	answer : "JD Salinger", answerSpeak : "", image : "https://cdn.britannica.com/94/181394-050-2F76F7EE/Reproduction-cover-edition-The-Catcher-in-the.jpg?w=300&h=169&c=crop"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which Commonwealth country just announced that within three years it would hold a referendum on whether to retain the British monarch as head of state?  " + Table4ColumnStart + "Belize</td><td>Jamaica</td><td>Antigua and Barbuda</td><td>St Kitts and Nevis" + Table4ColumnEnd,
+	answer : "Antigua and Barbuda", answerSpeak : "", image : "https://geology.com/world/caribbean-map.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "According to the Collins dictionary online, which of these words means 'an attractive or curious trinket'?  " + Table4ColumnStart + "Bibcock</td><td>Bibelot</td><td>Boffola</td><td>Benthon" + Table4ColumnEnd,
+	answer : "Bibelot", answerSpeak : "", image : "https://i.guim.co.uk/img/media/02480d73be314c44a3f87f913d788ec815c2de5b/0_567_2163_1298/master/2163.jpg?width=620&quality=85&auto=format&fit=max&s=f8bc4c635f44d29f14a31bb9b4dbd745"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "In computer programming, which of these terms best describes 'a location that stores temporary data within a program which can be modified, stored and displayed whenever needed'?  " + Table4ColumnStart + "Operator</td><td>Conditional</td><td>Variable</td><td>Argument" + Table4ColumnEnd,
+	answer : "Variable", answerSpeak : "", image : "https://images.squarespace-cdn.com/content/v1/5ebc2debacebd17bea1b0f52/1590471697804-IIFVZY4ODTX9Y6WI0AG2/ke17ZwdGBToddI8pDm48kJ5xeH8R94Pau3IE0lD7u1BZw-zPPgdn4jUwVcJE1ZvWEtT5uBSRWt4vQZAgTJucoTqqXjS3CfNDSuuf31e0tVGKRNeWYwlJXc1G4xrwBDK7IWqa_8PFGgBpbAGE0qdHoTqWIIaSPh2v08GbKqpiV54/coding.gif?format=750w"	});	
+
+quests[++questIndexBuilder] = { 
+		name : "Birthday "+getAndIncrementCounterForType("Birthdays"),
+		hoverover : "Who was born on September 17th and 18th",
+		tags : "2022-9-18,saturday,InnerWheel,surfers,birthdays", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born September 17th 1960?" ,	answer : "Damon Hill", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Damon_Hill_May_2012_Cropped.jpg/220px-Damon_Hill_May_2012_Cropped.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born September 17th 1942?" ,	answer : "Des Lynam", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Deslynam.jpg/220px-Deslynam.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born September 17th 1928?" ,	answer : "Roddy McDowall", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/RoddyMcDowall.jpg/220px-RoddyMcDowall.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born September 17th 1923?" ,	answer : "Hank Williams", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Hank_Williams_Promotional_Photo.jpg/220px-Hank_Williams_Promotional_Photo.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born September 18th 1976?" ,	answer : "Ronaldo", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/051119SMcC0014.jpg/220px-051119SMcC0014.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born September 18th 1975?" ,	answer : "Jason Sudeikis", answerSpeak : "", image : "https://i.guim.co.uk/img/media/c1539829fa166d16254f7a95ce2b64d862cf665a/0_26_5764_3459/master/5764.jpg?width=1020&quality=85&fit=max&s=9caebd984f31acb7ea7959ea78efb53f"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born September 18th 1974?" ,	answer : "Sol Campbell", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Sol_Campbell2014.jpg/220px-Sol_Campbell2014.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born September 18th 1971?" ,	answer : "Lance Armstrong", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Lance_Armstrong_%28Tour_Down_Under_2009%29.jpg/220px-Lance_Armstrong_%28Tour_Down_Under_2009%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born September 18th 1962?" ,	answer : "John Fashanu", answerSpeak : "", image : "https://cdn.punchng.com/wp-content/uploads/2019/10/06045739/fashanu-matured.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born September 18th 1949?" ,	answer : "Peter Shilton", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Peter_Shilton.png/220px-Peter_Shilton.png"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born September 18th 1949?" ,	answer : "Mo Mowlam", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/en/4/48/Mo_mowlem_informal_image.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born September 18th 1947?" ,	answer : "Russ Abbot", answerSpeak : "", image : "https://4.bp.blogspot.com/-Xg1GW6fvMco/WeLkzVnByeI/AAAAAAAAF-E/ItYl_R1Y0Dwx_fscsuPEdeySP1_VnWHuQCLcBGAs/s1600/Russ-Abbot_2752213b.jpg"	});	
+
+quests[++questIndexBuilder] = { 
+		name : "Queen Meets ",
+		hoverover : "Who did the Queen meet?",
+		tags : "2022-9-18,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, meeting the Queen in 2014?" ,	answer : "Joan Collins", answerSpeak : "", image : "https://i.guim.co.uk/img/media/cc8596381207c116eb6c047f8b413ef64881b769/0_0_4256_2832/master/4256.jpg?width=1010&quality=85&auto=format&fit=max&s=174ca415f6f6830a2c52c3ad3b671497"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, shaking hands with the Queen in 1956?" ,	answer : "Marilyn Monroe", answerSpeak : "", image : "https://i.guim.co.uk/img/media/8cdbadffcdd14bbcd45dde9ece265ca0ccbef45b/0_0_2572_3244/master/2572.jpg?width=1010&quality=85&auto=format&fit=max&s=1a7353c52cad9d62e3e695911443ef19"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, meeting the Queen in 2012 (5 names for 1 point each)?" ,	answer : "Elton John, Sir Cliff Richard, Dame Shirley Bassey, Sir Tom Jones and Gary Barlow", answerSpeak : "", image : "https://i.guim.co.uk/img/media/e7d65ea02e17470f68beaffc74b2c510ee535c94/0_0_4062_2760/master/4062.jpg?width=1010&quality=85&auto=format&fit=max&s=303eb70294fc42d80b500a6be4fd032c"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, meeting the Queen and drawing her attention in 1957?" ,	answer : "Jayne Mansfield", answerSpeak : "", image : "https://i.guim.co.uk/img/media/e52fae1b9f5320f85e1dd5948864a9d834e22ae3/0_0_2796_1991/master/2796.jpg?width=1010&quality=85&auto=format&fit=max&s=6d1c2c7bd8380e43bfc81a6b1fa47772"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, meeting the Queen in 1980?" ,	answer : "Maryl Streep", answerSpeak : "", image : "https://i.guim.co.uk/img/media/e578dc1c9964f45f9df14471f2687937c35a444b/0_0_2920_2080/master/2920.jpg?width=1010&quality=85&auto=format&fit=max&s=2efae11843c9d4c4a71ccfe75198c4c1"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, meeting the Queen in 2002?" ,	answer : "Madonna", answerSpeak : "", image : "https://i.guim.co.uk/img/media/6bc9f0c75038d25ed9e522fca5c2de181f817415/0_0_2048_1335/master/2048.jpg?width=1010&quality=85&auto=format&fit=max&s=f83e428902841afa06ee1e6f11daa3de"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who are these 3, meeting the Queen in 2005?" ,	answer : "Johnny Briggs, David Baddiel and Frank Skinner", answerSpeak : "", image : "https://i.guim.co.uk/img/media/aee5b69ced7e4703a4dba9b6a8f7f3cc9be89be6/0_0_2000_1456/master/2000.jpg?width=1010&quality=85&auto=format&fit=max&s=7717477e519555c5cb3e213ec5a73b4c"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, meeting the Queen in 1983 (4 names for a point each)?" ,	answer : "Perry Como, Frank Sinatra, Dionne Warwick and George Burns", answerSpeak : "", image : "https://i.guim.co.uk/img/media/8c9deeda26077e0863f8847e958f992ec82a8832/0_0_3560_2420/master/3560.jpg?width=1010&quality=85&auto=format&fit=max&s=13cd41a47f69948719c18afa42a72219"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, meeting the Queen in 1975?" ,	answer : "Barbra Streisand", answerSpeak : "", image : "https://i.guim.co.uk/img/media/b718c35033d096cf5696f947f2f43fad810861fa/0_0_5000_3464/master/5000.jpg?width=1010&quality=85&auto=format&fit=max&s=1cb9b777f990657557b5eed5801e7884"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, meeting the Queen in 1978 (4 names, 1 point each)?" ,	answer : "Paul Eddington, Penelope Keith, Felicity Kendal and Richard Briers", answerSpeak : "", image : "https://i.guim.co.uk/img/media/94605ad724965b22ee3a9a83b7ae38e3e350cf6e/0_0_4096_3748/master/4096.jpg?width=1010&quality=85&auto=format&fit=max&s=84679f527966f9e70555dbe8aa55cea2"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, meeting the Queen in 2012?" ,	answer : "Daniel Craig", answerSpeak : "", image : "https://i.guim.co.uk/img/media/c4abf58e875ba65979a64bd159df61b3db611bfb/0_0_2492_2677/master/2492.jpg?width=1010&quality=85&auto=format&fit=max&s=9c6f7869c9d7011607240cd6e7c6e1e8"	});	
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2022-9-18,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/07Yk2OELjQozbTGg6s99Fv?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Wannabe, The Spice Girls</BR>Never Ever, All Saints</BR>Like A Virgin, Madonna</BR>Sex Bomb, Tom Jones</BR>Get the Party Started, Diana Ross</BR>Do you really want to hurt me, Culture Club</BR>Girls just wanna have fun, Cyndi Lauper</BR>Single Ladies, Beyonce</BR>All about that bass, Meghan Trainor</BR>Walk this way, Aerosmith", answerSpeak : "", question : ""}) ;
+
+
+
 
 
 
@@ -3820,7 +3929,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
 		hoverover : "What sinks, what floats",
-		tags : "2022-9-18,saturday,InnerWheel,surfers", 
+		tags : "2022-XX-XX,saturday,InnerWheel,surfers", 
 		questInfo: new Array() };
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Kiwi" ,	answerSpeak : ""	, answer : "Sink"});
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Does it Sink or Float?  Banana" ,	answerSpeak : ""	, answer : "Float"});
