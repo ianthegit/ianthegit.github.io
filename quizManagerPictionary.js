@@ -1954,6 +1954,31 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 	image : "https://lh3.googleusercontent.com/pw/AL9nZEXonzXMiQrbYn0RZzYXfW3GVQMOBdhtf3GzZ6qidT_1SK3CAofK7ow-0n4yP72E_YxJsfNxrcEv84JkwZs2wCKFL3ZpqQ3xQDPVFtYwD9sW37zPMx3D9ZvhPbO4nDFmZ1DKnXUCKFOOF7PsignzV0OYTg=w581-h486-no?authuser=0",
 	answerimage : "", answer : "John Deacon",  answerSpeak : ""}) ;
 
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of things you queue for",
+		tags : "2022-9-18,pictionary",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEW87XylB2xUkifb5r-GrIQ6lxL-rijVg7ad8Tcg29ilvMawFfUnrzvokPQDHDYqp0_Fwe3To6pL5b3nAzDEIR_6Z6iNPt2kacfOwJxg4NkndjjGEUoGo0VQx6MvNZGT06kexO_FmiQpTQogc0-H40KOrg=w603-h284-no?authuser=0",
+	answerimage : "https://thumbs.gfycat.com/AmpleIdealAmmonite-max-1mb.gif", answer : "Roller coaster", answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEX_owXNgPlZrzcXNH-gyhxPkLSrgVH4QMSWKr8MWDov_Q6FUtwh33BpfH5c-6BKK9taDFa_g29pnk1UUC4PpwqnGCxa1qu48u1bpCnsZFskKR5uFQGcNn_jRwzCyWh1LRlINA_9hPG2CVJJVBjD1V4ZrQ=w940-h456-no?authuser=0",
+	answerimage : "https://66.media.tumblr.com/8be4f3e47b48263974cecd45f2e10111/tumblr_nhygelks0Q1qf5do9o1_500.gif", answer : "Bank or Post Office",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEW1IfbkcOLqJWcWeDFu7It4gfw3XnwqsN0FPTvfPZPFMiXuXlyzBCD-mQQO_xERY8SlZ0o6Ij82IFii_6xdLMn5avSlNIbjNdtcRYlpB2uljILROqk-nnc63x1GGGAwVYbqDe9wZ6d1CuNY8-KqGIuoiQ=w438-h265-no?authuser=0",
+	answerimage : "https://images.indianexpress.com/2020/03/Delhi-riots1-759.jpg", answer : "Food",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEVKWcKjhPv8T7wh3BxbibOYtX7tZ7YkOgIMrSaCkAYQqS1wBpu678pBzEj1aASh_d18BlcR5my0pewFwbnNCAWNJJlGNNXY-0IHbfmIqAT3nuXcJifSKcuA_oYTFrOeg2bSkRSijj2suvUHdLbWSRKP3A=w618-h313-no?authuser=0",
+	answerimage : "https://i2-prod.mirror.co.uk/incoming/article9590995.ece/ALTERNATES/s615b/09JULY17-Tube-strike.jpg", answer : "Bus",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEXijukJKx3Fw4aJU94JX_AhwxNSG0ZNvhjifa68b_leI1_2hpZDWUU9HuDlH9G479dYO2cStXwnQ2ythx7DPXJF41hXR5EKwXmXwXhDAYAjyyEJGRFY_7RQE4PnrHJzbnmUHb8t5WWKdvuiI2fInp8WoA=w531-h343-no?authuser=0",
+	answerimage : "https://images.squarespace-cdn.com/content/v1/5832f60e2994ca3ef5414973/1554903063519-43UG5ZO4QR60KYZ9BHZZ/ShotAway-36.jpg?format=1000w", answer : "The bar",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEVomLDGDiA3MuWi1LwG8r7OSBU_65Ltm6Vu9FaCuhulMvN5CtRjvfv31ldQjHBGKU7tOVLAWaaQCwL1EYi1bdPqJR4W3cjLlN_uiaNg4Ib6V6lmELQcmiEoIN4gB_s45YlIWTTmN35al3kgqQ8S4PXY9g=w214-h318-no?authuser=0",
+	answerimage : "https://www.telegraph.co.uk/content/dam/royal-family/2022/09/14/TELEMMGLPICT000309295780-xlarge_trans_NvBQzQNjv4BqpVlberWd9EgFPZtcLiMQfyf2A9a6I9YchsjMeADBa08.jpeg", answer : "The Queen's coffin",  answerSpeak : ""}) ;
+
 
 /*
  * 	image : "",
