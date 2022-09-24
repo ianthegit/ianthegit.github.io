@@ -3844,6 +3844,95 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 
+quests[++questIndexBuilder] = { 
+		name : "Topicalish "+getAndIncrementCounterForType("Topicalish"),
+		hoverover : "The magic money tree",
+		splash : {splashType : splashTypePictureAndText , splashText : "In the week we said hello to the magic money tree, what else happened?", 
+			splashImage : "https://e3.365dm.com/22/09/768x432/skynews-kwasi-kwarteng-liz-truss_5889290.jpg?20220906104035" },
+		tags : "2022-9-25,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "The Phantom of the Opera musical is to close on Broadway after a run longer than Newcastle FC's silverware hunt. But who wrote the original Le Fantome de l'Opera, which was first published in 1909?  " + Table4ColumnStart + "Alphonse Daudet</td><td>Alexandre Dumas</td><td>Gaston Leroux</td><td>Katerine Bush (Kate Bush's grandmother)" + Table4ColumnEnd,
+	answer : "Gaston Leroux", answerSpeak : "", image : "https://i.guim.co.uk/img/media/a83cc499320c439a5e332ef7cf2b33df7bb60ed7/71_4_3791_2275/master/3791.jpg?width=620&quality=85&auto=format&fit=max&s=6ff455e85118040d265446fb8b4c1d73"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which cryptocurrency changed the way it works to reduce its hideously large carbon footprint?  " + Table4ColumnStart + "Bitcoin</td><td>Ethereum</td><td>Shibu Inu</td><td>Dogecoin" + Table4ColumnEnd,
+	answer : "Ethereum", answerSpeak : "", image : "https://i.guim.co.uk/img/media/919cd9748dd9e383ce67c0d949058fc3280ee0f5/1801_926_2734_1640/master/2734.jpg?width=620&quality=85&auto=format&fit=max&s=f7680b36ae97c0ac135e929b20dc928d"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Amazon Prime is basing a TV series on Blade Runner. But which year is the original 1982 movie set in?  " + Table4ColumnStart + "2015</td><td>2019</td><td>2022</td><td>2025" + Table4ColumnEnd,
+	answer : "2019", answerSpeak : "", image : "https://thumbs.gfycat.com/AgitatedRevolvingHoneyeater-size_restricted.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Scientists have proposed Saturn's rings formed when a moon got pulled too close and disintegrated between 100m and 200m years ago. What have they named that hypothetical moon?  " + Table4ColumnStart + "Chrysalis</td><td>Charisma</td><td>Chandos</td><td>Thanos" + Table4ColumnEnd,
+	answer : "Chrysalis", answerSpeak : "", image : "https://i.guim.co.uk/img/media/a5df48f4914a0e21a08619801a4ed3bd31f23983/476_383_1150_690/master/1150.jpg?width=620&quality=85&auto=format&fit=max&s=f3255b74effe75e3b257af0254a9a352"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Joseph Smith said he discovered what for the first time on 22 September 1823 in the hills near his home in Manchester, New York, which he would later claim to translate as the Book of Mormon?  " + Table4ColumnStart + "Copper plates</td><td>Bronze plates</td><td>Silver plates</td><td>Golden plates" + Table4ColumnEnd,
+	answer : "Golden plates", answerSpeak : "", image : "https://i.guim.co.uk/img/media/c705f6fad05c9432bb3eb057c0f83d919cc9e3f6/0_462_1061_636/master/1061.jpg?width=620&quality=85&auto=format&fit=max&s=6d0924c94bd6b9c0f3d55055a038b404"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "It was Billie Piper's birthday this week - what was the name of the character she played in Doctor Who, starting in 2005?  " + Table4ColumnStart + "Rose Tyler</td><td>Martha Jones</td><td>Donna Noble</td><td>Bushy Kate" + Table4ColumnEnd,
+	answer : "Rose Tyler", answerSpeak : "", image : "https://i.guim.co.uk/img/media/41c6bea041a244a0fc2d2ed2004fa183d091c3c1/0_116_2652_1590/master/2652.jpg?width=620&quality=85&auto=format&fit=max&s=1e23b26aaf49871789c2b7a93c34b5c0"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "A huge leak of data has revealed that the next version of Grand Theft Auto will once again be set in Vice City, as was the 2002 instalment. But Vice City is loosely based on which real US city?  " + Table4ColumnStart + "Chicago</td><td>Miami</td><td>New York</td><td>Gotham" + Table4ColumnEnd,
+	answer : "Miami", answerSpeak : "", image : "https://media4.giphy.com/media/SNf41wfVbB8vS/200.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "During the Queen's funeral, who was in charge of one of the final ceremonial acts, the breaking of the 'Wand of Office'?  " + Table4ColumnStart + "The earl marshall</td><td>The lord chamberlain</td><td>Rouge Dragon Pursuivant</td><td>Merlin" + Table4ColumnEnd,
+	answer : "The lord chamberlain", answerSpeak : "", image : "https://i.guim.co.uk/img/media/77275cc6fd85a4ff79a1a8856485498a81903e2a/769_305_1584_950/master/1584.jpg?width=620&quality=85&auto=format&fit=max&s=a4a730031c730b98114e44821f241a62"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Also at the Queen's funeral at Windsor was one of her favourite horses, Emma (pictured), who was led out to watch the coffin pass by. But which breed of horse is she?  " + Table4ColumnStart + "Shetland pony</td><td>Suffolk Punch</td><td>Exmoor pony</td><td>Fell pony" + Table4ColumnEnd,
+	answer : "Fell pony", answerSpeak : "", image : "https://i.guim.co.uk/img/media/06a36f9474fee51c5bf83a9b39c8e763da1438a3/0_47_3500_2101/master/3500.jpg?width=620&quality=85&auto=format&fit=max&s=bbecfa0651916140e33f24e7064aedc4"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "We now have a changed National Anthem, but Spain's won't change when their King dies.  How does theirs start?  " + Table4ColumnStart + "Life, life, future of the Fatherland!</td><td>Command us, Spain, and united we will fight!</td><td>Zoo time, is she and you time. The mammals are your favourite type, and you want her tonight!</td><td>There is no opening line, as it has no words" + Table4ColumnEnd,
+	answer : "There is no opening line, as it has no words", answerSpeak : "", image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-1205611559.jpg?crop=1.00xw:0.377xh;0,0.212xh&resize=980:*"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which of the following options is NOT a variety of cheese produced in Italy?  " + Table4ColumnStart + "Bel Paese</td><td>Stracchino</td><td>Taleggio</td><td>Cane Paratore" + Table4ColumnEnd,
+	answer : "Cane Paratore", answerSpeak : "", image : "https://i.guim.co.uk/img/media/c2af2ffb0870722c9aae294fc32c0af14772ecd4/0_26_2000_1200/master/2000.jpg?width=620&quality=85&auto=format&fit=max&s=ce6f2a6801c0899846f00637365bcf6b"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Stevie Nicks once said she wanted to go over and kill Lindsey Buckingham every time Fleetwood Mac played Go Your Own Way live. But which word describes an object that doesn't want to go its own way, and instead will return to its original shape when forces are removed?  " + Table4ColumnStart + "Elastic</td><td>Hyperplastic</td><td>Inelastic</td><td>Over-dramatic" + Table4ColumnEnd,
+	answer : "Elastic", answerSpeak : "", image : "https://i.guim.co.uk/img/media/98e04908c521070997d25189a12957e7fd1d6894/0_123_2204_2008/master/2204.jpg?width=620&quality=85&auto=format&fit=max&s=4f8fea786f7e79b08b119a8c6abe8ffc"	});	
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Birthday "+getAndIncrementCounterForType("Birthdays"),
+		hoverover : "Who was born on September 24th and 25th",
+		tags : "2022-9-25,saturday,InnerWheel,surfers,birthdays", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born September 24th 1980?" ,	answer : "Victoria Pendleton", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Victoria_Pendleton_2011.jpg/220px-Victoria_Pendleton_2011.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born September 24th 1959?" ,	answer : "Theo Paphitis", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Theo_Paphitis.jpg/220px-Theo_Paphitis.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this Scouser, born September 24th 1942?" ,	answer : "Gerry Marsden", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/1/17/Gerry_in_group_photo_with_Pacemakers_1964.JPG"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born September 24th 1941?" ,	answer : "Linda McCartney", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/8/80/Linda_McCartney_1976_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this puppeteer, who created the Muppets, born September 24th 1936?" ,	answer : "Jim Henson", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Jim_Henson%2C_creator%2C_The_Muppets.jpg/220px-Jim_Henson%2C_creator%2C_The_Muppets.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born September 25th 1978?" ,	answer : "Jodie Kidd", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Jodie_Kidd_%282008%29.jpg/220px-Jodie_Kidd_%282008%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who are these 2, born September 25th 1944 and 1969?" ,	answer : "Michael Douglas & Catherine Zeta-Jones", answerSpeak : "", image : "https://images.english.elpais.com/resizer/k2p7sje-aIZ5M-WBQTjOXjszvHw=/1960x0/filters:focal(1816x657:1826x667)/cloudfront-eu-central-1.images.arcpublishing.com/prisa/JQJ6QLOMPJELBEBUETGB2KTWNU.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this lady (pictured on the TJ Hooker set), born September 25th 1961?" ,	answer : "Heather Locklear", answerSpeak : "", image : "http://tvseriesfinale.com/assets/tjhooker04a.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born September 25th 1952?" ,	answer : "Christopher Reeve", answerSpeak : "", image : "https://external-preview.redd.it/4_pYbGxwOfc2taXnzrxq12Fx0Ub2DFuhwwx24Ip_99M.jpg?auto=webp&s=31e80bfd8227c00aa495501bc481ee07fa643eba"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born September 25th 1951?" ,	answer : "Mark Hamill", answerSpeak : "", image : "https://images.nintendolife.com/6bea1cec81c9a/mark-hamill-headshot.large.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born September 25th 1946?" ,	answer : "Felicity Kendal", answerSpeak : "", image : "https://i.dailymail.co.uk/1s/2021/06/21/21/44505043-9710343-image-m-51_1624308885781.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born September 25th 1939?" ,	answer : "Leon Brittan", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Leon_Brittan_%281996%29_02.jpg/220px-Leon_Brittan_%281996%29_02.jpg"	});	
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2022-9-25,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6YR6YlmU1dBiwhyVYbkb2h?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Take my breath away, Berlin</BR>Boys don't cry, The Cure</BR>Back for good, Take That</BR>What's love got to do with it, Tina Turner</BR>I wanna dance with somebody, Whitney Houston</BR>In the air tonight, Phil Collins</BR>Should I stay or should I go, The Clash</BR>Holding back the years, Simply Red</BR>Wonderwall, Oasis</BR>Never gonna give you up, Rick Astley", answerSpeak : "", question : ""}) ;
+
+
 
 
 
