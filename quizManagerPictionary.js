@@ -1980,6 +1980,33 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://www.telegraph.co.uk/content/dam/royal-family/2022/09/14/TELEMMGLPICT000309295780-xlarge_trans_NvBQzQNjv4BqpVlberWd9EgFPZtcLiMQfyf2A9a6I9YchsjMeADBa08.jpeg", answer : "The Queen's coffin",  answerSpeak : ""}) ;
 
 
+
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of school clubs",
+		tags : "2022-9-25,pictionary",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEXuiXUmp5WUn4BNlcJkb4SZXJYHelh3FH9FDlQ0rHOeK5gPAMrzPo55uWV9tvXV_x0rnvPzFddBDnIM3HnrZx-WGluNaWbmK86MF4ztql-3rzXlCy8y7kSCCFbD2-TTp7U5LwPl_fKFh0jd_PLZ3GME3A=w336-h199-no?authuser=0",
+	answerimage : "https://c.tenor.com/3sAudli98McAAAAC/marching-band-parade.gif", answer : "Music Club", answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEXP1Di_4EWBUYDz5vQTLSftp-UKvnBb2Atn9VUpzxMvHhAxygtSnEh-zSsuWugHbjpieIuhsjHlq0hlUTTHUdO0hK-tjJhBMM8P1Ie6384uxt6jHQmkhC7CMIHTIpWbDK2poWT0Hl_mE_dqA-1WYO9KZA=w469-h399-no?authuser=0",
+	answerimage : "https://www.bapwatch.com/Misc/charlie_dimmock_3.jpg", answer : "Gardening Club",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEXFjtyKDkM9QUNg_LOvTst59zwWF3BCM6X1GeUNUJQn71fqr2cBlxgXGG4y8jWYlShmy_1pFImKJ_aE5OMRh-G2L_ANTK9Frc_m6f53g-GrB3benxQ4cM6JdKvd2UcYxUJlsBbP-tFBoQKoEcCrNDrikA=w357-h293-no?authuser=0",
+	answerimage : "https://c.tenor.com/JwzZ1N9iv4IAAAAC/alan-shearer.gif", answer : "Football Club",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEXsHFdAKfgkQNEKFIBob37MzltxM5ty01sPV6ZJvY8sn2E7m3A8F2aeKpy1xi2h1LWrx7NcjKX-jqJo7yQsnn3JNiFAyZvAHrVJ-0JSCObxiMEQqGVGYtrU2V7yIkwMExpZghlFTpb4s2D1WHQKFr2eqA=w951-h491-no?authuser=0",
+	answerimage : "https://media1.giphy.com/media/rfaSwa6h8rjvG/giphy.gif", answer : "Cricket Club",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEVJ02CAGyTrlEPm6oXM-2-Mk-Av_SfP2Qady3-FDolRVIpgJqxffOeLv-tfg00IJ8P6tORLWMfeDXwJGjhJa1etfYun4wLqiHwU9HofIOnmv0tKIwD7zq2SDU55ESMvnH2KLd9m2tBrb7M0hPNB-kEldg=w562-h353-no?authuser=0",
+	answerimage : "https://s3.amazonaws.com/after-school-assets/typing-fast.gif", answer : "Computer Coding club",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEWZcx8JEmiFvgs72d0VAUz_ehElpG89fjuzT5nw1XUiJYB-7JMMYWG_5sqSv05XVb6q6U24McGXQ_ulVyfobRrZulHpoqBkaJG5diF_vBvuIDV0N54hp1EQKU_AfzHL2IA5co46oB4WOdTCR4KU22CQlA=w552-h423-no?authuser=0",
+	answerimage : "https://thumbs.gfycat.com/MealyDiscreteChafer-size_restricted.gif", answer : "Chess Club",  answerSpeak : ""}) ;
+
+
 /*
  * 	image : "",
 	answerimage : "", answer : "Table"}) ;
