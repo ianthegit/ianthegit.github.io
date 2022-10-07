@@ -3939,10 +3939,11 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 
+
 quests[++questIndexBuilder] = { 
 		name : "Geordie",
 		hoverover : "Think you're a Geordie?",
-		tags : "2022-10-2,saturday,InnerWheel,surfers", 
+		tags : "2022-10-2,2022-10-9,saturday,InnerWheel,surfers", 
 		questInfo: new Array() };
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "In which location did Newcastle United plan to build a new 65,000 stadium in 1997, but failed to get planning permission?  " + Table3ColumnStart + "Castle Leazes</td><td>Exhibition Park</td><td>Heaton Park" + Table4ColumnEnd,
@@ -3957,23 +3958,24 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	question : "Who were the first ever band to play at St James' Park?  " + Table3ColumnStart + "The Who</td><td>The Rolling Stones</td><td>Queen" + Table4ColumnEnd,
 	answer : "The Rolling Stones", answerSpeak : "", image : "https://i2-prod.chroniclelive.co.uk/incoming/article24875226.ece/ALTERNATES/s615/0_Queen_2.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "What was the name of the lead character in GOAL?  " + Table3ColumnStart + "Kuno Becker</td><td>Santiago Munoz</td><td>Alessandro Nivola" + Table4ColumnEnd,
-	answer : "Santiago Munoz", answerSpeak : "", image : "https://ichef.bbci.co.uk/onesport/cps/624/cpsprodpb/C740/production/_120380015_munoz.png"	});	
+	question : "When was the great fire of Newcastle and Gateshead?  6th October " + Table3ColumnStart + "1834</td><td>1854</td><td>1874" + Table4ColumnEnd,
+	answer : "1854", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Newcastle_and_Gateshead_Great_Fire_1854_-_Illustrated_London_News.jpg/400px-Newcastle_and_Gateshead_Great_Fire_1854_-_Illustrated_London_News.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "What did the Tiger Hornsby bar used to be called?  " + Table3ColumnStart + "Julie's Nightclub</td><td>Rosie's Bar</td><td>Suzie's Pub" + Table4ColumnEnd,
+	question : "What did the Tiger Hornsby bar used to be called?  " + Table4ColumnStart + "Julie's Nightclub</td><td>Rosie's Bar</td><td>Suzie's Pub</td><td>Kate Bush's Kathouse" + Table4ColumnEnd,
 	answer : "Julie's Nightclub", answerSpeak : "", image : "https://i2-prod.chroniclelive.co.uk/incoming/article24875043.ece/ALTERNATES/s615/0_Tiger-Hornsby-GV.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "What is the official name of this building?  " + Table3ColumnStart + "The Maritime Centre</td><td>Tyne House</td><td>Hadrian's Tower" + Table4ColumnEnd,
 	answer : "Hadrian's Tower", answerSpeak : "", image : "https://i2-prod.chroniclelive.co.uk/incoming/article24875290.ece/ALTERNATES/s615/0_IBP_NEC_200320hadrians_tower_26JPG.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "What was the name of Cheryl's debut solo single?  " + Table3ColumnStart + "Call My Name</td><td>3 Words</td><td>Fight For This Love" + Table4ColumnEnd,
-	answer : "Fight For This Love", answerSpeak : "", image : "https://i2-prod.chroniclelive.co.uk/incoming/article24874946.ece/ALTERNATES/s615/0_Cheryl-Coles-Night-In.jpg"	});	
+	question : "Who was 'Sitting in a sleazy snack-bar sucking sickly sausage rolls'?  " + Table4ColumnStart + "Jarrow Elvis</td><td>Lindisfarne</td><td>Mark Knopfler</td><td>Kate Bush" + Table4ColumnEnd,
+	answer : "Lindisfarne", answerSpeak : "", image : "https://media-cdn.tripadvisor.com/media/photo-s/02/c2/92/92/lovely-blue-mould-in.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "What famous drink was invented by William Owen in Newcastle in 1927?  " + Table3ColumnStart + "Ginger Beer</td><td>Herbal Tea</td><td>Lucozade" + Table4ColumnEnd,
 	answer : "Lucozade", answerSpeak : "", image : "https://i2-prod.chroniclelive.co.uk/incoming/article24875121.ece/ALTERNATES/s615/0_Healthy-medicinal-drink-nettle-tea-in-a-glass-cup-decorated-with-fresh-leaves.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "When was Newcastle upon Tyne officially granted city status?  " + Table3ColumnStart + "1867</td><td>1882</td><td>1904" + Table4ColumnEnd,
 	answer : "1882", answerSpeak : "", image : "https://i2-prod.chroniclelive.co.uk/incoming/article24875241.ece/ALTERNATES/s615/0_DMR_NEC_210222north_01.jpg"	});	
+	});	
 
 quests[++questIndexBuilder] = { 
 		name : "Birthday "+getAndIncrementCounterForType("Birthdays"),
@@ -4004,15 +4006,47 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	question : "Who is this, born October 2nd 1943" ,	answer : "Anna Ford", answerSpeak : "", image : "https://i.dailymail.co.uk/i/pix/2015/09/03/01/00D05CB600000190-3220156-The_successful_newscaster_pictured_here_in_1978_captivated_count-a-6_1441239709262.jpg"	});	
 
 
+
 quests[++questIndexBuilder] = { 
 		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
 		hoverover : "Songs you will know, but wish you did not after this.",
-		tags : "music,2022-10-2,InnerWheel,saturday",
+		tags : "music,2022-10-2,2022-10-9,InnerWheel,saturday",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4Fa8Fh1JIpgKPSTLQzCqVj?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
 	answer : "Take on Me, A-Ha</BR>Wake me up, Wham!</BR>Ghostbusters, Ray Parker Jnr</BR>Time of my Life, Bill Medly & Jennifer Warnes</BR>Boys don't cry, The Cure</BR>Paradise City, Guns 'n' Roses</BR>I don't feel like dancin', Scissor Sisters</BR>Survivor, Destiny's Child</BR>Torn, Natalie Imbruglia</BR>Chasing Cars, Snow Patrol ", answerSpeak : "", question : ""}) ;
+
+quests[++questIndexBuilder] = { 
+		name : "Birthday "+getAndIncrementCounterForType("Birthdays"),
+		hoverover : "Who was born on October 8th and 9th",
+		tags : "2022-10-9,saturday,InnerWheel,surfers,birthdays", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 8th 1928?" ,	answer : "Bill Maynard", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/en/f/f1/Bill_Maynard_actor_portrait.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 8th 1932?" ,	answer : "Ray Reardon", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/8/8f/Ray_Reardon.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 8th 1939?" ,	answer : "Paul Hogan", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Royal_Charity_Concert_1980_%28cropped_Hogan%29.jpg/220px-Royal_Charity_Concert_1980_%28cropped_Hogan%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 8th 1943?" ,	answer : "Chevy Chase", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/0/0a/ChevyChaseMar10.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 8th 1949?" ,	answer : "Sigourney Weaver", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Sigourney_Weaver_by_Gage_Skidmore_4.jpg/220px-Sigourney_Weaver_by_Gage_Skidmore_4.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 8th 1970?" ,	answer : "Matt Damon", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Matt_Damon_TIFF_2015.jpg/220px-Matt_Damon_TIFF_2015.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 8th 1970?" ,	answer : "Sadiq Khan", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/e/e9/Sadiq_Khan_2020.png"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 9th 1931?" ,	answer : "Tony Booth", answerSpeak : "", image : "https://www.emmys.com/sites/default/files/anthony-booth-bio-450x600.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 9th 1936?" ,	answer : "Brian Blessed", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Brian_Blessed_2012.jpg/220px-Brian_Blessed_2012.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 9th 1940?" ,	answer : "John Lennon", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/John_Lennon_1969_%28cropped%29.jpg/220px-John_Lennon_1969_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 9th 1952?" ,	answer : "Sharon Osbourne", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Sharon_Osbourne_2%2C_2012.jpg/220px-Sharon_Osbourne_2%2C_2012.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 9th 1979?" ,	answer : "Chris O'Dowd", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Chris_O%27Dowd_at_British_Comedy_Awards.jpg/220px-Chris_O%27Dowd_at_British_Comedy_Awards.jpg"	});	
+
 
 
 quests[++questIndexBuilder] = { 
