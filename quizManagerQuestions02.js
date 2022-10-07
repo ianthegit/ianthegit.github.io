@@ -3957,9 +3957,10 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "Who were the first ever band to play at St James' Park?  " + Table3ColumnStart + "The Who</td><td>The Rolling Stones</td><td>Queen" + Table4ColumnEnd,
 	answer : "The Rolling Stones", answerSpeak : "", image : "https://i2-prod.chroniclelive.co.uk/incoming/article24875226.ece/ALTERNATES/s615/0_Queen_2.jpg"	});	
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "When was the great fire of Newcastle and Gateshead?  6th October " + Table3ColumnStart + "1834</td><td>1854</td><td>1874" + Table4ColumnEnd,
-	answer : "1854", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Newcastle_and_Gateshead_Great_Fire_1854_-_Illustrated_London_News.jpg/400px-Newcastle_and_Gateshead_Great_Fire_1854_-_Illustrated_London_News.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture, 	
+	question : "When was the great fire of Newcastle and Gateshead?  6th October ...  (Bonus point - what is in the only building remaining on the quayside from before the fire?)" + Table3ColumnStart + "1834</td><td>1854</td><td>1874" + Table4ColumnEnd,
+	answer : "1854 - and this is the only building remaining on the quayside which existed before the fire - home to Saba's (used to be Sabatini's)", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Newcastle_and_Gateshead_Great_Fire_1854_-_Illustrated_London_News.jpg/400px-Newcastle_and_Gateshead_Great_Fire_1854_-_Illustrated_London_News.jpg",
+	answerimage : "https://web.archive.org/web/20160322201833im_/http://quaysidelives.ncl.ac.uk/wp-content/uploads/2012/11/P6140449-768x1024.jpg"});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "What did the Tiger Hornsby bar used to be called?  " + Table4ColumnStart + "Julie's Nightclub</td><td>Rosie's Bar</td><td>Suzie's Pub</td><td>Kate Bush's Kathouse" + Table4ColumnEnd,
 	answer : "Julie's Nightclub", answerSpeak : "", image : "https://i2-prod.chroniclelive.co.uk/incoming/article24875043.ece/ALTERNATES/s615/0_Tiger-Hornsby-GV.jpg"	});	
