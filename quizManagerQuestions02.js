@@ -3975,7 +3975,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
 	question : "When was Newcastle upon Tyne officially granted city status?  " + Table3ColumnStart + "1867</td><td>1882</td><td>1904" + Table4ColumnEnd,
 	answer : "1882", answerSpeak : "", image : "https://i2-prod.chroniclelive.co.uk/incoming/article24875241.ece/ALTERNATES/s615/0_DMR_NEC_210222north_01.jpg"	});	
-	});	
+	
 
 quests[++questIndexBuilder] = { 
 		name : "Birthday "+getAndIncrementCounterForType("Birthdays"),
