@@ -2019,7 +2019,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
  quests[++questIndexBuilder] = { //
 		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of ??",
-		tags : "2022-?-?,pictionary",
+		tags : "2022-?-?,pictionary", straightToAnswers:true,
 		questInfo: new Array()
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
