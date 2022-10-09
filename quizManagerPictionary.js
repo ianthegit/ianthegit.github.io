@@ -2007,6 +2007,33 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://thumbs.gfycat.com/MealyDiscreteChafer-size_restricted.gif", answer : "Chess Club",  answerSpeak : ""}) ;
 
 
+
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of Logos",
+		tags : "2022-10-9,pictionary", straightToAnswers:true,
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEUsmxQ7q5_mYnAok3aTkgQraxNgM5o0lGBKblfc7G4MGlBmXyqOE8QuA1qLaEMmdO9pbvKwrWNMrthKK1wVqKiu5a-Lgy1PjmbkhR8qAX1lMws7KXRAGjsGkJ7U2b83ZLFiiAWGjt18O74inw3lVO3dTA=w402-h300-no?authuser=0",
+	answerimage : "https://i.pinimg.com/originals/82/86/a3/8286a3f32719a2b2b1a55e6474028dd0.png", answer : "Mercedes", answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEVLC3nnvvGPBJ3giBoJzum105JzLA_qoP6e43fj3OKGz6Y6_Z1vickiBD5nDvrVzBdVKaqBD2QAm2b9BZPiFEgbpbqVAZ_Q6MhnaDwhodvArxn57GOfBMnFd4oXCMPcCyZivUgsiGKEl5_sPzDqVmoAPw=w520-h356-no?authuser=0",
+	answerimage : "https://logos-world.net/wp-content/uploads/2020/11/Shell-Logo.png", answer : "Shell",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEUdmdOk64Hb3AUt49O4emAnn9VA5qqezNuLT-dB9ZNtGfi_YOfwMXiYZQD6jAmFr7dtKz75wbVBodCnMNH_fHnxOZHAiUK-35xQvWiNgPMLm19OydMsv3eusDoUQYigYFlLBz9h9ww6705eChCCK_89AA=w550-h206-no?authuser=0",
+	answerimage : "https://c.static-nike.com/a/images/w_1920,c_limit/bzl2wmsfh7kgdkufrrjq/image.jpg", answer : "Nike",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEUObGedKXGyw88JFU8IpP9sqdfUJsd7L0KcnPSSJmmbJ2HTN5XA6sbECld0O3dBHurl6ql3pf8f8xijSDE1I8aOCmY6M7iNb64VUQ16iI4owfivbC_E5h5NzGLTpghAE4AFGDITiuEp0GbuCQUSEnA7YQ=w305-h310-no?authuser=0",
+	answerimage : "https://static.vecteezy.com/system/resources/previews/002/520/838/original/apple-logo-black-isolated-on-transparent-background-free-vector.jpg", answer : "Apple",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEUKr2qUkDV2bplG2n5cAl-Rrqsxxy0X03oh9zsMrA4ms8y6A9AphphaHpP5m4MhUvmXnuXt5VWJeQRg8kmVeHFYO1noCyz45fykC8SQm_wRP6jiK_xSMnqYGbWcAVl4XeEePGzo1B2sxbPoufnRyE23qw=w380-h391-no?authuser=0",
+	answerimage : "https://images.ctfassets.net/4cd45et68cgf/Rx83JoRDMkYNlMC9MKzcB/2b14d5a59fc3937afd3f03191e19502d/Netflix-Symbol.png?w=684&h=456", answer : "Netflix",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEVechi0Ern5E0Xu6XmZm-2D6h8Z_yZ5dlvb7vl7z6zyRu5DwBKK1NFTa3H6of8OOPppYCgcq1bpjWtizsKcOmhS4Y8eVkrsiJajg44feYhbgdYWYZD-7b0ZHsnePiRqBhngPOm5EcJPA7RWdfDdWDHYeg=w490-h407-no?authuser=0",
+	answerimage : "https://1000logos.net/wp-content/uploads/2021/06/Zoom-emblem.png", answer : "Zoom",  answerSpeak : ""}) ;
+
+
 /*
  * 	image : "",
 	answerimage : "", answer : "Table"}) ;
