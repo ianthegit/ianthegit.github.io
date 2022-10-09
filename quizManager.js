@@ -362,6 +362,13 @@ function reRunQuestStage() {
 
 function runNextQuestStage() {
 	discussionPointIndex=-1;
+	straightToAnswers=false;
+	if (quests[currQuestIndex].hasOwnProperty('straightToAnswers') ) {
+		straightToAnswers=quests[currQuestIndex].straightToAnswers;
+	}
+	if (straightToAnswers) {
+	quizStage = quizStageAnswers;
+	}
 	questStageData = quests[currQuestIndex].questInfo;
 	if (currQuestStageIndex == questStageData.length
 			&& quizStage == quizStageQuestions) {
@@ -806,7 +813,7 @@ function SQIs7DegreesOfHBC(quizIndex) {
 	optionTagsCount = optionTags.length;
 	
 	for (var i = 0; i < optionTagsCount; i++) {
-		console.log(optionTags[i]);
+		//console.log(optionTags[i]);
 		if (optionTags[i] == '7DegreesOfHBC' ) {
 			return true;
 		}
