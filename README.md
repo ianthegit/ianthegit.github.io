@@ -73,6 +73,10 @@ Optional - splash screen Text and picture
 ```javascript
 ,splash : {splashType : splashTypePictureAndText, splashText : "Splash Screen Text" , splashImage : "Image URL"}
 ```
+Optional - Go striaght to answers
+```javascript
+, straightToAnswers:true
+```
 To add a counter to the name of the round (where <round identifier> is any string used to group rounds together
 ```javascript
 quests[++questIndexBuilder] = { //
