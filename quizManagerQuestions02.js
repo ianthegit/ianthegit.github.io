@@ -4051,6 +4051,89 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 
 quests[++questIndexBuilder] = { 
+		name : "Topicalish "+getAndIncrementCounterForType("Topicalish"),
+		hoverover : "Kami Kwasi budget time",
+		splash : {splashType : splashTypePictureAndText , splashText : "In the week we said goodbye Angela, goofbye to Kwasi, and we thought Liz Truss was taking the Mickey/Mick/Michael - here's a quiz about Micks, Mikes, Michaels, Michelles...", 
+			splashImage : "https://24.media.tumblr.com/6be7c5929aeb7958530da9d2af430fe6/tumblr_mrl67trlaU1rd9jbko1_250.gif" },
+		tags : "2022-10-16,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
+	question : "<strong>The answer is a Mike, Mick, Michael, Michelle or Kate...</strong></b></b>Past, present, or future - he will always be Marty McFly  " ,
+	answer : "MICHAEL J FOX", answerSpeak : "", answerimage : "https://media1.giphy.com/media/g7jOIW7rYguILiDNvs/200w.gif?cid=82a1493bjdbw3ndmyi5okjg12ticgxf2jqwcx05sfrvvsxdy&rid=200w.gif&ct=g"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
+	question : "<strong>The answer is a Mike, Mick, Michael, Michelle or Kate...</strong></b></b>Author, Lawyer, former First Lady  " ,
+	answer : "MICHELLE OBAMA", answerSpeak : "", answerimage : "https://www.smooth.com.au/wp-content/uploads/2020/01/giphy-186.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
+	question : "<strong>The answer is a Mike, Mick, Michael, Michelle or Kate...</strong></b></b>Sheffield lad who who met his wife in Southwold and hung around with Eric, Terry, Graham and John  " ,
+	answer : "MICHAEL PALIN", answerSpeak : "", answerimage : "https://c.tenor.com/MoIRPWSlETIAAAAd/michael-palin-say-the-name.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
+	question : "<strong>The answer is a Mike, Mick, Michael, Michelle or Kate...</strong></b></b>Dad of Mick Schumacher  " ,
+	answer : "MICHAEL SCHUMACHER", answerSpeak : "", answerimage : "https://i.gifer.com/2JwO.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
+	question : "<strong>The answer is a Mike, Mick, Michael, Michelle or Kate...</strong></b></b>Eastenders Actor / The man who banned 'Relax' from Radio 1.  " ,
+	answer : "MIKE REID/READ", answerSpeak : "", answerimage : "https://media3.giphy.com/media/tW2rXVJQnYKPu/giphy.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
+	question : "<strong>The answer is a Mike, Mick, Michael, Michelle or Kate...</strong></b></b>The most successful Olympian of all time with 28 medals  " ,
+	answer : "MICHAEL PHELPS", answerSpeak : "", answerimage : "https://media3.giphy.com/media/ZB3CAZTiY5b9oXxn5e/200w.gif?cid=82a1493b9pbevefbaszsejh3z92rfxrbwiv8omhiet0n4zkm&rid=200w.gif&ct=g"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
+	question : "<strong>The answer is a Mike, Mick, Michael, Michelle or Kate...</strong></b></b>Was married to Frank Spencer on-screen, and Edward Woodward off-screen." ,
+	answer : "MICHELLE DOTRICE", answerSpeak : "", answerimage : "https://ichef.bbci.co.uk/news/976/cpsprodpb/E22A/production/_126989875_mediaitem126989874.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
+	question : "<strong>The answer is a Mike, Mick, Michael, Michelle or Kate...</strong></b></b>Leader of the RMT Union  " ,
+	answer : "MICK LYNCH", answerSpeak : "", answerimage : "https://cdn.thelondoneconomic.com/wp-content/uploads/2022/06/050e1420-featureimage-scaled.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
+	question : "<strong>The answer is a Mike, Mick, Michael, Michelle or Kate...</strong></b></b>Toni Basil's biggest UK hit single  " ,
+	answer : "MICKEY", answerSpeak : "", answerimage : "https://c.tenor.com/aJzOvs120UkAAAAd/hey-mickey-toni-basil.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
+	question : "<strong>The answer is a Mike, Mick, Michael, Michelle or Kate...</strong></b></b>His chatshow was Billy Connolly's big break  " ,
+	answer : "Michael Parkinson", answerSpeak : "", answerimage : "https://i2-prod.mirror.co.uk/incoming/article16214310.ece/ALTERNATES/s615b/0_Billy-Connolly-on-Michael-Parkinson-show-1977.jpg"	});	
+
+
+quests[++questIndexBuilder] = { 
+		name : "Birthday "+getAndIncrementCounterForType("Birthdays"),
+		hoverover : "Who was born on October 15th and 16th",
+		tags : "2022-10-16,saturday,InnerWheel,surfers,birthdays", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 16th 1922?" ,	answer : "Max Bygraves", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/en/5/5f/MaxBygraves.png"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 16th 1925?" ,	answer : "Angela Lansbury", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Angela_Lansbury_1966.jpg/220px-Angela_Lansbury_1966.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 16th 1936?" ,	answer : "Peter Bowles", answerSpeak : "", image : "https://i.guim.co.uk/img/media/c0d3cf1ef958be68ea51b3f080874b820ee64f0a/0_157_3417_2050/master/3417.jpg?width=620&quality=85&dpr=1&s=none"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 16th 1947?" ,	answer : "Terry Griffiths", answerSpeak : "", image : "https://i2-prod.mirror.co.uk/incoming/article26839333.ece/ALTERNATES/n310p/1_Terry-Griffiths-Snooker.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this man, born October 16th 1958?" ,	answer : "Tim Robbins", answerSpeak : "", image : "https://www.nickiswift.com/img/gallery/the-real-reason-susan-sarandon-and-tim-robbins-split/intro-1621541597.webp"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 16th 1959?" ,	answer : "Gary Kemp", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Garykemp.jpg/220px-Garykemp.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 16th 1962?" ,	answer : "Flea (Michael Balzary) from Red Hot Chili Peppers", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/2016_Red_Hot_Chili_Peppers_-_Michael_Flea_Balzary_%28cropped%29.jpg/220px-2016_Red_Hot_Chili_Peppers_-_Michael_Flea_Balzary_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 15th 1925?" ,	answer : "Tony Hart", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/en/4/4d/Norman_Antony_Hart.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this chap, born October 15th 1948?" ,	answer : "Chris de Burgh", answerSpeak : "", image : "https://static.standard.co.uk/homesandproperty/s3fs-public/thumbnails/image/2019/07/01/17/GossBurghGettyImages-133457028.jpg?width=1200&auto=webp&quality=75"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, famously getting her toes sucked, born October 15th 1959?" ,	answer : "Sarah Ferguson", answerSpeak : "", image : "https://i2-prod.mirror.co.uk/incoming/article13385205.ece/ALTERNATES/s615b/3_PAY-John-Bryan-and-Sarah-Ferguson-on-holiday-in-the-south-of-France.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 15th 1952?" ,	answer : "Dominic West", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Dominic_West_%286577113511%29_%28cropped%29.jpg/220px-Dominic_West_%286577113511%29_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 15th 1989?" ,	answer : "Anthony Joshua", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Anthony_Joshua_2017.png/220px-Anthony_Joshua_2017.png"	});	
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2022-10-16,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7sSbvrlond4wZJtmn7qhh1?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Every breath you take, the Police</BR>99 Red Ballons, Nena</BR>Bette Davis Eyes, Kim Carnes</BR>Hungry Like The Wolf, Duran Duran</BR>She Drives Me Crazy, Fine Young Cannibals</BR>Stand By Me, Ben E King</BR>Holiday, Madonna</BR>Finally, CeCe Peniston</BR>Do You Really Want To Hurt Me, Culture Club</BR>Da Ya Think I'm Sexy, Rod Stewart", answerSpeak : "", question : ""}) ;
+
+
+
+
+quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
 		hoverover : "What sinks, what floats",
 		tags : "2022-XX-XX,saturday,InnerWheel,surfers", 
