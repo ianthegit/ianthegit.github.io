@@ -2034,6 +2034,32 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://1000logos.net/wp-content/uploads/2021/06/Zoom-emblem.png", answer : "Zoom",  answerSpeak : ""}) ;
 
 
+
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of last 6 Prime Ministers",
+		tags : "2022-10-16,pictionary", straightToAnswers:true,
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://media4.giphy.com/media/3o85xDazgkTMedOX8A/giphy.gif", answer : "Boris Johnson", answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://media.tenor.com/03HsGBo4HyEAAAAC/david-cameron-confused.gif", answer : "David Cameron",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://media1.giphy.com/media/1zjQiLGfgb10nc7Wou/giphy.gif", answer : "Theresa May",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://hips.hearstapps.com/digitalspyuk.cdnds.net/16/37/1473763469-gordon-brown-smile.gif", answer : "Gordon Brown",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://media3.giphy.com/media/Z0QJyoTI7FZ7UjfTNB/giphy.gif", answer : "Liz Truss",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://c.tenor.com/JpHY-kr9GywAAAAC/tony-blair-1997.gif", answer : "Tony Blair",  answerSpeak : ""}) ;
+
 /*
  * 	image : "",
 	answerimage : "", answer : "Table"}) ;
