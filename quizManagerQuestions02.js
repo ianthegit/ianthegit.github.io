@@ -4058,34 +4058,34 @@ quests[++questIndexBuilder] = {
 		tags : "2022-10-16,saturday,InnerWheel,surfers", 
 		questInfo: new Array() };
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
-	question : "<strong>The answer is a Mike, Mick, Michael, Michelle or Kate...</strong></b></b>Past, present, or future - he will always be Marty McFly  " ,
+	question : "<strong>The answer is a Mike, Mick, Michael, Michelle or Kate...</strong></BR></BR>Past, present, or future - he will always be Marty McFly  " ,
 	answer : "MICHAEL J FOX", answerSpeak : "", answerimage : "https://media1.giphy.com/media/g7jOIW7rYguILiDNvs/200w.gif?cid=82a1493bjdbw3ndmyi5okjg12ticgxf2jqwcx05sfrvvsxdy&rid=200w.gif&ct=g"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
-	question : "<strong>The answer is a Mike, Mick, Michael, Michelle or Kate...</strong></b></b>Author, Lawyer, former First Lady  " ,
+	question : "<strong>The answer is a Mike, Mick, Michael, Michelle or Kate...</strong></BR></BR>Author, Lawyer, former First Lady  " ,
 	answer : "MICHELLE OBAMA", answerSpeak : "", answerimage : "https://www.smooth.com.au/wp-content/uploads/2020/01/giphy-186.gif"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
-	question : "<strong>The answer is a Mike, Mick, Michael, Michelle or Kate...</strong></b></b>Sheffield lad who who met his wife in Southwold and hung around with Eric, Terry, Graham and John  " ,
+	question : "<strong>The answer is a Mike, Mick, Michael, Michelle or Kate...</strong></BR></BR>Sheffield lad who who met his wife in Southwold and hung around with Eric, Terry, Graham and John  " ,
 	answer : "MICHAEL PALIN", answerSpeak : "", answerimage : "https://c.tenor.com/MoIRPWSlETIAAAAd/michael-palin-say-the-name.gif"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
-	question : "<strong>The answer is a Mike, Mick, Michael, Michelle or Kate...</strong></b></b>Dad of Mick Schumacher  " ,
+	question : "<strong>The answer is a Mike, Mick, Michael, Michelle or Kate...</strong></BR></BR>Dad of Mick Schumacher  " ,
 	answer : "MICHAEL SCHUMACHER", answerSpeak : "", answerimage : "https://i.gifer.com/2JwO.gif"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
-	question : "<strong>The answer is a Mike, Mick, Michael, Michelle or Kate...</strong></b></b>Eastenders Actor / The man who banned 'Relax' from Radio 1.  " ,
+	question : "<strong>The answer is a Mike, Mick, Michael, Michelle or Kate...</strong></BR></BR>Eastenders Actor / The man who banned 'Relax' from Radio 1.  " ,
 	answer : "MIKE REID/READ", answerSpeak : "", answerimage : "https://media3.giphy.com/media/tW2rXVJQnYKPu/giphy.gif"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
-	question : "<strong>The answer is a Mike, Mick, Michael, Michelle or Kate...</strong></b></b>The most successful Olympian of all time with 28 medals  " ,
+	question : "<strong>The answer is a Mike, Mick, Michael, Michelle or Kate...</strong></BR></BR>The most successful Olympian of all time with 28 medals  " ,
 	answer : "MICHAEL PHELPS", answerSpeak : "", answerimage : "https://media3.giphy.com/media/ZB3CAZTiY5b9oXxn5e/200w.gif?cid=82a1493b9pbevefbaszsejh3z92rfxrbwiv8omhiet0n4zkm&rid=200w.gif&ct=g"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
-	question : "<strong>The answer is a Mike, Mick, Michael, Michelle or Kate...</strong></b></b>Was married to Frank Spencer on-screen, and Edward Woodward off-screen." ,
+	question : "<strong>The answer is a Mike, Mick, Michael, Michelle or Kate...</strong></BR></BR>Was married to Frank Spencer on-screen, and Edward Woodward off-screen." ,
 	answer : "MICHELLE DOTRICE", answerSpeak : "", answerimage : "https://ichef.bbci.co.uk/news/976/cpsprodpb/E22A/production/_126989875_mediaitem126989874.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
-	question : "<strong>The answer is a Mike, Mick, Michael, Michelle or Kate...</strong></b></b>Leader of the RMT Union  " ,
+	question : "<strong>The answer is a Mike, Mick, Michael, Michelle or Kate...</strong></BR></BR>Leader of the RMT Union  " ,
 	answer : "MICK LYNCH", answerSpeak : "", answerimage : "https://cdn.thelondoneconomic.com/wp-content/uploads/2022/06/050e1420-featureimage-scaled.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
-	question : "<strong>The answer is a Mike, Mick, Michael, Michelle or Kate...</strong></b></b>Toni Basil's biggest UK hit single  " ,
+	question : "<strong>The answer is a Mike, Mick, Michael, Michelle or Kate...</strong></BR></BR>Toni Basil's biggest UK hit single  " ,
 	answer : "MICKEY", answerSpeak : "", answerimage : "https://c.tenor.com/aJzOvs120UkAAAAd/hey-mickey-toni-basil.gif"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
-	question : "<strong>The answer is a Mike, Mick, Michael, Michelle or Kate...</strong></b></b>His chatshow was Billy Connolly's big break  " ,
+	question : "<strong>The answer is a Mike, Mick, Michael, Michelle or Kate...</strong></BR></BR>His chatshow was Billy Connolly's big break  " ,
 	answer : "Michael Parkinson", answerSpeak : "", answerimage : "https://i2-prod.mirror.co.uk/incoming/article16214310.ece/ALTERNATES/s615b/0_Billy-Connolly-on-Michael-Parkinson-show-1977.jpg"	});	
 
 
