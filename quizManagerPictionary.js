@@ -2042,22 +2042,22 @@ quests[++questIndexBuilder] = { //
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEX2xoF_p4RJjMXc6aVi79TXejNpJwf-bfwdPgWxfSpcbW9V9WVQid3XH9nf3-u1iSLgpcc_uf3JZGupQwJE71uq42o3ZkZuRSPJPzPfFUrANVUl6pqyagI2ud8WdqLUeDLz7z1tpS7EUJJFofeMb2eF8Q=w356-h286-no?authuser=0",
 	answerimage : "https://media4.giphy.com/media/3o85xDazgkTMedOX8A/giphy.gif", answer : "Boris Johnson", answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEWfb1xi0dEQYNTVjspmkX_lyR7pHpKG-qBln32GcMJnTK3wOVppsEYJs4QK_rk_ycQ4O2leTde5u5UDkBfdVH4N3pv9pLYzuyuitnerkwx-lMG0Pzz6upfbQXpfNeR_hP1y6xzwfPzsIitChNIvhPqtCg=w434-h388-no?authuser=0",
 	answerimage : "https://media.tenor.com/03HsGBo4HyEAAAAC/david-cameron-confused.gif", answer : "David Cameron",  answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEW12si0mmlU_KcST6K6MMI6xBMosfr4FYldOVztpGBlD0jKaMcbpYF-McDTOEpT9Glbwji9LWzSEAu5YyQNZeWo7D0RWiCCKDiMisEEXRInsFMHxdNmW-bOX3AFrHAXWzA1XQAKEhoMKhNfapryA80hPA=w525-h409-no?authuser=0",
 	answerimage : "https://media1.giphy.com/media/1zjQiLGfgb10nc7Wou/giphy.gif", answer : "Theresa May",  answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEUbjBmQlcJM1svGo-pVpThtSEy22AQBsKNnUP3VNhB-CyevlffVD3CI44CQOO9RUE_KL3cjuROW2qBiy6ZleZIa36bWFHI00jp5dgd9k5YdX17Ug6dpU5cVKi3Y87tEBqiO7BS2l6tgYStJUS_b1vqTgg=w550-h257-no?authuser=0",
 	answerimage : "https://hips.hearstapps.com/digitalspyuk.cdnds.net/16/37/1473763469-gordon-brown-smile.gif", answer : "Gordon Brown",  answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEUwvVEu6Kj2a14_s_gmQO5PQkhKaZforRb7ZZZvWLYW9Bvl6nFqb9xcl8vUdiFzuPELr0nATbGp80XTm_-iFEjNjPfKH5PrvA95NJrtjqM-HGCng3art4auZQjUstbJh_BWhKWoScaCPVeMMjrZAeeYaQ=w378-h219-no?authuser=0",
 	answerimage : "https://media3.giphy.com/media/Z0QJyoTI7FZ7UjfTNB/giphy.gif", answer : "Liz Truss",  answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEVBZds_narM-92Gz_RasL3y2F8rtPjzERQgYdFSNUDdR_wi-JpSut_7zBueTTlTyrp9nOnrUpcTU4b_gl0r947AlkD1F4kK6PKC9PZp12CYFfCbY3xbTCpKIz7VNKGn6pFSLB_7fcWpT7q6IN4kEUOkww=w260-h217-no?authuser=0",
 	answerimage : "https://c.tenor.com/JpHY-kr9GywAAAAC/tony-blair-1997.gif", answer : "Tony Blair",  answerSpeak : ""}) ;
 
 /*
