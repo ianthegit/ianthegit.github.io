@@ -2060,6 +2060,32 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	image : "https://lh3.googleusercontent.com/pw/AL9nZEVBZds_narM-92Gz_RasL3y2F8rtPjzERQgYdFSNUDdR_wi-JpSut_7zBueTTlTyrp9nOnrUpcTU4b_gl0r947AlkD1F4kK6PKC9PZp12CYFfCbY3xbTCpKIz7VNKGn6pFSLB_7fcWpT7q6IN4kEUOkww=w260-h217-no?authuser=0",
 	answerimage : "https://c.tenor.com/JpHY-kr9GywAAAAC/tony-blair-1997.gif", answer : "Tony Blair",  answerSpeak : ""}) ;
 
+
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of Dr Who",
+		tags : "2022-10-23,pictionary", straightToAnswers:true,
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://c.tenor.com/Bp8lPtyn3bgAAAAC/tardis-the-tardis.gif", answer : "Tardis", answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://media.tenor.com/vZlPkCvmas8AAAAC/dr-who-tom-baker.gif", answer : "Tom Baker",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://media.tenor.com/a8tStubbOXEAAAAC/daleks-exterminate.gif", answer : "Dalek",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://media3.giphy.com/media/d3yxg15kJppJilnW/giphy-downsized-large.gif", answer : "Time-Travel",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://reactiongifs.me/wp-content/uploads/2021/09/Do-The-Cyberman-Doctor-Who.gif", answer : "Cybermen",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://thumbs.gfycat.com/AgitatedOptimisticCrossbill-max-1mb.gif", answer : "Sonic Screwdriver",  answerSpeak : ""}) ;
+
 /*
  * 	image : "",
 	answerimage : "", answer : "Table"}) ;
