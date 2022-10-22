@@ -4051,11 +4051,11 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 
 
 quests[++questIndexBuilder] = { 
-		name : "Topicalish "+getAndIncrementCounterForType("Topicalish"),
+		name : "Who is that "+getAndIncrementCounterForType("whoIsThat"),
 		hoverover : "Kami Kwasi budget time",
 		splash : {splashType : splashTypePictureAndText , splashText : "In the week we said goodbye Angela, goofbye to Kwasi, and we thought Liz Truss was taking the Mickey/Mick/Michael - here's a quiz about Micks, Mikes, Michaels, Michelles...", 
 			splashImage : "https://24.media.tumblr.com/6be7c5929aeb7958530da9d2af430fe6/tumblr_mrl67trlaU1rd9jbko1_250.gif" },
-		tags : "2022-10-16,saturday,InnerWheel,surfers", 
+		tags : "2022-10-16,saturday,InnerWheel,surfers,names", 
 		questInfo: new Array() };
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
 	question : "<strong>The answer is a Mike, Mick, Michael, Michelle or Kate...</strong></BR></BR>Past, present, or future - he will always be Marty McFly  " ,
@@ -4130,6 +4130,85 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7sSbvrlond4wZJtmn7qhh1?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
 	answer : "Every breath you take, the Police</BR>99 Red Ballons, Nena</BR>Bette Davis Eyes, Kim Carnes</BR>Hungry Like The Wolf, Duran Duran</BR>She Drives Me Crazy, Fine Young Cannibals</BR>Stand By Me, Ben E King</BR>Holiday, Madonna</BR>Finally, CeCe Peniston</BR>Do You Really Want To Hurt Me, Culture Club</BR>Da Ya Think I'm Sexy, Rod Stewart", answerSpeak : "", question : ""}) ;
 
+
+
+quests[++questIndexBuilder] = { 
+		name : "Who is that "+getAndIncrementCounterForType("whoIsThat"),
+		hoverover : "Lizzy - bye - bye time",
+		splash : {splashType : splashTypePictureAndText , splashText : "In the week we said goodbye to Liz - here's a quiz about Davids...", 
+			splashImage : "https://c.tenor.com/5UQiYVLkXcUAAAAM/curtsey-header.gif" },
+		tags : "2022-10-23,saturday,InnerWheel,surfers,names", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
+	question : "<strong>The answer is probably a David, or about a David, or Kate...</strong></BR></BR>Which famous David is married to a Spice Girl  " ,
+	answer : "David Beckam", answerSpeak : "", answerimage : "https://media3.giphy.com/media/3osxYxxgS84XXK3Mpa/giphy.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
+	question : "<strong>The answer is probably a David, or about a David, or Kate...</strong></BR></BR>Which actor portrayed Ross Geller in Friends  " ,
+	answer : "David Schwimmer", answerSpeak : "", answerimage : "https://media.tenor.com/KpVGQQAJeYUAAAAC/friends-david-schwimmer.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "<strong>The answer is probably a David, or about a David, or Kate...</strong></BR></BR>In which Italian city can you find the Michelangelo statue of David  " ,
+	answer : "Florence", answerSpeak : "", answerimage : ""	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
+	question : "<strong>The answer is probably a David, or about a David, or Kate...</strong></BR></BR>who had a debut album called 'David Bowie'  " ,
+	answer : "David Bowie", answerSpeak : "", answerimage : "https://www.nme.com/wp-content/uploads/2016/09/2013bowieddavidBowie600g080313.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
+	question : "<strong>The answer is probably a David, or about a David, or Kate...</strong></BR></BR>Who presented the shows 'Our Planet' and 'The Green Planet'  " ,
+	answer : "David Attenborough", answerSpeak : "", answerimage : "https://i.gifer.com/4fIF.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
+	question : "<strong>The answer is probably a David, or about a David, or Kate...</strong></BR></BR>Who is nicknamed 'The Hoff'  " ,
+	answer : "David Hasselhoff", answerSpeak : "", answerimage : "https://i.pinimg.com/originals/5c/7f/da/5c7fda17fcbd71ce9a032f9478fb72a4.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "<strong>The answer is probably a David, or about a David, or Kate...</strong></BR></BR>Which country is David Suchet from  " ,
+	answer : "The UK", answerSpeak : "", answerimage : ""	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
+	question : "<strong>The answer is probably a David, or about a David, or Kate...</strong></BR></BR>Which actor portrayed Keith in The Partridge Family  " ,
+	answer : "David Cassidy", answerSpeak : "", answerimage : "https://thumbs.gfycat.com/AnguishedAgileHeifer-max-1mb.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
+	question : "<strong>The answer is probably a David, or about a David, or Kate...</strong></BR></BR>Who is the founder of the Foo Fighters  " ,
+	answer : "David Grohl", answerSpeak : "", answerimage : "http://www.reactiongifs.com/r/dgpt.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePictureAnswer, 	
+	question : "<strong>The answer is probably a David, or about a David, or Kate...</strong></BR></BR>Which rock band was David Lee Roth part of  " ,
+	answer : "Van Halen", answerSpeak : "", answerimage : "https://c.tenor.com/XVQ800RJAjgAAAAC/david-lee-roth-jump.gif"	});	
+
+
+quests[++questIndexBuilder] = { 
+		name : "Birthday "+getAndIncrementCounterForType("Birthdays"),
+		hoverover : "Who was born on October 22nd and 23rd",
+		tags : "2022-10-23,saturday,InnerWheel,surfers,birthdays", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 22nd 1962?" ,	answer : "Bob Odenkirk", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Bob_Odenkirk_by_Gage_Skidmore_2.jpg/220px-Bob_Odenkirk_by_Gage_Skidmore_2.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 22nd 1967?" ,	answer : "(Baroness) Oona King", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Oona_King_crop.jpg/220px-Oona_King_crop.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 22nd 1968?" ,	answer : "Shaggy", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Shaggy_%28The_Queen%27s_Birthday_Party%29_%28cropped%29_%28cropped%29.jpg/220px-Shaggy_%28The_Queen%27s_Birthday_Party%29_%28cropped%29_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 22nd 1952?" ,	answer : "Jeff Goldblum", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Jeff_Goldblum_by_Gage_Skidmore_3.jpg/220px-Jeff_Goldblum_by_Gage_Skidmore_3.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 22nd 1938?" ,	answer : "Christopher Lloyd", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/ChristopherLloyd2022.jpg/220px-ChristopherLloyd2022.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, also born October 22nd 1938?" ,	answer : "Derek Jacobi", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Derek_Jacobi_2013.jpg/220px-Derek_Jacobi_2013.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 23nd 1986?" ,	answer : "Emilia Clarke", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Emilia_Clarke_Dior_Rose_des_Vents.jpg/220px-Emilia_Clarke_Dior_Rose_des_Vents.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 23nd 1976?" ,	answer : "Cat Deeley", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Cat_Deeley_2011.jpg/220px-Cat_Deeley_2011.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 23nd 1944?" ,	answer : "Mike Harding", answerSpeak : "", image : "https://lastfm.freetls.fastly.net/i/u/300x300/f2eaf0640c8247edbb0005ef447bb710.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 23nd 1942?" ,	answer : "Anita Roddick", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/en/c/c4/Anita_Roddick.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 23nd 1940?" ,	answer : "Pele", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Pele_by_John_Mathew_Smith.jpg/220px-Pele_by_John_Mathew_Smith.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 23nd 1931?" ,	answer : "Diana Dors", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Portret_van_Diana_Dors%2C_Bestanddeelnr_921-7796_%28cropped%29.jpg/220px-Portret_van_Diana_Dors%2C_Bestanddeelnr_921-7796_%28cropped%29.jpg"	});	
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2022-10-23,InnerWheel,saturday",
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5EEJqISCOBo60JL15jv4jU?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Don't you want me, Human League</BR>Dancing with myself, Billy Idol</BR>The way you make me feel, Michael Jackson</BR>Heaven is a place on earth, Belinda Carlisle</BR>Back in black, AC/DC</BR>I only want to be with you, Dusty Springfield</BR>Riders on the storm, the Doors</BR>True, Spandau Ballet</BR>Brothers in arms, Dire Straits</BR>Take on Me, A-Ha", answerSpeak : "", question : ""}) ;
 
 
 
