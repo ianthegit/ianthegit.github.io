@@ -1706,9 +1706,9 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { //quests[11] = {
-		name : "Name the Ian's",
+		name : "Who is that "+getAndIncrementCounterForType("whoIsThat"),
 		hoverover : "Everyone loves Ians.  How many can you recognise",
-		tags : "gin,saturday,surfers",
+		tags : "gin,saturday,surfers,names",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
