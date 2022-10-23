@@ -2068,22 +2068,22 @@ quests[++questIndexBuilder] = { //
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEVN8Bgaidnp7gr78cAOiju85LP6KM_TU7lZKdPzF9AhPJoauVumRrFpH-Ggq05UY49SYWMT5SNBOGhyxFi0X9L0gs0XWTQKqbnfprOPWx5S67oakRZRkwjoYDoTleaPYeVsgTxcHgPyh4TnYezfobJjjA=w210-h255-no?authuser=0",
 	answerimage : "https://c.tenor.com/Bp8lPtyn3bgAAAAC/tardis-the-tardis.gif", answer : "Tardis", answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEXwi7xAAbG2Qk6Dy6EdsLbSyQkP7baXlmdVzEAegsuH4DMubuCE70KKtRZs83pKnC3e9Vp585e-KUZmXJej36IjBF672x8kc1J-1GQS3g4cKojpb40RZM06sCxuj9hfCFOyyuA83EPCuTWtkL-i43SoPw=w336-h242-no?authuser=0",
 	answerimage : "https://media.tenor.com/vZlPkCvmas8AAAAC/dr-who-tom-baker.gif", answer : "Tom Baker",  answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEV04khbDARZnQon4-MoS6zaaE-wxsehw0YeO1VS4P9Mxn4DDXPMhMOj2dNIlLUvky-Ze5yK86qlpIyvfiI-e5G91tC0Cz-Ds3nHK7z0DwVK4T3LWVM9o_U_UM-bAQjxR689y2ZwLJ6nUiP2Aj6WZyb8wQ=w226-h244-no?authuser=0",
 	answerimage : "https://media.tenor.com/a8tStubbOXEAAAAC/daleks-exterminate.gif", answer : "Dalek",  answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEXMiGPs8_5Sxp6AATfG5Kq8zj42CaV-_AYLOJEVLj4jJFmxCAyE3be6Dt11ghy5-HVrD8d4Gi0_swewFMnqJ94nyS4SHk7ZQk_amhXS09RZY2oAqwF4P_h662r5jPnIRSbDZdipByB3Z6sAs19SOKHraw=w980-h440-no?authuser=0",
 	answerimage : "https://media3.giphy.com/media/d3yxg15kJppJilnW/giphy-downsized-large.gif", answer : "Time-Travel",  answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEUmGQeSMkjFryOLglE2coPvd8grDVNlisHHGwLvyssTMzdWZS7WZCJiQ-dBNMjXrrYoCpkBkRHPWfaIxgtfD9K1OQyObkwpHEb6b3FSM6rbx6T4RwDZ-ytt84tQRBnRqeTSoz6099tClUmI3FlyP6_TPA=w260-h216-no?authuser=0",
 	answerimage : "https://reactiongifs.me/wp-content/uploads/2021/09/Do-The-Cyberman-Doctor-Who.gif", answer : "Cybermen",  answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEV7IGurnfFwIE74nIKCEX7QZ-VoRZDdsJbQObwqlOugJZACkYnQKxHHxye52s6htSsIojV1_kauxqAIStMu0zGK7RH_isMaaFUWlP9wVfhH9T0S2y3CLhv-b9Q7QA8BmTB154--y3AqNyUYwQOm3ykrFg=w630-h402-no?authuser=0",
 	answerimage : "https://thumbs.gfycat.com/AgitatedOptimisticCrossbill-max-1mb.gif", answer : "Sonic Screwdriver",  answerSpeak : ""}) ;
 
 /*
