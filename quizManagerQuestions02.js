@@ -4213,6 +4213,102 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { 
+		name : "Sweet ride "+getAndIncrementCounterForType("sweetRide"),
+		hoverover : "What movies are these cars from",
+		tags : "2022-10-30,saturday,InnerWheel,surfers,cars", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What movie/franchise/TV Show was this vehicle in?" ,	answer : "Ghostbusters", answerSpeak : "", image : "https://img.buzzfeed.com/store-an-image-prod-us-east-1/LGN2waw3q.png?downsize=625%3A*&output-format=auto&output-quality=auto"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What movie/franchise/TV Show was this vehicle in?" ,	answer : "Grease", answerSpeak : "", image : "https://img.buzzfeed.com/store-an-image-prod-us-east-1/0aqeL2mCN.png?downsize=625%3A*&output-format=auto&output-quality=auto"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What movie/franchise/TV Show was this vehicle in?" ,	answer : "Back to the Future", answerSpeak : "", image : "https://img.buzzfeed.com/store-an-image-prod-us-east-1/ZIp0_QQni.png?downsize=625%3A*&output-format=auto&output-quality=auto"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What movie/franchise/TV Show was this vehicle in?" ,	answer : "Chitty Chitty Bang Bang", answerSpeak : "", image : "https://img.buzzfeed.com/store-an-image-prod-us-east-1/DncWQYCqc.png?crop=2011%3A1766%3B689%2C352&downsize=625%3A*&output-format=auto&output-quality=auto"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What movie/franchise/TV Show was this vehicle in?" ,	answer : "James Bond", answerSpeak : "", image : "https://img.buzzfeed.com/store-an-image-prod-us-east-1/xAPlTboL6.png?downsize=625%3A*&output-format=auto&output-quality=auto"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What movie/franchise/TV Show was this vehicle in?" ,	answer : "Jurassic Park", answerSpeak : "", image : "https://img.buzzfeed.com/store-an-image-prod-us-east-1/ey41xkP9u.png?crop=3324%3A1511%3B0%2C894&downsize=625%3A*&output-format=auto&output-quality=auto"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What movie/franchise/TV Show was this vehicle in?" ,	answer : "Bullitt", answerSpeak : "", image : "https://hips.hearstapps.com/pop.h-cdn.co/assets/cm/15/05/54cad37060962_-_best-movie-cars-06-1011-xln-54997523.jpg?crop=1.00xw:0.815xh;0,0.134xh&resize=980:*"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What movie/franchise/TV Show was this vehicle in?" ,	answer : "The Blues Brothers", answerSpeak : "", image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/blues-brothers-1974-dodge-monaco-bluesmobile-1542036811.jpg?crop=1.00xw:0.611xh;0,0.389xh&resize=980:*"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What movie/franchise/TV Show was this vehicle in?" ,	answer : "Wayne's World", answerSpeak : "", image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/mirthmobile-1542038337.jpg?crop=1.00xw:0.866xh;0,0.134xh&resize=980:*"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What movie/franchise/TV Show was this vehicle in?" ,	answer : "National Lampoon", answerSpeak : "", image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/vacation-1-warner-brothers-1542039076.jpg?crop=1xw:1xh;center,top&resize=980:*"	});	
+
+quests[++questIndexBuilder] = { 
+		name : "Birthday "+getAndIncrementCounterForType("Birthdays"),
+		hoverover : "Who was born on October 29th and 30th",
+		tags : "2022-10-30,saturday,InnerWheel,surfers,birthdays", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 29th 1974?" ,	answer : "Michael Vaughan", answerSpeak : "", image : "https://cricketnlive.com/wp-content/uploads/2021/01/1688-1125-2.6015845.jpg.gallery.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 29th 1971?" ,	answer : "Winona Ryder", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Winona_Ryder_2010_TIFF.jpg/220px-Winona_Ryder_2010_TIFF.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this lady, born October 29th 1964?" ,	answer : "Yasmin Le Bon", answerSpeak : "", image : "https://media.vogue.co.uk/photos/5d5452f8086e2d0008676e23/master/pass/slebonylebon_v_13may10_pr_b.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 29th 1958?" ,	answer : "Stefan Dennis", answerSpeak : "", image : "https://www.thesun.co.uk/wp-content/uploads/2022/07/51e898c0-6510-49f0-bb5a-66fce27249a0.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 29th 1948?" ,	answer : "Kate Jackson", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Kate_Jackson_1976.JPG/220px-Kate_Jackson_1976.JPG"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 29th 1942?" ,	answer : "Bob Ross", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/en/thumb/7/70/Bob_at_Easel.jpg/220px-Bob_at_Easel.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 29th 1940?" ,	answer : "Jack Shepherd ", answerSpeak : "", image : "https://m.media-amazon.com/images/M/MV5BMTQyODc2NTMwM15BMl5BanBnXkFtZTcwOTM1NjkxOA@@._V1_.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 29th 1925?" ,	answer : "Robert Hardy", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/en/9/9e/Robert_Hardy_as_Cornelius_Fudge.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 30th 1981?" ,	answer : "Ivanka Trump", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Ivanka_Trump_official_portrait_%28cropped%29.jpg/220px-Ivanka_Trump_official_portrait_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 30th 1956?" ,	answer : "Juliet Stevenson", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Dustbin_Baby-_April_and_Marion_crop.jpg/220px-Dustbin_Baby-_April_and_Marion_crop.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born October 30th 1945?" ,	answer : "Henry Winkler", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Henry_Winkler_%2843968252532%29.jpg/220px-Henry_Winkler_%2843968252532%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this man, born Angelo Siciliano and known as a '97 pound weakling getting sand kicked in his face' better known as, born October 30th 1892?" ,	answer : "Charles Atlas", answerSpeak : "", image : "https://th-thumbnailer.cdn-si-edu.com/gdrBXGh7eOvDze_fCNPbTeXU4QU=/fit-in/1072x0/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/Charles-Atlas-1935-4.jpg"	});	
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2022-10-30,InnerWheel,saturday",
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5nkiO5bjZj5ISdNqzbpfLi?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Sweet Home Alabama, Lynyrd Skynyrd</BR>Blockbuster, The Sweet</BR>Something Else, Eddie Cochran</BR>Dock of the Bay, Otis Redding</BR>I heard it through the grapevie, Marvin Gaye</BR>No Woman No Cry, Bob Marley</BR>Sympathy for the Devil, The Rolling Stones</BR>Good Vibrations, The Beach Boys</BR>Take me home, country roads, John Denver</BR>Crazy little thing called love, Queen", answerSpeak : "", question : ""}) ;
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Sweet ride "+getAndIncrementCounterForType("sweetRide"),
+		hoverover : "What movies are these cars from",
+		tags : "2022-11-6,saturday,InnerWheel,surfers,cars", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What movie/franchise/TV Show was this vehicle in?" ,	answer : "Starsky and Hutch", answerSpeak : "", image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/starskyhutch-1542040957.jpg?crop=1xw:1xh;center,top&resize=768:*&keepGifs=1"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What movie/franchise/TV Show was this vehicle in?" ,	answer : "Dukes of Hazzard", answerSpeak : "", image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/screen-shot-2018-11-12-at-11-48-38-am-1542041345.png?crop=1xw:1xh;center,top&resize=768:*&keepGifs=1"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What movie/franchise/TV Show was this vehicle in?" ,	answer : "Herbie:  The Love Bug", answerSpeak : "", image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/herbs-1542041474.jpg?crop=1xw:1xh;center,top&resize=768:*&keepGifs=1"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What movie/franchise/TV Show were these vehicles in?" ,	answer : "The Italian Job", answerSpeak : "", image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/screen-shot-2018-11-12-at-11-54-42-am-1542041712.png?crop=1xw:1xh;center,top&resize=768:*&keepGifs=1"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What movie/franchise/TV Show was this vehicle in?" ,	answer : "Transformers", answerSpeak : "", image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2007-chevrolet-camaro-replica-3-1542041781.jpg?crop=1xw:1xh;center,top&resize=980:*"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What movie/franchise/TV Show was this vehicle in?" ,	answer : "Kill Bill", answerSpeak : "", image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/screen-shot-2018-11-12-at-11-44-21-am-1542041098.png?crop=1xw:1xh;center,top&resize=980:*"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What movie/franchise/TV Show was this vehicle in?" ,	answer : "The Graduate", answerSpeak : "", image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/screen-shot-2018-11-12-at-11-33-37-am-1542040464.png?crop=1xw:1xh;center,top&resize=980:*"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What movie/franchise/TV Show was this vehicle in?" ,	answer : "Thelma and Louise", answerSpeak : "", image : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/thelma-and-louise-1966-thunderbird-1542039435.jpg?crop=1xw:1xh;center,top&resize=980:*"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What movie/franchise/TV Show was this vehicle in?" ,	answer : "Mad Max", answerSpeak : "", image : "https://hips.hearstapps.com/pop.h-cdn.co/assets/17/09/1488485223-gigahorse.jpg?crop=1.00xw:0.821xh;0,0.179xh&resize=980:*"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What movie/franchise/TV Show was this vehicle in?" ,	answer : "The A-Team", answerSpeak : "", image : "https://i2.wp.com/www.careofcars.com/wp-content/uploads/2018/02/a-team-van-facts.jpg?fit=600%2C335"	});	
+
+
+
+quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
 		hoverover : "What sinks, what floats",
 		tags : "2022-XX-XX,saturday,InnerWheel,surfers", 
