@@ -2086,6 +2086,30 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	image : "https://lh3.googleusercontent.com/pw/AL9nZEV7IGurnfFwIE74nIKCEX7QZ-VoRZDdsJbQObwqlOugJZACkYnQKxHHxye52s6htSsIojV1_kauxqAIStMu0zGK7RH_isMaaFUWlP9wVfhH9T0S2y3CLhv-b9Q7QA8BmTB154--y3AqNyUYwQOm3ykrFg=w630-h402-no?authuser=0",
 	answerimage : "https://thumbs.gfycat.com/AgitatedOptimisticCrossbill-max-1mb.gif", answer : "Sonic Screwdriver",  answerSpeak : ""}) ;
 
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of live bands",
+		tags : "2022-10-30,pictionary", straightToAnswers:true,
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "", answer : "Drummer", answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "", answer : "Guitarist",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "", answer : "Singer",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "", answer : "Groupies",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "", answer : "Drink",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "", answer : "Drugs",  answerSpeak : ""}) ;
 /*
  * 	image : "",
 	answerimage : "", answer : "Table"}) ;
