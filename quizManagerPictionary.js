@@ -2093,22 +2093,22 @@ quests[++questIndexBuilder] = { //
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEWcbL212mBHIar1MxRJcH__nsjAuFnn5G3dBR2ROy2wrcnGKOSHh9JQEI5nKT9y3HCkd2AogQDvYJaOWnb6i54dkqXc_qhB82JkjH9XOsajsC3PoqKsZRGswNQblR7dzERy6xDy7M3DwVVqLQDDB7-d9A=w295-h237-no?authuser=0",
 	answerimage : "", answer : "Drummer", answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEWcdTFs3A7tBvbJvUJfVIMzcVapf4SD6XxPaWxWofw9lpbf1yrE0gU7UTiBTQxktgLosNt2ROt7oAf9-VAJje55MhJnphaecmlt_l3BM5gqZ-NjkWSuJSwAib6BhraUnmR_BO9L-j2hKVslUkWgXHo-JA=w215-h262-no?authuser=0",
 	answerimage : "", answer : "Guitarist",  answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEV8nInJjFihQS7uycf9k3UPX-F-iIx2ivXbcCvgcglEUQ4GzllaLbfsuxBiO17tFNELh7l8OUuNGbV91elju8Jby06wl4lSpffydBlMvQ427jlyJsLcHFuFi5ZOtQU7LPruMEzAgWFmWliO5Udl2z8d3Q=w143-h257-no?authuser=0",
 	answerimage : "", answer : "Singer",  answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEWcV4ApkQoGkMSOB2zQfVHhVFJO_SyISJAHp2TuzNT_mjYpjI24ys2zIoWECxBVMFyMiNOeXxaT2x6vofI_pVfuDaIlKkSsuBTkaR9BIJYWe3592-SYpnNg6yXigZsJeHaMKgMGK-R-6ZlE5Of98CV2vQ=w192-h249-no?authuser=0",
 	answerimage : "", answer : "Groupies",  answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEWP4m3d6L0JShKNr1EScJKTVac0z-h7hKl4JxoMjOpIdeWOPdeNgit1NdIQ0EF_lO_S99tflCbjWY31ip3zcs8-6-WTGyX6K28IHCNNNgc503zA57bKn7Gjz2B1KzFcpiVPVq3jko9fY5J5kRu1FwBMOg=w307-h243-no?authuser=0",
 	answerimage : "", answer : "Drink",  answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEVWir3G4OwA45miyFfjxsCYtYcwJRfYoTSdlCiMIn3K1jsMtsJG6PS2xUPtvlCVaxXXzmAPiOpSmz_RdpCi8Xs38JSzp3xVEmAHfXrVyd4edcOaPhf5KclTO7IiOMc7dpjySH2UgKQQiE11FItdjZXaXA=w370-h86-no?authuser=0",
 	answerimage : "", answer : "Drugs",  answerSpeak : ""}) ;
 /*
  * 	image : "",
