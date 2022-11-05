@@ -4307,6 +4307,44 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	question : "What movie/franchise/TV Show was this vehicle in?" ,	answer : "The A-Team", answerSpeak : "", image : "https://i2.wp.com/www.careofcars.com/wp-content/uploads/2018/02/a-team-van-facts.jpg?fit=600%2C335"	});	
 
 
+quests[++questIndexBuilder] = { 
+		name : "Birthday "+getAndIncrementCounterForType("Birthdays"),
+		hoverover : "Who was born on November 5th and 6th",
+		tags : "2022-11-6,saturday,InnerWheel,surfers,birthdays", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born November 5th 1977?" ,	answer : "Richard Wright", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Richard_Wright_%28Ipswich_goalkeeper%29.jpg/220px-Richard_Wright_%28Ipswich_goalkeeper%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born November 5th 1960?" ,	answer : "Tilda Swinton", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Tilda_Swinton_Viennale_2018.jpg/220px-Tilda_Swinton_Viennale_2018.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born November 5th 1959?" ,	answer : "Bryan Adams", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/20130710-ByanAdamsLucca-0019_%289273168286%29.jpg/220px-20130710-ByanAdamsLucca-0019_%289273168286%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born November 5th 1955?" ,	answer : "Kris Jenner", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Kris_Jenner_shot_by_Jim_Jordan_at_White_Cross_Studios_%28cropped%29.jpg/220px-Kris_Jenner_shot_by_Jim_Jordan_at_White_Cross_Studios_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born November 5th 1947?" ,	answer : "Peter Noone", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Peter_Noone.jpg/220px-Peter_Noone.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born November 5th 1941" ,	answer : "Art Garfunkel", answerSpeak : "", image : "https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTE1ODA0OTcxOTI2OTgwMTA5/art-garfunkel-17191580-1-402.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born November 5th 1935" ,	answer : "Lester Piggot", answerSpeak : "", image : "https://www.rp-assets.com/images/news/2022/05/29/110361-medium.jpeg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born November 6th 1988" ,	answer : "Conchita Wurst (Thomas Neuwirth)", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Conchita_Amadeus_Awards_2017_d.jpg/220px-Conchita_Amadeus_Awards_2017_d.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born November 6th 1988?" ,	answer : "Emma Stone", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Emma_Stone_at_Maniac_UK_premiere_%28cropped%29.jpg/220px-Emma_Stone_at_Maniac_UK_premiere_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this lady (pictured with someone famous for his moustache), born November 6th 1946?" ,	answer : "Sally Field", answerSpeak : "", image : "https://hips.hearstapps.com/hmg-prod/images/sally-field-burt-reynolds-relationship-1576018952.jpg?resize=480:*"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born November 6th 1926?" ,	answer : "Frank Carson", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Frank_Carson_copyright_BarryCheung.jpg/220px-Frank_Carson_copyright_BarryCheung.jpg"	});	
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2022-11-6,InnerWheel,saturday",
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2lNpvi5kt5IBnNTH3oN3uJ?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Do Ya think I'm sexy, Rod Stewart</BR>We built this city, Starship</BR>Kung Fu Fighting, Carl Douglas</BR>Hotel California, Eagles</BR>Wonderwall, Oasis</BR>We will rock you, Queen</BR>Don't stop me now, Queen</BR>Fat Bottom Girls, Queen</BR>Blitzkrieg Bop, The Ramones</BR>Please release me, Engelbert Humperdinck", answerSpeak : "", question : ""}) ;
+
 
 quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
