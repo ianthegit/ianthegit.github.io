@@ -2110,6 +2110,35 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AL9nZEVWir3G4OwA45miyFfjxsCYtYcwJRfYoTSdlCiMIn3K1jsMtsJG6PS2xUPtvlCVaxXXzmAPiOpSmz_RdpCi8Xs38JSzp3xVEmAHfXrVyd4edcOaPhf5KclTO7IiOMc7dpjySH2UgKQQiE11FItdjZXaXA=w370-h86-no?authuser=0",
 	answerimage : "", answer : "Drugs",  answerSpeak : ""}) ;
+
+
+
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of fire",
+		tags : "2022-11-6,pictionary", straightToAnswers:true,
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEXxa0T8_2HYpZhKvAstCer1npXUZ6ha7gewRwK1P0nKq92OxOM0JcP-35MnY5DhO1IGIIM9MwOVrbQnon8G09toB0moBkIyDOz0Q-N53U99XZ0cbA-S8dGNri5i1pKkU9LAkRZUz6OtQEccLU1iL7hh_A=w437-h408-no?authuser=0",
+	answerimage : "", answer : "Firework", answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEUwocp-Pz5ESOHVcL4JLlvn-DIB0YPAG_ibY9uhv75Lifhj-jIu0oYggkQompiBk_q1hVxdHXBJ61phfkywYMOtrq-G4N7kjXh4qSiO0GYk9MwDZGl--1YuRBOL14no-gBtks6jGEo-fEMdaBGDQQwb3w=w763-h391-no?authuser=0",
+	answerimage : "", answer : "Fire Engine",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEXSqRcjTRIhTFyZel418evckV1mKveSC_E52IyrLEzS4f3DOUt9mafe57Ia1HkDttblJskB4LkhTyKffBySinpvcEAvBez2HeCzLA3dDz4gJf_8xe1bDyO0vs88-6jDELbXQPK-P2EQwvyaGFFfyyMxZA=w530-h331-no?authuser=0",
+	answerimage : "", answer : "Fireman",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEU-STI3FulNBvmnTDudf0pjAm5UWaN3xrhhYkl2IrjnTtX0s4oG-dF3YXxbmDZ77uYKdC1iUA6QyhZ3PhMiyKqAUrZMwiuM7EeMOUM4K4V6VZmYllS17A8sZ2XJiGn_HSRleTihpd5Od3QiGyMeXi7_Pw=w457-h479-no?authuser=0",
+	answerimage : "", answer : "Firefly",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEWWhAkUF27ELuwJAo3WEm1gZNcJ2J4y7s2xNnj5I6e30fwOIQIO8sIWE9InSybj_QAQm7L0T51Tx0AMPcmGf_OIMr8ZlN5SKnAWbBfpiDNoHMDH4gnPVPN8NzRBDkN0csSzII3M1g4sA1cLmsIBJFeIng=w315-h283-no?authuser=0",
+	answerimage : "", answer : "Fire Hydrant",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEWMsEbEDrF5RyluOdLzfG0mjcy28WI6IP4hETriMAWRCXoU3J2vxKC-r1OrC4T6WCG20UOum1s-MWlySlJnNAoF-l0MIfBBJzgEYiHNlq36Q_k467NDJ1YHr5zw2QVDUidXixeRNKecw7On7qY5Ns4SVQ=w289-h259-no?authuser=0",
+	answerimage : "", answer : "Bonfire",  answerSpeak : ""}) ;
+
+
 /*
  * 	image : "",
 	answerimage : "", answer : "Table"}) ;
