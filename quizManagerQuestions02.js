@@ -4346,6 +4346,73 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : "Do Ya think I'm sexy, Rod Stewart</BR>We built this city, Starship</BR>Kung Fu Fighting, Carl Douglas</BR>Hotel California, Eagles</BR>Wonderwall, Oasis</BR>We will rock you, Queen</BR>Don't stop me now, Queen</BR>Fat Bottom Girls, Queen</BR>Blitzkrieg Bop, The Ramones</BR>Please release me, Engelbert Humperdinck", answerSpeak : "", question : ""}) ;
 
 
+
+quests[++questIndexBuilder] = { 
+		name : "Sweet ride "+getAndIncrementCounterForType("sweetRide"),
+		hoverover : "What movies are these modes of transport from",
+		tags : "2022-11-13,saturday,InnerWheel,surfers,cars", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What movie/franchise/TV Show was this vehicle in?" ,	answer : "James Bond", answerSpeak : "", image : "https://carwow-uk-wp-3.imgix.net/lotus-esprit-submarine-rear-1-e1644515455994.jpg?auto=format&cs=tinysrgb&fit=clip&ixlib=rb-1.1.0&q=60&w=1366"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What movie/franchise/TV Show was this vehicle in?" ,	answer : "James Bond", answerSpeak : "", image : "https://carwow-uk-wp-0.imgix.net/Aston_Martin_DB5_James_Bond_photo1-scaled-e1644516362519.jpeg?auto=format&cs=tinysrgb&fit=clip&ixlib=rb-1.1.0&q=60&w=1366"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What movie/franchise/TV Show was this vehicle in?" ,	answer : "Speed", answerSpeak : "", image : "http://res.cloudinary.com/ybmedia/image/upload/c_crop,h_688,w_1226,x_0,y_109/c_fill,f_auto,h_900,q_auto,w_1600/v1/m/5/6/56a35e3f81ff2f02c96a0309b1f52c49e6b1ec96/25-iconic-film-tv-vehicles.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What movie/franchise/TV Show was this vehicle in?" ,	answer : "Star Trek", answerSpeak : "", image : "http://res.cloudinary.com/ybmedia/image/upload/c_crop,h_1080,w_1920,x_0,y_0/c_scale,f_auto,q_auto,w_700/v1/m/4/8/4801a5dcdbffbf1a417cb985a7b81e0de598bd9c/uss-enterprise-star-trek-1966-1969.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What movie/franchise/TV Show was this vehicle in?" ,	answer : "Scooby Doo", answerSpeak : "", image : "http://res.cloudinary.com/ybmedia/image/upload/c_crop,h_528,w_720,x_0,y_0/c_scale,f_auto,q_auto,w_700/v1/m/b/5/b5c8b603785c2e45ef6c8d186d38ef7691df532b/mystery-machine-scooby-doo-1969.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What movie/franchise/TV Show was this vehicle in?" ,	answer : "Star Wars", answerSpeak : "", image : "http://res.cloudinary.com/ybmedia/image/upload/c_crop,h_850,w_2000,x_0,y_0/c_scale,f_auto,q_auto,w_700/v1/m/3/d/3dae9a7d20eda3c07aeedef4d849417dfe4d7823/millennium-falcon-star-wars-1977.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What movie/franchise/TV Show was this vehicle in?" ,	answer : "Magnum P.I.", answerSpeak : "", image : "https://media.distractify.com/brand-img/EJGEiXea5/1440x944/how-did-original-magnum-pi-end-2-1614985789060.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What movie/franchise/TV Show was this vehicle in?" ,	answer : "Knight Rider", answerSpeak : "", image : "http://res.cloudinary.com/ybmedia/image/upload/c_crop,h_775,w_1066,x_0,y_0/c_scale,f_auto,q_auto,w_700/v1/m/7/c/7c7591db26455ba408eb80555af5c7326111b536/kitt-knight-rider-1982-1986.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What movie/franchise/TV Show was this vehicle in?" ,	answer : "Christine", answerSpeak : "", image : "http://res.cloudinary.com/ybmedia/image/upload/c_crop,h_720,w_1280,x_0,y_0/c_scale,f_auto,q_auto,w_700/v1/m/2/c/2ce08afecaccfc297b90f53caa7df68bc36ec2f5/christine-christine-1983.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What movie/franchise/TV Show was this vehicle in?" ,	answer : "Aladdin", answerSpeak : "", image : "https://i.etsystatic.com/36437972/r/il/cdbdaf/4007669806/il_794xN.4007669806_hinz.jpg"	});	
+
+quests[++questIndexBuilder] = { 
+		name : "Birthday "+getAndIncrementCounterForType("Birthdays"),
+		hoverover : "Who was born on November 12th and 13th",
+		tags : "2022-11-13,saturday,InnerWheel,surfers,birthdays", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born November 12th 1962?" ,	answer : "Mariella Frostrup", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Mariella_Frostrup_2016_%28cropped%29.jpg/220px-Mariella_Frostrup_2016_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born November 12th 1943?" ,	answer : "Errol Brown", answerSpeak : "", image : "https://hips.hearstapps.com/digitalspyuk.cdnds.net/15/19/music-errol-brown.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born November 12th 1956?" ,	answer : "(Princess) Grace Kelly", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Grace_Kelly_MGM_photo.jpg/220px-Grace_Kelly_MGM_photo.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born November 12th 1982?" ,	answer : "Anne Hathaway", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Anne_Hathaway_for_AHC.png/220px-Anne_Hathaway_for_AHC.png"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born November 12th 1980?" ,	answer : "Ryan Gosling", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Ryan_Gosling_in_2018.jpg/220px-Ryan_Gosling_in_2018.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born November 13th 2002?" ,	answer : "Emma Raducanu", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Emma_Raducanu_2021_Transylvania_Open.jpg/220px-Emma_Raducanu_2021_Transylvania_Open.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born November 13th 1986?" ,	answer : "Kevin Bridges", answerSpeak : "", image : "https://www.thescottishsun.co.uk/wp-content/uploads/sites/2/2018/12/NINTCHDBPICT000249595718-e1543685580944.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born November 13th 1969?" ,	answer : "Gerard Butler", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Gerard_Butler_%2829681162176%29.jpg/220px-Gerard_Butler_%2829681162176%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born November 13th 1955?" ,	answer : "Whoopi Goldberg", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Whoopi_Goldberg_%282011%29.jpg/220px-Whoopi_Goldberg_%282011%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born November 13th 1954?" ,	answer : "Chris Noth", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/ChrisNoth_%28cropped%29.jpg/220px-ChrisNoth_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who is this, born November 13th 1952?" ,	answer : "Art Malik", answerSpeak : "", image : "https://bifa.imgix.net/web/2018/10/grptgmjqfh.jpg?auto=compress%2Cformat&fit=scale&h=2410&ixlib=php-3.3.1&w=1600&wpsize=xl"	});	
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2022-11-13,InnerWheel,saturday",
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/19T2OBMvTBjFMsqKt9ScET?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Rat in my kitchen, UB40</BR>Material Girl, Madonna</BR>Don't you (Forget about me), Simple Minds</BR>You're so vain, Carly Simon</BR>Have you ever seen the rain,  Creedence Clearwater Revival (Bonnie Tyler)</BR>Smoke on the water, Deep Purple</BR>Billie Jean, Michael Jackson</BR>Don't Stop, Fleetwood Mac</BR>Here comes the Sun, the Beatles</BR>Fly me to the moon, Johnny Mathis, Frank Sinatra & Count Basie, Peggy Lee", answerSpeak : "", question : ""}) ;
+
+
+
 quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
 		hoverover : "What sinks, what floats",
