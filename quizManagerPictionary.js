@@ -2139,6 +2139,31 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 	answerimage : "", answer : "Bonfire",  answerSpeak : ""}) ;
 
 
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of games",
+		tags : "2022-11-13,pictionary", straightToAnswers:true,
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://media.tenor.com/8ln_BAkM6_8AAAAM/ma-vie-cards.gif", answer : "Card games", answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://i.gifer.com/rC0.gif", answer : "Scrabble",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://media.tenor.com/PtzLxIMLcmgAAAAM/sabotage-push.gif", answer : "Twister",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://images.chesscomfiles.com/uploads/v1/article/15122.b5b28e85.300x169o.8be4cacd7c39.gif", answer : "Chess/Dominos",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://media0.giphy.com/media/7CaD8QiTqveXS/giphy.gif", answer : "Darts",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://c.tenor.com/MKeG6g-0IzUAAAAC/halloween-funny-bobbing-for-apples.gif", answer : "Apple Bobbing",  answerSpeak : ""}) ;
+ 
 /*
  * 	image : "",
 	answerimage : "", answer : "Table"}) ;
