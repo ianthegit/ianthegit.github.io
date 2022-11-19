@@ -3967,7 +3967,7 @@ quests[++questIndexBuilder] = {
 		questInfo: new Array() };
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7LOH46zyjcnc2aClUoGRPQ?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
-	answer : "Say Say Say, Paul McCartney</BR>Come Together, The Beatles</BR>Just the way you are, Billy Joel, Barry White, Frank Sinatra</BR>With or Without you, U2</BR>Everywhere, Fleetwood Mac</BR>Run to You, Bryan Adams</BR>The Lady in Red, Chris de Burgh</BR>Personal Jesus, Depeche Mode</BR>Moves liek Jagger, Maroon 5</BR>All the Small Things, Blink 182", answerSpeak : "", question : ""}) ;
+	answer : "Say Say Say, Paul McCartney</BR>Come Together, The Beatles</BR>Just the way you are, Billy Joel, Barry White, Frank Sinatra</BR>With or Without you, U2</BR>Everywhere, Fleetwood Mac</BR>Run to You, Bryan Adams</BR>The Lady in Red, Chris de Burgh</BR>Personal Jesus, Depeche Mode</BR>Moves like Jagger, Maroon 5</BR>All the Small Things, Blink 182", answerSpeak : "", question : ""}) ;
 
 
 quests[++questIndexBuilder] = { 
