@@ -376,6 +376,26 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 	question : "Who is this, born November 13th 1952?" ,	answer : "Art Malik", answerSpeak : "", image : "https://bifa.imgix.net/web/2018/10/grptgmjqfh.jpg?auto=compress%2Cformat&fit=scale&h=2410&ixlib=php-3.3.1&w=1600&wpsize=xl"	});	
 
 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-19",
+	question : "Who is this, born November 19th 1983?" ,	answer : "Adam Driver", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Star_Wars-_The_Last_Jedi_Japan_Premiere_Red_Carpet-_Adam_Driver_%2827163437599%29_%28cropped%29.jpg/220px-Star_Wars-_The_Last_Jedi_Japan_Premiere_Red_Carpet-_Adam_Driver_%2827163437599%29_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-19",
+	question : "Who is this, born November 19th 1965?" ,	answer : "Douglas Henshall", answerSpeak : "", image : "https://images.immediate.co.uk/production/volatile/sites/3/2022/07/Shetland-Douglas-Henshaw-85453ce.jpg?quality=90&resize=980,654"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-19",
+	question : "Who is this, born November 19th 1962?" ,	answer : "Jodie Foster", answerSpeak : "", image : "https://cdn.britannica.com/24/146024-050-A3CCE43F/Jodie-Foster-Anthony-Hopkins-The-Silence-of.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-19",
+	question : "Who is this, born November 19th 1961?" ,	answer : "Meg Ryan", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Meg_Ryan_2009_portrait.jpg/220px-Meg_Ryan_2009_portrait.jpg"	});	
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-20",
+	question : "Who is this, born November 20th 1942?" ,	answer : "Joe Biden", answerSpeak : "", image : "https://assets.teenvogue.com/photos/59025c2ffaa2292151d560d9/16:9/w_2560%2Cc_limit/facebook.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-20",
+	question : "Who is this, born November 20th 1981?" ,	answer : "Kimberly Walsh", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Kimberley_Walsh.jpg/220px-Kimberley_Walsh.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-20",
+	question : "Who is this, born November 20th 1959?" ,	answer : "Sean Young", answerSpeak : "", image : "https://gamespot.com/a/uploads/original/171/1712892/3299663-rachael-blade-runner.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-20",
+	question : "Who is this, born November 20th 1956?" ,	answer : "Bo Derek", answerSpeak : "", image : "https://cdn.images.express.co.uk/img/dynamic/79/750x445/1331768.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-20",
+	question : "Who is this, born November 20th 1995?" ,	answer : "Charlie", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AL9nZEW40hsaqiVew8KfoCT5GLvxoQsJoLA537QZLVos6Wl6BCv8mTQTmJhOSHCIbuVDeCFj22-XVPrRY_-NmPzGmJNqXtajVE35__norBBlitc5lgi1aY_S7AT33Q3Dvl8BqFKn9WSr5QogYJkiAyZjSysNlA=w1307-h871-no?authuser=0"	});	
+
 /*
 
 
