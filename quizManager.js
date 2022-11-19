@@ -45,9 +45,13 @@ showAll = 'ShowAll';
 defaultTag = 'Freebie';
 showTags = false;
 today = new Date();
+yesterday = new Date();
+yesterday.setDate(yesterday.getDate()-1);
 month = today.getMonth() + 1
 todayString = "" + today.getDate() + "/" + month + "/" + today.getFullYear();
 todayString = "" + today.getFullYear() + "-" + month + "-" + today.getDate();
+todayNoYear="" + month + "-" + today.getDate();
+yesterdayNoYear="" + month + "-" + today.getDate();
 passwordEntered=false;
 password='letmein';
 showTagsURI='showTags=1';
@@ -188,9 +192,13 @@ function addQuest(quest, questData) {
 			questData.question = tempArray.length + 1 + ') ' + questData.question;
 		}
 	}
+	if (quest.tags.includes('birthdays') && (questData.hasOwnProperty("birthday"))) {
+		if (questData.birthday != todayNoYear && questData.birthday != yesterdayNoYear) {
+			return;
+		}
+	}
 	tempArray.push(questData);
 }
-
 
 currQuest = quests[0];
 var questIndexBuilder = 0;
