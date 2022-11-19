@@ -2164,6 +2164,34 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	image : "https://lh3.googleusercontent.com/pw/AL9nZEUa50GFJXjZ3yIqomIwHnOJmy6A-HLoGkeE6swU3bkgb_jyJUUBmo1OPUX1WaTtjGxEIKWh4iABAKqOT7e3n4ssSvAzDWycOzg0n5axzXCEcwQUo4jCi1tVxh4V76x-PJOoLJ_lIamllByQfBiuTyl3Dw=w684-h505-no?authuser=0",
 	answerimage : "https://c.tenor.com/MKeG6g-0IzUAAAAC/halloween-funny-bobbing-for-apples.gif", answer : "Apple Bobbing",  answerSpeak : ""}) ;
  
+
+
+
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of Charlie and his likes and dislikes",
+		tags : "2022-11-20,pictionary", straightToAnswers:true,
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://lh3.googleusercontent.com/pw/AL9nZEW1r-OhfGR1rzcJy8tea46DB5i_1Q4YRBQZhhEwcvw0NgVzIrQpMIoZdvAqpgWJPDs7zbsebI0MsBH-MTQTplSxjs3l46dzsXeKBFM3D3liBr3BujUNObuG_INNHswB-iVgT1ibEhpofL9Om-OXqz4gyA=w1307-h871-no?authuser=0", answer : "Drums", answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://media.tenor.com/5UQiYVLkXcUAAAAC/curtsey-header.gif", answer : "Liz Truss",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://i.imgur.com/XMelwjx.gif", answer : "The Witcher/Henry Cavill",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://media1.giphy.com/media/8d5PglNvkun10hIX49/giphy.gif", answer : "Milk",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://lh3.googleusercontent.com/pw/AL9nZEULyZACjels-5UymXaMKKMvXrvdip6U3-eeRJHPYAXoSUQRp6333PFLieBlDV1e-ZhfIRRytZRKv380Fo6ViKchmuLe6HXSaxEGn37_NNp05bpXPLw9wPrIU7jK6K59EsH0FFEV8uSTR0LpwjvRyXGwyA=w490-h871-no?authuser=0", answer : "Swords",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://3.bp.blogspot.com/-XlbB2k-xBsY/UBe00Sdsk-I/AAAAAAAAJ6k/W9KXLGHB28M/s1600/%253D%253Futf-8%253FB%253FSU1HLTIwMTIwNzMxLTAwMTgxLmpwZw%253D%253D%253F%253D-797471", answer : "Sun",  answerSpeak : ""}) ;
+
 /*
  * 	image : "",
 	answerimage : "", answer : "Table"}) ;
