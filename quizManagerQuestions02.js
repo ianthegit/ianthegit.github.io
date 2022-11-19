@@ -3934,6 +3934,43 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { 
+		name : "General Knowledge ",
+		hoverover : "General knowledge",
+		tags : "2022-11-20,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which general routed the Romans at the battle of Cannae?" ,	answer : "Hannibal", answerSpeak : "", image : "https://www.customwalks.com/images/uploads/contents/83/hannibal_elephants__large.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Name 3 consecutive days without using the day names" ,	answer : "Yesterday, today, tomorrow. ", answerSpeak : "", image : "https://cdn.vertex42.com/calendars/images/2022-calendar-with-holidays.png"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText, 	
+	question : "What type sea animal is functional immortal?" + Table4ColumnStart + "Jellyfish</td><td>Lobsters</td><td>Seahorses</td><td>Shark" + Table4ColumnEnd,	answer : "Jellyfish", answerSpeak : "", image : ""	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who was Prime Minister when the previous World Cup started in 2018" ,	answer : "Theresa May", answerSpeak : "", image : "https://ichef.bbci.co.uk/onesport/cps/624/cpsprodpb/11F43/production/_101593537_fddfdfdfdfdfdf.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What kind of charge do electrons carry?" ,	answer : "Negative", answerSpeak : "", image : "https://media0.giphy.com/media/9oHZQ2gEez8ti/giphy.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "What is Newton's 3rd Law of Motion" ,	answer : "For every action (force) in nature there is an <strong>equal and opposite</strong> reaction", answerSpeak : "", image : "https://media.tenor.com/j9kKNhA4ow8AAAAM/isaac-newton-newton-xd.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which English king won at Agincourt?" ,	answer : "Henry V", answerSpeak : "", image : "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2015/9/26/1443269211109/807123f6-5f3a-4a42-9f1a-4a5acd2e9c4f-620x372.jpeg?width=620&quality=85&dpr=1&s=none"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "The Longbow was credited as being the decisive feature of the English Agincourt victory.  What draw weight did the longbows have?"+ Table4ColumnStart + "10 Stone</td><td>8 Stone</td><td>6 Stone</td><td>4 Stone" + Table4ColumnEnd ,	answer : "10 Stone", answerSpeak : "", image : "https://www.historic-uk.com/wp-content/uploads/2017/04/the-history-of-the-english-longbow.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who was the second man to walk on the moon?" ,	answer : "Buzz Aldrin", answerSpeak : "", image : "https://i.natgeofe.com/n/52663319-3e82-480c-9842-1b68dcd48133/06buzzaldrin_16x9.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Which is the only non-English club to win the men's FA Cup?" ,	answer : "Cardiff City (1927)", answerSpeak : "", image : "https://media.tenor.com/u6jadVNGjPcAAAAd/harry-enfield-paul-whitehouse.gif"	});	
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2022-11-20,InnerWheel,saturday",
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7LOH46zyjcnc2aClUoGRPQ?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Say Say Say, Paul McCartney</BR>Come Together, The Beatles</BR>Just the way you are, Billy Joel, Barry White, Frank Sinatra</BR>With or Without you, U2</BR>Everywhere, Fleetwood Mac</BR>Run to You, Bryan Adams</BR>The Lady in Red, Chris de Burgh</BR>Personal Jesus, Depeche Mode</BR>Moves liek Jagger, Maroon 5</BR>All the Small Things, Blink 182", answerSpeak : "", question : ""}) ;
+
+
+quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
 		hoverover : "What sinks, what floats",
 		tags : "2022-x-xx,saturday,InnerWheel,surfers", 
