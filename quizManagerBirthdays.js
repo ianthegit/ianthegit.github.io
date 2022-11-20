@@ -394,7 +394,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-20",
 	question : "Who is this, born November 20th 1956?" ,	answer : "Bo Derek", answerSpeak : "", image : "https://cdn.images.express.co.uk/img/dynamic/79/750x445/1331768.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-20",
-	question : "Who is this, born November 20th 1995?" ,	answer : "Charlie", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AL9nZEW40hsaqiVew8KfoCT5GLvxoQsJoLA537QZLVos6Wl6BCv8mTQTmJhOSHCIbuVDeCFj22-XVPrRY_-NmPzGmJNqXtajVE35__norBBlitc5lgi1aY_S7AT33Q3Dvl8BqFKn9WSr5QogYJkiAyZjSysNlA=w1307-h871-no?authuser=0"	});	
+	question : "Who is this, born November 20th 1995?" ,	answer : "Lord Charles Hopgood", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AL9nZEW40hsaqiVew8KfoCT5GLvxoQsJoLA537QZLVos6Wl6BCv8mTQTmJhOSHCIbuVDeCFj22-XVPrRY_-NmPzGmJNqXtajVE35__norBBlitc5lgi1aY_S7AT33Q3Dvl8BqFKn9WSr5QogYJkiAyZjSysNlA=w1307-h871-no?authuser=0"	});	
 
 /*
 
