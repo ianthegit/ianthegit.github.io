@@ -48,10 +48,11 @@ today = new Date();
 yesterday = new Date();
 yesterday.setDate(yesterday.getDate()-1);
 month = today.getMonth() + 1
+yesterdayMonth = yesterday.getMonth() + 1;
 todayString = "" + today.getDate() + "/" + month + "/" + today.getFullYear();
 todayString = "" + today.getFullYear() + "-" + month + "-" + today.getDate();
 todayNoYear="" + month + "-" + today.getDate();
-yesterdayNoYear="" + month + "-" + today.getDate();
+yesterdayNoYear="" + yesterdayMonth + "-" + yesterday.getDate();
 passwordEntered=false;
 password='letmein';
 showTagsURI='showTags=1';
