@@ -2174,22 +2174,22 @@ quests[++questIndexBuilder] = { //
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEWFgDbV9T5AhTemoolBn_XPX5xK8i6hh95IuvymreSMs61fzauu4a38QK5t_6pV20dYNB5gLsFGSSUjMurwmrA1NPODFtPMJ6NaNFd7cNoQETTdjeOaxgkbminsdUnK5oSu1zQILfDFNM_cGP4V1ccHAg=w548-h422-no?authuser=0",
 	answerimage : "https://lh3.googleusercontent.com/pw/AL9nZEW1r-OhfGR1rzcJy8tea46DB5i_1Q4YRBQZhhEwcvw0NgVzIrQpMIoZdvAqpgWJPDs7zbsebI0MsBH-MTQTplSxjs3l46dzsXeKBFM3D3liBr3BujUNObuG_INNHswB-iVgT1ibEhpofL9Om-OXqz4gyA=w1307-h871-no?authuser=0", answer : "Drums", answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEX9LYJLwpq4Y-ZvALG2nv1DJvLieBNkjNTdrx0bvbJ14bjnX-oM1Jjje6X4bzM03m11U9btjjcrLs1P3FLH8e_sDkNwZMQ_DjRRWQODssSY-wI6k0hASU_p5I_UDpgOu7QR12bIYRE_Pwyf3iTnlzcl_g=w451-h544-no?authuser=0",
 	answerimage : "https://media.tenor.com/5UQiYVLkXcUAAAAC/curtsey-header.gif", answer : "Liz Truss",  answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEVVmPDWr_CFCGMVexAqkHK0oUAK8aPLDcV2n-sUy8J6Y4AhH6zGK6zKljh2T3RW6Pz9UVCCdZ0rzylxhPiJ5DhjA5lKDgMGePZvzAbEr-u9wjl39gdigdMefWek3iS-Q6neBjTzggsaOz__JzdeWPwnqQ=w280-h332-no?authuser=0",
 	answerimage : "https://i.imgur.com/XMelwjx.gif", answer : "The Witcher/Henry Cavill",  answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEXeWBfKy21GR0NSL7u-JC56Tt1W7zFRO_3qK7oE8oyNuQFnO_P44M-kIVlODnBsk8EGr8-MQ-1W9WO5F_ER0Mquz69XNFpy7vAyTp9UVwuYETaPpDuiNJDOjwlzwrFnISjEoDBrCWJNNXV5Px-cK5m1OA=w875-h595-no?authuser=0",
 	answerimage : "https://media1.giphy.com/media/8d5PglNvkun10hIX49/giphy.gif", answer : "Milk",  answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEWakOQe_aChbftn9fJaDweO8d3McPMEPPmx7vuEKtmvvgJLnAgKQe1NOPhI4Ch1WYFAerm_piU_IKCH73adoq0f3A7vh7399JKiQwIhlTO1OnUdcTPsQo3OSXPG1ZNvLxjIvNqAaj6IuZDVDFP1O0m7Bg=w163-h369-no?authuser=0",
 	answerimage : "https://lh3.googleusercontent.com/pw/AL9nZEULyZACjels-5UymXaMKKMvXrvdip6U3-eeRJHPYAXoSUQRp6333PFLieBlDV1e-ZhfIRRytZRKv380Fo6ViKchmuLe6HXSaxEGn37_NNp05bpXPLw9wPrIU7jK6K59EsH0FFEV8uSTR0LpwjvRyXGwyA=w490-h871-no?authuser=0", answer : "Swords",  answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEVIb6CzHgyDNwuKShqzDbxIQxWBlTZPCX71hSnAVI-LNb5bqG11RHpkqpwxKd_k5Y97BbGY1IYcHtIQEZkRRtrtoUejNlDtaAeoUWhKddUsHqtNakA-2nJ7hqwDgv_ZB-lrCnkWmFKOf67nGeCSqzHYhQ=w458-h387-no?authuser=0",
 	answerimage : "https://3.bp.blogspot.com/-XlbB2k-xBsY/UBe00Sdsk-I/AAAAAAAAJ6k/W9KXLGHB28M/s1600/%253D%253Futf-8%253FB%253FSU1HLTIwMTIwNzMxLTAwMTgxLmpwZw%253D%253D%253F%253D-797471", answer : "Sun",  answerSpeak : ""}) ;
 
 /*
