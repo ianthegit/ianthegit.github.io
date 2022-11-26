@@ -3970,6 +3970,57 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : "Say Say Say, Paul McCartney</BR>Come Together, The Beatles</BR>Just the way you are, Billy Joel, Barry White, Frank Sinatra</BR>With or Without you, U2</BR>Everywhere, Fleetwood Mac</BR>Run to You, Bryan Adams</BR>The Lady in Red, Chris de Burgh</BR>Personal Jesus, Depeche Mode</BR>Moves like Jagger, Maroon 5</BR>All the Small Things, Blink 182", answerSpeak : "", question : ""}) ;
 
 
+
+quests[++questIndexBuilder] = { 
+		name : "Topicalish "+getAndIncrementCounterForType("Topicalish"),
+		hoverover : "Some topical stuff, some general knowledge",
+		tags : "2022-11-27,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "A recently rediscovered original illustration from The Wind in the Willows (not pictured) by artist EH Shepard is going up for auction. But who wrote The Wind in the Willows?  " + Table4ColumnStart + "A A Milne</td><td>Beatrix Potter</td><td>Kenneth Grahame</td><td>Kate Bush" + Table4ColumnEnd,
+	answer : "Kenneth Grahame", answerSpeak : "", image : "https://i.guim.co.uk/img/media/553d3de3ad86a79155c05b6077b3a1cad2c9a698/1208_782_2280_1368/master/2280.jpg?width=620&quality=85&auto=format&fit=max&s=94d2a17bcf65693d667771785ea2f8c1"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Aldi claims to have sold out already of some of the toy versions of which character that features in their festive TV adverts?  " + Table4ColumnStart + "Billy The Brussel</td><td>Penny The Pea</td><td>Kevin The Carrot</td><td>Persephone The Potato" + Table4ColumnEnd,
+	answer : "Kevin The Carrot", answerSpeak : "", image : "https://i.guim.co.uk/img/media/cdc406def047321f407b4e18a6b0ff9b905bf7cb/0_0_3500_2334/master/3500.jpg?width=620&quality=85&auto=format&fit=max&s=cca77ace291cf9e337316eb6ad2c6f3f"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : " Millie Gibson was revealed to be the new Doctor Who companion. What is the name of the character she will be playing opposite Ncuti Gatwa, starting in 2023?  " + Table4ColumnStart + "Ruby Sunday</td><td>Amber Friday</td><td>Pearl Tuesday</td><td>Sulfur Saturday" + Table4ColumnEnd,
+	answer : "Ruby Sunday", answerSpeak : "", image : "https://i.guim.co.uk/img/media/dd8294d90fc09f7b79b455af424c3879c9ba4dac/423_33_1526_916/master/1526.jpg?width=620&quality=85&auto=format&fit=max&s=1a2267e735b8ce0ee5220f996f390c82"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "A nun who became a singing sensation after winning Italy's version of The Voice has stunned TV viewers again after announcing that she has left her order and is now doing what?  " + Table4ColumnStart + "She has begun a university course in media studies in London</td><td>She has become a television presenter in Albania</td><td>She is working as a waitor in Spain</td><td>She is working as Kate Bush's assistant" + Table4ColumnEnd,
+	answer : "She is working as a waitor in Spain", answerSpeak : "", image : "https://i.guim.co.uk/img/media/2adf7661ff52c21134ba069f419fd729673e9de5/0_720_6989_4192/master/6989.jpg?width=620&quality=85&auto=format&fit=max&s=734090765b78a460df5d450160e72642"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Thursday was the anniversary of Charles Darwin (not pictured) publishing On the Origin of Species on 24 November. But which year?  " + Table4ColumnStart + "1799</td><td>1829</td><td>1859</td><td>1889" + Table4ColumnEnd,
+	answer : "1859", answerSpeak : "", image : "https://i.guim.co.uk/img/media/eb39298ddf2219c8777a59aa1e13a435de54add6/0_0_2200_1450/master/2200.jpg?width=620&quality=85&auto=format&fit=max&s=31bea66952cf1f7151b9de926d7bdbdb"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "In an electric plug in the UK the fuse is connected to which wire?  " + Table4ColumnStart + "Earth</td><td>Neutral</td><td>Live</td><td>I just use a rusty nail" + Table4ColumnEnd,
+	answer : "Live", answerSpeak : "", image : "https://www.brightsparkelectrician.co.uk/uploads/5%20amp%20Fuse%20in%20a%20Plug%20-%20Bright%20Spark.png"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "This week angler Andy Hackett caught a fish known as the Carrot, an elusive 30kg leather carp-koi hybrid released into a fishing lake 20 years ago. Where?  " + Table4ColumnStart + "France</td><td>Germany</td><td>Belgium</td><td>On the end of his rod & line" + Table4ColumnEnd,
+	answer : "France", answerSpeak : "", image : "https://ichef.bbci.co.uk/news/976/cpsprodpb/7FDD/production/_127733723_313922769_629866402258947_3561813142346377584_n.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "The new Pokemon games Scarlet and Violet are out. As ever there are three new starter Pokemon - a grass type, a water type and a fire type. Which one is the fire type?  " + Table4ColumnStart + "Sprigatito</td><td>Quaxly</td><td>Fuecoco</td><td>Kabushte" + Table4ColumnEnd,
+	answer : "Fuecoco", answerSpeak : "", image : "https://i.guim.co.uk/img/media/9354a22df60b4feb36ec7e4b6279fbaf0549e59b/60_0_1800_1080/master/1800.jpg?width=620&quality=85&auto=format&fit=max&s=7d94e80ed90042e41d4a69f96adeb895"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Who has had to cancel the rest of their UK tour after breaking their foot onstage at the O2 in London?  " + Table4ColumnStart + "Ricky Wilson</td><td>Florence Welch</td><td>Peter Kay</td><td>Kate Bush" + Table4ColumnEnd,
+	answer : "Florence Welch", answerSpeak : "", image : "https://i.guim.co.uk/img/media/47cf8b0ad807a8804bdf490e992c1e1a047f0f05/477_1777_6732_4039/master/6732.jpg?width=620&quality=85&auto=format&fit=max&s=920cf6588aab34488d314934f16f4d6d"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : "Qatar has had 12 years to get ready for the Fifa World Cup and has reportedly spent " + dollar + " 200bn on hosting it. How has it gone so far?  " + Table3ColumnStart + "They became the first ever World Cup hosts to lose their opening match</td><td>They drew their opening match</td><td>They did not become the first ever World Cup hosts to lose their opening match" + Table4ColumnEnd,
+	answer : "They became the first ever World Cup hosts to lose their opening match", answerSpeak : "", image : "https://i.guim.co.uk/img/media/9ff8b4325d946dea122edcf2d97b5074be20131c/608_99_1048_629/master/1048.jpg?width=620&quality=85&auto=format&fit=max&s=d2b0cee852a986c84abd5ffd3d317bce"	});	
+
+
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2022-11-27,InnerWheel,saturday",
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3xSw47V02SkeQ3mU1YHf4J?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "The winner takes it all</BR>Mama Mia</BR>Dancing Queen</BR>Waterloo</BR>I do, I do, I do</BR>Fernando</BR>Voulez Vous</BR>Take a chance on me</BR>Lay all your love on me</BR>Thank you for the music", answerSpeak : "", question : ""}) ;
+
+
 quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
 		hoverover : "What sinks, what floats",
