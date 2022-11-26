@@ -396,6 +396,32 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-20",
 	question : "Who is this, born November 20th 1995?" ,	answer : "Lord Charles Hopgood", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AL9nZEW40hsaqiVew8KfoCT5GLvxoQsJoLA537QZLVos6Wl6BCv8mTQTmJhOSHCIbuVDeCFj22-XVPrRY_-NmPzGmJNqXtajVE35__norBBlitc5lgi1aY_S7AT33Q3Dvl8BqFKn9WSr5QogYJkiAyZjSysNlA=w1307-h871-no?authuser=0"	});	
 
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-26",
+	question : "Who is this, born November 26th 1953?" ,	answer : "Hilary Benn", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Official_portrait_of_Rt_Hon_Hilary_Benn_MP_crop_2.jpg/220px-Official_portrait_of_Rt_Hon_Hilary_Benn_MP_crop_2.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-26",
+	question : "Who is this, born November 26th 1990?" ,	answer : "Rita Ora", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Rita_Ora_at_a_press_conference_in_London.jpg/220px-Rita_Ora_at_a_press_conference_in_London.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-26",
+	question : "Who is this, born November 26th 1939?" ,	answer : "Tina Turner (Anna Mae Bullock)", answerSpeak : "", image : "https://i.pinimg.com/originals/7b/a6/0d/7ba60ddaaebddcfe5b8e3d903892fa94.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-26",
+	question : "Who is this chap feeding his daughter a beef burger during the BSE crisis, born November 26th 1939?" ,	answer : "John Gummer (Lord Deben)", answerSpeak : "", image : "https://i2-prod.devonlive.com/incoming/article2122907.ece/ALTERNATES/s1200b/0_PA-1153166.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-26",
+	question : "Who is this cartoonist, born November 26th 1922?" ,	answer : "Charles M. Schulz", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Charles_Schulz_NYWTS.jpg/220px-Charles_Schulz_NYWTS.jpg"	});	
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-27",
+	question : "Who is this, born November 27th 1920?" ,	answer : "Buster Merryfield", answerSpeak : "Buster Merryfield", image : "https://upload.wikimedia.org/wikipedia/en/thumb/d/db/Buster_Merryfield.png/220px-Buster_Merryfield.png"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-27",
+	question : "Who is this, born November 27th 1925?" ,	answer : "Ernie Wise", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/en/thumb/7/7d/Ernie_Wise_1960.png/220px-Ernie_Wise_1960.png"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-27",
+	question : "Who is this, born November 27th 1940?" ,	answer : "Bruce Lee", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Bruce_Lee_1973.jpg/220px-Bruce_Lee_1973.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-27",
+	question : "Who is this 4-time Miss Moneypenny, born November 27th 1961?" ,	answer : "Samantha Bond", answerSpeak : "", image : "https://i2-prod.mirror.co.uk/incoming/article10324332.ece/ALTERNATES/s615b/WA198795.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-27",
+	question : "Who is this, born November 27th 1955?" ,	answer : "Bill Nye", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Bill_Nye_2017.jpg/220px-Bill_Nye_2017.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-27",
+	question : "Who is this, born November 27th 1942?" ,	answer : "Jimmy Hendrix", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/a/ae/Jimi_Hendrix_1967.png"	});	
+
 /*
 
 
