@@ -2192,6 +2192,28 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	image : "https://lh3.googleusercontent.com/pw/AL9nZEVIb6CzHgyDNwuKShqzDbxIQxWBlTZPCX71hSnAVI-LNb5bqG11RHpkqpwxKd_k5Y97BbGY1IYcHtIQEZkRRtrtoUejNlDtaAeoUWhKddUsHqtNakA-2nJ7hqwDgv_ZB-lrCnkWmFKOf67nGeCSqzHYhQ=w458-h387-no?authuser=0",
 	answerimage : "https://3.bp.blogspot.com/-XlbB2k-xBsY/UBe00Sdsk-I/AAAAAAAAJ6k/W9KXLGHB28M/s1600/%253D%253Futf-8%253FB%253FSU1HLTIwMTIwNzMxLTAwMTgxLmpwZw%253D%253D%253F%253D-797471", answer : "Sun",  answerSpeak : ""}) ;
 
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of Jungle",
+		tags : "2022-11-27,pictionary", straightToAnswers:true,
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEWjdPs_OqqFEs_kR_vAkZ9wbNxFfQF3jbV2v0n_5rtILlE_uvPEcs9j-RWr4tckWFXS2loKsLqxeb2gY84rY4uSoPDihcSf_skaax1mdDmUOaCY9ZOi5UAsG61I-dPwEhX-qdPYirOONhYrbgG-SI-5jw=w405-h247-no?authuser=0",
+	answerimage : "", answer : "Spider", answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEVXq8rpDZLivMPKa6qS2pgpCwD08zEemxTuOS8FubTsAbXRYDG-4Fu9_h_gx6Rbe1FOxD8fp5oJYctQfFN8wj5UYCfPuSIaFYiq0w-XLPZ5AqewFws4MRYrZ4PU2kiBwhtM1MVkjhl4JsuRIA7f-Gfl8A=w431-h188-no?authuser=0",
+	answerimage : "", answer : "Snake",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEVu6jX4t1FjYsr3Dv7HI6i_nnYjDs4YRTzZfRSBbAHPo_GxsHri-fvnMnhB_oS1Ki8AOeUr8VYmz3MyIE34gCtDa3KxTO9Q-FaMS3tXZuOdGRThrYNdAkMoDT3tK-YcQaeZQBnonsqGb1KxwLYmSX7NUw=w307-h200-no?authuser=0",
+	answerimage : "", answer : "Rice and Beans",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEX4yw0fjTCmtL9xnj0TxFSOVyuTa0Ji7ZEdJTyk4_ZWltxR53-mO-NSedaRITVTafPQnt4UkQCooUZMRkJc0rg4d-K66Guo1K1nuvnQ9L6OO6hzdRCLnivmT6vBFyPIr1tyZzYJFhMu3NWwElEqErra0Q=w442-h430-no?authuser=0",
+	answerimage : "", answer : "Dunny",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted and Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEUuM4lVV_3-6XTZDta9zHx94hhik2-vzoLxB0svBCWsIrOKMkehhC9jv8TG00fdHygKRx0fM6U3SkCVeqdMqMlKD2fs9sA7v9g0iO2lqlngB53uPb2XilbI-aGR8Hodd7XSXozkfSlf_9MS-WHtE-COOg=w571-h492-no?authuser=0",
+	answerimage : "", answer : "Ant and Dec",  answerSpeak : ""}) ;
+
 /*
  * 	image : "",
 	answerimage : "", answer : "Table"}) ;
