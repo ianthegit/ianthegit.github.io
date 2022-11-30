@@ -4021,6 +4021,105 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : "The winner takes it all</BR>Mama Mia</BR>Dancing Queen</BR>Waterloo</BR>I do, I do, I do</BR>Fernando</BR>Voulez Vous</BR>Take a chance on me</BR>Lay all your love on me</BR>Thank you for the music", answerSpeak : "", question : ""}) ;
 
 
+
+quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2022-12-4,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'A': </BR></BR>Is generally performed in a bathroom, morning & evening?", answer : "Ablution", answerSpeak : "",
+	answerimage : "https://media.tenor.com/lZfWsC7Zz0YAAAAM/wudhu-%E5%B2%A1%E9%87%8E%E6%B5%B7%E6%96%97.gif"} );
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'A': </BR></BR>Which British crime author and Dame wrote 'Sparkling Cyanide' and 'Death on the Nile'?", answer : "Agatha Christie", answerSpeak : "",
+	answerimage : "https://media2.giphy.com/media/l4pSXrR9jwS9SlruU/giphy.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'A': </BR></BR>What is the practice devoted chiefly to discovering a substance that would transmute the more common metals into gold or silver?", answer : "Alchemy", answerSpeak : "",
+	answerimage : "https://media.tenor.com/7WsVntUxowIAAAAM/snoopy-alchemy.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'A': </BR></BR>Classified with the peach in the subgenus Amygdalus, what ingredient is used to flavour Amaretto liqueurs and biscuits?", answer : "Almonds", answerSpeak : "",
+	answerimage : "https://i.pinimg.com/originals/6f/e6/0f/6fe60fd67c0cfb539aab0fc5823861b4.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'A': </BR></BR>What name is given to the fluid which surrounds a foetus?", answer : "Amniotic Fluid", answerSpeak : "",
+	answerimage : "https://media1.giphy.com/media/kvKSbXJfQKOY0/giphy.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'A': </BR></BR>Name of an American 'pop art' creator?", answer : "Andy Warhol", answerSpeak : "",
+	answerimage : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Andy_Warhol_at_the_Jewish_Museum_%28by_Bernard_Gotfryd%29_%E2%80%93_LOC.jpg/330px-Andy_Warhol_at_the_Jewish_Museum_%28by_Bernard_Gotfryd%29_%E2%80%93_LOC.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'A': </BR></BR>What is the Greek name of the Egyptian god of death, mummification, embalming, the afterlife, cemeteries, tombs, and the Underworld?", answer : "Anubis", answerSpeak : "",
+	answerimage : "https://i.pinimg.com/originals/ba/74/a6/ba74a67c10725260463ace90806352ce.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'A': </BR></BR>Which legendary American golfer became the first man to reach $1 million in career earnings on the PGA Tour in 1967?", answer : "Arnold Palmer", answerSpeak : "",
+	answerimage : "https://adamsarson.files.wordpress.com/2013/04/palmer-tee-shot.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'A': </BR></BR>Sir Christopher Wren who designed St Paul's Cathedral was a professor in which scientific field?", answer : "Astronomy", answerSpeak : "",
+	answerimage : "https://thumbs.gfycat.com/AstonishingPresentKittiwake-size_restricted.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'A': </BR></BR>Located on the flattest continent, in which country would you find Lake Disappointment?", answer : "Australia", answerSpeak : "",
+	answerimage : "https://media.tenor.com/9aeR2Ki0sRIAAAAM/australia.gif"} ); 
+
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2022-12-4,InnerWheel,saturday",
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/25f3mlgEOL9LT69OTOv7Bh?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Galway Girl</BR>Star Wars</BR>Game of Thrones</BR>Pirates of the Caribeann</BR>Amazing Grace</BR>Wellerman</BR>Auld Lang Syne</BR>Feliz Navidad</BR>Jingle Bell Rock</BR>Rudolf the Red Nosed Reindeer", answerSpeak : "", question : ""}) ;
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2022-12-11,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'B': </BR></BR>What animals were Dachshunds dogs originally bred to hunt?", answer : "Badgers", answerSpeak : "",
+	answerimage : "https://media0.giphy.com/media/NmGbJwLl7Y4lG/giphy.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'B': </BR></BR>Sherlock Holmes lived at 221b on which street?", answer : "Baker Street", answerSpeak : "",
+	answerimage : "https://media2.giphy.com/media/3ornkcALaCrGqNbtS0/giphy.gif?cid=6c09b952a6e098fb1ce1e83180f0742306e3cfaa589fe1e6&rid=giphy.gif&ct=g"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'B': </BR></BR>Which male vocal range is pitched between tenor and bass?", answer : "Baritone", answerSpeak : "",
+	answerimage : "https://i.gifer.com/7BfI.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'B': </BR></BR>Name the female version of the Jewish Bar Mitzvah, celebrating a girl reaching the age of thirteen?", answer : "Bat Mitzvah", answerSpeak : "",
+	answerimage : "https://media.tenor.com/30sTQGWONpgAAAAC/mazel-tov.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'B': </BR></BR>What nomadic Arabic group has roast camels served at their feasts on special occasions?", answer : "Bedouin", answerSpeak : "",
+	answerimage : "https://thumbs.gfycat.com/IdolizedSmoggyAntelopegroundsquirrel-max-1mb.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'B': </BR></BR>Calvados or Apple Brandy and Dubonnet form a cocktail which shares a name with what car manufacturer?", answer : "Bentley", answerSpeak : "",
+	answerimage : "https://i.pinimg.com/originals/73/20/b4/7320b4a69071d92037ff835b4967a1b1.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'B': </BR></BR>Which Michael Jackson song could have referred to a tennis star?", answer : "Billie Jean", answerSpeak : "",
+	answerimage : "https://thumbs.gfycat.com/AfraidWhichHydra-size_restricted.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'B': </BR></BR>What is catalogued under the Dewey decimal system?", answer : "Books", answerSpeak : "",
+	answerimage : "https://media3.giphy.com/media/XBvL9hy66OaRMgKwKD/200w.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'B': </BR></BR>Only two elements are liquid at room temperature - Bromine and what other?", answer : "Mercury", answerSpeak : "",
+	answerimage : "https://media.tenor.com/hHBs3dSM3FgAAAAM/freddy-mercury-queen.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'B': </BR></BR>The collective name for a group of ferrets is a what?", answer : "Business", answerSpeak : "",
+	answerimage : "https://i.makeagif.com/media/5-12-2015/MfZcb1.gif"} ); 
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2022-12-11,InnerWheel,saturday",
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6bo6VcpjWrtu32x3B0pL5U?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "California Dreams, Mams & Papas</BR>My Way, Frank Sinatra</BR>God only knows, The Beach Boys</BR>Africa, Toto</BR>I say a little prayer, Dionee Warwick, Burt Bacharach, Aretha Franklin</BR>Bohemian Rhapsody, Queen</BR>Signed, Sealed, Delivered, I'm yours, Stevie Wonder</BR>Man in the Mirror, Michael Jackson</BR>When you say nothing at all, Ronan Keating</BR>I want to know what love is, Foreigner", answerSpeak : "", question : ""}) ;
+
+
+
 quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
 		hoverover : "What sinks, what floats",
