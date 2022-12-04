@@ -451,6 +451,33 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-27",
 	question : "Who is this, born November 27th 1942?" ,	answer : "Jimmy Hendrix", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/a/ae/Jimi_Hendrix_1967.png"	});	
 
+
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-3",
+	question : "Who is this, born December 3rd 1985?" ,	answer : "Amanda Seyfried", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Amanda_Seyfried_2019_by_Glenn_Francis.jpg/220px-Amanda_Seyfried_2019_by_Glenn_Francis.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-3",
+	question : "Who is this, born December 3rd 1968?" ,	answer : "Brendan Fraser", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Brendan_Fraser_October_2022.jpg/220px-Brendan_Fraser_October_2022.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-3",
+	question : "Who is this, born December 3rd 1960?" ,	answer : "Julianne Moore", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Julianne_Moore_%2815011443428%29_%282%29.jpg/220px-Julianne_Moore_%2815011443428%29_%282%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-3",
+	question : "Who is this, born December 3rd 1960?" ,	answer : "Daryl Hannah", answerSpeak : "", image : "https://images.bauerhosting.com/legacy/empire-images/features/57445286bf1bdcf50c7edf04/Daryl-Hannah-mermaid-2.jpg?format=jpg&quality=80&width=960&height=540&ratio=16-9&resize=aspectfill"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-3",
+	question : "Who is this, born December 3rd 1959?" ,	answer : "Eamonn Holmes", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Eamon_Holmes_%28cropped%29.jpg/220px-Eamon_Holmes_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-3",
+	question : "Who is this, born December 3rd 1948?" ,	answer : "John 'Ozzy' Osbourne", answerSpeak : "", image : "https://static.independent.co.uk/2022/09/02/10/newFile-12.jpg?quality=75&width=982&height=726&auto=webp"	});	
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-4",
+	question : "Who is this, born December 4th 1969?" ,	answer : "Jaz-Z", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Jay-Z_%40_Shawn_%27Jay-Z%27_Carter_Foundation_Carnival_%28crop_2%29.jpg/220px-Jay-Z_%40_Shawn_%27Jay-Z%27_Carter_Foundation_Carnival_%28crop_2%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-4",
+	question : "Who is this, born December 4th 1964?" ,	answer : "Marisa Tomei", answerSpeak : "", image : "https://dailysuperheroes.com/wp-content/uploads/2017/07/0011.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-4",
+	question : "Who is this, born December 4th 1955?" ,	answer : "Philip Hammond", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Official_portrait_of_Mr_Philip_Hammond_crop_2.jpg/220px-Official_portrait_of_Mr_Philip_Hammond_crop_2.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-4",
+	question : "Who is this, born December 4th 1949?" ,	answer : "Jeff Bridges", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Jeff_Bridges_by_Gage_Skidmore_3.jpg/220px-Jeff_Bridges_by_Gage_Skidmore_3.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-4",
+	question : "Who is this, born December 4th 1930?" ,	answer : "Ronnie Corbett", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Ronnie-corbett.JPG/220px-Ronnie-corbett.JPG"	});	
+
 /*
 
 
