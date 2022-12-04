@@ -2214,6 +2214,33 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 	image : "https://lh3.googleusercontent.com/pw/AL9nZEUuM4lVV_3-6XTZDta9zHx94hhik2-vzoLxB0svBCWsIrOKMkehhC9jv8TG00fdHygKRx0fM6U3SkCVeqdMqMlKD2fs9sA7v9g0iO2lqlngB53uPb2XilbI-aGR8Hodd7XSXozkfSlf_9MS-WHtE-COOg=w571-h492-no?authuser=0",
 	answerimage : "", answer : "Ant and Dec",  answerSpeak : ""}) ;
 
+
+
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of 6 of the days of Christmas",
+		tags : "2022-12-4,pictionary", straightToAnswers:true,
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://i.gifer.com/IddF.gif", answer : "Lords Leaping", answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://i.makeagif.com/media/2-02-2015/9L_7zb.gif", answer : "Maids Milking",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://media1.giphy.com/media/J97qzgE90HeWQ/giphy.gif", answer : "Gold Rings",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://i.pinimg.com/originals/54/09/bb/5409bb709a410fcedbdfbc5eb0395b28.gif", answer : "Calling Birds",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://i.imgur.com/EABECKS.gif", answer : "Geese Laying",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://media.tenor.com/r8vdWGgwQXkAAAAC/partridge-in-a-pear-tree-alan-partridge.gif", answer : "Partridge in a Pear Tree",  answerSpeak : ""}) ;
+
 /*
  * 	image : "",
 	answerimage : "", answer : "Table"}) ;
