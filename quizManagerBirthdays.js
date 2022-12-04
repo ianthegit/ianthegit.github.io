@@ -351,6 +351,35 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-6",
 	question : "Who is this, born November 6th 1926?" ,	answer : "Frank Carson", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Frank_Carson_copyright_BarryCheung.jpg/220px-Frank_Carson_copyright_BarryCheung.jpg"	});	
 
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-10",
+	question : "Who is this, born Novemvber 10th 1989?" ,	answer : "Taron Egerton", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Taron_Egerton_by_Gage_Skidmore_2.jpg/220px-Taron_Egerton_by_Gage_Skidmore_2.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-10",
+	question : "Who is this, born Novemvber 10th 1959?" ,	answer : "Hugh Bonneville", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Hugh_Bonneville_MingFilmFest_2011_n1.jpg/220px-Hugh_Bonneville_MingFilmFest_2011_n1.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-10",
+	question : "Who is this, born Novemvber 10th 1960?" ,	answer : "Neil Gaiman", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Kyle-cassidy-neil-gaiman-April-2013.jpg/220px-Kyle-cassidy-neil-gaiman-April-2013.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-10",
+	question : "Who is this, born Novemvber 10th 1944?" ,	answer : "Tim Rice", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Tim_Rice%2C_1_December_2020.jpg/220px-Tim_Rice%2C_1_December_2020.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-10",
+	question : "Who is this, born Novemvber 10th 19YY?" ,	answer : "Screaming Lord Sutch", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Screaming_Lord_Sutch.jpg/220px-Screaming_Lord_Sutch.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-10",
+	question : "Who is this, born Novemvber 10th 1932?" ,	answer : "Roy Scheider", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Roy_Scheider_2007.jpg/220px-Roy_Scheider_2007.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-10",
+	question : "Who is this, born Novemvber 10th 1925?" ,	answer : "Richard Burton", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Richard_Burton_-_The_Robe.jpg/220px-Richard_Burton_-_The_Robe.jpg"	});	
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-11",
+	question : "Who is this, born Novemner 11th 1974?" ,	answer : "Leonardo DiCaprio", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Leonardo_DiCaprio_2014.jpg/220px-Leonardo_DiCaprio_2014.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-11",
+	question : "Who is this, born Novemner 11th 1964?" ,	answer : "Calista Flockhart", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Calista_Flockhart_at_the_2009_Deauville_American_Film_Festival-01.jpg/220px-Calista_Flockhart_at_the_2009_Deauville_American_Film_Festival-01.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-11",
+	question : "Who is this, born Novemner 11th 1962?" ,	answer : "Demi Moore", answerSpeak : "", image : "https://cdn.images.express.co.uk/img/dynamic/79/590x/secondary/3999013.jpg?r=1648816198103"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-11",
+	question : "Who is this, born Novemner 11th 1960?" ,	answer : "Stanley Tucci", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Stanley_Tucci_2017_Berlinale.jpg/220px-Stanley_Tucci_2017_Berlinale.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-11",
+	question : "Who is this, born Novemner 11th 1925?" ,	answer : "June Whitfield DBE", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/June_Whitfield_2013_%28A%29_%28cropped%29.jpg/220px-June_Whitfield_2013_%28A%29_%28cropped%29.jpg"	});	
+
+
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-12",
 	question : "Who is this, born November 12th 1962?" ,	answer : "Mariella Frostrup", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Mariella_Frostrup_2016_%28cropped%29.jpg/220px-Mariella_Frostrup_2016_%28cropped%29.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-12",
