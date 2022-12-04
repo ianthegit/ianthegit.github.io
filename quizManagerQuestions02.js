@@ -4023,9 +4023,58 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { 
+		name : "Utensils",
+		hoverover : "What foods are these used for",
+		tags : "2022-12-4,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "What is this used for?", answer : "Fish & Chips", answerSpeak : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEXdsEBtxUP-Pc2esGDfs_YA3Hd0hUsGtPDzybT1F65EPElX0iMkgRMuNZXDRbXgLJqyu282tADxdcIw1w9_yIeIMm0VqHo1mPGYf1gSW-1wdipARcJjTLiKEsA6taiPcMI3VqYb8btN9NRQaw3IMX_21Q=w114-h191-no?authuser=0"} );
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "What is this used for?", answer : "Caviar", answerSpeak : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEXLIg-xyYzDg0QpzO-ll4sU3fqsDHskrhP75hfQNB8rf8Ysp9OqkPEkhNGtutLGP0Vhrt6nDuTXzbkD8_KM1LrMDgBr8_l35RV-_OmMMZiVW0dgv42dJsuJjZaEaxcIuU9HpGSx5-ksY3hAPZ_reCJdjQ=w150-h193-no?authuser=0"} );
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "What is this used for?", answer : "Spaghetti", answerSpeak : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEXght-Pxp9b29UOghpDgJkZvYgZBPjqRzPEXD4o-C1iSZ9en811xW6R9mJIYPwth2jAU2UO3JQUQUqkv-LK32JTRsmZbbgp7fSr87Z_87apM21hDD_bSSG9ci38R1La0C0Z7JCkVWSfWY9rY5MwIbOR1Q=w123-h193-no?authuser=0"} );
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "What is this used for?", answer : "Oysters", answerSpeak : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEUqkKODPhmwoE0BKYgmIgUIlB4jvLUD1Vo77xpW4_1nGdUha-dezI-aeisUIaGPxeJdKPOa92uAuhAA5erUL9eztOh-G6q-qDiqUty6VXPddFb04Lteog42TeaUr2DpMil0VGF0Z9Df6YqFOMQisXVWqQ=w177-h159-no?authuser=0"} );
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "What is this used for?", answer : "Pizza", answerSpeak : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEW5p2lNvhV4htQ2dMhMHFLRA5VQp9y_045ZS2Fjd1_-QewKgTXSFfGpKMIBzm6ul1ntc_GBiYeictz2a_smLJ-KFxLXrTCz2uAdWTxL2F-un-8OKeGrtJUpuvon5itCJfdDqOgrczWG3BJjQYmsvBWFOw=s168-no?authuser=0"} );
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "What is this used for?", answer : "Cheese", answerSpeak : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEWYs758LudwP_NJ8qeHXPnuA0z1FHZE83QLtXKuL-GW27z_SXdKMxDdMK-OGJOifHT4kItzBhFQMrvaaKatlOk7SiuAv5BOHwnM6gqABB-tJkTRioAiXwrd87AYmVSJCuZnHywzwDFdfOrWXXqpmLGeGA=w123-h169-no?authuser=0"} );
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "What is this used for?", answer : "Shellfish", answerSpeak : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEUzrrPEAKpGhvJdpsiMx9ukNuQftg9xTIMym1_Cnavxo8LN7d_Dh0LObQYq3dgQQ3TyIrdGeLQMvvxxHsrA8oUeEYZCzNyJXjh2es5HtH1AoVWXcV5iAnVMBrar9bjDszf9xHxzRCUeIJ7eRWL4Tr59EA=w140-h208-no?authuser=0"} );
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "What is this used for?", answer : "Honey", answerSpeak : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEVas3XH1y1vfnYoeIUhvL7ASJ4FW0SNAhCyzv0yRu6l15KdZpWwZN7gWVcrb18YmdykIzMlwYL4hg84nRVwkpHWBsK5c-yD7Bi5vxWDrnNFJRN_NGCIHUpBDrY0DhQhZ7XXe8ICvHbpmXcxAMJlAFcFig=w123-h186-no?authuser=0"} );
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "What is this used for?", answer : "Snails", answerSpeak : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEV7AJUBiWNyNpegm5u8v9DwC0_qKl3pLK1H-p3z-yrLvNurkcJIGNS2BL8PCHnXgY_5SfUfGLZJYvjg0m39XYQ1vA6Mi6ZnSPFxaFp3NdLqSWH-_kHhpic8TevKmr0Ods4sMx9D1IDDmNyUKA7glIxWcw=w137-h195-no?authuser=0"} );
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "What is this used for?", answer : "Bone Marrow", answerSpeak : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEVNUF_EyI-xamdCwsYqxatqD4gJnWW6Ff5kDOSIi1gds4mRK8ZbfsAV6E2Xl0D5oepP6Ty0p4hDr3q9Vea3UQqu0ovlMuCK0Sg1dUKk-O8rn_4uktoPgKe5ghMDUBsRxw0AV5sbUFpKtXjvfiLaMCxiFQ=w167-h189-no?authuser=0"} );
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2022-12-4,InnerWheel,saturday",
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/25f3mlgEOL9LT69OTOv7Bh?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Galway Girl</BR>Star Wars</BR>Game of Thrones</BR>Pirates of the Caribeann</BR>Amazing Grace</BR>Wellerman</BR>Auld Lang Syne</BR>Feliz Navidad</BR>Jingle Bell Rock</BR>Rudolf the Red Nosed Reindeer", answerSpeak : "", question : ""}) ;
+
+
+
+quests[++questIndexBuilder] = { 
 		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
 		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
-		tags : "2022-12-4,saturday,InnerWheel,surfers,alphabet", 
+		tags : "2022-12-11,saturday,InnerWheel,surfers,alphabet", 
 		questInfo: new Array() };
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 	question : "What 'A': </BR></BR>Is generally performed in a bathroom, morning & evening?", answer : "Ablution", answerSpeak : "",
@@ -4059,23 +4108,21 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 	answerimage : "https://media.tenor.com/9aeR2Ki0sRIAAAAM/australia.gif"} ); 
 
 
-
-
 quests[++questIndexBuilder] = { 
 		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
 		hoverover : "Songs you will know, but wish you did not after this.",
-		tags : "music,2022-12-4,InnerWheel,saturday",
+		tags : "music,2022-12-11,InnerWheel,saturday",
 		questInfo: new Array() };
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
-	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/25f3mlgEOL9LT69OTOv7Bh?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
-	answer : "Galway Girl</BR>Star Wars</BR>Game of Thrones</BR>Pirates of the Caribeann</BR>Amazing Grace</BR>Wellerman</BR>Auld Lang Syne</BR>Feliz Navidad</BR>Jingle Bell Rock</BR>Rudolf the Red Nosed Reindeer", answerSpeak : "", question : ""}) ;
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6bo6VcpjWrtu32x3B0pL5U?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "California Dreams, Mams & Papas</BR>My Way, Frank Sinatra</BR>God only knows, The Beach Boys</BR>Africa, Toto</BR>I say a little prayer, Dionee Warwick, Burt Bacharach, Aretha Franklin</BR>Bohemian Rhapsody, Queen</BR>Signed, Sealed, Delivered, I'm yours, Stevie Wonder</BR>Man in the Mirror, Michael Jackson</BR>When you say nothing at all, Ronan Keating</BR>I want to know what love is, Foreigner", answerSpeak : "", question : ""}) ;
 
 
 
 quests[++questIndexBuilder] = { 
 		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
 		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
-		tags : "2022-12-11,saturday,InnerWheel,surfers,alphabet", 
+		tags : "2022-12-18,saturday,InnerWheel,surfers,alphabet", 
 		questInfo: new Array() };
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 	question : "What 'B': </BR></BR>What animals were Dachshunds dogs originally bred to hunt?", answer : "Badgers", answerSpeak : "",
@@ -4107,16 +4154,6 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 	question : "What 'B': </BR></BR>The collective name for a group of ferrets is a what?", answer : "Business", answerSpeak : "",
 	answerimage : "https://i.makeagif.com/media/5-12-2015/MfZcb1.gif"} ); 
-
-
-quests[++questIndexBuilder] = { 
-		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
-		hoverover : "Songs you will know, but wish you did not after this.",
-		tags : "music,2022-12-11,InnerWheel,saturday",
-		questInfo: new Array() };
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
-	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6bo6VcpjWrtu32x3B0pL5U?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
-	answer : "California Dreams, Mams & Papas</BR>My Way, Frank Sinatra</BR>God only knows, The Beach Boys</BR>Africa, Toto</BR>I say a little prayer, Dionee Warwick, Burt Bacharach, Aretha Franklin</BR>Bohemian Rhapsody, Queen</BR>Signed, Sealed, Delivered, I'm yours, Stevie Wonder</BR>Man in the Mirror, Michael Jackson</BR>When you say nothing at all, Ronan Keating</BR>I want to know what love is, Foreigner", answerSpeak : "", question : ""}) ;
 
 
 
