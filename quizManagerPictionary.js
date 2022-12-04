@@ -2223,22 +2223,22 @@ quests[++questIndexBuilder] = { //
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEVwczkdyDAP0vzVbbTlaDQJSLhOSO95IjyhjLhX2tMiF5sLN_70SoHoQNjy-vSLEbDHa1Y9PAjei4esVS_eEVj4NSUxrw4TnmYznR9EP5fvGBnmSj9B4V6iDo-QTDADN2dOcBGfPwO7nA9J9ws0o9OOAA=w317-h195-no?authuser=0",
 	answerimage : "https://i.gifer.com/IddF.gif", answer : "Lords Leaping", answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEWjjRm-ZXaT2k2w-tDyabduapIesuBcSfSzPjUl9yzB5WGSBrRsW4uPdPwJxl9Wa2FXaAnVE0MBNGhfTkPtLS0bOvfwtMJ2ohAbOVWKfpULFHDV8G-cd_LpPhQm-7ATsV8f3NBfMH8q1WrMeXTkuFi_VA=w453-h331-no?authuser=0",
 	answerimage : "https://i.makeagif.com/media/2-02-2015/9L_7zb.gif", answer : "Maids Milking",  answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEWONXvXRoKPtN7moObkh_ETp7ZRQPmppj2XZclRqmQLU2rk7Txtpxfcw3kWmCabGBclZEoupcSiZyva1cHw6_HHD1vV_SqQMMaInJXaLL9eyC-SrRohed8v3aIW_ndNR892fIXPTCENvavGvcEiHBJGeA=w403-h303-no?authuser=0",
 	answerimage : "https://media1.giphy.com/media/J97qzgE90HeWQ/giphy.gif", answer : "Gold Rings",  answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEWPBwkzIOnvOl3jY3i9MJiDu5Nr75cAXX6WvQ51E3HNb7VMKcA-PNoibRxnzfRiRFBUWl79spbTzTnyNbnMZA5wSUFZRtr947ap3Pl6VU8HM_CIms___vdO17NgQPVOl7-Mytgjg2hYRl-8L-SBXAJtTA=w705-h232-no?authuser=0",
 	answerimage : "https://i.pinimg.com/originals/54/09/bb/5409bb709a410fcedbdfbc5eb0395b28.gif", answer : "Calling Birds",  answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEXjES4SVbb_OAfHB3gKiilO8HGotmtPDxBgj2tQlyOMKEWWuVy7VCbJOE1YeTQXkqzigmULaRVXYp2RjeFJwxuj35VzU-19holKh6TajEvVxH4KldLXiIQrILs8Js63e9fZmMtdYc7snP1qtFlYuRd_jA=w212-h155-no?authuser=0",
 	answerimage : "https://i.imgur.com/EABECKS.gif", answer : "Geese Laying",  answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEXYdByqEYsXMh9i6CMd1obpJJsjzBRe398iWOYjcuUqmzBl24Bzt2pl_hKMPw0JUonMQT3X9Ezn-KbX_NeFZ2PRhvC4YbcHDRsQOLiN2xskffao2R-BnkIK1wRI5rY794To8rLM2WeXdPYAPOv2SaxnBg=w402-h407-no?authuser=0",
 	answerimage : "https://media.tenor.com/r8vdWGgwQXkAAAAC/partridge-in-a-pear-tree-alan-partridge.gif", answer : "Partridge in a Pear Tree",  answerSpeak : ""}) ;
 
 /*
