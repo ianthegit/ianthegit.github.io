@@ -4115,7 +4115,7 @@ quests[++questIndexBuilder] = {
 		questInfo: new Array() };
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6bo6VcpjWrtu32x3B0pL5U?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
-	answer : "California Dreams, Mams & Papas</BR>My Way, Frank Sinatra</BR>God only knows, The Beach Boys</BR>Africa, Toto</BR>I say a little prayer, Dionee Warwick, Burt Bacharach, Aretha Franklin</BR>Bohemian Rhapsody, Queen</BR>Signed, Sealed, Delivered, I'm yours, Stevie Wonder</BR>Man in the Mirror, Michael Jackson</BR>When you say nothing at all, Ronan Keating</BR>I want to know what love is, Foreigner", answerSpeak : "", question : ""}) ;
+	answer : "California Dreams, Mamas & Papas</BR>My Way, Frank Sinatra</BR>God only knows, The Beach Boys</BR>Africa, Toto</BR>I say a little prayer, Dione Warwick, Burt Bacharach, Aretha Franklin</BR>Bohemian Rhapsody, Queen</BR>Signed, Sealed, Delivered, I'm yours, Stevie Wonder</BR>Man in the Mirror, Michael Jackson</BR>When you say nothing at all, Ronan Keating</BR>I want to know what love is, Foreigner", answerSpeak : "", question : ""}) ;
 
 
 
