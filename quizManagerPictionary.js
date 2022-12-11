@@ -2248,22 +2248,22 @@ quests[++questIndexBuilder] = { //
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEV3vc_HQEWn9E2DxBD1Mlq61jpHihun796Lfd5ACjmRfTJz_pIPMMgSx-_XKNQuxuR4XjsXu_3MOVg7nYsJk9HU74yPT9Zx5XP_UVwPeqKsJy8Ena7kGBckSdmwbpRMrIHPjOYHLk-pQ0F-qiV_uGM0kw=w380-h328-no?authuser=0",
 	answerimage : "", answer : "Ice Hockey", answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEWuzSCgLub6T8TOC013FzmnOjKPiexOsL-GX1_YXOhCrNE3thmvKi05uTZzmW33Wpc6Rzy8Fq76s0L7YDbqGcnXUxcH-pp4kTeWO_wROm6RsSTAX9TMJ_4kK4_X0mCu4kJmaSaZFTUTT4ARUpYZ5OjHCQ=w442-h445-no?authuser=0",
 	answerimage : "", answer : "Maple Syrup",  answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEWe8W641mdS9a_9QufzfYVW1W3clc2jjFYChsDGYN_dfGYElhFrRmMyEe8KN_v_OGitjpu0GL86tPWFx_tRdkyo_oGVsxoAEh0CKtRiz7LOEfpiGJia3xrZLUu1rev8JAKbLJeDi-SZ3r6o1tEk9qGfAg=w351-h261-no?authuser=0",
 	answerimage : "", answer : "Moose",  answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEUgBdz4ejUuT9nv-ehgFKSVXpsvn22LrDdIBg4TNAWwEVSSq58FvKduIdxdp_rAkd7haUc4rGbjkIKWm6D6l474DioZAcerLLba_CFKgk5t5-HfglPhB1Jdu6kO0hxMQMATAjPHbjWO5--AQykNgZX9lw=w369-h435-no?authuser=0",
 	answerimage : "", answer : "Mountie",  answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEX92R7KlLnA83VTVd0MBgpkqNdJo6n4oaGbDAgM4dwmcYdC5D77cy_f9ux4z8xry1PjohdCjsoUPAKbNoistZna2eft8IM8Jh7IR6L2zNvqcVA8bibohVB-b4wJk_3WwmVbswmGIoQ4dgVX125APdL51g=w438-h195-no?authuser=0",
 	answerimage : "", answer : "Beaver",  answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEXy_plJ82SrBGaiAuCI4g3J-LoGTUGcsSPnf2oY2V_uniSPNBvxTOAiA3Bx7Oie0GWLbzepgplUsTMsCCKDDP6uwXkkdPnAONfw97PnMLZtLKPUSvzhVq77Z12vEZSIbmvkw6STidI8WUeUEj3k-WJKRg=w676-h488-no?authuser=0",
 	answerimage : "", answer : "Niagra Falls",  answerSpeak : ""}) ;
 /*
  * 	image : "",
