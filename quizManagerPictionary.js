@@ -2241,6 +2241,30 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	image : "https://lh3.googleusercontent.com/pw/AL9nZEXYdByqEYsXMh9i6CMd1obpJJsjzBRe398iWOYjcuUqmzBl24Bzt2pl_hKMPw0JUonMQT3X9Ezn-KbX_NeFZ2PRhvC4YbcHDRsQOLiN2xskffao2R-BnkIK1wRI5rY794To8rLM2WeXdPYAPOv2SaxnBg=w402-h407-no?authuser=0",
 	answerimage : "https://media.tenor.com/r8vdWGgwQXkAAAAC/partridge-in-a-pear-tree-alan-partridge.gif", answer : "Partridge in a Pear Tree",  answerSpeak : ""}) ;
 
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of Canada",
+		tags : "2022-12-11,pictionary", straightToAnswers:true,
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "", answer : "Ice Hockey", answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "", answer : "Maple Syrup",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "", answer : "Moose",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "", answer : "Mountie",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "", answer : "Beaver",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "", answer : "Niagra Falls",  answerSpeak : ""}) ;
 /*
  * 	image : "",
 	answerimage : "", answer : "Table"}) ;
