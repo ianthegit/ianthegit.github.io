@@ -478,6 +478,31 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-4",
 	question : "Who is this, born December 4th 1930?" ,	answer : "Ronnie Corbett", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Ronnie-corbett.JPG/220px-Ronnie-corbett.JPG"	});	
 
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-10",
+	question : "Who is this, born December 10th 1974?" ,	answer : "Meg White", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Meg_White_1.jpg/220px-Meg_White_1.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-10",
+	question : "Who is this, born December 10th 1960?" ,	answer : "Kenneth Branagh", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/KennethBranaghApr2011.jpg/220px-KennethBranaghApr2011.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-10",
+	question : "Who is this, born December 10th 1952?" ,	answer : "Susan Dey", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/The_Partridge_Family_Susan_Dey_1970.jpg/220px-The_Partridge_Family_Susan_Dey_1970.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-10",
+	question : "Who is this, born December 10th 1952?" ,	answer : "Clive Anderson", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Clive_Anderson_at_Selwyn_May_Ball_-21June2008.JPG/200px-Clive_Anderson_at_Selwyn_May_Ball_-21June2008.JPG"	});	
+
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-11",
+	question : "Who is this, born December 11th 1974?" ,	answer : "Ben Shephard", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/BenShephard.jpg/220px-BenShephard.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-11",
+	question : "Who is this, born December 11th 1961?" ,	answer : "Marco Pierre White", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/MarcoPierreWhite.jpg/220px-MarcoPierreWhite.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-11",
+	question : "Who is this Jewish lady, famous for singing a Christmas song, born December 11th 1944?" ,	answer : "Brenda Lee", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Brenda_Lee.png/220px-Brenda_Lee.png"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-11",
+	question : "Who is this, born December 11th 1921?" ,	answer : "Liz Smith", answerSpeak : "", image : "https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/12/27/11/liz-smith.jpg?quality=75&width=982&height=726&auto=webp"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-11",
+	question : "Who is this, born December 11th 1919?" ,	answer : "Cliff Michelmore", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/en/thumb/b/bb/Cliff_Michelmore.jpeg/220px-Cliff_Michelmore.jpeg"	});	
+
+
 /*
 
 
