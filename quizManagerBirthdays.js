@@ -503,6 +503,39 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 	question : "Who is this, born December 11th 1919?" ,	answer : "Cliff Michelmore", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/en/thumb/b/bb/Cliff_Michelmore.jpeg/220px-Cliff_Michelmore.jpeg"	});	
 
 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-17",
+	question : "Who is this, born December 17th 1973?" ,	answer : "Paula Radcliffe", answerSpeak : "", image : "https://i2-prod.dailystar.co.uk/incoming/article15533000.ece/ALTERNATES/s615b/0_Paula-Radcliffe-London-Marathon-222075"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-17",
+	question : "Who is this, born December 17th 1953?" ,	answer : "Bill Pullman", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Bill_Pullman_in_New_York_City_%282014%29.jpg/220px-Bill_Pullman_in_New_York_City_%282014%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-17",
+	question : "Who is this, born December 17th 1946?" ,	answer : "Eugene Levy", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Eugene_Levy_2%2C_2012.jpg/220px-Eugene_Levy_2%2C_2012.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-17",
+	question : "Who is this, born December 17th 1946?" ,	answer : "Simon Bates", answerSpeak : "", image : "https://www.radiorewind.co.uk/images/s_bates_desk_lge.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-17",
+	question : "Who is this, born December 17th 1944?" ,	answer : "Bernard Hill", answerSpeak : "", image : "https://rodgerarmstrong.files.wordpress.com/2017/10/gizza-job-copy.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-17",
+	question : "Who is this, born December 17th 1936?" ,	answer : "Tommy Steele", answerSpeak : "", image : "https://www.shropshirestar.com/resizer/C-2yTwWp5H9xJVL3I_BF3UzcnWQ=/1200x0/cloudfront-us-east-1.images.arcpublishing.com/mna/4K3JSEROCBHR7HVFIBHMBFL2XI.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-17",
+	question : "Who is this, born December 17th 1936?" ,	answer : "Pope Francis", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Pope_Francis_Korea_Haemi_Castle_19.jpg/220px-Pope_Francis_Korea_Haemi_Castle_19.jpg"	});	
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-18",
+	question : "Who is this, born December 18th 2001?" ,	answer : "Billie Eilish", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Billie_Eilish_2019_by_Glenn_Francis_%28cropped%29_2.jpg/220px-Billie_Eilish_2019_by_Glenn_Francis_%28cropped%29_2.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-18",
+	question : "Who is this, born December 18th 1980?" ,	answer : "Christina Aguilera", answerSpeak : "", image : "https://media1.popsugar-assets.com/files/thumbor/AzGxmDbRO4R5NybIW55WuSpSPBA/7x5:721x724/fit-in/728xorig/filters:format_auto-!!-:strip_icc-!!-/2020/07/29/897/n/1922398/1eb22ec05f21dcd34cef62.10686664_/i/Pictures-Christina-Aguilera-Through-Years.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-18",
+	question : "Who is this, born December 18th 1978?" ,	answer : "Katie Holmes", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Katie_Holmes_2011_%286024619824%29.jpg/220px-Katie_Holmes_2011_%286024619824%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-18",
+	question : "Who is this, born December 18th 1963?" ,	answer : "Brad Pitt", answerSpeak : "", image : "https://www.chicagotribune.com/resizer/_34dx-FL715yxGAyJcc1WbwY5UU=/800x0/filters:format(jpg):quality(70)/arc-anglerfish-arc2-prod-tronc.s3.amazonaws.com/public/JWTK2YBB2RDRRJBZY7DE7QZJOU.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-18",
+	question : "Who is this, born December 18th 1954?" ,	answer : "Ray Liotta", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/RayLiottaTIFFSept2012.jpg/220px-RayLiottaTIFFSept2012.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-18",
+	question : "Who is this, born December 18th 1953?" ,	answer : "Kevin Beattie", answerSpeak : "", image : "https://i2-prod.mirror.co.uk/incoming/article13255709.ece/ALTERNATES/s615/0_Kevin-Beattiers.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-18",
+	question : "Who is this, born December 18th 1946?" ,	answer : "Steven Spielberg", answerSpeak : "", image : "https://faroutmagazine.co.uk/static/uploads/2021/10/The-DVD-Steven-Spielberg-believed-was-haunted.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-18",
+	question : "Who is this, born December 18th 1943?" ,	answer : "Keith Richards", answerSpeak : "", image : "https://i.pinimg.com/originals/08/8d/7e/088d7e8cf9d8bd42516afdd0419a5bea.jpg"	});	
+
 /*
 
 
