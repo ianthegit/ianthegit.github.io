@@ -4156,6 +4156,16 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 	answerimage : "https://i.makeagif.com/media/5-12-2015/MfZcb1.gif"} ); 
 
 
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2022-12-18,InnerWheel,saturday",
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/playlist/1A8AG0gIVMIgG12q6e0y1Y?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Walking on Sunshine, Katrina & the waves</BR>Time after time, Cyndi Lauper</BR>A hard days night, The Beatles</BR>Every little thing she does is magic, the Police</BR>Lovely Day, Bill Withers</BR>Sweet Dreams, the Eurythmics</BR>Purple Rain, Prince</BR>Whole lotta love, Led Zeppelin</BR>Go your own way, Fleetwood Mac</BR>Light my fire, the Doors", answerSpeak : "", question : ""}) ;
+
+
 
 quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
