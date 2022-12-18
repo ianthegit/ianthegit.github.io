@@ -2265,6 +2265,34 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AL9nZEXy_plJ82SrBGaiAuCI4g3J-LoGTUGcsSPnf2oY2V_uniSPNBvxTOAiA3Bx7Oie0GWLbzepgplUsTMsCCKDDP6uwXkkdPnAONfw97PnMLZtLKPUSvzhVq77Z12vEZSIbmvkw6STidI8WUeUEj3k-WJKRg=w676-h488-no?authuser=0",
 	answerimage : "", answer : "Niagra Falls",  answerSpeak : ""}) ;
+
+
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of Best of this year",
+		tags : "2022-12-18,pictionary", //straightToAnswers:true,
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "Back on 5th Jan 2022, what did Ted draw from the theme of 'Downing Street Parties'?", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLWfS61xcGw9LJjL50VklCX76hjGSO-iO70Gs55v_bB7PBe6m8aZ_MIg-EzE1g9Ie5DUVZi2KUGx82dtH83cWLF4QTKxI4mNmAqjkdb2HjYfFfFWJaR0JFEBHwObViMBJRJjxZevxxa3_Z4Oi0R9QMJ3lw=w286-h238-no?authuser=0",
+	answerimage : "https://images.milledcdn.com/2021-07-21/jvpo_NhwcQLo51yn/_gURNu_dygcW.gif", answerSpeak : "Suitcase of wine"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "On the 15th May 2022, what did we re-use which Ted drew on 22 May 2021 at 8:40 on the theme of Eurovision countries", // 
+	image : "https://lh3.googleusercontent.com/pw/ACtC-3fmQ6NtO5VNsD-jvHmw6RWKxY7tIeibI3LukvnbmyRpijSgFstoujowjy3aYUE6mK0B8-l36rsqckfWH0Wy8S6jcqTd0gpn23iwLfw1YS4Oe4P72mhyHUcdxMkjXABvWEFGoL7RnD3fftMA7FcbkPek_w=w794-h871-no?authuser=0",
+	answerimage : "https://cdn.britannica.com/83/2983-050-78046F59/Netherlands-boundaries-map-cities-locator.jpg", answerSpeak : "The Netherlands"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw on 22nd May on the theme of Superheroes?", // 
+	image : "https://lh3.googleusercontent.com/pw/AM-JKLXjpgQOozYSUmgssbJIMwPcKKhh_-gysfumv8ffz2zuyLvD0H-O3a0GCkqvRz7cp034VBj_TBP6ksMpYVKoZnWzoi6hEx6ZlA2MwGr3EHkUsiai0VcWKL65G539iTwk3H9IP2laR4sWZwqUfPaIjZgPyw=w658-h557-no?authuser=0",
+	answerimage : "https://media1.giphy.com/media/Bz4NxK0OJrcti/200.gif", answerSpeak : "Spiderman"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw on 18th August on the theme of 'Things you queue for'?", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEVomLDGDiA3MuWi1LwG8r7OSBU_65Ltm6Vu9FaCuhulMvN5CtRjvfv31ldQjHBGKU7tOVLAWaaQCwL1EYi1bdPqJR4W3cjLlN_uiaNg4Ib6V6lmELQcmiEoIN4gB_s45YlIWTTmN35al3kgqQ8S4PXY9g=w214-h318-no?authuser=0",
+	answerimage : "https://www.telegraph.co.uk/content/dam/royal-family/2022/09/14/TELEMMGLPICT000309295780-xlarge_trans_NvBQzQNjv4BqpVlberWd9EgFPZtcLiMQfyf2A9a6I9YchsjMeADBa08.jpeg", answer : "The Queen's coffin",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw on the 16th October on the theme of 'Last 6 Prime Ministers'?", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEW12si0mmlU_KcST6K6MMI6xBMosfr4FYldOVztpGBlD0jKaMcbpYF-McDTOEpT9Glbwji9LWzSEAu5YyQNZeWo7D0RWiCCKDiMisEEXRInsFMHxdNmW-bOX3AFrHAXWzA1XQAKEhoMKhNfapryA80hPA=w525-h409-no?authuser=0",
+	answerimage : "https://media1.giphy.com/media/1zjQiLGfgb10nc7Wou/giphy.gif", answer : "Theresa May",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw on the 27th November on the theme of 'I'm a Celebrity Get Me Out Of Here'?", // 
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEX4yw0fjTCmtL9xnj0TxFSOVyuTa0Ji7ZEdJTyk4_ZWltxR53-mO-NSedaRITVTafPQnt4UkQCooUZMRkJc0rg4d-K66Guo1K1nuvnQ9L6OO6hzdRCLnivmT6vBFyPIr1tyZzYJFhMu3NWwElEqErra0Q=w442-h430-no?authuser=0",
+	answerimage : "https://i2-prod.manchestereveningnews.co.uk/incoming/article17322597.ece/ALTERNATES/s615b/0_Im-a-Celebrity-Get-Me-Out-of-Here-TV-Show-Series-19-Australia-26-Nov-2019.jpg", answer : "Dunny",  answerSpeak : ""}) ;
+
+
 /*
  * 	image : "",
 	answerimage : "", answer : "Table"}) ;
