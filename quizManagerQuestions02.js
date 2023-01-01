@@ -4167,6 +4167,53 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : "Walking on Sunshine, Katrina & the waves</BR>Time after time, Cyndi Lauper</BR>A hard days night, The Beatles</BR>Every little thing she does is magic, the Police</BR>Lovely Day, Bill Withers</BR>Sweet Dreams, the Eurythmics</BR>Purple Rain, Prince</BR>Whole lotta love, Led Zeppelin</BR>Go your own way, Fleetwood Mac</BR>Light my fire, the Doors", answerSpeak : "", question : ""}) ;
 
 
+quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2023-1-1,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'C': </BR></BR>What instrument is used for measuring the distance between two points on a curved surface?", answer : "Calliper(s)", answerSpeak : "",
+	answerimage : "https://www.goldyindustries.com/Caliper-Animation.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'C': </BR></BR>In which country was Greenpeace founded in 1971?", answer : "Canada", answerSpeak : "",
+	answerimage : "https://media.tenor.com/S3pLpeNrRbYAAAAM/cheering-canada.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'C': </BR></BR>The Panama canal connects the Pacific Ocean and which other body of water?", answer : "Caribbean Sea", answerSpeak : "",
+	answerimage : "https://i.pinimg.com/originals/82/19/e0/8219e0fc7cce3cdc99c2d32b43fada27.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'C': </BR></BR>What structure in the back of the brain governs motor control?", answer : "Cerebellum", answerSpeak : "",
+	answerimage : "https://media.tenor.com/TjB2FeO89LIAAAAC/drunk-dancing.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'C': </BR></BR>What name is given to a large French country house?", answer : "Chateau", answerSpeak : "",
+	answerimage : "https://cdn.images.express.co.uk/img/dynamic/79/590x/secondary/Dick-Strawbridge-Angel-Escape-to-the-Chateau-latest-news-update-2976369.jpg?r=1617007099602"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'C': </BR></BR>Which chemical compound in the body is linked to hardening of the arteries?", answer : "Cholesterol", answerSpeak : "",
+	answerimage : "https://www.juststand.org/wp-content/uploads/2017/09/Ergotron_MoveMore_LDL-HDL.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'C': </BR></BR>What is the fear of enclosed spaces called?", answer : "Claustrophobia", answerSpeak : "",
+	answerimage : "https://media.tenor.com/2-eIQtXYNyYAAAAC/a-new-hope-trash-compactor.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'C': </BR></BR>What was the computer called which was developed from Turing's 'bombes' at Bletchley Park?", answer : "Colossus", answerSpeak : "",
+	answerimage : "https://www.cryptomuseum.com/crypto/colossus/img/colossus_full.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'C': </BR></BR>What is the name for the deep freezing of bodies of people in the hope of being woken in the future?", answer : "Cryonics", answerSpeak : "",
+	answerimage : "https://media.tenor.com/nEuA4w73KOoAAAAC/austin-powers-mike-myers.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'C': </BR></BR>In Greek mythology Polyphemus was the leader of which group of mythical giants?", answer : "Cyclops", answerSpeak : "",
+	answerimage : "https://64.media.tumblr.com/ad972cd8449d1dc3c7bfeb1125359997/tumblr_o4z08blc2M1sqf5tdo4_400.gif"} ); 
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2023-1-1,InnerWheel,saturday",
+		questInfo: new Array() };  //Down to row 221 on Jazz playlist
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/79pH7Cd66FlQlH9luI5LC4?utm_source=generator&theme=0" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
+	answer : "Walk on the wild side, Lou Reed</BR>Everybody Hurts, R.E.M.</BR>KISS, Prince (Tom Jones and Art of Noise)</BR>Heart of gold, Neil Young</BR>I'm not in love, 10cc</BR>True Colours, Cyndi Lauper</BR>Sowing the seeds of love, Tears for fears</BR>I still haven't found what I'm looking for, U2</BR>Here I go again, Whitesnake</BR>You spin me right round, Dead or Alive", answerSpeak : "", question : ""}) ;
+
 
 
 quests[++questIndexBuilder] = { 
