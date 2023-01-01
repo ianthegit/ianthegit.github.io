@@ -4,6 +4,20 @@ quests[++questIndexBuilder] = {
 		hoverover : "Who was born today or yesterday",
 		tags : "2022-7-31,saturday,InnerWheel,surfers,birthdays", 
 		questInfo: new Array() };
+
+
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-1",
+	question : "Who is this, born January 1st 1969?" ,	answer : "Verne Troyer", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Verne_Troyer_Chiller_Theatre_Expo.jpg/220px-Verne_Troyer_Chiller_Theatre_Expo.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-1",
+	question : "Who is this (pictured without the Furious Five), born January 1st 1958?" ,	answer : "Grandmaster Flash", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Grandmaster_Flash_-_James_Lavelle%27s_Meltdown_Festival_2014_%28cropped%29.jpg/220px-Grandmaster_Flash_-_James_Lavelle%27s_Meltdown_Festival_2014_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-1",
+	question : "Who is this, born January 1st 1955?" ,	answer : "Mary Beard", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Mary_Beard_UC3M_2017_%28cropped%29.JPG/220px-Mary_Beard_UC3M_2017_%28cropped%29.JPG"	});	
+
+
+
+
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, birthday:"7-30", 	
 	question : "Who is this, born July 30th 1991?  " ,	answer : "Diana Vickers", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/DianaVickersWiki.jpg/220px-DianaVickersWiki.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	birthday:"7-30",
@@ -535,6 +549,30 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 	question : "Who is this, born December 18th 1946?" ,	answer : "Steven Spielberg", answerSpeak : "", image : "https://faroutmagazine.co.uk/static/uploads/2021/10/The-DVD-Steven-Spielberg-believed-was-haunted.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-18",
 	question : "Who is this, born December 18th 1943?" ,	answer : "Keith Richards", answerSpeak : "", image : "https://i.pinimg.com/originals/08/8d/7e/088d7e8cf9d8bd42516afdd0419a5bea.jpg"	});	
+
+
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-31",
+	question : "Who is this, born December 31st 1937?" ,	answer : "Anthony Hopkins", answerSpeak : "", image : "https://bloody-disgusting.com/wp-content/uploads/2014/12/83-Hannibal-Lecter-face-mask.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-31",
+	question : "Who is this, born December 31st 1941?" ,	answer : "Alex Ferguson", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Alex_Ferguson_02.jpg/220px-Alex_Ferguson_02.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-31",
+	question : "Who is this, born December 31st 1941?" ,	answer : "Sarah Miles", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Sarah_Miles_in_1980_%28cropped%29.jpg/220px-Sarah_Miles_in_1980_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-31",
+	question : "Who is this on the right of Stewart Copeland & Sting, born December 31st 1942?" ,	answer : "Andy Summers", answerSpeak : "", image : "https://townsquare.media/site/295/files/2022/06/attachment-police.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-31",
+	question : "Who is this, born December 31st 1943?" ,	answer : "John Denver", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/John_Denver_1974.jpg/220px-John_Denver_1974.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-31",
+	question : "Who is this, born December 31st 1943?" ,	answer : "Ben Kingsley", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Ben_Kingsley_by_Gage_Skidmore.jpg/220px-Ben_Kingsley_by_Gage_Skidmore.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-31",
+	question : "Who is this, the 'Queen of Disco', born December 31st 1948?" ,	answer : "Donna Summer", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Donna_Summer_1977.JPG/220px-Donna_Summer_1977.JPG"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-31",
+	question : "Who is this, born December 31st 1954?" ,	answer : "Alex Salmond", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Alex_Salmond_in_China_2014.png/220px-Alex_Salmond_in_China_2014.png"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-31",
+	question : "Who is this, born December 31st 1959?" ,	answer : "Val Kilmer", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Val_Kilmer_Cannes.jpg/220px-Val_Kilmer_Cannes.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-31",
+	question : "Who is this, born December 31st 1977?" ,	answer : "Donald Trump Jnr", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Donald_Trump%2C_Jr._%2851770696331%29_%28cropped%29.jpg/220px-Donald_Trump%2C_Jr._%2851770696331%29_%28cropped%29.jpg"	});	
 
 /*
 
