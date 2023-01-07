@@ -4215,6 +4215,52 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : "Walk on the wild side, Lou Reed</BR>Everybody Hurts, R.E.M.</BR>KISS, Prince (Tom Jones and Art of Noise)</BR>Heart of gold, Neil Young</BR>I'm not in love, 10cc</BR>True Colours, Cyndi Lauper</BR>Sowing the seeds of love, Tears for fears</BR>I still haven't found what I'm looking for, U2</BR>Here I go again, Whitesnake</BR>You spin me right round, Dead or Alive", answerSpeak : "", question : ""}) ;
 
 
+quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2023-1-8,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'D': </BR></BR>1 1/2 oz. light rum, 1 lime, powdered sugar, fruit juice, blend w/crushed ice and you have a what?", answer : "Daiquiri", answerSpeak : "",
+	answerimage : "https://media.tenor.com/EAQ8HddTodYAAAAS/daiquiri-how-i-met-your-mother.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'D': </BR></BR>Rodin's sculpture 'The Thinker', is actually a portrait of what Italian poet?", answer : "Dante", answerSpeak : "",
+	answerimage : "https://media.tenor.com/g-l1CbjZPWMAAAAM/statue-waiting.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "What 'D': </BR></BR>Most blue eyed cats suffer from what affliction?", answer : "Deafness", answerSpeak : "",
+	image : "https://media.tenor.com/3DQ3O0ijIDAAAAAd/cat-blue-cat.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'D': </BR></BR>What is the fourth letter of the Greek alphabet?", answer : "Delta", answerSpeak : "",
+	answerimage : "https://www.nasa.gov/sites/default/files/thumbnails/image/wax_delta-b-full.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'D': </BR></BR>The Pink Panther in 'The Pink Panther' was a what?", answer : "Diamond", answerSpeak : "",
+	answerimage : "https://media.tenor.com/9Ilx3l_rfbcAAAAC/pink-panther-choke.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'D': </BR></BR>What is the term used for a drug designed to reduce body fluid?", answer : "Diuretic", answerSpeak : "",
+	answerimage : "https://thumbs.gfycat.com/BouncyOilyCamel-size_restricted.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'D': </BR></BR>Matador and Sniff are two varieties of what game?", answer : "Dominoes", answerSpeak : "",
+	answerimage : "https://media1.giphy.com/media/QzASHIVqZlFQ4eQTV7/giphy.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'D': </BR></BR>What word German origin is used to describe an apparition or double of living person?", answer : "Doppelganger", answerSpeak : "",
+	answerimage : "https://data.whicdn.com/images/223993860/original.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'D': </BR></BR>Among other things, what primarily did Alfred Nobel make his fortune from inventing?", answer : "Dynamite", answerSpeak : "",
+	answerimage : "https://i.gifer.com/7Q9k.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'D': </BR></BR>What word is often treated as an antonym of 'Utopia'?", answer : "Dystopia", answerSpeak : "",
+	answerimage : "https://media0.giphy.com/media/l0MYIv8kMQna584CI/giphy.gif"} ); 
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2023-1-8,InnerWheel,saturday",
+		questInfo: new Array() };  
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3zsox7pfXrh3FiZUnYbF0H?utm_source=generator&theme=0" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
+	answer : "I want to hold your hand, the Beatles</BR>Bohemian Rhapsody, Queen</BR>All you need is love, the Beatles</BR>Livin' on a prayer, Bon Jovi</BR>Light my fire, the Doors</BR>Uptown Girl, Billy Joel (Westlife)</BR>Mr Brightside, the Killers</BR>Personal Jesus, Depeche Mode</BR>Ruby Tuesday, The Rolling Stones</BR>Like a Prayer, Madonna", answerSpeak : "", question : ""}) ;
+
 
 quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
