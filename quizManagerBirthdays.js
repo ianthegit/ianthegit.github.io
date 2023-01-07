@@ -17,6 +17,43 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 
 
 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-7",
+	question : "Who is this, born January 7th 1985?" ,	answer : "Lewis Hamilton", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Lewis_Hamilton_2022_S%C3%A3o_Paulo_Grand_Prix_%2852498120773%29_%28cropped%29.jpg/220px-Lewis_Hamilton_2022_S%C3%A3o_Paulo_Grand_Prix_%2852498120773%29_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-7",
+	question : "Who is this, born January 7th 1970?" ,	answer : "Andy Burnham", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Andy_Burnham2.jpg/220px-Andy_Burnham2.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-7",
+	question : "Who is this, born January 7th 1970?" ,	answer : "Nick Clegg", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Nick_Clegg_%282011%29_%28cropped%29.jpg/220px-Nick_Clegg_%282011%29_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-7",
+	question : "Who is this, born January 7th 1964?" ,	answer : "Nicolas Cage", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Nicolas_Cage_Deauville_2013.jpg/220px-Nicolas_Cage_Deauville_2013.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-7",
+	question : "Who is this, born January 7th 1925?" ,	answer : "Gerald Durrell", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/9/9d/Gerald_Durrell%2C_Askania_Nova_%28cropped%29.jpg"	});	
+
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-8",
+	question : "Who is this, born January 8th 1982?" ,	answer : "Kim Jong-un", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Kim_Jong-un_April_2019_%28cropped%29.jpg/220px-Kim_Jong-un_April_2019_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-8",
+	question : "Who is this, born January 8th 1967?" ,	answer : "Tom Watson, Baron Watson of Wyre Forest", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Portrait_of_Tom_Watson_in_2018.jpg/220px-Portrait_of_Tom_Watson_in_2018.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-8",
+	question : "Who is this, born January 8th 1947?" ,	answer : "David Bowie", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/e/e8/David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-8",
+	question : "Who is this young man, born January 8th 1942?" ,	answer : "Stephen Hawking", answerSpeak : "", image : "https://www.telegraph.co.uk/content/dam/news/2018/03/14/TELEMMGLPICT000001135020_trans_NvBQzQNjv4BqZgEkZX3M936N5BQK4Va8RWtT0gK_6EfZT336f62EI5U.jpeg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-8",
+	question : "Who is this, born January 8th 1941?" ,	answer : "Graham Chapman", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/en/f/f7/Graham_Chapman_Portrait.png"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-8",
+	question : "Who is this, born January 8th 1937?" ,	answer : "Dame Shirley Bassey", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Shirley_Bassey_%281971%29.jpg/220px-Shirley_Bassey_%281971%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-8",
+	question : "Who is this, born January 8th 1935?" ,	answer : "Elvis Presley", answerSpeak : "", image : "https://media.tenor.com/zqMIsIeKYfIAAAAM/elvis-presley-elvis.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-8",
+	question : "Who is this, born January 8th 1934?" ,	answer : "Roy Kinnear", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Roy_Kinnear.jpg/220px-Roy_Kinnear.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-8",
+	question : "Who is this, born January 8th 1929?" ,	answer : "Saeed Jaffrey", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/en/b/b6/Saeed_Jaffrey_Portrait.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-8",
+	question : "Who is this, born January 8th 1924?" ,	answer : "Ron Moody", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/0/01/Ron_Moody.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-8",
+	question : "Who is this, born January 8th 1908?" ,	answer : "William Hartnell", answerSpeak : "", image : "https://cdn.images.express.co.uk/img/dynamic/20/750x445/1325546.jpg"	});	
+
+
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, birthday:"7-30", 	
 	question : "Who is this, born July 30th 1991?  " ,	answer : "Diana Vickers", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/DianaVickersWiki.jpg/220px-DianaVickersWiki.jpg"	});	
