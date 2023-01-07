@@ -2293,6 +2293,33 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 	answerimage : "https://i2-prod.manchestereveningnews.co.uk/incoming/article17322597.ece/ALTERNATES/s615b/0_Im-a-Celebrity-Get-Me-Out-of-Here-TV-Show-Series-19-Australia-26-Nov-2019.jpg", answer : "Dunny",  answerSpeak : ""}) ;
 
 
+
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of ??",
+		tags : "2023-1-8,pictionary", straightToAnswers:true,
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://themanc.com/wp-content/uploads/2023/01/Editorial-Thumbnails-2023-01-03T162929.585.jpg", answer : "(Thor the) Walrus", answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://media.tenor.com/ScHakkMXFQkAAAAM/hancock-throws-whale-into-the-ocean.gif", answer : "Whale",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://media1.giphy.com/media/hrp6x9Pb0KaiXbgRV0/giphy.gif", answer : "Seal",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://thumbs.gfycat.com/SpanishTatteredFlyingfish-max-1mb.gif", answer : "Basking shark",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://images.squarespace-cdn.com/content/v1/5603a46be4b00b785628b729/1603378080600-3QMUNVGG8BZLHXA82YUR/jelly.gif", answer : "Jellyfish",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://images.lbc.co.uk/images/322893?crop=16_9&width=660&relax=1&signature=YoCF_dNBG6u_GXWScoLeJ3stxEk=", answer : "Sewage",  answerSpeak : ""}) ;
+
+
 /*
  * 	image : "",
 	answerimage : "", answer : "Table"}) ;
