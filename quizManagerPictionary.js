@@ -2301,22 +2301,22 @@ quests[++questIndexBuilder] = { //
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEUN-ZpFGDrKCKgAYQcEhJ6U1y9QOmsCRGSBAGp296LdMHlRmhbeAvgN79qsPqrGsFBVHp2ZWHLUTS_JoqdDJP7koinG7otxmIRGsTj2hetrMPs5utrUERiGNhQziafI4O6Gg4rZk7GQTbJ7Kwvd5qkqDw=w285-h167-no?authuser=0",
 	answerimage : "https://themanc.com/wp-content/uploads/2023/01/Editorial-Thumbnails-2023-01-03T162929.585.jpg", answer : "(Thor the) Walrus", answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEWCDEcPrbJ8PyUnDiF5urngpviwaqF78pRyVI2vldYcKgThm-cdwacZzbFRNJqusY7bg82PXsj6lfaNoRrCKPk45yqu5Rmu51GVmUbaHOJQCratwBiwLdmXwnNEfHUMazJJLYQ_sOL5yyym-1Rr-sCjpg=w701-h303-no?authuser=0",
 	answerimage : "https://media.tenor.com/ScHakkMXFQkAAAAM/hancock-throws-whale-into-the-ocean.gif", answer : "Whale",  answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEWGrDfA5ncpY9p2WQNF37s6EaGpVkUyQW2BotcPTMVeihJHFgHRsgCvqtuZOKDd7c_cxviLvXDQgdecYfMgoNTWCOq8L5bbk6PPkRAVMKfe2a4ROddGt6Kb4QftSrIq97gh63Hs_O1B2aP2id0LX0ztsg=w335-h199-no?authuser=0",
 	answerimage : "https://media1.giphy.com/media/hrp6x9Pb0KaiXbgRV0/giphy.gif", answer : "Seal",  answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEWBH7vfij5nq2XDM3qqqc3qwe03rIq1NxmJMB03eMSGrqqX1bKQAjGYQRej886L1V8ZhOcLK2uS9HBR1sslpVKe62e4KY7GmonzUoxMh0_pADSn66nXPuSjAWcKv1mCufT_I4esxyvL3BHDuBdBITW0dA=w699-h355-no?authuser=0",
 	answerimage : "https://thumbs.gfycat.com/SpanishTatteredFlyingfish-max-1mb.gif", answer : "Basking shark",  answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEU1ZHPD5uevvYC52g-G4bXAgk7JoCBy6fqLzq7Mw6smHVBfELv_5B5Gx4xm2esMehLm1Y0CsRJO_CJ4kibEo2EEeetzNl-DhJ4YqX_NxDLUEG-8HSbfBo-Gg_F39HdNRZrroxzvETtAtM3lW6UszJIY7Q=w357-h371-no?authuser=0",
 	answerimage : "https://images.squarespace-cdn.com/content/v1/5603a46be4b00b785628b729/1603378080600-3QMUNVGG8BZLHXA82YUR/jelly.gif", answer : "Jellyfish",  answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEUISB9v-SyB9RSrT1shJe-Nq9KqJnXpwoJRB2hp7IyOy9mwYaaRIMe6jDujRAq0xKSKx1avp8UiPLTzJh1YDY65Z9tbOTy7fVOAXyC6L62Q6LqfaTeHDVpLwKhnTtD8AyO1_9WvoAbnRnudAnBpYScEIA=w807-h419-no?authuser=0",
 	answerimage : "https://images.lbc.co.uk/images/322893?crop=16_9&width=660&relax=1&signature=YoCF_dNBG6u_GXWScoLeJ3stxEk=", answer : "Sewage",  answerSpeak : ""}) ;
 
 
