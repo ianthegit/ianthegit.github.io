@@ -2320,6 +2320,35 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://images.lbc.co.uk/images/322893?crop=16_9&width=660&relax=1&signature=YoCF_dNBG6u_GXWScoLeJ3stxEk=", answer : "Sewage",  answerSpeak : ""}) ;
 
 
+
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of Ted",
+		tags : "2023-1-15,pictionary", straightToAnswers:true,
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Jules draw", // 
+	image : "",
+	answerimage : "https://realfood.tesco.com/media/images/RFO-1400x919-ToadInTheHole-6546261d-3e18-402c-8b47-202a3dff1159-0-1400x919.jpg", answer : "Toad in the Hole", answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://deadline.com/wp-content/uploads/2022/08/lord-of-the-rings-feature-image.jpg?w=1000", answer : "Lord of the Rings",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Jules draw", // 
+	image : "",
+	answerimage : "https://upload.wikimedia.org/wikipedia/commons/1/11/2016_Fiat_Ducato_42_Maxi_West_Midlands_Ambulance_Service_3.0.jpg", answer : "Ambulance",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://m.media-amazon.com/images/M/MV5BNDcwZDc2NTEtMzU0Ni00YTQyLWIyYTQtNTI3YjM0MzhmMmI4XkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_.jpg", answer : "Pokemon",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Jules draw", // 
+	image : "",
+	answerimage : "https://lh3.googleusercontent.com/pw/AL9nZEXxYlMNC7RLSxY45SnAuIVwwg5QMm_J7wwsf2a1QMn_slf6DFZBQI1BJ1wjwPKu8jeFPCCr_C0ugDz8cMFpjtigeKpB85eVXIT96SBMdVOc96nxodGmQGP5mBBr-WT8gcEHvMqmbTrVqviPn6v82n6rvg=w1162-h871-no?authuser=0", answer : "Buster",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://lh3.googleusercontent.com/pw/AL9nZEV_PpGn64C2kEoBCx9xWYlQ9IFgwADrA2xG9OZt3yw2yNcqSHFcPrCfajX5XpKU_Yi_UqN6STrIvYESpMYcZKlxH1QwkFM5lOs5s2dC7LGYCdKNGQnq8y58064GP0GRXM-mEnnR-SyXrvL2SiraN6QEog=w1162-h871-no?authuser=0", answer : "Swords",  answerSpeak : ""}) ;
+
+
+
+
 /*
  * 	image : "",
 	answerimage : "", answer : "Table"}) ;
