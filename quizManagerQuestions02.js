@@ -4263,6 +4263,54 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2023-1-15,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'E': </BR></BR>What part of your body is connected to the throat by the eustachian tube?", answer : "Ears", answerSpeak : "",
+	answerimage : "https://media.tenor.com/tlcG0Q8uP3cAAAAM/sunnyfication.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'E': </BR></BR>Called Rapa-nui natively, which Pacific island's puzzling monoliths attract ethnologists?", answer : "Easter Island", answerSpeak : "",
+	answerimage : "https://media1.giphy.com/media/SbdDzU2QYWA24/giphy.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'E': </BR></BR>You can do a degree in brewing at Heriot-Watt University in which Scottish city?", answer : "Edinburgh", answerSpeak : "",
+	answerimage : "https://media.tenor.com/pYMpM6ynugUAAAAM/scottish-jig-highlands-dance-scottish.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'E': </BR></BR>What nationality was Boutros Boutros Ghali, once the Secretary General of the United Nations?", answer : "Egyptian", answerSpeak : "",
+	answerimage : "https://media.tenor.com/MifQOw5sl0kAAAAd/walk-like-an-egyptian-egyptian.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'E': </BR></BR>How many keys are there on a grand piano?", answer : "Eighty eight", answerSpeak : "",
+	answerimage : "https://thumbs.gfycat.com/TepidOrganicLangur-size_restricted.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'E': </BR></BR>Which famous F.B.I agent headed the investigation of Al Capone?", answer : "Elliot Ness", answerSpeak : "",
+	answerimage : "https://media.tenor.com/FAKHpA5dEqIAAAAC/no-doubt-pointing-down.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'E': </BR></BR>Which musician did the U.S. postal service print 500 million stamps featuring in 1993?", answer : "Elvis", answerSpeak : "",
+	answerimage : "https://i.gifer.com/5F8F.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'E': </BR></BR>In the U.S. the TV equivalent of the Oscars are called the what?", answer : "Emmys", answerSpeak : "",
+	answerimage : "https://static.standard.co.uk/2023/01/11/11/newFile-2.jpg?width=1200"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'E': </BR></BR>What books used to famously be sold door-to-door", answer : "Encyclopedia", answerSpeak : "",
+	answerimage : "https://i.makeagif.com/media/9-03-2015/bzZo0e.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'E': </BR></BR>The imaginary line encircling the earth at 90 degrees from both poles at every point is called the what?", answer : "Equator", answerSpeak : "",
+	answerimage : "https://classroomclipart.com/images/gallery/Animations/Geography/globe-with-equator-animation.gif"} ); 
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),  //Down to row 249
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2023-1-15,InnerWheel,saturday",
+		questInfo: new Array() };  
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5eGaerJsvwe4H4Qw2UfYPO?utm_source=generator&theme=0" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
+	answer : "Hey Jude, The Beatles</BR>Pride, U2</BR>We will rock you, Queen</BR>Angie, The Rolling Stones</BR>Thriller, Michael Jackson</BR>Rolling inthe Deep, Adele</BR>Valerie, Amy Winehouse (The Zutons)</BR>Sweet Dreams, The Eurythmics</BR>Tainted Love, Soft Cell (Gloria Jones)</BR>Don't stop belevin', Journey", answerSpeak : "", question : ""}) ;
+
+
+
+quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
 		hoverover : "What sinks, what floats",
 		tags : "2022-x-xx,saturday,InnerWheel,surfers", 
