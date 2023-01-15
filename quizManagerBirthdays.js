@@ -55,6 +55,49 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 
 
 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-14",
+	question : "Who is this, born January 14th 1988?" ,	answer : "Jack P Shepherd", answerSpeak : "", image : "https://i2-prod.mirror.co.uk/incoming/article22293636.ece/ALTERNATES/s1200c/1_Jack-P-Shepherd-as-Wolverine.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-14",
+	question : "Who is this, born January 14th 1989?" ,	answer : "Frankie Bridge (nee Sandford)", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Frankie_Sandford_All_Fired_Up_Live.png/220px-Frankie_Sandford_All_Fired_Up_Live.png"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-14",
+	question : "Who is this, born January 14th 1969?" ,	answer : "Dave Grohl", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/FoosDublin210819-2_%2848620472807%29_%28cropped%29.jpg/220px-FoosDublin210819-2_%2848620472807%29_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-14",
+	question : "Who is this, born January 14th 1969?" ,	answer : "Jason Bateman", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Jason_Bateman_2011.jpg/220px-Jason_Bateman_2011.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-14",
+	question : "Who is this, born January 14th 1967?" ,	answer : "Emily Watson", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/c/c3/Emily_Watson_%2825831419375%29_cropped.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-14",
+	question : "Who is this, born January 14th 1965?" ,	answer : "Jemma Redgrave", answerSpeak : "", image : "https://i2-prod.mylondon.news/incoming/article21788230.ece/ALTERNATES/s615/0_gettyimages-614909778-612x612.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-14",
+	question : "Who is this, born January 14th 1965?" ,	answer : "Mark Addy", answerSpeak : "", image : "https://i2-prod.chroniclelive.co.uk/incoming/article1429651.ece/ALTERNATES/s615b/mark-addy-in-red-riding-648268493.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-14",
+	question : "Who is this, born January 14th 1941?" ,	answer : "Faye Dunaway", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Faye_Dunaway_-_1971_-_PBS.JPG/220px-Faye_Dunaway_-_1971_-_PBS.JPG"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-14",
+	question : "Who is this, born January 14th 1934?" ,	answer : "Richard Briers", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Richard_Briers_Memorabilia_March_2009_crop.jpg/220px-Richard_Briers_Memorabilia_March_2009_crop.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-14",
+	question : "Who is this, born January 14th 1926?" ,	answer : "Warren Mitchell", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Warren_Mitchell.jpg/220px-Warren_Mitchell.jpg"	});	
+
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-15",
+	question : "Who is this, born January 15th 1913?" ,	answer : "Lloyd Bridges", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Lloyd_Bridges_1966.jpg/220px-Lloyd_Bridges_1966.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-15",
+	question : "Who is this, born January 15th 1921?" ,	answer : "Frank Thornton", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/en/f/fe/Frank_Thornton.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-15",
+	question : "Who is this, born January 15th 1929?" ,	answer : "Martin Luther King Jr", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Martin_Luther_King%2C_Jr..jpg/220px-Martin_Luther_King%2C_Jr..jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-15",
+	question : "Who is this, born January 15th 1933?" ,	answer : "Frank Bough", answerSpeak : "", image : "https://i2-prod.dailyrecord.co.uk/incoming/article22904734.ece/ALTERNATES/s615b/0_WA434147.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-15",
+	question : "Who is this, born January 15th 1943?" ,	answer : "Margaret Beckett", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Official_portrait_of_Rt_Hon_Margaret_Beckett_MP_crop_2.jpg/220px-Official_portrait_of_Rt_Hon_Margaret_Beckett_MP_crop_2.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-15",
+	question : "Who is this, born January 15th 1945?" ,	answer : "Princess Michael of Kent", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/HRH_Princess_Michael_of_Kent_Allan_Warren.jpg/220px-HRH_Princess_Michael_of_Kent_Allan_Warren.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-15",
+	question : "Who is this, born January 15th 1965?" ,	answer : "James Nesbitt", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/6/6a/James_Nesbitt_2013.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-15",
+	question : "Who is this, born January 15th 1972?" ,	answer : "Claudia Winkleman", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Claudia_Winkleman_%28retouched%29_%28sq_cropped%29.jpg/220px-Claudia_Winkleman_%28retouched%29_%28sq_cropped%29.jpg"	});	
+
+
+
+
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, birthday:"7-30", 	
 	question : "Who is this, born July 30th 1991?  " ,	answer : "Diana Vickers", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/DianaVickersWiki.jpg/220px-DianaVickersWiki.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	birthday:"7-30",
