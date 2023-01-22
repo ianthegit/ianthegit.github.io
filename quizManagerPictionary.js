@@ -2348,6 +2348,32 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of things you might currently find in Australia",
+		tags : "2023-1-22,pictionary", straightToAnswers:true,
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://media.tenor.com/qS28kUgsoJIAAAAM/good-night.gif", answer : "Koala", answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://media0.giphy.com/media/D10hKcRT6JaLu/giphy.gif", answer : "Kangaroo",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://media4.giphy.com/media/G83E9hh3TkC9a/giphy.gif", answer : "Spider",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://media2.giphy.com/media/yTR44Lj4a03Dy/giphy.gif", answer : "Snake",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://lh3.googleusercontent.com/pw/AL9nZEX7zeTjIdlVEQznANobe8jbK6qZjh168zl7XwdbgS1pK-oYafIluM5QShB-tqyusVo6WbdW0Puro7a88fY3p7nRzN5lyNOQpVq1EpV7r6fMvTpaEzauojL-UHQ7K5gPzPb05J8yaQUmS-hmMVLmfn59zQ=w1552-h871-no?authuser=0", answer : "Granny",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://media.tenor.com/y28WSl35-SkAAAAM/greys-anatomy-arizona-robbins.gif", answer : "Empty wine bottle",  answerSpeak : ""}) ;
+
+
 
 /*
  * 	image : "",
