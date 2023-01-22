@@ -4311,6 +4311,54 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2023-1-22,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'F': </BR></BR>Bell's palsy results in numbness in which area of the body?", answer : "Face", answerSpeak : "",
+	answerimage : "https://media.tenor.com/J9B8Nb3s2BAAAAAC/justin-bieber-bieber.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'F': </BR></BR>In Wallace and Gromit's 'The Wrong Trousers', what is the name of the penguin who steals the trousers?", answer : "Feathers McGraw", answerSpeak : "",
+	answerimage : "https://media.tenor.com/zlfIRdTgnW0AAAAC/feathers-mc-graw-fabulous.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'F': </BR></BR>Where on your body are the most sweat glands?", answer : "Feet", answerSpeak : "",
+	answerimage : "https://media.tenor.com/ZQDEE3ThPfIAAAAC/die-hard-bruce-willis.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'F': </BR></BR>An amusement ride consisting of a rotating upright wheel with multiple passenger-carrying components is known as what kind of wheel?", answer : "Ferris", answerSpeak : "",
+	answerimage : "https://lh3.googleusercontent.com/pw/AL9nZEXg7ALxp0zqwwsPbF3HELB1Mx4J4JjrKW_hWIcwDSETrDjh_k-6klRYuF1XOR5Sp0bO8gmbl7nDJMKAkDnxIFKEmrxHxu63W2lW4NdxSDvQnLhnsNZ20fyk-B_Pvo_kHEDpLtc0dvLTMcLDosJqKVpaxQ=w1175-h871-no?authuser=0"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'F': </BR></BR>The Devonian Period is also known as the Age of what?", answer : "Fish", answerSpeak : "",
+	answerimage : "https://media.tenor.com/OxVdJJz-PZIAAAAd/big-fish-fat-fish.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'F': </BR></BR>What is the Spanish dance music normally associated with castanets?", answer : "Flamenco", answerSpeak : "",
+	answerimage : "https://media.tenor.com/3yX7aGwonFYAAAAM/flamenco-bailar.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'F': </BR></BR>What culinary term refers to dishes that typically include a base of cooked spinach, a protein component and Mornay sauce?", answer : "Florentine", answerSpeak : "",
+	answerimage : "https://media.tenor.com/HoWtyDOmIskAAAAC/florence-italy.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'F': </BR></BR>What type of triplane did the red baron fly during World War I?", answer : "Fokker", answerSpeak : "",
+	answerimage : "https://i.gifer.com/origin/c8/c89e59c7de84fba725eb5a5530ee517d.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'F': </BR></BR>Which animal is known as 'zorro' in Spanish and 'volpe' in Italian?", answer : "Fox", answerSpeak : "",
+	answerimage : "https://i.makeagif.com/media/1-09-2017/C8hGvG.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'F': </BR></BR>What name is given to a band of painted or sculpted decoration, often at the top of a wall?", answer : "Frieze", answerSpeak : "",
+	answerimage : "https://media4.giphy.com/media/s4Bi420mMDRBK/giphy.gif"} ); 
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),  
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2023-1-22,InnerWheel,saturday",
+		questInfo: new Array() };  
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4FeSyU8Wk8o8Tp1GTNMFce?utm_source=generator&theme=0" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
+	answer : "Running up that hill, Kate Bush</BR>Paint it Black, Rolling Stones</BR>Material Girl, Madonna</BR>Total eclipse of the heart, Bonnie Tyler</BR>Sweet dreams (are made of this), Eurythmics</BR>Eleanor Rigby, the Beatles</BR>Fix You, Coldplay</BR>Shake it Off, Taylor Swift</BR>Simply the Best, Tina Turner</BR>Chasing Cars, Snow Patrol", answerSpeak : "", question : ""}) ;
+
+
+
+quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
 		hoverover : "What sinks, what floats",
 		tags : "2022-x-xx,saturday,InnerWheel,surfers", 
