@@ -2355,22 +2355,22 @@ quests[++questIndexBuilder] = { //
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEUNadmQUDBNo8t4FY-uidwuny_dNLjMSpmx_FjAfqreub8PDfzEIcvVoOeK13YCZ9VbgKev3VLB4y-nYSg1QHL61cXULFeyQA4-z7ivcjTySLwlByqnqRnEzqaJOe40EGgJrjuOrQQ9VNnAYghY-UO_fg=w507-h484-no?authuser=0",
 	answerimage : "https://media.tenor.com/qS28kUgsoJIAAAAM/good-night.gif", answer : "Koala", answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEVaavlgkRyCkfvN6Vw6BqqdWoddM8Hh7HQPx2ByYYTMOpFxycEkYu5kb2N_IGvo7j02Q4N4p4f12aerQO7Xw6twO6_oMvmXhI0NpxfZH0dO5X-7Wh1ZgkwhaYGutuam7t4Jotf9IwaZWpYHEuTuKDXOqQ=w758-h639-no?authuser=0",
 	answerimage : "https://media0.giphy.com/media/D10hKcRT6JaLu/giphy.gif", answer : "Kangaroo",  answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEWhBU8VR--nAzI9lVMaOC6qQ4iEMmZyX68BKOuWzE4-wDtmi-yoduxItIt3vSnY9UtmWPXVPLFLRU9U_R1PYUboUDZnLjy2MhyjwBmSgj9Bn4tDihegu8D1OIFiqNZt3Gh7ZHf6PmUbLmI04V9yHBz0DA=w752-h401-no?authuser=0",
 	answerimage : "https://media4.giphy.com/media/G83E9hh3TkC9a/giphy.gif", answer : "Spider",  answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEUhtITSJlKq4h8uZWrCNPXICGj0P5h8jI7sAiCB6lCVIihBWrU8sE-XqxfcYuTysGugRQWasAV9bnaO6R_j6Y19UR41kNiQe1qzJzqrPkKajRKRhNqeX5Lajihh0TnSbdaxuTP6S5sRszwmQ9wcEOuswg=w441-h76-no?authuser=0",
 	answerimage : "https://media2.giphy.com/media/yTR44Lj4a03Dy/giphy.gif", answer : "Snake",  answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEXKrI6lD4J8V2Q1iyq9RIfku70OKeT8QqmMaLE1Lxh38a3wI7w7-2bp-Bqip73eGsPAT_DxJBmqRO6vZ3ACTpgoE_tR_-eUuCDNJRaWGJiazvZtEn7nMWmmDmO12QP_7i4a9x5zt0tEMEfrRKbr4KP8Mg=w825-h487-no?authuser=0",
 	answerimage : "https://lh3.googleusercontent.com/pw/AL9nZEX7zeTjIdlVEQznANobe8jbK6qZjh168zl7XwdbgS1pK-oYafIluM5QShB-tqyusVo6WbdW0Puro7a88fY3p7nRzN5lyNOQpVq1EpV7r6fMvTpaEzauojL-UHQ7K5gPzPb05J8yaQUmS-hmMVLmfn59zQ=w1552-h871-no?authuser=0", answer : "Granny",  answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AL9nZEWhS3sqY9PMQuzW6rWsvqTYiU5CL_KELZY-7hb6B6nKZstwPV-W36IoalIe1Z39K1QKJZOla13RAixYjMcOWMYXtEHajt-cbfHVylzbMlnlKCdj5C1h7ncMWrgCcLq4OXOOMEyCfOEDHvM-8TPoxjr8Wg=w834-h636-no?authuser=0",
 	answerimage : "https://media.tenor.com/y28WSl35-SkAAAAM/greys-anatomy-arizona-robbins.gif", answer : "Empty wine bottle",  answerSpeak : ""}) ;
 
 
