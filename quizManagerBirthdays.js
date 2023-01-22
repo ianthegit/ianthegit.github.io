@@ -97,6 +97,42 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 
 
 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-21",
+	question : "Who is this, born January 21 1976?" ,	answer : "Emma Bunton (Baby Spice)", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Emma_Bunton_at_Heart_Live_Christmas_2016.jpg/220px-Emma_Bunton_at_Heart_Live_Christmas_2016.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-21",
+	question : "Who is this, born January 21 1950?" ,	answer : "Billy Ocean", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Billy_Ocean_in_january_2012.jpg/220px-Billy_Ocean_in_january_2012.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-21",
+	question : "Who is this, born January 21 1945?" ,	answer : "Martin Shaw", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Martin_Shaw_in_2020.png/220px-Martin_Shaw_in_2020.png"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-21",
+	question : "Who is this, born January 21 1941?" ,	answer : "Placido Domingo", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Concierto_de_Pl%C3%A1cido_Domingo_%28cropped%29.jpg/220px-Concierto_de_Pl%C3%A1cido_Domingo_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-21",
+	question : "Who is this, born January 21 1924?" ,	answer : "Benny Hill", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/en/8/8f/Benny_Hill_Smiling.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-21",
+	question : "Who is this, born January 21 1922?" ,	answer : "Aristotelis 'Telly' Savalas", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Telly_Savalas_Kojak_1973.JPG/220px-Telly_Savalas_Kojak_1973.JPG"	});	
+
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-22",
+	question : "Who is this, born January 22 1920?" ,	answer : "Sir Alf Ramsey", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Alf_Ramsey_%281969%29.jpg/220px-Alf_Ramsey_%281969%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-22",
+	question : "Who is this, born January 22 1934?" ,	answer : "Bill Bixby", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Bill_Bixby_The_Magician_1973.JPG/220px-Bill_Bixby_The_Magician_1973.JPG"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-22",
+	question : "Who is this, born January 22 1940?" ,	answer : "John Hurt", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/John_Hurt_Cannes_2013.JPG/220px-John_Hurt_Cannes_2013.JPG"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-22",
+	question : "Who is this, born January 22 1960?" ,	answer : "Michael Hutchence", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/4/4d/Michael-hutchence-INXS-1986.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-22",
+	question : "Who is this, born January 22 1968?" ,	answer : "Guy Fieri", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Guy_Fieri_at_Guantanamo_2.jpg/440px-Guy_Fieri_at_Guantanamo_2.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-22",
+	question : "Who is this, born January 22 1990?" ,	answer : "Phil Wang", answerSpeak : "", image : "https://www.denofgeek.com/wp-content/uploads/2022/10/Den-of-Geek-4.png?fit=1200%2C675"	});	
+
+
+/*
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
+	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
+
+*/
+
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, birthday:"7-30", 	
 	question : "Who is this, born July 30th 1991?  " ,	answer : "Diana Vickers", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/DianaVickersWiki.jpg/220px-DianaVickersWiki.jpg"	});	
