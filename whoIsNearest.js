@@ -35,9 +35,11 @@ function setupTeams(teams) {
 function writeTeamsDistanceHTML() {
 	var size = teamsData.length;
 	teamHTML = "<table border = '1'> ";
+	counter=0;
 	for (var i = 0 ; i < size ; i++) {
 		if (teamsData[i].sorter != null) {
-			teamHTML= teamHTML + "<tr><td>" +  i + "</td><td> " + teamsData[i].teamName + "</td><td> " + teamsData[i].distanceFrom + "</td></tr>"
+			counter++;
+			teamHTML= teamHTML + "<tr><td>" +  counter + "</td><td> " + teamsData[i].teamName + "</td><td> " + teamsData[i].distanceFrom + "</td></tr>"
 		}
 	}
 	teamHTML= teamHTML + "</table>";
