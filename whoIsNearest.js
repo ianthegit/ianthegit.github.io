@@ -23,15 +23,12 @@ function writeTeamsHTML(calculated) {
   } else { teamHTML= teamHTML + "<tr><td>" + teamsData[i].teamName + "</td><td><input type='number' id='" + teamsData[i].teamName + "' onchange='dataChangedOnRow(" + i + ", this.value)'> </td></tr>";}}
  return  "<table border = '0'> " + teamHTML + "</table>";}
 function dataChangedOnRow(rowNo, value) {
- teamsData[rowNo].answer=value;
- teamsData[rowNo].distanceFrom = answer - value;
- teamsData[rowNo].sorter = teamsData[rowNo].distanceFrom;
+ teamsData[rowNo].answer=value; teamsData[rowNo].distanceFrom = answer - value; teamsData[rowNo].sorter = teamsData[rowNo].distanceFrom;
  if (teamsData[rowNo].distanceFrom < 0) {
   teamsData[rowNo].sorter = teamsData[rowNo].distanceFrom *-1;
   if (mustBeUnder) {teamsData[rowNo].sorter = null;}}}
 function getURIString(paramName) {
- const queryString = window.location.search;
- const urlParams = new URLSearchParams(queryString);
+ const urlParams = new URLSearchParams(window.location.search);
  if (urlParams.has(paramName)) {return urlParams.get(paramName);};
  return '';}
 function getTeamNames(teamNamesString){	return decodeURI(teamNamesString);}
