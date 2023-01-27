@@ -29,6 +29,5 @@ function dataChangedOnRow(rowNo, value) {
   if (mustBeUnder) {teamsData[rowNo].sorter = null;}}}
 function getURIString(paramName) {
  const urlParams = new URLSearchParams(window.location.search);
- if (urlParams.has(paramName)) {return urlParams.get(paramName);};
- return '';}
+ if (urlParams.has(paramName)) {return urlParams.get(paramName);}; return '';}
 function getTeamNames(teamNamesString){	return decodeURI(teamNamesString);}
