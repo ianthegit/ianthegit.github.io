@@ -7,21 +7,22 @@ function createScreen() {
 	var teamNameString = getURIString('teamNames');
 	mustBeUnder = getURIString('mustBeUnder');
 	if (mustBeUnder) {
-		document.write("<div id='grader'  ><table border='0' ><tr><td><span id='ControlFunctions' >Closest under " + answer + " wins.  " + goButton + " </span></td></tr><tr><td><span id='data' >Data here</span></td></tr></table></div>");
-		
-	} else {
-		document.write("<div id='grader'  ><table border='0' ><tr><td><span id='ControlFunctions' >Closest to " + answer + " wins.  " + goButton + " </span></td></tr><tr><td><span id='data' >Data here</span></td></tr></table></div>");
+		snippit = 'under ';
+	}else {
+		snippit = 'to ';
 	}
+	document.write("<div id='grader'  ><table border='0' ><tr><td><span id='ControlFunctions' >Closest " + snippit + answer + " wins.  " + goButton + " </span></td></tr><tr><td><span id='data' >Data here</span></td></tr></table></div>");
+		
 	var teams=teamNameString.split(',');
 	setupTeams(teams);
-	document.getElementById("data").innerHTML = writeTeamsHTML();
+	document.getElementById("data").innerHTML = writeTeamsHTML(false);
 }
 
 function runCalculate() {
 	teamsData.sort(function(a,b){
 		return a.sorter-b.sorter;
 	});
-	document.getElementById("data").innerHTML = writeTeamsDistanceHTML();
+	document.getElementById("data").innerHTML = writeTeamsHTML(true);
 }
 
 function setupTeams(teams) {
@@ -32,26 +33,19 @@ function setupTeams(teams) {
 	}
 }
 
-function writeTeamsDistanceHTML() {
-	var size = teamsData.length;
-	teamHTML = "<table border = '1'> ";
-	counter=0;
-	for (var i = 0 ; i < size ; i++) {
-		if (teamsData[i].sorter != null) {
-			counter++;
-			teamHTML= teamHTML + "<tr><td>" +  counter + "</td><td> " + teamsData[i].teamName + "</td><td> " + teamsData[i].distanceFrom + "</td></tr>"
-		}
-	}
-	teamHTML= teamHTML + "</table>";
-	return teamHTML;
-}
-
-
-function writeTeamsHTML() {
+function writeTeamsHTML(calculated) {
 	var size = teamsData.length;
 	teamHTML = "<table border = '0'> ";
+	counter=0;
 	for (var i = 0 ; i < size ; i++) {
-		teamHTML= teamHTML + "<tr><td>" + teamsData[i].teamName + "</td><td><input type='number' id='" + teamsData[i].teamName + "' onchange='dataChangedOnRow(" + i + ", this.value)'> </td></tr>"
+		if (calculated) {
+			if (teamsData[i].sorter != null) {
+				counter++;
+				teamHTML= teamHTML + "<tr><td>" +  counter + "     </td><td> " + teamsData[i].teamName + "</td><td>    their answer was " + teamsData[i].distanceFrom + " away</td></tr>"
+			}
+		} else {
+			teamHTML= teamHTML + "<tr><td>" + teamsData[i].teamName + "</td><td><input type='number' id='" + teamsData[i].teamName + "' onchange='dataChangedOnRow(" + i + ", this.value)'> </td></tr>"
+		}
 	}
 	teamHTML= teamHTML + "</table>";
 	return teamHTML;
@@ -78,6 +72,5 @@ function getURIString(paramName) {
 }
 
 function getTeamNames(teamNamesString){
-
 	return decodeURI(teamNamesString);
 }
