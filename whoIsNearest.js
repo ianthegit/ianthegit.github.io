@@ -27,8 +27,7 @@ function writeTeamsHTML(calculated) {
 	for (var i = 0 ; i < size ; i++) {
 		if (calculated) {
 			if (teamsData[i].sorter != null) {
-				counter++;
-				teamHTML= teamHTML + "<tr><td>" +  counter + "     </td><td> " + teamsData[i].teamName + "</td><td>    their answer was " + teamsData[i].distanceFrom + " away</td></tr>"			}
+				teamHTML= teamHTML + "<tr><td>" +  ++counter + "     </td><td> " + teamsData[i].teamName + "</td><td>    their answer was " + teamsData[i].distanceFrom + " away</td></tr>"			}
 		} else { teamHTML= teamHTML + "<tr><td>" + teamsData[i].teamName + "</td><td><input type='number' id='" + teamsData[i].teamName + "' onchange='dataChangedOnRow(" + i + ", this.value)'> </td></tr>"		}
 	}
 	return  teamHTML + "</table>";
