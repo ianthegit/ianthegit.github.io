@@ -1,4 +1,3 @@
-
 teamsData =[]
 goButton = "<input type='button' class='userBtnGo' value='Calculate' title='Calculate' id='Go' onclick='runCalculate()' />";
 
@@ -12,7 +11,6 @@ function createScreen() {
 		snippit = 'to ';
 	}
 	document.write("<div id='grader'  ><table border='0' ><tr><td><span id='ControlFunctions' >Closest " + snippit + answer + " wins.  " + goButton + " </span></td></tr><tr><td><span id='data' >Data here</span></td></tr></table></div>");
-		
 	var teams=teamNameString.split(',');
 	setupTeams(teams);
 	document.getElementById("data").innerHTML = writeTeamsHTML(false);
@@ -62,6 +60,7 @@ function dataChangedOnRow(rowNo, value) {
 		}
 	}
 }
+
 function getURIString(paramName) {
 	const queryString = window.location.search;
 	const urlParams = new URLSearchParams(queryString);
