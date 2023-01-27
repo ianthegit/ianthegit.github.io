@@ -1,10 +1,9 @@
 teamsData =[]
 function createScreen() {
  answer = getURIString('answer'); mustBeUnder = getURIString('mustBeUnder'); snippit= ' to ';
- if (mustBeUnder) {snippit = 'under or equal' + snippit;} 
- document.write("<div id='grader'  ><table border='0' ><tr><td><span id='ControlFunctions' >Closest " + snippit + answer + " wins.</td></tr><tr><td><input type='button' class='userBtnGo' value='Calculate' title='Calculate' id='Go' onclick='runCalculate()' /> </span></td></tr><tr><td><span id='data' >Data here</span></td></tr></table></div>");
  setupTeams(getURIString('teamNames').split(','));
- document.getElementById("data").innerHTML = writeTeamsHTML(false);}
+ if (mustBeUnder) {snippit = 'under or equal' + snippit;} 
+ document.write("<div id='grader'  ><table border='0' ><tr><td><span id='ControlFunctions' >Closest " + snippit + answer + " wins.</td></tr><tr><td><input type='button' class='userBtnGo' value='Calculate' title='Calculate' id='Go' onclick='runCalculate()' /> </span></td></tr><tr><td><span id='data' >" + writeTeamsHTML(false) + "</span></td></tr></table></div>");
 function runCalculate() {
  teamsData.sort(function(a,b){return a.sorter-b.sorter;});
  document.getElementById("data").innerHTML = writeTeamsHTML(true);}
