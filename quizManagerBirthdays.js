@@ -126,6 +126,41 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 	question : "Who is this, born January 22 1990?" ,	answer : "Phil Wang", answerSpeak : "", image : "https://www.denofgeek.com/wp-content/uploads/2022/10/Den-of-Geek-4.png?fit=1200%2C675"	});	
 
 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-28",
+	question : "Who is this, born January 28 1918?" ,	answer : "Harry Corbett", answerSpeak : "", image : "https://pbs.twimg.com/media/E4uGVXkXMAMWXJ4.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-28",
+	question : "Who is this, born January 28 1929?" ,	answer : "Acker Bilk", answerSpeak : "", image : "http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcSzqS_oyvH4FGk70_BuGUFP0_jvtULrFJCLzRBFbtbSWtjV0gBqxh-GHrGEl-F2bjAaGMPgmp8Xj-ePsKw"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-28",
+	question : "Who is this, born January 28 1936?" ,	answer : "Alan Alda", answerSpeak : "", image : "https://thumbs.gfycat.com/ComfortableHastyAmphibian-max-1mb.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-28",
+	question : "Who is this, born January 28 1957?" ,	answer : "Frank Skinner", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Frank_Skinner.jpg/220px-Frank_Skinner.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-28",
+	question : "Who is this, born January 28 1978?" ,	answer : "Jamie Carragher", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Jamie_Carragher_meets_the_fans.jpg/220px-Jamie_Carragher_meets_the_fans.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-28",
+	question : "Who is this, born January 28 1981?" ,	answer : "Elijah Wood", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Elijah_Wood_%2847955397556%29_%28cropped%29.jpg/220px-Elijah_Wood_%2847955397556%29_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-28",
+	question : "Who is this, born January 28 1986?" ,	answer : "Jessica Ennis-Hill", answerSpeak : "", image : "https://i.dailymail.co.uk/i/pix/2012/08/08/article-2185344-1470B8AB000005DC-478_1024x615_large.jpg"	});	
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-29",
+	question : "Who is this, born January 29 1933?" ,	answer : "Sacha Distel", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Sacha_distel4.jpg/220px-Sacha_distel4.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-29",
+	question : "Who is this, born January 29 1939?" ,	answer : "Germaine Greer", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Germaine_Greer%2C_28_October_2013_%28portrait_crop%29.jpg/220px-Germaine_Greer%2C_28_October_2013_%28portrait_crop%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-29",
+	question : "Who is this, born January 29 1943?" ,	answer : "Tony Blackburn", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Tony_Blackburn.jpg/220px-Tony_Blackburn.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-29",
+	question : "Who is this, born January 29 1945?" ,	answer : "Tom Selleck", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Tom_Selleck_at_PaleyFest_2014.jpg/220px-Tom_Selleck_at_PaleyFest_2014.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-29",
+	question : "Who is this, born January 29 1952?" ,	answer : "Tim Healy", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Tim_Healy_%282007%29.jpg/220px-Tim_Healy_%282007%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-29",
+	question : "Who is this, born January 29 1954?" ,	answer : "Oprah Winfrey", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Oprah_in_2014.jpg/220px-Oprah_in_2014.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-29",
+	question : "Who is this, born January 29 1971?" ,	answer : "Clare Balding", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Stockbridge_Christmas_Evening_-_Sue_Robinson%2C_Clare_Balding_and_Anno_Webley_in_Lane_End_Kitchenware_%28cropped%29_%28cropped_2%29.jpg/220px-Stockbridge_Christmas_Evening_-_Sue_Robinson%2C_Clare_Balding_and_Anno_Webley_in_Lane_End_Kitchenware_%28cropped%29_%28cropped_2%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-29",
+	question : "Who is this, born January 29 1975?" ,	answer : "Sara Gilbert", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Sara_Gilbert.jpg/220px-Sara_Gilbert.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-29",
+	question : "Who is this, born January 29 1982 (pictured here in a cameo role in Bohemian Rhapsody?" ,	answer : "Adam Lambert", answerSpeak : "", image : "https://townsquare.media/site/295/files/2019/01/Adam-Lambert-20th-Century-Fox.jpg?w=1200&h=0&zc=1&s=0&a=t&q=89"	});	
+
 /*
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
