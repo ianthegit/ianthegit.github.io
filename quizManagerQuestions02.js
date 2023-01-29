@@ -4357,6 +4357,52 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : "Running up that hill, Kate Bush</BR>Paint it Black, Rolling Stones</BR>Material Girl, Madonna</BR>Total eclipse of the heart, Bonnie Tyler</BR>Sweet dreams (are made of this), Eurythmics</BR>Eleanor Rigby, the Beatles</BR>Fix You, Coldplay</BR>Shake it Off, Taylor Swift</BR>Simply the Best, Tina Turner</BR>Chasing Cars, Snow Patrol", answerSpeak : "", question : ""}) ;
 
 
+quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2023-1-29,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'G': </BR></BR>What word is given to the triangular part of the wall at the end of a ridged roof?", answer : "Gable", answerSpeak : "",
+	answerimage : "https://thumbs.gfycat.com/BaggyVapidBellfrog-size_restricted.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'G': </BR></BR>What disease results in the death of body tissue, usually caused by bad circulation?", answer : "Gangrene", answerSpeak : "",
+	answerimage : "https://s3.amazonaws.com/HMP/hmp_ln/eplasty/article_images/eplasty12ic10_fig1.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'G': </BR></BR>Barnacle, Canada and Brent are all types of what?", answer : "Geese", answerSpeak : "",
+	answerimage : "https://media2.giphy.com/media/b8hm9N1bjne3S/giphy.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'G': </BR></BR>What country has dialect varieties called Twi and Fanti, and is inhabited by the Ashanti people?", answer : "Ghana", answerSpeak : "",
+	answerimage : "https://upload.wikimedia.org/wikipedia/commons/2/20/Animated-Flag-Ghana.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'G': </BR></BR>Where were the Pillars of Hercules located?", answer : "Gibralter", answerSpeak : "",
+	answerimage : "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/3a/94/b8/view-from-the-top-of.jpg?w=1200&h=-1&s=1"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'G': </BR></BR>In the body what may be endocrine or exocrine?", answer : "Glands", answerSpeak : "",
+	answerimage : "https://thumbs.dreamstime.com/z/exocrine-endocrine-glands-15722494.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'G': </BR></BR>Which board game has 361 intersections?", answer : "Go", answerSpeak : "",
+	answerimage : "https://upload.wikimedia.org/wikipedia/commons/1/16/Go_ko_animaci%C3%B3n.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'G': </BR></BR>What was the first Bond film not based on an Ian Fleming book called?", answer : "Goldeneye", answerSpeak : "",
+	answerimage : "https://media2.giphy.com/media/WYVWbCSw5wEaA/giphy.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'G': </BR></BR>Which Paul Simon album won a Grammy for Album Of The Year in 1987?", answer : "Grace,land", answerSpeak : "",
+	answerimage : "https://media.tenor.com/pZcWmUfT1-kAAAAC/you-can-call-me-al-call-me-al.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'G': </BR></BR>What name is given to the excrement of seabirds used as manure?", answer : "Guano", answerSpeak : "",
+	answerimage : "https://y.yarn.co/6aad9b31-ea49-4912-863a-d3fde9302b20_text.gif"} ); 
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),  
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2023-1-29,InnerWheel,saturday",
+		questInfo: new Array() };  
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2pM9ydLRPph60eLtzdnNHA?utm_source=generator&theme=0" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
+	answer : "California Dreaming, the Mamas and the Papas</BR>Jolene, Dolly Parton</BR>Go your own way, Fleetwood Mac</BR>Rocket Man, Elton John</BR>Tiny Dancer, Elton John</BR>Rich Girl, Hall & Oates</BR>If you leave me now, Chicago</BR>Just the 2 of us, Bill Withers</BR>I just called to say I love you, Lionel Ritchie</BR>She's always a woman, Billy Joel", answerSpeak : "", question : ""}) ;
+
+
 
 quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
