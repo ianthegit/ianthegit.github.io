@@ -2,8 +2,8 @@ teamsData =[]
 function createScreen() {
  answer = getURIString('answer'); mustBeUnder = getURIString('mustBeUnder'); snippit= ' to ';
  setupTeams(getURIString('teamNames').split(','));
- if (mustBeUnder) {snippit = 'under or equal' + snippit;} 
- document.write("<div id='grader'  ><table border='0' ><tr><td><span id='ControlFunctions' >Closest " + snippit + answer + " wins.</td></tr><tr><td><input type='button' class='userBtnGo' value='Calculate' title='Calculate' id='Go' onclick='runCalculate()' /> </span></td></tr><tr><td><span id='data' >" + writeTeamsHTML(false) +"</span></td></tr></table></div>");}
+ if (mustBeUnder) {snippit = ' under or equal' + snippit;} 
+ document.write("<div id='grader'  ><table border='0' ><tr><td><span id='ControlFunctions' >Closest" + snippit + answer + " wins.</td></tr><tr><td><input type='button' class='userBtnGo' value='Calculate' title='Calculate' id='Go' onclick='runCalculate()' /> </span></td></tr><tr><td><span id='data' >" + writeTeamsHTML(false) +"</span></td></tr></table></div>");}
 function runCalculate() {
  teamsData.sort(function(a,b){return a.sorter-b.sorter;});
  document.getElementById("data").innerHTML = writeTeamsHTML(true);}
@@ -26,5 +26,5 @@ function dataChangedOnRow(rowNo, value) {
   if (mustBeUnder) {teamsData[rowNo].sorter = null;}}}
 function getURIString(paramName) {
  const urlParams = new URLSearchParams(window.location.search);
- if (urlParams.has(paramName)) {return urlParams.get(paramName);}; return '';}
+ if (urlParams.has(paramName)) {return urlParams.get(paramName);}; return null;}
 function getTeamNames(teamNamesString){	return decodeURI(teamNamesString);}
