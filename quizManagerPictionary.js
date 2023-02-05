@@ -2375,6 +2375,34 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
 
 
+
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of Musicals",
+		tags : "2023-2-5,pictionary", straightToAnswers:true,
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://media2.giphy.com/media/Lp71UWmAAeJHi/giphy.gif", answer : "Lion King", answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://i0.wp.com/i.imgur.com/DkD403O.gif?w=700", answer : "7 Brides for 7 Brothers",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://lh3.googleusercontent.com/pw/AMWts8DHE3feDRelvFFcEK0NTJuKbfVky6jhwrukP2S5juuLSspEk6FPRgkfJnfUnyzK2McdvnKz26F8ybp_DHs_Zs4JNqA0SzYjs8X-_5J9bE-E3j1_9g08ZTBU5kaldPejcD1MvmyyiZRaGL0ViyIVPSp_dg=w1160-h871-no?authuser=0", answer : "Beauty and the Beast",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://media0.giphy.com/media/CwMKejp4V6Z1K/giphy.gif", answer : "Blues Brothers",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://media.tenor.com/tjsNZnrS05wAAAAd/back-to-the-future-doc-brown.gif", answer : "Back to the Future",  answerSpeak : ""}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://media.tenor.com/tZm8_2JA5qcAAAAC/cats-musical.gif", answer : "Cats",  answerSpeak : ""}) ;
+
+
+
 /*
  * 	image : "",
 	answerimage : "", answer : "Table"}) ;
