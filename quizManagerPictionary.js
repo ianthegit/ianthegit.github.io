@@ -2383,22 +2383,22 @@ quests[++questIndexBuilder] = { //
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8CYuZBaB7ZABNQh5yKH_2-AaZnfidlAH02N8ktEs90gWj9XgjVKxgUHiV4ODhBiKjZB60vN3OCqOvok3TW3467aL8hL8mWaxq4dU0OuP6d5yOFro2P8e5RbL0RqfMxxkIlL0x0L5_TkZqNNKrBB1S4Qfw=w799-h663-no?authuser=0",
 	answerimage : "https://media2.giphy.com/media/Lp71UWmAAeJHi/giphy.gif", answer : "Lion King", answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8AuA0_LyXqs_sv2xJUMIH5QQdl6hwjQ5QczLMLazMbnYa5RrAfqxPZYvjJ66uX5AqeqYKdULOgOifZa2DdMh3IRdoUqa2gU0DILd6X49XQEaj3IGmBToLVgujT9ywGCcF1C9fBHMNks1aR_Hb7bs789Lg=w817-h179-no?authuser=0",
 	answerimage : "https://i0.wp.com/i.imgur.com/DkD403O.gif?w=700", answer : "7 Brides for 7 Brothers",  answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8DwsD7BnfhDfttXFzzhu7-XmbSIjD7zkMzO3H9PbjMuG_OnWrCBcZAVQVGCYHG5ynkq0XTW4IcvDVzs8ROH6koYGDZHyfR0EEymWUjKqi9WX8t0vEtIhegLKBcNCO4MrFTHRIIHlHlxlIQ2U3XNz2uhjA=w453-h382-no?authuser=0",
 	answerimage : "https://lh3.googleusercontent.com/pw/AMWts8DHE3feDRelvFFcEK0NTJuKbfVky6jhwrukP2S5juuLSspEk6FPRgkfJnfUnyzK2McdvnKz26F8ybp_DHs_Zs4JNqA0SzYjs8X-_5J9bE-E3j1_9g08ZTBU5kaldPejcD1MvmyyiZRaGL0ViyIVPSp_dg=w1160-h871-no?authuser=0", answer : "Beauty and the Beast",  answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8DSqunJZU0-bUHPmRrA6gB4moeROLRwwnOuRj4veqBDJt4mBs8PtS-0n6rgw5ERGBqWQKmq-nQX45brXuJLD8nBPDJ-whINDYGxqrjjgI9nQnBEV0sj-Bx_kPgLkphGYfEQgUHtnEbIqiEFApuDCBOUFw=w692-h433-no?authuser=0",
 	answerimage : "https://media0.giphy.com/media/CwMKejp4V6Z1K/giphy.gif", answer : "Blues Brothers",  answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8CKIwjFKmLUMJutAXHslY9MDkj1eS8NYjnJ0BMI5Dr04zB8lVIA78sLdBfkzroCulAdUzIXik62vp1MfSeCPRj5NN9fuM6w466tnIPCK1ghRfOAmgCi16r5CsHqywhs_9HlAIjPq_goiestJo63UwyH_Q=w820-h407-no?authuser=0",
 	answerimage : "https://media.tenor.com/tjsNZnrS05wAAAAd/back-to-the-future-doc-brown.gif", answer : "Back to the Future",  answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8C_a7UlzGZw3X28DSHUwc4nw2aEJxmchiJ8xqVFtvBDfAIA8mwik7-NPWyJ0FGKnNfumKku5KeN3-Ajlh7fTImyYCaGXM3paOfiFoCLdzV5Xmy2LD2fnceSl5nv4zmVnfvZYkqMaGdndWABrBs5cAaN5A=w504-h273-no?authuser=0",
 	answerimage : "https://media.tenor.com/tZm8_2JA5qcAAAAC/cats-musical.gif", answer : "Cats",  answerSpeak : ""}) ;
 
 
