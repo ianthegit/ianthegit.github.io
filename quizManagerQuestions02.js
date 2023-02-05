@@ -4445,7 +4445,7 @@ quests[++questIndexBuilder] = {
 		tags : "music,2023-2-5,InnerWheel,saturday",
 		questInfo: new Array() };  
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
-	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2pM9ydLRPph60eLtzdnNHA?utm_source=generator&theme=0" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5y5IaIPAS4Wwl7ABAQCUpK?utm_source=generator&theme=0" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
 	answer : "Bad Romance, Lady Gaga</BR>Video killed the radio star, Buggles</BR>Careless Whisper, George Michael</BR>Sex on Fire, Kings of Leon</BR>Wannabe, Spice Girls</BR>I still haven't found what I'm looking for, U2</BR>Shake it off, Taylor Swift</BR>Every Breath you take, the Police</BR>Mr Blue Sky, ELO</BR>Welcome to the jungle, Guns n Roses", answerSpeak : "", question : ""}) ;
 
 
