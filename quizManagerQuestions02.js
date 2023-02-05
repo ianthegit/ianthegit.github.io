@@ -4403,6 +4403,52 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : "California Dreaming, the Mamas and the Papas</BR>Jolene, Dolly Parton</BR>Go your own way, Fleetwood Mac</BR>Rocket Man, Elton John</BR>Tiny Dancer, Elton John</BR>Rich Girl, Hall & Oates</BR>If you leave me now, Chicago</BR>Just the 2 of us, Bill Withers</BR>I just called to say I love you, Lionel Ritchie</BR>She's always a woman, Billy Joel", answerSpeak : "", question : ""}) ;
 
 
+quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2023-2-5,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'H': </BR></BR>What is the name for meat killed in the prescribed Muslim manner?", answer : "Halal", answerSpeak : "",
+	answerimage : "https://ichef.bbci.co.uk/news/624/mcs/media/images/74725000/jpg/_74725751_74725750.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'H': </BR></BR>Which tree has catkins in the Spring and edible nuts called cobs in the Autumn?", answer : "Hazel", answerSpeak : "",
+	answerimage : "https://www.woodlandtrust.org.uk/media/4070/hazel-leaves-wtml-1085564-robert-read.jpg?center=0.40677966101694918,0.3746031746031746&mode=crop&heightratio=0.5622047244094488188976377953&width=647&rnd=132078351950000000"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'H': </BR></BR>A group of them is called an 'Array', and adults have between 5-7 thousand spines.  What are they?", answer : "Hedgehogs", answerSpeak : "",
+	answerimage : "https://media.tenor.com/S32ZfhsF65oAAAAC/cute-love.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'H': </BR></BR>What name is given to animals which only eat plants?", answer : "Herbivore", answerSpeak : "",
+	answerimage : "https://gifdb.com/images/high/herbivores-dinosaur-in-jurassic-world-v6qd8jhgwc9ql6fu.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'H': </BR></BR>What is a picture representing a word or syllable?", answer : "Hieroglyphic", answerSpeak : "",
+	answerimage : "https://lowres.cartooncollections.com/word_games-games-multiplayer_games-words-spelling_game-technology-CX903641_low.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'H': </BR></BR>In which athletics event might you use a 'Fosbury Flop'?", answer : "High Jump", answerSpeak : "",
+	answerimage : "https://media.tenor.com/xV1QEh-p6JcAAAAC/sports-funny.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'H': </BR></BR>What is New Year's Eve called in Scotland?", answer : "Hogmanay", answerSpeak : "",
+	answerimage : "https://thumbs.gfycat.com/BigheartedAptLacewing-max-1mb.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'H': </BR></BR>Who wrote the epic poems, the Iliad and the Odyssey?", answer : "Homer", answerSpeak : "",
+	answerimage : "https://media.tenor.com/hRiPtsp-m0IAAAAM/the-simpsons-homer-simpson.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'H': </BR></BR>What remained at the bottom of Pandora's box?", answer : "Hope", answerSpeak : "",
+	answerimage : "https://thumbs.gfycat.com/TallBetterAdouri-size_restricted.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'H': </BR></BR>The longest side in a right-angled triangle is called the what?", answer : "Hypotenuse", answerSpeak : "",
+	answerimage : "https://www.wyzant.com/embed/editor/256507?size=full"} ); 
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),  
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2023-2-5,InnerWheel,saturday",
+		questInfo: new Array() };  
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2pM9ydLRPph60eLtzdnNHA?utm_source=generator&theme=0" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
+	answer : "Bad Romance, Lady Gaga</BR>Video killed the radio star, Buggles</BR>Careless Whisper, George Michael</BR>Sex on Fire, Kings of Leon</BR>Wannabe, Spice Girls</BR>I still haven't found what I'm looking for, U2</BR>Shake it off, Taylor Swift</BR>Every Breath you take, the Police</BR>Mr Blue Sky, ELO</BR>Welcome to the jungle, Guns n Roses", answerSpeak : "", question : ""}) ;
+
+
 
 quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
