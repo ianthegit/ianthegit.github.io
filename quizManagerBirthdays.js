@@ -161,6 +161,33 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-29",
 	question : "Who is this, born January 29 1982 (pictured here in a cameo role in Bohemian Rhapsody?" ,	answer : "Adam Lambert", answerSpeak : "", image : "https://townsquare.media/site/295/files/2019/01/Adam-Lambert-20th-Century-Fox.jpg?w=1200&h=0&zc=1&s=0&a=t&q=89"	});	
 
+
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-4",
+	question : "Who is this, born February 4th 1975?" ,	answer : "Natalie Imbruglia", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Natalie_Imbruglia_Cannes.jpg/220px-Natalie_Imbruglia_Cannes.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-4",
+	question : "Who is this (on the right as you look at the picture), born February 4th 1972?" ,	answer : "Dara O' Briain", answerSpeak : "", image : "https://img.rasset.ie/0009cd01-440.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-4",
+	question : "Who is this, known for playing Robin Hood, for Sleeping with the Enemy and for being Eastenders baddie Aidan Maguire, born February 4th 1951?" ,	answer : "Patrick Bergin", answerSpeak : "", image : "https://pbs.twimg.com/media/E1quMPHXMAMTXKk.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-4",
+	question : "Who is this, born February 4th 1948?" ,	answer : "Alice Cooper", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Alice_Cooper_-_Alice_Cooper_-_Novarock_-_2016-06-11-15-44-11-0002.jpg/220px-Alice_Cooper_-_Alice_Cooper_-_Novarock_-_2016-06-11-15-44-11-0002.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-4",
+	question : "Who is this, born February 4th 1915?" ,	answer : "Norman Wisdom", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Norman_Wisdom_%281965%29.jpg/220px-Norman_Wisdom_%281965%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-4",
+	question : "Who is this, born February 4th 1913?" ,	answer : "Rosa Parks", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Rosaparks.jpg/220px-Rosaparks.jpg"	});	
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-5",
+	question : "Who is this, born February 5th 1946?" ,	answer : "Charlotte Rampling", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Charlotte_Rampling_2016.jpg/220px-Charlotte_Rampling_2016.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-5",
+	question : "Who is this, born February 5th 1948?" ,	answer : "Sven-Goran Eriksson", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Sven-Goran_Eriksson_2012.jpg/220px-Sven-Goran_Eriksson_2012.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-5",
+	question : "Who is this, born February 5th 1948?" ,	answer : "Tony Wilkinson", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Tom_Wilkinson_TIFF_2016.jpg/220px-Tom_Wilkinson_TIFF_2016.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-5",
+	question : "Who is this, born February 5th 1964?" ,	answer : "Laura Linney", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Laura_Linney_Berlinale_2017.jpg/220px-Laura_Linney_Berlinale_2017.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-5",
+	question : "Who is this, born February 5th 1969?" ,	answer : "Michaeal Sheen", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Michael_Sheen_crop_n2_Good_Omens_panel_at_NYCC_%2861104%29.jpg/220px-Michael_Sheen_crop_n2_Good_Omens_panel_at_NYCC_%2861104%29.jpg"	});	
+
 /*
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
