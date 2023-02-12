@@ -188,6 +188,33 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-5",
 	question : "Who is this, born February 5th 1969?" ,	answer : "Michaeal Sheen", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Michael_Sheen_crop_n2_Good_Omens_panel_at_NYCC_%2861104%29.jpg/220px-Michael_Sheen_crop_n2_Good_Omens_panel_at_NYCC_%2861104%29.jpg"	});	
 
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-11",
+	question : "Who is this, born February 11th 1926?" ,	answer : "Leslie Nielsen", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Leslie_Nielsen.jpg/220px-Leslie_Nielsen.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-11",
+	question : "Who is this, born February 11th 1935?" ,	answer : "Gene Vincent", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Gene_Vincent_photo.jpg/220px-Gene_Vincent_photo.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-11",
+	question : "Who is this, born February 11th 1936?" ,	answer : "Burt Reynolds", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Burt_Reynolds_1991_portrait_crop.jpg/220px-Burt_Reynolds_1991_portrait_crop.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-11",
+	question : "Who is this, born February 11th 1964?" ,	answer : "Sarah Palin", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Sarah_Palin_%2851769866572%29_%28cropped%29.jpg/220px-Sarah_Palin_%2851769866572%29_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-11",
+	question : "Who is this, born February 11th 1971?" ,	answer : "Damian Lewis", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Damian_Lewis_Berlin_2015.jpg/220px-Damian_Lewis_Berlin_2015.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-11",
+	question : "Who is this, born February 11th 1982?" ,	answer : "Natalie Dormer", answerSpeak : "", image : "https://media.vanityfair.com/photos/5b4f4abe4f46c70bca18e96e/9:16/w_747,h_1328,c_limit/game-of-thrones-ending-season-8-natalie-dormer.jpg"	});	
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-11",
+	question : "Who is this, born February 12th 1948?" ,	answer : "Nicholas Soames", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Official_portrait_of_Sir_Nicholas_Soames_crop_2.jpg/220px-Official_portrait_of_Sir_Nicholas_Soames_crop_2.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-11",
+	question : "Who is this, born February 12th 1968?" ,	answer : "Josh Brolin", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Josh_Brolin_Berlin_2016.jpg/220px-Josh_Brolin_Berlin_2016.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-11",
+	question : "Who is this, born February 12th 1980?" ,	answer : "Christina Ricci", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Christina_Ricci_%2849596830836%29_%28cropped%29.jpg/220px-Christina_Ricci_%2849596830836%29_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-12",
+	question : "Who is this, born February 12th 1969?" ,	answer : "Steve Backley", answerSpeak : "", image : "https://images.ctfassets.net/v8zaoys2pgzt/3cmcUswK73gdiPq9wEkep6/7be11c6607fd2d86c5c4af8834e1efc4/Steve_Backley_-_hero.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-12",
+	question : "Who is this, born February 12th 1974?" ,	answer : "Naseem Hamed", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/WWE_-_Sheffield_020499_%2817%29.jpg/220px-WWE_-_Sheffield_020499_%2817%29.jpg"	});	
+
 /*
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
