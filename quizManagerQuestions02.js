@@ -4451,6 +4451,43 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2023-2-12,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'I': </BR></BR>Baked Alaska is a desert with meringue on the outside, but what does the meringue cover?", answer : "Ice Cream", answerSpeak : "",
+	answerimage : "https://i1.wp.com/smittenkitchen.com/wp-content/uploads//2016/09/baked-alaska.jpg?fit=750%2C500&ssl=1"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'I': </BR></BR>The worship of a material image that is held to be the abode of a superhuman personality is called?", answer : "Idolatry", answerSpeak : "",
+	answerimage : "https://cdn.britannica.com/96/116196-050-9DE91BF9/Adoration-of-the-Golden-Calf-canvas-Nicolas-1634.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'I': </BR></BR>What kind of rocks are basalt, granite and obsidian?", answer : "Igneous", answerSpeak : "",
+	answerimage : "https://www.thoughtco.com/thmb/x3-kUASUiITfQzrkBTR38MHNB2E=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/about-igneous-rocks-1438950_final_CORRECTED2FINAL-f8d738e151b9437caa256d21155d091f.png"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'I': </BR></BR>What's the name of the Mummy in the 1999 film 'The Mummy'?", answer : "Imhotep", answerSpeak : "",
+	answerimage : "https://static.wikia.nocookie.net/mummy/images/9/9c/Imhotep2.jpg/revision/latest?cb=20090814060043"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'I': </BR></BR>On New Year's Day, 1965 which Pacific country became the first member to attempt to withdraw from the UN?", answer : "Indonesia", answerSpeak : "",
+	answerimage : "https://www.planetware.com/wpimages/2020/02/indonesia-in-pictures-beautiful-places-to-photograph-raja-ampat-islands.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'I': </BR></BR>In algebraic geometry, a lemniscate comes from the Latin meaning 'decorated with ribbons', what does the symbol represent?", answer : "Infinity", answerSpeak : "",
+	answerimage : "https://t4.ftcdn.net/jpg/04/48/07/45/360_F_448074578_COzM19L88xaU5Ehn9JVczQ3lrIq0Jh5C.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'I': </BR></BR>Any animal lacking a vertebral column, or backbone would be scientifically described as an?", answer : "Invertebrate", answerSpeak : "",
+	answerimage : "https://images.slideplayer.com/14/4428120/slides/slide_2.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'I': </BR></BR>In which modern country would you find the land which was called Mesopotamia?", answer : "Iraq", answerSpeak : "",
+	answerimage : "https://upload.wikimedia.org/wikipedia/commons/e/ed/N-Mesopotamia_and_Syria_english.svg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'I': </BR></BR>Who composed the musicals 'Annie Get Your Gun' and 'There's No Business Like Show Business'?", answer : "Irving Berlin", answerSpeak : "",
+	answerimage : "https://thumbs.gfycat.com/ColorlessVigorousHoki-size_restricted.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'I': </BR></BR>The plant 'Hedera Helix' is better known by what name?", answer : "Ivy", answerSpeak : "",
+	answerimage : "https://img1.picmix.com/output/stamp/normal/0/5/9/0/1680950_e474f.gif"} ); 
+
+
+quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
 		hoverover : "What sinks, what floats",
 		tags : "2022-x-xx,saturday,InnerWheel,surfers", 
