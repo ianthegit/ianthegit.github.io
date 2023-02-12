@@ -4487,6 +4487,17 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 	answerimage : "https://img1.picmix.com/output/stamp/normal/0/5/9/0/1680950_e474f.gif"} ); 
 
 
+
+quests[++questIndexBuilder] = {  //To row 36 of 'coffee covers'
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),  
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2023-2-12,InnerWheel,saturday",
+		questInfo: new Array() };  
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3Glz0ZXZLochGc2PX7ou0m?utm_source=generator&theme=0" width="100%" height="760" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
+	answer : "The Boxer, Simon & Garfunkel</BR>I still haven't found what I'm looking for, U2</BR>Califonia Dreamin, Mamas and Papas</BR>I got you babe, Sonny & Cher</BR>Brown eyed girl, Van Morrisson</BR>Three little birds, Bob Marley</BR>I'm a believer, the Monkees</BR>Jealous Guy, Roxy Music</BR>Born to be wild, Steppenwolf</BR>Knockin on Heavens door, Bob Dylan, Eric Clapton", answerSpeak : "", question : ""}) ;
+
+
 quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
 		hoverover : "What sinks, what floats",
