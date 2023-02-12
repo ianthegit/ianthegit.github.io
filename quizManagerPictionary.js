@@ -2410,22 +2410,22 @@ quests[++questIndexBuilder] = { //
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8CRD6MT4Ozw1C6RrQZi1VmJRq4IuVQT9jJ5QzPd1mylHwIH1AMEFj2Okytfyvx74N7v6Bt6bPnnIsL_jlDrfhS8C9tsx3lsvwZhzzw5nv6F94WUDdwZqYaKGmNxcdiKJGMbViAO5dYL8PaRTanY1uOTqg=w436-h416-no?authuser=0",
 	answerimage : "https://media1.giphy.com/media/OreKkqmHu1m6Y/giphy.gif", answer : "Butterfly", answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8CzOrX3rcHKGXEnK4JCpDJ8l4U-KwnoHZsSJDhEYkP6NwKWH49bt-G9JITb3-1uZM883ntdkHtx58w0NmycZ85gcjeulGSw9WKv1Uyfr0JXoMvUt-tiTpJbmNDZPPIiUcXbCjFvWCslp473l5jaY4tNkA=w782-h472-no?authuser=0",
 	answerimage : "https://media.tenor.com/lWHkhNKBW4cAAAAM/moth.gif", answer : "Moth",  answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8B0t-4dXMvjw5P4cuFzCnlNNPK2PMgdNbTBVuDcFRHzQt-JNi8EA7HQvJzRr9vRD6wqfwo46nqEWN9VDE71oE3XfQ83zlHLJXSNmEJ6k9xI_-HggzDVgCaWJSuQc30p-T-3y-JtSosjvU-wRxJyfR3zGA=w501-h229-no?authuser=0",
 	answerimage : "https://i.pinimg.com/originals/83/62/86/836286f948270c50747ea5284539ecf5.gif", answer : "Stick Insect",  answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8DtwKK33NKETGWL2_MBTcbr-U6EJlnzFdWKNOgVto7cyPTXhdyIMXkDTqhicFOfQLm77kjlVJnaVv3kKjbXTR7jWL6_AsE8iihiwirOvzvF0iQjTrYGUN1Fm6wHbzBXqegbHILsF1iKiujL9cDF0EYpMQ=w775-h431-no?authuser=0",
 	answerimage : "https://media1.giphy.com/media/RkLpyFcTqGLlJ7n5uF/giphy.gif", answer : "Stag",  answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8BDH8rvXCLjwSyI88Qd7A_n4qNswpHB3B2k0WunqPg7BaPSvBxrYPkZxhBIAf4MzRSkx9n2-jHRH56JZjoKEke52_ZsIs1OgsA8J6hhYB1ZPQbgUtnzWtXI_bX04KkJ_h9orCtzhSIF7yVDMNNO-Yjp6w=w506-h330-no?authuser=0",
 	answerimage : "https://media.tenor.com/NC2HlPxMXBIAAAAC/praying-mantis-kicked.gif", answer : "Mantis",  answerSpeak : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8DhF6TkF-Ya8flgfJ_dp8DtSblp15ELcxBfzJJjfaIkI-yT9InhguSLrZ_lMXq9FXMI1qda229mReWlxfutZiT_1G9BIGUrGDbkX9DsZTHhJu4O66V21AVVebqWUOCCTSOBDHJ7Zez2XQQNUrkruhxGbw=w311-h238-no?authuser=0",
 	answerimage : "https://media1.giphy.com/media/3o6ZtoD6yrYNtVEAes/giphy.gif", answer : "Ant",  answerSpeak : ""}) ;
 
 
