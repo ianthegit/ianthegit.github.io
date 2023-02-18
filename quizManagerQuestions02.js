@@ -4534,6 +4534,16 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 	question : "What 'J': </BR></BR>Which Austrian composer of the Classical period composed the music for the German national anthem?", answer : "Joseph Haydn", answerSpeak : "",
 	answerimage : "https://cdn.britannica.com/64/11164-004-1E94E698/detail-Joseph-Haydn-portrait-collection-Thomas-Hardy-1791.jpg?s=1500x700&q=85"} ); 
 
+quests[++questIndexBuilder] = {  //To row 64 of 'coffee covers'
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),  
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2023-2-19,InnerWheel,saturday",
+		questInfo: new Array() };  
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3KkStpzVznWUbB5j7mXWSK?utm_source=generator&theme=0" width="100%" height="760" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
+	answer : "Ruby Tuesday, the Rolling Stones</BR>Mr Tambourine Man, Bob Dylan</BR>Bright Eyes, Art Garfunkel</BR>Stand by me, Ben E King</BR>You're the one that I want, Olivia Newton John and John Travolta</BR>With a little help from my friends, The Beatles/Joe Cocker</BR>The Lion sleeps tonight, Tight Fit/The Tokens</BR>Take me home Country Roads, John Denver</BR>I am, I said, Neil Diamond</BR>Ain't no mountain high enough, Marvin Gaye, Diana Ross ", answerSpeak : "", question : ""}) ;
+
+
 quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
 		hoverover : "What sinks, what floats",
