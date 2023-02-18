@@ -4499,6 +4499,42 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2023-2-19,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'J': </BR></BR>Is an American painter with a rude sounding name?", answer : "Jackson Pollock", answerSpeak : "",
+	answerimage : "https://s32625.pcdn.co/wp-content/uploads/2017/08/GettyImages-50712638.jpg.webp"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'J': </BR></BR>Owner of the research ship 'Calypso', which French underwater explorer invented the aqualung?", answer : "Jacques Cousteau", answerSpeak : "",
+	answerimage : "https://www.telegraph.co.uk/multimedia/archive/03368/cousteau-tank_3368928b.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'J': </BR></BR>Which country is the home of the beer 'Red Stripe', and also The Blue Mountains?", answer : "Jamaica", answerSpeak : "",
+	answerimage : "https://cdn.britannica.com/73/183673-050-B4BDA43D/World-Data-Locator-Map-Jamaica.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'J': </BR></BR>What is the name of the police inspector that is determined on getting Valjean in Les Miserables?", answer : "Javert", answerSpeak : "",
+	answerimage : "https://imageio.forbes.com/blogs-images/cherylsnappconner/files/2012/12/russell-crowe-as-inspector-javert-in-les-231x300.jpg?format=jpg&width=231"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'J': </BR></BR>The small intestine is made up of the Duodenum, the Ileum and the what?", answer : "Jejunum", answerSpeak : "",
+	answerimage : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Illu_small_intestine.jpg/250px-Illu_small_intestine.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'J': </BR></BR>With the capital St Helier, which is the largest of The Channel Islands?", answer : "Jersey", answerSpeak : "",
+	answerimage : "https://i.guim.co.uk/img/media/ff0066cea8e1d1f77cd252c688defa1c0086f8a2/0_33_4256_2553/master/4256.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=6c5256355588a196d0ff71a4d29afb19"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'J': </BR></BR>Which Rock band formed in Blackpool - England, in 1967, were named after the inventor of the seed drill?", answer : "Jethro Tull", answerSpeak : "",
+	answerimage : "https://images.squarespace-cdn.com/content/v1/61024fa02084fa77c2c4d73d/372c3bdc-b8e9-4c09-880e-a83cb0c58780/jethro-tull-flute-photo-dick-polak.jpg?format=500w"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'J': </BR></BR>The first female Dr Who?", answer : "Jodie Whittaker", answerSpeak : "",
+	answerimage : "https://ichef.bbci.co.uk/news/976/cpsprodpb/FB3E/production/_98681346_jodie-whittaker-as-the-doct.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'J': </BR></BR>In the Old Testament, what book comes between Obadiah and Micah (he was swallowed by a whale)?", answer : "Jonah", answerSpeak : "",
+	answerimage : "https://upload.wikimedia.org/wikipedia/commons/4/44/Pieter_Lastman_-_Jonah_and_the_Whale_-_Google_Art_Project.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'J': </BR></BR>Which Austrian composer of the Classical period composed the music for the German national anthem?", answer : "Joseph Haydn", answerSpeak : "",
+	answerimage : "https://cdn.britannica.com/64/11164-004-1E94E698/detail-Joseph-Haydn-portrait-collection-Thomas-Hardy-1791.jpg?s=1500x700&q=85"} ); 
+
+quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
 		hoverover : "What sinks, what floats",
 		tags : "2022-x-xx,saturday,InnerWheel,surfers", 
