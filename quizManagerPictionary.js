@@ -1294,7 +1294,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 quests[++questIndexBuilder] = { //
 		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of lurve",
-		tags : "2022-2-12,pictionary",
+		tags : "2022-2-12,2023-2-19,pictionary",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionType2Picture,
