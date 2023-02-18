@@ -215,6 +215,44 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-12",
 	question : "Who is this, born February 12th 1974?" ,	answer : "Naseem Hamed", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/WWE_-_Sheffield_020499_%2817%29.jpg/220px-WWE_-_Sheffield_020499_%2817%29.jpg"	});	
 
+
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-18",
+	question : "Who is this, born February 18th 1975?" ,	answer : "Gary Neville", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Gary_Neville_2014_%28cropped%29.jpg/220px-Gary_Neville_2014_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-18",
+	question : "Who is this, born February 18th 1968?" ,	answer : "Molly Ringwald", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Molly_Ringwald_in_Greece_%28cropped%29.jpg/220px-Molly_Ringwald_in_Greece_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-18",
+	question : "Who is this, born February 18th 1964?" ,	answer : "Matt Dillon", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Matt_Dillon_2010.jpg/220px-Matt_Dillon_2010.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-18",
+	question : "Who is this, born February 18th 1954?" ,	answer : "John Travolta", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/John_Travolta_Cannes_2018_%28cropped%29.jpg/220px-John_Travolta_Cannes_2018_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-18",
+	question : "Who is this, born February 18th 1950?" ,	answer : "Cybill Shepherd", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Cybill_Shepherd_%28cropped%29.jpg/220px-Cybill_Shepherd_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-18",
+	question : "Who is this, born February 18th 1946?" ,	answer : "Michael Buerk", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Michael_Buerk%2C_British_Museum%2C_London%2C_23_June_2012_-_Britain%27s_Secret_Treasures_Filming.jpg/220px-Michael_Buerk%2C_British_Museum%2C_London%2C_23_June_2012_-_Britain%27s_Secret_Treasures_Filming.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-18",
+	question : "Who is this, born February 18th 1940?" ,	answer : "Prue Leith", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Prue_Leith_20181206.jpg/220px-Prue_Leith_20181206.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-18",
+	question : "Who is this, born February 18th 1933?" ,	answer : "Bobby Robson", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Anefo_934-2658%2C_Bobby_Robson%2C_Netherlands%2C_14-06-1988.jpg/220px-Anefo_934-2658%2C_Bobby_Robson%2C_Netherlands%2C_14-06-1988.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-18",
+	question : "Who is this, born February 18th 1933?" ,	answer : "Yoko Ono", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Yoko_Ono_2011_SXSW.jpg/220px-Yoko_Ono_2011_SXSW.jpg"	});	
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-19",
+	question : "Who is this, born February 19th 2004?" ,	answer : "Millie Bobby Brown", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Millie_Bobby_Brown_-_MBB_-_Portrait_1_-_SFM5_-_July_10%2C_2022_at_Stranger_Fan_Meet_5_People_Convention_%28cropped%29.jpg/220px-Millie_Bobby_Brown_-_MBB_-_Portrait_1_-_SFM5_-_July_10%2C_2022_at_Stranger_Fan_Meet_5_People_Convention_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-19",
+	question : "Who is this, born February 19th 1963?" ,	answer : "Seal", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Seal_2012_%28cropped%29.jpg/220px-Seal_2012_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-19",
+	question : "Who is this, born February 19th 1957?" ,	answer : "Ray Winstone", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Ray_Winstone_2014.jpg/220px-Ray_Winstone_2014.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-19",
+	question : "Who is this, born February 19th 1956?" ,	answer : "Kathleen Beller", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Kathleen_Beller_on_the_set_of_Touched.jpg/220px-Kathleen_Beller_on_the_set_of_Touched.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-19",
+	question : "Who is this, born February 19th 1955?" ,	answer : "Jeff Daniels", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Jeff_Daniels_May_2018_%28cropped%29.jpg/220px-Jeff_Daniels_May_2018_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-19",
+	question : "Who is this, born February 19th 1948?" ,	answer : "Tommi Iommi", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Tony-Iommi_2009-06-11_Chicago_photoby_Adam-Bielawski.jpg/220px-Tony-Iommi_2009-06-11_Chicago_photoby_Adam-Bielawski.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-19",
+	question : "Who is this, born February 19th 1924?" ,	answer : "Lee Marvin", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Lee_marvin_1971.JPG/220px-Lee_marvin_1971.JPG"	});	
+
 /*
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
