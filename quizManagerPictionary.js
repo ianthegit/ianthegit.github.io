@@ -2433,8 +2433,8 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 
  quests[++questIndexBuilder] = { //
 		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
-		hoverover : "Pictionary on the theme of ??",
-		tags : "2022-2-26,pictionary", straightToAnswers:true,
+		hoverover : "Pictionary on the theme of Game characters",
+		tags : "2023-2-26,pictionary", straightToAnswers:true,
 		questInfo: new Array()
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
@@ -2468,7 +2468,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
  quests[++questIndexBuilder] = { //
 		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of ??",
-		tags : "2022-?-?,pictionary", straightToAnswers:true,
+		tags : "2023-?-?,pictionary", straightToAnswers:true,
 		questInfo: new Array()
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
