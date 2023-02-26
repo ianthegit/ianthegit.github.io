@@ -4582,6 +4582,14 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 
 
 
+uests[++questIndexBuilder] = {  //To row 93 of 'coffee covers'
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),  
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2023-2-26,InnerWheel,saturday",
+		questInfo: new Array() };  
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3KkStpzVznWUbB5j7mXWSK?utm_source=generator&theme=0" width="100%" height="760" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
+	answer : "In my life, The Beatles</BR>Nights in White Satin, Moody Blues</BR>Monday Monday, The Mamas and the Papas</BR>Ring of Fire, Johnny Cash</BR>Crazy little thing called love, Queen</BR>Sound of Silence, Simon & Garfunkel</BR>What a Wonderful World, Louis Armstrong</BR>Norwegian Wood, The Beatles</BR>Heart of Gold, Neil Young</BR>Imagine, John Lennon", answerSpeak : "", question : ""}) ;
 
 
 quests[++questIndexBuilder] = { 
