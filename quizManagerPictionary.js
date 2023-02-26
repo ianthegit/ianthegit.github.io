@@ -2438,22 +2438,22 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 		questInfo: new Array()
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8AL3tKMo4CsI9pxcipH_F6RKB_-mDbr18pEZAnJ9wDjtP1wh7ss0B0CbAz7Zn1UT17L-LW65RW6-p4pJLTnd0hnvyL9NHghmYvb1wulPU7RkOnxdjlltA9h6LRgutZPrbWA3vEjcY5hZUjmKZTG1JBlZw=w690-h698-no?authuser=0",
 	answerimage : "https://media.tenor.com/0WkmuOC_W00AAAAj/waving-pikachu.gif", answerSpeak : "", answer : "Pikachu"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8ASeiKF9pZy7e-ZXdy_swzXRThcsxv0mIys9RH-RfV2RmY8aavfWleN9_l-isV2tD3Lrvc3xLYLA7Avj3xTpygHdsjfAYH4PQxBRtyrAhaYjwKYqgwP8_kAM-joGL2wMohwb9_5iW2oVwgGObII4vgk1A=w1486-h697-no?authuser=0",
 	answerimage : "https://media2.giphy.com/media/4SY40ExbxfyOyD91VI/giphy.gif", answerSpeak : "", answer : "Sonic"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8DpXzolVlsAMBXScWOVK2E_IUWkOh3zkUq7Q2E0a3F5pwDHfSgUkEZ0BhM2qxXJWMZiiwmOk6-ILMMLPT4if93D54LQLdqWWS4-ancWYJvUTHVZDP5zhNeJ51ahTmwJjHE7uDaxN3XxVKgAsoJpDnAmVQ=w565-h265-no?authuser=0",
 	answerimage : "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/904e5fee-c118-461c-8a80-f445214169f7/ddoddjm-d625011c-82e0-41e9-bd61-a3eeec6269f8.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzkwNGU1ZmVlLWMxMTgtNDYxYy04YTgwLWY0NDUyMTQxNjlmN1wvZGRvZGRqbS1kNjI1MDExYy04MmUwLTQxZTktYmQ2MS1hM2VlZWM2MjY5ZjguZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.VKiLGgJ-nKaRXchFZazM_fHZQQw1P2wpwdt-GwhvtGA", answerSpeak : "", answer : "Mario"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8Aqc4n1JiTpCxwZHMjq8-8At2PjMfj3z54udTMHSeeF3T4ULn_x2s7W-h_neADnACBJYdNUGeQKhun8CBpOW7_mL1WpNJIyVwU4ySJclm7P3VY2zzi_bmQgF0aPAFFKauzJYaneH6_F1XJsdeP0xMwZWw=w1201-h865-no?authuser=0",
 	answerimage : "https://media3.giphy.com/media/ZdKa3AjRMS5vGZvxQW/giphy.gif", answerSpeak : "", answer : "Luigi"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8C6bqxoSfb24cQTinjZzo5_VPDNOoixB6TTHB8l2GWpzuXcpiUPuGsxluFqTXShUNCg9finXaH8wzq70fEIFFkTZjI56zLsxkFSCvkUWRd_wjmtmV3ppY5L5GaC4geNt3FnWBWN9pUF2um9342vHh7DwQ=w525-h809-no?authuser=0",
 	answerimage : "https://thumbs.gfycat.com/NervousAnxiousBangeltiger-size_restricted.gif", answerSpeak : "", answer : "Creeper"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8Dxj53qCEPfK-aGAFJQsFeECTSJI72ywkOkeQQIkEu57VNdsjU-RIUDeIoEKqOAjI8Z64J4GIXFF4iLw7rJ5UzUZVKBb2y4eAEF8McO7sfeqIIplfXFVgTCO6Xevid-pYZZsQce4GNjYVIMF53_F8z_Rg=w955-h581-no?authuser=0",
 	answerimage : "https://media.tenor.com/jhsMAREYalUAAAAM/pacman-gaming.gif", answerSpeak : "", answer : "Pac-man"}) ;
 
 /*
