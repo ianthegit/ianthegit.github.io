@@ -4582,7 +4582,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 
 
 
-uests[++questIndexBuilder] = {  //To row 93 of 'coffee covers'
+quests[++questIndexBuilder] = {  //To row 93 of 'coffee covers'
 		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),  
 		hoverover : "Songs you will know, but wish you did not after this.",
 		tags : "music,2023-2-26,InnerWheel,saturday",
