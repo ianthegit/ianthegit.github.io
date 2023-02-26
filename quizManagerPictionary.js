@@ -2429,6 +2429,33 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://media1.giphy.com/media/3o6ZtoD6yrYNtVEAes/giphy.gif", answer : "Ant",  answerSpeak : ""}) ;
 
 
+
+
+ quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of ??",
+		tags : "2022-2-26,pictionary", straightToAnswers:true,
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://media.tenor.com/0WkmuOC_W00AAAAj/waving-pikachu.gif", answerSpeak : "", answer : "Pikachu"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://media2.giphy.com/media/4SY40ExbxfyOyD91VI/giphy.gif", answerSpeak : "", answer : "Sonic"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/904e5fee-c118-461c-8a80-f445214169f7/ddoddjm-d625011c-82e0-41e9-bd61-a3eeec6269f8.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzkwNGU1ZmVlLWMxMTgtNDYxYy04YTgwLWY0NDUyMTQxNjlmN1wvZGRvZGRqbS1kNjI1MDExYy04MmUwLTQxZTktYmQ2MS1hM2VlZWM2MjY5ZjguZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.VKiLGgJ-nKaRXchFZazM_fHZQQw1P2wpwdt-GwhvtGA", answerSpeak : "", answer : "Mario"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://media3.giphy.com/media/ZdKa3AjRMS5vGZvxQW/giphy.gif", answerSpeak : "", answer : "Luigi"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://thumbs.gfycat.com/NervousAnxiousBangeltiger-size_restricted.gif", answerSpeak : "", answer : "Creeper"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://media.tenor.com/jhsMAREYalUAAAAM/pacman-gaming.gif", answerSpeak : "", answer : "Pac-man"}) ;
+
 /*
  * 	image : "",
 	answerimage : "", answer : "Table"}) ;
@@ -2446,22 +2473,22 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
 	image : "",
-	answerimage : "", answerSpeak : ""}) ;
+	answerimage : "", answerSpeak : "", answer : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
 	image : "",
-	answerimage : "", answerSpeak : ""}) ;
+	answerimage : "", answerSpeak : "", answer : ""}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
 	image : "",
-	answerimage : "", answerSpeak : ""}) ;
+	answerimage : "", answerSpeak : "", answer : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
 	image : "",
-	answerimage : "", answerSpeak : ""}) ;
+	answerimage : "", answerSpeak : "", answer : ""}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
 	image : "",
-	answerimage : "", answerSpeak : ""}) ;
+	answerimage : "", answerSpeak : "", answer : ""}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
 	image : "",
-	answerimage : "", answerSpeak : ""}) ;
+	answerimage : "", answerSpeak : "", answer : ""}) ;
 
 
 */
