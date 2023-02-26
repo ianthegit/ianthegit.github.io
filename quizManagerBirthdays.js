@@ -253,6 +253,33 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-19",
 	question : "Who is this, born February 19th 1924?" ,	answer : "Lee Marvin", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Lee_marvin_1971.JPG/220px-Lee_marvin_1971.JPG"	});	
 
+
+
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-25",
+	question : "Who is this, born February 25th 1976?" ,	answer : "Rashida Jones", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Rashida_Jones_2017_%28cropped%29.jpg/220px-Rashida_Jones_2017_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-25",
+	question : "Who is this, born February 25th 1974?" ,	answer : "Dominic Raab", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Official_portrait_of_Rt_Hon_Dominic_Raab_MP_crop_2.jpg/220px-Official_portrait_of_Rt_Hon_Dominic_Raab_MP_crop_2.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-25",
+	question : "Who is this, born February 25th 1971" ,	answer : "Steve Astin", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Sean_Astin_%2827506939735%29_%28cropped%29.jpg/220px-Sean_Astin_%2827506939735%29_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-25",
+	question : "Who is this, born February 25th 1967?" ,	answer : "Ed Balls", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Ed_Balls_2021_%28cropped%29.jpg/220px-Ed_Balls_2021_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-25",
+	question : "Who is this, born February 25th 1943?" ,	answer : "George Harrison", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/George_Harrison_1974.jpg/220px-George_Harrison_1974.jpg"	});	
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-26",
+	question : "Who is this, born February 26th 1909?" ,	answer : "Fanny Craddock", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Fanny_Cradock_Allan_Warren.jpg/220px-Fanny_Cradock_Allan_Warren.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-26",
+	question : "Who is this, born February 26th 1928?" ,	answer : "Fats Domino", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Fats_Domino_in_Amsterdam_1962_%28crop%29.jpg/220px-Fats_Domino_in_Amsterdam_1962_%28crop%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-26",
+	question : "Who is this, born February 26th 1932?" ,	answer : "Johnny Cash", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Johnny_Cash_1977.jpg/220px-Johnny_Cash_1977.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-26",
+	question : "Who is this, born February 26th 1953?" ,	answer : "Michael Bolton", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/MichaelBolton.jpg/170px-MichaelBolton.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-26",
+	question : "Who is this, born February 26th 1947?" ,	answer : "Sandie Shaw", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Sandie_Shaw_3.jpg/250px-Sandie_Shaw_3.jpg"	});	
+
 /*
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
