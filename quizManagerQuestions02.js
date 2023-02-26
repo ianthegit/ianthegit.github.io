@@ -4545,6 +4545,46 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2023-2-26,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'K': </BR></BR>Which Russian coined the words 'proletariat' and 'bourgeoisie'??", answer : "Karl Marx", answerSpeak : "",
+	answerimage : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Karl_Marx_001.jpg/1200px-Karl_Marx_001.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'K': </BR></BR>Who had characters called 'Cupid Stunt' and 'Sid Snot'?", answer : "Kenny Everett", answerSpeak : "",
+	answerimage : "https://i.makeagif.com/media/8-03-2021/8wr2Ik.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'K': </BR></BR>Which African country got its name from the name the locals gave to the highest point?", answer : "Kenya", answerSpeak : "",
+	answerimage : "https://travellersworldwide.com/wp-content/uploads/2023/01/Shutterstock_662889487-768x480.jpg.webp"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'K': </BR></BR>Which organ of the excretory system is composed of small tubules called nephridia?", answer : "Kidney", answerSpeak : "",
+	answerimage : "https://slideplayer.com/slide/4651169/15/images/10/The+Nephron+Part+of+the+kidney+where+filtering+of+the+blood+happens.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'K': </BR></BR>A large oven in which pottery is fired is called a what?", answer : "Kiln", answerSpeak : "",
+	answerimage : "https://images.immediate.co.uk/production/volatile/sites/32/2021/01/Great-Pottery-Throw-Down-2021-Keith-Brymer-Jones-11c6e3f.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'K': </BR></BR>To which family of birds (also a brand of beer) does the Kookaburra belong?", answer : "Kingfisher", answerSpeak : "",
+	answerimage : "https://media.tenor.com/2DcKJhdCdRsAAAAC/kingfisher-levitate.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'K': </BR></BR>Which tiny bird, associated with New Zealand, has an incredibly powerful sense of smell?", answer : "Kiwi", answerSpeak : "",
+	answerimage : "https://media.tenor.com/s8thNQKeV6oAAAAC/run-kiwi.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'K': </BR></BR>Which marsupial native to Australia feeds on eucalyptus leaves?", answer : "Koala", answerSpeak : "",
+	answerimage : "https://media.tenor.com/qS28kUgsoJIAAAAM/good-night.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'K': </BR></BR>Which peninsular region in East Asia is divided at the 38th parallel into North and South?", answer : "Korea", answerSpeak : "",
+	answerimage : "https://lh3.ggpht.com/-vU_g5kNv5K0/UWb9zoaFr8I/AAAAAAAABQ4/oZSGhtaGbak/s1600/north_south_korea.png"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'K': </BR></BR>Kr is the chemical symbol for which element?", answer : "Krypton", answerSpeak : "",
+	answerimage : "https://sciencenotes.org/wp-content/uploads/2020/10/Krypton-Facts.jpg"} ); 
+
+
+
+
+
+quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
 		hoverover : "What sinks, what floats",
 		tags : "2022-x-xx,saturday,InnerWheel,surfers", 
