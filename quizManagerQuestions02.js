@@ -4550,7 +4550,7 @@ quests[++questIndexBuilder] = {
 		tags : "2023-2-26,saturday,InnerWheel,surfers,alphabet", 
 		questInfo: new Array() };
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
-	question : "What 'K': </BR></BR>Which Russian coined the words 'proletariat' and 'bourgeoisie'?", answer : "Karl Marx", answerSpeak : "",
+	question : "What 'K': </BR></BR>Which German coined the words 'proletariat' and 'bourgeoisie'?", answer : "Karl Marx", answerSpeak : "",
 	answerimage : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Karl_Marx_001.jpg/1200px-Karl_Marx_001.jpg"} ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 	question : "What 'K': </BR></BR>Who had characters called 'Cupid Stunt' and 'Sid Snot'?", answer : "Kenny Everett", answerSpeak : "",
