@@ -4592,6 +4592,56 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : "In my life, The Beatles</BR>Nights in White Satin, Moody Blues</BR>Monday Monday, The Mamas and the Papas</BR>Ring of Fire, Johnny Cash</BR>Crazy little thing called love, Queen</BR>Sound of Silence, Simon & Garfunkel</BR>What a Wonderful World, Louis Armstrong</BR>Norwegian Wood, The Beatles</BR>Heart of Gold, Neil Young</BR>Imagine, John Lennon", answerSpeak : "", question : ""}) ;
 
 
+
+
+quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2023-3-5,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'L': </BR></BR>The UK's most Westerly point?", answer : "Land's End", answerSpeak : "",
+	answerimage : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Lands_End_UK.jpg/240px-Lands_End_UK.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'L': </BR></BR>Finnish region famous 'Santa Visiting' holidays?", answer : "Lapland", answerSpeak : "",
+	answerimage : "https://www.scandi.travel/wp-content/uploads/2019/01/canstockphoto64194988.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'L': </BR></BR>How is the computer game and film character the “Duchess of St Bridget” otherwise known?", answer : "Lara Croft", answerSpeak : "",
+	answerimage : "https://m.media-amazon.com/images/M/MV5BNzMzODVjMWUtYmIxZS00NDlkLTlmNTktNjI5NTdhZjUzYzY1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'L': </BR></BR>Which toy, with a name meaning 'play well' was launched by Danish toymakers Ole and Godtfred Kristiansen in 1958?", answer : "LEGO", answerSpeak : "",
+	answerimage : "https://media.tenor.com/nqd4abdSGn0AAAAC/awsome-amazed.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'L': </BR></BR>Which word is defined as, 'of, relating to, or resembling a rabbit or hare'?", answer : "Leporine", answerSpeak : "",
+	answerimage : "https://media1.giphy.com/media/h6i0yOhM7Z2lq/giphy.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'L': </BR></BR>Which disease, also known as 'Hansen's Disease', did Robert the Bruce, King of Scotland, die of in 1329?", answer : "Leprosy", answerSpeak : "",
+	answerimage : "https://cdn.britannica.com/88/3788-004-350D5B2F/engraving-Robert-the-Bruce-artist-1797.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'L': </BR></BR>What is the only sign in the zodiac which doesn't represent a living thing?", answer : "Libra", answerSpeak : "",
+	answerimage : "https://media.tenor.com/T5Z2YpZMti0AAAAM/libra-pixels.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'L': </BR></BR>Which South American capital city is also the name for a variety of beans?", answer : "Lima", answerSpeak : "",
+	answerimage : "https://c.ndtvimg.com/2022-12/9tgiuee8_butter-beans-lima-beans_625x300_13_December_22.jpg?im=FaceCrop,algorithm=dnn,width=620,height=350"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'L': </BR></BR>The first commercial Boeing 747 fight was from New York to which city?", answer : "London", answerSpeak : "",
+	answerimage : "https://media.tenor.com/ntsJhCfqOhgAAAAC/london.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'L': </BR></BR>In which French City would you find the headquarters of Interpol?", answer : "Lyon", answerSpeak : "",
+	answerimage : "https://upload.wikimedia.org/wikipedia/commons/9/91/Ville_de_Lyon.gif"} ); 
+
+
+quests[++questIndexBuilder] = {  //To row 114 of 'coffee covers'
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),  
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2023-3-5,InnerWheel,saturday",
+		questInfo: new Array() };  
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7lCUoO6h33F1riViakvPaD?utm_source=generator&theme=0" width="100%" height="760" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
+	answer : "Don't let the sun go down on me, Elton John and George Michael</BR>Bridge over Troubled water, Simon & Garfunkel</BR>A Hard rain;s gonna fall, Bob Dylan</BR>Wild Horses, The Rolling Stones</BR>House of the Rising Sun, The Animals</BR>will you love me tomorrow, The Shirelles</BR>Sealed with a kiss, Brian Hyland</BR>Goodbye Yellow brick Road, Elton John</BR>Piano Man, Billy Joel</BR>Have you ever seen the rain, Creedence Clearwater Revival, Rod Stewart, Bonnie Tyler", answerSpeak : "", question : ""}) ;
+
+
+
 quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
 		hoverover : "What sinks, what floats",
