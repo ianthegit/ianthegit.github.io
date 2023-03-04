@@ -280,6 +280,44 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-26",
 	question : "Who is this, born February 26th 1947?" ,	answer : "Sandie Shaw", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Sandie_Shaw_3.jpg/250px-Sandie_Shaw_3.jpg"	});	
 
+
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-4",
+	question : "Who is this, born March 4th 1923?" ,	answer : "Patrick Moore", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Sir_Patrick_Moore_at_the_opening_of_the_South_Downs_Planetarium.jpg/230px-Sir_Patrick_Moore_at_the_opening_of_the_South_Downs_Planetarium.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-4",
+	question : "Who is this, born March 4th 1948?" ,	answer : "Shakin' Stevens", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Shakin_Stevens_2013.jpg/220px-Shakin_Stevens_2013.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-4",
+	question : "Who is this, born March 4th 1951?" ,	answer : "Kenny Dalglish", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Kenny_Dalglish_2009_Singapore.jpg/220px-Kenny_Dalglish_2009_Singapore.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-4",
+	question : "Who is this, born March 4th 1951?" ,	answer : "Chris Rea", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Chris_Rea_01_AB.jpg/220px-Chris_Rea_01_AB.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-4",
+	question : "Who is this, born March 4th 1954?" ,	answer : "Katherine O'Hara", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/CATHERINE_OHARA.jpg/220px-CATHERINE_OHARA.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-4",
+	question : "Who is this, born March 4th 1967?" ,	answer : "Tim Vine", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Tim_Vine_Karaoke_Circus_crop.jpg/220px-Tim_Vine_Karaoke_Circus_crop.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-4",
+	question : "Who is this, born March 4th 1968?" ,	answer : "Patsy Kensit", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Patsy_Kensit_BAFTA.jpg/220px-Patsy_Kensit_BAFTA.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-4",
+	question : "Who is this, born March 4th 1973?" ,	answer : "Penny Mordaunt", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Penny_Mordaunt_Official_Cabinet_Portrait%2C_September_2022_%28cropped%29.jpg/220px-Penny_Mordaunt_Official_Cabinet_Portrait%2C_September_2022_%28cropped%29.jpg"	});	
+
+
+
+
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-5",
+	question : "Who is this, born March 5th 1908?" ,	answer : "Rex Harrison", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Rex_Harrison_Allan_Warren.jpg/220px-Rex_Harrison_Allan_Warren.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-5",
+	question : "Who is this, born March 5th 1948?" ,	answer : "Eddy Grant", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Eddy_Grant_at_Supreme_Court_Gardens_cropped.jpg/220px-Eddy_Grant_at_Supreme_Court_Gardens_cropped.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-5",
+	question : "Who is this, born March 5th 1948?" ,	answer : "Elaine Paige", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Elaine-paige-obe.jpg/220px-Elaine-paige-obe.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-5",
+	question : "Who is this, born March 5th 1958?" ,	answer : "Andy Gibb", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/en/thumb/c/cd/Andy_Gibb.JPG/220px-Andy_Gibb.JPG"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-5",
+	question : "Who is this, born March 5th 1974?" ,	answer : "Matt Lucas", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Matt_Lucas_by_Gage_Skidmore.jpg/220px-Matt_Lucas_by_Gage_Skidmore.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-5",
+	question : "Who is this, born March 5th 1993?" ,	answer : "Harry Maguire", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Harry_Maguire_2021.jpg/220px-Harry_Maguire_2021.jpg"	});	
+
 /*
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
