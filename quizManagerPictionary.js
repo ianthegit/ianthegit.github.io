@@ -2456,6 +2456,31 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	image : "https://lh3.googleusercontent.com/pw/AMWts8Dxj53qCEPfK-aGAFJQsFeECTSJI72ywkOkeQQIkEu57VNdsjU-RIUDeIoEKqOAjI8Z64J4GIXFF4iLw7rJ5UzUZVKBb2y4eAEF8McO7sfeqIIplfXFVgTCO6Xevid-pYZZsQce4GNjYVIMF53_F8z_Rg=w955-h581-no?authuser=0",
 	answerimage : "https://media.tenor.com/jhsMAREYalUAAAAM/pacman-gaming.gif", answerSpeak : "", answer : "Pac-man"}) ;
 
+
+uests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of Queen Songs",
+		tags : "2023-?-?,pictionary", straightToAnswers:true,
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Bohemian Rhapsody"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Fat Bottommed  Girls"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Radio Ga-Ga"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Bicycle Race"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "I want to Break Free"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Killer Queen"}) ;
 /*
  * 	image : "",
 	answerimage : "", answer : "Table"}) ;
