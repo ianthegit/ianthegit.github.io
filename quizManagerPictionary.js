@@ -2471,10 +2471,10 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://media2.giphy.com/media/pyKDR2aGj83YMGPgwP/giphy.gif", answerSpeak : "", answer : "Fat Bottommed  Girls"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
 	image : "",
-	answerimage : "", answerSpeak : "", answer : "Radio Ga-Ga"}) ;
+	answerimage : "https://media.tenor.com/IMuC48rbrO4AAAAC/queen-radio-gaga.gif", answerSpeak : "", answer : "Radio Ga-Ga"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
 	image : "",
-	answerimage : "https://media.tenor.com/IMuC48rbrO4AAAAC/queen-radio-gaga.gif", answerSpeak : "", answer : "Bicycle Race"}) ;
+	answerimage : "https://media2.giphy.com/media/3oFzmsPpDkLHvlFD8c/200w.gif?cid=82a1493b8j8vaabrhjizupqu13ub867n9a78fxajcxmd4958&rid=200w.gif&ct=g", answerSpeak : "", answer : "Bicycle Race"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
 	image : "",
 	answerimage : "https://i.makeagif.com/media/3-30-2017/owKnr2.gif", answerSpeak : "", answer : "I want to Break Free"}) ;
