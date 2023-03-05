@@ -2464,22 +2464,22 @@ quests[++questIndexBuilder] = { //
 		questInfo: new Array()
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8BxoSDJl7U1ytnOX8APmFAZpKGjlKIgbS1pIdhF09k40Z5G5TfMvw0dW7X6IIZPZgw6foCMITpZqnk2Yi17-2p8bqCUOq98Zt77NCz3x4QaSXBDrTrkJYlo_d2mwAOH0OhEdJhHzYLVPAw2u27Oukw3jQ=w943-h897-no?authuser=0",
 	answerimage : "https://media.tenor.com/5AKYQyjkDu0AAAAC/queen-bohemian-rhapsody.gif", answerSpeak : "", answer : "Bohemian Rhapsody"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8DzBjzHR5943FoNYM8pcjIDDcM1y2o3QNycHF-p2RQINcz59jMz0pqRnKA68B-bds9qXA3AQKVslAXxbdmvkgkTs1-_Ei5CAc9RRS2qHwxP4YTgMNLcwOOEfgyGsw0OpuMW4sr3x17HZ4pS21nCY9JeXg=w547-h741-no?authuser=0",
 	answerimage : "https://media2.giphy.com/media/pyKDR2aGj83YMGPgwP/giphy.gif", answerSpeak : "", answer : "Fat Bottommed  Girls"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8DkqrelZlBg2zvvgCdBaGHqk4xemqLTY6S8kqjpXQdgT986TDXxU97We1_t7ju2SOpwyOCAKyoVHURbUPt-JBlQ65D6qkjiqvuq1mbROgjezu7K41fa1Xc22ERctdjp-tChhnfaVKl2WklCZs70US7jEg=w783-h691-no?authuser=0",
 	answerimage : "https://media.tenor.com/IMuC48rbrO4AAAAC/queen-radio-gaga.gif", answerSpeak : "", answer : "Radio Ga-Ga"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8CJuE3U3aeQlWoSGJzJDLutpxhhUsvAlnbS1O_jBlayBlSOfpXYjpA-nLceUP6txtaVvHrm-EM9GeX13gacS3IDKuuOskplKonWVCfr-vsfuUALhbAAx48SgkvTx225kX4wMvScoTp4vGjgVSQ2eWlZSQ=w572-h358-no?authuser=0",
 	answerimage : "https://media2.giphy.com/media/3oFzmsPpDkLHvlFD8c/200w.gif?cid=82a1493b8j8vaabrhjizupqu13ub867n9a78fxajcxmd4958&rid=200w.gif&ct=g", answerSpeak : "", answer : "Bicycle Race"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8CvIHWKhWaTdUyoKiMg40JKNoCQzJfhFl7Lc6rZAAfb4zBtlMGGjjdGjMq7jYkykvi9-S7IjzGWpy6V7Md7hrh7is1rO_fK3SrhJbPfU-ZRyAPhqbmHSB8S9moRkQ88KXt6hYWzCRj-wIAgK9ZYwk6kUw=w505-h567-no?authuser=0",
 	answerimage : "https://i.makeagif.com/media/3-30-2017/owKnr2.gif", answerSpeak : "", answer : "I want to Break Free"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8BzCfpIXLRmxk5KK-l_3loBHwz2nJ5kIuSgClDAK70_ENSB9HqnW_s2zyHz-A4czvVGJfb4MERURVsdz3umZ4ubum3c-2yhtQ26SIidRsBEyrLQ2wv7dj3z5QfIuTJn0TcA5YlzGIQo85zdPdxnRSfJQQ=w1385-h744-no?authuser=0",
 	answerimage : "https://media.tenor.com/7sj0n4e4VcAAAAAC/guaranteed-to-blow-your-mind-queen.gif", answerSpeak : "", answer : "Killer Queen"}) ;
 /*
  * 	image : "",
