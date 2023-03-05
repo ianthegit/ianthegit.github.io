@@ -2460,27 +2460,27 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 uests[++questIndexBuilder] = { //
 		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of Queen Songs",
-		tags : "2023-?-?,pictionary", straightToAnswers:true,
+		tags : "2023-3-5,pictionary", straightToAnswers:true,
 		questInfo: new Array()
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
 	image : "",
-	answerimage : "", answerSpeak : "", answer : "Bohemian Rhapsody"}) ;
+	answerimage : "https://media.tenor.com/5AKYQyjkDu0AAAAC/queen-bohemian-rhapsody.gif", answerSpeak : "", answer : "Bohemian Rhapsody"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
 	image : "",
-	answerimage : "", answerSpeak : "", answer : "Fat Bottommed  Girls"}) ;
+	answerimage : "https://media2.giphy.com/media/pyKDR2aGj83YMGPgwP/giphy.gif", answerSpeak : "", answer : "Fat Bottommed  Girls"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
 	image : "",
 	answerimage : "", answerSpeak : "", answer : "Radio Ga-Ga"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
 	image : "",
-	answerimage : "", answerSpeak : "", answer : "Bicycle Race"}) ;
+	answerimage : "https://media.tenor.com/IMuC48rbrO4AAAAC/queen-radio-gaga.gif", answerSpeak : "", answer : "Bicycle Race"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
 	image : "",
-	answerimage : "", answerSpeak : "", answer : "I want to Break Free"}) ;
+	answerimage : "https://i.makeagif.com/media/3-30-2017/owKnr2.gif", answerSpeak : "", answer : "I want to Break Free"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
 	image : "",
-	answerimage : "", answerSpeak : "", answer : "Killer Queen"}) ;
+	answerimage : "https://media.tenor.com/7sj0n4e4VcAAAAAC/guaranteed-to-blow-your-mind-queen.gif", answerSpeak : "", answer : "Killer Queen"}) ;
 /*
  * 	image : "",
 	answerimage : "", answer : "Table"}) ;
