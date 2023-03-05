@@ -4600,10 +4600,10 @@ quests[++questIndexBuilder] = {
 		tags : "2023-3-5,saturday,InnerWheel,surfers,alphabet", 
 		questInfo: new Array() };
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
-	question : "What 'L': </BR></BR>The UK's most Westerly point?", answer : "Land's End", answerSpeak : "",
+	question : "What 'L': </BR></BR>Is the UK's most Westerly point?", answer : "Land's End", answerSpeak : "",
 	answerimage : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Lands_End_UK.jpg/240px-Lands_End_UK.jpg"} ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
-	question : "What 'L': </BR></BR>Finnish region famous 'Santa Visiting' holidays?", answer : "Lapland", answerSpeak : "",
+	question : "What 'L': </BR></BR>Finnish region famous for hosting 'Santa Visiting' holidays?", answer : "Lapland", answerSpeak : "",
 	answerimage : "https://www.scandi.travel/wp-content/uploads/2019/01/canstockphoto64194988.jpg"} ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 	question : "What 'L': </BR></BR>How is the computer game and film character the “Duchess of St Bridget” otherwise known?", answer : "Lara Croft", answerSpeak : "",
