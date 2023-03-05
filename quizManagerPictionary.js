@@ -2457,7 +2457,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://media.tenor.com/jhsMAREYalUAAAAM/pacman-gaming.gif", answerSpeak : "", answer : "Pac-man"}) ;
 
 
-uests[++questIndexBuilder] = { //
+quests[++questIndexBuilder] = { //
 		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of Queen Songs",
 		tags : "2023-3-5,pictionary", straightToAnswers:true,
