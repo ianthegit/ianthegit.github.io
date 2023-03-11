@@ -4642,6 +4642,57 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 
+
+quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2023-3-12,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'M': </BR></BR>Which cake is sometimes mistakenly thought to originate from the name of a group of islands?", answer : "Madeira", answerSpeak : "",
+	answerimage : "https://madeirasidecartours.com/wp-content/uploads/2018/07/Madeira-Island-Map-Madeira-Sidecar-Tours-destaque-1080x630.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'M': </BR></BR>What was the principal wood used by Thomas Chippendale (a famous cabinet-maker) during the 18th century?", answer : "Mahogany", answerSpeak : "",
+	answerimage : "https://assets.entrepreneur.com/content/3x2/2000/1669148455-GettyImages-170216928.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'M': </BR></BR>The process where food browns during cooking is known as the what reaction?", answer : "Maillard", answerSpeak : "",
+	answerimage : "https://media1.giphy.com/media/7MdjxhX0qxpfy/giphy.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'M': </BR></BR>Which famous Venetian merchant travelled to China and worked for Kublai Khan?", answer : "Marco Polo", answerSpeak : "",
+	answerimage : "https://media.tenor.com/LFdW0gizRQQAAAAd/marco-poli.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'M': </BR></BR>Who was the first to speak to Jesus after he had risen from the dead?", answer : "Mary Magdalene", answerSpeak : "",
+	answerimage : "https://media0.giphy.com/media/eMhGsPeK9hAvrB9nHD/giphy.gif?cid=ecf05e471bkftwsi1tz4q285rtl5tzzb66b7xvrrzz2ltkyz&rid=giphy.gif&ct=g"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'M': </BR></BR>n which city was Mohammed, the founder of Islam born?", answer : "Mecca", answerSpeak : "",
+	answerimage : "https://media.tenor.com/uOFo_85NF2gAAAAC/mecca-makkah.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'M': </BR></BR>What cylindrical map projection became the standard map projection for navigation?", answer : "Mercator", answerSpeak : "",
+	answerimage : "https://media.tenor.com/Dqm917AdnoAAAAAC/mercator-vs-true-world-map-true-coutry-size.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'M': </BR></BR>The Church of 'Santa Maria delle Grazie' is a World Heritage Site, in which Italian city would you find it?", answer : "Milan", answerSpeak : "",
+	answerimage : "https://upload.wikimedia.org/wikipedia/commons/8/83/Santa_Maria_delle_Grazie_Milan_2013.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'M': </BR></BR>The Little Bighorn, scene of Custer's last stand, is in which U.S. State?", answer : "Montana", answerSpeak : "",
+	answerimage : "https://media0.giphy.com/media/114tVAQijoMPNS/giphy.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'M': </BR></BR>What is the aubergine - or potato-based dish, often including ground meat, which is common in Egypt, the Balkans and the Middle East?", answer : "Moussaka", answerSpeak : "",
+	answerimage : "https://ruhlman.com/wp-content/uploads/2022/05/IMG_2408-scaled.jpeg"} ); 
+
+
+
+
+quests[++questIndexBuilder] = {  //To row 114 of 'coffee covers'
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),  
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2023-3-12,InnerWheel,saturday",
+		questInfo: new Array() };  
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2ReoldL5YJcTHOts67PwIU?utm_source=generator&theme=0" width="100%" height="760" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
+	answer : "Believer, The Monkees</BR>Let it be, The Beatles</BR>Here comes the Sun, The Beatles</BR>What a wonderful world, Louis Armstrong</BR>I still haven't found what I'm looking for, U2</BR>God only know, The Beach Boys</BR>Come Together, The Beatles</BR>Mr Tambourine Man, Bob Dylan</BR>Somebody to Love, Queen</BR>Hey Jude, The Beatles", answerSpeak : "", question : ""}) ;
+
+
+
 quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
 		hoverover : "What sinks, what floats",
