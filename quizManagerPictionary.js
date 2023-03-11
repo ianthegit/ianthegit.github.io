@@ -2460,7 +2460,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 quests[++questIndexBuilder] = { //
 		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of Queen Songs",
-		tags : "2023-3-5,pictionary", straightToAnswers:true,
+		tags : "2023-3-5,pictionary,songPictionary", straightToAnswers:true,
 		questInfo: new Array()
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
@@ -2481,6 +2481,35 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AMWts8BzCfpIXLRmxk5KK-l_3loBHwz2nJ5kIuSgClDAK70_ENSB9HqnW_s2zyHz-A4czvVGJfb4MERURVsdz3umZ4ubum3c-2yhtQ26SIidRsBEyrLQ2wv7dj3z5QfIuTJn0TcA5YlzGIQo85zdPdxnRSfJQQ=w1385-h744-no?authuser=0",
 	answerimage : "https://media.tenor.com/7sj0n4e4VcAAAAAC/guaranteed-to-blow-your-mind-queen.gif", answerSpeak : "", answer : "Killer Queen"}) ;
+	
+	
+	 quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of Elton John songs",
+		tags : "2023-?-?,pictionary,songPictionary", straightToAnswers:true,
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://media2.giphy.com/media/xUPGclwV3LCwOqAJ0c/200w.webp?cid=ecf05e47irv0274a9gxzy1slcaqqv4omyj71su9e6ajfmlk7&rid=200w.webp&ct=g", answerSpeak : "", answer : "Rocket Man"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://media3.giphy.com/media/5z83IlZ6gVpkzbG765/200w.gif?cid=6c09b952ojd8k5x1ejak3e6ce0wpzga0awwtlcgm8t5oh6nf&rid=200w.gif&ct=g", answerSpeak : "", answer : "Goodbye Yellowbrick Road"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://i.gifer.com/origin/8c/8c9af5eb116155f45c511c5fe124e6ca.gif", answerSpeak : "", answer : "Tiny Dancer"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://64.media.tumblr.com/tumblr_lzgj4vpOfy1romnewo3_400.gif", answerSpeak : "", answer : "Candle in the Wind"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://media2.giphy.com/media/3o6fIS21WkJEakzTYQ/200w.gif?cid=82a1493bhmgkbfpynq1ri6fj52kfvdrmeixtmz9qpipsw2dz&rid=200w.gif&ct=g", answerSpeak : "", answer : "I'm Still Standing"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://64.media.tumblr.com/b8b257fd28462008d40870c9317856ca/tumblr_pw13cwwD3J1r0jkkko1_400.gif", answerSpeak : "", answer : "Crocodile Rock"}) ;
+	
+	
+	
 /*
  * 	image : "",
 	answerimage : "", answer : "Table"}) ;
