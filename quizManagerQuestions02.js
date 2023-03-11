@@ -4664,7 +4664,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 	question : "What 'M': </BR></BR>Who was the first to speak to Jesus after he had risen from the dead?", answer : "Mary Magdalene", answerSpeak : "",
 	answerimage : "https://media0.giphy.com/media/eMhGsPeK9hAvrB9nHD/giphy.gif?cid=ecf05e471bkftwsi1tz4q285rtl5tzzb66b7xvrrzz2ltkyz&rid=giphy.gif&ct=g"} ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
-	question : "What 'M': </BR></BR>n which city was Mohammed, the founder of Islam born?", answer : "Mecca", answerSpeak : "",
+	question : "What 'M': </BR></BR>In which city was Mohammed, the founder of Islam born?", answer : "Mecca", answerSpeak : "",
 	answerimage : "https://media.tenor.com/uOFo_85NF2gAAAAC/mecca-makkah.gif"} ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 	question : "What 'M': </BR></BR>What cylindrical map projection became the standard map projection for navigation?", answer : "Mercator", answerSpeak : "",
