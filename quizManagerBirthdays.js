@@ -318,6 +318,31 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-5",
 	question : "Who is this, born March 5th 1993?" ,	answer : "Harry Maguire", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Harry_Maguire_2021.jpg/220px-Harry_Maguire_2021.jpg"	});	
 
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-11",
+	question : "Who is this, born March 11th 1916?" ,	answer : "Harold Wilson", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Harold_Wilson.jpg/220px-Harold_Wilson.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-11",
+	question : "Who is this, born March 11th 19Y31" ,	answer : "Rupert Murdoch", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Rupert_Murdoch_-_Flickr_-_Eva_Rinaldi_Celebrity_and_Live_Music_Photographer.jpg/220px-Rupert_Murdoch_-_Flickr_-_Eva_Rinaldi_Celebrity_and_Live_Music_Photographer.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-11",
+	question : "Who is this, born March 11th 1932?" ,	answer : "Nigel Lawson", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Official_portrait_of_Lord_Lawson_of_Blaby_crop_2.jpg/220px-Official_portrait_of_Lord_Lawson_of_Blaby_crop_2.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-11",
+	question : "Who is this, born March 11th 1952?" ,	answer : "Douglas Adams", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Douglas_adams_portrait_cropped.jpg/220px-Douglas_adams_portrait_cropped.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-11",
+	question : "Who is this, born March 11th 1961?" ,	answer : "John Barrowman", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/John_Barrowman_by_Gage_Skidmore_2.jpg/220px-John_Barrowman_by_Gage_Skidmore_2.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-11",
+	question : "Who is this, born March 11th 1971?" ,	answer : "Johnny Knoxville", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Johnny-Knoxville.jpg/220px-Johnny-Knoxville.jpg"	});	
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-12",
+	question : "Who is this, born March 12th 1946?" ,	answer : "Liza Minnelli", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Liza_Minnelli_Publicity_1973.jpg/220px-Liza_Minnelli_Publicity_1973.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-12",
+	question : "Who is this, born March 12th 1949?" ,	answer : "David Mellor", answerSpeak : "", image : "https://ichef.bbci.co.uk/images/ic/640x360/p01h0tns.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-12",
+	question : "Who is this, born March 12th 1956?" ,	answer : "Leslie Manville", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Leslie_Manville_%28cropped%29.jpg/220px-Leslie_Manville_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-12",
+	question : "Who is this, born March 12th 1979?" ,	answer : "Pete Doherty", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/CDLN2022PeteDoherty_1.jpg/220px-CDLN2022PeteDoherty_1.jpg"	});	
+
 /*
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
