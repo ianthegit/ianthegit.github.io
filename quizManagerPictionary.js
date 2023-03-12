@@ -2486,7 +2486,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	 quests[++questIndexBuilder] = { //
 		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of Elton John songs",
-		tags : "2023-?-?,pictionary,songPictionary", straightToAnswers:true,
+		tags : "2023-3-12,pictionary,songPictionary", straightToAnswers:true,
 		questInfo: new Array()
 	}; 
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
