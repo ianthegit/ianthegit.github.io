@@ -2488,7 +2488,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 		hoverover : "Pictionary on the theme of Elton John songs",
 		tags : "2023-?-?,pictionary,songPictionary", straightToAnswers:true,
 		questInfo: new Array()
-	};
+	}; 
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AMWts8Dm1GCIel3SIOgHfg4XCZQPGFgLZP9DHpjtCiNiGx905DjnEie7Mz-m6hI3tNGpp3XJhp94WbIzZinGrr0YDqUvkEobhD_NKVkbspcZ_hAfSHNvBDcYyRVteNObEI05674I2preJQKnAMQFzUdC16poPA=w539-h455-no?authuser=0",
 	answerimage : "https://media2.giphy.com/media/xUPGclwV3LCwOqAJ0c/200w.webp?cid=ecf05e47irv0274a9gxzy1slcaqqv4omyj71su9e6ajfmlk7&rid=200w.webp&ct=g", answerSpeak : "", answer : "Rocket Man"}) ;
