@@ -2490,22 +2490,22 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 		questInfo: new Array()
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8Dm1GCIel3SIOgHfg4XCZQPGFgLZP9DHpjtCiNiGx905DjnEie7Mz-m6hI3tNGpp3XJhp94WbIzZinGrr0YDqUvkEobhD_NKVkbspcZ_hAfSHNvBDcYyRVteNObEI05674I2preJQKnAMQFzUdC16poPA=w539-h455-no?authuser=0",
 	answerimage : "https://media2.giphy.com/media/xUPGclwV3LCwOqAJ0c/200w.webp?cid=ecf05e47irv0274a9gxzy1slcaqqv4omyj71su9e6ajfmlk7&rid=200w.webp&ct=g", answerSpeak : "", answer : "Rocket Man"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8CWfcANdUzXOvhhs3MEb57G4RAAkO4rpOHuI1YulIuwdmNEOH2pCw_8QZ4vxrOnDqnWc9FbI5bEcJFhHI5vHvgkuNd-1KS9od5fwBxjpRMnVV3gEz7yM2luuCZywRgjmJnEHOEdxCFRIzIVVitWeTrHGw=w804-h431-no?authuser=0",
 	answerimage : "https://media3.giphy.com/media/5z83IlZ6gVpkzbG765/200w.gif?cid=6c09b952ojd8k5x1ejak3e6ce0wpzga0awwtlcgm8t5oh6nf&rid=200w.gif&ct=g", answerSpeak : "", answer : "Goodbye Yellowbrick Road"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8A6ZR_URHLQ76jrpavWs94hyXv3n2nuu1vn31JYihpEBRc4JLt9hldAwQHJdi1wpaU7h9FghBecWFOw-YdhFrAmbeYEXB3aUL04maHUe2v7ObZW_Cgi80u_4xOGoMxSOZhhaKWfAw915c4NBDHk6xWDvQ=w476-h457-no?authuser=0",
 	answerimage : "https://i.gifer.com/origin/8c/8c9af5eb116155f45c511c5fe124e6ca.gif", answerSpeak : "", answer : "Tiny Dancer"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8BFEWWzc4BBHBZHdIArMavFA-q2KBcCYU3pH2YyAW5aL2D-J7vTLzJwZ95FBqxqUgDwKDAO-D0w1NCmJv5O6DWbgp-lD_evBI4mfPSfNprvMxl13m7NZ-e_PJGnvDknngHfsTE2jb4IOAAnI5Oq2MS0TQ=w580-h374-no?authuser=0",
 	answerimage : "https://64.media.tumblr.com/tumblr_lzgj4vpOfy1romnewo3_400.gif", answerSpeak : "", answer : "Candle in the Wind"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8AYJXlzwr_W8dcUL-v3d3z1mfliTAg2iKeIlLZPs1LKqemkffVUUhFyNQsJapWPztCVLuz8hTWKIhX7IONfD3aiSjL9o0tfsaeQewKXIr3m5Fc6e8RzSPoVBEOT89lSfQOGzX5sGNpHHrflwQXCLk9HkA=w599-h421-no?authuser=0",
 	answerimage : "https://media2.giphy.com/media/3o6fIS21WkJEakzTYQ/200w.gif?cid=82a1493bhmgkbfpynq1ri6fj52kfvdrmeixtmz9qpipsw2dz&rid=200w.gif&ct=g", answerSpeak : "", answer : "I'm Still Standing"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8ChdFLbLJMS4fj-plRnluKc6XSu36Z0M5SgvD_dA1DfwLCg3cP5lSe2gCTJqgfQGXGVEy3JSoVRXLfpvqHtubCR8CIhmNUbAzONpL2HZHMGHUjxGfi2oKD3WEIvKknCREAoFhitd6j1mURnofOu57AjPA=w849-h317-no?authuser=0",
 	answerimage : "https://64.media.tumblr.com/b8b257fd28462008d40870c9317856ca/tumblr_pw13cwwD3J1r0jkkko1_400.gif", answerSpeak : "", answer : "Crocodile Rock"}) ;
 	
 	
