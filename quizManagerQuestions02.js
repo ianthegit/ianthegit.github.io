@@ -4739,7 +4739,7 @@ quests[++questIndexBuilder] = {  //To row 99 of 'imaginary future complete'
 		tags : "music,2023-3-19,InnerWheel,saturday",
 		questInfo: new Array() };  
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
-	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2ReoldL5YJcTHOts67PwIU?utm_source=generator&theme=0" width="100%" height="760" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6KLBmTOiEwe8COx8aHELjg?utm_source=generator&theme=0" width="100%" height="760" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
 	answer : "Don't stop, Fleetwood Mac</BR>Heart of Gold, Neil Young</BR>Dancing in the Dark, Bruce Springsteen</BR>The times they are a changin, Bob Dylan</BR>Have you ever seen the rain,  Creedence Clearwater Revival, Rod Stewart, Bonnie Tyler</BR>With a little help from my friends, Joe Cocker, The Beatles</BR>Come as you are, Nirvana</BR>Lean on Me, Bill Withers</BR>I won't back down, Tom Petty</BR>Let's stay together, Al Green", answerSpeak : "", question : ""}) ;
 
 
