@@ -343,6 +343,29 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-12",
 	question : "Who is this, born March 12th 1979?" ,	answer : "Pete Doherty", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/CDLN2022PeteDoherty_1.jpg/220px-CDLN2022PeteDoherty_1.jpg"	});	
 
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-18",
+	question : "Who is this, born March 18th 1938?" ,	answer : "Kenny Lynch", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Kenny_Lynch-ab.jpg/220px-Kenny_Lynch-ab.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-18",
+	question : "Who is this, born March 18th 1939?" ,	answer : "Ron Atkinson", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Atkinson%2C_Ron.jpg/220px-Atkinson%2C_Ron.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-18",
+	question : "Who is this, born March 18th 1941?" ,	answer : "Wilson Pickett", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/en/3/38/Wilson_Pickett.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-18",
+	question : "Who is this, born March 18th 1959?" ,	answer : "Irene Cara", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Irene_Cara.jpg/220px-Irene_Cara.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-18",
+	question : "Who is this, born March 18th 1966?" ,	answer : "Peter Jones", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Chris_Dawson_%26_Peter_Jones_on_set_on_Peter_Jones_Meets_%28cropped%29.jpg/220px-Chris_Dawson_%26_Peter_Jones_on_set_on_Peter_Jones_Meets_%28cropped%29.jpg"	});	
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-19",
+	question : "Who is this, born March 19th 1921?" ,	answer : "Tommy Cooper", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/en/thumb/d/d6/Tommycooper.jpg/220px-Tommycooper.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-19",
+	question : "Who is this, born March 19th 1928?" ,	answer : "Patrick McGoohan", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/McGoohanAllnightlongcrop1.png/220px-McGoohanAllnightlongcrop1.png"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-19",
+	question : "Who is this, born March 19th 1936?" ,	answer : "Ursula Andress", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/en/8/82/Ursula_Andress_in_Dr._No.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-19",
+	question : "Who is this, born March 19th 1955?" ,	answer : "Bruce Willis", answerSpeak : "", image : "https://scontent.fltn3-2.fna.fbcdn.net/v/t31.18172-8/28616536_1621009451312765_2140054571882851609_o.jpg?_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=Z4Bqptvd-ScAX9K6k6n&_nc_ht=scontent.fltn3-2.fna&oh=00_AfBq8-K46fZP7qZJOohC0D707mi-ppw20MwREO9qxTbLDw&oe=643D692E"	});	
+
 /*
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
