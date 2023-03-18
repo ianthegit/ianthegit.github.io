@@ -4693,6 +4693,57 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 
+
+quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2023-3-19,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'N': </BR></BR>What food establishment might you go to for a 'Cheeky' meal??", answer : "Nandos", answerSpeak : "",
+	answerimage : "https://external-preview.redd.it/noWHZ-cawhWsD4W6yGIeqXZqxVO1bkkV97BTSkHDuA4.png?auto=webp&v=enabled&s=220d2f3d886b1e325711b06e40952966f6a7e433"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'N': </BR></BR>Who died in 1821, probably of arsenic poisoning from the wallpaper, while living on the island of St Helena?", answer : "Napoleon", answerSpeak : "",
+	answerimage : "https://www.napoleon.org/wp-content/thumbnails/uploads/2006/01/t5_09ter_napoleon_fontainebleau_full-tt-width-637-height-911-crop-1-bgcolor-ffffff-lazyload-0.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'N': </BR></BR>What do I like having on a weekend afternoon, on the sofa, after lunch?", answer : "Nap", answerSpeak : "",
+	answerimage : "https://lh3.googleusercontent.com/dEL4X22r38Y3IhCzWZOjvq_O-iB6yDmjrGrG-TM0qi4GXX4ysU3QUflrUaz3AddcWJWtKg0whxFxBcGkqxr_h7d9CxGEcbIkfEyc_ZCdwXLlpHHHIT2ecdo-p_6J4wdNlTKBp7vBKch8OhWNZ5Mzl-WOOK2ChKOqbBuYz6rLrkvRV36c_XW7tdapysXq5ibxBQApmzPNKdjszymblqpfl8W6whxG2jsjccYSrnSvYZB7ZXlnor0rSkqo_3bJonR0r9rFTuU7YXII50CWAQah9xEqkS2M4kqw1FV62-Z8IfY-2ULiI0fxUVT27FN_7DTNs5v6PJjrRJ67JikDICdjVtdKK7Q2SKY8guARLKLT2shvgTlfAyuXv5sfe4gjNwWiY5r7Bjtmwn1ZYzkc0S0JbPtv4kjqmu8ApMxwc7oWPojo0yv5SiTj45v3-ESAynxfVNMl7mH-eXt1jAB60z8tLh7GOhR6gfDARiQGOzv8EWnNzXjPSHtZKoYBrNpIiZ2D87fQC3WR9tnXxBpVTbUYxrb6HEfPf3FaX4gR_3_nvCh4xehDXOfENSndGQh7jTjxlQOdrLvel_OEnDZubZQfTeJInogBo0SGm7ZMuNNBtBUpFiEKGIUSJwmD5KE8gZpHM-fEZXwObE5t1OFPlf5ye-xarfk-YscNK2nv0ConJOAT0j2uoScbV7_TfN8oHtYC15CmdqhvgI-EfVkS1NWZHdlmny0zCmMyJqt5mtryTuTQaArG4v4KFC6krJyXRFp7oTMi68JPm3iMnk5KrSZlqX4jsWkhPive7zxPZNVpo3HAxrc2QxgCtNLode6_t2j7LLSLhobIwjhCG5eT_5O87Bbux5xNcjYq0VT6g4sVAVMHr4OjWD_90NtAbNTyYUnKpBp3KxqHHYZfxSsXV39fjWU7A61MWrIlYDHHB5TiucKw-A=w1297-h973-no?authuser=0"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'N': </BR></BR>What smooth skinned fruit is a cross between a peach and a plum?", answer : "Nectarine", answerSpeak : "",
+	answerimage : "https://cdn.britannica.com/25/182625-050-327FAC9B/Nectarine-fruits.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'N': </BR></BR>Which Roman emperor forced his former tutor, Seneca the Younger, to commit suicide?", answer : "Nero", answerSpeak : "",
+	answerimage : "https://upload.wikimedia.org/wikipedia/commons/1/12/Nero_Glyptothek_Munich_321.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'N': </BR></BR>What City on the Mississippi was the final destination of the first U.S. paddle wheel steamboat, which departed from Pittsburgh?", answer : "New Orleans", answerSpeak : "",
+	answerimage : "https://www.letsroam.com/explorer/wp-content/uploads/sites/10/2021/03/shutterstock_390070024.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'N': </BR></BR>What is the name of the group of three waterfalls spanning the border between the province of Ontario in Canada and the state of New York in the United States?", answer : "Niagra Falls", answerSpeak : "",
+	answerimage : "https://thumbs.gfycat.com/BitterReliableDolphin-size_restricted.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'N': </BR></BR>C10H14N2 is a poisonous alkaloid consumed daily by millions of people, what is it better known as?", answer : "Nicotine", answerSpeak : "",
+	answerimage : "https://media.istockphoto.com/id/637972592/photo/structural-model-of-nicotine.jpg?s=612x612&w=0&k=20&c=CloPpantOcDeRuT15ySqevg87Ng5rgZH0SCV19uCdfE="} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'N': </BR></BR>Which East Anglian (UK) county shares its name with a city in Virginia, USA?", answer : "Norfolk", answerSpeak : "",
+	answerimage : "https://qph.cf2.quoracdn.net/main-qimg-a375aa63719cd787d1c5aace850c4bf6-lq"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'N': </BR></BR>What is the British equivalent of the game known in America as 'Tic-Tac-Toe'?", answer : "Noughts and crosses", answerSpeak : "",
+	answerimage : "https://media3.giphy.com/media/ChzovjKPuEiYe8ePih/giphy.gif"} ); 
+
+
+
+
+quests[++questIndexBuilder] = {  //To row 99 of 'imaginary future complete'
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),  
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2023-3-19,InnerWheel,saturday",
+		questInfo: new Array() };  
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2ReoldL5YJcTHOts67PwIU?utm_source=generator&theme=0" width="100%" height="760" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
+	answer : "Don't stop, Fleetwood Mac</BR>Heart of Gold, Neil Young</BR>Dancing in the Dark, Bruce Springsteen</BR>The times they are a changin, Bob Dylan</BR>Have you ever seen the rain,  Creedence Clearwater Revival, Rod Stewart, Bonnie Tyler</BR>With a little help from my friends, Joe Cocker, The Beatles</BR>Come as you are, Nirvana</BR>Lean on Me, Bill Withers</BR>I won't back down, Tom Petty</BR>Let's stay together, Al Green", answerSpeak : "", question : ""}) ;
+
+
+
 quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
 		hoverover : "What sinks, what floats",

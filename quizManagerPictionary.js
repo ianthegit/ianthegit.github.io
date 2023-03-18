@@ -2509,6 +2509,32 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://64.media.tumblr.com/b8b257fd28462008d40870c9317856ca/tumblr_pw13cwwD3J1r0jkkko1_400.gif", answerSpeak : "", answer : "Crocodile Rock"}) ;
 	
 	
+
+ quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of ABBA songs",
+		tags : "2023-3-19,pictionary", straightToAnswers:true,
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://media4.giphy.com/media/lz8pRTu1aE0TVhycyL/giphy.gif", answerSpeak : "", answer : "Dancing Queen"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://thumbs.gfycat.com/DeliriousGoodAmericansaddlebred-size_restricted.gif", answerSpeak : "", answer : "Super Trooper"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://64.media.tumblr.com/74a05ed35b264094ac9deebc7c55b333/1155b70c120d2493-d2/s500x750/676f8beeefcde3abfc6f5988af3607d7a0471332.gif", answerSpeak : "", answer : "Money, Money, Money"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://64.media.tumblr.com/f7b20b10deed1609431caf1618d40749/tumblr_oiyl2cUkbp1ur0nm7o3_500.gif", answerSpeak : "", answer : "Honey Honey"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://media.tenor.com/7q8k8z3O7A4AAAAC/mamma-mia-donna-sheridan.gif", answerSpeak : "", answer : "I have a Dream"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://media.tenor.com/IESj-QOTISMAAAAC/abba-ring-ring.gif", answerSpeak : "", answer : "Ring Ring"}) ;
+
 	
 /*
  * 	image : "",
