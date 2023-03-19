@@ -2517,22 +2517,22 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 		questInfo: new Array()
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8Cv-_0_3akXfPSweFUvE9FUqvTXSmpJkhcsx2v3D9bKEnqEu6JiI4rlUsl0edyqKl8PGSNrr-tzPcrPpY0w8vJxfbaC1rQpRplT9oj0EdryiJb7j5Z1ybYKbOo6EZCnWvoRJGtTkmF9VnhTpCGEJtVp8g=w502-h622-no?authuser=0",
 	answerimage : "https://media4.giphy.com/media/lz8pRTu1aE0TVhycyL/giphy.gif", answerSpeak : "", answer : "Dancing Queen"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8CvfkYSBekn5qTsMc44TjwGeNTb1rofXmvs_Q7E3Lh40t0wq9wpkm-a7Fsz43LIIR0FYOGB5_PIufuhekI5wT6O90REhtLoNvI_7P4euN-XTUZVUF1I6EtEoF0UA168mASHAlSfKkPBBq2pzdet41stWw=w929-h640-no?authuser=0",
 	answerimage : "https://thumbs.gfycat.com/DeliriousGoodAmericansaddlebred-size_restricted.gif", answerSpeak : "", answer : "Super Trooper"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8D4Ia3HauWXQTjgYHzkveOj2TAfPDP26fevxJefIQZIZI_KmQJo3zoK1e_ad_oz2PsffTmZkV1BPLatsyfSjDmV617SnyZvrLDsKfWRIX1rU6oGu_W08bg5uneAw5ecDke43SVJzuOXKJwIy42CiWE17Q=w801-h483-no?authuser=0",
 	answerimage : "https://64.media.tumblr.com/74a05ed35b264094ac9deebc7c55b333/1155b70c120d2493-d2/s500x750/676f8beeefcde3abfc6f5988af3607d7a0471332.gif", answerSpeak : "", answer : "Money, Money, Money"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8DFwzRX-5LDw2WLD9MSiDblkNmyL1SLTNcCHitzTXsqHYZpBPF7DHEazcCpx-1IQQUTmoMc12qEMtUD_NLFhY_apgFeFZOrDebRo8_tmjSwq7rIoGAPWoOv9ipGaogyqj2jnDgVwhc5ar5Eq6PCUrrIjA=w904-h710-no?authuser=0",
 	answerimage : "https://64.media.tumblr.com/f7b20b10deed1609431caf1618d40749/tumblr_oiyl2cUkbp1ur0nm7o3_500.gif", answerSpeak : "", answer : "Honey Honey"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8DPrPtYLPAArHYkwzcMnajDJwNs246RJqnltCYQJtOw22qJ8A-bOiY-zeRT8Laiiw3CUApMT4YPfPCqwkFxkKakuVS-Xdg-DJxRRdIWU06IrTVGKRoEIfT_6rR5GEn_IqnN5Jsz-biH0ycEwOeO8qduPA=w1207-h679-no?authuser=0",
 	answerimage : "https://media.tenor.com/7q8k8z3O7A4AAAAC/mamma-mia-donna-sheridan.gif", answerSpeak : "", answer : "I have a Dream"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8Ak5iXVJsTb0sczgp98hgK9JzDPxif5Gigz2d2X-cyzRDLxdGdiVzdadAOrRgiN-dhZJN6pchZj_-eGkw0IFsyitNGg1K8Lax2ng-L88Dxmg51aVE2FUIY0oGZIoG5NLswHADyttFSJSOoy-MTNZW7gEg=w416-h227-no?authuser=0",
 	answerimage : "https://media.tenor.com/IESj-QOTISMAAAAC/abba-ring-ring.gif", answerSpeak : "", answer : "Ring Ring"}) ;
 
 	
