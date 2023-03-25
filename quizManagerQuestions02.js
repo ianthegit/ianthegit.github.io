@@ -4791,7 +4791,7 @@ quests[++questIndexBuilder] = {  //To row 13 of 'acoustic covers of popular song
 		questInfo: new Array() };  
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3brxxLQy8KnOJhtqbLng47?utm_source=generator&theme=0" width="100%" height="760" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
-	answer : "Brown eyed girl, Van Morrison</BR>Don't stop belevin, Journey</BR>Every Breath you take, The Police</BR>Fly me to the moon, Frank Sinatra</BR>Here comes the sun, The Beatles</BR>Slip sliding away, Paul Simon</BR>All the small things, Blink 182</BR>Unchained melody, The Righteous Brothers</BR>Running up that hill, Kate Bush</BR>Can't help falling in love, Elvis Presley", answerSpeak : "", question : ""}) ;
+	answer : "Brown eyed girl, Van Morrison</BR>Don't stop believin, Journey</BR>Every Breath you take, The Police</BR>Fly me to the moon, Frank Sinatra</BR>Here comes the sun, The Beatles</BR>Slip sliding away, Paul Simon</BR>All the small things, Blink 182</BR>Unchained melody, The Righteous Brothers</BR>Running up that hill, Kate Bush</BR>Can't help falling in love, Elvis Presley", answerSpeak : "", question : ""}) ;
 
 
 
