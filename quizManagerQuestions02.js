@@ -4745,7 +4745,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 
-uests[++questIndexBuilder] = { 
+quests[++questIndexBuilder] = { 
 		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
 		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
 		tags : "2023-3-26,saturday,InnerWheel,surfers,alphabet", 
