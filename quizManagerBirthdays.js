@@ -366,6 +366,34 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-19",
 	question : "Who is this, born March 19th 1955?" ,	answer : "Bruce Willis", answerSpeak : "", image : "https://scontent.fltn3-2.fna.fbcdn.net/v/t31.18172-8/28616536_1621009451312765_2140054571882851609_o.jpg?_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=Z4Bqptvd-ScAX9K6k6n&_nc_ht=scontent.fltn3-2.fna&oh=00_AfBq8-K46fZP7qZJOohC0D707mi-ppw20MwREO9qxTbLDw&oe=643D692E"	});	
 
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-25",
+	question : "Who is this, born March 25th 1942?" ,	answer : "Richard O'Brien", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Richard_O_Brien_by_Stuart_Mentiply.jpg/220px-Richard_O_Brien_by_Stuart_Mentiply.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-25",
+	question : "Who is this, born March 25th 1947?" ,	answer : "Sir Elton Hercules John", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Elton_John%E2%80%99s_shoes_%284%29_%2823219556921%29.jpg/143px-Elton_John%E2%80%99s_shoes_%284%29_%2823219556921%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-25",
+	question : "Who is this, born March 25th 1965?" ,	answer : "Sarah Jessica Parker", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Sarah_Jessica_Parker_2022.jpg/220px-Sarah_Jessica_Parker_2022.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-25",
+	question : "Who is this, born March 25th 1975?" ,	answer : "Melanie Blatt", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Allsaints3.jpg/220px-Allsaints3.jpg"	});	
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-26",
+	question : "Who is this, born March 26th 1931?" ,	answer : "Leonard Nimoy", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Leonard_Nimoy_Mission_Impossible.jpg/220px-Leonard_Nimoy_Mission_Impossible.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-26",
+	question : "Who is this, born March 26th 1940?" ,	answer : "James Caan", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/James_Caan_%281976%29.jpg/220px-James_Caan_%281976%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-26",
+	question : "Who is this, born March 26th 1944?" ,	answer : "Diana Ross", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/DRossLongleat010722_%289_of_43%29_%2852189231585%29_%28cropped%29.jpg/220px-DRossLongleat010722_%289_of_43%29_%2852189231585%29_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-26",
+	question : "Who is this, born March 26th 1948?" ,	answer : "Steven Tyler", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Steven_Tyler_by_Gage_Skidmore_3.jpg/220px-Steven_Tyler_by_Gage_Skidmore_3.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-26",
+	question : "Who is this, born March 26th 1960?" ,	answer : "Jennifer Grey", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/11.30.10JenniferGreyByLuigiNovi1.jpg/220px-11.30.10JenniferGreyByLuigiNovi1.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-26",
+	question : "Who is this, born March 26th 1961?" ,	answer : "William Hague", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/William_Hague_%282010%29.jpg/220px-William_Hague_%282010%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-26",
+	question : "Who is this, born March 26th 1962?" ,	answer : "Richard Coles", answerSpeak : "", image : "https://www.thesun.co.uk/wp-content/uploads/2017/08/af-composite-vicar.jpg?strip=all&quality=100&w=750&h=500&crop=1"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-26",
+	question : "Who is this, born March 26th 1985?" ,	answer : "Keira Knightley", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/KeiraKnightleyByAndreaRaffin2011_%28cropped%29.jpg/220px-KeiraKnightleyByAndreaRaffin2011_%28cropped%29.jpg"	});	
+
 /*
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
