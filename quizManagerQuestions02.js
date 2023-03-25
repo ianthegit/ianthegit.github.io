@@ -4700,7 +4700,7 @@ quests[++questIndexBuilder] = {
 		tags : "2023-3-19,saturday,InnerWheel,surfers,alphabet", 
 		questInfo: new Array() };
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
-	question : "What 'N': </BR></BR>What food establishment might you go to for a 'Cheeky' meal??", answer : "Nandos", answerSpeak : "",
+	question : "What 'N': </BR></BR>What food establishment might you go to for a 'Cheeky' meal?", answer : "Nandos", answerSpeak : "",
 	answerimage : "https://external-preview.redd.it/noWHZ-cawhWsD4W6yGIeqXZqxVO1bkkV97BTSkHDuA4.png?auto=webp&v=enabled&s=220d2f3d886b1e325711b06e40952966f6a7e433"} ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
 	question : "What 'N': </BR></BR>Who died in 1821, probably of arsenic poisoning from the wallpaper, while living on the island of St Helena?", answer : "Napoleon", answerSpeak : "",
@@ -4741,6 +4741,58 @@ quests[++questIndexBuilder] = {  //To row 99 of 'imaginary future complete'
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6KLBmTOiEwe8COx8aHELjg?utm_source=generator&theme=0" width="100%" height="760" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
 	answer : "Don't stop, Fleetwood Mac</BR>Heart of Gold, Neil Young</BR>Dancing in the Dark, Bruce Springsteen</BR>The times they are a changin, Bob Dylan</BR>Have you ever seen the rain,  Creedence Clearwater Revival, Rod Stewart, Bonnie Tyler</BR>With a little help from my friends, Joe Cocker, The Beatles</BR>Come as you are, Nirvana</BR>Lean on Me, Bill Withers</BR>I won't back down, Tom Petty</BR>Let's stay together, Al Green", answerSpeak : "", question : ""}) ;
+
+
+
+
+uests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2023-3-26,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'O': </BR></BR>If your BMI is more tham 30.0 but less than 35, what are you?", answer : "Obese", answerSpeak : "",
+	answerimage : "https://www.cdc.gov/healthyweight/images/assessing/bmi-adult-fb-600x315.jpg?_=07167"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'O': </BR></BR>A figure with eight equal sides is called an?", answer : "Octagon", answerSpeak : "",
+	answerimage : "https://www.folkandhoney.co.uk/img-venues/venue-2919-1.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'O': </BR></BR>Which geyser in Yellowstone National Park has erupted every 44 minutes to two hours since 2000?", answer : "Old Faithful", answerSpeak : "",
+	answerimage : "https://i.makeagif.com/media/10-23-2017/9kz9nN.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'O': </BR></BR>By what name do we know the 'Allium cepa', one of the world's most used food items?", answer : "Onion", answerSpeak : "",
+	answerimage : "https://media4.giphy.com/media/zRlOz8XKLe7qo/200w.gif?cid=6c09b952rhhtm5q1qvh26rtq0y7xgbepu8v1u7vcwyldloqy&rid=200w.gif&ct=g"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'O': </BR></BR>What is generally used by pubs to serve a measure of spirits?", answer : "Optic", answerSpeak : "",
+	answerimage : "https://i.pinimg.com/originals/9a/ce/d0/9aced06496934b4c3d6346de0b45502c.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'O': </BR></BR>In what constellation would you find the 'Horsehead' nebula?", answer : "Orion", answerSpeak : "",
+	answerimage : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Barnard_33.jpg/250px-Barnard_33.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'O': </BR></BR>The word 'struthious' refers to something that resembles or is related to what large birds?", answer : "Ostriches", answerSpeak : "",
+	answerimage : "https://www.pbs.org/wnet/nature/files/2015/10/bigbird-gif-2.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'O': </BR></BR>A common misconception is that the name for which 'board' comes from joining the French and German words for yes?", answer : "Ouija", answerSpeak : "",
+	answerimage : "https://i.makeagif.com/media/10-02-2015/s2vkjo.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'O': </BR></BR>The female gamete is the largest cell present in the human body, what name is it also known by?", answer : "Ovum", answerSpeak : "",
+	answerimage : "https://i.makeagif.com/media/2-28-2015/I4gJkv.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'O': </BR></BR>Which gas did Joseph Priestley call 'dephlogisticated air' when he discovered it?", answer : "Oxygen", answerSpeak : "",
+	answerimage : "https://media.tenor.com/ixx_kN7lN1UAAAAM/oxygen-mask.gif"} ); 
+
+
+
+
+quests[++questIndexBuilder] = {  //To row 13 of 'acoustic covers of popular songs'
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),  
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2023-3-26,InnerWheel,saturday",
+		questInfo: new Array() };  
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3brxxLQy8KnOJhtqbLng47?utm_source=generator&theme=0" width="100%" height="760" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
+	answer : "Brown eyed girl, Van Morrison</BR>Don't stop belevin, Journey</BR>Every Breath you take, The Police</BR>Fly me to the moon, Frank Sinatra</BR>Here comes the sun, The Beatles</BR>Slip sliding away, Paul Simon</BR>All the small things, Blink 182</BR>Unchained melody, The Righteous Brothers</BR>Running up that hill, Kate Bush</BR>Can't help falling in love, Elvis Presley", answerSpeak : "", question : ""}) ;
+
 
 
 
