@@ -2545,22 +2545,22 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 		questInfo: new Array()
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8DY4zGATuOco8MusulFepZowWBMLt_6ivES98Lty8R05oiDUfpfksjJIBMlLlAyKCxUfle8jR4XOKUR4ufcFKLiY07dHlxepLK4dXrEjMJBnLYTF5ieODWrY3aN6fXWa5W_ErlfdU3HTUSSzYzhYUS-oA=w924-h605-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "The Rocky Road to Dublin"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8DtLDDv2NOXpJ2y5cOWqIPYpvfeIodURZHd32xRL92p8DJJjtyxTc7GDFyHkH_RQXGdaRFh9gb5NYZRaG2X3w9C3QgmP8trYr4ZPqSuRX7Nx7d3ivo_rr_vWZm4BObafCxd_4ffA4pkYZld5TrXFX7Jtg=w453-h426-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "The Wild Rover"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8Bbd0kO6b_vnkwEASykaN766BAonUYevjd_sRhPK-syNMSBNStLyZG7Gt6max-OReJ6EfBGeWEV1c4bynzs2WWrTSuCjdHfjmCD-QK7ehEpfcmlk_3oa9-p_yJDogpIX33L12EPS7_OQOC0ZHoCj0lzzw=w403-h443-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Whiskey in the jar"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8B3NDBDZv76HFx0gNUMbpl9JlcVGm69uXiUCnSRXcaLmtyOEYxgtHdyWVioaEt23DXebTmFHtI4p4aBI3bCJGWOq4goEJdCSUek1ks74PackTGNuMbUWxqFv7Po9_a3UwiuogC5vE6WXIVcHguj_y-gKg=w858-h601-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Drunken Sailor"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8AOkQH2fAM5CzVAU6tco7xvYMxSaX13G5wEj1WgaxZEZu9fn5A9sS4NAV4Nw9Pm2YWzvTLr5ixT7fmtCnkYoTrl7ZBaQ3u-FMQ5-82_QWhaJe8ko0A8lyyfCchO_qL7Bku-Ar481TPtuGCJkIwLF5UoWQ=w674-h513-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Galway Girl"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8AVQQzN-UWVu_rKbXgAzlZ78H7a2y7H11Mh33LkuAv5_JtJib1M9Ut6dFcZtn8TFxloqfgGLfHri48reEfGoI93Y9BTeRD3HzpuKj2ft7BB2UDRWizg2WdzfXbicMsEl0jtKj6biTJ2hSixFeRNMXyhBw=w1171-h840-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Whiskey, you're the Devil"}) ;
 /*
  * 	image : "",
