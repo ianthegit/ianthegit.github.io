@@ -396,7 +396,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-1",
-	question : "Who is this, born April 1st 1932?" ,	answer : "Bebbie Reynolds", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Debbie_Reynolds_6_Allan_Warren.jpg/220px-Debbie_Reynolds_6_Allan_Warren.jpg"	});	
+	question : "Who is this, born April 1st 1932?" ,	answer : "Debbie Reynolds", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Debbie_Reynolds_6_Allan_Warren.jpg/220px-Debbie_Reynolds_6_Allan_Warren.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-1",
 	question : "Who is this, born April 1st 1939?" ,	answer : "Ali MacGraw", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Ali_MacGraw_-_1972.jpg/220px-Ali_MacGraw_-_1972.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-1",
