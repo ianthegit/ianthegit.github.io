@@ -2562,6 +2562,33 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AMWts8AVQQzN-UWVu_rKbXgAzlZ78H7a2y7H11Mh33LkuAv5_JtJib1M9Ut6dFcZtn8TFxloqfgGLfHri48reEfGoI93Y9BTeRD3HzpuKj2ft7BB2UDRWizg2WdzfXbicMsEl0jtKj6biTJ2hSixFeRNMXyhBw=w1171-h840-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Whiskey, you're the Devil"}) ;
+	
+	
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of The Beatles",
+		tags : "2023-4-2,pictionary", straightToAnswers:true,
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://c8.alamy.com/comp/BGKCB2/penny-lane-road-sign-in-liverpool-merseyside-uk2020-saw-source-of-BGKCB2.jpg", answerSpeak : "", answer : "Penny Lane"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://m.media-amazon.com/images/M/MV5BMTI0YjUxZDktZWVlNi00MjhhLWE3ZGEtNmVkNjdmYjkzNDI5XkEyXkFqcGdeQXVyMjA5NjIxNDU@._V1_.jpg", answerSpeak : "", answer : "Help"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://upload.wikimedia.org/wikipedia/en/e/e5/Beatles-singles-yesterday.jpg", answerSpeak : "", answer : "Yesterday"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/03_iwantoholdyourhand.jpg/220px-03_iwantoholdyourhand.jpg", answerSpeak : "", answer : "I want to hold your hand"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://ichef.bbci.co.uk/news/976/cpsprodpb/12396/production/_108764647_theiconicredgatesatstrawberryfield.jpg", answerSpeak : "", answer : "Strawberry Fields"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://images.genius.com/81faf3566d8a8267d4ac4474830369c5.540x539x1.jpg", answerSpeak : "", answer : "I am the Walrus"}) ;
+	
 /*
  * 	image : "",
 	answerimage : "", answer : "Table"}) ;
