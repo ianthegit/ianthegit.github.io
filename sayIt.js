@@ -68,13 +68,33 @@ function SQGetURIString() {
 	};
 	return '';
 }
-
+function getApprovedVoices() {
+	if (!'speechSynthesis' in window) {
+		console.log("No voices");
+		return;
+	}
+	approvedVoices = [];
+	window.speechSynthesis.cancel();
+	voices = speechSynthesis.getVoices();
+	voicesCount = voices.length;
+	if (voicesCount == 0) {
+		return;
+	}
+	for (var i = 0; i < voicesCount; i++) {
+		if ( voices[i].name.includes('English') ){
+			approvedVoices.push(i);
+		}
+	}
+//	console.log(approvedVoices);
+	return approvedVoices;
+	
+}
 function speakVoice(){
 	if (!'speechSynthesis' in window) {
 		return;
 	}
 	window.speechSynthesis.cancel();
-	voices = speechSynthesis.getVoices();
+	voices = getApprovedVoices();
 	speachText = insults[Math.floor(Math.random() * insults.length)];
 
 	var msg = new SpeechSynthesisUtterance();	
