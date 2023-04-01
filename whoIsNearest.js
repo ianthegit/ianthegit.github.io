@@ -1,5 +1,5 @@
-teamsData =[]
-function createScreen() { answer = getURIString('answer'); mustBeUnder = getURIString('mustBeUnder'); snippit= ' to ';
+
+function createScreen() { var teamsData =[] ; answer = getURIString('answer'); mustBeUnder = getURIString('mustBeUnder'); snippit= ' to ';
  setupTeams(getURIString('teamNames').split(','));
  if (mustBeUnder) {snippit = ' under or equal' + snippit;} 
  document.write("<div id='grader'  ><table border='0' ><tr><td><span id='ControlFunctions' >Closest" + snippit + answer + " wins.</td></tr><tr><td><input type='button' class='userBtnGo' value='Calculate' title='Calculate' id='Go' onclick='runCalculate()' /> </span></td></tr><tr><td><span id='data' >" + writeTeamsHTML(false) +"</span></td></tr></table></div>");}
