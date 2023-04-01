@@ -4796,6 +4796,57 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 
+
+quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2023-4-2,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'P': </BR></BR>In common culture, what to Pirates shout if they want to discuss rather than fight?", answer : "Parley", answerSpeak : "",
+	answerimage : "https://media.tenor.com/42GKayuQ0jMAAAAM/jack-sparrow-johnny-depp.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'P': </BR></BR>Superstition says the feathers of which bird shouldn't be used as house decorations?", answer : "Peacock", answerSpeak : "",
+	answerimage : "https://media.tenor.com/8C4UtLyiFEwAAAAC/peacock-life-in-color-with-david-attenborough.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'P': </BR></BR>What gift is associated with the 30th Wedding Anniversary?", answer : "Pearl", answerSpeak : "",
+	answerimage : "https://media2.giphy.com/media/LRUi571VyJCnFBGKQq/200w.gif?cid=6c09b952xglb03w29zy9bf06tu0abzfz3jza3njs8ozwjqev&rid=200w.gif&ct=g"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'P': </BR></BR>What is the name of the winged horse in Greek mythology?", answer : "Pegasus", answerSpeak : "",
+	answerimage : "https://media.tenor.com/PbC9YEd39xoAAAAC/pegasus.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'P': </BR></BR>What Olympic event comprises epee fencing, pistol shooting, freestyle swimming, show jumping on the back of an unfamiliar horse allocated in a draw, and a cross country run?", answer : "Pentathlon", answerSpeak : "",
+	answerimage : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJBK1Uwcluf3Tcuda9PXwCzN-nNhoMFVMY84WdWYI&s"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'P': </BR></BR>To which U.S. city would you travel to see the Liberty Bell?", answer : "Philadelphia", answerSpeak : "",
+	answerimage : "https://media2.giphy.com/media/zrvFl1IDvy0PC/200w.gif?cid=82a1493by4w5l5a2kx3e5idd78dxbqu5ad5k3vs8xwixuvlh&rid=200w.gif&ct=g"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'P': </BR></BR>Bosendorfer, Steinway, and Bechstein are all makes of which instrument?", answer : "Piano", answerSpeak : "",
+	answerimage : "https://media.tenor.com/FuYhS1n_c0IAAAAM/cat-piano.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'P': </BR></BR>In dance, what is a turn on one leg, with the toe of the other leg touching the knee of the turning leg?", answer : "Pirouette", answerSpeak : "",
+	answerimage : "https://media1.giphy.com/media/76D0WNoMfMOyc/giphy.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'P': </BR></BR>In the world of computing what does the P in the acronym P.D.F. stand for?", answer : "Portable", answerSpeak : "",
+	answerimage : "https://e7.pngegg.com/pngimages/292/265/png-clipart-gif-pdf-animation-owner-s-manual-animation.png"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'P': </BR></BR>What was Vivaldi's profession apart from composing?", answer : "Priest", answerSpeak : "",
+	answerimage : "https://media0.giphy.com/media/wbPu91ryqan1m/200w.gif?cid=6c09b952iugclgaoiy2l97ykp56gdczof6pajfwjpc8yos85&rid=200w.gif&ct=g"} ); 
+
+
+
+quests[++questIndexBuilder] = {  //To row 13 of 'acoustic covers of popular songs'
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),  
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2023-4-2,InnerWheel,saturday",
+		questInfo: new Array() };  
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3brxxLQy8KnOJhtqbLng47?utm_source=generator&theme=0" width="100%" height="760" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
+	answer : "</BR></BR></BR></BR></BR></BR></BR></BR></BR>", answerSpeak : "", question : ""}) ;
+
+
+
+
 quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
 		hoverover : "What sinks, what floats",

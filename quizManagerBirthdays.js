@@ -394,6 +394,37 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-26",
 	question : "Who is this, born March 26th 1985?" ,	answer : "Keira Knightley", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/KeiraKnightleyByAndreaRaffin2011_%28cropped%29.jpg/220px-KeiraKnightleyByAndreaRaffin2011_%28cropped%29.jpg"	});	
 
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-1",
+	question : "Who is this, born April 1st 1932?" ,	answer : "Bebbie Reynolds", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Debbie_Reynolds_6_Allan_Warren.jpg/220px-Debbie_Reynolds_6_Allan_Warren.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-1",
+	question : "Who is this, born April 1st 1939?" ,	answer : "Ali MacGraw", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Ali_MacGraw_-_1972.jpg/220px-Ali_MacGraw_-_1972.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-1",
+	question : "Who is this, born April 1st 1957?" ,	answer : "David Gower", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/David_Gower.jpg/220px-David_Gower.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-1",
+	question : "Who is this, born April 1st 1961?" ,	answer : "Susan Boyle", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Susan_Boyle_Nov_2009.jpg/220px-Susan_Boyle_Nov_2009.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-1",
+	question : "Who is this, born April 1st 1962?" ,	answer : "Philip Schofield", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/3/3c/Philip_Schofield_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-1",
+	question : "Who is this, born April 1st 1966?" ,	answer : "Chris Evans", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Chris_Evans_2010.jpg/220px-Chris_Evans_2010.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-1",
+	question : "Who is this, born April 1st 19Y85" ,	answer : "Beth Tweddle", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Elizabeth_Tweddle_FIG_2012.jpg/200px-Elizabeth_Tweddle_FIG_2012.jpg"	});	
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-2",
+	question : "Who is this, born April 2nd 1914?" ,	answer : "Sir Alec Guinness", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Sir_Alec_Guinness_Allan_Warren_%282%29.jpg/220px-Sir_Alec_Guinness_Allan_Warren_%282%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-2",
+	question : "Who is this, born April 2nd 1934?" ,	answer : "Brian Glover", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/en/e/e9/Brian_Glover_Andrews.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-2",
+	question : "Who is this, born April 2nd 1939?" ,	answer : "Marvin Gaye", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Marvin_Gaye_%281973_publicity_photo%29.jpg/220px-Marvin_Gaye_%281973_publicity_photo%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-2",
+	question : "Who is this, born April 2nd 1940?" ,	answer : "Penelope Keith", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Penelope_Keith_%2834688820200%29.jpg/220px-Penelope_Keith_%2834688820200%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-2",
+	question : "Who is this, born April 2nd 1960?" ,	answer : "Linford Christie", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Linford_Christie_2009.png/200px-Linford_Christie_2009.png"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-2",
+	question : "Who is this, born April 2nd 1966?" ,	answer : "Teddy Sherringham", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Teddy_Sheringham_2012.jpg/220px-Teddy_Sheringham_2012.jpg"	});	
+
+
 /*
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
