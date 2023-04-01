@@ -7,7 +7,7 @@ function runCalculate() { teamsData.sort(function(a,b){return a.sorter-b.sorter;
  document.getElementById("data").innerHTML = writeTeamsHTML(true);}
 function setupTeams(teams) { teamsData.length = teams.length;
  for (var i = 0 ; i < teams.length ; i++) { teamsData[i] = {teamName: teams[i], answer: 0, distanceFrom:0, sorter:0}}}
-function writeTeamsHTML(calculated) { teamHTML = "";	counter=0; previous = 1000000;
+function writeTeamsHTML(calculated) { teamHTML = "";	counter=0; previous = 100000000000000;
  for (var i = 0 ; i < teamsData.length ; i++) {
   if (calculated) {
    if (teamsData[i].sorter != null) {
