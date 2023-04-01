@@ -4842,7 +4842,7 @@ quests[++questIndexBuilder] = {  //To row 54 of 'acoustic covers of popular song
 		questInfo: new Array() };  
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5CMD6G1nNbrEOLykhkXXrp?utm_source=generator&theme=0" width="100%" height="760" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
-	answer : "Heaven is a place on earth, Belinda Carlisle</BR>Can't take my eyes off you, Frankie Valli</BR>(I Just) Died in your arms tonight, Heart</BR>Cry me a river, Justin Timberlake</BR>Chasing cars, Snow Patrol</BR>Bad Guy, Billie Eilish</BR>Somebody you loved, Lewis Capaldi</BR>Watermelon Sugar, Harry Styles</BR>Despacito, Luis Fonsi, Daddy Yankee</BR>Havana, Camila Cabello, Young Thug", answerSpeak : "", question : ""}) ;
+	answer : "Heaven is a place on earth, Belinda Carlisle</BR>Can't take my eyes off you, Frankie Valli</BR>(I Just) Died in your arms tonight, Heart</BR>Cry me a river, Justin Timberlake</BR>Chasing cars, Snow Patrol</BR>Bad Guy, Billie Eilish</BR>Someone you loved, Lewis Capaldi</BR>Watermelon Sugar, Harry Styles</BR>Despacito, Luis Fonsi, Daddy Yankee</BR>Havana, Camila Cabello, Young Thug", answerSpeak : "", question : ""}) ;
 
 
 
