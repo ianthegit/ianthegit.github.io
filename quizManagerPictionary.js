@@ -2571,22 +2571,22 @@ quests[++questIndexBuilder] = { //
 		questInfo: new Array()
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8BJGkaA5n0AMY8MUQkFlhnP_Ld8jxquNfIKMJLsf8--zPVdcYPDgQ_Purxh4r8CPVcKpBPN8lLzRLJIdx3duzeYND9QooAC9wJUdYyTqaHxmXKyCqT9eMvH1gOOo2e0PrHIrLV8h1a34_PvTX3x5nuZHg=w378-h369-s-no?authuser=0",
 	answerimage : "https://c8.alamy.com/comp/BGKCB2/penny-lane-road-sign-in-liverpool-merseyside-uk2020-saw-source-of-BGKCB2.jpg", answerSpeak : "", answer : "Penny Lane"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8BI-GsBK5fzwj39aY84Y2CK_zJ9jOH9el9NUMUyQ-Pd-XV_rLuTXwwAuqJjX5kRV2kJy5ruc7x6tadJEceVNj2YvLuXgk9DW_vUUf0Cuk2-snn7PlGkSlapqwqsPOsLzqKGu_ePx5pyOe0-3xPcleTmcg=w604-h393-s-no?authuser=0",
 	answerimage : "https://m.media-amazon.com/images/M/MV5BMTI0YjUxZDktZWVlNi00MjhhLWE3ZGEtNmVkNjdmYjkzNDI5XkEyXkFqcGdeQXVyMjA5NjIxNDU@._V1_.jpg", answerSpeak : "", answer : "Help"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8BU6Zh49xjHxRRBC9Bj1b59xoph2t-MAbfZ2rgIT0J-1xjLGJd6WYADtkaiwVlgF0n__IGg5QbEEEocgAN8z2R89T2XnAOMuSPm_e4pFHIE3Y6N8aJQ8t9X1EjwDrNeE6hGpbkcy2yY-Squgs-SEfyzRw=w762-h306-s-no?authuser=0",
 	answerimage : "https://upload.wikimedia.org/wikipedia/en/e/e5/Beatles-singles-yesterday.jpg", answerSpeak : "", answer : "Yesterday"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8A9vMf1nDpv5q-3PVwEQTYsX2KFIPu6J_AODJntrjlgVgpkR1a2uu3qGFF2bcrDxQR9w5Hn5EjvT73NoibEPYVYTyxpBRpTqarKCLNq0nV7brHj6JTBtyhTZ8uIeIDjYdf5YM7DgZwnchHvVuyLMLXv5A=w731-h686-s-no?authuser=0",
 	answerimage : "https://upload.wikimedia.org/wikipedia/en/thumb/e/e5/03_iwantoholdyourhand.jpg/220px-03_iwantoholdyourhand.jpg", answerSpeak : "", answer : "I want to hold your hand"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8DD8Oq2JXGGjZ2x_PHpZN2GOKnOACSNhgJg2bf6pfjgxCe-25FU2SFzTQSXDvjbXxhO6dZozxe7J3il-_xHk62LpRtFaQKcB0cMcLVxs-2lJw38TtOnrPpldltCu05BFbGozslzPV8siBdEFtD5vEQqDg=w399-h501-s-no?authuser=0",
 	answerimage : "https://ichef.bbci.co.uk/news/976/cpsprodpb/12396/production/_108764647_theiconicredgatesatstrawberryfield.jpg", answerSpeak : "", answer : "Strawberry Fields"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8DesiNaPaWqATloNXu3u_SHCy8F9zf7bVzKohf1bF7jryRfNL4IPQM3U5J8hDO2nvhz1sTfnB0Ie4LB2rAYKb7wAo93v8ijyuLhSbV8sFQz0GHSHBp7rna6zGMF9ZHdpMBwRIbyJXngSoidEgI_d81LIg=w921-h612-s-no?authuser=0",
 	answerimage : "https://images.genius.com/81faf3566d8a8267d4ac4474830369c5.540x539x1.jpg", answerSpeak : "", answer : "I am the Walrus"}) ;
 	
 /*
