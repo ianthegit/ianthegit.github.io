@@ -423,6 +423,10 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 	question : "Who is this, born April 2nd 1960?" ,	answer : "Linford Christie", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Linford_Christie_2009.png/200px-Linford_Christie_2009.png"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-2",
 	question : "Who is this, born April 2nd 1966?" ,	answer : "Teddy Sherringham", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Teddy_Sheringham_2012.jpg/220px-Teddy_Sheringham_2012.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-2",
+	question : "Who is this, born April 2nd 1975?" ,	answer : "Pedro Pascal", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Pedro_Pascal_by_Gage_Skidmore.jpg/220px-Pedro_Pascal_by_Gage_Skidmore.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-2",
+	question : "Who is this, born April 2nd 1977?" ,	answer : "Michael Fassbender", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Michael_Fassbender_by_Gage_Skidmore_2015.jpg/220px-Michael_Fassbender_by_Gage_Skidmore_2015.jpg"	});	
 
 
 /*
