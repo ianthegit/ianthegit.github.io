@@ -1,5 +1,5 @@
 var speachText = ' reminding you that A D sucks hairy balls';
-
+var	approvedVoices = [];
 var insults = [ "If I had a face like yours I'd sue my parents", 
 	"Everyone who ever loved you was wrong", 
 	"You know people just put up with you, right", 
