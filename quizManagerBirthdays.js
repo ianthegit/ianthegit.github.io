@@ -408,7 +408,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-1",
 	question : "Who is this, born April 1st 1966?" ,	answer : "Chris Evans", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Chris_Evans_2010.jpg/220px-Chris_Evans_2010.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-1",
-	question : "Who is this, born April 1st 19Y85" ,	answer : "Beth Tweddle", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Elizabeth_Tweddle_FIG_2012.jpg/200px-Elizabeth_Tweddle_FIG_2012.jpg"	});	
+	question : "Who is this, born April 1st 1985?" ,	answer : "Beth Tweddle", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Elizabeth_Tweddle_FIG_2012.jpg/200px-Elizabeth_Tweddle_FIG_2012.jpg"	});	
 
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-2",
