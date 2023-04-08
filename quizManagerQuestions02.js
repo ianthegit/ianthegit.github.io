@@ -4853,6 +4853,8 @@ quests[++questIndexBuilder] = {
 		tags : "2023-4-9,saturday,InnerWheel,surfers,topDown", 
 		questInfo: new Array() };
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "Where is this?", answer : "Wembley Stadium", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AMWts8BVvhJCNHzkRERnN3IU8S4s_mfmU-XDMo6H62A2JO7DD_mtUg_VWZwSnc2pll5cWUX6X-j2VXWJ0FjMmHI7Q86iPZ3oxY0tlWmp5PNV5DpSDu5sM_S6adCJViIBW32Svg0EfwXe4h4tPBEYkYRQY5DcAw=w513-h462-s-no?authuser=0"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
 	question : "Where is this?", answer : "Grey's Monument", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AMWts8DN7rzzbIPyf4t8jlyX6UcVmYn-0IWWVx13dgrn95RPYBl4L2RKy9_9Bmbwa8IrJqr3zmZ2h6v-mQo-PNXDhayYooZN0Z0vElAxAGI83GHuqV951dGKeU31tPis7tpZFsf7N_2XH_TKmRGKvfUSe-2Cxg=w446-h467-s-no?authuser=0"} ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
 	question : "Where is this?", answer : "The Coastguard", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AMWts8DMTiPS0-oR6441BB4cK4IaxE7zxXyG1j2IhmZ5e3aKYlZtr2Ejtg-jIQc4mLhMnZBDH3bAptekghgVEFJQuv4HbUU-3jyj4HlzyAM34F9k97AMOUc653djEqdKLQxQcbLcSfDWMTNXug61eEYt9gwcBg=w630-h542-s-no?authuser=0"} ); 
@@ -4865,14 +4867,49 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
 	question : "Where is this?", answer : "Buckingham Palace", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AMWts8C5I4wqmpKlIfj47dMhxXfOxRXB0di9nYo7iIMgcp3l4OnXjgWLvypPXItFkIBD4PeKcHaLUXJ_cPClFPtSWtZRKpSUvVMLQI5akuPNp3cpNwa2HiNu6IU47L1lPxqt2Gxcx3X-JWgVIFSbBPQFP2ut_g=w727-h485-s-no?authuser=0"} ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
-	question : "Where is this?", answer : "Wembley Stadium", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AMWts8BVvhJCNHzkRERnN3IU8S4s_mfmU-XDMo6H62A2JO7DD_mtUg_VWZwSnc2pll5cWUX6X-j2VXWJ0FjMmHI7Q86iPZ3oxY0tlWmp5PNV5DpSDu5sM_S6adCJViIBW32Svg0EfwXe4h4tPBEYkYRQY5DcAw=w513-h462-s-no?authuser=0"} ); 
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
 	question : "Where is this?", answer : "Brands Hatch", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AMWts8CS5jniatR-Rs0cAT7qoBO_AHecUqMu5EoCn_4eeyaBgGTB7DSIFqbdWfGIUd5L1io9AHWeeKd96hjy1c_hqtFYB7n31W_qOSOdNaxOVQMigj5CmnngREhTiR4jcKFB93XPijvFaqz18iKJD03BRzx2Pg=w772-h833-s-no?authuser=0"} ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
 	question : "Where is this?", answer : "Wimbledon", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AMWts8ABPVHrn93PkvFWf74ltXbs37m_XZxPoMD9Pfyl4zRO-f0XXG7PXUI47nnWRxiHhDuHEk8doSNHonEciCeJ-5FuB8Pha7vmaupJIivER3Xz7d_Wy4fUtrs2srNaIyeCl-uNHzANOYswwjB1neBdiHn8LQ=w427-h457-s-no?authuser=0"} ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
 	question : "Where is this?", answer : "Sydney Harbour Bridge", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AMWts8AhfB3_4gzDmyQKMSgOwR-rBmiVNAHX03_udXDx134xMeow3CXC6TalTncjy5QFcxXKFdG7VVIVS10Akaae3xtxT91G3p28TzmfnIJn1VJ_ZHJrJVWVQYeMCX0zWswdHT0rrAMvj2J3V9U_y0gIf22iMw=w421-h685-s-no?authuser=0"} ); 
 	
+
+quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2023-4-9,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'Q': </BR></BR>In an alphabetical list of countries in the world, what middle eastern country comes between Portugal and Romania?", answer : "Qatar", answerSpeak : "",
+	answerimage : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'Q': </BR></BR>What was a social dance popular in the nineteenth century - a square dance in five sections, each in a different time?", answer : "Quadrille", answerSpeak : "",
+	answerimage : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'Q': </BR></BR>An extremely luminous active galactic nucleus, powered by a supermassive black hole is called a what?", answer : "Quasar", answerSpeak : "",
+	answerimage : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'Q': </BR></BR>What word represents Q in the NATO phonetic alphabet?", answer : "Quebec", answerSpeak : "",
+	answerimage : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'Q': </BR></BR>Deacon and Taylor are half of what rock band?", answer : "Queen", answerSpeak : "",
+	answerimage : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'Q': </BR></BR>Who was the first British monarch to live in Buckingham Palace?", answer : "Queen Victoria", answerSpeak : "",
+	answerimage : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'Q': </BR></BR>Taken from ancient Greek, an eroteme is the journalistic name for what punctuation symbol?", answer : "Question mark", answerSpeak : "",
+	answerimage : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'Q': </BR></BR>What forms in saturated loose sand when the sand is suddenly agitated?", answer : "Quicksand", answerSpeak : "",
+	answerimage : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'Q': </BR></BR>What term has come to mean a citizen or politician of an occupied country who collaborates with an enemy occupying force?", answer : "Quisling", answerSpeak : "",
+	answerimage : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'Q': </BR></BR>f you spell out QED in Latin, what does the Q stand for?", answer : "Quod", answerSpeak : "",
+	answerimage : ""} ); 
+
 	
 
 quests[++questIndexBuilder] = { 
