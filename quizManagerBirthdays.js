@@ -429,6 +429,43 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 	question : "Who is this, born April 2nd 1977?" ,	answer : "Michael Fassbender", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Michael_Fassbender_by_Gage_Skidmore_2015.jpg/220px-Michael_Fassbender_by_Gage_Skidmore_2015.jpg"	});	
 
 
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-8",
+	question : "Who is this, born April 8th 1918?" ,	answer : "Betty Ford", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Betty_Ford%2C_official_White_House_photo_color%2C_1974.jpg/220px-Betty_Ford%2C_official_White_House_photo_color%2C_1974.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-8",
+	question : "Who is this, born April 8th 1938?" ,	answer : "Kofi Annan", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Kofi_Annan_2012_%28cropped%29.jpg/220px-Kofi_Annan_2012_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-8",
+	question : "Who is this, born April 8th 1941?" ,	answer : "Vivienne Westwood", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Vivienne_Westwood_by_Mattia_Passeri.jpg/220px-Vivienne_Westwood_by_Mattia_Passeri.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-8",
+	question : "Who is this, born April 8th 1944?" ,	answer : "Hywel Bennett", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/en/thumb/3/33/HywelBennett1966.jpg/220px-HywelBennett1966.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-8",
+	question : "Who is this, born April 8th 19Y63" ,	answer : "Julian Lennon", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Julian_Lennon.png/220px-Julian_Lennon.png"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-8",
+	question : "Who is this, born April 8th 1980?" ,	answer : "Katee Sackhoff", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Katee_Sackhoff_%2852260655302%29_%28cropped%29.jpg/220px-Katee_Sackhoff_%2852260655302%29_%28cropped%29.jpg"	});	
+
+
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-9",
+	question : "Who is this, born April 9th 1926?" ,	answer : "Hugh Hefner", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Hugh_Hefner_Glamourcon_2010.jpg/220px-Hugh_Hefner_Glamourcon_2010.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-9",
+	question : "Who is this, born April 9th 1937?" ,	answer : "Valerie Singleton", answerSpeak : "", image : "https://i.dailymail.co.uk/i/pix/2008/06/21/article-1028228-01AC08E500000578-479_468x570.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-9",
+	question : "Who is this, born April 9th 1941?" ,	answer : "Hannah Gordon", answerSpeak : "", image : "https://www.themoviedb.org/t/p/w235_and_h235_face/sGVO0uSINiYb0RkYHazF1nJIzgf.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-9",
+	question : "Who is this chap, born April 9th 1956?" ,	answer : "Nigel Slater", answerSpeak : "", image : "https://www.telegraph.co.uk/content/dam/news/2018/01/22/TELEMMGLPICT000000524061_trans_NvBQzQNjv4BqY4-XNG_7v-V2jIZ3ghNYKCW0qTysEG4yZuBUdXGakjA.jpeg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-9",
+	question : "Who is this, born April 9th 1966?" ,	answer : "Cynthia Nixon", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Cynthia_Nixon_2014_%28cropped%29.jpg/220px-Cynthia_Nixon_2014_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-9",
+	question : "Who is this, born April 9th 1975?" ,	answer : "Robbie Fowler", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/6/64/Fowler%2C_Robbie.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-9",
+	question : "Who is this, born April 9th 1978?" ,	answer : "Rachel Stevens", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Rachel_Stevens_in_Feb_2010_cropped.jpg/220px-Rachel_Stevens_in_Feb_2010_cropped.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-9",
+	question : "Who is this, born April 9th 1970?" ,	answer : "Phil Hopgood", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AMWts8C8y3FRu61DO8ss7HrIPTiNOsZMUFdXG1CyyMym8nqQs_0bx8FurH70NaWL-Ib6n4lngtUlW1CZsiCOGOw6-IK9w9x80gMME1iJn1CoyKaZuX15d09xZh9slqp3UZ8wFVXq9jZ9ehFcpBmac3SaYhUAww=w274-h393-s-no?authuser=0"	});	
+
+
+
 /*
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
