@@ -4912,6 +4912,34 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
 
 	
 
+
+quests[++questIndexBuilder] = { 
+		name : "Top-Down "+getAndIncrementCounterForType("topdown"),
+		hoverover : "Do you recognise these places from above?",
+		tags : "2023-4-16,saturday,InnerWheel,surfers,topDown", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "Where is this?", answer : "The Gherkin", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AMWts8CL31Jp4pYqbpQFgG4MnKrN1xn0d3PwB1owhQIghk89x31IM8qYWlPxnu44dXa5fNjtuCugn8lbMPsqZiXyLOrD2nT4Pm-WyQKeIyDU6kKU_LsxPZVjb5zfPlXG_m7CE8Xle7ObUvoKvcWO8xZNXo5wZg=w246-h235-s-no?authuser=0"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "Where is this?", answer : "Tower Of London", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AMWts8CIOfvQkdnylwkaYWWSHyuKVSEwqg3o8PINxNntkBxVH8ZLHYrePWYloiFDvwY1JAoqBzY7DR6FumVBw1weR0qCYJTKaU43OCin9PZsSBigULlaPlV4e3KiqPTajthoARp1-4pzYgwRPG31GOdpX-Hpew=w590-h752-s-no?authuser=0"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "Where is this?", answer : "Angel of the North", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AMWts8DLDuv-GxWq6yPvf3heUP7qmQZ4WbfTKQ_uucG_Tw2SuxdMXLXPUnSXSFTRy-gJ_dB6CP9_Fw5aHPVmmpGHx-7A2ngNIxlxw5wwMXsVF-cCDUo-2NUbnS1dD5C7PbRTCL4vEb9RPnOjQHxwx50HNRwiIw=w360-h251-s-no?authuser=0"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "Where is this?", answer : "Taj Mahal", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AMWts8A_aA36QeYOUh_yuf51W6mrtpgQ5QUK1oL7iu3_k8AGR0EaNa-VLVpWMbSbRZb9NrwDApbXndZVmtoyDgCUPvoa4-FkMMd0H8Jokv-jCRscwQCdotX12gyTjoOT2SjZ60kXLiFh4s9_SvGJG0CECEhAGA=w907-h542-s-no?authuser=0"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "Where is this?", answer : "The Great Pryamid of Giza", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AMWts8DFNbnkBXabZ5tgmm9BrVd5GOZNLozBPRWgOklDbpoP3BiPZqCEzpx2goagC1UvdYsGfkjtSmvEUu9zNDaTiIwpXZgHMTMkG2mtMKPu5VzE5SpLI-CNDkeamLWSgnoDiULzgA06qLSsYZcO_2BTgNH4pA=w389-h387-s-no?authuser=0"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "Where is this?", answer : "Uluru / Ayres Rock", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AMWts8D7HZKuZ8_LTrVMaRDDGZa4O4vyLWlikjpAnAyuZCeEwauYdEBpNtxOesAHvZXFLo9ufSIGNKI8z9RsSLeUcyU521sgieRIvb_6NJZKmk3pWWDad9v8TcitXofl2UG2OmeZ-MAosFbQdJGwgrzL9qXUJw=w940-h629-s-no?authuser=0"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "Where is this?", answer : "Statue of Liberty", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AMWts8BMv_ds6QYvk0sTsjTOXYGmxfy91ucvh9tAIQt1Ipwjdf9X6MoJBBSAUfzH8Kmd9jdNIveFmyafhhuv7Lrvzwr3Hlr3an-a0kVLhpPQsiyL6y1jApfU71H43jI1LoI8Tlt7YxI0NsM0514vw3riO36IRA=w599-h665-s-no?authuser=0"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "Where is this?", answer : "Eiffel Tower", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AMWts8D4IP7AZd-fk0CRPhDKgXIvenJF20Cjnwyo27B4KyAGH7EGQUXCet63gWEVgPqmSw--yF1CtvRqnDPvM0HDf5CCSzJ_f1dZNzdH-T4gf4AV3MzJCpetHEHNA2OB3rdaWHrIb6wAfZVxCAonXIc6bUa3EA=w387-h345-s-no?authuser=0"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "Where is this?", answer : "The O2", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AMWts8A3v9GmaOYkUuDrJbf4tMPwi6Mh905gA2y5TGe_kGTxVGSLsR4r7YaMhkQ-yPrsyTWWoihvW8vIp6L71QojATfNVUE_xVHQScx7shHKUcOvnZQ-jUWNpsWz3Gj8V3ySiiOVakjo6kD_0-Y9oPEo8wbhDg=w750-h641-s-no?authuser=0"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "Where is this?", answer : "Sydney Opera House", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AMWts8DFTDfWRmLvSNnVOQBmOwVLNUL7ebQMggTYlQqbUAmK63PoQaGkGObKCJre3lwJkjhd1FlXX6Ij3GY3YgtH5xPkCCLgQrukN09ijUidXINEN6IrII3-i3gKNyL5MrzB7_F0Ivj2ye9T7RgGhrunHfiF5A=w343-h414-s-no?authuser=0"} ); 
+
+
 quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
 		hoverover : "What sinks, what floats",
