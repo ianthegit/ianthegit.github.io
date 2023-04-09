@@ -1,3 +1,4 @@
+	approvedVoices = [];
 var speachText = ' reminding you that A D sucks hairy balls';
 var	approvedVoices = [];
 var insults = [ "If I had a face like yours I'd sue my parents", 
@@ -73,7 +74,7 @@ function getApprovedVoices() {
 		console.log("No voices");
 		return;
 	}
-	approvedVoices = [];
+
 	window.speechSynthesis.cancel();
 	voices = speechSynthesis.getVoices();
 	voicesCount = voices.length;
