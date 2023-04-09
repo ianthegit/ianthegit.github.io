@@ -2598,22 +2598,22 @@ quests[++questIndexBuilder] = { //
 		questInfo: new Array()
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8Co6V7gadAGhoJfOviiV5SSRObk1X504BzUhGJt7eU3qgJCnsdqIQagzV3aJBNO8lUijkrW0HnjOfHKfLFpLV8zkzDFsPur6pmKw00eUtChRBhbWejwAxlqDohnAVHoGGzlPtKQcxVWaK-LRhf52KaFRw=w979-h519-s-no?authuser=0",
 	answerimage : "https://musicart.xboxlive.com/7/3c5a1100-0000-0000-0000-000000000002/504/image.jpg?w=1920&h=1080", answerSpeak : "", answer : "Mama Mia"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8CYpy9rSiEnB8ChB8F7gSXnkkp2mRoTgLXQEbMdSTkg1hFbLtu8s0br6OHEJyC_tFOWHsELfBm1fg1pvrmTtkDc5pf06WLInawyS4RebgZBoV9Yy0xWtc_WTTHTEPua5QuO8G2ISAw6sz4SNQD1DM1zNw=w1089-h313-s-no?authuser=0",
 	answerimage : "https://i0.wp.com/i.imgur.com/DkD403O.gif?w=700", answerSpeak : "", answer : "7 Brides for 7 Brothers"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8Ba8cetwFbbRU4yuqBqywFOn-AalvbzmTVPnVpAgQtAWOf5GRZQhnRXQBYJc6Xa9oCv-ZDmWd3QZ_yxuDv1ExMaavdH4eDVuBaMfvMe_REjpZfaC3EunhXwwONu4WaGHeJ6nlpdPlypuV1X8CkaF51_EQ=w389-h187-s-no?authuser=0",
 	answerimage : "https://media.tenor.com/tZm8_2JA5qcAAAAC/cats-musical.gif", answerSpeak : "", answer : "Cats"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8BUumVvQ0JlAZj-MXvftOLHvq8qBMsWVjdQmSuRjoz94oeNyFQZ35iajDLhMtcy1bnB-sq6LO_HBvBgOTuO54MDP2AziuRtfuJyM_PZRzMiw2AW0vgAXCHeKu1bkfu-gIpO7ySchxvCxihMYbIH9pTntA=w1055-h717-s-no?authuser=0",
 	answerimage : "https://jerseyboysmusical.co.uk/content/uploads/2022/12/JB_WEBSITE-1920x980_DEC22_v1.jpg", answerSpeak : "", answer : "Jersey Boys"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8D5iXJn1GPH56RCbTN5Qj7esIE_asy2c2nJdWciLqXHcnPdoRMvGjh9b67Ddcgj0HZZvQh8_juFSyaj4wMadNaw-dCLxoDeDRP4-gqoXrJGCdy5DHXVGmXTI8pqlGt3GnW4cVco6_d3CauPMT-fufi9SA=w782-h526-s-no?authuser=0",
 	answerimage : "https://upload.wikimedia.org/wikipedia/en/thumb/6/67/LesMisLogo.png/220px-LesMisLogo.png", answerSpeak : "", answer : "Les Miserables"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AMWts8BflBMvNLh4Pr5evWY98hpyIBC5t5KtdhGFqEm-ADcykidPzwaImYWreABOWm5zC-QxyPKuXkqgcnVMi0qKXWloLTaVfpiIWoNdoXEnkJ5ViDfX6Bx9XvNtj6KT961ijlBjaAJZltxh5uSJC4r_kj_Khw=w1314-h610-s-no?authuser=0",
 	answerimage : "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61jlz-ngM8L._UXNaN_FMjpg_QL85_.jpg", answerSpeak : "", answer : "Starlight Express"}) ;
 	
 		
