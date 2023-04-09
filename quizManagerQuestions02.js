@@ -4907,7 +4907,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
 	question : "What 'Q': </BR></BR>What term has come to mean a citizen or politician of an occupied country who collaborates with an enemy occupying force?", answer : "Quisling", answerSpeak : "",
 	answerimage : ""} ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
-	question : "What 'Q': </BR></BR>f you spell out QED in Latin, what does the Q stand for?", answer : "Quod", answerSpeak : "",
+	question : "What 'Q': </BR></BR>If you spell out QED in Latin, what does the Q stand for?", answer : "Quod", answerSpeak : "",
 	answerimage : ""} ); 
 
 	
