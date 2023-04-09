@@ -4912,6 +4912,16 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
 
 	
 
+quests[++questIndexBuilder] = {  //To row 54 of 'acoustic covers of popular songs'
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),  
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2023-4-9,InnerWheel,saturday",
+		questInfo: new Array() };  
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5LenhwcuxorTgNec7ui1Al?utm_source=generator&theme=0" width="100%" height="760" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
+	answer : "I want to know what love is, Foreigner</BR>Crazy, Gnarls Barkley</BR>Just the way you are, Bruno Mars</BR>Rewrite the Stars, Zendaya & Zac Efron</BR>Don't stop believin', Journey</BR>The Scientist, Coldplay</BR>It must have been love, Roxette</BR>Perfect, Ed Sheeran</BR>Sweet Child O' Mine, Guns & Roses</BR>Yesterday, The Beatles", answerSpeak : "", question : ""}) ;
+
+
 
 quests[++questIndexBuilder] = { 
 		name : "Top-Down "+getAndIncrementCounterForType("topdown"),
