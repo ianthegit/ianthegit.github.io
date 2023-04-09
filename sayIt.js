@@ -76,14 +76,15 @@ function getApprovedVoices() {
 	}
 
 	window.speechSynthesis.cancel();
-	voices = speechSynthesis.getVoices();
-	voicesCount = voices.length;
+	allVoices = [];
+	allVoices = speechSynthesis.getVoices();
+	voicesCount = allVoices.length;
 	if (voicesCount == 0) {
 		return;
 	}
 	for (var i = 0; i < voicesCount; i++) {
-		if ( voices[i].name.includes('English') ){
-			approvedVoices.push(i);
+		if ( allVoices[i].name.includes('English') ){
+			approvedVoices.push(allVoices[i]);
 		}
 	}
 //	console.log(approvedVoices);
@@ -95,6 +96,7 @@ function speakVoice(){
 		return;
 	}
 	window.speechSynthesis.cancel();
+	voices = [];
 	voices = getApprovedVoices();
 	speachText = insults[Math.floor(Math.random() * insults.length)];
 

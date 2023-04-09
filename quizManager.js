@@ -643,12 +643,12 @@ function SQSpeakAnswer(){
 	}
 	window.speechSynthesis.cancel();
 	voices = speechSynthesis.getVoices();
-	
+	approvedVoicesList = [];
 	if (!speakText.includes("iframe")|| fullAnswer.includes("target='_blank'")) {
 		var msg = new SpeechSynthesisUtterance();
-		var approvedVoices = getApprovedVoices();
-		if (approvedVoices.length > 0) {
-			msg.voice = voices[approvedVoices[Math.floor(Math.random() * approvedVoices.length)]];
+		approvedVoicesList = getApprovedVoices();
+		if (approvedVoicesList.length > 0) {
+			msg.voice = voices[approvedVoicesList[Math.floor(Math.random() * approvedVoicesList.length)]];
 //			msg.voice = voices[Math.floor(Math.random() * voices.length)];
 			msg.rate = 0.5;
 			msg.text = speakText;
