@@ -5,7 +5,7 @@ meta.httpEquiv = "X-Clacks-Overhead";
 meta.content = "GNU Terry Pratchett";
 document.getElementsByTagName('head')[0].appendChild(meta);
 
-approvedVoices = [];
+
 
 //Photo getter thingy https://www.publicalbum.org/blog/embedding-google-photos-image
 //Alternate Photo thingy https://www.labnol.org/embed/google/photos/
@@ -646,7 +646,7 @@ function SQSpeakAnswer(){
 	
 	if (!speakText.includes("iframe")|| fullAnswer.includes("target='_blank'")) {
 		var msg = new SpeechSynthesisUtterance();
-		approvedVoices = getApprovedVoices();
+		var approvedVoices = getApprovedVoices();
 		if (approvedVoices.length > 0) {
 			msg.voice = voices[approvedVoices[Math.floor(Math.random() * approvedVoices.length)]];
 //			msg.voice = voices[Math.floor(Math.random() * voices.length)];
@@ -662,8 +662,9 @@ function getApprovedVoices() {
 		console.log("No voices");
 		return;
 	}
+	const approvedVoices = [];
 	window.speechSynthesis.cancel();
-	voices = speechSynthesis.getVoices();
+	const voices = speechSynthesis.getVoices();
 	voicesCount = voices.length;
 	if (voicesCount == 0) {
 		return;
