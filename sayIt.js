@@ -100,7 +100,7 @@ function speakVoice(){
 	var msg = new SpeechSynthesisUtterance();	
 	
 	msg.voice = voices[Math.floor(Math.random() * voices.length)];
-
+	msg.rate = 0.5;
 	msg.text = speachText;
 	window.speechSynthesis.speak(msg);
 	

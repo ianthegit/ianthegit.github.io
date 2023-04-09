@@ -649,6 +649,7 @@ function SQSpeakAnswer(){
 		if (approvedVoices.length > 0) {
 			msg.voice = voices[approvedVoices[Math.floor(Math.random() * approvedVoices.length)]];
 //			msg.voice = voices[Math.floor(Math.random() * voices.length)];
+			msg.rate = 0.5;
 			msg.text = speakText;
 			window.speechSynthesis.speak(msg);
 		}
