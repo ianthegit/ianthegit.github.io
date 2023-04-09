@@ -2589,6 +2589,34 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	image : "https://lh3.googleusercontent.com/pw/AMWts8DesiNaPaWqATloNXu3u_SHCy8F9zf7bVzKohf1bF7jryRfNL4IPQM3U5J8hDO2nvhz1sTfnB0Ie4LB2rAYKb7wAo93v8ijyuLhSbV8sFQz0GHSHBp7rna6zGMF9ZHdpMBwRIbyJXngSoidEgI_d81LIg=w921-h612-s-no?authuser=0",
 	answerimage : "https://images.genius.com/81faf3566d8a8267d4ac4474830369c5.540x539x1.jpg", answerSpeak : "", answer : "I am the Walrus"}) ;
 	
+	
+	
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of Musicals",
+		tags : "2023-4-9,pictionary", straightToAnswers:true,
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://musicart.xboxlive.com/7/3c5a1100-0000-0000-0000-000000000002/504/image.jpg?w=1920&h=1080", answerSpeak : "", answer : "Mama Mia"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://i0.wp.com/i.imgur.com/DkD403O.gif?w=700", answerSpeak : "", answer : "7 Brides for 7 Brothers"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://media.tenor.com/tZm8_2JA5qcAAAAC/cats-musical.gif", answerSpeak : "", answer : "Cats"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://jerseyboysmusical.co.uk/content/uploads/2022/12/JB_WEBSITE-1920x980_DEC22_v1.jpg", answerSpeak : "", answer : "Jersey Boys"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://upload.wikimedia.org/wikipedia/en/thumb/6/67/LesMisLogo.png/220px-LesMisLogo.png", answerSpeak : "", answer : "Les Miserables"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61jlz-ngM8L._UXNaN_FMjpg_QL85_.jpg", answerSpeak : "", answer : "Starlight Express"}) ;
+	
+		
 /*
  * 	image : "",
 	answerimage : "", answer : "Table"}) ;
