@@ -5,6 +5,7 @@ meta.httpEquiv = "X-Clacks-Overhead";
 meta.content = "GNU Terry Pratchett";
 document.getElementsByTagName('head')[0].appendChild(meta);
 
+approvedVoices = [];
 
 //Photo getter thingy https://www.publicalbum.org/blog/embedding-google-photos-image
 //Alternate Photo thingy https://www.labnol.org/embed/google/photos/
@@ -661,7 +662,6 @@ function getApprovedVoices() {
 		console.log("No voices");
 		return;
 	}
-	approvedVoices = [];
 	window.speechSynthesis.cancel();
 	voices = speechSynthesis.getVoices();
 	voicesCount = voices.length;
