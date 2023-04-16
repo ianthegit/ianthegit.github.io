@@ -465,6 +465,29 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 	question : "Who is this, born April 9th 1970?" ,	answer : "Phil Hopgood", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AMWts8C8y3FRu61DO8ss7HrIPTiNOsZMUFdXG1CyyMym8nqQs_0bx8FurH70NaWL-Ib6n4lngtUlW1CZsiCOGOw6-IK9w9x80gMME1iJn1CoyKaZuX15d09xZh9slqp3UZ8wFVXq9jZ9ehFcpBmac3SaYhUAww=w274-h393-s-no?authuser=0"	});	
 
 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-15",
+	question : "Who is this, born April 15th 1959?" ,	answer : "Emma Thompson", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Emma_Thompson_2022.jpg/220px-Emma_Thompson_2022.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-15",
+	question : "Who is this, born April 15th 1966?" ,	answer : "Samantha Fox", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Samantha_Fox_in_Lombardy_crop.jpg/220px-Samantha_Fox_in_Lombardy_crop.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-15",
+	question : "Who is this, born April 15th 1982?" ,	answer : "Seth Rogan", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Seth_Rogen_at_Collision_2019_-_SM0_1823_%2847106936404%29_%28cropped%29.jpg/220px-Seth_Rogen_at_Collision_2019_-_SM0_1823_%2847106936404%29_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-15",
+	question : "Who is this, born April 15th 1990?" ,	answer : "Emma Watson", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Emma_Watson_2013.jpg/220px-Emma_Watson_2013.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-15",
+	question : "Who is this, born April 15th 1997?" ,	answer : "Maisie Williams", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Maisie_Williams_by_Gage_Skidmore_3.jpg/220px-Maisie_Williams_by_Gage_Skidmore_3.jpg"	});	
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-16",
+	question : "Who is this, born April 16th 1918?" ,	answer : "Spike Milligan", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/en/thumb/3/31/Spike_Milligan_1990.jpg/220px-Spike_Milligan_1990.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-16",
+	question : "Who is this, born April 16th 1921?" ,	answer : "Peter Ustinov", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Sir_Peter_Ustinov_Allan_Warren.jpg/220px-Sir_Peter_Ustinov_Allan_Warren.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-16",
+	question : "Who is this, born April 16th 1933?" ,	answer : "Joan Bakewell", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Baroness_Bakewell_2018.jpg/220px-Baroness_Bakewell_2018.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-16",
+	question : "Who is this, born April 16th 1939?" ,	answer : "Dusty Springfield", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Dusty_Springfield.png/220px-Dusty_Springfield.png"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-16",
+	question : "Who is this, born April 16th 1963?" ,	answer : "Jimmy Osmond", answerSpeak : "", image : "https://i2-prod.mirror.co.uk/incoming/article11879993.ece/ALTERNATES/s1200b/Jimmy-Osmond-performing-on-stageed.jpg"	});	
+
 
 /*
 
