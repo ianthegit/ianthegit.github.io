@@ -2616,6 +2616,34 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	image : "https://lh3.googleusercontent.com/pw/AMWts8BflBMvNLh4Pr5evWY98hpyIBC5t5KtdhGFqEm-ADcykidPzwaImYWreABOWm5zC-QxyPKuXkqgcnVMi0qKXWloLTaVfpiIWoNdoXEnkJ5ViDfX6Bx9XvNtj6KT961ijlBjaAJZltxh5uSJC4r_kj_Khw=w1314-h610-s-no?authuser=0",
 	answerimage : "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61jlz-ngM8L._UXNaN_FMjpg_QL85_.jpg", answerSpeak : "", answer : "Starlight Express"}) ;
 	
+	
+	
+
+ quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of Disney Characters",
+		tags : "2023-4-16,pictionary", straightToAnswers:true,
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://www.icegif.com/wp-content/uploads/mickey-mouse-icegif.gif", answerSpeak : "", answer : "Mickey Mouse"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://media2.giphy.com/media/S8xmtfl0qhDggqCRWJ/giphy.gif?cid=6c09b952ac4c6fc3d666d53ffdf5ac6f464cf5f8e3ae8e07&rid=giphy.gif&ct=s", answerSpeak : "", answer : "Minnie Mouse"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://media.tenor.com/kIxgBsCSfhYAAAAC/donald-duck.gif", answerSpeak : "", answer : "Donald Duck"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://media.tenor.com/yt-BfaY4MrAAAAAC/daisy-duck-yes.gif", answerSpeak : "", answer : "Daisy Duck"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://media.tenor.com/qvZ0Bd7C91oAAAAC/goofy-whistle.gif", answerSpeak : "", answer : "Goofy"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://media.tenor.com/A1AVhLoyDjYAAAAM/prance-pluto.gif", answerSpeak : "", answer : "Pluto"}) ;
+	
 		
 /*
  * 	image : "",
