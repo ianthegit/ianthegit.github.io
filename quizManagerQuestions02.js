@@ -4945,7 +4945,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
 	question : "Where is this?", answer : "Eiffel Tower", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AMWts8D4IP7AZd-fk0CRPhDKgXIvenJF20Cjnwyo27B4KyAGH7EGQUXCet63gWEVgPqmSw--yF1CtvRqnDPvM0HDf5CCSzJ_f1dZNzdH-T4gf4AV3MzJCpetHEHNA2OB3rdaWHrIb6wAfZVxCAonXIc6bUa3EA=w387-h345-s-no?authuser=0"} ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
-	question : "Where is this?", answer : "The O2", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AMWts8A3v9GmaOYkUuDrJbf4tMPwi6Mh905gA2y5TGe_kGTxVGSLsR4r7YaMhkQ-yPrsyTWWoihvW8vIp6L71QojATfNVUE_xVHQScx7shHKUcOvnZQ-jUWNpsWz3Gj8V3ySiiOVakjo6kD_0-Y9oPEo8wbhDg=w750-h641-s-no?authuser=0"} ); 
+	question : "Where is this?", answer : "The O2/Millenium Dome", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AMWts8A3v9GmaOYkUuDrJbf4tMPwi6Mh905gA2y5TGe_kGTxVGSLsR4r7YaMhkQ-yPrsyTWWoihvW8vIp6L71QojATfNVUE_xVHQScx7shHKUcOvnZQ-jUWNpsWz3Gj8V3ySiiOVakjo6kD_0-Y9oPEo8wbhDg=w750-h641-s-no?authuser=0"} ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
 	question : "Where is this?", answer : "Sydney Opera House", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AMWts8DFTDfWRmLvSNnVOQBmOwVLNUL7ebQMggTYlQqbUAmK63PoQaGkGObKCJre3lwJkjhd1FlXX6Ij3GY3YgtH5xPkCCLgQrukN09ijUidXINEN6IrII3-i3gKNyL5MrzB7_F0Ivj2ye9T7RgGhrunHfiF5A=w343-h414-s-no?authuser=0"} ); 
 
