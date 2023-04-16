@@ -4949,6 +4949,53 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
 	question : "Where is this?", answer : "Sydney Opera House", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AMWts8DFTDfWRmLvSNnVOQBmOwVLNUL7ebQMggTYlQqbUAmK63PoQaGkGObKCJre3lwJkjhd1FlXX6Ij3GY3YgtH5xPkCCLgQrukN09ijUidXINEN6IrII3-i3gKNyL5MrzB7_F0Ivj2ye9T7RgGhrunHfiF5A=w343-h414-s-no?authuser=0"} ); 
 
+quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2023-4-16,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'R': </BR></BR>What is the syncopated musical style, a forerunner of jazz, and the predominant style of American popular music from about 1899 to 1917?", answer : "Ragtime", answerSpeak : "",
+	answerimage : "https://media2.giphy.com/media/l2Je62VPyr55aK7HG/200w.gif?cid=6c09b9520ghopyldzodilc0z5kw9xr08g9rlzu4jjbfx33hk&rid=200w.gif&ct=g"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'R': </BR></BR>Which Science Fiction author wrote 'The Day it Rained Forever' and 'Fahrenheit 451'?", answer : "Ray Bradbury", answerSpeak : "",
+	answerimage : "https://64.media.tumblr.com/23577acfed42bbacbf493fe933aa7d50/tumblr_pktj222fED1rob81ao10_r2_400.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'R': </BR></BR>What word can be used to mean 'Royal like', and is a common cinema name?", answer : "Regal", answerSpeak : "",
+	answerimage : "https://www.suffolknews.co.uk/_media/img/XSNMJO9FBFCTHF3RFMJM.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'R': </BR></BR>Which diseases affect your joints, tendons, ligaments, bones, and muscles, causing pain and inflammation?", answer : "Rheumatic", answerSpeak : "",
+	answerimage : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'R': </BR></BR>What is an affluent residential district bordering the River Thames, an area in North Yorkshire, and sausages?", answer : "Richmond", answerSpeak : "",
+	answerimage : "https://i.ytimg.com/vi/5QR9pyEQ3kU/mqdefault.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'R': </BR></BR>Is the capital of Latvia?", answer : "Riga", answerSpeak : "",
+	answerimage : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'R': </BR></BR>Is the fictional boxer from Philidelphia?", answer : "Rocky Balboa", answerSpeak : "",
+	answerimage : "https://media1.giphy.com/media/xmxGoENM1V81q/giphy.gif"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'R': </BR></BR>Raspberry, dewberry and blackberry are all members of what family?", answer : "Rose", answerSpeak : "",
+	answerimage : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
+	question : "What 'R': </BR></BR>WHat sport saw Steve, Matthew, Tim and James win gold in Sydney in 2000?", answer : "Rowing", answerSpeak : "",
+	answerimage : "https://i.ytimg.com/vi/9BtgxHBWDWg/maxresdefault.jpg"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'R': </BR></BR>Kigali is the capital of what landlocked African country?", answer : "Rwanda", answerSpeak : "",
+	answerimage : ""} ); 
+
+
+
+quests[++questIndexBuilder] = {  //To row 54 of 'acoustic covers of popular songs'
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),  
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2023-4-16,InnerWheel,saturday",
+		questInfo: new Array() };  
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4vLOJ0pXDarGWlf14nXsMG?utm_source=generator&theme=0" width="100%" height="760" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
+	answer : "You've got a friend in me, Toy Story</BR>Y.M.C.A., Village People</BR>In the summertime, Mungo Jerry</BR>Running up that Hill, Kate Bush</BR>These boots are made for walking, Nancy Sinatra</BR>Eleanor Rigby, The Beatles</BR>It must have been love, Roxette</BR>Hip to be square, Huey Lewis & the news</BR>Say Say Say, Paul McCartney & Michael Jackson</BR>Come Together, the Beatles", answerSpeak : "", question : ""}) ;
+
 
 quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
