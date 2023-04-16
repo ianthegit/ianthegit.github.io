@@ -2626,22 +2626,22 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 		questInfo: new Array()
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AJFCJaXMfPrwBoHYiViSDVwkBRhLeH1kR-28b1ZdJeaZL1PAfLSqiWrRYga-ewlrNhrLWNJKIV7ixavaU46Wk9_C_fPNopwAGiBKZOWzLD_Prk1-pBOz7Ts_6fHARDZaj0sX2DXB7QzzaItWrHMPHAq7sVmI6w=w1212-h900-s-no?authuser=0",
 	answerimage : "https://www.icegif.com/wp-content/uploads/mickey-mouse-icegif.gif", answerSpeak : "", answer : "Mickey Mouse"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AJFCJaUH1JMPWfFrGHSzQQ7ZcUBbCSXwtNZ-f49wcMbJpkZHTDAbtd_0QWt5qq2YNqtQexWEd4r10jb7y6ulByydP-mBPALmKHjp9tg8fAthuh6nNmZqElImI8fmqhyU2YnDYPKQBdsc431yozst6nVAa7_YOQ=w1192-h925-s-no?authuser=0",
 	answerimage : "https://media2.giphy.com/media/S8xmtfl0qhDggqCRWJ/giphy.gif?cid=6c09b952ac4c6fc3d666d53ffdf5ac6f464cf5f8e3ae8e07&rid=giphy.gif&ct=s", answerSpeak : "", answer : "Minnie Mouse"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AJFCJaXtNJydgTKNWKDzDnCoideY1m3R1dp4ckOP1d2OR7820Xa0UXo5Yev5pR6Gxle-LM4sVI5UVRHoh5Ujg2RLeXmGo8HfMgt2L3BVEDN0v5OyBHpwqgTPzphSFeh3rXsZiTXpdMK-L6tZ6Wn6UUen36TEjw=w384-h522-s-no?authuser=0",
 	answerimage : "https://media.tenor.com/kIxgBsCSfhYAAAAC/donald-duck.gif", answerSpeak : "", answer : "Donald Duck"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AJFCJaUAWTRFtcm5MnoYohLqcF3RrIg_q_1Kjbntiw6AH__aTotcsiJ2Zmo_FkoUrEguTtLopqESjab8AQ8TaWi7IxObNC9hiO8NRsEEiWV_OXCid0ml9U7b3q9lgSI0kQRjBYB_pSZVEJyEl-XDv-LyVunrFg=w411-h553-s-no?authuser=0",
 	answerimage : "https://media.tenor.com/yt-BfaY4MrAAAAAC/daisy-duck-yes.gif", answerSpeak : "", answer : "Daisy Duck"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AJFCJaXK7odWx5gWOFkuHYeGdi9OXufa7DFi4HdMBL-yf_rH7TfjARGYIai91rcHMK9vXzcIG7eTapn1D5b3WC1e4DT919LWZD59UOSZog43mNgiWEb7HJ4yt7PGRIsP7s6ELkn9lpYcoXCK5iCLUnwUlA38pw=w521-h912-s-no?authuser=0",
 	answerimage : "https://media.tenor.com/qvZ0Bd7C91oAAAAC/goofy-whistle.gif", answerSpeak : "", answer : "Goofy"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AJFCJaU7WWcTm6aJMWQeBg2T2jXO9O_BNwOyIC9UPdke-96CWyBSMjQF14t0NBAYY8pq1Ws6844sOMnm-b7sgNjN0Ft2xcIZMJXZotvf4yUgMtEflkGXmmdCdyYJEpzfX5owWd8ukgVdJH4ct6zdYZcIAfqJ_A=w883-h560-s-no?authuser=0",
 	answerimage : "https://media.tenor.com/A1AVhLoyDjYAAAAM/prance-pluto.gif", answerSpeak : "", answer : "Pluto"}) ;
 	
 		
