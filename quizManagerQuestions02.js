@@ -4979,7 +4979,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
 	question : "What 'R': </BR></BR>Raspberry, dewberry and blackberry are all members of what family?", answer : "Rose", answerSpeak : "",
 	answerimage : ""} ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePictureAnswer,
-	question : "What 'R': </BR></BR>WHat sport saw Steve, Matthew, Tim and James win gold in Sydney in 2000?", answer : "Rowing", answerSpeak : "",
+	question : "What 'R': </BR></BR>What sport saw Steve, Matthew, Tim and James win gold in Sydney in 2000?", answer : "Rowing", answerSpeak : "",
 	answerimage : "https://i.ytimg.com/vi/9BtgxHBWDWg/maxresdefault.jpg"} ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
 	question : "What 'R': </BR></BR>Kigali is the capital of what landlocked African country?", answer : "Rwanda", answerSpeak : "",
