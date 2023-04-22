@@ -4997,6 +4997,73 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : "You've got a friend in me, Toy Story</BR>Y.M.C.A., Village People</BR>In the summertime, Mungo Jerry</BR>Running up that Hill, Kate Bush</BR>These boots are made for walking, Nancy Sinatra</BR>Eleanor Rigby, The Beatles</BR>It must have been love, Roxette</BR>Hip to be square, Huey Lewis & the news</BR>Say Say Say, Paul McCartney & Michael Jackson</BR>Come Together, the Beatles", answerSpeak : "", question : ""}) ;
 
 
+
+quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2023-4-23,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'S': </BR></BR>What is the classical language of Indian and the liturgical language of Hinduism, Buddhism, and Jainism?", answer : "Sanskrit", answerSpeak : "",
+	answerimage : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'S': </BR></BR>What name is given to a window that opens and shuts by moving up and down?", answer : "Sash", answerSpeak : "",
+	answerimage : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'S': </BR></BR>Drugs used to reduce nervous tension or induce sleep may be described as being what?", answer : "Sedative", answerSpeak : "",
+	answerimage : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'S': </BR></BR>The Adi Granth - “First Book” - also called Granth or Granth Sahib, is the sacred scripture of which religion?", answer : "Sikhism", answerSpeak : "",
+	answerimage : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'S': </BR></BR>What is the liquid clay used in pottery called?", answer : "Slip", answerSpeak : "",
+	answerimage : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'S': </BR></BR>Of which country in south eastern Europe is Ljubljana the capital?", answer : "Slovenia", answerSpeak : "",
+	answerimage : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'S': </BR></BR>In the Bible, which famously wise king is the Book of Proverbs attributed to?", answer : "Solomon", answerSpeak : "",
+	answerimage : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'S': </BR></BR>What is the name given to the switching of letters in an expression (e.g. blarm wanket instead of warm blanket)?", answer : "Spoonerism", answerSpeak : "",
+	answerimage : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'S': </BR></BR>Which classic dish contains strips of steak, or sometimes mushrooms, cooked in a wine sauce with sour cream?", answer : "Stroganoff", answerSpeak : "",
+	answerimage : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'S': </BR></BR>What is the name of the Nike sports logo?", answer : "Swoosh", answerSpeak : "",
+	answerimage : ""} ); 
+
+
+quests[++questIndexBuilder] = { 
+		name : "Top-Down "+getAndIncrementCounterForType("topdown"),
+		hoverover : "Do you recognise these places from above?",
+		tags : "2023-4-23,saturday,InnerWheel,surfers,topDown", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "Where is this?", answer : "Sidegate Lane Primary School", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AJFCJaUruAJNpqsfoezcz2kd1SavUkMBkTBZNGlJr9KXKLWaz2D3jmv7WNLg0PNCMw2K7voWvGuZREH8Ibj3mTj7i6ggmTuJAVrBS1y76SXWC4I93oBMrupraiV_QbQ-XgXxqiUYL-v7TrTIHmjvje357pLqKw=w676-h447-s-no?authuser=0"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "Where is this?", answer : "San Francisco (Golden Gate Bridge / Alkatraz / Treasure Island", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AJFCJaVFJkqwc9tTt9oR-1sz0fdNdccctbDBTr-FpcgesyeDlOIKqTutGBV6ZsbJ_tW5kOy2JwzOZ9tOrqMpowZN0Al1CleAptoSNq9wSgHBkEgPe4aiaTnVqGTP0bc9nLFZASQyWVF7gZ9HucKhYu-a-rRPlg=w999-h374-s-no?authuser=0"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "Where is this?", answer : "Hollywood Sign", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AJFCJaWX96yzQx4xwbAMVyckNYA7UGLKNogpc6XcCuliPUtJW5ZjTYWbJPWUq0WOdhtGa7xH0bWUdFM0GqeRt8jHiELAjrnyK_gN7MwlYaGa60FbNuxZsDomDcXnoIfP8CBeGSV1X3txEG5l-CZl3tv8IlWR5g=w975-h435-s-no?authuser=0"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "Where is this?", answer : "Central Park", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AJFCJaVJk7vWYf_kzy0-Fs1kB9E55XLLtf6kR8yQV5nwUwA36kfIf6oZBveT9pGPbYiBMp3sVI7BsBh1uZpKlx6BofjGwzErNJIeiPKEBEX1IVdGSbLNtfqU0gWYb5NDIoH0WqZSzl6q9kAK4z2Dow9U4GgBBQ=w1390-h314-s-no?authuser=0"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "Where is this?", answer : "Nelson's Column", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AJFCJaWxUHlzFjveQw3mvqDT3LQVrH81VInATkx6lpxuL0Qj76tGhlYyVUFwIuYtCr0MWc3zShDEZC2430pVlVdbdxnnIT-avIoMBc_So9teM0kaFVVv2juDt1ndfZGMhy_dLfpQtyM-7gTeB6MNZ6SNkAosdA=w578-h444-s-no?authuser=0"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "Where is this?", answer : "St Paul's Cathedral", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AJFCJaWu0XONZgtPVvs8Ze46Cx__6OzDfCT15dnrNGeT6AZp_iwRvq5WfzmilzrJtjCkW272jvoAEkJ6TtQlfrio4KzQasG2uSrpljCuoSgXgZbbBFGZfYB4S6JMrEwqQ7Zt1nzD9NojMbcKPsD5IgBUvF6rMA=w772-h612-s-no?authuser=0"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "Where is this?", answer : "St Mary's Church, Woodbridge", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AJFCJaUMDjc-q7dtpyQjCco6oem2u-AbvfLYGh5JPriRISDo-Hd_kfBKgjJdNP-deDunqeA2JSGXpyp6F3WlujuWFL-wngeitmL77PXLuMZVn-q-NruBsZBog4e22kqQ4fa4fgrBG720RhGo3rcZ2AnClbgF2w=w622-h313-s-no?authuser=0"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "Where is this?", answer : "Shire Hall, Woodbridge", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AJFCJaXba_uQc9ydUB5PrtloQ4cOk0NDz4uJddsOoRTtO1yito6VnWaoon4SAW4ccZz8Xzu8ydTL9bkTYVJmX_nGe5NdFCjwXlznqH5zU6uyDuTCIoZsHE-KdB8qnm8E5LI0Al7EU2VifMAkJUesdgvOdzH6gQ=w809-h291-s-no?authuser=0"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "Where is this?", answer : "BBC Television Centre", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AJFCJaUerrdhRRI-zKXyTnWh0q9OAGVwtZWpz5mhwWdBwcKMwW1kHPgF3gs73wf2ozaixs9LN1MUDjInr4fVRhuplCscizfL0mQag_jf_hXFRhgiyf42OTUfO-eyZiOcWfh4-k2MMLen96XrY0aOt8Uj5E_IJA=w736-h447-s-no?authuser=0"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "Where is this?", answer : "Stratford Olympic Park", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AJFCJaUj8GGljSaadUGkIkzHLGNiAZzeQYjZLbGmG5Sr5mAAQqA0uVEOqti7tXWnDFp4_QZ8eH0CGZolIljhi62I8Zu7By67vupz4lrO8b2rndFlqmw636g0qKTXEk2KsRqHngK35xbL4rxFrkrNyBFjzJQyuw=w918-h659-s-no?authuser=0"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
+	question : "Where is this?", answer : "The Pentagon", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AJFCJaX47hU6ObbbgbP03Q2oYj2YRKPDwBXmh86HfFN1pkseDJt5Eqvlgr9_y8C1258ALysBHuyP_XjshOYIggA7weWqg6VCpVx8muvv-48pwAG8wBAEBwCKH0by_4zze3UuWj4_xnhwa4ZbCJXMkQhUeEqa9w=w476-h443-s-no?authuser=0"} ); 
+
+
 quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
 		hoverover : "What sinks, what floats",
