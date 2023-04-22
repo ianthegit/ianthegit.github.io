@@ -5064,6 +5064,16 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
 	question : "Where is this?", answer : "The Pentagon", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AJFCJaX47hU6ObbbgbP03Q2oYj2YRKPDwBXmh86HfFN1pkseDJt5Eqvlgr9_y8C1258ALysBHuyP_XjshOYIggA7weWqg6VCpVx8muvv-48pwAG8wBAEBwCKH0by_4zze3UuWj4_xnhwa4ZbCJXMkQhUeEqa9w=w476-h443-s-no?authuser=0"} ); 
 
 
+quests[++questIndexBuilder] = {  /
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),  
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2023-4-23,InnerWheel,saturday",
+		questInfo: new Array() };  
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6ooB9HWz9O3oSvl6Fj5SE9?utm_source=generator&theme=0" width="100%" height="760" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
+	answer : "We didn't start the fire, Billy Joel</BR>You are my sunshine, Jimmie Davis, Gene Autry, Bing Crosby, Ray Charles, Marge Simpson </BR>Who let the dogs out, Baha Men</BR>Holding out for a hero, Bonnie Tyler</BR>Kokomo, Beach Boys</BR>Can't get you out of my head, Kylie</BR><Crocodile Rock, Elton John/BR><All Star, Smashmouth/BR>Gimme! Gimme! Gimmie!, ABBA</BR>Wellerman, Nathan Evans", answerSpeak : "", question : ""}) ;
+
+
 quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
 		hoverover : "What sinks, what floats",
