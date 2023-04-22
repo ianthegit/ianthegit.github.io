@@ -5043,7 +5043,7 @@ quests[++questIndexBuilder] = {
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
 	question : "Where is this?", answer : "Sidegate Lane Primary School", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AJFCJaUruAJNpqsfoezcz2kd1SavUkMBkTBZNGlJr9KXKLWaz2D3jmv7WNLg0PNCMw2K7voWvGuZREH8Ibj3mTj7i6ggmTuJAVrBS1y76SXWC4I93oBMrupraiV_QbQ-XgXxqiUYL-v7TrTIHmjvje357pLqKw=w676-h447-s-no?authuser=0"} ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
-	question : "Where is this?", answer : "San Francisco (Golden Gate Bridge / Alkatraz / Treasure Island", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AJFCJaVFJkqwc9tTt9oR-1sz0fdNdccctbDBTr-FpcgesyeDlOIKqTutGBV6ZsbJ_tW5kOy2JwzOZ9tOrqMpowZN0Al1CleAptoSNq9wSgHBkEgPe4aiaTnVqGTP0bc9nLFZASQyWVF7gZ9HucKhYu-a-rRPlg=w999-h374-s-no?authuser=0"} ); 
+	question : "Where is this?", answer : "San Francisco (Golden Gate Bridge / Alkatraz / Treasure Island)", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AJFCJaVFJkqwc9tTt9oR-1sz0fdNdccctbDBTr-FpcgesyeDlOIKqTutGBV6ZsbJ_tW5kOy2JwzOZ9tOrqMpowZN0Al1CleAptoSNq9wSgHBkEgPe4aiaTnVqGTP0bc9nLFZASQyWVF7gZ9HucKhYu-a-rRPlg=w999-h374-s-no?authuser=0"} ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
 	question : "Where is this?", answer : "Hollywood Sign", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AJFCJaWX96yzQx4xwbAMVyckNYA7UGLKNogpc6XcCuliPUtJW5ZjTYWbJPWUq0WOdhtGa7xH0bWUdFM0GqeRt8jHiELAjrnyK_gN7MwlYaGa60FbNuxZsDomDcXnoIfP8CBeGSV1X3txEG5l-CZl3tv8IlWR5g=w975-h435-s-no?authuser=0"} ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,

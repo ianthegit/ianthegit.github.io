@@ -492,7 +492,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-22",
 	question : "Who is this, born April 22nd 1936?" ,	answer : "Glen Campbell", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Glen_Campbell_1967.JPG/220px-Glen_Campbell_1967.JPG"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-22",
-	question : "Who is this, born April 22nd 1937?" ,	answer : "Jack Nichoolson", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Jack_Nicholson_2001.jpg/220px-Jack_Nicholson_2001.jpg"	});	
+	question : "Who is this, born April 22nd 1937?" ,	answer : "Jack Nicholson", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Jack_Nicholson_2001.jpg/220px-Jack_Nicholson_2001.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-22",
 	question : "Who is this, born April 22nd 1959?" ,	answer : "Ryan Stiles", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/RyanStilesNov08.jpg/220px-RyanStilesNov08.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-22",
