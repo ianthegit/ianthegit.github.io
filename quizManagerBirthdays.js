@@ -489,6 +489,36 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 	question : "Who is this, born April 16th 1963?" ,	answer : "Jimmy Osmond", answerSpeak : "", image : "https://i2-prod.mirror.co.uk/incoming/article11879993.ece/ALTERNATES/s1200b/Jimmy-Osmond-performing-on-stageed.jpg"	});	
 
 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-22",
+	question : "Who is this, born April 22nd 1936?" ,	answer : "Glen Campbell", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Glen_Campbell_1967.JPG/220px-Glen_Campbell_1967.JPG"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-22",
+	question : "Who is this, born April 22nd 1937?" ,	answer : "Jack Nichoolson", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Jack_Nicholson_2001.jpg/220px-Jack_Nicholson_2001.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-22",
+	question : "Who is this, born April 22nd 1959?" ,	answer : "Ryan Stiles", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/RyanStilesNov08.jpg/220px-RyanStilesNov08.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-22",
+	question : "Who is this, born April 22nd 1963?" ,	answer : "Sean Lock", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Sean_lock_the_hexagon_08_%28crop%29.jpg/220px-Sean_lock_the_hexagon_08_%28crop%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-22",
+	question : "Who is this lady, born April 22nd 1986?" ,	answer : "Amber Heard", answerSpeak : "", image : "https://people.com/thmb/gp3PAwgxW1TzNmG_WMCZBD4Nons=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(919x524:921x526)/amber-heard-johnny-depp-a513f0cf691745dcb8e16f308c537798.jpg"	});	
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-23",
+	question : "Who is this, born April 23rd 1928?" ,	answer : "Shirley Temple", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Shirleytemple_young.jpg/220px-Shirleytemple_young.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-23",
+	question : "Who is this, born April 23rd 1936?" ,	answer : "Roy Orbison", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Roy_Orbison_%281965%29.jpg/220px-Roy_Orbison_%281965%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-23",
+	question : "Who is this, born April 23rd 1939?" ,	answer : "Lee Majors", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Lee_Majors_1973.JPG/220px-Lee_Majors_1973.JPG"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-23",
+	question : "Who is this, born April 23rd 1941?" ,	answer : "Ed Stewart", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Ed_Stewart.jpg/220px-Ed_Stewart.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-23",
+	question : "Who is this, born April 23rd 1962?" ,	answer : "John Hannah", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/John_Hannah_by_Gage_Skidmore.jpg/220px-John_Hannah_by_Gage_Skidmore.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-23",
+	question : "Who is this, born April 23rd 1977?" ,	answer : "John Cena", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/John_Cena_July_2018.jpg/220px-John_Cena_July_2018.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-23",
+	question : "Who is this, born April 23rd 1990?" ,	answer : "Dev Patel", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Dev_Patel_by_Gage_Skidmore.jpg/220px-Dev_Patel_by_Gage_Skidmore.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"4-23",
+	question : "Who is this, born April 23rd 2018?" ,	answer : "Prince Louis of Wales", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Queen_Elizabeth_II_Platinum_Jubilee_2022_-_Platinum_Pageant_%2852124830349%29_%28cropped3%29.jpg/220px-Queen_Elizabeth_II_Platinum_Jubilee_2022_-_Platinum_Pageant_%2852124830349%29_%28cropped3%29.jpg"	});	
+
+
 /*
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
