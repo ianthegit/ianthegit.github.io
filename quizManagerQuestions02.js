@@ -5064,7 +5064,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,
 	question : "Where is this?", answer : "The Pentagon", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AJFCJaX47hU6ObbbgbP03Q2oYj2YRKPDwBXmh86HfFN1pkseDJt5Eqvlgr9_y8C1258ALysBHuyP_XjshOYIggA7weWqg6VCpVx8muvv-48pwAG8wBAEBwCKH0by_4zze3UuWj4_xnhwa4ZbCJXMkQhUeEqa9w=w476-h443-s-no?authuser=0"} ); 
 
 
-quests[++questIndexBuilder] = {  /
+quests[++questIndexBuilder] = {  
 		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),  
 		hoverover : "Songs you will know, but wish you did not after this.",
 		tags : "music,2023-4-23,InnerWheel,saturday",
