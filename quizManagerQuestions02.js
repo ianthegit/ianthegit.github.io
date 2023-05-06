@@ -5113,6 +5113,15 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
 	
 	
 	
+quests[++questIndexBuilder] = {  
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),  
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2023-5-7,InnerWheel,saturday",
+		questInfo: new Array() };  
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5c235oAacOPMmW9QzAqrrI?utm_source=generator&theme=0" width="100%" height="760" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
+	answer : "Hey Jude, The Beatles</BR>I wanna know what love is, Foreigner</BR>Like a virgin, Madonna</BR>Raining Men, The Weather Girls</BR>Uptown Girl, Billy Joel (Westlife)</BR>Blame it on the boogie, The Jacksons</BR>Baby one more time, Britney Spears</BR>Dancing Queen, ABBA</BR>Barbie Girl, Aqua</BR>Stairway to Heaven, Led Zeppelin", answerSpeak : "", question : ""}) ;
+
 	
 quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
