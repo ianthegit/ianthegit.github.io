@@ -5081,16 +5081,13 @@ quests[++questIndexBuilder] = {
 		tags : "2023-5-7,saturday,InnerWheel,surfers,Geordie", 
 		questInfo: new Array() };
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
-	question : ". An easy one to start with. 'Neet' means?"+ Table3ColumnStart +  "Note</td><td>Night</td><td>Neat" + Table4ColumnEnd, answer : "Night", answerSpeak : "",
+	question : "An easy one to start with. 'Neet' means?"+ Table3ColumnStart +  "Note</td><td>Night</td><td>Neat" + Table4ColumnEnd, answer : "Night", answerSpeak : "",
 	answerimage : ""} ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
 	question : "What's a doylem?"+ Table3ColumnStart +  "A bairn</td><td>A knacka or wazzock</td><td>A workyticket" + Table4ColumnEnd, answer : "A knacka or wazzock", answerSpeak : "",
 	answerimage : ""} ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
 	question : "Which of these <b>isn't</b> a word for a person?"+ Table3ColumnStart +  "Scratcha</td><td>Marra</td><td>Gadgie" + Table4ColumnEnd, answer : "Scratcha", answerSpeak : "",
-	answerimage : ""} ); 
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
-	question : "what does scratcha mean"+ Table3ColumnStart +  "Armchair</td><td>Bed</td><td>Doormat" + Table4ColumnEnd, answer : "Bed", answerSpeak : "",
 	answerimage : ""} ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
 	question : "Which of these isn't something you'd associate with the seaside?"+ Table3ColumnStart +  "Dancers</td><td>Shuggy boat</td><td>Willicks" + Table4ColumnEnd, answer : "'Dancers', in Geordie, are stairs (shuggy boats are a ride, willicks are winkles)", answerSpeak : "",
@@ -5100,6 +5097,9 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
 	answerimage : ""} ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
 	question : "What are kets?"+ Table3ColumnStart +  "Shoes</td><td>Trousers</td><td>Sweets" + Table4ColumnEnd, answer : "Sweets", answerSpeak : "",
+	answerimage : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "what does scratcha mean"+ Table3ColumnStart +  "Armchair</td><td>Bed</td><td>Doormat" + Table4ColumnEnd, answer : "Bed", answerSpeak : "",
 	answerimage : ""} ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
 	question : "'Bubble' usually means what?"+ Table3ColumnStart +  "Cry</td><td>Laugh</td><td>Boil over" + Table4ColumnEnd, answer : "Cry", answerSpeak : "",

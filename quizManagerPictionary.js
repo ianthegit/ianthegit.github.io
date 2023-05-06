@@ -2644,6 +2644,31 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	image : "https://lh3.googleusercontent.com/pw/AJFCJaU7WWcTm6aJMWQeBg2T2jXO9O_BNwOyIC9UPdke-96CWyBSMjQF14t0NBAYY8pq1Ws6844sOMnm-b7sgNjN0Ft2xcIZMJXZotvf4yUgMtEflkGXmmdCdyYJEpzfX5owWd8ukgVdJH4ct6zdYZcIAfqJ_A=w883-h560-s-no?authuser=0",
 	answerimage : "https://media.tenor.com/A1AVhLoyDjYAAAAM/prance-pluto.gif", answerSpeak : "", answer : "Pluto"}) ;
 	
+
+ quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of things you might see at a Coronation",
+		tags : "2023-5-7,pictionary", straightToAnswers:true,
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://upload.wikimedia.org/wikipedia/commons/6/64/Saint_Edward%27s_Crown.jpg", answerSpeak : "", answer : "Crown"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://www.rct.uk/sites/default/files/styles/rctr-scale-1300-500/public/teaser-image/trail/150023-1297438675.jpg?itok=0MLf-fv5", answerSpeak : "", answer : "Sceptre"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://www.rct.uk/sites/default/files/styles/rctr-scale-1300-500/public/collection-online/e/a/185682-1309804189.jpg?itok=ZcQrRQBZ", answerSpeak : "", answer : "Orb"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://i2-prod.liverpoolecho.co.uk/incoming/article26856857.ece/ALTERNATES/s615/0_Formula-One-World-Championship-2023-Preview-Package.jpg", answerSpeak : "", answer : "Red Arrows"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://e3.365dm.com/23/01/1600x900/skynews-king-charles-coronation_6022657.jpg?20230113141724", answerSpeak : "", answer : "A King"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://people.com/thmb/DMfKPKkxqMKnmYCo_jaYjqGSTEA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(979x479:981x481)/coronation-stone-of-scone-split-16a99b424ed845d1926a694ea44cc39b.jpg", answerSpeak : "", answer : "Stone of Scone"}) ;
 		
 /*
  * 	image : "",
