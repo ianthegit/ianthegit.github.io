@@ -519,6 +519,30 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 	question : "Who is this, born April 23rd 2018?" ,	answer : "Prince Louis of Wales", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Queen_Elizabeth_II_Platinum_Jubilee_2022_-_Platinum_Pageant_%2852124830349%29_%28cropped3%29.jpg/220px-Queen_Elizabeth_II_Platinum_Jubilee_2022_-_Platinum_Pageant_%2852124830349%29_%28cropped3%29.jpg"	});	
 
 
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-6",
+	question : "Who is this, born May 6th 1947?" ,	answer : "Alan Dale", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Alan_DaleRev3.jpg/220px-Alan_DaleRev3.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-6",
+	question : "Who is this, born May 6th 1953?" ,	answer : "Tony Blair", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Tony_Blair_2010_%28cropped%29.jpg/220px-Tony_Blair_2010_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-6",
+	question : "Who is this, born May 6th 1953?" ,	answer : "Graeme Sounness", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Souness_%28retouched%29.jpg/220px-Souness_%28retouched%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-6",
+	question : "Who is this, born May 6th 1961?" ,	answer : "George Clooney", answerSpeak : "", image : "https://img-9gag-fun.9cache.com/photo/aepXN4b_460s.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-6",
+	question : "Who is this, born May 6th 2019?" ,	answer : "Prince Archie Mountbatten-Windsor", answerSpeak : "", image : "https://people.com/thmb/USkHmbL7iLHvWNdrKoHay13uKAE=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(979x638:981x640):format(webp)/Prince-Harry-and-Meghan-Family-Holiday-Card-6cbf7caa72db41efa19301df559a3e43.jpg"	});	
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-7",
+	question : "Who is this, born May 7th 1901?" ,	answer : "Gary Cooper", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Gary_Cooper_%281952%29.jpg/220px-Gary_Cooper_%281952%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-7",
+	question : "Who is this, born May 7th 1917?" ,	answer : "David Tomlinson", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Mary_Poppins4.jpg/220px-Mary_Poppins4.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-7",
+	question : "Who is this, born May 7th 1946?" ,	answer : "Michael Rosen", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/MICHAEL_ROSEN_2022_%2854%29.jpg/220px-MICHAEL_ROSEN_2022_%2854%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-7",
+	question : "Who is this, born May 7th 1946?" ,	answer : "Brian Turner", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Brian_Turner_%28chef%29_01.jpg/220px-Brian_Turner_%28chef%29_01.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-7",
+	question : "Who is this, born May 7th 1998?" ,	answer : "MrBeast (Jimmy Donaldson)", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/MrBeastFullBody.png/220px-MrBeastFullBody.png"	});	
+
 /*
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
