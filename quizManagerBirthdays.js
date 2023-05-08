@@ -551,7 +551,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-8",
 	question : "Who is this, born May 5th 1935?" ,	answer : "Jack Charlton", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Jack_Charlton.jpg/220px-Jack_Charlton.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-8",
-	question : "Who is this, born May 5th 1942?" ,	answer : "", answerSpeak : "Norman Lamont", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Official_portrait_of_Lord_Lamont_of_Lerwick_2020_crop_2.jpg/220px-Official_portrait_of_Lord_Lamont_of_Lerwick_2020_crop_2.jpg"	});	
+	question : "Who is this, born May 5th 1942?" ,	answer : "Norman Lamont", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Official_portrait_of_Lord_Lamont_of_Lerwick_2020_crop_2.jpg/220px-Official_portrait_of_Lord_Lamont_of_Lerwick_2020_crop_2.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-8",
 	question : "Who is this, born May 5th 1983?" ,	answer : "Vicky McClure", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Vicky_McClure%2C_Svengali_premiere.jpg/220px-Vicky_McClure%2C_Svengali_premiere.jpg"	});	
 
