@@ -2652,22 +2652,22 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 		questInfo: new Array()
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AJFCJaVEgOzBYc9zEFbA_hwz9FiLuApchIqOxoWqM__pgXcCIyzfVphSf2N_2KcLm7DM6-Iq0CNf0dpv5OLDnOJWLgH_bnvstJ_jV-f23TTcVXAuEDL_YR9bBR_mB_uLA2DEiabNUMYU6H8t6ATBD-sy3XETxw=w544-h251-s-no?authuser=0",
 	answerimage : "https://upload.wikimedia.org/wikipedia/commons/6/64/Saint_Edward%27s_Crown.jpg", answerSpeak : "", answer : "Crown"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AJFCJaUGn_DiFp77XcsfIrbZ0-7b01VITXW14BtakfVcFPDuqxtfwEiQAr1-169l7kGAAnyUpX8Z9fX2qvDmMnAbq14lgZHKDnyxrPboYR1vvrm5ZeTHQg5NaVJIwEWzfAP6MipMfQ-pZBLul68I3S31xGkVUA=w905-h261-s-no?authuser=0",
 	answerimage : "https://www.rct.uk/sites/default/files/styles/rctr-scale-1300-500/public/teaser-image/trail/150023-1297438675.jpg?itok=0MLf-fv5", answerSpeak : "", answer : "Sceptre"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AJFCJaUEY5JtPRZqKwRltXM-yg7VqgeHrCwZkEz6Ob90qRxE7megDUgWcTIVOj1trumxxlcDU_y-ltsJDpdFQRbQ6bR3oE9VRskjnhAgZ_cK7kRa8uicuxIfVQ5ARHLa78I5-4pc29n4zMfKsj6JCpLysGk8JA=w429-h538-s-no?authuser=0",
 	answerimage : "https://www.rct.uk/sites/default/files/styles/rctr-scale-1300-500/public/collection-online/e/a/185682-1309804189.jpg?itok=ZcQrRQBZ", answerSpeak : "", answer : "Orb"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AJFCJaVKdHTYn2MXAfzOkgBGIX6dPgjKjtCgEBkTKTbv_OCCvYRUjJUeZ_zkhkxs4wi0gTO2ZmyVCusMRypD3_lCIgPRBaXZHYiYSZaCDb1nYxLirHujbFy6mMLbIEAtbk0yo7B9XJay-Fc2tQAt0N71GSpBng=w454-h318-s-no?authuser=0",
 	answerimage : "https://i2-prod.liverpoolecho.co.uk/incoming/article26856857.ece/ALTERNATES/s615/0_Formula-One-World-Championship-2023-Preview-Package.jpg", answerSpeak : "", answer : "Red Arrows"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AJFCJaXdxyQ6uMqbgig4rLEOiuf2YPithwXbA5yIelRlxLIotq4mKpof5zHI1wDVkidWcWvOOxDyNd4VjiTnasnkaQBXI4WCnc8Fab2lggITFjqhFlv_9ElQvWZHCgtVNgX4wJQfInhPtMAvTHT_Q6G0jR__Sg=w738-h690-s-no?authuser=0",
 	answerimage : "https://e3.365dm.com/23/01/1600x900/skynews-king-charles-coronation_6022657.jpg?20230113141724", answerSpeak : "", answer : "A King"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AJFCJaVeuyaRYzRzfCBxSC-d-SIViyKAS-J-nafuOm7J9c5-rxDqL_iQZgoV-jVdlOCJ9QMM1HT_0KMqSGe3NdRkdTEXf1s43-ZW8r0l1jhtN21ggT0hslG2rSgEDukgjwHKMRzsk0kzysgKPID0mBwblOwJxQ=w674-h607-s-no?authuser=0",
 	answerimage : "https://people.com/thmb/DMfKPKkxqMKnmYCo_jaYjqGSTEA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(979x479:981x481)/coronation-stone-of-scone-split-16a99b424ed845d1926a694ea44cc39b.jpg", answerSpeak : "", answer : "Stone of Scone"}) ;
 		
 /*
