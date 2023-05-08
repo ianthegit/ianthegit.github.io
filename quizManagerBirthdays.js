@@ -543,6 +543,19 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-7",
 	question : "Who is this, born May 7th 1998?" ,	answer : "MrBeast (Jimmy Donaldson)", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/MrBeastFullBody.png/220px-MrBeastFullBody.png"	});	
 
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-8",
+	question : "Who is this, born May 5th 1913?" ,	answer : "Sid James", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Sid_James_B%26W.jpg/220px-Sid_James_B%26W.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-8",
+	question : "Who is this, born May 5th 1926?" ,	answer : "David Atttenborough", answerSpeak : "", image : "https://i.guim.co.uk/img/media/415b6f2d814c81a82e3371b3cf13a417094d32be/0_0_2395_2452/master/2395.jpg?width=700&quality=85&auto=format&fit=max&s=6bb67523369c0f880dcfc0988b90e73b"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-8",
+	question : "Who is this, born May 5th 1935?" ,	answer : "Jack Charlton", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Jack_Charlton.jpg/220px-Jack_Charlton.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-8",
+	question : "Who is this, born May 5th 1942?" ,	answer : "", answerSpeak : "Norman Lamont", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Official_portrait_of_Lord_Lamont_of_Lerwick_2020_crop_2.jpg/220px-Official_portrait_of_Lord_Lamont_of_Lerwick_2020_crop_2.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-8",
+	question : "Who is this, born May 5th 1983?" ,	answer : "Vicky McClure", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Vicky_McClure%2C_Svengali_premiere.jpg/220px-Vicky_McClure%2C_Svengali_premiere.jpg"	});	
+
+
 /*
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
