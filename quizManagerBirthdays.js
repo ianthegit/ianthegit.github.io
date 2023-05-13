@@ -556,6 +556,35 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 	question : "Who is this, born May 5th 1983?" ,	answer : "Vicky McClure", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Vicky_McClure%2C_Svengali_premiere.jpg/220px-Vicky_McClure%2C_Svengali_premiere.jpg"	});	
 
 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-13",
+	question : "Who is this, born May 13th 1922 (and who starred in the Star Wars Christmas Special where she performed a song and dance routine in the Mos Eisley cantina)?" ,	answer : "Bea Arthur", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Beatrice_Arthur_-_1973.jpg/220px-Beatrice_Arthur_-_1973.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-13",
+	question : "Who is this, born May 13th 1939?" ,	answer : "Harvey Keitel", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Harvey_Keitel_Cannes_2015.jpg/220px-Harvey_Keitel_Cannes_2015.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-13",
+	question : "Who is this, born May 13th 1941?" ,	answer : "Joe Brown", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Joe_Brown_On_Stage.jpg/220px-Joe_Brown_On_Stage.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-13",
+	question : "Who is this, born May 13th 1950?" ,	answer : "Stevie Wonder", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Stevie_Wonder_1994.jpg/220px-Stevie_Wonder_1994.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-13",
+	question : "Who is this, born May 13th 1956?" ,	answer : "Richard Madeley", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Richard_Madeley_in_2019.png/220px-Richard_Madeley_in_2019.png"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-13",
+	question : "Who is this, born May 13th 1983?" ,	answer : "Nicola Cassidy", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Natalie_Cassidy_crop.jpg/220px-Natalie_Cassidy_crop.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-13",
+	question : "Who is this, born May 13th 1986?" ,	answer : "Robert Pattinson", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/MJK_08789_Robert_Pattinson_%28Damsel%2C_Berlinale_2018%29_%28cropped%29.jpg/220px-MJK_08789_Robert_Pattinson_%28Damsel%2C_Berlinale_2018%29_%28cropped%29.jpg"	});	
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-14",
+	question : "Who is this, born May 14th 1926?" ,	answer : "Eric Morecombe", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/EricMorecambe1963.jpg/220px-EricMorecambe1963.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-14",
+	question : "Who is this, born May 14th 1961?" ,	answer : "Tim Roth", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Tim_Roth_by_Gage_Skidmore_2.jpg/220px-Tim_Roth_by_Gage_Skidmore_2.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-14",
+	question : "Who is this, born May 14th 1969?" ,	answer : "Cate Blanchett", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Cate_Blanchett_Berlinale_2023_%28cropped%29.jpg/220px-Cate_Blanchett_Berlinale_2023_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-14",
+	question : "Who is this, born May 14th 1979?" ,	answer : "Dan Auerbach", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Dan_Auerbach_performing_with_the_Black_Keys.jpg/300px-Dan_Auerbach_performing_with_the_Black_Keys.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-14",
+	question : "Who is this, born May 14th 1984?" ,	answer : "Olly Murs", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Olly_Murs-9859.jpg/220px-Olly_Murs-9859.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-14",
+	question : "Who is this, born May 14th 1984?" ,	answer : "Mark Zuckerberg", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg/220px-Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg"	});	
+
 /*
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
