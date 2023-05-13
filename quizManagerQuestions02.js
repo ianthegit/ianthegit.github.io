@@ -5122,6 +5122,56 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5c235oAacOPMmW9QzAqrrI?utm_source=generator&theme=0" width="100%" height="760" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
 	answer : "Hey Jude, The Beatles</BR>I wanna know what love is, Foreigner</BR>Like a virgin, Madonna</BR>Raining Men, The Weather Girls</BR>Uptown Girl, Billy Joel (Westlife)</BR>Blame it on the boogie, The Jacksons</BR>Baby one more time, Britney Spears</BR>Dancing Queen, ABBA</BR>Barbie Girl, Aqua</BR>Stairway to Heaven, Led Zeppelin", answerSpeak : "", question : ""}) ;
 
+
+
+quests[++questIndexBuilder] = { 
+		name : "Geordie "+getAndIncrementCounterForType("Geordie"),
+		hoverover : "Do you know these words or phrases",
+		tags : "2023-14-7,saturday,InnerWheel,surfers,Geordie", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What does 'There's a geet walla queue at Asda, gan to Morrisons instead, marra' mean?", 
+	answer : "There's a large queue at Asda, go to Morrisson's mate", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What does 'That gadgie's gannin' proper radgie, like' mean?", 
+	answer : "That gentleman is rather vexed", answerSpeak : ""} );  
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What does 'Dee us some bait, hinny, I'm clamming' mean?", 
+	answer : "Darling, please make me a sandwich, I'm hungry", answerSpeak : ""} );  
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What does 'I'm propa radgie. Some gadgie dunched me motor so I stotted a brick at his' mean?", 
+	answer : "I'm annoyed, a young rapscallian hit my automobile, so I threw a brick at his", answerSpeak : ""} );  
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What does 'I cannit hoy ya tweezas for your spelk, pet. Someone's twocked them' mean?", 
+	answer : "I can't give you my tweezers for your splinter, someone has stolen them", answerSpeak : ""} );  
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What does 'Divvin' shoot ya gob off man, ya jabs are owa here' mean?", 
+	answer : "Don;t shout, your plimpsoles are here", answerSpeak : ""} );  
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What does 'How man, I'm ganna set-a-had to this shed if it gives us another spelk' mean?", 
+	answer : "I say, I'm going to set fire to this shed if it gives me another splinter", answerSpeak : ""} );  
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What does 'Howay man, let's get the bairns clarty plodging doon Cullercoats.' mean?", 
+	answer : "Let us take the children to get dirty by paddling in the sea at Cullercoats", answerSpeak : ""} );  
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What does 'Giz a deek at ya cornet, you've got more monkey's blood than me' mean?", 
+	answer : "Let me see your ice-cream cornet, I think you've got more raspberry/strawberry sauce than I have", answerSpeak : ""} );  
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What does 'The bairn's being a propa workyticket, if he's not careful there'll be nee kets this week.' mean?", 
+	answer : "My darling child is being particularly vexing today, I shall have to deny him sweets this week", answerSpeak : ""} );  
+
+	
+
+quests[++questIndexBuilder] = {  
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),  
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2023-5-14,InnerWheel,saturday",
+		questInfo: new Array() };  
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4uh44RwtUwruDLOc0Gg8Ag?utm_source=generator&theme=0" width="100%" height="760" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
+	answer : "Don't stop me now, Queen</BR>Walk of Life, Dire Straits</BR>Hotel California, the Eagles</BR>Let it go, Frozen</BR>Roar, Katy Perry</BR>Story of my life, One Direction</BR>Can you feel the love tonight, Elton John</BR>The Pink Panther, Henri Mancini</BR>Chasing Cars, Snow Patrol</BR>The sound of silence, Simon & Garfunkel", answerSpeak : "", question : ""}) ;
+
+
 	
 quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
