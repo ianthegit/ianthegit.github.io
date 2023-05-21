@@ -5173,6 +5173,55 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 	
+	
+quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2023-5-21,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'T': </BR></BR>Is a graphic description or representation?", answer : "Tableau", answerSpeak : "",
+	answerimage : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'T': </BR></BR>In geometry, what is the straight line that 'just touches' a plane curve at a given point, or a conversation which takes an unexpected turn,  called?", answer : "Tangent", answerSpeak : "",
+	answerimage : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'T': </BR></BR>What British art gallery features an area known as the Turbine Hall?", answer : "Tate Modern", answerSpeak : "",
+	answerimage : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'T': </BR></BR>What is the capital of Iran?", answer : "Tehran", answerSpeak : "",
+	answerimage : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'T': </BR></BR>The cocktail 'Margarita' contains Cointreau, lime and which other spirit?", answer : "Tequila", answerSpeak : "",
+	answerimage : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'T': </BR></BR>What is the only country in Southeast Asia to never be ruled by a European nation?", answer : "Thailand", answerSpeak : "",
+	answerimage : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'T': </BR></BR>Is an actor?", answer : "Thespian", answerSpeak : "",
+	answerimage : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'T': </BR></BR>Was Ronnie Corbett's name in a 'Sorry'?", answer : "Timothy Lumsden", answerSpeak : "",
+	answerimage : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'T': </BR></BR>A device used to change the voltage of alternating currents is called a what?", answer : "Transformer", answerSpeak : "",
+	answerimage : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'T': </BR></BR>Which instrument did the Jazz musician Dizzy Gillespie famously play?", answer : "Trumpet", answerSpeak : "",
+	answerimage : ""} ); 
+
+
+
+quests[++questIndexBuilder] = {  
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),  
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2023-5-21,InnerWheel,saturday",
+		questInfo: new Array() };  
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1hBjn29EPKtKIw6dF4ArvH?utm_source=generator&theme=0" width="100%" height="760" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
+	answer : "Brown Eyed Girl, Van Morrison</BR>The Tide is High, Blondie</BR>Lean on Me, Bill Withers</BR>Sweet Caroline, Neil Diamond</BR>Don't stop believin, Journey</BR>My Heart Will Go On, Celine Dion</BR>The Longest Time, Billy Joel</BR>Don't Worry, Be Happy, Bobby McFerrin</BR>Rolling in the Deep, Adele</BR>Time After Time, Cyndi Lauper", answerSpeak : "", question : ""}) ;
+
+
 quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
 		hoverover : "What sinks, what floats",
