@@ -2679,22 +2679,22 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 		questInfo: new Array()
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AJFCJaXX5IGfDDCnI1F8sCsyEmEYWf4O0VYGRCly97jVY6lC6CCDrzbX60CdeEApphIiJjTQak6aDiHw8FbIag6MLP0OMjzc4ZOMc0a_QsMlOoW4MGGubPemoPOJyGzuISanueK1i3bJvvFcW6lSVzUPwlzD7A=w232-h368-s-no?authuser=0",
 	answerimage : "https://styleroses.co.uk/app/uploads/2021/11/Love_Of_My_Life_Hybrid_Tea_Garden_Rose_20_22-scaled.jpg", answerSpeak : "", answer : "Rose"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AJFCJaVLpBT0HD_zMDRnjiSZjZRRhXfj_io4S14vg5-IaSq5Hj6dVjCh4IWZbPCdjwk_hJdhFliuRBdU7VB1CVHqFFZaoIj5c2kj8KxeYjJ1zzbtE9hAPNqFsDVFW52B_pteAUSrkQSnUP7s6mientsmGJ83kQ=w442-h535-s-no?authuser=0",
 	answerimage : "https://croft16daffodils.co.uk/wp-content/uploads/2016/01/Emperor-%C2%A9-Croft-16-Daffodils-2021-scaled.jpg", answerSpeak : "", answer : "Daffodil"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AJFCJaU6GKBBbuqrGkTC7Ydb4jOkJWBKyCH12-j77_VueWEN8fv2KxQnuqwf9bpJB9JuOzJakMvtGyr5a-k1FRavfhCQNpUchEvgTSVtGzPTaR0G12FpPLCTHkzJjuVVobwkGTCdR532hVAe_3AsVfUgqJGlLg=w369-h448-s-no?authuser=0",
 	answerimage : "https://img.crocdn.co.uk/images/products2/pl/20/00/04/52/pl2000045292.jpg?width=440&height=440", answerSpeak : "", answer : "Tulip"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AJFCJaUxEtnxnXnXw4vuR5jpFC0WHmrvPp210d4hIm8klKsaunS6eArzYiKaToRE-FqfdVRduYd7lDQJd9pv6Yk-EMbNXL7kEyIIG_LVTwWmEVSJSp6VOND9tH5lb26ev-IFMIt_hY_cUbCKwChWqnzXVaUNwA=w511-h498-s-no?authuser=0",
 	answerimage : "https://www.gardendesign.com/pictures/images/900x705Max/site_3/galanthus-snowdrop-white-flower-pixabay_12354.jpg", answerSpeak : "", answer : "Snowdrop"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AJFCJaVuYsQQtqfum4qhJ_193CSDI9SO4lvPQsWJcXhV4LS7dN9VQgjKAnqhxpkFgrOxpPHVGzqao8UTLkfggg8LbY5LTsE2-rh6RWRl5n2n78xj_U_bpBiI-G9c1vd5gC_QMxl-uE5G-ZiqsdPyJsWB6Y3rLA=w498-h520-s-no?authuser=0",
 	answerimage : "https://www.woodlandtrust.org.uk/media/4272/bluebells-close-up-wtml-1024791-web-upload.jpg", answerSpeak : "", answer : "Bluebell"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AJFCJaWjoo-3n1tVdOa9aP8UH_qY4XpUKim2I-qA8V8-TvEM0h7XAxkwHC_VQWCOwl16QygzVcQRZkqbbV8rVjt4wb0umE7yxfu3n3TBxr0ltBbpDaDeFUs3nb2MeWaIPsU7Jh6ec8yrBRtYl0Tb_AiMwK3cyg=w454-h412-s-no?authuser=0",
 	answerimage : "https://cdn.britannica.com/36/82536-050-7E968918/Shasta-daisies.jpg", answerSpeak : "", answer : "Daisy"}) ;
 
 		
