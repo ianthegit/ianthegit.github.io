@@ -585,6 +585,36 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-14",
 	question : "Who is this, born May 14th 1984?" ,	answer : "Mark Zuckerberg", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg/220px-Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg"	});	
 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-20",
+	question : "Who is this, born May 20th 1908?" ,	answer : "James Stewart", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Annex_-_Stewart%2C_James_%28Call_Northside_777%29_01.jpg/220px-Annex_-_Stewart%2C_James_%28Call_Northside_777%29_01.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-20",
+	question : "Who is this Sheffield lad (playing Woodstock here), born May 20th 1944?" ,	answer : "Joe Cocker", answerSpeak : "", image : "https://ichef.bbci.co.uk/news/304/mcs/media/images/79900000/jpg/_79900505_cocker_woodstock_ap.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-20",
+	question : "Who is this, born May 20th 1946?" ,	answer : "Cher", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Cher_in_2019_cropped.jpg/220px-Cher_in_2019_cropped.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-20",
+	question : "Who is this, born May 20th 1961?" ,	answer : "Nick Heyward", answerSpeak : "", image : "https://cdn.images.express.co.uk/img/dynamic/130/750x445/973831.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-20",
+	question : "Who is this, born May 20th 1970?" ,	answer : "Louis Theroux", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Louis_Theroux_crop.jpg/220px-Louis_Theroux_crop.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-20",
+	question : "Who is this, born May 20th 1985?" ,	answer : "Chris Froome", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Chris_Froome_2022.jpg/220px-Chris_Froome_2022.jpg"	});	
+
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-20",
+	question : "Who is this, born May 21st 1904?" ,	answer : "Fats Waller", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Fats_Waller_edit.jpg/220px-Fats_Waller_edit.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-20",
+	question : "Who is this, born May 21st 1917?" ,	answer : "Raymond Burr", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Raymond-Burr-1968-cropped.jpg/220px-Raymond-Burr-1968-cropped.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-20",
+	question : "Who is this, born May 21st 1948?" ,	answer : "Leo Sayer", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Sayer.JPG/220px-Sayer.JPG"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-20",
+	question : "Who is this, born May 21st 1957?" ,	answer : "Nadine Dorries", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Nadine_Dorries_Official_Cabinet_Portrait%2C_September_2021_%28cropped%29.jpg/220px-Nadine_Dorries_Official_Cabinet_Portrait%2C_September_2021_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-20",
+	question : "Who is this, born May 21st 1973?" ,	answer : "Noel Fielding", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Noel_Fielding_-_Vince_Noir_Mirrorball_%28cropped%29.jpg/220px-Noel_Fielding_-_Vince_Noir_Mirrorball_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-20",
+	question : "Who is this, born May 21st 1985?" ,	answer : "Mark Cavendish", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Mark_Cavendish_TDF2012_%28cropped%29.jpg/220px-Mark_Cavendish_TDF2012_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-20",
+	question : "Who is this, born May 21st 1994?" ,	answer : "Tom Daley", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Tom_Daley_London_%28cropped2%29.jpg/220px-Tom_Daley_London_%28cropped2%29.jpg"	});	
+
 /*
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
