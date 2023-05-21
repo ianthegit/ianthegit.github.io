@@ -2670,6 +2670,34 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	image : "https://lh3.googleusercontent.com/pw/AJFCJaVeuyaRYzRzfCBxSC-d-SIViyKAS-J-nafuOm7J9c5-rxDqL_iQZgoV-jVdlOCJ9QMM1HT_0KMqSGe3NdRkdTEXf1s43-ZW8r0l1jhtN21ggT0hslG2rSgEDukgjwHKMRzsk0kzysgKPID0mBwblOwJxQ=w674-h607-s-no?authuser=0",
 	answerimage : "https://people.com/thmb/DMfKPKkxqMKnmYCo_jaYjqGSTEA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(979x479:981x481)/coronation-stone-of-scone-split-16a99b424ed845d1926a694ea44cc39b.jpg", answerSpeak : "", answer : "Stone of Scone"}) ;
 		
+		
+
+ quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of Flowers",
+		tags : "2023-5-21,pictionary", straightToAnswers:true,
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://styleroses.co.uk/app/uploads/2021/11/Love_Of_My_Life_Hybrid_Tea_Garden_Rose_20_22-scaled.jpg", answerSpeak : "", answer : "Rose"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://croft16daffodils.co.uk/wp-content/uploads/2016/01/Emperor-%C2%A9-Croft-16-Daffodils-2021-scaled.jpg", answerSpeak : "", answer : "Daffodil"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://img.crocdn.co.uk/images/products2/pl/20/00/04/52/pl2000045292.jpg?width=440&height=440", answerSpeak : "", answer : "Tulip"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://www.gardendesign.com/pictures/images/900x705Max/site_3/galanthus-snowdrop-white-flower-pixabay_12354.jpg", answerSpeak : "", answer : "Snowdrop"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://www.woodlandtrust.org.uk/media/4272/bluebells-close-up-wtml-1024791-web-upload.jpg", answerSpeak : "", answer : "Bluebell"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://cdn.britannica.com/36/82536-050-7E968918/Shasta-daisies.jpg", answerSpeak : "", answer : "Daisy"}) ;
+
+		
 /*
  * 	image : "",
 	answerimage : "", answer : "Table"}) ;
