@@ -5198,7 +5198,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
 	question : "What 'T': </BR></BR>What is the only country in Southeast Asia to never be ruled by a European nation?", answer : "Thailand", answerSpeak : "",
 	answerimage : ""} ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
-	question : "What 'T': </BR></BR>Is an actor?", answer : "Thespian", answerSpeak : "",
+	question : "What 'T': </BR></BR>Is another name for an actor?", answer : "Thespian", answerSpeak : "",
 	answerimage : ""} ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
 	question : "What 'T': </BR></BR>Was Ronnie Corbett's name in a 'Sorry'?", answer : "Timothy Lumsden", answerSpeak : "",
