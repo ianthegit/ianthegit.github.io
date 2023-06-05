@@ -615,6 +615,27 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"5-20",
 	question : "Who is this, born May 21st 1994?" ,	answer : "Tom Daley", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Tom_Daley_London_%28cropped2%29.jpg/220px-Tom_Daley_London_%28cropped2%29.jpg"	});	
 
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"6-4",
+	question : "Who is this, born June 4th 1927?" ,	answer : "Geoffrey Palmer", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/d/d0/Geoffrey_Palmer_Breath_of_Fresh_Air_%28cropped%29.JPG"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"6-4",
+	question : "Who is this, born June 4th 1960?" ,	answer : "Bradley Walsh", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Bradley_Walsh_in_2012_%28cropped%29.jpg/220px-Bradley_Walsh_in_2012_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"6-4",
+	question : "Who is this, born June 4th 1964?" ,	answer : "Sean Pertwee", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Sean_Pertwee_2017.jpg/220px-Sean_Pertwee_2017.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"6-4",
+	question : "Who is this, born June 4th 1971?" ,	answer : "Noah Wyle", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Noah_Wyle_at_the_1995_Emmy_Awards.jpg/170px-Noah_Wyle_at_the_1995_Emmy_Awards.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"6-4",
+	question : "Who is this, born June 4th 1975?" ,	answer : "Russell Brand", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Arthur_Russell_Brand_%285622506846%29.jpg/220px-Arthur_Russell_Brand_%285622506846%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"6-4",
+	question : "Who is this, born June 4th 1975?" ,	answer : "Angelina Jolie", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Under_Secretary_Zeya_Meets_With_UNHCR_Special_Envoy_Jolie_%2851942861677%29_%28cropped%29.jpg/220px-Under_Secretary_Zeya_Meets_With_UNHCR_Special_Envoy_Jolie_%2851942861677%29_%28cropped%29.jpg"	});	
+
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"6-5",
+	question : "Who is the illustrator of this, born June 5th 1919?" ,	answer : "Richard Scarry", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/en/thumb/f/f8/Richard_Scarry_Example_of_Work_and_Outdated_Social_Constructs_Therein.jpg/220px-Richard_Scarry_Example_of_Work_and_Outdated_Social_Constructs_Therein.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"6-5",
+	question : "Who is this, born June 5th 1971?" ,	answer : "Mark 'Marky Mark' Wahlberg", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Mark_Wahlberg_2021.jpg/220px-Mark_Wahlberg_2021.jpg"	});	
+
 /*
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
