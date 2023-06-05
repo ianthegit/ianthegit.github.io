@@ -2706,22 +2706,22 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 		questInfo: new Array()
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AJFCJaWM7uWioT9BatiBTWh4DHTf50Zzju-2S9lGFI4S-OTcIxhulNU74GVYNjWAYTE2Mb9x-1zp-hAKWcaAqT-DUuH8Eo_qdOgCiQ88gwHK7uW67Fbx2TzqWPqLgMwAPkZha8-nOAClcnbQvVuHi8Iix2-SQg=w593-h342-s-no?authuser=0",
 	answerimage : "https://media.tenor.com/RT22Uy0GfHIAAAAd/belting-tom-ball.gif", answerSpeak : "", answer : "Singers"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AJFCJaXnoBjEvQKdFgrycAR9vH68IS2OvcdefRTF2HLpeJBVHOWoxEcQ0r-meLilU3IBDcOYM6tHCCUvBBLBA2MsqLdA6cvetKfq3ceLHIXWe6fjPoS726OlPSQ7VJdEQODo9voS3tITcDLr9bA7z4vuzUWbfA=w1077-h772-s-no?authuser=0",
 	answerimage : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYxbsbtXJCV7m0338O3hhn7ywsnBbnKY37c3MDbtnpaw&s", answerSpeak : "", answer : "Comedians"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AJFCJaWXP3NLyoAPfgtU-rMCva7CaW5uZlyrDZnd-BF5gzoeANscLNlGIiSaQDwOisjcizXLf0wORvwTqYTUf0RtBAFH47MEzsdNUoaHR5IO6uhVkX2fqbzjNWQnunS7fbzvfDxMxysc4wBcaNVzX5Tm5SCGQQ=w603-h513-s-no?authuser=0",
 	answerimage : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZpv6X1RWbEwh4r7rasjtMnIPBAAV9OF0IPdNcTe8drQ&s", answerSpeak : "", answer : "Magicians"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AJFCJaV9Khkb4CYxCOHDmuG3XgDr1DLfy4clrChKEDclKh5gp9XCyRn_nvgCkCCF0dFNlBmEvgtm2Oo9OZj09mOx4T179S58n_Cg6ip48HsU5bDPoz543hTgPmdbF7VZm_AlAkMHfhTSXT6VFFRgKz3auYM8Hw=w524-h649-s-no?authuser=0",
 	answerimage : "https://i.ytimg.com/vi/1N_j8H_Azxg/maxresdefault.jpg", answerSpeak : "", answer : "Daredevils"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AJFCJaVcD-gXtfLLASeE-ndWaclcke7_5lXO0dFxrKzu4gm9z92MP6QwbRXLpqNmqZn2Xuuayfde9q-gOMimYj4EC8WFqEYv4f3jYjDGNMuPZ2_SUtS_6G4b8-kJdpTmslnznqv1Tl5CdETCWtYD1nLboVkzpg=w482-h372-s-no?authuser=0",
 	answerimage : "https://media.tenor.com/uSFN_jsg-S8AAAAd/dog-tricks-amber-and-the-dancing-collies.gif", answerSpeak : "", answer : "Dogs"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AJFCJaXik83sFQJBoWXnrncLCPjJq5kmOfT0vXsPCoyPv7cyx1WSfkCdgVVXLIl5cCt2b1SDB6tALXfW_9NQVw_YOIdBkR8l0uemGhAadG_BAbDrZLdTRJ-AUuHY9Yoa-va9mlN7vSOiQk4FCQq7ElIR5trhVw=w852-h660-s-no?authuser=0",
 	answerimage : "https://media.tenor.com/4TJa-q7JBJ4AAAAC/you-want-more-viggo-venn.gif", answerSpeak : "", answer : "Stupid"}) ;
 
 		
