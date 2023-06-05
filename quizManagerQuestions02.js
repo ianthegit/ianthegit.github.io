@@ -5222,6 +5222,45 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : "Brown Eyed Girl, Van Morrison</BR>The Tide is High, Blondie</BR>Lean on Me, Bill Withers</BR>Sweet Caroline, Neil Diamond</BR>Don't stop believin, Journey</BR>My Heart Will Go On, Celine Dion</BR>The Longest Time, Billy Joel</BR>Don't Worry, Be Happy, Bobby McFerrin</BR>Rolling in the Deep, Adele</BR>Time After Time, Cyndi Lauper", answerSpeak : "", question : ""}) ;
 
 
+
+quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2023-6-5,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'U': </BR></BR>Which band finally knocked the Brian Adams song 'Everything I Do I Do For You' off the UK No.1 spot in 1991?", answer : "U2", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'U': </BR></BR>What brand of sheepskin boots is the Australian Shane Stedman credited with inventing?", answer : "Ugg", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'U': </BR></BR>What name is given to the fruit which is a cross of tangerines and grapefruits?", answer : "Ugli Fruit", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'U': </BR></BR>What musical instrument gets its name from the Hawaiian for 'jumping flea'?", answer : "Ukulele", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'U': </BR></BR>Which novel features the wanderings of Leopold Bloom around Dublin over the course of one day, 16 June 1904?", answer : "Ulysses", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'U': </BR></BR>Consisting of two dots, what Germanic mark modifies a vowel sound such as in 'a', 'o' or 'u'?", answer : "Umlaut", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'U': </BR></BR>Yoga is a Sanskrit word which literally means what?", answer : "Union", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'U': </BR></BR>In computing what does the U in the abbreviation USB stand for?", answer : "Universal (Serial Bus)", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'U': </BR></BR>The two official languages of Pakistan are English and which other?", answer : "Urdu", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'U': </BR></BR>The Plough' or 'Big Dipper' is made up of seven stars from what constellation?", answer : "Ursa Major", answerSpeak : ""} ); 
+
+
+
+
+quests[++questIndexBuilder] = {  
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),  
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2023-6-5,InnerWheel,saturday",
+		questInfo: new Array() };  
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/60dwJJBP9K5dkaSXCz3DGb?utm_source=generator&theme=0" width="100%" height="760" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
+	answer : "Just the way you are, Billy Jooel (Bruno Mars)</BR>In My Life, the Beatles</BR>Here comes the sun, The Beatles</BR>Somewhere over the rainbow, Judy Garland</BR>How deep is your love, the Bee Gees</BR>Can't help falling in love, Elvis</BR>Let it be, the Beatles</BR>What a wonderful world, Sam Cooke</BR>Love me tender, Elvis</BR>Fast Car, Tracey Chapman", answerSpeak : "", question : ""}) ;
+
 quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
 		hoverover : "What sinks, what floats",
