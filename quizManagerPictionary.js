@@ -2698,6 +2698,33 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://cdn.britannica.com/36/82536-050-7E968918/Shasta-daisies.jpg", answerSpeak : "", answer : "Daisy"}) ;
 
 		
+
+ quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of Britain's Got Talent types",
+		tags : "2023-6-5,pictionary", straightToAnswers:true,
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://media.tenor.com/RT22Uy0GfHIAAAAd/belting-tom-ball.gif", answerSpeak : "", answer : "Singers"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYxbsbtXJCV7m0338O3hhn7ywsnBbnKY37c3MDbtnpaw&s", answerSpeak : "", answer : "Comedians"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZpv6X1RWbEwh4r7rasjtMnIPBAAV9OF0IPdNcTe8drQ&s", answerSpeak : "", answer : "Magicians"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://i.ytimg.com/vi/1N_j8H_Azxg/maxresdefault.jpg", answerSpeak : "", answer : "Daredevils"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://media.tenor.com/uSFN_jsg-S8AAAAd/dog-tricks-amber-and-the-dancing-collies.gif", answerSpeak : "", answer : "Dogs"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://media.tenor.com/4TJa-q7JBJ4AAAAC/you-want-more-viggo-venn.gif", answerSpeak : "", answer : "Stupid"}) ;
+
+		
 /*
  * 	image : "",
 	answerimage : "", answer : "Table"}) ;
