@@ -636,6 +636,31 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"6-5",
 	question : "Who is this, born June 5th 1971?" ,	answer : "Mark 'Marky Mark' Wahlberg", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Mark_Wahlberg_2021.jpg/220px-Mark_Wahlberg_2021.jpg"	});	
 
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"6-10",
+	question : "Who is this, born June 10th 1921?" ,	answer : "Prince Philip", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Duke_of_Edinburgh_33_Allan_Warren.jpg/220px-Duke_of_Edinburgh_33_Allan_Warren.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"6-10",
+	question : "Who is this, born June 10th 1926?" ,	answer : "Lionel Jeffries", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/en/thumb/7/73/Lionel_Jeffries.jpg/220px-Lionel_Jeffries.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"6-10",
+	question : "Who is this, born June 10th 1954?" ,	answer : "Rich Hall", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Rich_Hall_Comedian_15.4.2016_by_Tina_Downham.jpg/220px-Rich_Hall_Comedian_15.4.2016_by_Tina_Downham.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"6-10",
+	question : "Who is this, born June 10th 1965?" ,	answer : "Liz Hurley", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Elizabeth_Hurley_2015_TCA_Press_Tour_%28cropped%29.jpg/220px-Elizabeth_Hurley_2015_TCA_Press_Tour_%28cropped%29.jpg"	});	
+
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"6-11",
+	question : "Who is this, born June 11th 1933?" ,	answer : "Gene wilder", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Gene_Wilder_1970.JPG/220px-Gene_Wilder_1970.JPG"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"6-11",
+	question : "Who is this, born June 11th 1939?" ,	answer : "Jackie Stewart", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Jackie_Stewart_at_the_2014_WEC_Silverstone_round.jpg/220px-Jackie_Stewart_at_the_2014_WEC_Silverstone_round.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"6-11",
+	question : "Who is this, born June 11th 1959?" ,	answer : "Hugh Laurie", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Hugh_Laurie_Actors_Guild.jpg/180px-Hugh_Laurie_Actors_Guild.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"6-11",
+	question : "Who is this, born June 11th 1964?" ,	answer : "Jean Alesi", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Jean_Alesi%2C_GIMS_2019%2C_Le_Grand-Saconnex_%28GIMS0047%29.jpg/220px-Jean_Alesi%2C_GIMS_2019%2C_Le_Grand-Saconnex_%28GIMS0047%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"6-11",
+	question : "Who is this, born June 11th 1969?" ,	answer : "Peter Dinklage", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Peter_Dinklage-68257.jpg/220px-Peter_Dinklage-68257.jpg"	});	
+
+
+
 /*
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
