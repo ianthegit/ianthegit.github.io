@@ -2733,23 +2733,23 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 		questInfo: new Array()
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AJFCJaWMH5jIFQfm26IDxXoMAQ0Jfxa2Xwn7-h-UgjPmtQosgWnDbKk8PwYtqgrv7MLHk9ALudyHz935fHOeJ7iAHkmEGq1bP5l5Lx0FQj5c1xabsiDCSDYP0poPGuLBTTaAZhqiu2XWdo-ZlVC74tOzUNh2og=w881-h776-s-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Lilly"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AJFCJaUsK8wBubgJ4pXUtOtRiQwiHWMVroUzCwQAprwVd8qJt7yNRt11052QZlUZBJBtGa5cNP8_ofOFKGn-58yJg-2a_azbqnYDjZIkrbzkW7zdfKkU-kMo64HHI25vv_akUxaXp1fljphYAP366_lvQQcV0A=w491-h443-s-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Rose"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AJFCJaUv8VmGrnyP7Ic5I5S2A40JKC-vjk8fEK_I7tHOGKntTSfqksiwIA04-TvjIl4NwmM_gvDiqx6-CJEAYhEStJRuQicMvDTcbTOOW5OhLQWhHDkWzATJAqK6RxQ0Qa8goAsmdMMrzHnVwxQj4zVlm0raag=w995-h928-s-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Ted"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AJFCJaW_jTD15ppM8H4epSpjOFvsAC7U-jqqADypjrJUsVJ2E64y35h1LKnYaB77cVDKxT7dLfj0Q7V5cJ79jSI2QGo0Rg673luDXBRtXT0SC11HwtBzZVCTmRVRFXaAhedgsynRqWnC33geq9rtP4jt3BQszA=w974-h702-s-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Pete"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AJFCJaU90JNHChCgGlI85xs93VWMRVn1MafhfHlPbZOVnyTcFA4waOIKRH1DHMAxfjgAuSOVboJERlFGhaR9M0KYlp3BwXsdg6m6iTI2SFenTst7n4iFmYoIvSy11N9mWXE7S1mvK1chQ7oB9WzDIG5Qi2eeag=w623-h489-s-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Daisy"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
-	answerimage : "", answerSpeak : "", answer : "Poppy"}) ;
+	image : "https://lh3.googleusercontent.com/pw/AJFCJaWa_O-lP4tTgWen0s2O7YwRXUkiMuVkMOa-hiE1FjqYfgEmN7_yB3CPgE-5NYJBMs83aqUpHsu8a3Gdam2UnjDXbV_Ly8P4pcR2rhi9zHmGYDmHWjYHn-xnuBtMdCEo2kT-vl8coWFd6OADWdUQ9qPnKg=w415-h439-s-no?authuser=0",
+	answerimage : "", answerSpeak : "", answer : "Jules"}) ;
 
 		
 /*
