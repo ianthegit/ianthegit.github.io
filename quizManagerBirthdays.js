@@ -649,7 +649,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"6-11",
-	question : "Who is this, born June 11th 1933?" ,	answer : "Gene wilder", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Gene_Wilder_1970.JPG/220px-Gene_Wilder_1970.JPG"	});	
+	question : "Who is this, born June 11th 1933?" ,	answer : "Gene Wilder", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Gene_Wilder_1970.JPG/220px-Gene_Wilder_1970.JPG"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"6-11",
 	question : "Who is this, born June 11th 1939?" ,	answer : "Jackie Stewart", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Jackie_Stewart_at_the_2014_WEC_Silverstone_round.jpg/220px-Jackie_Stewart_at_the_2014_WEC_Silverstone_round.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"6-11",
