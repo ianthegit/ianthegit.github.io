@@ -2724,6 +2724,33 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	image : "https://lh3.googleusercontent.com/pw/AJFCJaXik83sFQJBoWXnrncLCPjJq5kmOfT0vXsPCoyPv7cyx1WSfkCdgVVXLIl5cCt2b1SDB6tALXfW_9NQVw_YOIdBkR8l0uemGhAadG_BAbDrZLdTRJ-AUuHY9Yoa-va9mlN7vSOiQk4FCQq7ElIR5trhVw=w852-h660-s-no?authuser=0",
 	answerimage : "https://media.tenor.com/4TJa-q7JBJ4AAAAC/you-want-more-viggo-venn.gif", answerSpeak : "", answer : "Stupid"}) ;
 
+
+
+ quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of Names which are things",
+		tags : "2023-6-11,pictionary", straightToAnswers:true,
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Lilly"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Rose"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Ted"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Pete"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Daisy"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Poppy"}) ;
+
 		
 /*
  * 	image : "",
