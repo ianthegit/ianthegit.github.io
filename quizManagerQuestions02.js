@@ -5261,6 +5261,50 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/60dwJJBP9K5dkaSXCz3DGb?utm_source=generator&theme=0" width="100%" height="760" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
 	answer : "Just the way you are, Billy Jooel (Bruno Mars)</BR>In My Life, the Beatles</BR>Here comes the sun, The Beatles</BR>Somewhere over the rainbow, Judy Garland</BR>How deep is your love, the Bee Gees</BR>Can't help falling in love, Elvis</BR>Let it be, the Beatles</BR>What a wonderful world, Sam Cooke</BR>Love me tender, Elvis</BR>Fast Car, Tracey Chapman", answerSpeak : "", question : ""}) ;
 
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2023-6-11,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'V': </BR></BR>In physics, the opposite of a plenum would be a what (also, a collective name for Dyson's, Hoover's etc)?", answer : "Vacuum", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'V': </BR></BR>Where did Viking Warriers think they went when they died in battle?", answer : "Valhalla", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'V': </BR></BR>Which singer of a very famous 90's one hit wonder has the real name 'Robert Van Winkle'?", answer : "Vanilla Ice", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'V': </BR></BR>Did MODs ride in the 60's?", answer : "Vespa", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'V': </BR></BR>Was one of the first ready-made curries available in the UK?", answer : "Vespa", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'V': </BR></BR>Which word is used to describe a fin located on a fish's abdomen?", answer : "Ventral", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'V': </BR></BR>What do mice, whales, elephants, giraffes, and humans all have seven of in their necks?", answer : "Vertebra", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'V': </BR></BR>Which French novelist is said to have written the shortest ever letter?", answer : "Victor Hugo", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'V': </BR></BR>Viticulture is the growing of what type of plants?", answer : "Vines", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'V': </BR></BR>Located in the neck, the larynx is more commonly referred to as the what?", answer : "Voicebox", answerSpeak : ""} ); 
+
+
+
+
+quests[++questIndexBuilder] = {  
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),  
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2023-6-11,InnerWheel,saturday",
+		questInfo: new Array() };  
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4uqfRtBXqkhWVAkl81wcwO?utm_source=generator&theme=0" width="100%" height="760" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
+	answer : "Rehab, Amy Winehouse</BR>When you say nothing at all, Ronan Keating</BR>Castle on the Hill, Ed Sheeran</BR>Can't help falliing in love, Elvis</BR>In the air tonight, Phil Collins</BR>I believe in tha thing called love, the Darkensss</BR>Tiny Dancer, Elton John</BR>Have you ever seen the rain? Creedance Clearwater Revival, Bonnie Tyler</BR>Uptown Funk, Bruno Mars</BR>Footloose, Kenny Logins", answerSpeak : "", question : ""}) ;
+
+
+
+
 quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
 		hoverover : "What sinks, what floats",
