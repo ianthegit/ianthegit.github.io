@@ -661,6 +661,35 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 
 
 
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"6-18",
+	question : "Who is this famous oil industry firefighter, born June 18th 1915?" ,	answer : "Red Adair", answerSpeak : "", image : "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1240w,f_auto,q_auto:best/msnbc/Components/Photos/2004/040808/040808_red_adair_hmed.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"6-18",
+	question : "Who is this, born June 18th 1927?" ,	answer : "Paul Eddington", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/en/7/70/Paul_Eddington_2.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"6-18",
+	question : "Who is this, born June 18th 1941?" ,	answer : "Delia Smith", answerSpeak : "", image : "https://media.tenor.com/Q9vK0m6ApdwAAAAC/delia-smith-lets-be-havin-you.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"6-18",
+	question : "Who is this, born June 18th 1942?" ,	answer : "Paul McCartney", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Paul_McCartney_2021_%28cropped%29.jpg/220px-Paul_McCartney_2021_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"6-18",
+	question : "Who is this, born June 18th 1952?" ,	answer : "Isabella Rossellini", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Isabella_Rossellini.jpg/220px-Isabella_Rossellini.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"6-18",
+	question : "Who is this, born June 18th 1961?" ,	answer : "Alison Moyet", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Alison_Moyet_346-0010-hinnerk-ruemenapf.jpg/220px-Alison_Moyet_346-0010-hinnerk-ruemenapf.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"6-18",
+	question : "Who is this, born June 18th 1986?" ,	answer : "Richard Madden", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Richard_Madden_%2848462874707%29_%28cropped%29.jpg/220px-Richard_Madden_%2848462874707%29_%28cropped%29.jpg"	});	
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"6-19",
+	question : "Who is this, born June 19th 1947?" ,	answer : "Salman Rushdie", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Salman_Rushdie_2014_%28cropped%29.jpg/220px-Salman_Rushdie_2014_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"6-19",
+	question : "Who is this, born June 19th 1954?" ,	answer : "Kathleen Turner", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Kathleen_Turner_%288689689518%29_cropped.jpg/220px-Kathleen_Turner_%288689689518%29_cropped.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"6-19",
+	question : "Who is this, born June 19th 1962?" ,	answer : "Jeremy Bates", answerSpeak : "", image : "https://d2me2qg8dfiw8u.cloudfront.net/content/uploads/2018/04/26123744/Jeremy-Bates.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"6-19",
+	question : "Who is this, born June 19th 1983?" ,	answer : "Aidan Turner", answerSpeak : "", image : "https://i.guim.co.uk/img/media/be4463094d44f0c3da3cb8a9ac99a59a552572ae/149_290_1304_1629/master/1304.jpg?width=380&quality=85&dpr=1&s=none"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"6-19",
+	question : "Who is this, born June 19th 1993?" ,	answer : "KSI (Olajide Olayinka Williams)", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/JJ_Olatunji_%28KSI%29_6.jpg/220px-JJ_Olatunji_%28KSI%29_6.jpg"	});	
+	
+
 /*
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
