@@ -5304,6 +5304,42 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 
+quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2023-6-19,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'W': </BR></BR>What is the surname of the Scottish engineer who gave his name to the S.I. unit of power?", answer : "Watt", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'W': </BR></BR>A massive meteorite composed of vibranium crashed in this fictional country?", answer : "Wakanda", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'W': </BR></BR>Completed in 1750 what was the second bridge to cross the Thames in Central London?", answer : "Westminster Bridge", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'W': </BR></BR>Pertussis, a highly contagious respiratory infection, is also known as what cough?", answer : "Whooping", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'W': </BR></BR>What is the 3rd grand slam event in the tennis calendar?", answer : "Wimbledon", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'W': </BR></BR>What are the Sirocco, Mistral, and Chinook all types of?", answer : "Winds", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'W': </BR></BR>As of 2022 two people have been declared an honorary citizen of the United States during their lifetimes, who was the first??", answer : "Winston Churchill", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'W': </BR></BR>The term 'lupine' refers to which animal?", answer : "Wolf", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'W': </BR></BR>Which music festival was attended by over 400,000 people in 1969?", answer : "Woodstock", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'W': </BR></BR>If you had a Colles' fracture which part of your body would be affected?", answer : "Wrist", answerSpeak : ""} ); 
+
+
+quests[++questIndexBuilder] = {  
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),  
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2023-6-19,InnerWheel,saturday",
+		questInfo: new Array() };  
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0ZxBpgiLyad6yWNV20ndvK?utm_source=generator&theme=0" width="100%" height="760" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>',
+	answer : "Wonderwall, Oasis</BR>Come Together, The Beatles</BR>Material Girl, Madonna</BR>Tainted Love, Gloria Jones (Soft Cell)</BR>Moves like Jagger, Maroon Five</BR>Valerie, The Zutons, Amy Winehouse</BR>Take on Me, A-Ha</BR>Don't you want me, Human League</BR>Every Breath You Take, The Police</BR>Hungry like the wolf, Duran Duran", answerSpeak : "", question : ""}) ;
+
 
 quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
