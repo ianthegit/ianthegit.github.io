@@ -2760,24 +2760,24 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 		tags : "2023-6-19,pictionary", straightToAnswers:true,
 		questInfo: new Array()
 	};
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
 	image : "",
-	answerimage : "", answerSpeak : "", answer : ""}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	answerimage : "", answerSpeak : "", answer : "Cucumber"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
 	image : "",
-	answerimage : "", answerSpeak : "", answer : ""}) ;
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	answerimage : "", answerSpeak : "", answer : "Marrow"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
 	image : "",
-	answerimage : "", answerSpeak : "", answer : ""}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	answerimage : "", answerSpeak : "", answer : "Aubergine"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
 	image : "",
-	answerimage : "", answerSpeak : "", answer : ""}) ;
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	answerimage : "", answerSpeak : "", answer : "Tomato"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
 	image : "",
-	answerimage : "", answerSpeak : "", answer : ""}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	answerimage : "", answerSpeak : "", answer : "Orange"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
 	image : "",
-	answerimage : "", answerSpeak : "", answer : ""}) ;
+	answerimage : "", answerSpeak : "", answer : "Lemon"}) ;
 
 
 		
