@@ -690,6 +690,27 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 	question : "Who is this, born June 19th 1993?" ,	answer : "KSI (Olajide Olayinka Williams)", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/JJ_Olatunji_%28KSI%29_6.jpg/220px-JJ_Olatunji_%28KSI%29_6.jpg"	});	
 	
 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"6-25",
+	question : "Who is this, born June 25th 1903?" ,	answer : "George Orwell", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/George_Orwell_press_photo.jpg/220px-George_Orwell_press_photo.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"6-25",
+	question : "Who is this, born June 25th 1956?" ,	answer : "Anthony Bourdain", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Anthony_Bourdain_on_WNYC-2011-24-02.jpg/170px-Anthony_Bourdain_on_WNYC-2011-24-02.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"6-25",
+	question : "Who is this, born June 25th 1961?" ,	answer : "Ricky Gervais", answerSpeak : "", image : "https://external-preview.redd.it/i9Dk53qExBGLb--02tQiDNPEqsbl-DcN6A24Jbs3rXA.jpg?auto=webp&v=enabled&s=1cfa6f94a6dba65c2c27c4085fe8fe49d440f1e0"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"6-25",
+	question : "Who is this, born June 25th 1963?" ,	answer : "George Michael", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/George_Michael.jpeg/220px-George_Michael.jpeg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"6-25",
+	question : "Who is this, born June 25th 1973?" ,	answer : "Jamie Rednapp", answerSpeak : "", image : "https://www.thisisanfield.com/wp-content/uploads/PA-305087-600x400.jpg"	});	
+
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"6-26",
+	question : "Who is this, born June 26th 1909?" ,	answer : "Colonel Tom Parker", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Colonel_Tom_Parker_1969_%28cropped%29.jpg/220px-Colonel_Tom_Parker_1969_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"6-26",
+	question : "Who is this, born June 26th 1943?" ,	answer : "Georgie Fame", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Georgie_Fame_in_Sweden_1968.jpg/220px-Georgie_Fame_in_Sweden_1968.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"6-26",
+	question : "Who is this, born June 26th 1970?" ,	answer : "Nick Offerman", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Nick_Offerman_2018_%28cropped%29.jpg/220px-Nick_Offerman_2018_%28cropped%29.jpg"	});	
+
+
 /*
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
