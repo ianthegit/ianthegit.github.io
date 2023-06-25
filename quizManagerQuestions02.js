@@ -5342,6 +5342,44 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2023-6-26,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'X': </BR></BR>The antianxiety drug alprazolam has what palindromic brand name?", answer : "XANAX", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'X': </BR></BR>In manufacturing, what gum is used as a thickening and stabilising agent in foods, toothpastes, and medicines?", answer : "Xanthan", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'X': </BR></BR>What dense, colourless, odourless, noble gas has the atomic number 54?", answer : "Xenon", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'X': </BR></BR>What word is used to describe dislike of or prejudice against people from other countries?", answer : "Xenophobia", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'X': </BR></BR>Which city (often spelt with a J), has a reputation as the world capital of sherry wine?", answer : "Xeres", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'X': </BR></BR>What company was founded in 1906 in New York as 'The Haloid Photographic Company'?", answer : "Xerox", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'X': </BR></BR>What is the name of the famous webcomic that seriously answers hypothetical questions?", answer : "XKCD", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'X': </BR></BR>What is the brand name of the smartphones and tablets produced by Sony?", answer : "Xperia", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'X': </BR></BR>What is the plant tissue that transports water and nutrients upwards from the roots?", answer : "Xylem", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'X': </BR></BR>The art of engraving on wood or of printing from woodblocks is known as what?", answer : "Xylography", answerSpeak : ""} ); 
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2023-M-D,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/26Ps704xQV58nEvwaSpJ00?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Walking on Sunshine, Katrina and the Waves</BR>I still haven't found what I'm looking for, U2</BR>Time after Time, Cyndi Lauper</BR>Shout, Tears for Fears</BR>You can't always get what you want, The Rolling Stones</BR>Purple Rain, Prince</BR>In the air tonight, Phil Collins</BR>Sweet Dreams (are made of this), the Eurythmics</BR>Do you really want to hurt me, Culture Club</BR>Personal Jesus, Depeche Mode", answerSpeak : "", question : ""}) ;
+
+
+quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
 		hoverover : "What sinks, what floats",
 		tags : "2022-x-xx,saturday,InnerWheel,surfers", 
