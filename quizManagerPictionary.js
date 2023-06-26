@@ -1729,22 +1729,22 @@ quests[++questIndexBuilder] = { //
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLX6d8WMXEbl8EZpGztRzD8vWVwzMZZJSDC1cK3j4K4QfZ8KBas8VfOPYTC8J1OqIrsUqzySm3zJltyyq68sO6gWCuf1vmq2dLU4oN1tR8Kl2ZRhmczUhK7j1bThpWBUi5n_BdI0vJOfTyUzAhotGeVL4Q=w533-h315-no?authuser=0",
-	answerimage : "https://i.pinimg.com/originals/42/31/6b/42316b36b49b4a53aa8aa26b64e20de3.gif", answerSpeak : "Tents"}) ;
+	answerimage : "https://i.pinimg.com/originals/42/31/6b/42316b36b49b4a53aa8aa26b64e20de3.gif", answer : "Tents"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLWljRUITFs1KgqjUY-TRVu2ee7nQPE_eh97Bhs_c1S5bVw1T9DHxsCsrYWt0IuRUGeVnNQb30hJzWvDl0hl_uTZ8jABnBu8C8A3KNKhdxTffZjKCAvVK68EnXO1CQ2slarqMrfs0jCBiwgPiOjMTIk6rQ=w697-h437-no?authuser=0",
-	answerimage : "https://blog.movegb.com/hs-fs/hubfs/practise%20mud%20crawling.gif?width=600&name=practise%20mud%20crawling.gif", answerSpeak : "Mud"}) ;
+	answerimage : "https://blog.movegb.com/hs-fs/hubfs/practise%20mud%20crawling.gif?width=600&name=practise%20mud%20crawling.gif", answer : "Mud"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLVzbadixnATfOSAmtNb_3W0_GXDDF1LCL6phCADiLu0c0NIzfvpeNHhVD2QdzAh-mo7kv2jLDCVr4sWpWVivg7_jE2ziWESIArLwafsklilweKGRKyV7g3tjmRBP_auNKO17vV-HTf_7JQu30TwOOEfdA=w195-h192-no?authuser=0",
-	answerimage : "http://forgifs.com/gallery/d/252328-2/Rock-star-singer-beer-catch.gif", answerSpeak : "Drink"}) ;
+	answerimage : "http://forgifs.com/gallery/d/252328-2/Rock-star-singer-beer-catch.gif", answer : "Drink"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLUdPpBYBPsTcafd3EJJxvtiBjFSjdVGF3x28W3lpcyZ3yi3zNHUkoCHtxjzmll2pOWc4b9oed6Sin1JGqkkGthoN4BlKPOWu-C4DbTJ2iu6XnMmzwA2L8FWujEhmveCBSWuTptHvTWp1XY1Nk0xsVKnqA=w467-h319-no?authuser=0",
-	answerimage : "https://media1.giphy.com/media/l3UchHG4a6SWyZqla/giphy.gif", answerSpeak : "Drugs"}) ;
+	answerimage : "https://media1.giphy.com/media/l3UchHG4a6SWyZqla/giphy.gif", answer : "Drugs"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLUFzUnxWpuLOIfPMZEqXe5IB7OL9IWEpvG4dRkss8DvhOzVzOqbgZYWqVuQY3WCUdD51XUvYEOuQRspRZQRLCnbor1HvGq9lc7CE84YaNS7zBUBMhFjDmbM3_jxVt8f-N4kvTDl2MqG0w9jlDp1uUuNyg=w473-h221-no?authuser=0",
-	answerimage : "https://i.guim.co.uk/img/media/c42782c4b3c804c2de1054b20127536abcbfd23f/0_378_5718_3431/master/5718.jpg?width=445&quality=45&auto=format&fit=max&dpr=2&s=9978bbbfce4f595ed028b289b0433b55", answerSpeak : "Music"}) ;
+	answerimage : "https://i.guim.co.uk/img/media/c42782c4b3c804c2de1054b20127536abcbfd23f/0_378_5718_3431/master/5718.jpg?width=445&quality=45&auto=format&fit=max&dpr=2&s=9978bbbfce4f595ed028b289b0433b55", answer : "Music"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLUUhQyWzdVQ_3XacdgBxC3Xugafz-8Azf4CQa1hSlE7M6on1N0b0bKdHxJPeNWsHJPYv3PHmtApFTEuIJJMCHLGrBx19espQFxB_1Q_JfejKxSI_5yFXp_0vHVWt7rxWdzzt29hNUEzleEynOyj84zQ8Q=w398-h492-no?authuser=0",
-	answerimage : "https://ajournalofmusicalthings.com/wp-content/uploads/portapotty-girl1.png", answerSpeak : "Disgusting toilets"}) ;
+	answerimage : "https://ajournalofmusicalthings.com/wp-content/uploads/portapotty-girl1.png", answer : "Disgusting toilets"}) ;
 
 quests[++questIndexBuilder] = { //
 		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
