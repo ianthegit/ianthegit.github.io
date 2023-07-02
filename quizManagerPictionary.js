@@ -2780,6 +2780,33 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 	answerimage : "", answerSpeak : "", answer : "Lemon"}) ;
 
 
+
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of fruit and veg drawn in 1 stroke",
+		tags : "2023-7-2,pictionary", straightToAnswers:true,
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://media.istockphoto.com/id/91516166/photo/cucumber-slices-on-a-white-background.jpg?s=612x612&w=0&k=20&c=n4R8_HB2qEmTgOU3xlINv1Am2Z_Mt4CuJiITPta58vw=", answerSpeak : "", answer : "Cucumber"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://www.shutterstock.com/image-photo/green-zucchini-courgette-vegetables-isolated-260nw-556138501.jpg", answerSpeak : "", answer : "Courgette/Marrow"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://media.istockphoto.com/id/510515443/photo/eggplant-isolated-on-white.jpg?s=612x612&w=0&k=20&c=AfRLY-0SanZ7Xo1Vdgpdv--PmAbKOdPUiLtvw4X8YJY=", answerSpeak : "", answer : "Aubergine"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://media.istockphoto.com/id/466175630/photo/tomato-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=ELzCVzaiRMgiO7A5zQLkuws0N_lvPxrgJWPn7C7BXz0=", answerSpeak : "", answer : "Tomato"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "https://media.istockphoto.com/id/185284489/fr/photo/orange.jpg?s=612x612&w=0&k=20&c=mUu4o2OyBT_iU6lr2UnohAsOauog28xVs9DufnP8AbM=", answerSpeak : "", answer : "Orange"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "https://media.istockphoto.com/id/1157946861/photo/red-berry-strawberry-isolated.jpg?s=170667a&w=0&k=20&c=KLmzUvMOPglQqhc6COf64_Orp3F5Q4loqJ8JaFJtF9k=", answerSpeak : "", answer : "Strawberry"}) ;
+
+
 		
 /*
  * 	image : "",
