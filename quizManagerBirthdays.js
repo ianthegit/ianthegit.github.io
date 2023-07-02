@@ -711,6 +711,34 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 	question : "Who is this, born June 26th 1970?" ,	answer : "Nick Offerman", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Nick_Offerman_2018_%28cropped%29.jpg/220px-Nick_Offerman_2018_%28cropped%29.jpg"	});	
 
 
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-1",
+	question : "Who is this, born July 1st 1935?" ,	answer : "David Prowse", answerSpeak : "", image : "https://www.sernis.com/image/news/ser-o-homem-da-cruz-verde-bate-ser-darth-vader-em-qualquer-dia/r/870/870/sernis-green-cross-men.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-1",
+	question : "Who is this, born July 1st 1945?" ,	answer : "Debbie Harry", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Debbie_Harry_in_1977.jpg/220px-Debbie_Harry_in_1977.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-1",
+	question : "Who is this, born July 1st 1951?" ,	answer : "Trevor Eve", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Trevor_Eve.jpg/220px-Trevor_Eve.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-1",
+	question : "Who is this, born July 1st 1952?" ,	answer : "Dan Aykroyd", answerSpeak : "", image : "https://decider.com/wp-content/uploads/2019/02/dan-aykroyd-hottnesss.jpg?quality=75&strip=all&w=646&h=431&crop=1"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-1",
+	question : "Who is this, born July 1st 1961?" ,	answer : "Diana, Princess of Wales", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Diana%2C_Princess_of_Wales_1997_%282%29.jpg/220px-Diana%2C_Princess_of_Wales_1997_%282%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-1",
+	question : "Who is this, born July 1st 1965?" ,	answer : "Carl 'Foggy' Fogarty", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/c/cd/Carl_Fogarty_on_a_Ducati_916.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-1",
+	question : "Who is this, born July 1st 1967?" ,	answer : "Pamela Anderson", answerSpeak : "", image : "https://i.imgur.com/ugNLzIL.gif"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-1",
+	question : "Who is this, born July 1st 1977?" ,	answer : "Liv Tyler", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/LivTylerLOTR03.jpg/170px-LivTylerLOTR03.jpg"	});	
+
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-2",
+	question : "Who is this, born July 2nd 1940?" ,	answer : "Ken Clarke", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Official_portrait_of_Mr_Kenneth_Clarke_crop_2.jpg/220px-Official_portrait_of_Mr_Kenneth_Clarke_crop_2.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-2",
+	question : "Who is this, born July 2nd 1956?" ,	answer : "Jerry Hall", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Jerry_Hall.jpg/220px-Jerry_Hall.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-2",
+	question : "Who is this, born July 2nd 1990?" ,	answer : "Margot Robbie", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/SYDNEY%2C_AUSTRALIA_-_JANUARY_23_Margot_Robbie_arrives_at_the_Australian_Premiere_of_%27I%2C_Tonya%27_on_January_23%2C_2018_in_Sydney%2C_Australia_%2828074883999%29_%28cropped%29.jpg/220px-thumbnail.jpg"	});	
+
+
 /*
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
