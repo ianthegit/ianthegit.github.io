@@ -2788,22 +2788,22 @@ quests[++questIndexBuilder] = { //
 		questInfo: new Array()
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AJFCJaV9RxO8p0rwj5wkBmV5FBQteQYkeDr9H-CcW7WN5XW3PP3-zWtNBlYcA3kcvIO3wmVljKa3F3YmfHm8H4ETn5FNYTutMrUGw6KJSDtxTpO0jgPEzG7TpES_qL_Rdo_kNr18GmgpYL5lKHEAPjpl4geD6A=w849-h268-s-no?authuser=0",
 	answerimage : "https://media.istockphoto.com/id/91516166/photo/cucumber-slices-on-a-white-background.jpg?s=612x612&w=0&k=20&c=n4R8_HB2qEmTgOU3xlINv1Am2Z_Mt4CuJiITPta58vw=", answerSpeak : "", answer : "Cucumber"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AJFCJaWr42KEMobrwfR9l83TDvKY-VMczMrkVGnJxnMWPLP1H-YiogxKMc0aAmj5OHW0FOKyUi91DEx7BedQoaa6NGmxyfmnee5ogF4KjOnmgjuqHwl2_PjDU8R_L2f7C34iGrLdIxAJQsrwUwrhDYMDiU_OUQ=w946-h282-s-no?authuser=0",
 	answerimage : "https://www.shutterstock.com/image-photo/green-zucchini-courgette-vegetables-isolated-260nw-556138501.jpg", answerSpeak : "", answer : "Courgette/Marrow"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AJFCJaVQcVd6ykiJftpocY_EmizI6ncizafm5xrxoVBlis4Q6ITtSdJpdd_et4ca4Gxihh67KW3Qtix3XfAH-EyxjmyZ0Kq-PgVZrLerfa338VHjB3aal1XAYmtIbNJBOgs96oUGJmIRkPg_-SJbYRR9OfWn7g=w913-h556-s-no?authuser=0",
 	answerimage : "https://media.istockphoto.com/id/510515443/photo/eggplant-isolated-on-white.jpg?s=612x612&w=0&k=20&c=AfRLY-0SanZ7Xo1Vdgpdv--PmAbKOdPUiLtvw4X8YJY=", answerSpeak : "", answer : "Aubergine"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AJFCJaWcJxphhVGmEljoTQYFtbLviey_f_PWdS228vzjTg0vdtocOUf6Y6LNo4Ljsg0pfjvAaZIWm7570ytX0g0tBPIM62h_Qou2qpFsU12hYbJy-JOeRZIRutxw23OkLF-M5OyZZx43FLDi2RduuO2lITqUDQ=w352-h300-s-no?authuser=0",
 	answerimage : "https://media.istockphoto.com/id/466175630/photo/tomato-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=ELzCVzaiRMgiO7A5zQLkuws0N_lvPxrgJWPn7C7BXz0=", answerSpeak : "", answer : "Tomato"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AJFCJaUiCUtQgBLQVyCOLxyDQFaueRKraynMybjXdcMABsX_HfDDOZJNdx_iIo9Lo31l45kcBjdQxrzkCm2vXvKyX470eicmIy-CDmLXa8NCjaVN1kXHwtwZtfYVROGLc07SWemYyoVYUC9dEQbeaXGL9a0b1A=w1074-h587-s-no?authuser=0",
 	answerimage : "https://media.istockphoto.com/id/185284489/fr/photo/orange.jpg?s=612x612&w=0&k=20&c=mUu4o2OyBT_iU6lr2UnohAsOauog28xVs9DufnP8AbM=", answerSpeak : "", answer : "Orange"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AJFCJaURGcDqRbaeKxUGtemgFulSOJPZ9aUCHE9l0vXICOfd3uIjcDTNvo-A-2vguNCtTn_0M9LKhJ9uSWdZBCnhqcVGNXUKIB-OEd-grJelLEpXoIwos3H8UD6RHfk9i6TmYZGtzotl8KXzYFsFgz0ZucWODA=w289-h263-s-no?authuser=0",
 	answerimage : "https://media.istockphoto.com/id/1157946861/photo/red-berry-strawberry-isolated.jpg?s=170667a&w=0&k=20&c=KLmzUvMOPglQqhc6COf64_Orp3F5Q4loqJ8JaFJtF9k=", answerSpeak : "", answer : "Strawberry"}) ;
 
 
