@@ -5379,6 +5379,78 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : "Walking on Sunshine, Katrina and the Waves</BR>I still haven't found what I'm looking for, U2</BR>Time after Time, Cyndi Lauper</BR>Shout, Tears for Fears</BR>You can't always get what you want, The Rolling Stones</BR>Purple Rain, Prince</BR>In the air tonight, Phil Collins</BR>Sweet Dreams (are made of this), the Eurythmics</BR>Do you really want to hurt me, Culture Club</BR>Personal Jesus, Depeche Mode", answerSpeak : "", question : ""}) ;
 
 
+
+
+quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2023-7-2,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'Y': </BR></BR>The America's Cup is one of the oldest and best-known trophies in international sailing of what type of vessels?", answer : "Yachts", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'Y': </BR></BR>New Haven, Connecticut, is home to which Ivy League university?", answer : "Yale", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'Y': </BR></BR>New York's has two professional baseball teams, one is the Mets, the other is the?", answer : "Yankees", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'Y': </BR></BR>What is the microscopic fungus that converts sugar into alcohol and carbon dioxide?", answer : "Yeast", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'Y': </BR></BR>'Scrambled Eggs' was the working title for what Beatles song?", answer : "Yesterday", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'Y': </BR></BR>Pupik means belly button in what language?", answer : "Yiddish", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'Y': </BR></BR>What is a toy consisting of an axle connected to two disks, and a string looped around the axle?", answer : "YoYo", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'Y': </BR></BR>Which Japanese city south of Tokyo, was one of the first Japanese ports opened to foreign trade, in 1859?", answer : "Yokohama", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'Y': </BR></BR>Bugs bunny often finds himself at the wrong end of a gun, usually toted by either Elmer Fudd or who?", answer : "Yosemite Sam", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'Y': </BR></BR>What is the large peninsula in south-eastern Mexico and adjacent portions of Belize and Guatemala?", answer : "Yucatan", answerSpeak : ""} ); 
+
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2023-7-2,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1bEkSaHLMTZ0dMwrWuBWVs?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Crazy little thing called love, Queen</BR>Jump, Van Halen</BR>Sweet Child of Mine, Guns N Roses</BR>Let's spend the night together, The Rolling Stones</BR>Every little thing she does is magic, The Police</BR>Start me up, The Rolling Stones</BR>I don't wanna miss a thing, Aerosmith</BR>With or without you, U2</BR>Rock the Casbah, The Clash</BR>Billie Jean, Michael Jackson", answerSpeak : "", question : ""}) ;
+
+
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2023-7-9,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'Z': </BR></BR>What country is North of Zimbabwe?", answer : "Zambia", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'Z': </BR></BR>Imaginatively, the name given to a cross between a zebra and a donkey is a?", answer : "Zedonk", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'Z': </BR></BR>Brass is an alloy of copper and what other slightly brittle metal?", answer : "Zinc", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'Z': </BR></BR>Formerly known as a clasp locker, what is a commonly used device for binding together two edges of fabric?", answer : "Zip", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'Z': </BR></BR>What mineral belonging to the group of nesosilicates is a source of a metal and has the chemical formula ZrSiO?", answer : "Zircon", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'Z': </BR></BR>Subdivided into 100 grosz, what is the official currency and legal tender of Poland?", answer : "Zloty", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'Z': </BR></BR>What word is a shortening of an Ancient Greek phrase which literally translates to 'circle of little animals'?", answer : "Zodiac", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'Z': </BR></BR>The largest ethnic group and nation in South Africa, living mainly in the province of KwaZulu-Natal, are which people?", answer : "Zulu", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'Z': </BR></BR>What music genre evolved in southwest Louisiana by French Creole speakers which blends blues, rhythm and blues?", answer : "Zydeco", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
+	question : "What 'Z': </BR></BR>A small, tropical weevil, the name of the last animal in the dictionary is the what?", answer : "Zyzzyva", answerSpeak : ""} ); 
+
+
 quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
 		hoverover : "What sinks, what floats",
