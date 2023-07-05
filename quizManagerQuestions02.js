@@ -5421,7 +5421,15 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : "Crazy little thing called love, Queen</BR>Jump, Van Halen</BR>Sweet Child of Mine, Guns N Roses</BR>Let's spend the night together, The Rolling Stones</BR>Every little thing she does is magic, The Police</BR>Start me up, The Rolling Stones</BR>I don't wanna miss a thing, Aerosmith</BR>With or without you, U2</BR>Rock the Casbah, The Clash</BR>Billie Jean, Michael Jackson", answerSpeak : "", question : ""}) ;
 
 
-
+quests[++questIndexBuilder] = { 
+		name : "Test "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2023-7-5,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1, 
+	question : "What 'Z': </BR></BR>What country is North of Zimbabwe?", answer : "Zambia", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1,
+	question : "What 'Z': </BR></BR>Imaginatively, the name given to a cross between a zebra and a donkey is a?", answer : "Zedonk", answerSpeak : ""} ); 
 
 
 quests[++questIndexBuilder] = { 

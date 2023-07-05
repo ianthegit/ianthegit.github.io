@@ -80,6 +80,7 @@ endAudio = '?raw=true" type="audio/mp3">   </audio>';
 startYouTube=" <a href='";
 endYouTube="' target='_blank'>The Answer...</a> ";
 startPointsButton = "<input type='button' class='userBtnNext' value='Next' id='nextPoint' onclick='SQWriteAnswerPoint()' />";
+sQDataArea="<span id='SQDataArea'><tr><td><span id='SQAnswer'></span></td></tr><tr><td><span id='SQquestData'></span></td></tr><tr><td><span id='SQImage'></span></span>"
 
 //emojis
 const emoji = {
@@ -224,10 +225,7 @@ function SQInit() {
 	document
 	.write("<div id='SQQuiz' class='SQQuizMain' ><span id='SQworkarea' class='grad'><table border='0' ><table border='1'>"
 			+ "<tr><td><span id='SQmenu' STYLE='color: black'></span></td>"
-			+ "<td><span id='SQButtons'></span></td></tr></table>"
-			+ "<tr><td><span id='SQAnswer'></span></td></tr>"
-			+ "<tr><td><span id='SQquestData'></span></td></tr>"
-			+ "<tr><td><span id='SQImage'></span></td></tr>"
+			+ "<td><span id='SQButtons'></span></td></tr></table>" + sQDataArea + "</td></tr>"
 			+ "</table></span></div>");
 
 	document.getElementById("SQquestData").style.margin = "0px 0px 0px 0px";
@@ -488,9 +486,18 @@ function SQQuestion(questionType) {
 		speakText=questStageData[currQuestStageIndex].questionSpeak;
 		setTimeout(SQSpeakAnswer, 3000);	
 	}
+	if (questStageData[currQuestStageIndex].hasOwnProperty('timedQuestion') ) {
+		console.log('Timed question');
+		setTimeout(SQHideQuestion, 3000);
+	}
 	currQuestStageIndex++
 }
 
+function SQHideQuestion() {
+	console.log('Clearing data');
+	var dataArea = document.getElementById("SQDataArea");
+	dataArea.innerHTML = sQDataArea;
+}
 function sqInitPicture(imageSource) {
 	var imageArea = document.getElementById("SQImage");
 	imageArea.innerHTML = '<div style="width:100%;height:480px;background-color:black;text-align:center;"> '
