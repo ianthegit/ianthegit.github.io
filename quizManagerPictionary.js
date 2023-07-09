@@ -2807,6 +2807,31 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://media.istockphoto.com/id/1157946861/photo/red-berry-strawberry-isolated.jpg?s=170667a&w=0&k=20&c=KLmzUvMOPglQqhc6COf64_Orp3F5Q4loqJ8JaFJtF9k=", answerSpeak : "", answer : "Strawberry"}) ;
 
 
+ quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of fruit and veg drawn in 1 stroke",
+		tags : "2023-7-10,pictionary", straightToAnswers:true,
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Garlic"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Tomato"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Banana"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Butternut Squash"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Pumpkin"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Lettuce"}) ;
+
 		
 /*
  * 	image : "",
