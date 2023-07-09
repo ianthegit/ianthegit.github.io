@@ -5435,7 +5435,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion
 quests[++questIndexBuilder] = { 
 		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
 		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
-		tags : "2023-7-9,saturday,InnerWheel,surfers,alphabet", 
+		tags : "2023-7-10,saturday,InnerWheel,surfers,alphabet", 
 		questInfo: new Array() };
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
 	question : "What 'Z': </BR></BR>What country is North of Zimbabwe?", answer : "Zambia", answerSpeak : ""} ); 
@@ -5458,6 +5458,16 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,
 	question : "What 'Z': </BR></BR>A small, tropical weevil, the name of the last animal in the dictionary is the what?", answer : "Zyzzyva", answerSpeak : ""} ); 
 
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2023-7-10,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6dULKU44d7xHMgBfO20nzB?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Hot n Cold, Katy Perry</BR>Beat It, Michael Jackson</BR>Happy, Parrell Williams</BR>Bad Romance, Lady Gaga</BR>Pap don't preach, Madonna</BR>Back to Black, Amy Winehouse</BR>Poker Face, Lady Gaga</BR>I'm every woman, Chaka Kha (Whitney Houston)</BR>Staying Alive, Bee Gees</BR>Material Girl, Madonna", answerSpeak : "", question : ""}) ;
 
 quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
