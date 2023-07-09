@@ -739,6 +739,34 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 	question : "Who is this, born July 2nd 1990?" ,	answer : "Margot Robbie", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/SYDNEY%2C_AUSTRALIA_-_JANUARY_23_Margot_Robbie_arrives_at_the_Australian_Premiere_of_%27I%2C_Tonya%27_on_January_23%2C_2018_in_Sydney%2C_Australia_%2828074883999%29_%28cropped%29.jpg/220px-thumbnail.jpg"	});	
 
 
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-9",
+	question : "Who is this, born July 9th 1901?" ,	answer : "Barbara Cartland", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Dame_Barbara_Cartland_Allan_Warren.jpg/220px-Dame_Barbara_Cartland_Allan_Warren.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-9",
+	question : "Who is this, born July 9th 1916?" ,	answer : "Edward Heath", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Edward_Heath_4_Allan_Warren.jpg/220px-Edward_Heath_4_Allan_Warren.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-9",
+	question : "Who is this, born July 9th 1937?" ,	answer : "David Hockney", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/David_Hockney_2017_at_Flash_Expo_%28cropped%29.jpg/220px-David_Hockney_2017_at_Flash_Expo_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-9",
+	question : "Who is this, born July 9th 1947?" ,	answer : "O J Simpson", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/O.J._Simpson_1990_%C2%B7_DN-ST-91-03444_crop.JPEG/220px-O.J._Simpson_1990_%C2%B7_DN-ST-91-03444_crop.JPEG"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-9",
+	question : "Who is this, born July 9th 1956?" ,	answer : "Tom Hanks", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Tom_Hanks_TIFF_2019.jpg/220px-Tom_Hanks_TIFF_2019.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-9",
+	question : "Who is this, born July 9th 1957?" ,	answer : "Kelly McGillis", answerSpeak : "", image : "https://m.media-amazon.com/images/M/MV5BNDY0OGRmY2UtNzg0YS00NWYyLWI0MmYtYTlhOGYxNmY5MDkxL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNTk5NzQ5Ng@@._V1_.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-9",
+	question : "Who is this, born July 9th 1957?" ,	answer : "Paul Merton", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Paul_Merton_R4.jpg/220px-Paul_Merton_R4.jpg"	});	
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-10",
+	question : "Who is this, born July 10th 1911?" ,	answer : "Terry Thomas", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Terry-Thomas_in_Where_Were_You_When_the_Lights_Went_Out.jpg/300px-Terry-Thomas_in_Where_Were_You_When_the_Lights_Went_Out.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-10",
+	question : "Who is this, born July 10th 1945?" ,	answer : "John Motson", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/John_Motson.jpg/220px-John_Motson.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-10",
+	question : "Who is this, born July 10th 1954?" ,	answer : "Neil Tennant", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Neil_Tennant_Hyde_Park_2019_%28cropped%29.jpg/220px-Neil_Tennant_Hyde_Park_2019_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-10",
+	question : "Who is this, born July 10th 1970?" ,	answer : "Jason Orange", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Take_That_%283605394246%29.jpg/240px-Take_That_%283605394246%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-10",
+	question : "Who is this, born July 10th 1970?" ,	answer : "John Simm", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/John_Simm_%282010%29_%28cropped%29.jpg/220px-John_Simm_%282010%29_%28cropped%29.jpg"	});	
+
 /*
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
