@@ -5467,7 +5467,7 @@ quests[++questIndexBuilder] = {
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6dULKU44d7xHMgBfO20nzB?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
-	answer : "Hot n Cold, Katy Perry</BR>Beat It, Michael Jackson</BR>Happy, Parrell Williams</BR>Bad Romance, Lady Gaga</BR>Pap don't preach, Madonna</BR>Back to Black, Amy Winehouse</BR>Poker Face, Lady Gaga</BR>I'm every woman, Chaka Kha (Whitney Houston)</BR>Staying Alive, Bee Gees</BR>Material Girl, Madonna", answerSpeak : "", question : ""}) ;
+	answer : "Hot n Cold, Katy Perry</BR>Beat It, Michael Jackson</BR>Happy, Parrell Williams</BR>Bad Romance, Lady Gaga</BR>Papa don't preach, Madonna</BR>Back to Black, Amy Winehouse</BR>Poker Face, Lady Gaga</BR>I'm every woman, Chaka Kha (Whitney Houston)</BR>Staying Alive, Bee Gees</BR>Material Girl, Madonna", answerSpeak : "", question : ""}) ;
 
 quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
