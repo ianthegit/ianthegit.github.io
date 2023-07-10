@@ -2814,22 +2814,22 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 		questInfo: new Array()
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AIL4fc-prmIxxq23Rk-ufXmTFIAh2Of6AaUdvmb9dQ5GreLx4PQPsboeU-a-dCXdxtIfwlfFdvF6d-hD1xzJLqreEtf6Ezx64WA-YN-AhnfP1hCmQY9aadsDf5BS2OYJbTFK8Fvp5pEgEuEaBWcYJDHAszd9xg=w194-h207-s-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Garlic"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AIL4fc9XWujTXvWlMPszKggkipfc5bxpdM06y-lOE7wGlr1jJypFl-zbfOy8pJkc7UHo-n9ORYf15F4wS99BXI-nASe8jinUwk7ZqtW676sPy8d1quA_tSb3byXH_nxCXuYqXByACOzyfbFMQF2-kNWFCiBjCg=w196-h169-s-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Tomato"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AIL4fc_M0lDgzQ3HP4PVDOa9tbi1J7jXBqaTjWTtSy-WqfoBBHT736HdaV79QxpqXouwpc6XpDVbkwDlCFx9I6dP0oqyecnPBG-VN58cz_MxsxyqozaVVT5M7sec3terNQpFq-5je9mZ9RayTEbaW_QD8tw7_g=w538-h216-s-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Banana"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AIL4fc8RiYYiRYSfWkb1tRRJIQN-s__1ZB9lo5nIToR818D7J-0R4u1lgZsCYsM-YURlWYLWCrqFvjlXzFC3lvbx6m0opzvk00NsAdVaXjN8gLA2mtIE6gQQUGi8z5HR-j2f8Lqk5LOO_QxhmgQFB7ipgHok0g=w286-h412-s-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Butternut Squash"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AIL4fc_D8vGs0yrucY3wjkTStWYY6V-GbA8a0wzoWWqkkDxsjyCGSVDPtBOFcNEJ5L1QviQm3AdAHjPRNowfq4nfxtUcGk-1_6FZi8RGjmB79Pl-YXk5JNwJgKDyP1z9b-7W4EPreW7cW05jHSKD6wkJ8bdV8g=w470-h432-s-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Pumpkin"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AIL4fc_9ErQMW2KhuKgeXjd73ZYH06g9ZWUkjWjjZSmtbshaMztf_dg9aN8FD6wcv72gAZ7P_dt3xI7xrJtiyQ8EPLCboFBuTRXzqYjy4Jg6viNdeT4xUNLzLsyPa_eei6qxwe0wp4ETZwN1xx75XZfQY1yfpw=w366-h413-s-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Lettuce"}) ;
 
 		
