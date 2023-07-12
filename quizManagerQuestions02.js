@@ -5421,16 +5421,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : "Crazy little thing called love, Queen</BR>Jump, Van Halen</BR>Sweet Child of Mine, Guns N Roses</BR>Let's spend the night together, The Rolling Stones</BR>Every little thing she does is magic, The Police</BR>Start me up, The Rolling Stones</BR>I don't wanna miss a thing, Aerosmith</BR>With or without you, U2</BR>Rock the Casbah, The Clash</BR>Billie Jean, Michael Jackson", answerSpeak : "", question : ""}) ;
 
 
-quests[++questIndexBuilder] = { 
-		name : "Test "+getAndIncrementCounterForType("Alphabet"),
-		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
-		tags : "2023-7-5,saturday,InnerWheel,surfers,alphabet", 
-		questInfo: new Array() };
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1, 
-	question : "What 'Z': </BR></BR>What country is North of Zimbabwe?", answer : "Zambia", answerSpeak : ""} ); 
-addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1,
-	question : "What 'Z': </BR></BR>Imaginatively, the name given to a cross between a zebra and a donkey is a?", answer : "Zedonk", answerSpeak : ""} ); 
-
 
 quests[++questIndexBuilder] = { 
 		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
@@ -5468,6 +5458,21 @@ quests[++questIndexBuilder] = {
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6dULKU44d7xHMgBfO20nzB?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
 	answer : "Hot n Cold, Katy Perry</BR>Beat It, Michael Jackson</BR>Happy, Parrell Williams</BR>Bad Romance, Lady Gaga</BR>Papa don't preach, Madonna</BR>Back to Black, Amy Winehouse</BR>Poker Face, Lady Gaga</BR>I'm every woman, Chaka Kha (Whitney Houston)</BR>Staying Alive, Bee Gees</BR>Material Girl, Madonna", answerSpeak : "", question : ""}) ;
+
+
+
+//https://au.lifestyle.yahoo.com/the-1-club-how-many-of-these-questions-from-sevens-new-game-show-can-you-solve-233819307.html?
+quests[++questIndexBuilder] = { 
+		name : "1% Club "+getAndIncrementCounterForType("1percent"),
+		hoverover : "Are you smart enough o join the 1% Club",
+		tags : "2023-7-5,saturday,InnerWheel,surfers,alphabet,1Percent", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1, 
+	question : "What 'Z': </BR></BR>What country is North of Zimbabwe?", answer : "Zambia", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1,
+	question : "What 'Z': </BR></BR>Imaginatively, the name given to a cross between a zebra and a donkey is a?", answer : "Zedonk", answerSpeak : ""} ); 
+
+
 
 quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),

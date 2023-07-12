@@ -488,7 +488,7 @@ function SQQuestion(questionType) {
 	}
 	if (questStageData[currQuestStageIndex].hasOwnProperty('timedQuestion') ) {
 		console.log('Timed question');
-		setTimeout(SQHideQuestion, 3000);
+		setTimeout(SQHideQuestion, 30000);
 	}
 	currQuestStageIndex++
 }
