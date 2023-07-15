@@ -5465,12 +5465,28 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 quests[++questIndexBuilder] = { 
 		name : "1% Club "+getAndIncrementCounterForType("1percent"),
 		hoverover : "Are you smart enough o join the 1% Club",
-		tags : "2023-7-5,saturday,InnerWheel,surfers,alphabet,1Percent", 
+		tags : "2023-7-16,saturday,InnerWheel,surfers,alphabet,1Percent", 
 		questInfo: new Array() };
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1, 
-	question : "What 'Z': </BR></BR>What country is North of Zimbabwe?", answer : "Zambia", answerSpeak : ""} ); 
+	question : "Crack the code: What animal is this?  </BR></BR>SEE O DOUBLE U?", answer : "COW", answerSpeak : ""} ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1,
-	question : "What 'Z': </BR></BR>Imaginatively, the name given to a cross between a zebra and a donkey is a?", answer : "Zedonk", answerSpeak : ""} ); 
+	question : "Which of the five vowels is missing from Question 1?", answer : "A", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1,
+	question : "Using standard British currency, what is the fewest number of coins needed to make exactly " + gbp + " 1.85?", answer : "5 ( " + gbp + " 1, 50p, 20p, 10p, 5p)", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1,
+	question : "Which letter should replace the asterisk? </BR></BR> L S I H G A H D * E", answer : "T ( LIGHT SHADE)", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1,
+	question : "Which of these is the largest number? </BR></BR> "+ Table5ColumnStart + "1/3</td><td>0.0330</td><td>30% of 10</td><td>3/10</td><td>3.01" + Table4ColumnEnd, answer : "3.01", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1,
+	question : "What word solves the problem below? </BR></BR> S***TERED = Cat </BR></BR> UNDER***S = Dog </BR></BR> UN****ABLE = Bear </BR></BR> DANDE****S = ??", answer : "Lion", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1,
+	question : "Dev is an honest man, except on his birthday when he always lies. When asked when his birthday really was, on Monday he said 'Yesterday', and on Tuesday he said 'Yesterday'. Therefore on which day was Dev's birthday" + Table3ColumnStart + "Sunday</td><td>Monday</td><td>Tuesday" + Table4ColumnEnd, answer : "Monday", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1,
+	question : "Three of these words share an interesting connection. Which is the odd one out?" + Table4ColumnStart + "Education</td><td>Strength</td><td>Exhaustion</td><td>Authorise" + Table4ColumnEnd, answer : "Strength", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1,
+	question : "What is the next letter in this sequence? </BR></BR> J F M A M J *", answer : "J", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1,
+	question : "Pablo is rummaging in his sock drawer in the dark. There are 20 single white socks and 10 single red socks. How many socks does Pablo need to pull out before he definitely has a matching pair?", answer : "3", answerSpeak : ""} ); 
 
 
 
@@ -5519,7 +5535,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,
 	answer : ""	, answerSpeak : ""});
 	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
-	question : "?  " + Table4ColumnStart + "?</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd,
+	question : "?  " + Table3ColumnStart + "?</td><td>?</td><td>?" + Table4ColumnEnd,
 	answer : "", answerSpeak : "", image : ""	});	
 	
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "", //

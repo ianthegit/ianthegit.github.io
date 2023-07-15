@@ -72,6 +72,7 @@ closeSplashButtonEnd=")' />";
 answerButton = "<input type='button' class='userBtnNext' value='Answers' title='Answers' id='Next' onclick='runNextQuestStage()' />";
 tagsButton = "<input type='button' class='userBtnStop' value='Categories' title='Categories' id='Categories' onclick='showCategories()' />";
 Table4ColumnStart="<table style='font-family:verdana;color:Black;font-size:30px;topMargin=10px;bottomMargin=10px' width='95%' border='1'><tr><th>1</th><th>2</th><th>3</th><th>4</th></tr><tr><td>";
+Table5ColumnStart="<table style='font-family:verdana;color:Black;font-size:30px;topMargin=10px;bottomMargin=10px' width='95%' border='1'><tr><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></tr><tr><td>";
 Table3ColumnStart="<table style='font-family:verdana;color:Black;font-size:30px;topMargin=10px;bottomMargin=10px' width='95%' border='1'><tr><th>1</th><th>2</th><th>3</th></tr><tr><td>";
 Table4ColumnEnd=" </td></tr></table>";
 beginAudioLoop= '<audio controls loop><source src="'  ;
@@ -81,6 +82,7 @@ startYouTube=" <a href='";
 endYouTube="' target='_blank'>The Answer...</a> ";
 startPointsButton = "<input type='button' class='userBtnNext' value='Next' id='nextPoint' onclick='SQWriteAnswerPoint()' />";
 sQDataArea="<span id='SQDataArea'><tr><td><span id='SQAnswer'></span></td></tr><tr><td><span id='SQquestData'></span></td></tr><tr><td><span id='SQImage'></span></span>"
+timedFunction=''
 
 //emojis
 const emoji = {
@@ -486,9 +488,9 @@ function SQQuestion(questionType) {
 		speakText=questStageData[currQuestStageIndex].questionSpeak;
 		setTimeout(SQSpeakAnswer, 3000);	
 	}
+	clearTimeout(timedFunction);
 	if (questStageData[currQuestStageIndex].hasOwnProperty('timedQuestion') ) {
-		console.log('Timed question');
-		setTimeout(SQHideQuestion, 30000);
+		timedFunction=setTimeout(SQHideQuestion, 30000);
 	}
 	currQuestStageIndex++
 }
