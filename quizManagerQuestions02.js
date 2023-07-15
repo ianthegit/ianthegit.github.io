@@ -5488,6 +5488,15 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1,
 	question : "Pablo is rummaging in his sock drawer in the dark. There are 20 single white socks and 10 single red socks. How many socks does Pablo need to pull out before he definitely has a matching pair?", answer : "3", answerSpeak : ""} ); 
 
+uests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2022-7-16,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/78gwmrZpGeOmo8ncef6DSF?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Wonderwall, Oasis</BR>Sweet Dreams, Eurythmics</BR>Killer Queen, Queen</BR>Africa, Toto</BR>Radio GaGa, Queen</BR>Another one bites the dust, Queen</BR>Bohemian Rhapsody, Queen</BR>I want to break free, Queen</BR>Take on me, A-Ha</BR>Rolling in the deep, Adele", answerSpeak : "", question : ""}) ;
 
 
 quests[++questIndexBuilder] = { 
