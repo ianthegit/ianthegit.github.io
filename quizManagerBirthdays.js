@@ -767,6 +767,28 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-10",
 	question : "Who is this, born July 10th 1970?" ,	answer : "John Simm", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/John_Simm_%282010%29_%28cropped%29.jpg/220px-John_Simm_%282010%29_%28cropped%29.jpg"	});	
 
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-15",
+	question : "Who is this, born July 15th 1940?" ,	answer : "Robert Winston", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Lord_Winston_2017.jpg/220px-Lord_Winston_2017.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-15",
+	question : "Who is this, born July 15th 1952?" ,	answer : "Celia Imrie", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Celia_Imrie_at_the_Cambridge_Union_Society_Spring_Wordfest.jpg/220px-Celia_Imrie_at_the_Cambridge_Union_Society_Spring_Wordfest.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-15",
+	question : "Who is this, born July 15th 1961?" ,	answer : "Forest Whitaker", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Forest_Whitaker_by_Gage_Skidmore.jpg/220px-Forest_Whitaker_by_Gage_Skidmore.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-15",
+	question : "Who is this, born July 15th 1965?" ,	answer : "", answerSpeak : "David Miliband", image : "https://upload.wikimedia.org/wikipedia/commons/d/dc/David_Miliband_2.jpg"	});	
+
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-16",
+	question : "Who is this, born July 16th 1952?" ,	answer : "Stuart Copeland", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Stewart_Copeland_2007.jpg/220px-Stewart_Copeland_2007.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-16",
+	question : "Who is this, born July 16th 1958?" ,	answer : "Michael Flatley", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Flatley_alone_cropped.jpg/220px-Flatley_alone_cropped.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-16",
+	question : "Who is this, born July 16th 1967?" ,	answer : "Will Ferrell", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Will_Ferrell_2012.jpg/220px-Will_Ferrell_2012.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-16",
+	question : "Who is this, born July 16th 1989?" ,	answer : "Gareth Bale", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/2022_FIFA_World_Cup_United_States_1%E2%80%931_Wales_-_%2832%29_%28cropped%29.jpg/220px-2022_FIFA_World_Cup_United_States_1%E2%80%931_Wales_-_%2832%29_%28cropped%29.jpg"	});	
+
+
 /*
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",

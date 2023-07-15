@@ -2832,6 +2832,31 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 	image : "https://lh3.googleusercontent.com/pw/AIL4fc_9ErQMW2KhuKgeXjd73ZYH06g9ZWUkjWjjZSmtbshaMztf_dg9aN8FD6wcv72gAZ7P_dt3xI7xrJtiyQ8EPLCboFBuTRXzqYjy4Jg6viNdeT4xUNLzLsyPa_eei6qxwe0wp4ETZwN1xx75XZfQY1yfpw=w366-h413-s-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Lettuce"}) ;
 
+
+ quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of ??",
+		tags : "2023-7-16,pictionary", straightToAnswers:true,
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Fig"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Avocado"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Lemon"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Lime"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Mushroom"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Carrot"}) ;
 		
 /*
  * 	image : "",
