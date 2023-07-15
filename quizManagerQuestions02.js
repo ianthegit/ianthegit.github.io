@@ -5488,10 +5488,10 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1,
 	question : "Pablo is rummaging in his sock drawer in the dark. There are 20 single white socks and 10 single red socks. How many socks does Pablo need to pull out before he definitely has a matching pair?", answer : "3", answerSpeak : ""} ); 
 
-uests[++questIndexBuilder] = { 
+quests[++questIndexBuilder] = { 
 		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
 		hoverover : "Songs you will know, but wish you did not after this.",
-		tags : "music,2022-7-16,InnerWheel,saturday",
+		tags : "music,2023-7-16,InnerWheel,saturday",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
