@@ -5495,7 +5495,7 @@ quests[++questIndexBuilder] = {
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
-	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/78gwmrZpGeOmo8ncef6DSF?utm_source=generator" width="100%" height="580" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/78gwmrZpGeOmo8ncef6DSF?utm_source=generator" width="100%" height="680" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
 	answer : "Wonderwall, Oasis</BR>Sweet Dreams, Eurythmics</BR>Killer Queen, Queen</BR>Africa, Toto</BR>Radio GaGa, Queen</BR>Another one bites the dust, Queen</BR>Bohemian Rhapsody, Queen</BR>I want to break free, Queen</BR>Take on me, A-Ha</BR>Rolling in the deep, Adele", answerSpeak : "", question : ""}) ;
 
 
