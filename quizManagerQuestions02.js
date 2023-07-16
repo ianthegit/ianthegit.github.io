@@ -5465,6 +5465,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 quests[++questIndexBuilder] = { 
 		name : "1% Club "+getAndIncrementCounterForType("1percent"),
 		hoverover : "Are you smart enough o join the 1% Club",
+		splash : {splashType : splashTypeText  , splashText : "This is a 1% Club round - you will get 30 seconds per question.  Are you ready..." },
 		tags : "2023-7-16,saturday,InnerWheel,surfers,alphabet,1Percent", 
 		questInfo: new Array() };
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1, 
