@@ -2835,27 +2835,27 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 
  quests[++questIndexBuilder] = { //
 		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
-		hoverover : "Pictionary on the theme of ??",
+		hoverover : "Pictionary on the theme of one-stroke fruit and veg",
 		tags : "2023-7-16,pictionary", straightToAnswers:true,
 		questInfo: new Array()
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AIL4fc8RDhqESmm5d9XjZNlfpWeEQBdCwGyu0DuzubiYjkkCPd0QBu3uBaU084aN34qMxIzbk1Qbuzz_X-r5L7cO-_9gJakLIqYcrbUwi3ck93iYy5-fXes07CKUnl25NWC5fP2nIvMrjKu3LwiNUlmOfReRFQ=w397-h617-s-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Fig"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AIL4fc868v_IfQUuZm3dIfUBWKlRE_INY279kRptEH_GU8TBEyBJ3lZu6OMqg3IYEfNSC4yDFgsZ92jE9HZZjs4LQsrb-AtiwxzTxKfBaGwrPM6chbzHyzSyYvyPuGt5PWrfejCMfpqRvPfgRlch7yJdnA5BQg=w352-h468-s-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Avocado"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AIL4fc_6Xp0MBt_Beip_mWjx6PKMF0xRTKYl-_gNSejG5n7bjngyQSUl4vkMvWWMFaxF32p5jUjI42OSr3BcsKAX6v6cS1QbmHdoAkBzfVm19CO5zFx7eg6kCUBrMYFqZb8iYXZ9tRytSwDj2JbyF25e9SB2KA=w670-h438-s-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Lemon"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AIL4fc--w12pZ0kD_DuhS2SaC26-ebgb39Vr5Bw5GpkgJNwmK3a3HrfFsNQTlXj4USk8n87PEn76hVn6OSeEviMBcfmuyKK9ydssdLHJO87koPhIrHryT0aJzgHaE5eoTB2La3btYwJzZogxTSV4TWoKELWP0w=w303-h341-s-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Lime"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AIL4fc9GSDzJB8QRJDqwSou19LvIEIXzmbL7hPf8m0K3tPRDdRrCn4osTi5WIJN2EnEpbDzGtN2WDoPDlP3g6d_hOA7BOm5XVQa3QP5nlXie_vFpp54tz9PuvV_T_P4YS7Rgr4IG2GL8UgqOstThtnJpZdWkdw=w491-h435-s-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Mushroom"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AIL4fc8mxiqMrgXGRHlqzBe5Lqof938HppI54nTkw1lKPnoNUzswi4Y3EHykVkHpCFz3NAQGI-Gf7V-w23RhKSYe6Ge6n1_abPQKfYgW9wYV6P8U3zQE2ds7xMtBNwNPi-FBosbRA2fQgWdFimfe2C5r7ccz0g=w307-h834-s-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Carrot"}) ;
 		
 /*
