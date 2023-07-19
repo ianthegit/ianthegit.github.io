@@ -5465,7 +5465,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 quests[++questIndexBuilder] = { 
 		name : "1% Club "+getAndIncrementCounterForType("1percent"),
 		hoverover : "Are you smart enough o join the 1% Club",
-		splash : {splashType : splashTypeText  , splashText : "This is a 1% Club round - you will get 30 seconds per question.  Are you ready..." },
+		splash : {splashType : splashTypeText  , splashText : "This is a 1% Club round - you will get a bit more than 30 seconds per question.  Are you ready..." },
 		tags : "2023-7-16,saturday,InnerWheel,surfers,alphabet,1Percent", 
 		questInfo: new Array() };
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1, 
@@ -5498,6 +5498,38 @@ quests[++questIndexBuilder] = {
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/78gwmrZpGeOmo8ncef6DSF?utm_source=generator" width="100%" height="730" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
 	answer : "Wonderwall, Oasis</BR>Sweet Dreams, Eurythmics</BR>Killer Queen, Queen</BR>Africa, Toto</BR>Radio GaGa, Queen</BR>Another one bites the dust, Queen</BR>Bohemian Rhapsody, Queen</BR>I want to break free, Queen</BR>Take on me, A-Ha</BR>Rolling in the deep, Adele", answerSpeak : "", question : ""}) ;
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "1% Club "+getAndIncrementCounterForType("1percent"),
+		hoverover : "Are you smart enough o join the 1% Club",
+		splash : {splashType : splashTypeText  , splashText : "This is a 1% Club round - you will get a bit more than 30 seconds per question.  Are you ready..." },
+		tags : "2023-7-24,saturday,InnerWheel,surfers,alphabet,1Percent", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1, 
+	question : "Colin and Fiona are two of the three partners at a law firm.  Colin's email address is ColinJohnson@job.law, Fiona's email is FionaOrwell@job.law - which of these belongs to the 3rd partner?  </BR></BR>"+ Table3ColumnStart + "BridgetBaker@job.law</td><td>SamualPatel@job.law</td><td>CarolineYoung@job.law" + Table4ColumnEnd, answer : "BridgetBaker@job.law </BR></BR> 'job' is made of the first letters of the partner's surnames", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1, 
+	question : "What number will replace the asterix?  </BR></BR>" + Table4ColumnStart + "[ 1    4    8    3 ] </BR></BR> 4</td><td>[ 2    8 ] </BR></BR> 2</td><td>[ 3    9    5    7    1   2 ] </BR></BR> 6</td><td>[ 9    4    8 ] </BR></BR> *" + Table4ColumnEnd, answer : "3 - the answer represents the amount of numbers in the collection", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1, 
+	question : "Lee is on a treadmill at the local gym.  He starts by running a distance of 4 miles at 8 miles an hour.  He then increases his speed by 2 miles an hour, but can only run half the distance.  How many miles from his gym did Lee end up running?", answer : "Zero - he was on a treadmill", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1, 
+	question : "The word CALENDAR contains 3 vowels.  How many months of the year have the same amount of vowels as the word CALENDAR?", answer : "6 - January February September October November December", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1, 
+	question : "What 3 letters should come next?  </BR></BR>SMT, WTF, SSM, TWT, FSS, ????", answer : "MTW - Days of the week", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1, 
+	question : "The following words have something in common  </BR></BR>Pant </BR>Peel </BR>Potter </BR></BR>Logically, which of these words could also be in the list?"+ Table3ColumnStart + "Pox</td><td>Pipe</td><td>Punk" + Table4ColumnEnd, answer : "Pox - all the words end with an animal", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1, 
+	question : "Rearrange all the letters below into different words to form a sum that gives the same answer as this one  </BR></BR>TWELVE + ONE", answer : "ELEVEN + TWO", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1, 
+	question : "This was a real 25% question in Australia  </BR></BR>A dress is originally for sale at " + gbp + " 100 but is now on sale with 20% off.  By what percentage would you have to increase the sale price to return it to it's original price?", answer : "25%", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1, 
+	question : "Answer the following question:  </BR></BR>How menny leters ar thare in all the wurds that ar speld correctly?", answer : "24", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1, 
+	question : "What 5-letter food apppears in the following sentence?  </BR></BR>After Jacob read Paul Hollywood's book, he was inspired to take up baking.", answer : "Bread", answerSpeak : ""} ); 
+	
+
+
 
 
 quests[++questIndexBuilder] = { 
