@@ -490,7 +490,7 @@ function SQQuestion(questionType) {
 	}
 	clearTimeout(timedFunction);
 	if (questStageData[currQuestStageIndex].hasOwnProperty('timedQuestion') ) {
-		timedFunction=setTimeout(SQHideQuestion, 30000);
+		timedFunction=setTimeout(SQHideQuestion, 45000);
 	}
 	currQuestStageIndex++
 }
