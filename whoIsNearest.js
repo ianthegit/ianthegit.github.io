@@ -11,7 +11,7 @@ function writeTeamsHTML(calculated) { teamHTML = "";	counter=0; previous = 10000
   if (calculated) {
    if (teamsData[i].sorter != null) {
     if (teamsData[i].sorter != previous) {(counter++) ; previous=teamsData[i].sorter;};
-    teamHTML= teamHTML + "<tr><td>" +  counter + "     </td><td> " + teamsData[i].teamName + "</td><td>    their answer was " + teamsData[i].sorter + " away</td></tr>";}
+    teamHTML= teamHTML + "<tr><td>" +  counter + "     </td><td> " + teamsData[i].teamName + "</td><td>    their answer (" + teamsData[i].answer + ") was " + teamsData[i].sorter + " away</td></tr>";}
   } else { teamHTML= teamHTML + "<tr><td>" + teamsData[i].teamName + "</td><td><input type='number' id='" + teamsData[i].teamName + "' onchange='dataChangedOnRow(" + i + ", this.value)'> </td></tr>";}}
  return  "<table border = '0'> " + teamHTML + "</table>";}
 function dataChangedOnRow(rowNo, value) { teamsData[rowNo].answer=value; teamsData[rowNo].distanceFrom = answer - value; teamsData[rowNo].sorter = teamsData[rowNo].distanceFrom;
