@@ -1,4 +1,3 @@
-
 function createScreen() { teamsData =[] ; answer = getURIString('answer'); mustBeUnder = getURIString('mustBeUnder'); snippit= ' to ';
  setupTeams(getURIString('teamNames').split(','));
  if (mustBeUnder) {snippit = ' under or equal' + snippit;} 
