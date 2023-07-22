@@ -5539,7 +5539,7 @@ quests[++questIndexBuilder] = {
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6seBGDx9XOKV8gjqBaCrSF?utm_source=generator" width="100%" height="730" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
-	answer : "Runaround Sue, Dion</BR>Mr Brightside, The Killers</BR>Cotton Eyed Joe, Rednex</BR>Friday I'm in Love, The Cure</BR>Dancing Queen, ABBA</BR>Eye of the Tiger, Survivor</BR>Syand by me, Ben E King</BR>Spetember, Earth Wind and Fire</BR>Time after time, Cyndi Lauper</BR>Never gonna give you up, Rick Astley", answerSpeak : "", question : ""}) ;
+	answer : "Runaround Sue, Dion</BR>Mr Brightside, The Killers</BR>Cotton Eyed Joe, Rednex</BR>Friday I'm in Love, The Cure</BR>Dancing Queen, ABBA</BR>Eye of the Tiger, Survivor</BR>Stand by me, Ben E King</BR>September, Earth Wind and Fire</BR>Time after time, Cyndi Lauper</BR>Never gonna give you up, Rick Astley", answerSpeak : "", question : ""}) ;
 
 
 
