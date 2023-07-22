@@ -80,3 +80,25 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 	question : 'When the mighty Status Quo opened Live Aid at Wembly Stadium in 1985, how many songs did they play? ',
 	answer : "3 - Rockin' All Over The World, Caroline, Don't Waste My Time", image : "http://image.guardian.co.uk/sys-images/Guardian/Pix/gallery/2004/10/15/quo.jpg"	});
 
+
+quests[++questIndexBuilder] = { 
+		name : "TieBreaker " + getAndIncrementCounterForType("Tiebreaker"),
+		hoverover : "Choose a number",
+		tags : "surfers,InnerWheel,saturday,tieBreaker",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : 'In miles, how long is the line that can you draw with an HB pencil before it runs out?',
+	answer : "35 miles", image : "https://media.tenor.com/B7Ti8c6U674AAAAd/drawing-gifs-art-gifs.gif"	});
+
+/*
+
+https://www.radiotimes.com/quizzes/pub-quiz-tie-breaker/
+
+https://bestquizquestions.com/tie-breaker-quiz-questions/
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	
+	question : '',
+	answer : "", image : ""	});
+
+*/
