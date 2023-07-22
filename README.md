@@ -94,9 +94,15 @@ If the tags contain 'music' then an auto-generated Splash screen will remind you
 
 ## Create a question
 
-To get a 4-choice multiple choice question text, add the below to the question text string
+To get a 3/4/5-choice multiple choice question text, add the below to the question text string
 ```javascript
++ Table3ColumnStart + "Answer1</td><td>Answer2</td><td>Answer3</td><td>Answer4" + Table4ColumnEnd
 + Table4ColumnStart + "Answer1</td><td>Answer2</td><td>Answer3</td><td>Answer4" + Table4ColumnEnd
++ Table5ColumnStart + "Answer1</td><td>Answer2</td><td>Answer3</td><td>Answer4" + Table4ColumnEnd
+```
+To make a question auto-hide after 40 seconds, add the parameter
+```javascript
+timedQuestion : 1
 ```
 
 To add a question which plays an audio clip:
