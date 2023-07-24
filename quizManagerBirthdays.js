@@ -780,8 +780,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-16",
-	question : "Who is this, born July 16th 1941?" ,	answer : "Charlie Fennelly", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AIL4fc-SATO6209QIkzjSzlvACKfmZIfm6yDQspex8aVa3AUYE4KCaRgHpSRq16iqwBY9qZjr70M5EHoYxrwnGjPT8ICg3dBQmGDURPP1N_8KxErFUWqf1leoeryqDC-hP-p9OGkCxrMhsz6w4DdboEx5dp5gA=w1560-h1170-s-no?authuser=0"	});	
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-16",
 	question : "Who is this, born July 16th 1952?" ,	answer : "Stuart Copeland", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Stewart_Copeland_2007.jpg/220px-Stewart_Copeland_2007.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-16",
 	question : "Who is this, born July 16th 1958?" ,	answer : "Michael Flatley", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Flatley_alone_cropped.jpg/220px-Flatley_alone_cropped.jpg"	});	
@@ -793,25 +791,27 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-23",
-	question : "Who is this, born July 23 1913?" ,	answer : "Michael Foot", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Michael_Foot_%281981%29.jpg/220px-Michael_Foot_%281981%29.jpg"	});	
+	question : "Who is this, born July 23rd 1941?" ,	answer : "Charlie Fennelly", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AIL4fc-SATO6209QIkzjSzlvACKfmZIfm6yDQspex8aVa3AUYE4KCaRgHpSRq16iqwBY9qZjr70M5EHoYxrwnGjPT8ICg3dBQmGDURPP1N_8KxErFUWqf1leoeryqDC-hP-p9OGkCxrMhsz6w4DdboEx5dp5gA=w1560-h1170-s-no?authuser=0"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-23",
-	question : "Who is this, born July 23 1947?" ,	answer : "David Essex", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/David_Essex.jpg/220px-David_Essex.jpg"	});	
+	question : "Who is this, born July 23rd 1913?" ,	answer : "Michael Foot", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Michael_Foot_%281981%29.jpg/220px-Michael_Foot_%281981%29.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-23",
-	question : "Who is this, born July 23 1957?" ,	answer : "Jo Brand", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Jo_Brand_1994.jpg/170px-Jo_Brand_1994.jpg"	});	
+	question : "Who is this, born July 23rd 1947?" ,	answer : "David Essex", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/David_Essex.jpg/220px-David_Essex.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-23",
-	question : "Who is this, born July 23 1961?" ,	answer : "Woody Harrelson", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Woody_Harrelson_191020-N-NU281-1028_%28cropped%29.jpg/220px-Woody_Harrelson_191020-N-NU281-1028_%28cropped%29.jpg"	});	
+	question : "Who is this, born July 23rd 1957?" ,	answer : "Jo Brand", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Jo_Brand_1994.jpg/170px-Jo_Brand_1994.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-23",
-	question : "Who is this, born July 23 1965?" ,	answer : "Slash (Saul Hudson)", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Slash_live_in_London_2022_%28Cropped%29.jpg/220px-Slash_live_in_London_2022_%28Cropped%29.jpg"	});	
+	question : "Who is this, born July 23rd 1961?" ,	answer : "Woody Harrelson", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Woody_Harrelson_191020-N-NU281-1028_%28cropped%29.jpg/220px-Woody_Harrelson_191020-N-NU281-1028_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-23",
+	question : "Who is this, born July 23rd 1965?" ,	answer : "Slash (Saul Hudson)", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Slash_live_in_London_2022_%28Cropped%29.jpg/220px-Slash_live_in_London_2022_%28Cropped%29.jpg"	});	
 
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-24",
-	question : "Who is this, born July 24 1897?" ,	answer : "Amelia Earhart", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Amelia_Earhart_standing_under_nose_of_her_Lockheed_Model_10-E_Electra%2C_small.jpg/250px-Amelia_Earhart_standing_under_nose_of_her_Lockheed_Model_10-E_Electra%2C_small.jpg"	});	
+	question : "Who is this, born July 24th 1897?" ,	answer : "Amelia Earhart", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Amelia_Earhart_standing_under_nose_of_her_Lockheed_Model_10-E_Electra%2C_small.jpg/250px-Amelia_Earhart_standing_under_nose_of_her_Lockheed_Model_10-E_Electra%2C_small.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-24",
-	question : "Who is this (pictured with his first wife, Susan Sarandon), born July 24 1942?" ,	answer : "Chris Sarandon", answerSpeak : "", image : "https://i2-prod.mirror.co.uk/incoming/article3914203.ece/ALTERNATES/s615b/susan-chris-sarandon.jpg"	});	
+	question : "Who is this (pictured with his first wife, Susan Sarandon), born July 24th 1942?" ,	answer : "Chris Sarandon", answerSpeak : "", image : "https://i2-prod.mirror.co.uk/incoming/article3914203.ece/ALTERNATES/s615b/susan-chris-sarandon.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-24",
-	question : "Who is this, born July 24 1969?" ,	answer : "J-Lo (Jennifer Lopez)", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/210120-D-WD757-1975_%2850860511978%29_%28cropped%29.jpg/220px-210120-D-WD757-1975_%2850860511978%29_%28cropped%29.jpg"	});	
+	question : "Who is this, born July 24th 1969?" ,	answer : "J-Lo (Jennifer Lopez)", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/210120-D-WD757-1975_%2850860511978%29_%28cropped%29.jpg/220px-210120-D-WD757-1975_%2850860511978%29_%28cropped%29.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-24",
-	question : "Who is this, born July 24 1979?" ,	answer : "Rose Byrne", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Rose_Byrne_4%2C_2013.jpg/220px-Rose_Byrne_4%2C_2013.jpg"	});	
+	question : "Who is this, born July 24th 1979?" ,	answer : "Rose Byrne", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Rose_Byrne_4%2C_2013.jpg/220px-Rose_Byrne_4%2C_2013.jpg"	});	
 
 
 /*
