@@ -780,6 +780,8 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-16",
+	question : "Who is this, born July 16th 1941?" ,	answer : "Charlie Fennelly", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AIL4fc-SATO6209QIkzjSzlvACKfmZIfm6yDQspex8aVa3AUYE4KCaRgHpSRq16iqwBY9qZjr70M5EHoYxrwnGjPT8ICg3dBQmGDURPP1N_8KxErFUWqf1leoeryqDC-hP-p9OGkCxrMhsz6w4DdboEx5dp5gA=w1560-h1170-s-no?authuser=0"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-16",
 	question : "Who is this, born July 16th 1952?" ,	answer : "Stuart Copeland", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Stewart_Copeland_2007.jpg/220px-Stewart_Copeland_2007.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-16",
 	question : "Who is this, born July 16th 1958?" ,	answer : "Michael Flatley", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Flatley_alone_cropped.jpg/220px-Flatley_alone_cropped.jpg"	});	
