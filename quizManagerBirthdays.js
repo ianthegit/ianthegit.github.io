@@ -814,22 +814,11 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 	question : "Who is this, born July 24th 1979?" ,	answer : "Rose Byrne", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Rose_Byrne_4%2C_2013.jpg/220px-Rose_Byrne_4%2C_2013.jpg"	});	
 
 
-/*
-
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
-	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
-
-*/
 
 
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, birthday:"7-30", 	
-	question : "Who is this, born July 30th 1991?  " ,	answer : "Diana Vickers", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/DianaVickersWiki.jpg/220px-DianaVickersWiki.jpg"	});	
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	birthday:"7-30",
-	question : "Who is this, born July 30th 1974?  " ,	answer : "Hilary Swank", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Hilary_Swank_at_28th_Tokyo_International_Film_Festival.jpg/220px-Hilary_Swank_at_28th_Tokyo_International_Film_Festival.jpg"	});	
+
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	birthday:"7-30",
 	question : "Who is this, born July 30th 1968?  " ,	answer : "Terry Crews", answerSpeak : "", image : "https://media0.giphy.com/media/xTka03huVb4f0mYBpu/200.gif?cid=95b279440db89c10051ea9a08a277e106eae8175903b9409&rid=200.gif&ct=g"	});	
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	birthday:"7-30",
-	question : "Who is this, born July 30th 1964?  " ,	answer : "Jurgen Klinsmann", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/2019-06-11_Fu%C3%9Fball%2C_M%C3%A4nner%2C_L%C3%A4nderspiel%2C_Deutschland-Estland_StP_2039_LR10_by_Stepro-2.jpg/220px-2019-06-11_Fu%C3%9Fball%2C_M%C3%A4nner%2C_L%C3%A4nderspiel%2C_Deutschland-Estland_StP_2039_LR10_by_Stepro-2.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	birthday:"7-30",
 	question : "Who is this, born July 30th 1961?  " ,	answer : "Laurence Fishburne", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/National_Memorial_Day_Concert_2017_%2834117818524%29_%28cropped%29.jpg/220px-National_Memorial_Day_Concert_2017_%2834117818524%29_%28cropped%29.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, birthday:"7-30",	
@@ -850,6 +839,24 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	birthday:"
 	question : "Who is this, born July 30th 1958?  " ,	answer : "Kate Bush", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Kate_Bush_at_1986_Comic_Relief_%28cropped%29.png/220px-Kate_Bush_at_1986_Comic_Relief_%28cropped%29.png"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	birthday:"7-30",
 	question : "What is happening here, July 30th 1966?  " ,	answer : "England win the World Cup", answerSpeak : "", image : "https://thumbs.gfycat.com/ClearComfortableElephantbeetle-size_restricted.gif"	});	
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-31",
+	question : "Who is this, born July 31st 1947?" ,	answer : "Richard Griffiths", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/BAFTA_2007_%28387023768%29.jpg/220px-BAFTA_2007_%28387023768%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-31",
+	question : "Who is this, born July 31st 1951?" ,	answer : "Evonne Goolagong Cawley", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Evonne_Goolagong_1971.jpg/220px-Evonne_Goolagong_1971.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-31",
+	question : "Who is this, born July 31st 1963?" ,	answer : "Norman Cook (Fatboy Slim)", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Fatboy_Slim_%282006%29.jpg/220px-Fatboy_Slim_%282006%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-31",
+	question : "Who is this, born July 31st 1965?" ,	answer : "J K Rowling", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/J._K._Rowling_2010.jpg/220px-J._K._Rowling_2010.jpg"	});	
+	
+/*
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
+	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
+
+*/
+
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	birthday:"8-6",	
 	question : "Who is this, born August 6th 1911  " ,	answer : "Lucille Ball", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/LDBALL1950s.jpg/220px-LDBALL1950s.jpg"	});	

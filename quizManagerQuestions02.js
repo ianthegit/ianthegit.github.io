@@ -5542,6 +5542,33 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : "Runaround Sue, Dion</BR>Mr Brightside, The Killers</BR>Cotton Eyed Joe, Rednex</BR>Friday I'm in Love, The Cure</BR>Dancing Queen, ABBA</BR>Eye of the Tiger, Survivor</BR>Stand by me, Ben E King</BR>September, Earth Wind and Fire</BR>Time after time, Cyndi Lauper</BR>Never gonna give you up, Rick Astley", answerSpeak : "", question : ""}) ;
 
 
+quests[++questIndexBuilder] = { 
+		name : "1% Club "+getAndIncrementCounterForType("1percent"),
+		hoverover : "Are you smart enough o join the 1% Club",
+		splash : {splashType : splashTypeText  , splashText : "This is a 1% Club round - you will get a bit more than 30 seconds per question.  Are you ready..." },
+		tags : "2023-7-30,saturday,InnerWheel,surfers,alphabet,1Percent", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1, 
+	question : "If Katie unlocks her phone with the code 1120 and Ivy uses the code 0922, then what 4-digit code does Ellie use?" , answer : "1205 - Each name is 2 letters of the alphabet, and the unlock codes are the index numbers in the alphabet of those letters", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1, 
+	question : "Logically, what letter replaces the question mark in this puzzle?  </BR></BR>1=0</BR>2=W</BR>3=R</BR>4=?" , answer : "4=R - the code is the letter in the place of the numbers written form", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1, 
+	question : "If Jack turned 17 yesterday and he'll turn 18 this year, what date is his birthday?" , answer : "31st December", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1, 
+	question : "Richard is older than Clare.  Jojo is older than Hannie.  Hennie is older than Richard.  Who is the eldest?" , answer : "Jojo", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1, 
+	question : "How many pets does Stella have in total if all except 2 are dogs, all except 2 are cats, and all except 2 are rabbits?" , answer : "3", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1, 
+	question : "All the words in this list have something in common.  What is it?</BR></BR>Into</BR>Therefore</BR>Evaluate</BR>Benign" , answer : "They all end with the sound of  anumber", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1, 
+	question : "Fill in the blank:</BR></BR>Jessica is Mandy's only sister.   Mandy is the ***** of Jessica's sister." , answer : "name", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture, timedQuestion : 1, 
+	question : "How many hands do NOT NOT have gloves on?" , answer : "8", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AIL4fc84ipnwyjQ0e0bfnJOhJWiArmCFp8wW5Vl5oidfFLILw4YFKKTl-OxWei42mINznKUlT8c926mEjM7tUzImOyufXQblAzK9hHL-8mqxecy9UUL9UH-sejg96n4zKH-5lmyF05SMInOxgm-tphFzCY-p3Q=w457-h119-s-no?authuser=0"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture, timedQuestion : 1, 
+	question : "Take a good look at this picture.   Which candle will burn down first?" , answer : "B - it is the only one alight", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AIL4fc_iPUZPvy3uxG5JSK7rQPAvKYn0JKomTfE_VRH_ikjf7a3nRawyfmRxntYOAf4WeflUiVMBJWtTYqwtNEHunVoSMkRWndzXDFLSI208bA00jh1MLLIQFUDB_IWWqXPTClwEWzsOmbhvMOZf7cJMklkcwA=w567-h198-s-no?authuser=0"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1, 
+	question : "What word can complete all of those below: </BR></BR>C _ _ _ </BR>P _ _ _ N T</BR>D E _ _ _ S T" , answer : "ARE", answerSpeak : ""} ); 
+
 
 quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
