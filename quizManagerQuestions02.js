@@ -5570,6 +5570,18 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion
 	question : "What word can complete all of those below: </BR></BR>C _ _ _ </BR>P _ _ _ N T</BR>D E _ _ _ S T" , answer : "ARE", answerSpeak : ""} ); 
 
 
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2023-7-31,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2GOXuUMcrvHUr1GVIasxgh?utm_source=generator" width="100%" height="730" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Take on Me, A-Ha</BR>99 red Balloons, Nena</BR>Stand by me, Ben E King</BR>Bleeding Love, Leona Lewis</BR>Umbrella, Rihanna</BR>Happy House, The Housemartins</BR>Tainted Love, Gloria Jones (Soft Cell)</BR>White Wedding, Billy Idol</BR>Crazy little thing called love, Queen</BR>Sex on fire, Kings of Leon", answerSpeak : "", question : ""}) ;
+
+
 quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
 		hoverover : "What sinks, what floats",
