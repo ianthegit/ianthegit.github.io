@@ -5574,7 +5574,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion
 quests[++questIndexBuilder] = { 
 		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
 		hoverover : "Songs you will know, but wish you did not after this.",
-		tags : "music,2023-7-31,InnerWheel,saturday",
+		tags : "music,2023-7-30,InnerWheel,saturday",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,

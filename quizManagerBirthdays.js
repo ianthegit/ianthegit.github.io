@@ -816,6 +816,15 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 
 
 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-29",
+	question : "Who is this, born July 29th 1966?" ,	answer : "Sally Gunnell", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Sally_Gunnell_in_1995_%28cropped%29.jpg/220px-Sally_Gunnell_in_1995_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-29",
+	question : "Who is this, born July 29th 1970?" ,	answer : "Andi Peters", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Andi_Peters_2010_%28cropped%29.jpg/220px-Andi_Peters_2010_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-29",
+	question : "Who is this, born July 29th 1972?" ,	answer : "Wil Wheaton", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Wil_Wheaton_%2848483293231%29.jpg/220px-Wil_Wheaton_%2848483293231%29.jpg"	});	
+
+
+
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	birthday:"7-30",
 	question : "Who is this, born July 30th 1968?  " ,	answer : "Terry Crews", answerSpeak : "", image : "https://media0.giphy.com/media/xTka03huVb4f0mYBpu/200.gif?cid=95b279440db89c10051ea9a08a277e106eae8175903b9409&rid=200.gif&ct=g"	});	
