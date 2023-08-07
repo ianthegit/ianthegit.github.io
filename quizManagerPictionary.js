@@ -2862,7 +2862,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 	quests[++questIndexBuilder] = { //
 		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of Types of Vehicle",
-		tags : "2023-7-31,pictionary", straightToAnswers:true,
+		tags : "2023-8-7,pictionary", straightToAnswers:true,
 		questInfo: new Array()
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 

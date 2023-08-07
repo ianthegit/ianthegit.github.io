@@ -5546,7 +5546,7 @@ quests[++questIndexBuilder] = {
 		name : "1% Club "+getAndIncrementCounterForType("1percent"),
 		hoverover : "Are you smart enough o join the 1% Club",
 		splash : {splashType : splashTypeText  , splashText : "This is a 1% Club round - you will get a bit more than 30 seconds per question.  Are you ready..." },
-		tags : "2023-7-31,saturday,InnerWheel,surfers,alphabet,1Percent", 
+		tags : "2023-8-7,saturday,InnerWheel,surfers,alphabet,1Percent", 
 		questInfo: new Array() };
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1, 
 	question : "If Katie unlocks her phone with the code 1120 and Ivy uses the code 0922, then what 4-digit code does Ellie use?" , answer : "1205 - Each name is 2 letters of the alphabet, and the unlock codes are the index numbers in the alphabet of those letters", answerSpeak : ""} ); 
@@ -5574,7 +5574,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion
 quests[++questIndexBuilder] = { 
 		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
 		hoverover : "Songs you will know, but wish you did not after this.",
-		tags : "music,2023-7-31,InnerWheel,saturday",
+		tags : "music,2023-8-7,InnerWheel,saturday",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
