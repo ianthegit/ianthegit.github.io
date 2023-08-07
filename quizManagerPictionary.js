@@ -2865,22 +2865,22 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 		tags : "2023-8-7,pictionary", straightToAnswers:true,
 		questInfo: new Array()
 	};
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AIL4fc9oP-fk-eHMCdkgfwbdMRPRpwsW-vq6N8kDbQivcFp8u7RxZPP4EbS4y63r4H3Gdg6aaqrjTWGritphYzMf30uQen8V_KG-cVXSsdOYl2Jz8x2TWehHTcJ2_uaJNzVQNmAw4vHVVnzrtXtqQwPKVte6Mw=w890-h505-s-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Car"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AIL4fc_ZoKBHJEY9xOWVZATD36XFtDrNoZN74s_HO7zTUh4aadafqJeym3dA-SvFmPOgKgY5e_N1r0UJNX60fFaOvK7X0H814uR1IlqT4h9oNvDEyXstBL-OQ9Hh7xV6C-42BXLr5Gg2h9rruE3WQRcTChwVPg=w1009-h549-s-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Bus"}) ;
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AIL4fc8ITEOa4wdrCZ-S5n0wY8kWsdPUSWbcZfu36p8FBF7MuhMlHwBZdRMGmgLnGY8LeeXsxRZQfeA_XAb39WEfHg33UzXFM8xYNnYm7-MR3Bv8XcFEDmMw1bjgC9qA6q2AbGK8axZ3Y6Pqib2H3u8x--Hp3A=w1328-h501-s-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Boat"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AIL4fc_EvHT1N_eKkl7k-3RFElHudObH-Rc7GHPBrWk0ioxg1bid38qVY66_rEHxr5MnMpTG_qRiWRhzfHenK_NY2n7yF7NpWYDqc5u9l_mSJAtPCpvkM1MU4UXkCc8-dP_uJu4TXboJuPzoz6UIT61u31FHKw=w573-h246-s-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Bike"}) ;
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AIL4fc-ESs2uqJIPR62MO4kRRO5xhaG3wXfkHwWlZkh9MuXWCJBmCvpjPnfKpBow_CWFTtGtaIiyFlrJDzq_KNp9WDFsCVig38NnUjcPhTm9QpK3NwQ14hiWmz7rnozREdPWnuWnni2qUGZWLNfofaj82pO7DA=w1483-h800-s-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Plane"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AIL4fc-necIjmthhzJdRKkobxlxI-ikaN_s9MprlaW440z7SD8OVNzedTb6ptkyMOVWvRGLfMapjEReZ0fCwW_6pqH7EgW9-MyJb0fC1Kc99xbzV8UhqhnnmUxP4uPXEOTe3-AmxAyqlkUpt5y3IepYEKEuvAA=w825-h664-s-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Walking"}) ;
 		
