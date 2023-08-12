@@ -5621,7 +5621,7 @@ quests[++questIndexBuilder] = {
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6nW3pf6yfdwKG9AbnG0e7j?utm_source=generator" width="100%" height="730" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
-	answer : "These boots were made for walking, Nancy Sinatra</BR>Barbie Girl, Aqua</BR><Like a virgin, Madonna/BR>Africa, Toto</BR>Come on Eileen, Dexy's Midnight Runners</BR>Walk this way, Aerosmith</BR>Pretty Woman, Roy Orbison</BR>Waterloo Sunset, the kinks</BR>You're so vain, Carly Simon</BR>Goodbye Ruby Tuesday, The Rolling Stones", answerSpeak : "", question : ""}) ;
+	answer : "These boots were made for walking, Nancy Sinatra</BR>Barbie Girl, Aqua</BR>Like a virgin, Madonna</BR>Africa, Toto</BR>Come on Eileen, Dexy's Midnight Runners</BR>Walk this way, Aerosmith</BR>Pretty Woman, Roy Orbison</BR>Waterloo Sunset, the kinks</BR>You're so vain, Carly Simon</BR>Goodbye Ruby Tuesday, The Rolling Stones", answerSpeak : "", question : ""}) ;
 
 
 quests[++questIndexBuilder] = { 
