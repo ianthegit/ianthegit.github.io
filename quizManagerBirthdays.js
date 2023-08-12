@@ -859,12 +859,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"7-31",
 	question : "Who is this, born July 31st 1965?" ,	answer : "J K Rowling", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/J._K._Rowling_2010.jpg/220px-J._K._Rowling_2010.jpg"	});	
 	
-/*
 
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
-	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
-
-*/
 
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 	birthday:"8-6",	
@@ -890,6 +885,24 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 	question : "Who is this, born August 7th 1966  " ,	answer : "Shobna Gulati", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Shobna_Gulati_2012.jpg/220px-Shobna_Gulati_2012.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"8-7",
 	question : "Who is this, born August 7th 1975  " ,	answer : "Charlize Theron", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Charlize_Theron_in_2017.jpg/1200px-Charlize_Theron_in_2017.jpg"	});	
+
+/*
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
+	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
+
+*/
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"8-12",
+	question : "Who is this, born July 12th 1925?" ,	answer : "Norris McWhirter", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Norris_McWhirter_%281977%29.jpg/220px-Norris_McWhirter_%281977%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"8-12",
+	question : "Who is this, also born July 12th 1925?" ,	answer : "Ross McWhirter", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/en/thumb/f/f8/Ross_McWhirter.jpg/220px-Ross_McWhirter.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"8-12",
+	question : "Who is this, born July 12th 1949?" ,	answer : "Mark Knopfler", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Mark_Knopfler_-_1979.jpg/170px-Mark_Knopfler_-_1979.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"8-12",
+	question : "Who is this, born July 12th 1971?" ,	answer : "Pete Sampras", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Pete_Sampras_%282008%29_1%2C_cropped.jpg/220px-Pete_Sampras_%282008%29_1%2C_cropped.jpg"	});	
+
+
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"8-13",
 	question : "Who is this, born August 13th 1970  " ,	answer : "Alan Shearer", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Alan_Shearer_1998.jpg/170px-Alan_Shearer_1998.jpg"	});	
