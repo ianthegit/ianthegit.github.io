@@ -5555,7 +5555,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1, 
 	question : "If Jack turned 17 yesterday and he'll turn 18 this year, what date is his birthday?" , answer : "31st December", answerSpeak : ""} ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1, 
-	question : "Richard is older than Clare.  Jojo is older than Hannie.  Hennie is older than Richard.  Who is the eldest?" , answer : "Jojo", answerSpeak : ""} ); 
+	question : "Richard is older than Clare.  Jojo is older than Hennie.  Hennie is older than Richard.  Who is the eldest?" , answer : "Jojo", answerSpeak : ""} ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1, 
 	question : "How many pets does Stella have in total if all except 2 are dogs, all except 2 are cats, and all except 2 are rabbits?" , answer : "3", answerSpeak : ""} ); 
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1, 
@@ -5580,6 +5580,38 @@ quests[++questIndexBuilder] = {
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2GOXuUMcrvHUr1GVIasxgh?utm_source=generator" width="100%" height="730" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
 	answer : "Take on Me, A-Ha</BR>99 red Balloons, Nena</BR>Stand by me, Ben E King</BR>Bleeding Love, Leona Lewis</BR>Umbrella, Rihanna</BR>Happy House, The Housemartins</BR>Tainted Love, Gloria Jones (Soft Cell)</BR>White Wedding, Billy Idol</BR>Crazy little thing called love, Queen</BR>Sex on fire, Kings of Leon", answerSpeak : "", question : ""}) ;
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "1% Club "+getAndIncrementCounterForType("1percent"),
+		hoverover : "Are you smart enough o join the 1% Club",
+		splash : {splashType : splashTypeText  , splashText : "This is a 1% Club round - you will get a bit more than 30 seconds per question.  Are you ready..." },
+		tags : "2023-8-13,saturday,InnerWheel,surfers,alphabet,1Percent", 
+		questInfo: new Array() };
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1, 
+	question : "Logically, which of these is the odd one out?"+ Table4ColumnStart + "Bryan Cranston definitely earns fans</td><td>Glorious Hugh Jackman is joyous</td><td>Lionel Messi nutmegs other players</td><td>Ringo Starr totally unleashes vocally" + Table4ColumnEnd
+  , answer : "'Glorious Hugh Jackman is joyous' - the rest have words in alphabetical order", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1, 
+	question : "Based on this list of ingredients, which popular dessert is this a recipe for? </BR> </BR> Ingredients:</BR> </BR> 2 parts PARSLEY </BR> 1 part VEGEMITE </BR> 2 parts LOBSTER </BR> 2 parts VANILLA" , answer : "PA-V-LO-VA", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture, timedQuestion : 1, 
+	question : "Which square has the largest area?" , answer : "'A' - It's the only square", image : "https://lh3.googleusercontent.com/pw/AIL4fc_M8QqBYbrXJQGABR9dxx_kzYFQZkIIi8gcMafdDx4BbAH-gxpCNkAJRBoYM7RA82-CbhN38PlNlTk2h1WzeRWj8niSyYcfMEU-pnq35SwGpKunXW8giPkwzTPuo0pvB5LOi076T6_KGNt-UOlCyUWu8g=w581-h193-s-no?authuser=0", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture, timedQuestion : 1, 
+	question : "Which is the odd one out?" , answer : "'Table' - the rest are all names", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AIL4fc9Zx1GaEDOwP58G01k4g5gNVk0S8_WBKw5OlaqnidepQIb-DbESALtLgZRpCik608lywE3pNKCTT8nmhYNiHOr-dfJghrj0jjrROH_hQTr4tMOHruZOj9da0TVPtLsEnnAv55MBi0AGJ-2UCqA9EUt9Mg=w604-h206-s-no?authuser=0"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1, 
+	question : "A bat and a ball cost " + gbp + "1.10 in total. The bat costs " + gbp + "1 more than the ball. How much does the ball cost?" , answer : gbp + "0.05", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1, 
+	question : "On reflection, which is the odd one out?" + Table4ColumnStart + "W</td><td>X</td><td>Y</td><td>Z" + Table4ColumnEnd, answer : "Z - the others look the same in their reflection", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1, 
+	question : "There is a word in English where the first two letters are male, the first three letters are female, the first four are a great man, and the whole word is a great woman.  What is the word" , answer : "Heroine (He, Her, Hero, Heroine)", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1, 
+	question : "Which option does not belong in this group? </BR> </BR> A) Broad </BR> B) Other </BR> C) Harm </BR> D) Esteem </BR> E) Merge </BR> F) Lower" , answer : "D) Esteem - the rest all make another word when mixed with their identifier", answerSpeak : ""} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture, timedQuestion : 1, 
+	question : "What 2 word saying is this?" , answer : "Travel Overseas", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AIL4fc_69luAJYFW3dICA_nZ43xeK5PGKRXt46jwvVbff4dspgTyNFCLBIVRCiqztvG4yRc9JdTFzZR4-TZD0Pq3EWZexhm6RrDeqbttuweGuZyvyWM7GfYGzxrW0PcjJbg75NK3Sk4kTUwidD_Qt1YJFRu9HA=w303-h177-s-no?authuser=0"} ); 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText, timedQuestion : 1, 
+	question : "What 5 letter word becomes more than 12 if you put a letter after it, and 13 if you put 6 letters before it?" , answer : "Dozen - Dozens is more than 12, Bakers Dozen is 13", answerSpeak : ""} ); 
+
+
 
 
 quests[++questIndexBuilder] = { 
