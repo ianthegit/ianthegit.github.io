@@ -886,12 +886,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"8-7",
 	question : "Who is this, born August 7th 1975  " ,	answer : "Charlize Theron", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Charlize_Theron_in_2017.jpg/1200px-Charlize_Theron_in_2017.jpg"	});	
 
-/*
 
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
-	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
-
-*/
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"8-12",
 	question : "Who is this, born July 12th 1925?" ,	answer : "Norris McWhirter", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Norris_McWhirter_%281977%29.jpg/220px-Norris_McWhirter_%281977%29.jpg"	});	
@@ -923,6 +918,25 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 	question : "Who is this cartoonist, born August 14th 1950  " ,	answer : "Gary Larson", answerSpeak : "", image : "https://i.guim.co.uk/img/media/ad5af105d20e2fc55b78530f7a11f2cf8965f521/192_166_946_567/master/946.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=7019e34a3b60c5422eda89d284576687"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"8-14",
 	question : "Who is this, born August 14th 1945  " ,	answer : "Steve Martin", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Steve_Martin_HS_Yearbook.jpeg/170px-Steve_Martin_HS_Yearbook.jpeg"	});	
+
+/*
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
+	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
+
+*/
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"8-19",
+	question : "Who is this, born August 19th 1939?" ,	answer : "Ginger Baker", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Ginger_Baker_in_1984.jpg/220px-Ginger_Baker_in_1984.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"8-19",
+	question : "Who is this, born August 19th 1946?" ,	answer : "Bill Clinton", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Bill_Clinton_in_1963_Old_Gold_Book.jpg/170px-Bill_Clinton_in_1963_Old_Gold_Book.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"8-19",
+	question : "Who is this, born August 19th 1951?" ,	answer : "John Deacon", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Bass_player_queen.jpg/220px-Bass_player_queen.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"8-19",
+	question : "Who is this, born August 19th 1969?" ,	answer : "Matthew Perry", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Matthew_Perry_by_David_Shankbone_%28cropped%29.jpg/170px-Matthew_Perry_by_David_Shankbone_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"8-19",
+	question : "Who is this, born August 19th 1984?" ,	answer : "Simon Bird", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Simon_Bird%2C_2010.jpg/220px-Simon_Bird%2C_2010.jpg"	});	
+
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"8-20",
 	question : "Who is this, born August 20th 1983  " ,	answer : "Andrew Garfield", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Andrew_Garfield_by_Gage_Skidmore_%28cropped%29.jpg/220px-Andrew_Garfield_by_Gage_Skidmore_%28cropped%29.jpg"	});	
