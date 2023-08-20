@@ -5625,6 +5625,44 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2023-8-20,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What is the name for a woman who is superior to a convent in certain religious orders", // 
+	answerSpeak : "", answer : "Abbess"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What is the only country beside Azerbaijan that starts with an 'A' but doesn't end with an 'A'", // 
+	answerSpeak : "", answer : "Afghanistan"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "Which star, the brightest in the constellation Taurus, is known as the 'Eye of Taurus'", // 
+	answerSpeak : "", answer : "Aldebaran"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "Winning in both 1957 And 1958, who was the first African-American woman to win a Wimbledon Tennis event", // 
+	answerSpeak : "", answer : "Althea Gibson"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What is the name of the daughter of Czar Nicholas II of Russia, who is said to have escaped death in the Russian revolution", // 
+	answerSpeak : "", answer : "Anastasia"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "Ethylene glycol is frequently used in automobiles, particularly in cold climates/weather. What is it better known as", // 
+	answerSpeak : "", answer : "Anti-freeze"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What name is given to a person bound for a number of years to a master who undertakes to instruct them", // 
+	answerSpeak : "", answer : "Apprentice"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What is the name for a well in which water rises through natural pressure", // 
+	answerSpeak : "", answer : "Artesian"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "Acetylsalicylic acid is the active ingredient in which incredibly popular and well known drug", // 
+	answerSpeak : "", answer : "Aspirin"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "The Northern Lights are the Aurora Borealis, what name is given to the Southern Lights", // 
+	answerSpeak : "", answer : "Aurora Australis"}) ;
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2023-8-20,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0raIVsZuQZbKpwTI08tut1?utm_source=generator" width="100%" height="730" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "You're beautiful, James Blunt</BR>Poker Face, Lady Gaga</BR>Hot N Cold, Katie Perry</BR>Baby on more time, Britney Spears</BR>Paint it Black, Rolling Stones</BR>Should I stay or should I go, The Clash</BR>Just can't get enough, Depeche Mode</BR>Mack the knife, Bobby Darin</BR>I will survive, Gloria Gaynor</BR>Great balls of fire, Jerry Lee Lewis", answerSpeak : "", question : ""}) ;
+
+
+quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
 		hoverover : "What sinks, what floats",
 		tags : "2022-x-xx,saturday,InnerWheel,surfers", 
