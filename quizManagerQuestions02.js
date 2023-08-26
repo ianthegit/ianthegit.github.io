@@ -5697,7 +5697,7 @@ quests[++questIndexBuilder] = {
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
-	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0raIVsZuQZbKpwTI08tut1?utm_source=generator" width="100%" height="730" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1ZNR0X41wvB3QmAROzqTxK?utm_source=generator" width="100%" height="730" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
 	answer : "Rehab, Amy Winehouse</BR>The Passenger, Iggy Pop</BR>Perfect Day, Lou Reed</BR>Riders on the storm, The Doors</BR>I fought the law, The Clash</BR>Do it again, Steely Dan</BR>Golden Brown, the Stranglers</BR>Blue Monday, New Order</BR>Great Balls of fire, Jerry Lee Lewis</BR>You can't always get what you want, the Rolling Stones", answerSpeak : "", question : ""}) ;
 
 
