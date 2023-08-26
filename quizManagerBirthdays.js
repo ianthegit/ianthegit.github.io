@@ -919,12 +919,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"8-14",
 	question : "Who is this, born August 14th 1945  " ,	answer : "Steve Martin", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Steve_Martin_HS_Yearbook.jpeg/170px-Steve_Martin_HS_Yearbook.jpeg"	});	
 
-/*
 
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
-	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
-
-*/
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"8-19",
 	question : "Who is this, born August 19th 1939?" ,	answer : "Ginger Baker", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Ginger_Baker_in_1984.jpg/220px-Ginger_Baker_in_1984.jpg"	});	
@@ -968,6 +963,29 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"8-21",
 	question : "Who is this, born August 21st 1930  " ,	answer : "Princess Margaret", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Prinses_Margaret_%2C_Lord_Snowdon_en_Prins_Bernhard_in_de_Hoovercraft%2C_Prinses_Mar%2C_Bestanddeelnr_917-7816_%28cropped%29.jpg/220px-Prinses_Margaret_%2C_Lord_Snowdon_en_Prins_Bernhard_in_de_Hoovercraft%2C_Prinses_Mar%2C_Bestanddeelnr_917-7816_%28cropped%29.jpg"	});	
 
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"8-26",
+	question : "Who is this, born August 26th 1910?" ,	answer : "Mother Teresa", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Mother_Teresa_1.jpg/220px-Mother_Teresa_1.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"8-26",
+	question : "Who is this, born August 26th 1946?" ,	answer : "Alison Steadman", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/You%27ll_Have_Had_Your_Tea_-_Alison_Steadman.jpg/220px-You%27ll_Have_Had_Your_Tea_-_Alison_Steadman.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"8-26",
+	question : "Who is this, born August 26th 1967?" ,	answer : "Michael Gove", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Michael_Gove_Official_Cabinet_Portrait%2C_September_2021_%28cropped%29.jpg/220px-Michael_Gove_Official_Cabinet_Portrait%2C_September_2021_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"8-26",
+	question : "Who is this, born August 26th 1968?" ,	answer : "Chris Boardman", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/2018_Tour_de_Yorkshire_-_Chris_Boardman.jpg/220px-2018_Tour_de_Yorkshire_-_Chris_Boardman.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"8-26",
+	question : "Who is this, born August 26th 1970?" ,	answer : "Melissa McCarthy", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Melissa_McCarthy_in_2018_%28cropped%29.jpg/220px-Melissa_McCarthy_in_2018_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"8-26",
+	question : "Who is this, born August 26th 1980?" ,	answer : "Macaulay Culkin", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Macaulay_Culkin_1991_B.jpg/220px-Macaulay_Culkin_1991_B.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"8-26",
+	question : "Who is this, born August 26th 1980?" ,	answer : "Chris Pine", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Chris_Pine_%2843043463084%29_%28cropped%29.jpg/220px-Chris_Pine_%2843043463084%29_%28cropped%29.jpg"	});	
+
+/*
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
+	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
+
+*/
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"8-27",
 	question : "Who is this, born August 27th 1972" ,	answer : "Denise Lewis", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Denise_Lewis_%28cropped%29.jpg/220px-Denise_Lewis_%28cropped%29.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"8-27",

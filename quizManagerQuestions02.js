@@ -5662,6 +5662,46 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : "You're beautiful, James Blunt</BR>Poker Face, Lady Gaga</BR>Hot N Cold, Katie Perry</BR>Baby on more time, Britney Spears</BR>Paint it Black, Rolling Stones</BR>Should I stay or should I go, The Clash</BR>Just can't get enough, Depeche Mode</BR>Mack the knife, Bobby Darin</BR>I will survive, Gloria Gaynor</BR>Great balls of fire, Jerry Lee Lewis", answerSpeak : "", question : ""}) ;
 
 
+
+quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2023-8-28,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What hair was originally used to make shaving brushes?", // 
+	answerSpeak : "", answer : "Badger"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "On which London street is the commemoration statue of fictional character Sherlock Holmes?", // 
+	answerSpeak : "", answer : "Baker"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What is the name given to a large patterned handkerchief?", // 
+	answerSpeak : "", answer : "Bandanna"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What is it called when fat and juices from the roasting tin are spooned over meat while it is cooking?", // 
+	answerSpeak : "", answer : "Basting"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "Belgium, the Netherlands and Luxembourg came together in 1948 to form an economic union, known as what?", // 
+	answerSpeak : "", answer : "Benelux"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What term describes the irreverent treatment of religion?", // 
+	answerSpeak : "", answer : "Blaspheme"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "Who refused the Nobel Literature prize in 1958 for his novel 'Dr Zhivago'?", // 
+	answerSpeak : "", answer : "Boris Pasternak"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "Which spirit is added to sugar and egg yolks to make Advocaat?", // 
+	answerSpeak : "", answer : "Brandy"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "In which card game are teams designated as North South and East West?", // 
+	answerSpeak : "", answer : "Bridge"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "Chablis comes from what major wine producing area of France?", // 
+	answerSpeak : "", answer : "Burgundy"}) ;
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2023-8-28,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0raIVsZuQZbKpwTI08tut1?utm_source=generator" width="100%" height="730" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Rehab, Amy Winehouse</BR>The Passenger, Iggy Pop</BR>Perfect Day, Lou Reed</BR>Riders on the storm, The Doors</BR>I fought the law, The Clash</BR>Do it again, Steely Dan</BR>Golden Brown, the Stranglers</BR>Blue Monday, New Order</BR>Great Balls of fire, Jerry Lee Lewis</BR>You can't always get what you want, the Rolling Stones", answerSpeak : "", question : ""}) ;
+
+
+
 quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
 		hoverover : "What sinks, what floats",
@@ -5683,6 +5723,31 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Do
 
 /*
 
+https://www.reddit.com/r/sundayquiz/comments/v1m59i/alphabet_quiz_226_b/
+https://www.reddit.com/r/trivia/comments/v2d5kn/alphabet_quiz_326_c/
+https://www.reddit.com/r/quiz/comments/v34f54/alphabet_quiz_426_d/
+https://www.reddit.com/r/trivia/comments/v3vpuq/alphabet_quiz_526_e/
+https://www.reddit.com/r/sundayquiz/comments/v5zu8h/alphabet_quiz_626_f/
+https://www.reddit.com/r/sundayquiz/comments/v6s7jr/alphabet_quiz_726_g/
+https://www.reddit.com/r/trivia/comments/v7m7kd/alphabet_quiz_826_h/
+https://www.reddit.com/r/sundayquiz/comments/v8cvow/alphabet_quiz_926_i/
+https://www.reddit.com/r/sundayquiz/comments/v92wu6/alphabet_quiz_1026_j/
+https://www.reddit.com/r/sundayquiz/comments/vb6oec/alphabet_quiz_1126_k/
+https://www.reddit.com/r/sundayquiz/comments/vbzb7m/alphabet_quiz_1226_l/
+https://www.reddit.com/r/sundayquiz/comments/vcplpk/alphabet_quiz_1326_m/
+https://www.reddit.com/r/sundayquiz/comments/vdj069/alphabet_quiz_1426_n/
+https://www.reddit.com/r/sundayquiz/comments/ve8v39/alphabet_quiz_1526_o/
+https://www.reddit.com/r/sundayquiz/comments/vghmra/alphabet_quiz_1626_p/
+https://www.reddit.com/r/trivia/comments/vhaluy/alphabet_quiz_1726_q/
+https://www.reddit.com/r/sundayquiz/comments/vi1n32/alphabet_quiz_1826_r/
+https://www.reddit.com/r/sundayquiz/comments/visp1e/alphabet_quiz_1926_s/
+https://www.reddit.com/r/sundayquiz/comments/vjmcob/alphabet_quiz_2026_t/
+https://www.reddit.com/r/sundayquiz/comments/vlr2by/alphabet_quiz_2126_u/
+https://www.reddit.com/r/sundayquiz/comments/vmjky7/alphabet_quiz_2226_v/
+https://www.reddit.com/r/sundayquiz/comments/vneuo8/alphabet_quiz_2326_w/
+https://www.reddit.com/r/sundayquiz/comments/vo4sw6/alphabet_quiz_2426_x/
+https://www.reddit.com/r/sundayquiz/comments/voxjj4/alphabet_quiz_2526_y/
+https://www.reddit.com/r/trivia/comments/vppx91/alphabet_quiz_2626_z/
 quests[++questIndexBuilder] = { 
 		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
 		hoverover : "Songs you will know, but wish you did not after this.",

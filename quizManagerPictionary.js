@@ -412,7 +412,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 quests[++questIndexBuilder] = { //
 		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the Theme of Banks",
-		tags : "2021-5-1,pictionary",
+		tags : "2021-5-1,2023-8-28,2023-8-27,pictionary",
 		questInfo: new Array()
 	};
 
@@ -2914,6 +2914,11 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 
 		
 /*
+
+
+
+
+
  * 	image : "",
 	answerimage : "", answer : "Table"}) ;
 
