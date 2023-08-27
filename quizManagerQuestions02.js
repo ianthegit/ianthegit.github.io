@@ -5666,7 +5666,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 quests[++questIndexBuilder] = { 
 		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
 		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
-		tags : "2023-8-28,saturday,InnerWheel,surfers,alphabet", 
+		tags : "2023-8-27,saturday,InnerWheel,surfers,alphabet", 
 		questInfo: new Array() };
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What hair was originally used to make shaving brushes?", // 
 	answerSpeak : "", answer : "Badger"}) ;
@@ -5693,7 +5693,7 @@ quests[++questIndexBuilder] = {
 quests[++questIndexBuilder] = { 
 		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
 		hoverover : "Songs you will know, but wish you did not after this.",
-		tags : "music,2023-8-28,InnerWheel,saturday",
+		tags : "music,2023-8-27,InnerWheel,saturday",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
