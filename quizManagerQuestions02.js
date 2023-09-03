@@ -5703,6 +5703,44 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2023-9-4,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What C </BR></BR>What instrument is used for measuring the distance between two points on a curved surface?", // 
+	answerSpeak : "", answer : "Calipers"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What C </BR></BR>In which country was Greenpeace founded in 1971?", // 
+	answerSpeak : "", answer : "Canada"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What C </BR></BR>The Panama canal connects the Pacific Ocean and which other body of water?", // 
+	answerSpeak : "", answer : "Caribbean Sea"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What C </BR></BR>What structure in the back of the brain governs motor control?", // 
+	answerSpeak : "", answer : "Cerebellum"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What C </BR></BR>What name is given to a large French country house?", // 
+	answerSpeak : "", answer : "Chateau"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What C </BR></BR>Which chemical compound in the body is linked to hardening of the arteries?", // 
+	answerSpeak : "", answer : "Cholesterol"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What C </BR></BR>What is the fear of enclosed spaces called?", // 
+	answerSpeak : "", answer : "Claustrophobia"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What C </BR></BR>What was the computer called which was developed from Turing's ‘bombes’ at Bletchley Park?", // 
+	answerSpeak : "", answer : "Colossus"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What C </BR></BR>What is the name for the deep freezing of bodies of people in the hope of being woken in the future?", // 
+	answerSpeak : "", answer : "Cryonics"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What C </BR></BR>In Greek mythology Polyphemus was the leader of which group of mythical giants?", // 
+	answerSpeak : "", answer : "Cyclops"}) ;
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2023-9-4,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1HstFXsbeb5nXPpRRompVW?utm_source=generator" width="100%" height="730" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Rehab, Amy Winehouse</BR>When you say nothing at all, Ronan Keating</BR>Can't help falling in Love, Elvis Presley</BR>Caste on the hill, Ed Sheeran</BR>In the air tonight, Phil Collins</BR>I beleive in a thing called love, The Darkness</BR>Tiny Dancer, Elton John</BR>Have you ever seen the rain, Bonnie Tyler</BR>I want to know what love is, Foreigner</BR>Walking in Memphis, Marc Cohn", answerSpeak : "", question : ""}) ;
+
+
+
+quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
 		hoverover : "What sinks, what floats",
 		tags : "2022-x-xx,saturday,InnerWheel,surfers", 

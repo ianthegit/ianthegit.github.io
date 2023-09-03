@@ -980,12 +980,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"8-26",
 	question : "Who is this, born August 26th 1980?" ,	answer : "Chris Pine", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Chris_Pine_%2843043463084%29_%28cropped%29.jpg/220px-Chris_Pine_%2843043463084%29_%28cropped%29.jpg"	});	
 
-/*
 
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
-	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
-
-*/
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"8-27",
 	question : "Who is this, born August 27th 1972" ,	answer : "Denise Lewis", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Denise_Lewis_%28cropped%29.jpg/220px-Denise_Lewis_%28cropped%29.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"8-27",
@@ -1008,6 +1003,25 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"8-28",
 	question : "Who is this, born August 28th 1947" ,	answer : "Emlyn Hughes", answerSpeak : "", image : "https://www.bigredbook.info/images/emlynhughes.jpg"	});	
 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-2",
+	question : "Who is this, born September 2nd 1913?" ,	answer : "Bill Shankly", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/en/thumb/1/15/Billshankly1.jpg/200px-Billshankly1.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-2",
+	question : "Who is this, born September 2nd 1949?" ,	answer : "Moira Stuart", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Moira_Stuart_for_the_British_Library.jpg/220px-Moira_Stuart_for_the_British_Library.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-2",
+	question : "Who is this, born September 2nd 1952?" ,	answer : "Jimmy Connors", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Jimmy_Conners_1994.jpg/220px-Jimmy_Conners_1994.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-2",
+	question : "Who is this, born September 2nd 1962?" ,	answer : "Keir Starmer", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Official_portrait_of_Keir_Starmer_crop_2.jpg/220px-Official_portrait_of_Keir_Starmer_crop_2.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-2",
+	question : "Who is this, born September 2nd 1964?" ,	answer : "Keanu Reeves", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Reuni%C3%A3o_com_o_ator_norte-americano_Keanu_Reeves_%2846806576944%29_%28cropped%29.jpg/220px-Reuni%C3%A3o_com_o_ator_norte-americano_Keanu_Reeves_%2846806576944%29_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-2",
+	question : "Who is this, born September 2nd 1966?" ,	answer : "Salma Hayek", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Salma_Hayek-9894.jpg/220px-Salma_Hayek-9894.jpg"	});	
+
+/*
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
+	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
+
+*/
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-3",
 	question : "Who is this, born September 3rd 1981" ,	answer : "Fearne Cotton", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Fearne_Cotton_2014.jpg/220px-Fearne_Cotton_2014.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-3",
