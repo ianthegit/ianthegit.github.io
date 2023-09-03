@@ -5721,7 +5721,7 @@ quests[++questIndexBuilder] = {
 	answerSpeak : "", answer : "Cholesterol"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What C </BR></BR>What is the fear of enclosed spaces called?", // 
 	answerSpeak : "", answer : "Claustrophobia"}) ;
- addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What C </BR></BR>What was the computer called which was developed from Turing's ‘bombes’ at Bletchley Park?", // 
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What C </BR></BR>What was the computer called which was developed from Turing's 'bombes' at Bletchley Park?", // 
 	answerSpeak : "", answer : "Colossus"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What C </BR></BR>What is the name for the deep freezing of bodies of people in the hope of being woken in the future?", // 
 	answerSpeak : "", answer : "Cryonics"}) ;
