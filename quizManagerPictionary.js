@@ -861,10 +861,10 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "https://i.makeagif.com/media/5-09-2017/eDVWcp.gif", answerSpeak:"", answer : "Blackboard eraser"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLVk7w8x5eFb98QuU7BI8wdfjJEQgqINhJtQlUgmbMB2hcLNeLwRGh7RfFQN2a3A3uKHlb9kkYFoonDy-byk25n6Ipl2oElh1IBX-56F1hyUNSyUDBir3kqIXuJMrXfIwidg3NLkzp-OasM3-9Ic-5jkRQ=w745-h590-no?authuser=0",
-	answerimage : "https://i.chzbgr.com/full/9089532160/hE4CE046C/contemplate-the-insigniacance-of-one-human-life-on-this-bau-of-swirling-gas-and-rock-pee-matsareke", answerSpeak:"", answer : "Whiteboard"}) ;
+	answerimage : "https://img.huffingtonpost.com/asset/5d0224ea2500004e12e33a0d.jpeg?ops=scalefit_950_800_noupscale", answerSpeak:"", answer : "Blackboard"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLXl67bVt3fnyIjuFTEQwXJ9NR_s6dz08g8EdTbOOZjamPMBGA70A8YyvE5Z56Nh3EzqrcCYmQu688CqrDJB8bZl-WHwf8-DxEpz9KuhO-kTE1G8nBcqXHC38ZZ_xUdnzPNIzBxzsYcP8kpTCIrpsNXAjA=w845-h618-no?authuser=0",
-	answerimage : "https://img.huffingtonpost.com/asset/5d0224ea2500004e12e33a0d.jpeg?ops=scalefit_950_800_noupscale", answerSpeak:"", answer : "Blackboard"}) ;
+	answerimage : "https://i.chzbgr.com/full/9089532160/hE4CE046C/contemplate-the-insigniacance-of-one-human-life-on-this-bau-of-swirling-gas-and-rock-pee-matsareke", answerSpeak:"", answer : "Whiteboard"}) ;
 
 
 quests[++questIndexBuilder] = { //
