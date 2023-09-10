@@ -5757,7 +5757,7 @@ quests[++questIndexBuilder] = {
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What D </BR></BR>Which famous English chef released the controversial cookbook 'How To Cheat' in 2008?", // 
 	answerSpeak : "", answer : "Delia Smith"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What D </BR></BR>What name is given to a doctor who specialises in skin disorders?", // 
-	answerSpeak : "", answer : "Dermatatologist"}) ;
+	answerSpeak : "", answer : "Dermatologist"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What D </BR></BR>What is an electronic device that allows the passage of current in only one direction?", // 
 	answerSpeak : "", answer : "Diode"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What D </BR></BR>What type of racing has only two cars competing on the track at the same time?", // 
