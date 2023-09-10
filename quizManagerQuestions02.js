@@ -5750,7 +5750,7 @@ quests[++questIndexBuilder] = {
 	answerSpeak : "", answer : "Daggers"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What D </BR></BR>Best remembered for his fairy tales, what nationality was Hans Christian Andersen?", // 
 	answerSpeak : "", answer : "Danish"}) ;
- addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What D </BR></BR>n cooking six drops equal one what?", // 
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What D </BR></BR>In cooking six drops equal one what?", // 
 	answerSpeak : "", answer : "Dash"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What D </BR></BR>Which Californian desert drops below sea level?", // 
 	answerSpeak : "", answer : "Death Valley"}) ;
