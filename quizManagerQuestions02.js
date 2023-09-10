@@ -5740,6 +5740,47 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 
+
+quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2023-9-10,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What D </BR></BR>Dirk, poniard, and stiletto are all types of what?", // 
+	answerSpeak : "", answer : "Daggers"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What D </BR></BR>Best remembered for his fairy tales, what nationality was Hans Christian Andersen?", // 
+	answerSpeak : "", answer : "Danish"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What D </BR></BR>n cooking six drops equal one what?", // 
+	answerSpeak : "", answer : "Dash"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What D </BR></BR>Which Californian desert drops below sea level?", // 
+	answerSpeak : "", answer : "Death Valley"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What D </BR></BR>Which famous English chef released the controversial cookbook 'How To Cheat' in 2008?", // 
+	answerSpeak : "", answer : "Delia Smith"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What D </BR></BR>What name is given to a doctor who specialises in skin disorders?", // 
+	answerSpeak : "", answer : "Dermatatologist"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What D </BR></BR>What is an electronic device that allows the passage of current in only one direction?", // 
+	answerSpeak : "", answer : "Diode"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What D </BR></BR>What type of racing has only two cars competing on the track at the same time?", // 
+	answerSpeak : "", answer : "Drag Racing"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What D </BR></BR>Which brand of beer does Homer Simpson drink regularly?", // 
+	answerSpeak : "", answer : "Duff"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What D </BR></BR>Hills and ridges composed of drifting sand are known as what?", // 
+	answerSpeak : "", answer : "Dunes"}) ;
+ 
+ 
+ 
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2023-9-10,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6BEiTG7d3VVbO0MEKUPhlv?utm_source=generator" width="100%" height="730" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Rocket Man, Elton John</BR>With or Without You, U2</BR>Sad Songs, Elton John</BR>Brown Eyed Girl, Van Morrisson</BR>Islands in the Stream, Dolly Parton and Kenny Rogers</BR>Man in the Mirror, Michael Jackson</BR>I wanna dance with somebody, Whitney Houston</BR>In the Ghetto, Elvis Presley</BR>Nothing compares 2 U, Sinead O'Connor</BR>Wild Horses, Rolling Stones", answerSpeak : "", question : ""}) ;
+
+
+
 quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
 		hoverover : "What sinks, what floats",

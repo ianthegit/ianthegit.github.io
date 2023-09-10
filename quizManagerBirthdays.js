@@ -1016,12 +1016,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-2",
 	question : "Who is this, born September 2nd 1966?" ,	answer : "Salma Hayek", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Salma_Hayek-9894.jpg/220px-Salma_Hayek-9894.jpg"	});	
 
-/*
-
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
-	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
-
-*/
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-3",
 	question : "Who is this, born September 3rd 1981" ,	answer : "Fearne Cotton", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Fearne_Cotton_2014.jpg/220px-Fearne_Cotton_2014.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-3",
@@ -1042,6 +1036,27 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-4",
 	question : "Who is this (on the left), born September 4th 1972" ,	answer : "Steve Leonard", answerSpeak : "", image : "https://images.squarespace-cdn.com/content/v1/55f96d2fe4b088dd004c8775/1442663272798-5NREJMZBETVXL9OQQTYR/steveleonard01.jpg"	});	
 
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-9",
+	question : "Who is this, born September 9th 1949?" ,	answer : "John Curry", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/John_Curry_1976.jpg/240px-John_Curry_1976.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-9",
+	question : "Who is this, born September 9th 1952?" ,	answer : "Dave Stewart", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Dave_Stewart%28musician%29.jpg/220px-Dave_Stewart%28musician%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-9",
+	question : "Who is this, born September 9th 1960?" ,	answer : "Hugh Grant", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Hugh_Grant_in_2014.jpg/220px-Hugh_Grant_in_2014.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-9",
+	question : "Who is this, born September 9th 1974?" ,	answer : "Gok Wan", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Gok_Wan_%28cropped%29.jpg/220px-Gok_Wan_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-9",
+	question : "Who is this, born September 9th 1975?" ,	answer : "Michael Buble", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/MichaelBubleSmileeb2011.jpg/220px-MichaelBubleSmileeb2011.jpg"	});	
+
+/*
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
+	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
+
+*/
+
+
+
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-10",
 	question : "Who drew this, born September 10th 1926?" ,	answer : "Beryl Cook", answerSpeak : "", image : "https://www.berylcookprints.co.uk/wp-content/uploads/2018/07/Beryl-Cook-party-girls.jpeg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-10",
@@ -1049,7 +1064,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-10",
 	question : "Who is this, born September 10th 1933?" ,	answer : "Karl Lagerfield", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Karl_Lagerfeld_2014.jpg/220px-Karl_Lagerfeld_2014.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-10",
-	question : "Who is this, born September 10th 1957?" ,	answer : "Carol Decker (T'Pau singer for 1/2 point)", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/e/ee/T%27Pau_2010_cropped.jpg"	});	
+	question : "Who is this, born September 10th 1957?" ,	answer : "Carol Decker", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/e/ee/T%27Pau_2010_cropped.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-10",
 	question : "Who is this, born September 10th 1960?" ,	answer : "Colin Firth", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Colin_Firth_%2836124162705%29_%28cropped%29.jpg/220px-Colin_Firth_%2836124162705%29_%28cropped%29.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-10",
