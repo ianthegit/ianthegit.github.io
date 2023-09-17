@@ -5794,15 +5794,15 @@ quests[++questIndexBuilder] = {
 	answerSpeak : "", answer : "Edinburgh"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What E </BR></BR>If you ordered unagi in a Japanese restaurant what creature would you get?", // 
 	answerSpeak : "", answer : "Eels"}) ;
- addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What E </BR></BR>WHat is teh smallest 2-digit prime number", // 
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What E </BR></BR>WHat is the smallest 2-digit prime number", // 
 	answerSpeak : "", answer : "Eleven"}) ;
- addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What E </BR></BR>By what name is the artist Marshall Mathers better known?", // 
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What E </BR></BR>By what name is the singer Marshall Mathers better known?", // 
 	answerSpeak : "", answer : "Eminem"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What E </BR></BR>What is the second largest extant bird in the world by height?", // 
 	answerSpeak : "", answer : "Emu"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What E </BR></BR>What was the name of the city in the Bible which was built by Cain and named after his son?", // 
 	answerSpeak : "", answer : "Enoch"}) ;
- addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What E </BR></BR>n the early 20th century, rattlesnake venom was used to treat which illness?", // 
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What E </BR></BR>In the early 20th century, rattlesnake venom was used to treat which illness?", // 
 	answerSpeak : "", answer : "Epilepsy"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What E </BR></BR>The study of word origins is called what?", // 
 	answerSpeak : "", answer : "Etymology"}) ;
