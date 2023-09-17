@@ -2947,22 +2947,22 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 		questInfo: new Array()
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AIL4fc96DkdY5UySRbOcsK8XoJ5MS_dp1zqy4y5OWEDEPNPbBOGmr6hPHyq2ME_5T1lOzeYJ1TSz-c4JsnYdZZ5YkRNNpPIVGhjbxNHmQFMim6ukzhHwov0NUKRuhxU4L-SJcDhY6e6ySQXjh7_9Mgm3hUXSsg=w271-h305-s-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Stethoscope"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AIL4fc9WEF94zLh1mDPSIIJWtyWFO-t8CrCpv_h-NWNNECSlSe3p2PFIwSANZDwxgTtV5persCVjSk6jfqy55eWY4TlvL0IWZr4mvaz-6ywL69YIN5ElgIFbpAzkRXBWs9YtnKbY0PYBQ8nEuO05WCpWQcTyuQ=w672-h172-s-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Syringe"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AIL4fc_uzRnZZZnwM_TicPUEPkHLk6pJ-LuLe8nowcolze6zO26N8XQ3TvNYYPsw8BpUQDZHO0GyThvxW35PH5dFge1L98TGRCSchAG-f7sxCWRJN8vbxZNdBdztHKyc3tzs5PxzJHeO00YwBECu1FOUVnggfw=w464-h271-s-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "MRI"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AIL4fc8xHR6Bfq9detrtqq-vuMC8b8KXTqo-7AAbk7SNj2Bz1qm-EsJg2nQMsCynNyTr44GU_9kkcjvoN7T8MbdgRSpYeS7cJvkp0TPoTzfrFGiqhksz1qskOjj8GOohRpDicPD7Fr-1zkL_1VqLayVc3yc98Q=w371-h399-s-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "X-Ray"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AIL4fc9dQ791DpFbhAEfLzCBlOcqotRjyB3tthF3NBr14W-IZmAs7mRCU-EQI8oPN1vW48gQmwBKS650jD9ljWdVCRkjdCBH4zkZhRksax9A5rWV0SXM7VSnvS7o3p9lTzA-WSoFh7frexSs-pRhIUTq_pjf1Q=w441-h374-s-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Hospital Food"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AIL4fc9c12NCqX3l3WHElr2wd4MHto5BmaN7JvAasOLJiIGYPMapyE19kNWojZFDlSchQ3ZT5peMGvmSvXNruWJaW2X34oanqVNmQiF2FyT5BGuG648nnIhvTu_J4x-mtMiBsMsQIZ-HUvXs_OXwVyNmmdVSyw=w375-h256-s-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Jules"}) ;
 
 
