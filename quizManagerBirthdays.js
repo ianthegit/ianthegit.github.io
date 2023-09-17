@@ -1048,12 +1048,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-9",
 	question : "Who is this, born September 9th 1975?" ,	answer : "Michael Buble", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/MichaelBubleSmileeb2011.jpg/220px-MichaelBubleSmileeb2011.jpg"	});	
 
-/*
-
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
-	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
-
-*/
 
 
 
@@ -1080,6 +1074,27 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 	question : "Who is this chap, born September 11th 1967?" ,	answer : "Harry Connick Jr", answerSpeak : "", image : "https://i.dailymail.co.uk/1s/2019/11/19/12/21198842-0-image-a-11_1574166852869.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-11",
 	question : "Who is this, born September 11th 1965?" ,	answer : "Moby", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Moby_12_17_2018_-16_%2831743191557%29.jpg/220px-Moby_12_17_2018_-16_%2831743191557%29.jpg"	});	
+
+
+/*
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
+	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
+
+*/
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-16",
+	question : "Who is this, born September 16th 1925?" ,	answer : "B B King", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/B.B._King_07_%28cropped%29.jpg/220px-B.B._King_07_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-16",
+	question : "Who is this, born September 16th 1927?" ,	answer : "Peter Falk", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Columbo_Peter_Falk_1973.JPG/220px-Columbo_Peter_Falk_1973.JPG"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-16",
+	question : "Who is this, born September 16th 1950?" ,	answer : "Lloyd Grossman", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Loyd_Grossman_opens_Pulse_FM_student_radio_station%2C_1999.jpg/220px-Loyd_Grossman_opens_Pulse_FM_student_radio_station%2C_1999.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-16",
+	question : "Who is this, born September 16th 1952?" ,	answer : "Mickey Rourke", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Mickey_Rourke_10_December_2010_%28cropped%29.jpeg/220px-Mickey_Rourke_10_December_2010_%28cropped%29.jpeg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-16",
+	question : "Who is this, born September 16th 1956?" ,	answer : "David Copperfield", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/DCatAGT.JPG/220px-DCatAGT.JPG"	});	
+
+
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-17",
 	question : "Who is this, born September 17th 1960?" ,	answer : "Damon Hill", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Damon_Hill_May_2012_Cropped.jpg/220px-Damon_Hill_May_2012_Cropped.jpg"	});	
