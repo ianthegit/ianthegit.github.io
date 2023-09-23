@@ -5820,6 +5820,44 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2023-9-24,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What F </BR></BR>Any important face of a building, usually the principal front with the main entrance is a?", // 
+	answerSpeak : "", answer : "Facade"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What F </BR></BR>What is the chemical symbol for iron?", // 
+	answerSpeak : "", answer : "Fe"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What F </BR></BR>What is the largest and longest bone in the human body?", // 
+	answerSpeak : "", answer : "Femur"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What F </BR></BR>How many bonus points do you get in Scrabble if you play all seven tiles at once?", // 
+	answerSpeak : "", answer : "Fifty"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What F </BR></BR>What does a vexillologist study?", // 
+	answerSpeak : "", answer : "Flags"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What F </BR></BR>Which city is the capital of the Italian region of Tuscany?", // 
+	answerSpeak : "", answer : "Florence"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What F </BR></BR>What does a golfer usually shout as a warning before teeing off?", // 
+	answerSpeak : "", answer : "Fore"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What F </BR></BR>What is the hazelnut liqueur named for the mysterious monk that made it 300 years ago?", // 
+	answerSpeak : "", answer : "Frangelico"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What F </BR></BR>Another name for a tightrope walker is a what?", // 
+	answerSpeak : "", answer : "Funambulist"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What F </BR></BR>What were Cinderella's slippers originally made from before the story changed and they were glass?", // 
+	answerSpeak : "", answer : "Fur"}) ;
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2023-9-24,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5j9bWQOpVb3hocDcq62VsA?utm_source=generator" width="100%" height="730" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "You're so vain, Carly Simon</BR>Saturday night, ELton John</BR>Viva Las Vegas, Elvis Presley</BR>Smalltown Boy, Bronski Beat</BR>Preacher Man, Dusty Springfield</BR>Surfin USA, The Beach Boys</BR>Proud Mary, Tina Turner (Creedance Clearwater Revival)</BR>Rolling in the Deep, Adele</BR>Girls just wanna have fun, Cyndi Lauper</BR>Hungry like the wolf, Duran Duran", answerSpeak : "", question : ""}) ;
+
+
+quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
 		hoverover : "What sinks, what floats",
 		tags : "2022-x-xx,saturday,InnerWheel,surfers", 

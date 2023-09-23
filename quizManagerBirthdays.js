@@ -1076,13 +1076,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 	question : "Who is this, born September 11th 1965?" ,	answer : "Moby", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Moby_12_17_2018_-16_%2831743191557%29.jpg/220px-Moby_12_17_2018_-16_%2831743191557%29.jpg"	});	
 
 
-/*
-
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
-	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
-
-*/
-
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-16",
 	question : "Who is this, born September 16th 1925?" ,	answer : "B B King", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/B.B._King_07_%28cropped%29.jpg/220px-B.B._King_07_%28cropped%29.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-16",
@@ -1121,6 +1114,29 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 	question : "Who is this, born September 18th 1949?" ,	answer : "Mo Mowlam", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/en/4/48/Mo_mowlem_informal_image.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-18",
 	question : "Who is this, born September 18th 1947?" ,	answer : "Russ Abbot", answerSpeak : "", image : "https://4.bp.blogspot.com/-Xg1GW6fvMco/WeLkzVnByeI/AAAAAAAAF-E/ItYl_R1Y0Dwx_fscsuPEdeySP1_VnWHuQCLcBGAs/s1600/Russ-Abbot_2752213b.jpg"	});	
+
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-23",
+	question : "Who is this, born September 23rd 1920?" ,	answer : "Mickey Rooney", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Mickey_Rooney_still.jpg/220px-Mickey_Rooney_still.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-23",
+	question : "Who is this, born September 23rd 1930?" ,	answer : "Ray Charles", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Ray_Charles_classic_piano_pose.jpg/220px-Ray_Charles_classic_piano_pose.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-23",
+	question : "Who is this, born September 23rd 1943?" ,	answer : "Julio Iglesias", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Julio_Iglesias09.jpg/220px-Julio_Iglesias09.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-23",
+	question : "Who is this, born September 23rd 1949?" ,	answer : "The Baroness Floella Benjamin", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Official_portrait_of_Baroness_Benjamin_crop_2%2C_2023.jpg/220px-Official_portrait_of_Baroness_Benjamin_crop_2%2C_2023.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-23",
+	question : "Who is this, born September 23rd 1949?" ,	answer : "Bruce Springsteen", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Bruce_Springsteen_-_Roskilde_Festival_2012.jpg/220px-Bruce_Springsteen_-_Roskilde_Festival_2012.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-23",
+	question : "Who is this, born September 23rd 1954?" ,	answer : "Cherie Blair", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Cherie_Blair_in_Trento.jpg/220px-Cherie_Blair_in_Trento.jpg"	});	
+
+/*
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
+	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
+
+*/
+
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-24",
 	question : "Who is this, born September 24th 1980?" ,	answer : "Victoria Pendleton", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Victoria_Pendleton_2011.jpg/220px-Victoria_Pendleton_2011.jpg"	});	
