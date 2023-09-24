@@ -2972,23 +2972,23 @@ quests[++questIndexBuilder] = { //
 		tags : "2023-9-24,pictionary", straightToAnswers:true,
 		questInfo: new Array()
 	};
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/ADCreHfXX6MuA14miFpZ5Njfxy9HCVWDt07knmOTfxc5Lt7h29dxC0-sKMxbY3ZQL1gYlzLRaAZEq4r0QTBGe1oZvv7PZCnb4NA80O7B83_9xCXe55IwNq4Uu8scBWtjnKoEVn_xGKgyUn0oH9rNBcN2FX5D4Q=w1238-h567-s-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Lord of the Rings"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/ADCreHd4o6Gwa08KK4q5JoMPyTlcmeURXErXrkju6_TIYBonQZXhh94JYVkSXcGwHVNjUD48Mb47R0ftPIrz0y_Tsv2PUfLaAXtqEUAXJQ_tgUMIhDxES_KZrnPIwyG2PWOWFrvEjn1ItWzwBrwKU0oMq9PxIQ=w966-h653-s-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Star Wars"}) ;
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/ADCreHdlcYg1p9aGyguUrKz_8axqi0tPWil4kYkqHnKHs9olGY0S32yuIpu_bVzrhHG4SRz_marMbQHlYMbWHTUwlR8GolHf7-3hV7wBJyVVhv3NRJe9H_dlllx3LAQOaoE6aT6xSfUly9i3sNELHQ2Hp2_awA=w846-h769-s-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Finding Nemo"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/ADCreHfEhW270OUJsGXHjcCokLote6UT5qZ_-HSWiXXJ3Vx5eENie5V_qfFw11Oo5A16eMpIVHaZ_ycS2E1_-W6E1Gb1JNvjya6TcbnuFGG48i-G92etZvBw6ApiMkZerdfPHcCSS7nZBjiaALQgZYOSfs-8Ug=w628-h713-s-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Up"}) ;
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/ADCreHeRp2E-FR62YwWSks8AqK9vEgo_q0LXWsIzwxXTfSPicMRNg1OI6tBRzSg9mYtfXtFPZ6yUV-TwFrCCOotlHR9JZJMHS3b7Bsj573WYUb305NKseeF9sJny3tkgl74SKm3WxunDtaE1z15Ccln0pJe8Eg=w946-h604-s-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Mama Mia!"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/ADCreHePBYCnFqv8FIJ4rGlJtNHhmYw5QPr5baGO-HoII8OuPrPpTe4LSYzQVyu43ZGGlTfpWnimgflhKs8-7o8xBWCh9zFBEiwL1SDIp8JaRqOkYjGdI0RS-kQpjfBnQCvUIHyv6t_xp2S9Gw_Nkk5nAMfzhw=w596-h593-s-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "What we did on our holiday"}) ;
 			
 /*
