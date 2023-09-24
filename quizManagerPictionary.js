@@ -2966,6 +2966,30 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 	answerimage : "", answerSpeak : "", answer : "Jules"}) ;
 
 
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of Films",
+		tags : "2023-9-24,pictionary", straightToAnswers:true,
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Lord of the Rings"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Star Wars"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Finding Nemo"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Up"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Mama Mia!"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "What we did on our holiday"}) ;
 			
 /*
 
