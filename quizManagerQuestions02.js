@@ -5857,6 +5857,47 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : "You're so vain, Carly Simon</BR>Saturday night, ELton John</BR>Viva Las Vegas, Elvis Presley</BR>Smalltown Boy, Bronski Beat</BR>Preacher Man, Dusty Springfield</BR>Surfin USA, The Beach Boys</BR>Proud Mary, Tina Turner (Creedance Clearwater Revival)</BR>Rolling in the Deep, Adele</BR>Girls just wanna have fun, Cyndi Lauper</BR>Hungry like the wolf, Duran Duran", answerSpeak : "", question : ""}) ;
 
 
+//https://www.birminghammail.co.uk/whats-on/family-kids-news/british-general-knowledge-quiz-questions-27927434
+quests[++questIndexBuilder] = { 
+		name : "General Knowledge "+getAndIncrementCounterForType("GeneralKnowledge"),
+		hoverover : "General knowledge about the UK",
+		tags : "2023-10-22,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What year did the Brexit referendum take place?", // 
+	answerSpeak : "", answer : "2016"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What is the official name of the London clock tower Big Ben?", // 
+	answerSpeak : "", answer : "The Elizabeth Tower"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What is the nickname of the English women's football team?", // 
+	answerSpeak : "", answer : "The Lionesses"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What is the longest-running British sci-fi TV series?", // 
+	answerSpeak : "", answer : "Dr Who"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What is the river running through Liverpool?", // 
+	answerSpeak : "", answer : "River Mersey"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "Who was the Prime Minister when we won World War II?", // 
+	answerSpeak : "", answer : "Winston Churchill"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "Which monarch did they call the Virgin Queen?", // 
+	answerSpeak : "", answer : "Elizabeth I"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "Who was the king responsible for the dissolution of monasteries?", // 
+	answerSpeak : "", answer : "Henry VIII"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "Who played Sherlock Holmes in the TV series Sherlock?", // 
+	answerSpeak : "", answer : "Benedict Cumberbatch"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What is the largest lake in England by volume?", // 
+	answerSpeak : "", answer : "Lake Windemere"}) ;
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2023-10-22,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5BxLP9JMB2fkNUNxGkFap9?utm_source=generator" width="100%" height="730" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Space Oddity, David Bowie</BR>Paint it Black, The Rolling Stones</BR>Can't help falling in love, Elvis Presley</BR>Windmills of your mind, Noel Harrison (Dusty Springfield, Barbera Streisand)</BR>Dream a little Dream, Doris Day</BR>Eye of the tiger, Survivor</BR>Wicked Game, Chris Isaac</BR>Scarborough Fair, Simon & Garfunkle</BR>TAll the small things, Blink 182</BR>Time after time, Cyndi Lauper", answerSpeak : "", question : ""}) ;
+
+
+
 quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
 		hoverover : "What sinks, what floats",
