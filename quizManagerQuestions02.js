@@ -5894,7 +5894,7 @@ quests[++questIndexBuilder] = {
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5BxLP9JMB2fkNUNxGkFap9?utm_source=generator" width="100%" height="730" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
-	answer : "Space Oddity, David Bowie</BR>Paint it Black, The Rolling Stones</BR>Can't help falling in love, Elvis Presley</BR>Windmills of your mind, Noel Harrison (Dusty Springfield, Barbera Streisand)</BR>Dream a little Dream, Doris Day</BR>Eye of the tiger, Survivor</BR>Wicked Game, Chris Isaac</BR>Scarborough Fair, Simon & Garfunkle</BR>TAll the small things, Blink 182</BR>Time after time, Cyndi Lauper", answerSpeak : "", question : ""}) ;
+	answer : "Space Oddity, David Bowie</BR>Paint it Black, The Rolling Stones</BR>Can't help falling in love, Elvis Presley</BR>Windmills of your mind, Noel Harrison (Dusty Springfield, Barbera Streisand)</BR>Dream a little Dream, Doris Day</BR>Eye of the tiger, Survivor</BR>Wicked Game, Chris Isaac</BR>Scarborough Fair, Simon & Garfunkle</BR>All the small things, Blink 182</BR>Time after time, Cyndi Lauper", answerSpeak : "", question : ""}) ;
 
 
 
