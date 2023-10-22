@@ -126,7 +126,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
 quests[++questIndexBuilder] = { //
 		name : "Pictionary" +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary",
-		tags : "20/2/2021,22/10/2023,pictionary",
+		tags : "20/2/2021,22-10-2023,pictionary",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture,
