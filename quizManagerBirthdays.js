@@ -1130,12 +1130,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-23",
 	question : "Who is this, born September 23rd 1954?" ,	answer : "Cherie Blair", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Cherie_Blair_in_Trento.jpg/220px-Cherie_Blair_in_Trento.jpg"	});	
 
-/*
-
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
-	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
-
-*/
 
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"9-24",
@@ -1214,6 +1208,25 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"10-16",
 	question : "Who is this, born October 16th 1962?" ,	answer : "Flea (Michael Balzary) from Red Hot Chili Peppers", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/2016_Red_Hot_Chili_Peppers_-_Michael_Flea_Balzary_%28cropped%29.jpg/220px-2016_Red_Hot_Chili_Peppers_-_Michael_Flea_Balzary_%28cropped%29.jpg"	});	
 
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"10-21",
+	question : "Who is this, born October 21st 1926?" ,	answer : "Leonard Rossiter", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/en/b/be/Leonard_Rossiter_as_Reggie_Perrin.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"10-21",
+	question : "Who is this, born October 21st 1940?" ,	answer : "Geoffrey Boycott", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Boycott2.jpg/200px-Boycott2.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"10-21",
+	question : "Who is this, born October 21st 1953?" ,	answer : "Peter Mandleson", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Peter_Mandelson_official_portrait.jpg/220px-Peter_Mandelson_official_portrait.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"10-21",
+	question : "Who is this, born October 21st 1956?" ,	answer : "Carrie Fisher", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Carrie_Fisher_aka_Princess_Leia_figure_at_Madame_Tussauds_London_%2833783635862%29.jpg/170px-Carrie_Fisher_aka_Princess_Leia_figure_at_Madame_Tussauds_London_%2833783635862%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"10-21",
+	question : "Who is this, born October 21st 1967?" ,	answer : "Paul Ince", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Paul_Ince.jpg/220px-Paul_Ince.jpg"	});	
+
+/*
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
+	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
+
+*/
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"10-22",
 	question : "Who is this, born October 22nd 1962?" ,	answer : "Bob Odenkirk", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Bob_Odenkirk_by_Gage_Skidmore_2.jpg/220px-Bob_Odenkirk_by_Gage_Skidmore_2.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"10-22",
