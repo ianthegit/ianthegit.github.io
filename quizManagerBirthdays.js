@@ -1221,12 +1221,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"10-21",
 	question : "Who is this, born October 21st 1967?" ,	answer : "Paul Ince", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Paul_Ince.jpg/220px-Paul_Ince.jpg"	});	
 
-/*
-
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
-	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
-
-*/
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"10-22",
 	question : "Who is this, born October 22nd 1962?" ,	answer : "Bob Odenkirk", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Bob_Odenkirk_by_Gage_Skidmore_2.jpg/220px-Bob_Odenkirk_by_Gage_Skidmore_2.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"10-22",
@@ -1252,6 +1246,32 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 	question : "Who is this, born October 23nd 1940?" ,	answer : "Pele", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Pele_by_John_Mathew_Smith.jpg/220px-Pele_by_John_Mathew_Smith.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"10-23",
 	question : "Who is this, born October 23nd 1931?" ,	answer : "Diana Dors", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Portret_van_Diana_Dors%2C_Bestanddeelnr_921-7796_%28cropped%29.jpg/220px-Portret_van_Diana_Dors%2C_Bestanddeelnr_921-7796_%28cropped%29.jpg"	});	
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"10-28",
+	question : "Who is this, born October 28th 1927?" ,	answer : "Cleo Laine (Lady Dankworth)", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Cleo_Laine_1997.jpg/220px-Cleo_Laine_1997.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"10-28",
+	question : "Who is this, born October 28th 1930?" ,	answer : "Bernie Ecclestone", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Bernie_Ecclestone_2012_Bahrain_%28cropped%29.jpg/220px-Bernie_Ecclestone_2012_Bahrain_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"10-28",
+	question : "Who is this Geordie lad, born October 28th 1941?" ,	answer : "Hank Marvin", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Hank_Marvin01.jpg/220px-Hank_Marvin01.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"10-28",
+	question : "Who is this, born October 28th 1955?" ,	answer : "Bill Gates", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Bill_Gates_-_2023_-_P062021-967902_%28cropped%29.jpg/220px-Bill_Gates_-_2023_-_P062021-967902_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"10-28",
+	question : "Who is this, born October 28th 1967?" ,	answer : "Julia Roberts", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/JuliaRoberts90.jpg/170px-JuliaRoberts90.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"10-28",
+	question : "Who is this, born October 28th 1978?" ,	answer : "Gwendoline Christie", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Gwendoline_Christie_Calgary_2015.jpg/190px-Gwendoline_Christie_Calgary_2015.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"10-28",
+	question : "Who is this, born October 28th 1982?" ,	answer : "Matt Smith", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/SDCC_2015_-_Matt_Smith.jpg/220px-SDCC_2015_-_Matt_Smith.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"10-28",
+	question : "Who is this, born October 28th 1983?" ,	answer : "Joe Thomas", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Joe_Thomas_2012.jpg/220px-Joe_Thomas_2012.jpg"	});	
+
+
+/*
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
+	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
+
+*/
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"10-29",
 	question : "Who is this, born October 29th 1974?" ,	answer : "Michael Vaughan", answerSpeak : "", image : "https://cricketnlive.com/wp-content/uploads/2021/01/1688-1125-2.6015845.jpg.gallery.jpg"	});	
