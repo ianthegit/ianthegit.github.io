@@ -5897,6 +5897,48 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : "Space Oddity, David Bowie</BR>Paint it Black, The Rolling Stones</BR>Can't help falling in love, Elvis Presley</BR>Windmills of your mind, Noel Harrison (Dusty Springfield, Barbera Streisand)</BR>Dream a little Dream, Doris Day</BR>Eye of the tiger, Survivor</BR>Wicked Game, Chris Isaac</BR>Scarborough Fair, Simon & Garfunkle</BR>All the small things, Blink 182</BR>Time after time, Cyndi Lauper", answerSpeak : "", question : ""}) ;
 
 
+quests[++questIndexBuilder] = { 
+		name : "General Knowledge "+getAndIncrementCounterForType("GeneralKnowledge"),
+		hoverover : "General knowledge about the UK",
+		tags : "2023-10-29,saturday,InnerWheel,surfers", 
+		questInfo: new Array() };
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "In which city is the Scottish Parliament?", // 
+	answerSpeak : "", answer : "Edinburgh"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What is the national park within the the Three Peaks of Yorkshire?", // 
+	answerSpeak : "", answer : "Yorkshire Dales National Park"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What is the channel separating England from France (Extra point if you know what the French call it)?", // 
+	answerSpeak : "", answer : "English Channel (Le Manche)"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What is the ancient stone circle in Wiltshire known as?", // 
+	answerSpeak : "", answer : "Stonehenge"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What is the official name of the UK's parliamentary lower house?", // 
+	answerSpeak : "", answer : "House of Commons"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "Who was the author of Pride and Prejudice?", // 
+	answerSpeak : "", answer : "Jane Austen"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What is traditional drunk during the Wimbledon tennis tournament?", // 
+	answerSpeak : "", answer : "Pimm's"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "Which sport is known as the 'Sport of Kings'?", // 
+	answerSpeak : "", answer : "Horse racing"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What is the traditional British dish made with sausages and Yorkshire pudding?", // 
+	answerSpeak : "", answer : "Toad in the Hole"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "Which monarch ruled England (and elsewhere) from 1837 to 1901?", // 
+	answerSpeak : "", answer : "Queen Victoria"}) ;
+
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2023-10-29,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4tNfENflEdsl6V6HxHMM4g?utm_source=generator" width="100%" height="730" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Total eclipse of the heart, Bonnie Tyler</BR>Jive Talkin, Bee Gees</BR>Dancing Queen, ABBA</BR>Stayin Alive, Bee Gees</BR>Gimme!Gimme!Gimmie!, ABBA</BR>How deep is your love, Bee Gees</BR>I wanna dance with somebody, Whitney Houston</BR>Tragedy, Bee Gees (Steps)</BR>Summer Nights, Olivia Newton-John, John Travolta</BR>Night Fever, Bee Gees", answerSpeak : "", question : ""}) ;
+
+
+
+//https://www.coventrytelegraph.net/whats-on/family-kids-news/23-general-knowledge-pub-quiz-27956650
 
 quests[++questIndexBuilder] = { 
 		name : "Sink or Float " +getAndIncrementCounterForType("Sink"),
