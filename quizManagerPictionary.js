@@ -1031,22 +1031,22 @@ quests[++questIndexBuilder] = { //
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLXewT7St-BwlTDLNT5aTDKZWXLpSR9bHlyHByAyxnpeDUPAo50phdjKKF_Ju2vq_HaCVopOQwcovOhUV4TgVEh99eknnQ2QqVI_q-f4KKRIXKAqF42qKRHK-V1FqbY5U4KtOU5MInjJQ2SZhKUIyS_KRQ=w658-h483-no?authuser=0",
-	answerimage : "https://media0.giphy.com/media/yP2Cxjc7zzjRovzIi9/giphy.gif", answerSpeak : "Spider Web"}) ;
+	answerimage : "https://media0.giphy.com/media/yP2Cxjc7zzjRovzIi9/giphy.gif", answer : "Spider Web"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLWTpp64mLqBCpYZcqXwCp1ZzhUFiALgnPQRzeaKK8kpteGmq2uWyeLmrBv_eblrJMUSgoyTJmNpHCsaatX8zDcvIWuSKg91KJQ3hqQPiRq0u9r-9AUYadzCSVCdhxbGe1SQAgxdz4Zl1_SU6pBWUpvrTQ=w665-h519-no?authuser=0",
-	answerimage : "https://c.tenor.com/Z68MBM-q5CgAAAAC/funny-animals-bats.gif", answerSpeak : "Bat"}) ;
+	answerimage : "https://c.tenor.com/Z68MBM-q5CgAAAAC/funny-animals-bats.gif", answer : "Bat"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLVwCvAL5JgV_kmA7sQ7qYjiIdkT4MTXeEEbA_F7cQUkUN_zFMM2T3gjTNul4mg5VJfkV3UTVLShZe-vMQfeaK3PArf_OAl5obCFJJ1zFgLw-2cp1pMl4DS1LWk1AEZcYqEHP1rBXiA8EOlvgvE3JMWN1w=w161-h263-no?authuser=0",
-	answerimage : "https://c.tenor.com/Uzj1mo4gf2sAAAAC/ghosts-funny.gif", answerSpeak : "Ghost"}) ;
+	answerimage : "https://c.tenor.com/Uzj1mo4gf2sAAAAC/ghosts-funny.gif", answer : "Ghost"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLWN1z6e6q2GbvO7Y8MD0qzwGhCYYdtwJDzRinBDdfCf-2M3aq6GZlzG3g3LhloJFJjM7t7E1KsA17OWdBvM4jd-nfD1ocZdlIE62aEEgZBN0oLPx4rBXzODzA3zXVRLNeUI1IyoB_ORmQQ_QixoNZRkow=w449-h375-no?authuser=0",
-	answerimage : "https://c.tenor.com/ciziVF-00NwAAAAC/massacration-mummy.gif", answerSpeak : "Mummy"}) ;
+	answerimage : "https://c.tenor.com/ciziVF-00NwAAAAC/massacration-mummy.gif", answer : "Mummy"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLWVbNXHb9DJWcVUSJ-nOSdyROOq4KxwUdMggVppXgDT_-_yOk3_x5764EjU3BP5Dl75cEsBCri6bVkBgIEUsVItw2YKgnTwLQOWxDJAF2h6yNjTBWor2_GXZO-DJh1DZ1-jUKfXlCIb1JlAtjmrnok1rg=w363-h374-no?authuser=0",
-	answerimage : "https://media2.giphy.com/media/UjYw9fdCEPwU8/giphy.gif", answerSpeak : "Witch"}) ;
+	answerimage : "https://media2.giphy.com/media/UjYw9fdCEPwU8/giphy.gif", answer : "Witch"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
 	image : "https://lh3.googleusercontent.com/pw/AM-JKLVWYc29KvQ7OPUjvaLutUlrDjzlLEX5U9bn-493fL6wGcPRou5My2FbCNDmpmlFeEzk0mOjnFxaOPKQgLxAeqKWVslXrlNnm4X98FXmZ2VlRhewCioAYC4bjxxCjzgN3EF-1S3v2nMw73y5IeWSlq9htw=w296-h316-no?authuser=0",
-	answerimage : "https://c.tenor.com/_0zRWyx38OYAAAAM/pumpkin-spice.gif", answerSpeak : "Pumpkin"}) ;
+	answerimage : "https://c.tenor.com/_0zRWyx38OYAAAAM/pumpkin-spice.gif", answer : "Pumpkin"}) ;
 
 
 
