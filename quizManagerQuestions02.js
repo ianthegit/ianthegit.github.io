@@ -5938,6 +5938,49 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 
+
+
+quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2023-11-5,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What G </BR></BR>Scientists have been able to segment what into 4 main types: spiral, elliptical, peculiar, and irregular (and a type of chocolate I like but Jules doesn't)?", // 
+	answerSpeak : "", answer : "Galaxies"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What G </BR></BR>n 1610, who discovered the four largest moons of Jupiter using a telescope?", // 
+	answerSpeak : "", answer : "Galileo Galilei"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What G </BR></BR>A trans-boundary river of Asia, the most sacred river in India is the what?", // 
+	answerSpeak : "", answer : "The Ganges"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What G </BR></BR>Who was only 24 hours from Tulsa?", // 
+	answerSpeak : "", answer : "Gene Pitney"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What G </BR></BR>Mary Ann Evans used which male pseudonym, which came around 1857 when she published her first short story titled 'Amos Barton' and continued for all of her novels, including 'The Mill on the Floss'?", // 
+	answerSpeak : "", answer : "George Elliot"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What G </BR></BR>Who directed the 1973 film 'American Graffiti'?", // 
+	answerSpeak : "", answer : "George Lucas"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What G </BR></BR>Who played the part of Cruella de Vil in the 1996 film '101 Dalmatians'?", // 
+	answerSpeak : "", answer : "Glenn Close"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What G </BR></BR>What name is given to a traditional, flat-bottomed Venetian rowing boat?", // 
+	answerSpeak : "", answer : "Gondola"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What G </BR></BR>In 1969, the Mystery Machine made its debut with Scooby-Doo and his gang of mystery solvers. What type of dog was Scooby?", // 
+	answerSpeak : "", answer : "Great Dane"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What G </BR></BR>Which book is a 1726 prose satire by the Anglo-Irish writer and clergyman Jonathan Swift?", // 
+	answerSpeak : "", answer : "Gulliver's Travels"}) ;
+
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2023-11-5,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/16L5kRyWHJBXnyTRD2QpIW?utm_source=generator" width="100%" height="730" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Fun Fun Fun, the Beach Boys</BR>You never can tell, Chuck Berry</BR>Get Back, the Beatles</BR>Raining in my heart, Buddy Holly</BR>When you walk in the room, The Searchers</BR>Proud Mary, Creedance Clearwater Revival, Tina Turner</BR>Lucille, Little Richard</BR>All Around My Hat, Steeleye Span</BR>Don't Stop, Fleetwood Mac</BR>Roll over Beethoven, ELO", answerSpeak : "", question : ""}) ;
+
+
+
 //https://www.coventrytelegraph.net/whats-on/family-kids-news/23-general-knowledge-pub-quiz-27956650
 
 quests[++questIndexBuilder] = { 
