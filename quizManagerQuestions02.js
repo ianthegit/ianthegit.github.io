@@ -5947,7 +5947,7 @@ quests[++questIndexBuilder] = {
 		questInfo: new Array() };
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What G </BR></BR>Scientists have been able to segment what into 4 main types: spiral, elliptical, peculiar, and irregular (and a type of chocolate I like but Jules doesn't)?", // 
 	answerSpeak : "", answer : "Galaxies"}) ;
- addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What G </BR></BR>n 1610, who discovered the four largest moons of Jupiter using a telescope?", // 
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What G </BR></BR>In 1610, who discovered the four largest moons of Jupiter using a telescope?", // 
 	answerSpeak : "", answer : "Galileo Galilei"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What G </BR></BR>A trans-boundary river of Asia, the most sacred river in India is the what?", // 
 	answerSpeak : "", answer : "The Ganges"}) ;
