@@ -1265,14 +1265,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"10-28",
 	question : "Who is this, born October 28th 1983?" ,	answer : "Joe Thomas", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Joe_Thomas_2012.jpg/220px-Joe_Thomas_2012.jpg"	});	
 
-
-/*
-
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
-	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
-
-*/
-
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"10-29",
 	question : "Who is this, born October 29th 1974?" ,	answer : "Michael Vaughan", answerSpeak : "", image : "https://cricketnlive.com/wp-content/uploads/2021/01/1688-1125-2.6015845.jpg.gallery.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"10-29",
@@ -1299,6 +1291,18 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"10-30",
 	question : "Who is this man, born Angelo Siciliano and known as a '97 pound weakling getting sand kicked in his face' better known as, born October 30th 1892?" ,	answer : "Charles Atlas", answerSpeak : "", image : "https://th-thumbnailer.cdn-si-edu.com/gdrBXGh7eOvDze_fCNPbTeXU4QU=/fit-in/1072x0/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/Charles-Atlas-1935-4.jpg"	});	
 
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-4",
+	question : "Who is this, born November 4th 1937?" ,	answer : "Loretta Swit", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Loretta_Swit_MASH_1972.JPG/200px-Loretta_Swit_MASH_1972.JPG"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-4",
+	question : "Who is this, born November 4th 1963?" ,	answer : "Lena Zavaroni", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Lena_Zavaroni_%281974%29.jpg/220px-Lena_Zavaroni_%281974%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-4",
+	question : "Who is this, born November 4th 1969?" ,	answer : "Matthew McConaughey", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Matthew_McConaughey_2019_%2848648344772%29.jpg/220px-Matthew_McConaughey_2019_%2848648344772%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-4",
+	question : "Who is this, born November 4th 1971?" ,	answer : "Gregory Porter", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/ADCreHdNyFp7kW9O8w9S69V1UaxzVOUisS0DW1lsM8l0Oh82g_gtzkXva6jUQr-RHdsBfgSyDCWwZ5PO3syCzI4yy7dmfAJ3PQrE6tEaM91YdauOU6-sO91qjDJp383N4Ozn5UBb2_TbRW4MCktObsDKoybYwg=w275-h183-s-no-gm?authuser=0"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-4",
+	question : "Who is this, born November 4th 1981?" ,	answer : "Guy Martin", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Guy.Martin.JPG/220px-Guy.Martin.JPG"	});	
+
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-5",
 	question : "Who is this, born November 5th 1977?" ,	answer : "Richard Wright", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Richard_Wright_%28Ipswich_goalkeeper%29.jpg/220px-Richard_Wright_%28Ipswich_goalkeeper%29.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-5",
@@ -1313,6 +1317,15 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 	question : "Who is this, born November 5th 1941" ,	answer : "Art Garfunkel", answerSpeak : "", image : "https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTE1ODA0OTcxOTI2OTgwMTA5/art-garfunkel-17191580-1-402.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-5",
 	question : "Who is this, born November 5th 1935" ,	answer : "Lester Piggot", answerSpeak : "", image : "https://www.rp-assets.com/images/news/2022/05/29/110361-medium.jpeg"	});	
+
+
+
+/*
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
+	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
+
+*/
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-6",
 	question : "Who is this, born November 6th 1988" ,	answer : "Conchita Wurst (Thomas Neuwirth)", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Conchita_Amadeus_Awards_2017_d.jpg/220px-Conchita_Amadeus_Awards_2017_d.jpg"	});	
