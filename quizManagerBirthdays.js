@@ -1299,7 +1299,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-4",
 	question : "Who is this, born November 4th 1969?" ,	answer : "Matthew McConaughey", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Matthew_McConaughey_2019_%2848648344772%29.jpg/220px-Matthew_McConaughey_2019_%2848648344772%29.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-4",
-	question : "Who is this, born November 4th 1971?" ,	answer : "Gregory Porter", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/ADCreHdNyFp7kW9O8w9S69V1UaxzVOUisS0DW1lsM8l0Oh82g_gtzkXva6jUQr-RHdsBfgSyDCWwZ5PO3syCzI4yy7dmfAJ3PQrE6tEaM91YdauOU6-sO91qjDJp383N4Ozn5UBb2_TbRW4MCktObsDKoybYwg=w275-h183-s-no-gm?authuser=0"	});	
+	question : "Who is this chap, pictured with Rosa Parks, born November 4th 1971?" ,	answer : "Gregory Porter", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/ADCreHdNyFp7kW9O8w9S69V1UaxzVOUisS0DW1lsM8l0Oh82g_gtzkXva6jUQr-RHdsBfgSyDCWwZ5PO3syCzI4yy7dmfAJ3PQrE6tEaM91YdauOU6-sO91qjDJp383N4Ozn5UBb2_TbRW4MCktObsDKoybYwg=w275-h183-s-no-gm?authuser=0"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-4",
 	question : "Who is this, born November 4th 1981?" ,	answer : "Guy Martin", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Guy.Martin.JPG/220px-Guy.Martin.JPG"	});	
 
