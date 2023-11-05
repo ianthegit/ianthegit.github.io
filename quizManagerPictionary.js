@@ -3001,22 +3001,22 @@ quests[++questIndexBuilder] = { //
 		questInfo: new Array()
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ADCreHdlZsp00_taxMcW4SWqossZDiBLuq1XZL4PySx4CMawT3lQRzfJabboECUq_7FXwZBeG8-i085FoDCGg9pkSjdfxMvvfgtDxTnEQFT9T8_jum6FnCxMt6DoxH-4qUxWzIgVX1m1RUWeaQz1uXBgBSSssw=w729-h411-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Strawberry Fields"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ADCreHc6o7GUsR-HvZu5hNDIonQtqAEDtYYbWbDIc5Ya58IjmcK2ePJqdIn_RG_j8f215L4a8zOiluCy7pglV_HwgogPWtH1KF4ishrnEh2GXG7S-nr5Yuue204PDJyRu2_2aNJflpsiUPMAcyG8ojPRHM7B4w=w941-h545-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Penny Lane"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ADCreHflIQ5EBswWtji8RD0iobyRHx0DaIUDBE5ngjVocZ62uAzWQGM3fkJrIJFzpl5n5gZOsdBiTET64ioy4Gnb0zceTssPjEBtibXeIRuj9cq7cAyG-gtJXdUDLxIVz0aYvxI1bwsRXQYH_ZhE_gVN-xT8jQ=w654-h396-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "I am the Walrus"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ADCreHcJo9WqXds_SGidIQ-n05MAvQgm7lDNJjTdpADG6cFwPMbdhGVXRa3Rr2ug4tdvmMw086e6nU9xK3eCqkhfAEDmrvRtuSapV8Kga-4ltXnFkIv1-qp03ZUc2pQ7Cf9P0v05NaahFCd7K_Ct4v-xtjA4nA=w788-h658-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Twist and Shout"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ADCreHcDrjRBcJrQQ7N3wE86nw_Lf8qd6-cMkxnCr4qJNO3NAnsr0zkG-XHrPid1UG-LMlmBYP6sh9nidsTjI8i7KT8IICStFUfSH7TmjaqxIHD5wGmVkskLCn7YMwIIO1y_6GOQoV8YlKU1peb1VqYCyOG5bg=w1251-h618-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Octopus's Garden"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ADCreHdG3zkA6IAWnVNvTSPw839mQER1FUqX1l-U08wBBhUg1NYnKK3yj5Ba57P6jIbKMdbfG6sJM1238TJLwkpEEqfIwu9dELm_4niIU7R6TL46y40t0ohJlIWpEC8EnzI5eDbFcCDEQXdCRYQd6_eYUES8fQ=w643-h785-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Helter Skelter"}) ;
 
 			
