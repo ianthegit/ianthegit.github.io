@@ -2991,6 +2991,35 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 	image : "https://lh3.googleusercontent.com/pw/ADCreHePBYCnFqv8FIJ4rGlJtNHhmYw5QPr5baGO-HoII8OuPrPpTe4LSYzQVyu43ZGGlTfpWnimgflhKs8-7o8xBWCh9zFBEiwL1SDIp8JaRqOkYjGdI0RS-kQpjfBnQCvUIHyv6t_xp2S9Gw_Nkk5nAMfzhw=w596-h593-s-no?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "What we did on our holiday"}) ;
 			
+			
+			
+			
+quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of Beatles Songs",
+		tags : "2023-11-5,pictionary", straightToAnswers:true,
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Strawberry Fields"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Penny Lane"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "I am the Walrus"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Twist and Shout"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Octopus's Garden"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Helter Skelter"}) ;
+
+			
 /*
 
 
