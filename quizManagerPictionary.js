@@ -3026,22 +3026,22 @@ quests[++questIndexBuilder] = { //
 		questInfo: new Array()
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ADCreHfy8L3hw9ehEGxR2QZqTA3GBQpwMmui-PJURGK_WsBYePgYvIbM-YttVHXQDG9xhlT9IvqJScJy2AUSJ7fNvfVyiVArPkB-k2PcPABYh8_iGZCSwswhlEBlAApiQeMzgU0JrQeUzcBN9iDiCqsd2w_Qjw=w445-h590-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Dancing Queen"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ADCreHdUVUQh1dizMG0nMXv-NFEhJGWW69BQ4dYDMG54hvxCfOKlECW_PDhkNVRf6S3iS8nhT2hXumwENEdKBb0Ic76UbxCn_q6pFsKeO55MW95NBaIIWSSUacHqx6RnVus2h6XGRwtIxI0zvBCdtzh0ZNxGVQ=w280-h241-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Money Money Money"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ADCreHfXbna3O1aV9_-3hXm6De_Szu6lBAqwtmzQGPUfCnKaK1Odi4YpOe_-TH3Mfyzh7edhcypur3F2-2QDVHe6v2YUQydL4-avcyWmn9gv2tz7s6aF63nOcN0H63B0GGmrYP3PXyAhcJRmn2vlWay43-k7mQ=w850-h508-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "I have a dream"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ADCreHcZFeGwLkutog0Zj2QHyd11hSqP4-z8x8RWjXAXbox7_gIUaIAfPhg3A2Dk9MIDajMO42PgCOIIFD_Anmw-I-3erJ8iZWI-BJJDJDzXNkb4RLHKXt5tbOdF1HDay1J9kxhe8aYpux0IXyylGi1eqSL4eg=w844-h442-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Super Trooper"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ADCreHfOzAc9HkaGJw984lYTfJ3-2mgwd__RxhFoCN0S6wt9p5bAF2UFIrZ3b4V0EOSgrFlGRDEpnCmOp62hKsyeXWfXeg1TsylQs1ANhMP6qFFkOz3LETk7rlT67eSPuKquOvE4smz_wlzW18_HGMHXx4LvZQ=w1041-h584-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "SOS"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ADCreHfV4P-A8XjPOR1oG9QJuLoHCtF7AoelPIQdbR-jxZxpvS3tsmuFRZEhu9-Uwxo763LuLirFGsY3KKPB8f66UJZ-j384OTfJO1mlgYltmGahpSpDTUJUu7T9BP4XRTArzWK3KLOSmCMmiyCcvXRqXY5yDw=w693-h556-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Waterloo"}) ;
 			
 /*
