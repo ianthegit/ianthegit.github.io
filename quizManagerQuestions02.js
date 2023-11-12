@@ -5981,6 +5981,49 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 
+
+
+quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2023-11-12,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What H </BR></BR>A depilatory is a substance used for removing what?", // 
+	answerSpeak : "", answer : "Hair"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What H </BR></BR>The four throwing events at the Olympics are shot put, discus, javelin and what?", // 
+	answerSpeak : "", answer : "Hammer"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What H </BR></BR>What is the name of the spicy paste that accompanies dishes such as couscous in North African cuisine?", // 
+	answerSpeak : "", answer : "Harissa"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What H </BR></BR>What is a regurgitation of acid from the stomach into the oesophagus commonly known as?", // 
+	answerSpeak : "", answer : "Heartburn"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What H </BR></BR>The Colossus of Rhodes was a statue of which god?", // 
+	answerSpeak : "", answer : "Helios"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What H </BR></BR>In 1898, the Bayer company began marketing what they claimed was a non addictive opiate. What was it?", // 
+	answerSpeak : "", answer : "Herion"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What H </BR></BR>The three number systems commonly used in computers are binary, decimal and what?", // 
+	answerSpeak : "", answer : "Hexadecimal"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What H </BR></BR>What is the chalice used by Jesus Christ at the Last Supper called?", // 
+	answerSpeak : "", answer : "Holy Grail"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What H </BR></BR>Part of the North American continent, what is the biggest bay in the world?", // 
+	answerSpeak : "", answer : "Hudson Bay"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What H </BR></BR>Which is the most abundant element in the universe?", // 
+	answerSpeak : "", answer : "Hydrogen"}) ;
+ 
+ 
+ 
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2023-11-12,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0u3gzzzq1aQ5ddl6SD8BJV?utm_source=generator" width="100%" height="730" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Sweet Home Chicago, Robert Johnson, The Blues Brothers</BR>Good Golly Miss Molly, Little Richard</BR>Hound Dog, Elvis</BR>Runaround Sue, Dion, Chubby Checker</BR>Mony Mony, Tommy James & The Shondells, Billy Idol</BR>Wild One, Iggy Pop</BR>Cadillac Ranch, Bruce Springsteen</BR>I fought the law, The Crickets, The Clash</BR>Centrefold, J Geils Band</BR>Born to be Wild, Steppenwolf", answerSpeak : "", question : ""}) ;
+
+
+
 //https://www.coventrytelegraph.net/whats-on/family-kids-news/23-general-knowledge-pub-quiz-27956650
 
 quests[++questIndexBuilder] = { 
