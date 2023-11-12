@@ -1320,13 +1320,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 
 
 
-/*
-
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
-	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
-
-*/
-
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-6",
 	question : "Who is this, born November 6th 1988" ,	answer : "Conchita Wurst (Thomas Neuwirth)", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Conchita_Amadeus_Awards_2017_d.jpg/220px-Conchita_Amadeus_Awards_2017_d.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-6",
@@ -1389,6 +1382,13 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-13",
 	question : "Who is this, born November 13th 1952?" ,	answer : "Art Malik", answerSpeak : "", image : "https://bifa.imgix.net/web/2018/10/grptgmjqfh.jpg?auto=compress%2Cformat&fit=scale&h=2410&ixlib=php-3.3.1&w=1600&wpsize=xl"	});	
 
+
+/*
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
+	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
+
+*/
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-19",
 	question : "Who is this, born November 19th 1983?" ,	answer : "Adam Driver", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Star_Wars-_The_Last_Jedi_Japan_Premiere_Red_Carpet-_Adam_Driver_%2827163437599%29_%28cropped%29.jpg/220px-Star_Wars-_The_Last_Jedi_Japan_Premiere_Red_Carpet-_Adam_Driver_%2827163437599%29_%28cropped%29.jpg"	});	
