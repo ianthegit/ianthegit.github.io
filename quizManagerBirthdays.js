@@ -1383,12 +1383,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 	question : "Who is this, born November 13th 1952?" ,	answer : "Art Malik", answerSpeak : "", image : "https://bifa.imgix.net/web/2018/10/grptgmjqfh.jpg?auto=compress%2Cformat&fit=scale&h=2410&ixlib=php-3.3.1&w=1600&wpsize=xl"	});	
 
 
-/*
 
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
-	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
-
-*/
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-19",
 	question : "Who is this, born November 19th 1983?" ,	answer : "Adam Driver", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Star_Wars-_The_Last_Jedi_Japan_Premiere_Red_Carpet-_Adam_Driver_%2827163437599%29_%28cropped%29.jpg/220px-Star_Wars-_The_Last_Jedi_Japan_Premiere_Red_Carpet-_Adam_Driver_%2827163437599%29_%28cropped%29.jpg"	});	
@@ -1409,6 +1404,18 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 	question : "Who is this, born November 20th 1956?" ,	answer : "Bo Derek", answerSpeak : "", image : "https://cdn.images.express.co.uk/img/dynamic/79/750x445/1331768.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-20",
 	question : "Who is this, born November 20th 1995?" ,	answer : "Lord Charles Hopgood", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AL9nZEW40hsaqiVew8KfoCT5GLvxoQsJoLA537QZLVos6Wl6BCv8mTQTmJhOSHCIbuVDeCFj22-XVPrRY_-NmPzGmJNqXtajVE35__norBBlitc5lgi1aY_S7AT33Q3Dvl8BqFKn9WSr5QogYJkiAyZjSysNlA=w1307-h871-no?authuser=0"	});	
+
+
+/*
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
+	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
+
+*/
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-25",
+	question : "Who is this, born November 25th 1959?" ,	answer : "Charles Kennedy", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Charles_Kennedy_MP_%28cropped%29.jpg/220px-Charles_Kennedy_MP_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-25",
+	question : "Who is this, born November 25th 1971?" ,	answer : "Christina Applelgate", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Christina_Applegate_2014_Comic_Con_%28cropped%29.jpg/220px-Christina_Applegate_2014_Comic_Con_%28cropped%29.jpg"	});	
 
 
 
