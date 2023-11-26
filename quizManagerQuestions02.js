@@ -6047,7 +6047,7 @@ quests[++questIndexBuilder] = {
 	answerSpeak : "", answer : "Iris"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What I </BR></BR>Which character is the narrator of Melville's 'Moby Dick'?", // 
 	answerSpeak : "", answer : "Ishmael"}) ;
- addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What I </BR></BR>What Turkish city has spread to both sides of the Bosporus Strait over time?", // 
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What I </BR></BR>What Turkish city has spread to both sides of the Bosphorus Strait over time?", // 
 	answerSpeak : "", answer : "Istanbul"}) ;
 
 
