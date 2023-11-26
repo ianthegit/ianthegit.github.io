@@ -6024,6 +6024,45 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 
+quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2023-11-26,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What I </BR></BR>Characters such as those in Chinese in which a word is represented by a picture, are called what?", // 
+	answerSpeak : "", answer : "Ideograms"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What I </BR></BR>What company was formed by the Swede, Ingvar Kamprad, one of the richest men in the world?", // 
+	answerSpeak : "", answer : "Ikea"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What I </BR></BR>What name was given to the account by Homer of the Trojan War?", // 
+	answerSpeak : "", answer : "Iliad"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What I </BR></BR>What is the term for paint applied very thickly, often projecting from the picture surface?", // 
+	answerSpeak : "", answer : "Impasto"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What I </BR></BR>The teeth used for biting or cutting are known as what?", // 
+	answerSpeak : "", answer : "Incisors"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What I </BR></BR>What is the common name for the condition dyspepsia?", // 
+	answerSpeak : "", answer : "Indegestion"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What I </BR></BR>Hibernia was the Roman name for which country?", // 
+	answerSpeak : "", answer : "Ireland"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What I </BR></BR>What is the membrane that controls the amount of light entering the eye?", // 
+	answerSpeak : "", answer : "Iris"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What I </BR></BR>Which character is the narrator of Melville's 'Moby Dick'?", // 
+	answerSpeak : "", answer : "Ishmael"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What I </BR></BR>What Turkish city has spread to both sides of the Bosporus Strait over time?", // 
+	answerSpeak : "", answer : "Istanbul"}) ;
+
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2023-11-26,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7FPcceLCiWquYGFzBY0qsQ?utm_source=generator" width="100%" height="730" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Proud Mary, Creedance Clearwater Revival, Tina Turner</BR>Sweet child O mine, Guns n Roses</BR>Sweet Caroline, Neil DIamond</BR>Saturday night fever, the Bee Gees</BR>I want to break free, Queen</BR>No woman no cry, Bob Marley</BR>Wonderwall, Oasis</BR>Every Breath you take, The Police</BR>Devil went down to Georgia, The Charlie Daniels Band</BR>Chasing Cars, Snow Patrol", answerSpeak : "", question : ""}) ;
+
 //https://www.coventrytelegraph.net/whats-on/family-kids-news/23-general-knowledge-pub-quiz-27956650
 
 quests[++questIndexBuilder] = { 
