@@ -3087,7 +3087,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 	answerimage : "", answerSpeak : "", answer : "A Christmas Carol"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
 	image : "",
-	answerimage : "", answerSpeak : "", answer : "The Royale Family"}) ;
+	answerimage : "", answerSpeak : "", answer : "The Royle Family"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
 	image : "",
 	answerimage : "", answerSpeak : "", answer : "The Sound of Music"}) ;
