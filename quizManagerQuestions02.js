@@ -6072,7 +6072,7 @@ quests[++questIndexBuilder] = {
 		tags : "2023-12-3,saturday,InnerWheel,surfers,alphabet", 
 		questInfo: new Array() };
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What J </BR></BR>As of 2021, who has received the most Academy Award nominations for any male actor with twelve nominations?", // 
-	answerSpeak : "", answer : "Jack Nicjolson"}) ;
+	answerSpeak : "", answer : "Jack Nicholson"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What J </BR></BR>What is the name of the compact, opaque gemstone ranging in colour from dark green to almost white?", // 
 	answerSpeak : "", answer : "Jade"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What J </BR></BR>What is the capital of Indonesia?", // 
