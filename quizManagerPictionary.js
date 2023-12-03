@@ -3076,7 +3076,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 quests[++questIndexBuilder] = { //
 		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
 		hoverover : "Pictionary on the theme of things you might see on TV over Christmas",
-		tags : "2023-?-?,pictionary", straightToAnswers:true,
+		tags : "2023-12-3,pictionary", straightToAnswers:true,
 		questInfo: new Array()
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
