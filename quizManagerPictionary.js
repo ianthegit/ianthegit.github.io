@@ -3079,22 +3079,22 @@ quests[++questIndexBuilder] = { //
 		tags : "2023-12-3,pictionary", straightToAnswers:true,
 		questInfo: new Array()
 	};
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
 	image : "https://lh3.googleusercontent.com/pw/ADCreHcWOOz360-erA2_wZm3LR95ubOFdhF-r3sjdeNVRmzYSRvk-B6fNJCvSSDjnp9RbODd-AR5X3-_3iijB8Ck28LX6_CECFB8ZdOgvDyOAbr3-UkO0Z6_gpY19YOjpp2fGjBhEQB4iYUvX0lHDNbaRtykZA=w1275-h953-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "National Lampoon's Christmas Vacation"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
 	image : "https://lh3.googleusercontent.com/pw/ADCreHeNQ3Kv0TnQ-HDN1wOxjX_olHGirZM1KkMbfqRWZaJDQ53TYYErylTNTxOyBSE7ggtNlSby9tYlU5Qgjq5OXjLgS8VSy6Dy9ncl3A476Rb_cNwFD_hgCyq_jTer3UIPaaBiZhbEE7HNk7jZUO2q8zP6Ig=w1094-h416-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "A Christmas Carol"}) ;
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
 	image : "https://lh3.googleusercontent.com/pw/ADCreHdijKLbmb_f7ofDvfUcMMtGy_0pMj_O6yVuqEj_LmfhHGyGsG8d6XnSy-OhyCUzmVZXrU042H32ohSF04wwaFyx7KXQRW1HVhoPwo8M01aCC-mckide72SBXIheK4D1YtFCpXTZpycJxG4HMfk54mtkTA=w1031-h603-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "The Royle Family"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
 	image : "https://lh3.googleusercontent.com/pw/ADCreHdivqKT0AkVSB_-qlpqOwwXtdbcRD1BoKC2Grde28i9JNuzb7WsPLHEyCjnSWP5Cnm6t5Hcxy0p0eUnX3sms_pMcklb82QXWLhz8M8pRoVZbFgS5hPy2fGZPaIv1bwkGRtbYGwCN0dpzU_khDbeIRMmVg=w844-h528-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "The Sound of Music"}) ;
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
 	image : "https://lh3.googleusercontent.com/pw/ADCreHfA9P_04wRv3G9ODZpXXdHfzUEF_6SkmEeKOVc-ip_gJ9K5Byp54VdWDOr4F4duozPENqxcgW2SbhVyK1e-ked69J5sNL_1PVRs9x4NXrnTj9vIqNhrm0Rdd4d1a1y4eb6ZV8mfeMlkMhxdkraQOZUwMQ=w849-h818-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Home Alone"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
 	image : "https://lh3.googleusercontent.com/pw/ADCreHc-OTHKEZFXLtHvq5m9wDKZla6Bsf2gWNc5ur56ty-Ef_vkjTdpLAivhZhbBtYsyGvUrSKBkBnQQ05udSqmip7L3nc3CiI_nSZaEML9yOxj4xvhyCCvcpYXwza50knL5hEUhmVomh4PrHnbgbnhkidT5w=w834-h809-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Die Hard"}) ;
 /*
