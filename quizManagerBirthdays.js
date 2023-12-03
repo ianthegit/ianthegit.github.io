@@ -1406,12 +1406,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 	question : "Who is this, born November 20th 1995?" ,	answer : "Lord Charles Hopgood", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/AL9nZEW40hsaqiVew8KfoCT5GLvxoQsJoLA537QZLVos6Wl6BCv8mTQTmJhOSHCIbuVDeCFj22-XVPrRY_-NmPzGmJNqXtajVE35__norBBlitc5lgi1aY_S7AT33Q3Dvl8BqFKn9WSr5QogYJkiAyZjSysNlA=w1307-h871-no?authuser=0"	});	
 
 
-/*
-
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
-	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
-
-*/
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-25",
 	question : "Who is this, born November 25th 1959?" ,	answer : "Charles Kennedy", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Charles_Kennedy_MP_%28cropped%29.jpg/220px-Charles_Kennedy_MP_%28cropped%29.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-25",
@@ -1443,6 +1437,23 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"11-27",
 	question : "Who is this, born November 27th 1942?" ,	answer : "Jimmy Hendrix", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/a/ae/Jimi_Hendrix_1967.png"	});	
 
+
+
+/*
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
+	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
+
+*/
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-2",
+	question : "Who is this, born December 2nd 1968?" ,	answer : "Lucy Liu", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Lucy_Liu_Cannes_2008.jpg/220px-Lucy_Liu_Cannes_2008.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-2",
+	question : "Who is this, born December 2nd 1970?" ,	answer : "Joe Lo Truglio", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Joe_Lo_Truglio_May_2018.jpg/220px-Joe_Lo_Truglio_May_2018.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-2",
+	question : "Who is this, born December 2nd 1973?" ,	answer : "Monica Seles", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Monica_Seles_1999.jpg/220px-Monica_Seles_1999.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-2",
+	question : "Who is this, born December 2nd 1981?" ,	answer : "", answerSpeak : "Britney Spears", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Britney_Spears_2013_%28Straighten_Crop%29.jpg/200px-Britney_Spears_2013_%28Straighten_Crop%29.jpg"	});	
 
 
 
