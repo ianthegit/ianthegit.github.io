@@ -6063,6 +6063,50 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7FPcceLCiWquYGFzBY0qsQ?utm_source=generator" width="100%" height="730" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
 	answer : "Proud Mary, Creedance Clearwater Revival, Tina Turner</BR>Sweet child O mine, Guns n Roses</BR>Sweet Caroline, Neil DIamond</BR>Saturday night fever, the Bee Gees</BR>I want to break free, Queen</BR>No woman no cry, Bob Marley</BR>Wonderwall, Oasis</BR>Every Breath you take, The Police</BR>Devil went down to Georgia, The Charlie Daniels Band</BR>Chasing Cars, Snow Patrol", answerSpeak : "", question : ""}) ;
 
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2023-12-3,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What J </BR></BR>As of 2021, who has received the most Academy Award nominations for any male actor with twelve nominations?", // 
+	answerSpeak : "", answer : "Jack Nicjolson"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What J </BR></BR>What is the name of the compact, opaque gemstone ranging in colour from dark green to almost white?", // 
+	answerSpeak : "", answer : "Jade"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What J </BR></BR>What is the capital of Indonesia?", // 
+	answerSpeak : "", answer : "Jakarta"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What J </BR></BR>A large celebration or party, typically a lavish and boisterous one, would be called a what?", // 
+	answerSpeak : "", answer : "Jamboree"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What J </BR></BR>Which fictional park is the home of Yogi Bear?", // 
+	answerSpeak : "", answer : "Jellystone"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What J </BR></BR>When he was alive, Yorick in Shakespeare's Hamlet had what job?", // 
+	answerSpeak : "", answer : "Jester"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What J </BR></BR>What Director was responsible for Halloween, The Fog, and The Eyes of Laura Mars amongst others?", // 
+	answerSpeak : "", answer : "John Carpenter"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What J </BR></BR>What character in the DC universe have been played by Heath Ledger, Jared Leto, Mark Hamil, and Jack Nicholson and many many more?", // 
+	answerSpeak : "", answer : "Joker"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What J </BR></BR>What fictional board (and computer) game transports it's players into the game when they attempt to play it?", // 
+	answerSpeak : "", answer : "Jumanji"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What J </BR></BR>Who is the 23rd Prime Minister of Canada?", // 
+	answerSpeak : "", answer : "Justin Trudeau"}) ;
+ 
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2023-12-3,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2vw3v4Vk4sk9GeQBaudZZY?utm_source=generator" width="100%" height="730" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Feliz Navidad</BR>Deck the Halls</BR>Jingle Bells</BR>Silent Night</BR>Joy to the World</BR>The First Noel</BR>We wish you a merry Christmas</BR>Away in a Manger</BR>O Come all ye faithful</BR>Dig Dong merrily on high", answerSpeak : "", question : ""}) ;
+
+
+
 //https://www.coventrytelegraph.net/whats-on/family-kids-news/23-general-knowledge-pub-quiz-27956650
 
 quests[++questIndexBuilder] = { 
