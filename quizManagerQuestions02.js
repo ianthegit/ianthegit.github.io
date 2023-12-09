@@ -6107,6 +6107,49 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 
+quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2023-12-10,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What K </BR></BR>White Russian Cocktails are made from milk, vodka and which liqueur?", // 
+	answerSpeak : "", answer : "Kahula"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What K </BR></BR>Better known as the title of a book, which Sanskrit phrase means 'Love story'?", // 
+	answerSpeak : "", answer : "Kama Sutra"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What K </BR></BR>Translated as 'wooden temples', what is the name of the capital city of Nepal?", // 
+	answerSpeak : "", answer : "Kathmandu"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What K </BR></BR>Which food stuff has a name which translates into English as 'On A Skewer'?", // 
+	answerSpeak : "", answer : "Kebab"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What K </BR></BR>What is the name of the Japanese sport which uses bamboo swords (shinai) as well as protective armour (bogu)?", // 
+	answerSpeak : "", answer : "Kendo"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What K </BR></BR>What state, in the east central U.S., is home to Fort Knox and has a capital called Frankfort?", // 
+	answerSpeak : "", answer : "Kentucky"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What K </BR></BR>Which fibrous, sulphur-rich protein occurs naturally in hair, horns, hooves and feathers?", // 
+	answerSpeak : "", answer : "Keratin"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What K </BR></BR>When Boris Becker was the first unseeded player to win Wimbledon, who did he beat in the final?", // 
+	answerSpeak : "", answer : "Kevin Curran"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What K </BR></BR>What is the more common name of the fruit known as the 'Chinese Gooseberry'?", // 
+	answerSpeak : "", answer : "Kiwi"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What K </BR></BR>What is the capital of Ukraine and the name of a battered and bread crumbed chicken dish?", // 
+	answerSpeak : "", answer : "Kyiv"}) ;
+
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2023-12-10,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2vw3v4Vk4sk9GeQBaudZZY?utm_source=generator" width="100%" height="730" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "All I I want for Christmas is you</BR>We wish you a Merry Christmas</BR>I saw mummy kissing Santa Claus</BR>Rudolph the red-nosed reindeer</BR>Simlent Night</BR>I wish it could be Christmas every day</BR>Santa Claus is coming to town</BR>It's beginning to look a lot like Christmas</BR>White Christmas</BR>Last Christmas", answerSpeak : "", question : ""}) ;
+
+
+
+
+
 //https://www.coventrytelegraph.net/whats-on/family-kids-news/23-general-knowledge-pub-quiz-27956650
 
 quests[++questIndexBuilder] = { 
@@ -6155,6 +6198,10 @@ https://www.reddit.com/r/sundayquiz/comments/vneuo8/alphabet_quiz_2326_w/
 https://www.reddit.com/r/sundayquiz/comments/vo4sw6/alphabet_quiz_2426_x/
 https://www.reddit.com/r/sundayquiz/comments/voxjj4/alphabet_quiz_2526_y/
 https://www.reddit.com/r/trivia/comments/vppx91/alphabet_quiz_2626_z/
+
+https://www.reddit.com/r/sundayquiz/comments/17yagff/mega_alphabet_quiz_mega_thread/
+
+
 quests[++questIndexBuilder] = { 
 		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
 		hoverover : "Songs you will know, but wish you did not after this.",
