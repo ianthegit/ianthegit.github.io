@@ -6144,7 +6144,7 @@ quests[++questIndexBuilder] = {
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5NaxMZ7GAaQ6f816hJQPF5?utm_source=generator" width="100%" height="730" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
-	answer : "All I I want for Christmas is you</BR>We wish you a Merry Christmas</BR>I saw mummy kissing Santa Claus</BR>Rudolph the red-nosed reindeer</BR>Simlent Night</BR>I wish it could be Christmas every day</BR>Santa Claus is coming to town</BR>It's beginning to look a lot like Christmas</BR>White Christmas</BR>Last Christmas", answerSpeak : "", question : ""}) ;
+	answer : "All I want for Christmas is you</BR>We wish you a Merry Christmas</BR>I saw mummy kissing Santa Claus</BR>Rudolph the red-nosed reindeer</BR>Silent Night</BR>I wish it could be Christmas every day</BR>Santa Claus is coming to town</BR>It's beginning to look a lot like Christmas</BR>White Christmas</BR>Last Christmas", answerSpeak : "", question : ""}) ;
 
 
 
