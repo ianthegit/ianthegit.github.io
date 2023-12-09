@@ -1439,13 +1439,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 
 
 
-/*
-
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
-	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
-
-*/
-
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-2",
 	question : "Who is this, born December 2nd 1968?" ,	answer : "Lucy Liu", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Lucy_Liu_Cannes_2008.jpg/220px-Lucy_Liu_Cannes_2008.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-2",
@@ -1482,6 +1475,22 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 	question : "Who is this, born December 4th 1930?" ,	answer : "Ronnie Corbett", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Ronnie-corbett.JPG/220px-Ronnie-corbett.JPG"	});	
 
 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-9",
+	question : "Who is this, born December 9th 1909?" ,	answer : "Douglas Fairbanks Jr", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Douglas_Fairbanks_Jnr_4_Allan_Warren.jpg/220px-Douglas_Fairbanks_Jnr_4_Allan_Warren.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-9",
+	question : "Who is this, born December 9th 1916?" ,	answer : "Kirk Douglas", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Studio_publicity_Kirk_Douglas.jpg/220px-Studio_publicity_Kirk_Douglas.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-9",
+	question : "Who is this, born December 9th 1934?" ,	answer : "(Dame) Judi Dench", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Judi_Dench_1959.jpg/160px-Judi_Dench_1959.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-9",
+	question : "Who is this, born December 9th 1960?" ,	answer : "Caroline Lucas", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Official_portrait_of_Caroline_Lucas_MP_crop_2.jpg/220px-Official_portrait_of_Caroline_Lucas_MP_crop_2.jpg"	});	
+
+
+/*
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
+	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
+
+*/
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-10",
 	question : "Who is this, born December 10th 1974?" ,	answer : "Meg White", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Meg_White_1.jpg/220px-Meg_White_1.jpg"	});	
