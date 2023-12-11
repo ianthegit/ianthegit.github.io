@@ -3105,23 +3105,23 @@ quests[++questIndexBuilder] = { //
 		tags : "2023-12-11,pictionary", straightToAnswers:true,
 		questInfo: new Array()
 	};
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/ADCreHcsCgAl4yL6Ab4ihDhSeoH6wLKh48C-pHe9wwCvXbCS53vucYCm3b3BL4QQhWedTYVxuSGkCvx27BTOwr5GuD7Pv4CmenZX33GNoSSMHld7q4QG7XnjGMqWGrZMMn8E7JtswMQyNUNFA98hEeND5C1g8Q=w378-h253-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Turkey"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/ADCreHcRALl2YYdvxngxxitAuLSrE0ttxRBAeuz89c__bqBl4DmpniVYX-CFfEzMW9bwSOuMNC9r7TRRaPe2urGJrRkNytzcy_JFdiYnmXWFf6OGwT9OTTRTNAL2EjZIs2U6dviHJM10EzsYvEXRvqbRYhwGIQ=w308-h345-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Christmas Pudding"}) ;
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/ABLVV86vTAoUlx_k3fqxJeN81CKUErMw8qmm9CnFyd2pY1V4dKSw-HVhkraWVs7hTkQ9XbZxrMPezSnR0VKwc_k7EX-frc0oY4FWZ-vkkMw4pPcfFXIwhXB5uwyL_mnabmFp4riftStR5Bs_M9ciRasyIphM1Q=w520-h417-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Brussel Sprout"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/ADCreHf0NIWf79-ZpJNsZIKJm8oYkJX7MzFP1dU4ykRIAfpvZkA5plZ7ILNSGIZluNa0M0XUJv7drEA62MJApt1aoKIPxQkweeQoNrLUrs7mdv-tBILynbfYbdsIKvL2IBtu20J29g3istLVOSFwZRtz5qDoYw=w381-h317-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Nuts"}) ;
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
-	image : "",
-	answerimage : "", answerSpeak : "", answer : "Satsuma"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
-	image : "",
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "https://lh3.googleusercontent.com/pw/ADCreHd9kr1_aAadqIjC_t1wD08FT06u3x3RHuc8ajpfzhjIg6sOppGNKehx8Yya8N0Ipxv1Eg7hVPbEObm16tgSM8ANQOebj_KBPLlXHqRIi7Si9tSiQSad1refLX2hI9CVuRYgqYSu0y6kE5Lxf7aCMxtysQ=w878-h355-s-no-gm?authuser=0",
+	answerimage : "", answerSpeak : "", answer : "Chocolate Orange"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "https://lh3.googleusercontent.com/pw/ADCreHcOBjN7lH3XXcGrjLqoixCwJKQ3EEEAQr2tRyfMnqC36hn2nNEClQu-6SlU75Y3Yn3eU-oLi63AF8GwJlJCYfjlaKURxnWp8JC2svr2eYyTK3VIqTfhWR_JcTIPCO9k2idpTRAv6E8q_JCjBQLv2cARYg=w739-h290-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Dates"}) ;
 
 
