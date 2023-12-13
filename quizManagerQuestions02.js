@@ -6147,8 +6147,51 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : "All I want for Christmas is you</BR>We wish you a Merry Christmas</BR>I saw mummy kissing Santa Claus</BR>Rudolph the red-nosed reindeer</BR>Silent Night</BR>I wish it could be Christmas every day</BR>Santa Claus is coming to town</BR>It's beginning to look a lot like Christmas</BR>White Christmas</BR>Last Christmas", answerSpeak : "", question : ""}) ;
 
 
+quests[++questIndexBuilder] = { //
+		name : "2023 Goodbyes" ,
+		hoverover : "Who did we say goodbye to in 2023",
+		tags : "2023-12-17,saturday", 
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "We lost the legendary Tina Turner in May. What was her given name when she was born?", // 
+	image : "https://i.guim.co.uk/img/media/1cac638471f58c8b1c6cbaa27bf5a54ee090d211/20_148_5585_3351/master/5585.jpg?width=620&quality=85&auto=format&fit=max&s=250d93280ce85e218943f007977da363",
+	answerimage : "", answerSpeak : "", answer : "Anna Mae Bullock"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "There was a huge outpouring of love when we lost the Friends star Matthew Perry. In which year did the sitcom make its debut on US television?"
+		+ Table4ColumnStart + "1988</td><td>1990</td><td>1992</td><td>1994" + Table4ColumnEnd, // 
+	image : "https://i.guim.co.uk/img/media/2fe5f9392d467b9cae43558815c4342936da6589/0_186_2537_1523/master/2537.jpg?width=620&quality=85&auto=format&fit=max&s=c7bd79d2646dd04cee16d5969998db26",
+	answerimage : "", answerSpeak : "", answer : "1994"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Battersea Dogs and Cats Home named its vet hospital after Paul O'Grady after his death in March. What was the name of his incredible drag act with which he first found widespread fame?", // 
+	image : "https://i.guim.co.uk/img/media/d9dd4d3a4e61f931ec1da325e41e51f045ffe2c8/0_116_3000_1800/master/3000.jpg?width=620&quality=85&auto=format&fit=max&s=2dfa43512471bf2126f53c3b13fe8cab",
+	answerimage : "", answerSpeak : "", answer : "Lily Savage"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "David McCallum had a long TV history, including roles as the Invisible Man, Steel in Sapphire & Steel, and on NCIS. But what was the name of his Man from UNCLE character?"
+		+ Table4ColumnStart + "Napoleon Solo</td><td>Arkady Ourumov</td><td>Illya Kuryakin</td><td>Daniel Barton" + Table4ColumnEnd, // 
+	image : "https://i.guim.co.uk/img/media/35d61bb0621dec2eec8947766aa3e28ff1a7501a/228_0_5073_5072/master/5073.jpg?width=620&quality=85&auto=format&fit=max&s=dcc4e69d0d6872074068186d2b0a949c",
+	answerimage : "", answerSpeak : "", answer : "Illya Kuryakin"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "One of the most celebrated British actors, Glenda Jackson was also an MP. Where was she first elected?"+ Table4ColumnStart + "Brighton Pavilion</td><td>Hampstead and Highgate</td><td>Wirral West</td><td>Islington South and Finsbury" + Table4ColumnEnd, // 
+	image : "https://i.guim.co.uk/img/media/ebbf9231a0551a58e0b46dbec2fb9ac3b0c2972d/0_101_5671_3403/master/5671.jpg?width=620&quality=85&auto=format&fit=max&s=ade77252ced1977e785db596faf4249e",
+	answerimage : "", answerSpeak : "", answer : "Hampstead and Highgate"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "Mary Quant, the designer who in many ways defined the look of 1960s London opened her first shop on Kings Road in 1955. What was it called?"
+		+ Table4ColumnStart + "Bazaar</td><td>Sharp</td><td>Modes</td><td>Regatta" + Table4ColumnEnd, // 
+	image : "https://i.guim.co.uk/img/media/4127af23e0a496b90845f4da7e33813ca857f741/0_52_5533_3320/master/5533.jpg?width=620&quality=85&auto=format&fit=max&s=198665adf4ea2103ccb9e1d540df94ae",
+	answerimage : "", answerSpeak : "", answer : "Bazaar"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "As well as Dumbledore, Michael Gambon is known for his incredible performance in The Singing Detective. What was his character's name?"
+		+ Table4ColumnStart + "Philip Marlow</td><td>Mark Binney</td><td>Richard Lazarus</td><td>Geoffrey Tupton" + Table4ColumnEnd, // 
+	image : "https://i.guim.co.uk/img/media/80a3b6acb360dda6e689c6525e930e4d5e76e711/0_497_1431_858/master/1431.jpg?width=620&quality=85&auto=format&fit=max&s=547da4aa327d6c5b90d1ddf9a01a1c8b",
+	answerimage : "", answerSpeak : "", answer : "Philip Marlow"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "When did Betty Boothroyd become the first woman to be speaker of the House of Commons in Westminster?"
+		+ Table4ColumnStart + "1978</td><td>1982</td><td>1988</td><td>1992" + Table4ColumnEnd, // 
+	image : "https://i.guim.co.uk/img/media/48d7d0209ecadba820ee6b9de8ef4fe4527295ab/0_67_1769_1061/master/1769.jpg?width=620&quality=85&auto=format&fit=max&s=38c31753c2203e311568019118f5de58",
+	answerimage : "", answerSpeak : "", answer : "1992.  She was only the 3rd Labour MP to take up the chair"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "One of Ireland's greatest songwriters, Shane MacGowan also passed away this year. Where was MacGowan born?"
+		+ Table4ColumnStart + "Preston, Lancashire</td><td>Pembury, Kent</td><td>Dawlish, Devon</td><td>Macclesfield, Cheshire" + Table4ColumnEnd, // 
+	image : "https://i.guim.co.uk/img/media/833cc695232d0a37a52ea8da388346bc5b1663d4/0_152_1303_782/master/1303.jpg?width=620&quality=85&auto=format&fit=max&s=f542167e49aa24c8420f60d98078c3ae",
+	answerimage : "", answerSpeak : "", answer : "Pembury, Kent"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "We lost Sinead O'Connor this year. On which of her albums did Nothing Compares 2 U appear?"
+		+ Table4ColumnStart + "I Do Not Want What I Haven't Got</td><td>The Lion and the Cobra</td><td>Throw Down Your Arms</td><td>Am I Not Your Girl?" + Table4ColumnEnd, // 
+	image : "https://i.guim.co.uk/img/media/82e9de3053231eb60966229c49d03d2489245336/238_74_1154_692/master/1154.jpg?width=620&quality=85&auto=format&fit=max&s=362e7eb1b422c9873fe7f383b9c1744d",
+	answerimage : "", answerSpeak : "", answer : "I Do Not Want What I Haven't Got"}) ;
 
-
+//+ Table4ColumnStart + "?</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd
 
 //https://www.coventrytelegraph.net/whats-on/family-kids-news/23-general-knowledge-pub-quiz-27956650
 
