@@ -6191,7 +6191,17 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 	image : "https://i.guim.co.uk/img/media/82e9de3053231eb60966229c49d03d2489245336/238_74_1154_692/master/1154.jpg?width=620&quality=85&auto=format&fit=max&s=362e7eb1b422c9873fe7f383b9c1744d",
 	answerimage : "", answerSpeak : "", answer : "I Do Not Want What I Haven't Got"}) ;
 
-//+ Table4ColumnStart + "?</td><td>?</td><td>?</td><td>?" + Table4ColumnEnd
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2023-12-17,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist//0WEuDbIRGa1jfsQf3uBf81?utm_source=generator" width="100%" height="730" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Jingle Bells</BR>12 days of Christmas</BR>Silent Night</BR>Jingle Bells</BR>Felix Navidad</BR>Do they know it's Christmas</BR>Hark the Herald Angels sing</BR>Rudolf the Red Nosed Reindeer</BR>Santa Claus is coming to town</BR>Drummer Boy", answerSpeak : "", question : ""}) ;
+
 
 //https://www.coventrytelegraph.net/whats-on/family-kids-news/23-general-knowledge-pub-quiz-27956650
 
