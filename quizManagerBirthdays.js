@@ -1485,12 +1485,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 	question : "Who is this, born December 9th 1960?" ,	answer : "Caroline Lucas", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Official_portrait_of_Caroline_Lucas_MP_crop_2.jpg/220px-Official_portrait_of_Caroline_Lucas_MP_crop_2.jpg"	});	
 
 
-/*
 
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
-	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
-
-*/
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-10",
 	question : "Who is this, born December 10th 1974?" ,	answer : "Meg White", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Meg_White_1.jpg/220px-Meg_White_1.jpg"	});	
@@ -1514,6 +1509,26 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-11",
 	question : "Who is this, born December 11th 1919?" ,	answer : "Cliff Michelmore", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/en/thumb/b/bb/Cliff_Michelmore.jpeg/220px-Cliff_Michelmore.jpeg"	});	
 
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-16",
+	question : "Who is this, born December 16th 1899?" ,	answer : "Noel Coward", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Noel_Coward_Allan_warren_edit_1.jpg/220px-Noel_Coward_Allan_warren_edit_1.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-16",
+	question : "Who drew this, born December 16th 1932?" ,	answer : "Quentin Blake", answerSpeak : "", image : "https://images.theconversation.com/files/501283/original/file-20221215-14-tg0u7w.jpg?ixlib=rb-1.1.0&rect=5%2C0%2C1791%2C1166&q=45&auto=format&w=926&fit=clip"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-16",
+	question : "Who is this, born December 16th 1946?" ,	answer : "Benny Andersson", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Benny_Andersson_2012-09-24_001_%28cropped%29.jpg/220px-Benny_Andersson_2012-09-24_001_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-16",
+	question : "Who is this, born December 16th 1949 (1/2 point for his band's name)?" ,	answer : "Billy Gibbons (ZZ Top)", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Billy_Gibbons_of_ZZ_Top_performing_in_San_Antonio%2C_Texas_2015.jpg/220px-Billy_Gibbons_of_ZZ_Top_performing_in_San_Antonio%2C_Texas_2015.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-16",
+	question : "Who is this little chap, born December 16th 1966" ,	answer : "Dennis Wise", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Chelsea_Legends_1_Inter_Forever_4_%2828453485028%29_%28cropped%29.jpg/220px-Chelsea_Legends_1_Inter_Forever_4_%2828453485028%29_%28cropped%29.jpg"	});	
+
+
+/*
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
+	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
+
+*/
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-17",
 	question : "Who is this, born December 17th 1973?" ,	answer : "Paula Radcliffe", answerSpeak : "", image : "https://i2-prod.dailystar.co.uk/incoming/article15533000.ece/ALTERNATES/s615b/0_Paula-Radcliffe-London-Marathon-222075"	});	
