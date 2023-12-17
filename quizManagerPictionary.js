@@ -3133,22 +3133,22 @@ quests[++questIndexBuilder] = { //
 		questInfo: new Array()
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
-	answerimage : "", answerSpeak : "", answer : "Do they know it's Christmas?"}) ;
+	image : "https://lh3.googleusercontent.com/pw/ABLVV87UWpB5QrKoJ63S0GBTWApKYSNh_7asFWL8ElK_UT_Vz8bzuxGT9RCGn268RP9oSJYXLL3xOCleUu2aCv83uLLs8aoDgboHhx64IPfJI_sxbZsYgqGo6rMfyWVX9e6RRRWd1EG8fU01sC1yl_2oA68c9w=w563-h398-s-no-gm?authuser=0",
+	answerimage : "", answerSpeak : "", answer : "Do they know it's Christmas? (Feed the world)"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ABLVV86aDC6ksLsOWxJkcXVgJfxYb-k59dXsqk27CMSBKbb1DX6z2DfJ_66apU2Llma0PYfTtiYyA2XVLjNLDSLSvNhqZWNWQo9w7IRHNglLUt6ox7y6f9F_nNwkgBCzkNLD_Es7yoJo7TXQR-A7pxo9sGO-cw=w722-h534-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Silent Night"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ABLVV84PFyFRz_yz_0tchzBLnyEo74nu6igbNDasPCmp_jrxq-VWt5T2fqzF3RfzaQ4JCECxbFoTrKazSYX0ndcFHTydu-Wr2Cid_qvZtJd9-9OzdxWA9ZDCsgPnD0YCr6jF7Ey2p63vCVToVGus7DXZtrRzFA=w693-h429-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "We built this city on sausage rolls"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ABLVV84GiMq0ZqdhmLzVEkxwVro8gnFFtPoK9st_vgfQmEb_cRqUGQhwarPpdRO0zjpgsztoiNe1ueUJR3x-bACmWOVSq-UbR3_LThzmDdQPHVL0KNL3OWh68NzDzLeS_MA77u7j5jrI--qTs4gH_llNfq6j6Q=w926-h504-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Fairytale of New York"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ABLVV871YVHtuusMXPepF2t3kmk0tJ_iSeLaxfEX8Vwwn9IpsVB0RTMU_ob8aAyDF21bHCk3GRRPfYn4EyzxCFm0UZ6JmHFOKpDfcF7MFgrOq4sLl6PQ7fbVSWiJHg39RjosTMRB0omhpVrFcqJu7eYvIpKDog=w533-h478-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Rudolf the red-nosed reindeer"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ABLVV85lhTrIpt4ExrZ7GRj_bHqxqUIJL6MbcpjtS5GPSv0yZkj1NdXHskh4Tz7dxZra9hep7tA_1KNN0b58FwjHOU_aQZrnP1NBcW4Z1kQGXxj8YfcKJQnqv8Qknk0x1D1zi8EiOOfhu1fVuX32JQxk-ZoX9Q=w552-h537-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Little drummer boy"}) ;
 
 
