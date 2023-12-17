@@ -3128,7 +3128,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 
 quests[++questIndexBuilder] = { //
 		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
-		hoverover : "Pictionary on the theme of ??",
+		hoverover : "Pictionary on the theme of Christmas songs",
 		tags : "2023-12-17,pictionary", straightToAnswers:true,
 		questInfo: new Array()
 	};
