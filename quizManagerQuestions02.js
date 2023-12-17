@@ -6150,6 +6150,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 quests[++questIndexBuilder] = { //
 		name : "2023 Goodbyes" ,
 		hoverover : "Who did we say goodbye to in 2023",
+		splash : {splashType : splashTypeText , splashText : "2023 has seen us say goodbye to many people, here are some questions based on 10 of them"},
 		tags : "2023-12-17,saturday", 
 		questInfo: new Array()
 	};
