@@ -6201,7 +6201,36 @@ quests[++questIndexBuilder] = {
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist//0WEuDbIRGa1jfsQf3uBf81?utm_source=generator" width="100%" height="730" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
-	answer : "Jingle Bells</BR>12 days of Christmas</BR>Silent Night</BR>Jingle Bells</BR>Felix Navidad</BR>Do they know it's Christmas</BR>Hark the Herald Angels sing</BR>Rudolf the Red Nosed Reindeer</BR>Santa Claus is coming to town</BR>Drummer Boy", answerSpeak : "", question : ""}) ;
+	answer : "Jingle Bells</BR>12 days of Christmas</BR>Silent Night</BR>Jingle Bells</BR>Felis Navidad</BR>Do they know it's Christmas</BR>Hark the Herald Angels sing</BR>Rudolf the Red Nosed Reindeer</BR>Santa Claus is coming to town</BR>Drummer Boy", answerSpeak : "", question : ""}) ;
+
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2023-12-22,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What L </BR></BR>Which famous opera house in Milan, Italy, rose to its greatest heights under Toscanini?", // 
+	answerSpeak : "", answer : "La Scala"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What L </BR></BR>Which type of acid is produced in the muscles during exercise?", // 
+	answerSpeak : "", answer : "Lactic"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What L </BR></BR>Florence nightingale was known as 'the lady of the...' what?", // 
+	answerSpeak : "", answer : "Lamp"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What L </BR></BR>What has been the occupation of most American presidents prior to politics?", // 
+	answerSpeak : "", answer : "Lawyer"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What L </BR></BR>What was a Roman measurement that consisted of 1500 paces?", // 
+	answerSpeak : "", answer : "League"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What L </BR></BR>What is the main ingredient of the Indian dish 'Dal'?", // 
+	answerSpeak : "", answer : "Lentils"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What L </BR></BR>In what type of building would you see the Dewey classification system used?", // 
+	answerSpeak : "", answer : "Library"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What L </BR></BR>is a planographic printmaking process in which a design is drawn onto a flat stone (or prepared metal plate, usually zinc or aluminum) and affixed by means of a chemical reaction?", // 
+	answerSpeak : "", answer : "Lithography"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What L </BR></BR>Which company produced the World War Two aeroplane, the 'Lightning'?", // 
+	answerSpeak : "", answer : "Lockheed"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What L </BR></BR>The Kinks sang about a person who 'walked like a woman but talked like a man' - what was their name?", // 
+	answerSpeak : "", answer : "Lola"}) ;
 
 
 //https://www.coventrytelegraph.net/whats-on/family-kids-news/23-general-knowledge-pub-quiz-27956650
@@ -6227,16 +6256,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeText,	question : "Do
 
 /*
 
-https://www.reddit.com/r/sundayquiz/comments/v1m59i/alphabet_quiz_226_b/
-https://www.reddit.com/r/trivia/comments/v2d5kn/alphabet_quiz_326_c/
-https://www.reddit.com/r/quiz/comments/v34f54/alphabet_quiz_426_d/
-https://www.reddit.com/r/trivia/comments/v3vpuq/alphabet_quiz_526_e/
-https://www.reddit.com/r/sundayquiz/comments/v5zu8h/alphabet_quiz_626_f/
-https://www.reddit.com/r/sundayquiz/comments/v6s7jr/alphabet_quiz_726_g/
-https://www.reddit.com/r/trivia/comments/v7m7kd/alphabet_quiz_826_h/
-https://www.reddit.com/r/sundayquiz/comments/v8cvow/alphabet_quiz_926_i/
-https://www.reddit.com/r/sundayquiz/comments/v92wu6/alphabet_quiz_1026_j/
-https://www.reddit.com/r/sundayquiz/comments/vb6oec/alphabet_quiz_1126_k/
+
 https://www.reddit.com/r/sundayquiz/comments/vbzb7m/alphabet_quiz_1226_l/
 https://www.reddit.com/r/sundayquiz/comments/vcplpk/alphabet_quiz_1326_m/
 https://www.reddit.com/r/sundayquiz/comments/vdj069/alphabet_quiz_1426_n/

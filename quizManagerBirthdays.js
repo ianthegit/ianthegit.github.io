@@ -1523,12 +1523,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 	question : "Who is this little chap, born December 16th 1966" ,	answer : "Dennis Wise", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Chelsea_Legends_1_Inter_Forever_4_%2828453485028%29_%28cropped%29.jpg/220px-Chelsea_Legends_1_Inter_Forever_4_%2828453485028%29_%28cropped%29.jpg"	});	
 
 
-/*
 
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
-	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
-
-*/
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-17",
 	question : "Who is this, born December 17th 1973?" ,	answer : "Paula Radcliffe", answerSpeak : "", image : "https://i2-prod.dailystar.co.uk/incoming/article15533000.ece/ALTERNATES/s615b/0_Paula-Radcliffe-London-Marathon-222075"	});	
@@ -1565,6 +1560,34 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 
 
 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-21",
+	question : "Who is this, born December 21st 1937?" ,	answer : "Jane Fonda", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Jane_Fonda_Cannes_2015.jpg/220px-Jane_Fonda_Cannes_2015.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-21",
+	question : "Who is this, born December 21st 1940?" ,	answer : "Frank Zappa", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Zappa_16011977_01_300.jpg/220px-Zappa_16011977_01_300.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-21",
+	question : "Who is this, born December 21st 1948?" ,	answer : "Samuel L Jackson", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/SamuelLJackson.jpg/220px-SamuelLJackson.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-21",
+	question : "Who is this, born December 21st 1954?" ,	answer : "Chris Evert", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Chris_Evert.jpg/220px-Chris_Evert.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-21",
+	question : "Who is this, born December 21st 1966?" ,	answer : "Kiefer Sutherland", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Kiefer_Sutherland_2_SDCC_2014.jpg/220px-Kiefer_Sutherland_2_SDCC_2014.jpg"	});	
+
+
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-22",
+	question : "Who is this, born December 22nd 1949?" ,	answer : "Maurice Gibb", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Maurice_Gibb_%28Bee_Gees%29_-_TopPop_1973_%28cropped%29.png/220px-Maurice_Gibb_%28Bee_Gees%29_-_TopPop_1973_%28cropped%29.png"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-22",
+	question : "Who is this, born December 22nd 1949?" ,	answer : "Robin Gibb", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/RobinGibb-2008.jpg/220px-RobinGibb-2008.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-22",
+	question : "Who is this, born December 22nd 1962?" ,	answer : "Ralph (Nathaniel Twisleton-Wykeham-)Feinnes", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Ralph_Fiennes_from_%22The_White_Crow%22_at_Opening_Ceremony_of_the_Tokyo_International_Film_Festival_2018_%2831747095048%29.jpg/220px-Ralph_Fiennes_from_%22The_White_Crow%22_at_Opening_Ceremony_of_the_Tokyo_International_Film_Festival_2018_%2831747095048%29.jpg"	});	
+
+
+/*
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
+	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
+
+*/
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-31",
 	question : "Who is this, born December 31st 1937?" ,	answer : "Anthony Hopkins", answerSpeak : "", image : "https://bloody-disgusting.com/wp-content/uploads/2014/12/83-Hannibal-Lecter-face-mask.jpg"	});	
