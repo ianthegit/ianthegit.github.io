@@ -6233,6 +6233,18 @@ quests[++questIndexBuilder] = {
 	answerSpeak : "", answer : "Lola"}) ;
 
 
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2023-12-22,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5apakT1THdxcegk2cf4BQb?utm_source=generator" width="100%" height="730" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "White Christmas</BR>God rest ye merry gentlemen</BR>Blue Christmas</BR>Silent Night</BR>It's beginning to look a lot like Christmas</BR>O little town of Bethleham</BR>Away in a manger</BR>Rudolph the red-nosed Reindeer</BR>We wish you a Merry Christmas</BR>Jingle Bells", answerSpeak : "", question : ""}) ;
+
+
 //https://www.coventrytelegraph.net/whats-on/family-kids-news/23-general-knowledge-pub-quiz-27956650
 
 quests[++questIndexBuilder] = { 
