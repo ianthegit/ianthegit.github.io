@@ -6215,7 +6215,7 @@ quests[++questIndexBuilder] = {
 	answerSpeak : "", answer : "La Scala"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What L </BR></BR>Which type of acid is produced in the muscles during exercise?", // 
 	answerSpeak : "", answer : "Lactic"}) ;
- addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What L </BR></BR>Florence nightingale was known as 'the lady of the...' what?", // 
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What L </BR></BR>Florence Nightingale was known as 'the Lady of the...' what?", // 
 	answerSpeak : "", answer : "Lamp"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What L </BR></BR>What has been the occupation of most American presidents prior to politics?", // 
 	answerSpeak : "", answer : "Lawyer"}) ;
