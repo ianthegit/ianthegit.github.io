@@ -55,6 +55,24 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 
 
 
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-13",
+	question : "Who is this, born January 13th 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-13",
+	question : "Who is this, born January 13th 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-13",
+	question : "Who is this, born January 13th 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-13",
+	question : "Who is this, born January 13th 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-13",
+	question : "Who is this, born January 13th 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-13",
+	question : "Who is this, born January 13th 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-13",
+	question : "Who is this, born January 13th 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
+
+
+
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-14",
 	question : "Who is this, born January 14th 1988?" ,	answer : "Jack P Shepherd", answerSpeak : "", image : "https://i2-prod.mirror.co.uk/incoming/article22293636.ece/ALTERNATES/s1200c/1_Jack-P-Shepherd-as-Wolverine.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-14",
@@ -77,6 +95,12 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 	question : "Who is this, born January 14th 1926?" ,	answer : "Warren Mitchell", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Warren_Mitchell.jpg/220px-Warren_Mitchell.jpg"	});	
 
 
+/*
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
+	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
+
+*/
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-15",
 	question : "Who is this, born January 15th 1913?" ,	answer : "Lloyd Bridges", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Lloyd_Bridges_1966.jpg/220px-Lloyd_Bridges_1966.jpg"	});	
@@ -1582,12 +1606,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 	question : "Who is this, born December 22nd 1962?" ,	answer : "Ralph (Nathaniel Twisleton-Wykeham-)Feinnes", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Ralph_Fiennes_from_%22The_White_Crow%22_at_Opening_Ceremony_of_the_Tokyo_International_Film_Festival_2018_%2831747095048%29.jpg/220px-Ralph_Fiennes_from_%22The_White_Crow%22_at_Opening_Ceremony_of_the_Tokyo_International_Film_Festival_2018_%2831747095048%29.jpg"	});	
 
 
-/*
-
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
-	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
-
-*/
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"12-31",
 	question : "Who is this, born December 31st 1937?" ,	answer : "Anthony Hopkins", answerSpeak : "", image : "https://bloody-disgusting.com/wp-content/uploads/2014/12/83-Hannibal-Lecter-face-mask.jpg"	});	
