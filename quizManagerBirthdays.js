@@ -57,24 +57,17 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-13",
-	question : "Who is this, born January 13th 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
+	question : "Who is this, with hsi most famous creation, born January 13th 1926?" ,	answer : "Michael Bond", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/en/thumb/c/c6/Michael_Bond_fair_use_image.jpeg/220px-Michael_Bond_fair_use_image.jpeg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-13",
-	question : "Who is this, born January 13th 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
+	question : "Who is this, born January 13th 1961?" ,	answer : "Suggs", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Suggs.JPG/220px-Suggs.JPG"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-13",
-	question : "Who is this, born January 13th 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
+	question : "Who is this, born January 13th 1965?" ,	answer : "Bill Bailey", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Bill_Bailey_rocking_out.jpg/220px-Bill_Bailey_rocking_out.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-13",
-	question : "Who is this, born January 13th 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
+	question : "Who is this, born January 13th 1969?" ,	answer : "Stephen Hendry", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Stephen_Hendry_PHC_2011.png/220px-Stephen_Hendry_PHC_2011.png"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-13",
-	question : "Who is this, born January 13th 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-13",
-	question : "Who is this, born January 13th 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-13",
-	question : "Who is this, born January 13th 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
+	question : "Who is this, born January 13th 1982?" ,	answer : "Ruth Wilson", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Ruth_Wilson_May_2015_%28cropped%29.jpg/220px-Ruth_Wilson_May_2015_%28cropped%29.jpg"	});	
 
 
-
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-14",
-	question : "Who is this, born January 14th 1988?" ,	answer : "Jack P Shepherd", answerSpeak : "", image : "https://i2-prod.mirror.co.uk/incoming/article22293636.ece/ALTERNATES/s1200c/1_Jack-P-Shepherd-as-Wolverine.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-14",
 	question : "Who is this, born January 14th 1989?" ,	answer : "Frankie Bridge (nee Sandford)", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Frankie_Sandford_All_Fired_Up_Live.png/220px-Frankie_Sandford_All_Fired_Up_Live.png"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-14",
