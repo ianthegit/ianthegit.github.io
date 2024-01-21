@@ -3161,22 +3161,22 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 		questInfo: new Array()
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ABLVV87Hs5ocvhwx8tJ4h_0WclHrWiUoIRfig02a6F1RtqW7WEhvNuU92dHuaHy66--9J2LCD7s8ds7tgw2NH2cKoezQYwhkZJMH_-sK9zDnDcFlELOGV8VklzZfM7ame7mbdCSDI2_MiyVKLCiMoj8FZRC05A=w947-h952-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "UK Election"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ABLVV85aHooxt16PB5dS0n5AfqqsZtSWtqES6n6686MlrhMMW-ZeVo97EaEG_WtKSevLqXp37dvzCLbtrm21UrzVJ9j6_zfxmubl_C7WIlK1nO4BBRyE0ALk0BCUvQp3GpJ-99YM2QuHGJLoB0gfntSROofM2g=w1369-h984-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "US Election"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ABLVV86f5XxzsA0zxXbJYunKaGfre01EQCvhfnY6TP9OyA2gWD3r-pRiitO3FToSMBiN1INIT8jSMKLntTllxRKyjh0tH6YpMm9NNFCOoB9AwkL8nMwVOm1dweRfkCFGaoizBqpI3oH-HBrfmSS_Ul4hipqQbw=w1423-h1008-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "US Manned mission to the moon"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ABLVV85xXwSeFR0ClqcIEe4qCwXEi9RqqBqE8MdZ5oHofAjruUAxcLryKc5hSl3pAeDuL8mcXWAjpldCRTfXroK3wk0JwgvP4x0j7-TQWNLmtpfSWgdV09gf6B5YOaxovEq8KXCZyCGAW_PDclZ1OYlb6AQprQ=w1023-h804-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Notre Damme reopens after 5 years"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ABLVV87IKJShzjmFmJXZOZjnHzt0P6iMXD6dnxw99fwaLIVvObBU_gPkACzaZZ18KZ2nEZLffMS5uNZEaDXxr0YSBG4HspAjXL-CGC9O2q5df05vc6TIX5p7jn7Wbaz82Rg4lcI622Fp_xNNpguZkkS4pi-k3Q=w1344-h478-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Paris Olympics"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ABLVV84Um5iWGxM2CuT_vZC-_2sq3FwobytJsK1SV0YQ-uvGqPlJIQfhik0zuvYaJwjwHtTn_xyI3Ox9iVmuCUonDeNg6G8UAlXKkZqZARBwwP25CQzpeciPW_nBf7so9YQippKsvsKnHYTLlo9fixPvpVx9VA=w599-h524-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Leap Year"}) ;
 
 /*
