@@ -6284,7 +6284,7 @@ quests[++questIndexBuilder] = {
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37CtcsTHSa7hKhdGfWA5Ip?utm_source=generator" width="100%" height="730" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
-	answer : "Sweet Dreams, The Eurythmics</BR>In the air tonight, Phil Collins</BR>Day Tripper, The Beatles</BR>Gimme Shelter, The Rolling Stones</BR>Every little thing she does is magic, The Police</BR>When Doves cry, Prince</BR>Saturday Night's alright for fighting, Elton John</BR>The Chain, Fleetwood Mac</BR>Personal Jesus, Depeche Mode</BR>Hit me with your best shot, Pat Bennetar", answerSpeak : "", question : ""}) ;
+	answer : "Sweet Dreams, The Eurythmics</BR>In the air tonight, Phil Collins</BR>Day Tripper, The Beatles</BR>Gimme Shelter, The Rolling Stones</BR>Every little thing she does is magic, The Police</BR>When Doves cry, Prince</BR>Saturday Night's alright for fighting, Elton John</BR>The Chain, Fleetwood Mac</BR>Personal Jesus, Depeche Mode</BR>Hit me with your best shot, Pat Benatar", answerSpeak : "", question : ""}) ;
 
 
 
