@@ -88,13 +88,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 	question : "Who is this, born January 14th 1926?" ,	answer : "Warren Mitchell", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Warren_Mitchell.jpg/220px-Warren_Mitchell.jpg"	});	
 
 
-/*
-
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
-	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
-
-*/
-
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-15",
 	question : "Who is this, born January 15th 1913?" ,	answer : "Lloyd Bridges", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Lloyd_Bridges_1966.jpg/220px-Lloyd_Bridges_1966.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-15",
@@ -114,8 +107,22 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 
 
 
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-20",
+	question : "Who is this, born January 20th 1930?" ,	answer : "Buzz Aldrin", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Buzz_Aldrin.jpg/220px-Buzz_Aldrin.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-20",
+	question : "Who is this, born January 20th 1934?" ,	answer : "Tom Baker", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Tom_Baker.jpg/220px-Tom_Baker.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-20",
+	question : "Who is this, born January 20th 1966?" ,	answer : "Rainn Wilson", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/RainnwilsonOct07_%28cropped%29.jpg/220px-RainnwilsonOct07_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-20",
+	question : "Who is this, born January 20th 1971?" ,	answer : "Gary Barlow", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Gary_Barlow_performing_in_Glasgow%2C_2017_%282%29.jpg/220px-Gary_Barlow_performing_in_Glasgow%2C_2017_%282%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-20",
+	question : "Who is this, born January 20th 1979?" ,	answer : "Will Young", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Will_Young_2011.jpg/220px-Will_Young_2011.jpg"	});	
+
+
+
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-21",
-	question : "Who is this, born January 21 1976?" ,	answer : "Emma Bunton (Baby Spice)", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Emma_Bunton_at_Heart_Live_Christmas_2016.jpg/220px-Emma_Bunton_at_Heart_Live_Christmas_2016.jpg"	});	
+	question : "Who is this, born January 21 1976?" ,	answer : "Emma Bunton (Baby Spice)", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Emma_Bunton_2014_1.png/220px-Emma_Bunton_2014_1.png"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-21",
 	question : "Who is this, born January 21 1950?" ,	answer : "Billy Ocean", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Billy_Ocean_in_january_2012.jpg/220px-Billy_Ocean_in_january_2012.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-21",
@@ -142,6 +149,13 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-22",
 	question : "Who is this, born January 22 1990?" ,	answer : "Phil Wang", answerSpeak : "", image : "https://www.denofgeek.com/wp-content/uploads/2022/10/Den-of-Geek-4.png?fit=1200%2C675"	});	
 
+
+/*
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
+	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
+
+*/
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-28",
 	question : "Who is this, born January 28 1918?" ,	answer : "Harry Corbett", answerSpeak : "", image : "https://pbs.twimg.com/media/E4uGVXkXMAMWXJ4.jpg"	});	

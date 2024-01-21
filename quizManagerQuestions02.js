@@ -6245,6 +6245,49 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : "White Christmas</BR>God rest ye merry gentlemen</BR>Blue Christmas</BR>Silent Night</BR>It's beginning to look a lot like Christmas</BR>O little town of Bethleham</BR>Away in a manger</BR>Rudolph the red-nosed Reindeer</BR>We wish you a Merry Christmas</BR>Jingle Bells", answerSpeak : "", question : ""}) ;
 
 
+
+
+quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2024-1-21,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What M </BR></BR>What Shakespeare character is it considered bad luck to mention in a theatre?", // 
+	answerSpeak : "", answer : "MacBeth"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What M </BR></BR>Who began her career making death masks from the severed heads of those executed by the guillotine after the French Revolution?", // 
+	answerSpeak : "", answer : "Madame Tussaud"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What M </BR></BR>What substance is barley converted into before it can be made into beer?", // 
+	answerSpeak : "", answer : "Malt"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What M </BR></BR>What Venetian traveller and explorer landed in China and reached Kublai Khan's court in 1275?", // 
+	answerSpeak : "", answer : "Marco Polo"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What M </BR></BR>In Roman mythology, which God was the father of Romulus and Remus, the founders of Rome?", // 
+	answerSpeak : "", answer : "Mars"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What M </BR></BR>Who was the first ever person ever to sing a James Bond theme for the film 'From Russia with Love'?", // 
+	answerSpeak : "", answer : "Matt Munroe"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What M </BR></BR>Triassic, Jurassic, and Cretaceous are three periods during which geological era?", // 
+	answerSpeak : "", answer : "Mesozoic"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What M </BR></BR>Which of the 48 contiguous states extends farthest north and is known as 'The Land of 10,000 Lakes'?", // 
+	answerSpeak : "", answer : "Minnesota"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What M </BR></BR>Which word created by JK Rowling gained entry into The Oxford English Dictionary in 2003?", // 
+	answerSpeak : "", answer : "Muggle"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What M </BR></BR>George Bernard Shaw's play 'Pygmalion' was adapted to become which musical in 1956?", // 
+	answerSpeak : "", answer : "My Fair Lady"}) ;
+
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2024-1-21,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37CtcsTHSa7hKhdGfWA5Ip?utm_source=generator" width="100%" height="730" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Sweet Dreams, The Eurythmics</BR>In the air tonight, Phil Collins</BR>Day Tripper, The Beatles</BR>Gimme Shelter, The Rolling Stones</BR>Every little thing she does is magic, The Police</BR>When Doves cry, Prince</BR>Saturday Night's alright for fighting, Elton John</BR>The Chain, Fleetwood Mac</BR>Personal Jesus, Depeche Mode</BR>Hit me with your best shot, Pat Bennetar", answerSpeak : "", question : ""}) ;
+
+
+
 //https://www.coventrytelegraph.net/whats-on/family-kids-news/23-general-knowledge-pub-quiz-27956650
 
 quests[++questIndexBuilder] = { 
