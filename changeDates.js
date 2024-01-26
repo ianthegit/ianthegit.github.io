@@ -14,7 +14,7 @@ hours=new Array (5, 10, 12, 15, 20, 24, 36, 48);
  		document.write("<div id='changeSetOrganiser'  ><table border='0' ><tr>"+
  		"<td> Duration  " +setupSelector('duration', 5, 'runCalculateFromDuration', hours)+
  		" Change Start Date and Time (UK Local time) " +
- 		" <input type='datetime-local'  value='changeStart' title='changeStart' id='startTime' onfocusout='runCalculate(this.value)' /> </span></td> </tr><tr><td>" +
+ 		" <input type='datetime-local'  value=" + new Date().toLocaleString("en-US") + " title='changeStart' id='startTime' onfocusout='runCalculate(this.value)' /> </span></td> </tr><tr><td>" +
  		 "<span id='data' >" + writeTeamsHTML() +"</span></td></tr></table></div>");
 
 	}
@@ -33,13 +33,14 @@ function runCalculate(pickedDate) {
 	     formatDate(new Date((new Date(pickedDate) ).toLocaleString("en-US", {timeZone: timezones[i].typeName})));   ;
 
 	
-  	endDate = addHours(new Date(pickedDate), document.getElementById('duration').value);
+  	endDate = addHours(pickedDate, document.getElementById('duration').value);
   
     document.getElementById(timezones[i].type+'End').innerHTML = 
 	     formatDate(new Date((endDate ).toLocaleString("en-US", {timeZone: timezones[i].typeName})));   ;
     }
 	
 }
+
 
 
 function formatDate(date) {
@@ -53,15 +54,10 @@ function formatDate(date) {
   return   date.getDate() + "/" + (date.getMonth()+1) + "/" + date.getFullYear() + "  " + strTime;
 }
 
-
 function addHours(date, hours) {
-	console.log('orig date = ' + date + '  Hours == ' + date.getHours() + '  months == ' + date.getMonth() + '   Hours to add == ' + hours);
-	
-  	date.setHours(date.getHours() + hours);
-	console.log('new  date = ' + date + 'Hours == ' + date.getHours() + '  months == ' + date.getMonth());
-	console.log("-------------");
-  return date;
+  return new Date(new Date(date).setTime(new Date(date).getTime() + (hours*60*60*1000)));
 }
+
 
 function writeTeamsHTML() { teamHTML = "";	
  for (var i = 0 ; i < timezones.length ; i++) {
