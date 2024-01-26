@@ -12,7 +12,7 @@ hours=new Array (5, 10, 12, 15, 20, 24, 36, 48);
 		timezones.push({type : 'PST',	localeName : "Pacific Standard Time" , typeName : "America/Los_Angeles" });
 
  		document.write("<div id='changeSetOrganiser'  ><table border='0' ><tr><td><span id='ControlFunctions' >Change Start Date and Time (UK Local time) " +
- 		" </td></tr><tr><td><input type='datetime-local'  value='changeStart' title='changeStart' id='startTime' onfocusout='runCalculate(this.value)' /> </span></td> <td>  " +
+ 		" </td></tr><tr><td><input type='datetime-local'  value='changeStart' title='changeStart' id='startTime' onfocusout='runCalculate(this.value)' /> </span></td> <td> Duration  " +
  		
  		setupSelector('duration', 5, 'runCalculateFromDuration', hours)
  		
@@ -46,9 +46,13 @@ function runCalculate(pickedDate) {
 
 
 function formatDate(date) {
-  var hours = date.getHours();
-  var minutes = date.getMinutes();
-  var strTime = hours + ':' + minutes ; 
+  hours = ''+ date.getHours();
+  
+  minutes = ''+ date.getMinutes();
+  var strHours =  ( hours < 10) ? '0' + hours : hours  ;
+  var strMinutes =  ( minutes < 10) ? '0' + minutes : minutes  ;
+  
+  var strTime = strHours + ':' + strMinutes ; 
   return   date.getDate() + "/" + (date.getMonth()+1) + "/" + date.getFullYear() + "  " + strTime;
 }
 
