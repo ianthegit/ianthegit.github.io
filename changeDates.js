@@ -11,13 +11,11 @@ hours=new Array (5, 10, 12, 15, 20, 24, 36, 48);
 		timezones.push({type : 'CST',	localeName : "Central Standard Time" , typeName : "America/Winnipeg" });
 		timezones.push({type : 'PST',	localeName : "Pacific Standard Time" , typeName : "America/Los_Angeles" });
 
- 		document.write("<div id='changeSetOrganiser'  ><table border='0' ><tr><td><span id='ControlFunctions' >Change Start Date and Time (UK Local time) " +
- 		" </td></tr><tr><td><input type='datetime-local'  value='changeStart' title='changeStart' id='startTime' onfocusout='runCalculate(this.value)' /> </span></td> <td> Duration  " +
- 		
- 		setupSelector('duration', 5, 'runCalculateFromDuration', hours)
- 		
- 		 + "</tr><tr><td><span id='data' >" 
- 		+ writeTeamsHTML() +"</span></td></tr></table></div>");
+ 		document.write("<div id='changeSetOrganiser'  ><table border='0' ><tr>"+
+ 		"<td> Duration  " +setupSelector('duration', 5, 'runCalculateFromDuration', hours)+ "</td>"+
+ 		" <td> Change Start Date and Time (UK Local time) " +
+ 		" </td><td><input type='datetime-local'  value='changeStart' title='changeStart' id='startTime' onfocusout='runCalculate(this.value)' /> </span></td> </tr><tr><td>" +
+ 		 "<span id='data' >" + writeTeamsHTML() +"</span></td></tr></table></div>");
 
 	}
 
@@ -35,7 +33,7 @@ function runCalculate(pickedDate) {
 	     formatDate(new Date((new Date(pickedDate) ).toLocaleString("en-US", {timeZone: timezones[i].typeName})));   ;
 
 	
-	const hoursToAdd = document.getElementById('duration') * 60 * 60 * 1000;
+	const hoursToAdd = document.getElementById('duration').value * 60 * 60 * 1000;
   	endDate = addHours(new Date(pickedDate), document.getElementById('duration').value);
   
     document.getElementById(timezones[i].type+'End').innerHTML = 
