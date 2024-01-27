@@ -16,7 +16,7 @@ hours=new Array (5,6,8, 10, 12, 15, 20, 24, 36, 48);
 
  		document.write("<div id='changeSetOrganiser'  ><table border='0' ><tr>"+
  		"<td> Duration  " +setupSelector('duration', 5, 'runCalculateFromDuration', hours)+
- 		" Change Start Date and Time (UK Local time) " +
+ 		" hours.   Start Date and Time (UK Local time) " +
  		" <input type='datetime-local'  value=" + new Date().toLocaleString("en-US") + " title='changeStart' id='startTime' onfocusout='runCalculate(this.value)' /> </span></td> </tr><tr><td>" +
  		 "<span id='data' >" + writeTeamsHTML() +"</span></td></tr></table></div>");
 
