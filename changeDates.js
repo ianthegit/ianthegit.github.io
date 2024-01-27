@@ -5,6 +5,7 @@ hours=new Array (5,6,8, 10, 12, 15, 20, 24, 36, 48);
 		
 		
 		
+		timezones.push({type : 'AEST',	localeName : "Australia, Sydney" , typeName : "Australia/Sydney"});
 		timezones.push({type : 'IST',	localeName : "India" , typeName : "Asia/Kolkata"});
 		timezones.push({type : 'CET',	localeName : "Central Europe" , typeName : "Europe/Paris" });
 		timezones.push({type : 'GMT',	localeName : "United Kingdom" , typeName : "Europe/London"});
