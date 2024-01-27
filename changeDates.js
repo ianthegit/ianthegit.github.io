@@ -1,5 +1,5 @@
 timezones = new Array();
-hours=new Array (5, 10, 12, 15, 20, 24, 36, 48);    
+hours=new Array (5,6,8, 10, 12, 15, 20, 24, 36, 48);    
     
     function createScreen(){
 		
