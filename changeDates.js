@@ -1,3 +1,4 @@
+// https://en.wikipedia.org/wiki/List_of_tz_database_time_zones  
 timezones = new Array();
 hours=new Array (5,6,8, 10, 12, 15, 20, 24, 36, 48);    
     
