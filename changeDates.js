@@ -6,10 +6,13 @@ hours=new Array (5, 10, 12, 15, 20, 24, 36, 48);
 		
 		
 		timezones.push({type : 'IST',	localeName : "India" , typeName : "Asia/Kolkata"});
+		timezones.push({type : 'CET',	localeName : "Central Europe" , typeName : "Europe/Paris" });
 		timezones.push({type : 'GMT',	localeName : "United Kingdom" , typeName : "Europe/London"});
 		timezones.push({type : 'EST',	localeName : "Eastern Standard Time" , typeName : "America/New_York" });
 		timezones.push({type : 'CST',	localeName : "Central Standard Time" , typeName : "America/Winnipeg" });
 		timezones.push({type : 'PST',	localeName : "Pacific Standard Time" , typeName : "America/Los_Angeles" });
+
+
 
  		document.write("<div id='changeSetOrganiser'  ><table border='0' ><tr>"+
  		"<td> Duration  " +setupSelector('duration', 5, 'runCalculateFromDuration', hours)+
