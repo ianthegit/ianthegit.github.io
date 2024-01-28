@@ -151,7 +151,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-27",
-	question : "Who is this, born January 27th 19YY?" ,	answer : "Alan Cumming", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/AlanCummingSept2013TIFF.jpg/220px-AlanCummingSept2013TIFF.jpg"	});	
+	question : "Who is this, born January 27th 1965?" ,	answer : "Alan Cumming", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/AlanCummingSept2013TIFF.jpg/220px-AlanCummingSept2013TIFF.jpg"	});	
 
 /*
 

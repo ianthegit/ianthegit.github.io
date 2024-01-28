@@ -6318,6 +6318,18 @@ quests[++questIndexBuilder] = {
 
 
 
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2024-1-28,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4yJu5pmKlQI5JJmQjLWCmq?utm_source=generator" width="100%" height="730" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Always on my mind, Elvis Presley</BR>California Girls, The Beach Boys</BR>Let it be, The Beatles</BR>We Will Rock You. Queen</BR>Viva Las Vegas, Elvis Presley</BR>Chiquitita, ABBA</BR>Eleanor Rigby, The Beatles</BR>What's love got to do with it, Tina Turner</BR>The Loco-motion, Little Eva</BR>Lay Lady Lay, Bob Dylan", answerSpeak : "", question : ""}) ;
+
+
+
 //https://www.coventrytelegraph.net/whats-on/family-kids-news/23-general-knowledge-pub-quiz-27956650
 
 quests[++questIndexBuilder] = { 
