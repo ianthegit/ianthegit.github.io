@@ -150,6 +150,9 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 	question : "Who is this, born January 22 1990?" ,	answer : "Phil Wang", answerSpeak : "", image : "https://www.denofgeek.com/wp-content/uploads/2022/10/Den-of-Geek-4.png?fit=1200%2C675"	});	
 
 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-27",
+	question : "Who is this, born January 27th 19YY?" ,	answer : "Alan Cumming", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/AlanCummingSept2013TIFF.jpg/220px-AlanCummingSept2013TIFF.jpg"	});	
+
 /*
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
@@ -162,7 +165,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-28",
 	question : "Who is this, born January 28 1929?" ,	answer : "Acker Bilk", answerSpeak : "", image : "http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcSzqS_oyvH4FGk70_BuGUFP0_jvtULrFJCLzRBFbtbSWtjV0gBqxh-GHrGEl-F2bjAaGMPgmp8Xj-ePsKw"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-28",
-	question : "Who is this, born January 28 1936?" ,	answer : "Alan Alda", answerSpeak : "", image : "https://thumbs.gfycat.com/ComfortableHastyAmphibian-max-1mb.gif"	});	
+	question : "Who is this, born January 28 1936?" ,	answer : "Alan Alda", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Alan_Alda_2015.jpg/220px-Alan_Alda_2015.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-28",
 	question : "Who is this, born January 28 1957?" ,	answer : "Frank Skinner", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Frank_Skinner.jpg/220px-Frank_Skinner.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-28",

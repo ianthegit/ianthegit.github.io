@@ -6288,6 +6288,36 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 
+
+quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2024-1-28,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What N </BR></BR>Is a traditional Hindi greeting, and is often used in Yoga sessions too nowadays?", // 
+	answerSpeak : "", answer : "Namaste"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What N </BR></BR>Whose army did Admiral Nelson defeat at the battle of Trafalgar?", // 
+	answerSpeak : "", answer : "Napaleon"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What N </BR></BR>Which fantasy land was discovered by Peter, Susan, Edmund and Lucy?", // 
+	answerSpeak : "", answer : "Narnia"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What N </BR></BR>What was Keanu Reeves' computer world alias in 'The Matrix'?", // 
+	answerSpeak : "", answer : "Neo"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What N </BR></BR>Which gas discovered in 1898 has a name meaning new?", // 
+	answerSpeak : "", answer : "Neon"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What N </BR></BR>Which European country has regions named Limburg, Drente and Brabant?", // 
+	answerSpeak : "", answer : "Netherlands"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What N </BR></BR>What Southern Hemisphere country was the first self-governing country in the world in which all women had the right to vote in parliamentary elections?", // 
+	answerSpeak : "", answer : "New Zealand"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What N </BR></BR>What is the common name of the family of plants which includes potatoes, peppers and tomatoes?", // 
+	answerSpeak : "", answer : "Nightshade(s)"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What N </BR></BR>When Odysseus was captured by the Cyclops Polyphemus, what false name did he call himself?", // 
+	answerSpeak : "", answer : "Nobody"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What N </BR></BR>What type of fuel powers Sizewell station?", // 
+	answerSpeak : "", answer : "Nuclear"}) ;
+
+
+
+
 //https://www.coventrytelegraph.net/whats-on/family-kids-news/23-general-knowledge-pub-quiz-27956650
 
 quests[++questIndexBuilder] = { 
