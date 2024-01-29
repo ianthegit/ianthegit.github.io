@@ -1,4 +1,4 @@
-timezones = new Array(); ///  / https://en.wikipedia.org/wiki/List_of_tz_database_time_zones 
+timezones = new Array(); // https://en.wikipedia.org/wiki/List_of_tz_database_time_zones 
 timezones.push({type : 'AEST',	localeName : "Australia, Sydney" , 		typeName : "Australia/Sydney"});
 timezones.push({type : 'HK',	localeName : "Hong Kong" , 				typeName : "Asia/Hong_Kong"});
 timezones.push({type : 'IST',	localeName : "India" , 					typeName : "Asia/Kolkata"});
@@ -6,6 +6,7 @@ timezones.push({type : 'CET',	localeName : "Central Europe" , 		typeName : "Euro
 timezones.push({type : 'GMT',	localeName : "United Kingdom" , 		typeName : "Europe/London"});
 timezones.push({type : 'EST',	localeName : "America Atlantic Coast",	typeName : "America/New_York" });
 timezones.push({type : 'CST',	localeName : "America Central" , 		typeName : "America/Winnipeg" });
+timezones.push({type : 'MST',	localeName : "America Mountains" , 		typeName : "America/Denver" });
 timezones.push({type : 'PST',	localeName : "America Pacific Coast",	typeName : "America/Los_Angeles" });
 hours=new Array (1,2,3,4,4.5,5,5.5,6,6.5,8,10,12,15,20,24,36,48,'Custom');    
 mlist = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
