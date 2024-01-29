@@ -48,3 +48,4 @@ function setupSelector(idName, defaultSelected, selectionChangeFunction, options
 		if (options[i]==defaultSelected){ retVal = retVal+' selected' ; }
 		retVal = retVal + '>' + options[i] + '</option>';}
 	return retVal + '</select></span>';}
+// Developed by Ian Hopgood.  Free to use, but buy me a beer when you see me.
