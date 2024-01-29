@@ -1,17 +1,18 @@
 // https://en.wikipedia.org/wiki/List_of_tz_database_time_zones  
 timezones = new Array();
+timezones.push({type : 'AEST',	localeName : "Australia, Sydney" , typeName : "Australia/Sydney"});
+timezones.push({type : 'IST',	localeName : "India" , typeName : "Asia/Kolkata"});
+timezones.push({type : 'CET',	localeName : "Central Europe" , typeName : "Europe/Paris" });
+timezones.push({type : 'GMT',	localeName : "United Kingdom" , typeName : "Europe/London"});
+timezones.push({type : 'EST',	localeName : "Eastern Standard Time" , typeName : "America/New_York" });
+timezones.push({type : 'CST',	localeName : "Central Standard Time" , typeName : "America/Winnipeg" });
+timezones.push({type : 'PST',	localeName : "Pacific Standard Time" , typeName : "America/Los_Angeles" });
 hours=new Array (5,6,8,10,12,15,20,24,36,48);    
+mlist = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
     
 function createScreen(){
-		timezones.push({type : 'AEST',	localeName : "Australia, Sydney" , typeName : "Australia/Sydney"});
-		timezones.push({type : 'IST',	localeName : "India" , typeName : "Asia/Kolkata"});
-		timezones.push({type : 'CET',	localeName : "Central Europe" , typeName : "Europe/Paris" });
-		timezones.push({type : 'GMT',	localeName : "United Kingdom" , typeName : "Europe/London"});
-		timezones.push({type : 'EST',	localeName : "Eastern Standard Time" , typeName : "America/New_York" });
-		timezones.push({type : 'CST',	localeName : "Central Standard Time" , typeName : "America/Winnipeg" });
-		timezones.push({type : 'PST',	localeName : "Pacific Standard Time" , typeName : "America/Los_Angeles" });
 
- 		document.write("<div id='changeSetOrganiser'  ><table border='0' ><tr>"+
+	document.write("<div id='changeSetOrganiser'  ><table border='0' ><tr>"+
  		"<td> Duration  " +setupSelector('duration', 5, 'runCalculateFromDuration', hours)+
  		" hours.</td></tr><tr><td>Start Date and Time (UK Local time) " +
  		" <input type='datetime-local'  value=" + new Date().toLocaleString("en-US") + " title='changeStart' id='startTime' onfocusout='runCalculate(this.value)' /> </td> </tr><tr><td></td></tr><tr><td>" +
@@ -23,20 +24,19 @@ function runCalculateFromDuration() {
 }
 
 function runCalculate(pickedDate) {
- 	for (var i = 0 ; i < timezones.length ; i++) {
-		document.getElementById(timezones[i].type+'Start').innerHTML = formatDate(new Date((new Date(pickedDate) ).toLocaleString("en-US", {timeZone: timezones[i].typeName})));   ;
-	
+	for (var i = 0 ; i < timezones.length ; i++) {
+		document.getElementById(timezones[i].type+'Start').innerHTML = formatDate(new Date((new Date(pickedDate) ).toLocaleString("en-US", {timeZone: timezones[i].typeName})));   ;	
 		endDate = addHours(pickedDate, document.getElementById('duration').value);
 		document.getElementById(timezones[i].type+'End').innerHTML = formatDate(new Date((endDate ).toLocaleString("en-US", {timeZone: timezones[i].typeName})));   ;
 	}
 }
 
 function formatDate(date) {
-  hours = ''+ date.getHours();
-  minutes = ''+ date.getMinutes();
-  var strHours =  ( hours < 10) ? '0' + hours : hours  ;
-  var strMinutes =  ( minutes < 10) ? '0' + minutes : minutes  ;
-  return   date.getDate() + " " + (getMonthName(date.getMonth())) + " " + date.getFullYear() + "  " + strHours + ':' + strMinutes;
+	hours = ''+ date.getHours();
+	minutes = ''+ date.getMinutes();
+	var strHours =  ( hours < 10) ? '0' + hours : hours  ;
+	var strMinutes =  ( minutes < 10) ? '0' + minutes : minutes  ;
+	return   date.getDate() + " " + (mlist[date.getMonth()]) + " " + date.getFullYear() + "  " + strHours + ':' + strMinutes;
 }
 
 function addHours(date, hours) {
@@ -56,16 +56,8 @@ function setupSelector(idName, defaultSelected, selectionChangeFunction, options
 	optionsCount =options.length;
 	for (var i=0 ; i<optionsCount ; i++){
     	retVal = retVal + '<option value="' + options[i] + '"' ;
-	   	if (options[i]==defaultSelected){
-	    	retVal = retVal+' selected' ;
-    	}
+	   	if (options[i]==defaultSelected){ retVal = retVal+' selected' ; }
     	retVal = retVal + '>' + options[i] + '</option>';
 	}
-	retVal = retVal + '</select></span>';
-	return retVal;
+	return retVal + '</select></span>';
 }
-
-function getMonthName(index) {
-	mlist = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
-	return mlist[index];
-};
