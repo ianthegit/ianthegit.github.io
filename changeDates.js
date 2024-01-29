@@ -31,10 +31,8 @@ function runCalculate(pickedDate) {
 		endDate = addHours(pickedDate, document.getElementById('duration').value);
 		document.getElementById(timezones[i].type+'End').innerHTML = formatDate(new Date((endDate ).toLocaleString("en-US", {timeZone: timezones[i].typeName}))); } }
 function formatDate(date) {
-	hours = ''+ date.getHours();
-	minutes = ''+ date.getMinutes();
-	var strHours =  ( hours < 10) ? '0' + hours : hours  ;
-	var strMinutes =  ( minutes < 10) ? '0' + minutes : minutes  ;
+	var strHours =  ( date.getHours() < 10) ? '0' + date.getHours() : date.getHours()  ;
+	var strMinutes =  ( date.getMinutes() < 10) ? '0' + date.getMinutes() : date.getMinutes()  ;
 	return   (dlist[date.getDay()]) + " "  + date.getDate() + " " + (mlist[date.getMonth()]) + " " + date.getFullYear() + "  " + strHours + ':' + strMinutes;}
 function addHours(date, hours) {	return new Date(new Date(date).setTime(new Date(date).getTime() + (hours*60*60*1000)));}
 function writeTeamsHTML() { teamHTML = "";	
