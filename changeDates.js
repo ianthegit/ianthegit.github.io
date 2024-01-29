@@ -4,9 +4,9 @@ timezones.push({type : 'AEST',	localeName : "Australia, Sydney" , typeName : "Au
 timezones.push({type : 'IST',	localeName : "India" , typeName : "Asia/Kolkata"});
 timezones.push({type : 'CET',	localeName : "Central Europe" , typeName : "Europe/Paris" });
 timezones.push({type : 'GMT',	localeName : "United Kingdom" , typeName : "Europe/London"});
-timezones.push({type : 'EST',	localeName : "Eastern Standard Time" , typeName : "America/New_York" });
-timezones.push({type : 'CST',	localeName : "Central Standard Time" , typeName : "America/Winnipeg" });
-timezones.push({type : 'PST',	localeName : "Pacific Standard Time" , typeName : "America/Los_Angeles" });
+timezones.push({type : 'EST',	localeName : "America Atlantic Coast" , typeName : "America/New_York" });
+timezones.push({type : 'CST',	localeName : "America Central" , typeName : "America/Winnipeg" });
+timezones.push({type : 'PST',	localeName : "America Pacific Coast" , typeName : "America/Los_Angeles" });
 hours=new Array (1,2,3,4,4.5,5,5.5,6,6.5,8,10,12,15,20,24,36,48);    
 mlist = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
 dlist = [ "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" ];
@@ -16,8 +16,9 @@ function createScreen(){
 	document.write("<div id='changeSetOrganiser'  ><table border='0' ><tr>"+
  		"<td> Duration  " +setupSelector('duration', 5, 'runCalculateFromDuration', hours)+
  		" hours.</td></tr><tr><td>Start Date and Time (UK Local time) " +
- 		" <input type='datetime-local'  value=" + new Date().toLocaleString("en-US") + " title='changeStart' id='startTime' onfocusout='runCalculate(this.value)' /> </td> </tr><tr><td></td></tr><tr><td>" +
- 		 "<span id='data' >" + writeTeamsHTML() +"</span></td></tr></table></div>");
+ 		" <input type='datetime-local'  value=" + new Date().toLocaleString("en-US") + " title='changeStart' id='startTime' onfocusout='runCalculate(this.value)' /> </td> </tr>" + 
+ 		"<tr><td></td></tr><tr><td>All dates and times reflect Daylight Savings as appropriate for the individual regions on the date(s) used</td></tr><tr><td></td></tr>" +
+ 		 "<tr><td><span id='data' >" + writeTeamsHTML() +"</span></td></tr></table></div>");
 }
 
 function runCalculateFromDuration() {
