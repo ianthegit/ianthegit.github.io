@@ -22,9 +22,7 @@ function runCalculateFromDuration() {
 		customDuration = prompt("Enter your custom Duration in hours", "21");
 		if (customDuration != null && customDuration != "") {
   			hours.push(customDuration);
-  			document.getElementById('durationSpan').innerHTML = setupSelector('duration', customDuration, 'runCalculateFromDuration', hours)
-		}
-	}	
+  			document.getElementById('durationSpan').innerHTML = setupSelector('duration', customDuration, 'runCalculateFromDuration', hours)}	}	
 	runCalculate(document.getElementById('startTime').value)}
 function runCalculate(pickedDate) {
 	for (var i = 0 ; i < timezones.length ; i++) {
@@ -40,8 +38,7 @@ function formatDate(date) {
 function addHours(date, hours) {	return new Date(new Date(date).setTime(new Date(date).getTime() + (hours*60*60*1000)));}
 function writeTeamsHTML() { teamHTML = "";	
 	for (var i = 0 ; i < timezones.length ; i++) {
-		teamHTML= teamHTML + "<tr><td>" + timezones[i].localeName + "</td><td> <span id = " + timezones[i].type + "Start> </span></td><td> to </td><td> <span id = " + timezones[i].type + "End> </span></td></tr>";
- 	}
+		teamHTML= teamHTML + "<tr><td>" + timezones[i].localeName + "</td><td> <span id = " + timezones[i].type + "Start> </span></td><td> to </td><td> <span id = " + timezones[i].type + "End> </span></td></tr>";}
  	return  "<table border = '0'> " + teamHTML + "</table>";}
 function setupSelector(idName, defaultSelected, selectionChangeFunction, options){
 	var retVal =  '<span id="' + idName + 'Span"> <select name="' + idName + '" id="' + idName + '" onchange="' + selectionChangeFunction + '();" >';
@@ -49,6 +46,5 @@ function setupSelector(idName, defaultSelected, selectionChangeFunction, options
 	for (var i=0 ; i<optionsCount ; i++){
 		retVal = retVal + '<option value="' + options[i] + '"' ;
 		if (options[i]==defaultSelected){ retVal = retVal+' selected' ; }
-		retVal = retVal + '>' + options[i] + '</option>';
-	}
+		retVal = retVal + '>' + options[i] + '</option>';}
 	return retVal + '</select></span>';}
