@@ -1,6 +1,6 @@
 // https://en.wikipedia.org/wiki/List_of_tz_database_time_zones  
 timezones = new Array();
-hours=new Array (5,6,8, 10, 12, 15, 20, 24, 36, 48);    
+hours=new Array (5,6,8,10,12,15,20,24,36,48);    
     
 function createScreen(){
 		timezones.push({type : 'AEST',	localeName : "Australia, Sydney" , typeName : "Australia/Sydney"});
@@ -24,11 +24,11 @@ function runCalculateFromDuration() {
 
 function runCalculate(pickedDate) {
  	for (var i = 0 ; i < timezones.length ; i++) {
-    	document.getElementById(timezones[i].type+'Start').innerHTML = formatDate(new Date((new Date(pickedDate) ).toLocaleString("en-US", {timeZone: timezones[i].typeName})));   ;
+		document.getElementById(timezones[i].type+'Start').innerHTML = formatDate(new Date((new Date(pickedDate) ).toLocaleString("en-US", {timeZone: timezones[i].typeName})));   ;
 	
-  		endDate = addHours(pickedDate, document.getElementById('duration').value);
-    	document.getElementById(timezones[i].type+'End').innerHTML = formatDate(new Date((endDate ).toLocaleString("en-US", {timeZone: timezones[i].typeName})));   ;
-    }
+		endDate = addHours(pickedDate, document.getElementById('duration').value);
+		document.getElementById(timezones[i].type+'End').innerHTML = formatDate(new Date((endDate ).toLocaleString("en-US", {timeZone: timezones[i].typeName})));   ;
+	}
 }
 
 function formatDate(date) {
@@ -36,8 +36,7 @@ function formatDate(date) {
   minutes = ''+ date.getMinutes();
   var strHours =  ( hours < 10) ? '0' + hours : hours  ;
   var strMinutes =  ( minutes < 10) ? '0' + minutes : minutes  ;
-  var strTime = strHours + ':' + strMinutes ; 
-  return   date.getDate() + "/" + (date.getMonth()+1) + "/" + date.getFullYear() + "  " + strTime;
+  return   date.getDate() + " " + (getMonthName(date.getMonth())) + " " + date.getFullYear() + "  " + strHours + ':' + strMinutes;
 }
 
 function addHours(date, hours) {
@@ -65,3 +64,8 @@ function setupSelector(idName, defaultSelected, selectionChangeFunction, options
 	retVal = retVal + '</select></span>';
 	return retVal;
 }
+
+function getMonthName(index) {
+	mlist = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
+	return mlist[index];
+};
