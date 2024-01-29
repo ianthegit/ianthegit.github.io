@@ -17,7 +17,7 @@ function createScreen(){
  		" hours.</td></tr><tr><td>Start Date and Time (UK Local time) " +
  		" <input type='datetime-local'  value=" + new Date().toLocaleString("en-US") + " title='changeStart' id='startTime' onfocusout='runCalculate(this.value)' /> </td> </tr>" + 
  		"<tr><td> </td></tr><tr><td>All dates and times reflect Daylight Savings as appropriate for the individual regions on the date(s) used</td></tr><tr><td> </td></tr>" +
- 		 "<tr><td><span id='data' >" + writeTeamsHTML() +"</span></td></tr></table></div>");}
+ 		"<tr><td><span id='data' >" + writeTeamsHTML() +"</span></td></tr></table></div>");}
 
 function runCalculateFromDuration() {
 	runCalculate(document.getElementById('startTime').value)}
