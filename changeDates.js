@@ -29,7 +29,7 @@ function runCalculate(pickedDate) {
 	for (var i = 0 ; i < timezones.length ; i++) {
 		document.getElementById(timezones[i].type+'Start').innerHTML = formatDate(new Date((new Date(pickedDate) ).toLocaleString("en-US", {timeZone: timezones[i].typeName})));   ;	
 		endDate = addHours(pickedDate, document.getElementById('duration').value);
-		document.getElementById(timezones[i].type+'End').innerHTML = formatDate(new Date((endDate ).toLocaleString("en-US", {timeZone: timezones[i].typeName}))); } }
+		document.getElementById(timezones[i].type+'End').innerHTML = formatDate(new Date((endDate ).toLocaleString("en-US", {timeZone: timezones[i].typeName}))) + '</BR>'; } }
 function formatDate(date) {
 	var strHours =  ( date.getHours() < 10) ? '0' + date.getHours() : date.getHours()  ;
 	var strMinutes =  ( date.getMinutes() < 10) ? '0' + date.getMinutes() : date.getMinutes()  ;
