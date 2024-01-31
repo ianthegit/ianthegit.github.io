@@ -10,17 +10,17 @@ timezones.push({type : 'MST',	localeName : "America Mountains" , 		typeName : "A
 timezones.push({type : 'PST',	localeName : "America Pacific Coast",	typeName : "America/Los_Angeles" });
 hours=new Array (1,2,3,4,4.5,5,5.5,6,6.5,8,10,12,15,20,24,36,48,'Custom');    
 mList = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
-frenchMList = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
+frenchMList = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
 dList = [ "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" ];
-frenchDList = ["Dimanche", "Lundi" , "Mardi", "Mercredi","Jeudi","Vendredi","Samedi"];
+frenchDList = ["dimanche", "lundi" , "mardi", "mercredi","jeudi","vendredi","samedi"];
 function createScreen(){
 	document.write("<div id='SQQuiz' class='grad' ><table border='0' ><tr>"+
  		"<td> Duration  <span id='durationOuter'>" +setupSelector('duration', 5, 'runCalculateFromDuration', hours)+
  		" </span>hours.</td></tr><tr><td>Start Date and Time (UK Local time) " +
  		" <input type='datetime-local' value=" + new Date().toLocaleString("en-US") + " title='changeStart' id='startTime' onfocusout='runCalculate(this.value)' /> </td> </tr>" + 
  		"<tr><td> </td></tr><tr><td>All dates and times reflect Daylight Savings as appropriate for the individual regions on the date(s) used</td></tr><tr><td> </td></tr>" +
- 		"<tr><td><span id='data' >" + writeTeamsHTML("UK") +"</span></td></tr>"+
- 		"<tr><td><span id='data' >" + writeTeamsHTML("Fr") +"</span></td></tr>"+
+ 		"<tr><td><span id='data' >" + writeTeamsHTML("UK", "to") +"</span></td></tr>"+
+ 		"<tr><td><span id='data' >" + writeTeamsHTML("Fr", "à") +"</span></td></tr>"+
  		"</table></div>");}
 function runCalculateFromDuration() {	
 	if (document.getElementById('duration').value == 'Custom') {
@@ -44,9 +44,9 @@ function formatDate(country, date) {
 	} else {
 		return   (frenchDList[date.getDay()]) + " "  + date.getDate() + " " + (frenchMList[date.getMonth()]) + " " + date.getFullYear() + "  " + strHours + ':' + strMinutes;};}
 function addHours(date, hours) {	return new Date(new Date(date).setTime(new Date(date).getTime() + (hours*60*60*1000)));}
-function writeTeamsHTML(country) { teamHTML = "";	
+function writeTeamsHTML(country, toRepresentation) { teamHTML = "";	
 	for (var i = 0 ; i < timezones.length ; i++) {
-		teamHTML= teamHTML + "<tr><td>" + timezones[i].localeName + "</td><td> <span id = " + timezones[i].type + country +"Start> </span></td><td> to </td><td> <span id = " + timezones[i].type + country + "End> </span></td></tr>";}
+		teamHTML= teamHTML + "<tr><td>" + timezones[i].localeName + "</td><td> <span id = " + timezones[i].type + country +"Start> </span></td><td> " + toRepresentation + " </td><td> <span id = " + timezones[i].type + country + "End> </span></td></tr>";}
  	return  "<table border = '0'> " + teamHTML + "</table>";}
 function setupSelector(idName, defaultSelected, selectionChangeFunction, options){
 	var retVal =  '<span id="' + idName + 'Span"> <select name="' + idName + '" id="' + idName + '" onchange="' + selectionChangeFunction + '();" >';
