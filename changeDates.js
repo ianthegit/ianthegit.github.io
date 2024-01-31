@@ -30,10 +30,10 @@ function runCalculateFromDuration() {
   			document.getElementById('durationSpan').innerHTML = setupSelector('duration', customDuration, 'runCalculateFromDuration', hours)}	}	
 	runCalculate(document.getElementById('startTime').value)}
 function runCalculate(pickedDate) {
+	endDate = addHours(pickedDate, document.getElementById('duration').value);
 	for (var i = 0 ; i < timezones.length ; i++) {
 		document.getElementById(timezones[i].type+'UKStart').innerHTML = formatDate('UK', new Date((new Date(pickedDate) ).toLocaleString("en-US", {timeZone: timezones[i].typeName})));   ;	
 		document.getElementById(timezones[i].type+'FrStart').innerHTML = formatDate('Fr', new Date((new Date(pickedDate) ).toLocaleString("en-US", {timeZone: timezones[i].typeName})));   ;	
-		endDate = addHours(pickedDate, document.getElementById('duration').value);
 		document.getElementById(timezones[i].type+'UKEnd').innerHTML = formatDate('UK', new Date((endDate ).toLocaleString("en-US", {timeZone: timezones[i].typeName}))) + '</BR>'; 
 		document.getElementById(timezones[i].type+'FrEnd').innerHTML = formatDate('Fr', new Date((endDate ).toLocaleString("en-US", {timeZone: timezones[i].typeName}))) + '</BR>'; } }
 function formatDate(country, date) {
