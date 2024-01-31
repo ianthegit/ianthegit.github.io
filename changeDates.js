@@ -41,7 +41,7 @@ function formatDate(country, date) {
 	var strMinutes =  ( date.getMinutes() < 10) ? '0' + date.getMinutes() : date.getMinutes()  ;
 	if (country === 'UK') {
 		return   (dList[date.getDay()]) + " "  + date.getDate() + " " + (mList[date.getMonth()]) + " " + date.getFullYear() + "  " + strHours + ':' + strMinutes;;
-		} else {
+	} else {
 		return   (frenchDList[date.getDay()]) + " "  + date.getDate() + " " + (frenchMList[date.getMonth()]) + " " + date.getFullYear() + "  " + strHours + ':' + strMinutes;};}
 function addHours(date, hours) {	return new Date(new Date(date).setTime(new Date(date).getTime() + (hours*60*60*1000)));}
 function writeTeamsHTML(country) { teamHTML = "";	
