@@ -3179,11 +3179,38 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 	image : "https://lh3.googleusercontent.com/pw/ABLVV84Um5iWGxM2CuT_vZC-_2sq3FwobytJsK1SV0YQ-uvGqPlJIQfhik0zuvYaJwjwHtTn_xyI3Ox9iVmuCUonDeNg6G8UAlXKkZqZARBwwP25CQzpeciPW_nBf7so9YQippKsvsKnHYTLlo9fixPvpVx9VA=w599-h524-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Leap Year"}) ;
 
+
+
+
+ quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of countries in the 6 Nations",
+		tags : "2024-2-4,pictionary", straightToAnswers:true,
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Italy"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Wales"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "England"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Scotland"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Ireland"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "France"}) ;
+
+
+
+
 /*
-
-
-
-
 
  * 	image : "",
 	answerimage : "", answer : "Table"}) ;

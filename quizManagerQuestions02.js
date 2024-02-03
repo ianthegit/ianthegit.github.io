@@ -6330,6 +6330,46 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 
+quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2024-2-4,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What O </BR></BR>Which musical written by the duo of Rodgers and Hammerstein shares its name with a U.S. State?", // 
+	answerSpeak : "", answer : "Oklahoma!"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What O </BR></BR>'Ladies Fingers', which can get a bit slimy when the seed pods are cooked, are better known as what?", // 
+	answerSpeak : "", answer : "Okra"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What O </BR></BR>The Great Lakes are: Lake Superior, Lake Erie, Lake Huron, Lake Michigan & Lake what?", // 
+	answerSpeak : "", answer : "Ontario"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What O </BR></BR>Natural vanilla flavouring comes from which plant, the flower's name being derived from the Greek word for testicle?", // 
+	answerSpeak : "", answer : "Orchid"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What O </BR></BR>Used to flavour tomato based sauces, often on a pizza, what herb is also known as Wild Marjoram?", // 
+	answerSpeak : "", answer : "Oregano"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What O </BR></BR>The Ballad Of Reading Gaol & De Profundis, were written from the experiences of who, while in gaol?", // 
+	answerSpeak : "", answer : "Oscar Wilde"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What O </BR></BR>A major source of 'withies', used in basketwork, what is a small Eurasian willow which grows mostly in wet habitats?", // 
+	answerSpeak : "", answer : "Osier"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What O </BR></BR>As well as being a unit of measurement, what other name is used for the snow leopard?", // 
+	answerSpeak : "", answer : "Ounce"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What O </BR></BR>Which morsel of meat found in a fowl's back, reckoned by some to be the tastiest, is named after a sea creature?", // 
+	answerSpeak : "", answer : "Oyster"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What O </BR></BR>Who underwent treatment for rabies following an incident in which he bit the head off a live bat?", // 
+	answerSpeak : "", answer : "Ozzy Osbourne"}) ;
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2024-2-4,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6Li3mJD2A5iwgIWQD7sMs8?utm_source=generator" width="100%" height="730" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Everything I do, Bryan Adams</BR>Ain't no mountain high enough, Marvin Gaye & Tammi Terrell (or Diana Rosss)</BR>Can't help falling in love, Elvis Presley</BR>Rocket Man, ELton John</BR>Road to nowhere, Talking Heads</BR>The sound of silence, Simon & Garfunkle</BR>Rolling in the Deep, Adele</BR>Don't you forget about me, Simple Minds</BR>Ghostbusters, Ray Parker Jnr</BR>Smalltown Boy, Bronski Beat", answerSpeak : "", question : ""}) ;
+
+
+
 //https://www.coventrytelegraph.net/whats-on/family-kids-news/23-general-knowledge-pub-quiz-27956650
 
 quests[++questIndexBuilder] = { 

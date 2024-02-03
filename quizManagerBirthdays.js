@@ -153,12 +153,6 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-27",
 	question : "Who is this, born January 27th 1965?" ,	answer : "Alan Cumming", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/AlanCummingSept2013TIFF.jpg/220px-AlanCummingSept2013TIFF.jpg"	});	
 
-/*
-
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
-	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
-
-*/
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"1-28",
 	question : "Who is this, born January 28 1918?" ,	answer : "Harry Corbett", answerSpeak : "", image : "https://pbs.twimg.com/media/E4uGVXkXMAMWXJ4.jpg"	});	
@@ -198,6 +192,17 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 
 
 
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-3",
+	question : "Who is this, born February 3rd 1950?" ,	answer : "Morgan Fairchild", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Morgan_Fairchild_1999.jpg/220px-Morgan_Fairchild_1999.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-3",
+	question : "Who is this, born February 3rd 1970?" ,	answer : "Warwick Davis", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Warwick_Davis_Photo_Op_Nightmare_Weekend_Richmond_2023_%28cropped%29.jpg/220px-Warwick_Davis_Photo_Op_Nightmare_Weekend_Richmond_2023_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-3",
+	question : "Who is this, born February 3rd 1976?" ,	answer : "Isla Fisher", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Isla_Fisher_2013.jpg/220px-Isla_Fisher_2013.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-3",
+	question : "Who is this, born February 3rd 1978?" ,	answer : "Amal Clooney", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Amal_Clooney_02.jpg/220px-Amal_Clooney_02.jpg"	});	
+
+
+
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-4",
 	question : "Who is this, born February 4th 1975?" ,	answer : "Natalie Imbruglia", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Natalie_Imbruglia_Cannes.jpg/220px-Natalie_Imbruglia_Cannes.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-4",
@@ -222,6 +227,12 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-5",
 	question : "Who is this, born February 5th 1969?" ,	answer : "Michaeal Sheen", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Michael_Sheen_crop_n2_Good_Omens_panel_at_NYCC_%2861104%29.jpg/220px-Michael_Sheen_crop_n2_Good_Omens_panel_at_NYCC_%2861104%29.jpg"	});	
 
+/*
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
+	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
+
+*/
 
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-11",
