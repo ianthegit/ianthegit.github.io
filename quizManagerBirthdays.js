@@ -227,12 +227,18 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-5",
 	question : "Who is this, born February 5th 1969?" ,	answer : "Michaeal Sheen", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Michael_Sheen_crop_n2_Good_Omens_panel_at_NYCC_%2861104%29.jpg/220px-Michael_Sheen_crop_n2_Good_Omens_panel_at_NYCC_%2861104%29.jpg"	});	
 
-/*
 
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
-	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
 
-*/
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-10",
+	question : "Who is this, born February 10th 1930?" ,	answer : "Robert Wagner", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Robert_Wagner_1967.JPG/220px-Robert_Wagner_1967.JPG"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-10",
+	question : "Who is this, born February 10th 1956?" ,	answer : "Kathleen Beller (Dolby)", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Kathleen_Beller_on_the_set_of_Touched.jpg/220px-Kathleen_Beller_on_the_set_of_Touched.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-10",
+	question : "Who is this, born February 10th 1976?" ,	answer : "Keeley Hawes", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Keeley_Hawes_2014.jpg/220px-Keeley_Hawes_2014.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-10",
+	question : "Who is this, born February 10th 1981?" ,	answer : "Holly Willoughby", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Holly_Willoughby_%28cropped%29.jpg/220px-Holly_Willoughby_%28cropped%29.jpg"	});	
+
+
 
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-11",
@@ -244,23 +250,27 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-11",
 	question : "Who is this, born February 11th 1964?" ,	answer : "Sarah Palin", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Sarah_Palin_%2851769866572%29_%28cropped%29.jpg/220px-Sarah_Palin_%2851769866572%29_%28cropped%29.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-11",
+	question : "Who is this, born February 12th 1968?" ,	answer : "Josh Brolin", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Josh_Brolin_Berlin_2016.jpg/220px-Josh_Brolin_Berlin_2016.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-11",
 	question : "Who is this, born February 11th 1971?" ,	answer : "Damian Lewis", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Damian_Lewis_Berlin_2015.jpg/220px-Damian_Lewis_Berlin_2015.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-11",
+	question : "Who is this, born February 12th 1980?" ,	answer : "Christina Ricci", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Christina_Ricci_%2849596830836%29_%28cropped%29.jpg/220px-Christina_Ricci_%2849596830836%29_%28cropped%29.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-11",
 	question : "Who is this, born February 11th 1982?" ,	answer : "Natalie Dormer", answerSpeak : "", image : "https://media.vanityfair.com/photos/5b4f4abe4f46c70bca18e96e/9:16/w_747,h_1328,c_limit/game-of-thrones-ending-season-8-natalie-dormer.jpg"	});	
 
-
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-11",
-	question : "Who is this, born February 12th 1948?" ,	answer : "Nicholas Soames", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Official_portrait_of_Sir_Nicholas_Soames_crop_2.jpg/220px-Official_portrait_of_Sir_Nicholas_Soames_crop_2.jpg"	});	
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-11",
-	question : "Who is this, born February 12th 1968?" ,	answer : "Josh Brolin", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Josh_Brolin_Berlin_2016.jpg/220px-Josh_Brolin_Berlin_2016.jpg"	});	
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-11",
-	question : "Who is this, born February 12th 1980?" ,	answer : "Christina Ricci", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Christina_Ricci_%2849596830836%29_%28cropped%29.jpg/220px-Christina_Ricci_%2849596830836%29_%28cropped%29.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-12",
 	question : "Who is this, born February 12th 1969?" ,	answer : "Steve Backley", answerSpeak : "", image : "https://images.ctfassets.net/v8zaoys2pgzt/3cmcUswK73gdiPq9wEkep6/7be11c6607fd2d86c5c4af8834e1efc4/Steve_Backley_-_hero.jpg"	});	
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-12",
 	question : "Who is this, born February 12th 1974?" ,	answer : "Naseem Hamed", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/WWE_-_Sheffield_020499_%2817%29.jpg/220px-WWE_-_Sheffield_020499_%2817%29.jpg"	});	
 
 
+
+/*
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
+	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
+
+*/
 
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-18",

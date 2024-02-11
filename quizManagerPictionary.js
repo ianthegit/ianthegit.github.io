@@ -3188,26 +3188,51 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 		tags : "2024-2-4,pictionary", straightToAnswers:true,
 		questInfo: new Array()
 	};
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
 	image : "https://lh3.googleusercontent.com/pw/ABLVV86bVNj3qZF5CZ0VOelkPkg8eTxNIInLhXQAByGitUFm9LhHE2OWuYlvCvjwEL5AbANEC9_4pM9vf_upnrj_c0XAn8ivxo1ou4U9IWkY3dhduUCWUC3WsfoVhHrJTm6VPTGp1mrZqVM8hAiG3IyPTsKUqA=w686-h926-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Italy"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
 	image : "https://lh3.googleusercontent.com/pw/ABLVV84c_RZXMyLcR10F_h8L95WI0bHjocA0NxOydVgBKU3e_FMXCWtANkjxWCXDSeLhOeeUzkXMfFm2jLCw4iztmLfR6Fh9LyGY1YJW_p5EALEIWzhACYLifwxpqBQQCp48hpAsW2S8W7EVqBziWluvpkrphA=w598-h846-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Wales"}) ;
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
 	image : "https://lh3.googleusercontent.com/pw/ABLVV84RsuOE-Xu6bPvJirhNnC26fnfTDuW_5p5N2uxzC2pUG0jb8SGcGhLQepvup_hKAgnYKR2hTFnXBSDC79nSwRgco7LL8k3HqY4HpvAPUhPkRO7Lw5DuZUKqsYsDkcu19Sqr5gI2y6vTYWOmzDvUylUEFw=w1074-h873-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "England"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
 	image : "https://lh3.googleusercontent.com/pw/ABLVV85WaPrB8QGmGfx21W08z2eeZaxZAt8WpcWY21H-BzEkTjZ-ydCCgXUFQulA1Bb1Rns0x4r8fY-KpZ5OG5iabzr4ltX1kr2Tpf1QZqB0AgYXR6rXG-46dtL4bzohCAuiE4TQ2wYxAfWz_toNpZvn4Vifzw=w483-h852-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Scotland"}) ;
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
 	image : "https://lh3.googleusercontent.com/pw/ABLVV85-MOejduiPO_fQCBv1hckp-5inxr9DWViMgC-pWP7yx6kHZREn4X_j3NcfDKP6YDI0Z3RmEyy2bVvSO9B1SCuOlWaKFjtEaKef78PocAIa6wyx56vwAzAZZ-YnQlBYMpQElKZwo7iwsrAF9_dHor4ghQ=w475-h714-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Ireland"}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
 	image : "https://lh3.googleusercontent.com/pw/ABLVV85bReC42Tyvs2bqOYzo_mrwB0W7wSlLG4hPMoqhAC2wF7cCMvOOfhPGPHwMPnSmYmz71pUo6q1cNmOkPy_CTvq_zifny8vXbwvtCBPazJOVgwS0W4YPHOrEuhJxJmHVdjEF245TGXHfgzvTaHQ2h6Zv4g=w805-h804-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "France"}) ;
 
 
+
+ quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of Elvis songs",
+		tags : "2024-2-11,pictionary", straightToAnswers:true,
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Blue Suede Shoes"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Burning Love"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Hound Dog"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Heartbreak Hotel"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Jailhouse Rock"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Blue Moon"}) ;
 
 
 /*
@@ -3226,22 +3251,22 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question 
 		tags : "2024-?-?,pictionary", straightToAnswers:true,
 		questInfo: new Array()
 	};
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
 	image : "",
 	answerimage : "", answerSpeak : "", answer : ""}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
 	image : "",
 	answerimage : "", answerSpeak : "", answer : ""}) ;
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
 	image : "",
 	answerimage : "", answerSpeak : "", answer : ""}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
 	image : "",
 	answerimage : "", answerSpeak : "", answer : ""}) ;
- addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ted draw", // 
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
 	image : "",
 	answerimage : "", answerSpeak : "", answer : ""}) ;
-addQuest(quests[questIndexBuilder],{		type : quizQuestionType2Picture,	question : "What did Ian draw", // 
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
 	image : "",
 	answerimage : "", answerSpeak : "", answer : ""}) ;
 

@@ -6369,6 +6369,45 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : "Everything I do, Bryan Adams</BR>Ain't no mountain high enough, Marvin Gaye & Tammi Terrell (or Diana Rosss)</BR>Can't help falling in love, Elvis Presley</BR>Rocket Man, ELton John</BR>Road to nowhere, Talking Heads</BR>The sound of silence, Simon & Garfunkle</BR>Rolling in the Deep, Adele</BR>Don't you forget about me, Simple Minds</BR>Ghostbusters, Ray Parker Jnr</BR>Smalltown Boy, Bronski Beat", answerSpeak : "", question : ""}) ;
 
 
+quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2024-2-11,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What P </BR></BR>What now famous painter was once so impoverished that he kept warm by burning his own paintings?", // 
+	answerSpeak : "", answer : "Pablo Picasso"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What P </BR></BR>What is the name of the organ which produces insulin, and when turned into food is called sweetbread?", // 
+	answerSpeak : "", answer : "Pancreas"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What P </BR></BR>Which word describes 2 lines which are always the same distance apart?", // 
+	answerSpeak : "", answer : "Parallel"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What P </BR></BR>What gem is measured in grains - with four grains to a carat?", // 
+	answerSpeak : "", answer : "Pearl"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What P </BR></BR>What name is given to the branch of linguistics concerned with the production, physical nature, and perception of speech sounds?", // 
+	answerSpeak : "", answer : "Phonetics"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What P </BR></BR>Which gland, situated at the base of the skull, regulates growth and metabolism?", // 
+	answerSpeak : "", answer : "Putuitary"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What P </BR></BR>Which chemical element was formerly known as the Latin 'Kalium', and hence bears the symbol 'K'?", // 
+	answerSpeak : "", answer : "Potassium"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What P </BR></BR>In Greek Mythology, who stole fire from the Gods and brought it back to Earth?", // 
+	answerSpeak : "", answer : "Prometheus"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What P </BR></BR>In which cult 1994 film are all of the clocks stuck on 4:20 (also a nickname for cheap books bought at places such as airports)?", // 
+	answerSpeak : "", answer : "Pulp Fiction"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What P </BR></BR>What is the name of the mountain chain separating most of Spain from France?", // 
+	answerSpeak : "", answer : "Pyrenees"}) ;
+
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2024-2-11,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1T5EYq7WWVbmZDo31PrE1b?utm_source=generator" width="100%" height="730" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "We are the champions, Queen</BR>We didn't start the fire, Billie Joel</BR>Come together, The Beatles</BR>Running up that hill, Kate Bush</BR>Rolling in the deep, Adele</BR>What a wonderful world, Louis Armstrong</BR>You really got me, The Kinks</BR>I will survive, Gloria Gaynor</BR>Smooth Criminal, Michael Jackson</BR>Knockin' on heavens door, Bob Dylan / Eric Clapton", answerSpeak : "", question : ""}) ;
+
 
 //https://www.coventrytelegraph.net/whats-on/family-kids-news/23-general-knowledge-pub-quiz-27956650
 
