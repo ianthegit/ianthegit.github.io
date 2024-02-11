@@ -3216,22 +3216,22 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 		questInfo: new Array()
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
-	answerimage : "", answerSpeak : "", answer : "Blue Suede Shoes"}) ;
+	image : "https://lh3.googleusercontent.com/pw/ABLVV84p8phi9gkKeDkEdpLoVfaXxidgQiK2rcmaqXVggZO7Qu1uoDrZqv-aJN9D39VSUIfCqzgXt_TtEYANUsJH4NNm6uKcZoNELxLuZXcdwZvjJNxdCNapuCUDzHFgq5BHg81Di7_1RAWANZ7SkS9rgufm1g=w1050-h823-s-no-gm?authuser=0",
+	answerimage : "", answerSpeak : "", answer : "Viva Las Vegas"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ABLVV87UI33jGbQdBI_8CAAQH3bBOWCfMaqFLbYY0ol6AlNhJASBr24nWO5XDRU2_NT0MmsYIP7RR7q9YDg5wC0D7zc9HkGLbEAT3nYdaNpQfVk0eD3m9LYJg-PNbCMHcPYfGJFP8CFQK8tSz7uP1cqXQfAxBg=w320-h523-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Burning Love"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ABLVV84KeOP8d3lUptkHe19Dcgpvbj8l7ZRwckzfLXZNDz6sWQsdQjJ6bIAMrhP7_Vd_EBrnBZo8YHdsS_sLSYpE5LLLF-HsGcFVyGScjmzz9yuv1w-Pr3yYZ_SgTTrYocNCaRT79j7AXojFdXHZDAVZzBAp9A=w748-h512-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Hound Dog"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ABLVV84yvadUG5Z76Z3NCmfcGMDyY-MDqWIoqgvcZu9ufy3wT5yZrD_8G8dicns0USs1Hk9Fu6EO8bZBbtJc8k-Hc6yqEeYoaAkOzif1hC2hGBNdpLrqw4AqI5MTG7d6BAHD_7qsY0uMS0VPH0TYwPRkU-htdA=w1269-h806-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Heartbreak Hotel"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ABLVV85ibTr38yi39Xrv9QKVjlvT0CVBVrAwfgPoxAM60L8C_eeXNqvZ1T67aprl2wQrtxJTqDr7dy-I0FRTlXUtnQ0PdQC6g2PhgmIRqcwAdE9IQWWT0FzxmAR8ZBmoafZq4WLVMHWzDWTAxk08996W6t_mVQ=w1208-h913-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Jailhouse Rock"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ABLVV86x_W_LwPZGsgdzQluVZ2khhm8wd8JsepSQ5mpZTI_6aW5NX3GeiUJssrQ2jux2rhmzZXJj887UD96mglDmiqaBXwdGWlzuKfRUBon1wl5rlu-JImsR8NMm7QVhmOnGDUmDNnUm0mz2by9aXDUYm00S5A=w306-h557-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Blue Moon"}) ;
 
 
