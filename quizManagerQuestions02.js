@@ -6409,6 +6409,47 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : "We are the champions, Queen</BR>We didn't start the fire, Billie Joel</BR>Come together, The Beatles</BR>Running up that hill, Kate Bush</BR>Rolling in the deep, Adele</BR>What a wonderful world, Louis Armstrong</BR>You really got me, The Kinks</BR>I will survive, Gloria Gaynor</BR>Smooth Criminal, Michael Jackson</BR>Knockin' on heavens door, Bob Dylan / Eric Clapton", answerSpeak : "", question : ""}) ;
 
 
+
+quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2024-2-18,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What Q </BR></BR>What British quiz show is like this quiz round, and themes shows based on letters of the alphabet?", // 
+	answerSpeak : "", answer : "QI"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What Q </BR></BR>Widely regarded as one of the greatest players to ever play, American football star Tom Brady would be found in what position?", // 
+	answerSpeak : "", answer : "Quarterback"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What Q </BR></BR>In land armies, who is generally a senior soldier who supervises stores and distributes supplies and provisions?", // 
+	answerSpeak : "", answer : "Quartermaster"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What Q </BR></BR>What traditional European pole weapon was especially prominent in England during the Early Modern period?", // 
+	answerSpeak : "", answer : "Quarterstaff"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What Q </BR></BR>What can you do to your thirst?", // 
+	answerSpeak : "", answer : "Quench it"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What Q </BR></BR>Which English cartoonist, caricaturist, illustrator and children's writer has illustrated 18 books written by Roald Dahl?", // 
+	answerSpeak : "", answer : "Quentin Blake"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What Q </BR></BR>Similar to a pompadour, what is a classic men's haircut featuring long hair on the top, especially in the front, and trimmed hair at the back and sides?", // 
+	answerSpeak : "", answer : "Quiff"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What Q </BR></BR>What is another word for 'A witty remark'?", // 
+	answerSpeak : "", answer : "Quip"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What Q </BR></BR>What is the standard keyboard layout used in the UK?", // 
+	answerSpeak : "", answer : "QUERTY"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What Q </BR></BR>What is the standard keyboard layout used in Germany?", // 
+	answerSpeak : "", answer : "QUERTZ"}) ;
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2024-2-18,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/73LHh5NtyCHWqYvQ1LzU9c?utm_source=generator" width="100%" height="730" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Billie Jean, Michael Jackson</BR>Sweet Dreams, The Eurythmics</BR>What's love got to do with it, Tina Turner</BR>Holding out for a hero, Bonnie Tyler</BR>Heros, David Bowie</BR>Ring of fire, Johnny Cash</BR>I think we're alone now, Tommy James & the Shondells, Tiffany</BR>Take on me, AHa</BR>Heart of glass, Blondie</BR>Like a virgin, Madonna", answerSpeak : "", question : ""}) ;
+
+
+
 //https://www.coventrytelegraph.net/whats-on/family-kids-news/23-general-knowledge-pub-quiz-27956650
 
 quests[++questIndexBuilder] = { 
