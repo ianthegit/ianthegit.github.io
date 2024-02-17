@@ -265,12 +265,20 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 
 
 
-/*
-
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
-	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
-
-*/
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-17",
+	question : "Who is this, born February 17th 2009?" ,	answer : "Buster", answerSpeak : "", image : "https://lh3.googleusercontent.com/pw/ABLVV84NmNCUOxBSlCPYoFGeBLMesPhg4rAexhiPvncJqpRDwknJDPoBQabatvqG_RmVpK5FK8aW4SZ3J2ZWztm8vipGUAWY8pNAKkDUGmoejlefs_1oHn-MmDcUCVNzsgoG9slcMwbtLQF8AGnOgs_Mf5kmmQ=w1223-h1129-s-no-gm?authuser=0"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-17",
+	question : "Who is this, born February 17th 1922?" ,	answer : "Betty White", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Betty_White_in_The_Betty_White_Show_1954_%282%29.jpg/220px-Betty_White_in_The_Betty_White_Show_1954_%282%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-17",
+	question : "Who is this, born February 17th 1931?" ,	answer : "James Earl Jones", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/James_Earl_Jones_%288516667383%29.jpg/220px-James_Earl_Jones_%288516667383%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-17",
+	question : "Who is this, born February 17th 1942?" ,	answer : "Muhammad Ali", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Muhammad_Ali_NYWTS.jpg/220px-Muhammad_Ali_NYWTS.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-17",
+	question : "Who is this, born February 17th 1956?" ,	answer : "Paul Young", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/PAUL_YOUNG_new.jpg/220px-PAUL_YOUNG_new.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-17",
+	question : "Who is this, born February 17th 1964?" ,	answer : "Michelle Obama", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Michelle_Obama_2013_official_portrait.jpg/220px-Michelle_Obama_2013_official_portrait.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-17",
+	question : "Who is this, born February 17th 1967?" ,	answer : "Richard Hawley", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Richard_Hawley_on_stage%2C_2013.JPG/230px-Richard_Hawley_on_stage%2C_2013.JPG"	});	
 
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-18",
@@ -311,6 +319,12 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 
 
 
+/*
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
+	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
+
+*/
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-25",
 	question : "Who is this, born February 25th 1976?" ,	answer : "Rashida Jones", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Rashida_Jones_2017_%28cropped%29.jpg/220px-Rashida_Jones_2017_%28cropped%29.jpg"	});	
