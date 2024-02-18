@@ -3242,22 +3242,22 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 		questInfo: new Array()
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ABLVV866nBpJbNcfaE6ro_jlWBVdBJCfdXnHjQqukTG87ZANjHHeOzaGmuoRpBsjDPr7jdTuMzazdZCo0JcTpEuU8DpKrF7UTNnYhJw5i1lSVa9AggTumg3wVW3I55-ZtHIvWI-Dxf36Da_dbQmwC2e-nQkxKw=w1257-h674-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Hachiko"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ABLVV87dFyu_LA0QNz-O79Jp04u-RzuA-xv2EWLiYb7H8UW8hWTmVW9W_xzP3-KX1pJoqNK5Gub6c1SgVYWMvF3_dnVL-0oY92YG1uHU5W0NWK_niwHK6Q4F8a3iP1qRnYkAFn4v1OjBQYY9Qh0v2x7-HQHW3g=w577-h370-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Pickle (who found the world cup)"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ABLVV8514yT7N8xG_mLcF7980gsDt9YJcnJV0JGYMU0tCN-tGQ1j7zKF7EbV28f9D3KX33Q5FZs1UqJYzKyL95Dq7-WaO4itB8XYDfSYqvhtvvrLHhSzSaJuvVitq8qXEgZWG_AXA-Cwa_Jv1OhyobaFd4Y_Vw=w434-h385-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Bolt"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ABLVV85DhDxZHGS7RF4gwBeGkWyE9msumzMyZIR7108uMhOEtFLOlKjWlp2L_g0XNMr9BE33dYwNdXB5KHb1TfHRIoRUVdCwPKSiEp8jUSeLEA_29brvtMVKjy1VqH3uomMVlmS6d4_uZ3haCl9p6D7ksKjqTw=w1757-h1006-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Lassie"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ABLVV85AI2vNe8uuDVWYNchhnHFSo1vzZSfL6EgOWW8806iW-uyllaNfWjll8qGxX8a5anOdjw2cU1gXlKi8LVrTIcG-ZTPzbHRqERAO2_xzq9lWD-xaITaSLka62XA8hGgvmoO9ND8mHB9SuF0NcFr98oBYnA=w634-h532-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Buster"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ABLVV87NSQ_R4NJSLAeUhGbg_33jk0ahdyoiX2HXAiRFhV0QUI9j9_nBDC6aWihTbNVX7kzhhqDCsYBVuOEffPuZFcF-2ZPG-E1A1VUBbRkWWZL2ubt0XJmykyHjk0ud0ao2XUXKufMfzQ95IV1K3IqO4DtKUQ=w1121-h704-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Scooby Doo"}) ;
 /*
 
