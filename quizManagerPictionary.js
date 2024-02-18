@@ -3235,6 +3235,30 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 	answerimage : "", answerSpeak : "", answer : "Blue Moon"}) ;
 
 
+ quests[++questIndexBuilder] = { //
+		name : "Pictionary " +getAndIncrementCounterForType("Pictionary"),
+		hoverover : "Pictionary on the theme of famous dogs",
+		tags : "2024-2-18,pictionary", straightToAnswers:true,
+		questInfo: new Array()
+	};
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Hatcti"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Pickle (who found the world cup)"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Bolt"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Lassie"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Buster"}) ;
+addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
+	image : "",
+	answerimage : "", answerSpeak : "", answer : "Scooby Doo"}) ;
 /*
 
  * 	image : "",
