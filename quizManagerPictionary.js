@@ -3243,7 +3243,7 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
 	image : "",
-	answerimage : "", answerSpeak : "", answer : "Hatcti"}) ;
+	answerimage : "", answerSpeak : "", answer : "Hachiko"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
 	image : "",
 	answerimage : "", answerSpeak : "", answer : "Pickle (who found the world cup)"}) ;
