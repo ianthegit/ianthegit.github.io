@@ -3268,22 +3268,22 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 		questInfo: new Array()
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ABLVV85JckAxSqdEt5yw_jmn_YzlCAOp5jkTocQuVBwPkMSwTYKQZ8jShxNGSSm15l5nhlq8zve4L190eHiYQlR4B9fFrYIGiTx2X-Ng1nYjG1O2eBcCAQssmJe2Jx6AO4nMaLMj_PU9N-0sWot0ToIU1b3xtg=w754-h400-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Back to the future"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ABLVV85OllmWptKtV2FqjstDiFjoxO3w1dAVoQlQa6ZEfHAmXvhFrFovGd7chZEDWFsJT_aSj21ult3rt0JVcYHnvNfpBfsfsFTelYjh6OyOBdudgCLFWucNBiPaSb4t2tIsPPLNSmDCmqvg767EJ5XAGW3i_g=w761-h377-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Dirty Dancing"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ABLVV87o208dJyz8wB5iizX4VUbJQIFz9kmaguilEa4OizDe3a7OQciq96i1pbChXMcYWOQ_Z3mP1A3GoSTGP4TKOtNyy0dGSh-sUHAfH_0LmDCTyGj_eVs4qL3bLXa4948J5Q1uRuMxQVz7W6LEdKgq5oepqw=w682-h540-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "ET"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ABLVV8673nZbQOe9hzU3xIwgAITPubBzVS1GWtcQbvWrO6C-KRt_hk3vEvREuFtPegeSjA-Fn9vlzlfYDFYoy6w91p1P0ZxO1CIt52HCSDzIB4R-L2RKZmxVU2eoQXV5ZtD47jdmgyYv1aMHuXyJpXPLD9uhgQ=w523-h635-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Ghost"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ABLVV85Jvk0c6xJjVDindmoLcNQupFUv1l4hnv2J37QPS-svQrbyixrY-5ngifHrtO17e-EHivm3Dq_eP4QdWrv5CLBN6GdyjwcnZQhUGBBK19gCIdb8uALOAi6arWBs1ki0jdQ97XS5vp1YW1Mem-CoHxLgXw=w673-h529-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Star Wars"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/ABLVV87Ik6zrQKPzmWGt8q57zCYxHjo4F7Uov2-e8V2I5bqwG4XTHsytFeTByovvEzSBXCslxthyz4gqdo8Rq4CaOvIolGoaGnsGWOn6MAXj3p3MI__43k1iN6hSfPxW7htD0N-gffm9D8v557ypNxHyFyIn4w=w637-h535-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Pretty in Pink"}) ;
 
 
