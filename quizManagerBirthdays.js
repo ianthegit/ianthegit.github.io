@@ -319,12 +319,20 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 
 
 
-/*
 
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
-	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
 
-*/
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-24",
+	question : "Who is this, born February 24th 1940?" ,	answer : "Denis Law", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Denis_Law.jpg/220px-Denis_Law.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-24",
+	question : "Who is this, born February 24th 1945?" ,	answer : "Barry Bostwick", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Barry_Bostwick_Photo_Op_GalaxyCon_Raleigh_2023_%28cropped%29.jpg/220px-Barry_Bostwick_Photo_Op_GalaxyCon_Raleigh_2023_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-24",
+	question : "Who is this, born February 24th 1948?" ,	answer : "Dennis Waterman", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Dennis_Waterman.jpg/220px-Dennis_Waterman.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-24",
+	question : "Who is this, born February 24th 1955?" ,	answer : "Steve Jobs", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Steve_Jobs_Headshot_2010-CROP_%28cropped_2%29.jpg/220px-Steve_Jobs_Headshot_2010-CROP_%28cropped_2%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-24",
+	question : "Who is this, born February 24th 1981?" ,	answer : "Lleyton Hewitt", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Hewitt_WM16_%2812%29_%2828385918786%29.jpg/220px-Hewitt_WM16_%2812%29_%2828385918786%29.jpg"	});	
+
+
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-25",
 	question : "Who is this, born February 25th 1976?" ,	answer : "Rashida Jones", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Rashida_Jones_2017_%28cropped%29.jpg/220px-Rashida_Jones_2017_%28cropped%29.jpg"	});	
@@ -349,6 +357,13 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"2-26",
 	question : "Who is this, born February 26th 1947?" ,	answer : "Sandie Shaw", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Sandie_Shaw_3.jpg/250px-Sandie_Shaw_3.jpg"	});	
 
+
+/*
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
+	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
+
+*/
 
 
 

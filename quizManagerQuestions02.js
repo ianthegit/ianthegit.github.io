@@ -6450,6 +6450,45 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 
 
 
+quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2024-2-25,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What R </BR></BR>Whose (surname) 'Variations On a Theme by Paganini' is a standard part of the piano repertoire?", // 
+	answerSpeak : "", answer : "Rachmaninoff"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What R </BR></BR>Which group, from Oxford, England, released the album 'O.K. Computer' in 1997?", // 
+	answerSpeak : "", answer : "Radiohead"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What R </BR></BR>In computing what does the R in the acronym 'RAM' stand for?", // 
+	answerSpeak : "", answer : "Random"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What R </BR></BR>Which horse achieved an unmatched historic treble when he won the Grand National in 1973, 1974 and 1977, and also came second in the two intervening years, 1975 and 1976?", // 
+	answerSpeak : "", answer : "Red Rum"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What R </BR></BR>In which French city, famous for its champagne, did the Germans surrender in World War II?", // 
+	answerSpeak : "", answer : "Reims"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What R </BR></BR>A political movement for reformation within the Communist Party of the Soviet Union during the 1980s, 'perestroika' means what in English?", // 
+	answerSpeak : "", answer : "Restructuring"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What R </BR></BR>Dendrochronology, the scientific method of dating trees, is better known as what (2 words, 1st begins with R)?", // 
+	answerSpeak : "", answer : "Ring Dating"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What R </BR></BR>In which modern day country would you find the region known as Transylvania?", // 
+	answerSpeak : "", answer : "Romania"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What R </BR></BR>What is the stinky gas called hydrogen sulphide said to smell like?", // 
+	answerSpeak : "", answer : "Rotten Eggs"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What R </BR></BR>What unit of currency is shared by Sri Lanka, Nepal, and India?", // 
+	answerSpeak : "", answer : "Rupee"}) ;
+
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2024-2-25,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5wooreVvQavW4Vr5JHT2vr?utm_source=generator" width="100%" height="730" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Walking on the moon, The Police</BR>Wicked Game, Chris Isaacs</BR>One way or another, Blondie</BR>Seven Nation Army, White Stripes</BR>It's a sin, Pet Shop Boys</BR>Ain't no mountain high enough, Marvin Gaye, Diana Ross</BR>Heroes, David Bowie</BR>It's only rock and roll, The Rolling Stones</BR>Don't you want me, Human League</BR>Common People, Pulp", answerSpeak : "", question : ""}) ;
+
+
 //https://www.coventrytelegraph.net/whats-on/family-kids-news/23-general-knowledge-pub-quiz-27956650
 
 quests[++questIndexBuilder] = { 
