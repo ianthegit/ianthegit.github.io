@@ -56,4 +56,4 @@ function setupSelector(idName, defaultSelected, selectionChangeFunction, options
 		if (options[i]==defaultSelected){ retVal = retVal+' selected' ; }
 		retVal = retVal + '>' + options[i] + '</option>';}
 	return retVal + '</select></span>';}
-// Developed by Ian H January 2024.  Free to use, but if it's saved you time, buy me a beer when you see me.  Adnams Ghostship, or Guinness.
+// Developed by Ian H January 2024.  Free to use, but if it's saved you time, buy me a beer when you see me: Adnams Ghostship, or Guinness.
