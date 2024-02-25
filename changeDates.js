@@ -8,7 +8,7 @@ timezones.push({type : 'EST',	localeName : "America Atlantic Coast",	typeName : 
 timezones.push({type : 'CST',	localeName : "America Central" , 		typeName : "America/Winnipeg" });
 timezones.push({type : 'MST',	localeName : "America Mountains" , 		typeName : "America/Denver" });
 timezones.push({type : 'PST',	localeName : "America Pacific Coast",	typeName : "America/Los_Angeles" });
-hours=new Array (1,2,3,4,4.5,5,5.5,6,6.5,8,10,12,15,20,24,36,48,'Custom');    
+hours=new Array (1,1.5,2,2.5,3,3.5,4,4.5,5,5.5,6,6.5,7,8,9,10,12,15,20,24,36,48,'Custom');    
 mList = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
 frenchMList = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
 dList = [ "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" ];
