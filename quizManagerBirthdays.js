@@ -358,12 +358,32 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 	question : "Who is this, born February 26th 1947?" ,	answer : "Sandie Shaw", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Sandie_Shaw_3.jpg/250px-Sandie_Shaw_3.jpg"	});	
 
 
-/*
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-2",
+	question : "Who is this, born March 2nd 1923?" ,	answer : "Cardinal Basil Hume", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Cardinal_George_Basil_Hume.jpg/220px-Cardinal_George_Basil_Hume.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-2",
+	question : "Who is this, born March 2nd 1931?" ,	answer : "Mikhail Gorbachev", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/RIAN_archive_850809_General_Secretary_of_the_CPSU_CC_M._Gorbachev_%28crop%29.jpg/220px-RIAN_archive_850809_General_Secretary_of_the_CPSU_CC_M._Gorbachev_%28crop%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-2",
+	question : "Who is this, born March 2nd 1942?" ,	answer : "Lou Reed", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Lou_reed_%28cropped%29.jpg/220px-Lou_reed_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-2",
+	question : "Who is this, born March 2nd 1947?" ,	answer : "Harry Rednap", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Harry_Redknapp_2011_%28cropped%29.jpg/220px-Harry_Redknapp_2011_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-2",
+	question : "Who is this, born March 2nd 1962?" ,	answer : "Jon Bon Jovi", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Bon_Jovi_at_Madison_Square_Garden_%2833868597862%29.jpg/220px-Bon_Jovi_at_Madison_Square_Garden_%2833868597862%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-2",
+	question : "Who is this, born March 2nd 1971?" ,	answer : "Dave Gorman", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Dave_Gorman_%282516168464%29.jpg/220px-Dave_Gorman_%282516168464%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-2",
+	question : "Who is this, born March 2nd 1980?" ,	answer : "Rebel Wilson", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Rebel_Wilson_%286707611099%29_%28cropped%29.jpg/220px-Rebel_Wilson_%286707611099%29_%28cropped%29.jpg"	});	
 
-addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
-	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
 
-*/
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-3",
+	question : "Who is this, born March 3rd 1958?" ,	answer : "Miranda Richardson", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Stronger_PC_02_%2837216444535%29.jpg/220px-Stronger_PC_02_%2837216444535%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-3",
+	question : "Who is this, born March 3rd 1968?" ,	answer : "Brian Cox", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Professor_Brian_Cox_OBE_FRS_%28cropped%29.jpg/220px-Professor_Brian_Cox_OBE_FRS_%28cropped%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-3",
+	question : "Who is this, born March 3rd 1971?" ,	answer : "Charlie Brooker", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Charlie_Brooker.jpg/220px-Charlie_Brooker.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-3",
+	question : "Who is this, born March 3rd 1977?" ,	answer : "Ronan Keating", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Ronan_Keating_3.jpg/220px-Ronan_Keating_3.jpg"	});	
 
 
 
@@ -402,6 +422,12 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-5",
 	question : "Who is this, born March 5th 1993?" ,	answer : "Harry Maguire", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Harry_Maguire_2021.jpg/220px-Harry_Maguire_2021.jpg"	});	
 
+/*
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
+	question : "Who is this, born MONTH DAY 19YY?" ,	answer : "", answerSpeak : "", image : ""	});	
+
+*/
 
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-11",

@@ -6489,6 +6489,44 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 	answer : "Walking on the moon, The Police</BR>Wicked Game, Chris Isaacs</BR>One way or another, Blondie</BR>Seven Nation Army, White Stripes</BR>It's a sin, Pet Shop Boys</BR>Ain't no mountain high enough, Marvin Gaye, Diana Ross</BR>Heroes, David Bowie</BR>It's only rock and roll, The Rolling Stones</BR>Don't you want me, Human League</BR>Common People, Pulp", answerSpeak : "", question : ""}) ;
 
 
+quests[++questIndexBuilder] = { 
+		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
+		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
+		tags : "2024-3-3,saturday,InnerWheel,surfers,alphabet", 
+		questInfo: new Array() };
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What S </BR></BR>What is the name of the plant which is also called sea asparagus?", // 
+	answerSpeak : "", answer : "Samphire"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What S </BR></BR>What is a box-like funeral receptacle for a corpse, most commonly carved in stone, and usually displayed above ground?", // 
+	answerSpeak : "", answer : "Sarcophagus"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What S </BR></BR>In the animal kingdom, the only male animals that undergo pregnancy and give birth to offspring are pipefish, the leafy sea dragon, and what else?", // 
+	answerSpeak : "", answer : "Sea Horse"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What S </BR></BR>What is the clastic sedimentary rock formed from mud that is a mix of flakes of clay minerals and tiny fragments of other minerals?", // 
+	answerSpeak : "", answer : "Shale"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What S </BR></BR>When used to describe a camera, what does 'S' in SLR stand for?", // 
+	answerSpeak : "", answer : "Single (Lens Reflex)"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What S </BR></BR>What would you call the public ownership of the basic means of production, distribution, and exchange?", // 
+	answerSpeak : "", answer : "Socialism"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What S </BR></BR>Four thirds multiplied by pi multiplied by the radius cubed, gives you the volume of what geometric objects?", // 
+	answerSpeak : "", answer : "Spheres"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What S </BR></BR>What is the representation of inanimate objects in painting, drawing or photography called?", // 
+	answerSpeak : "", answer : "Still Life"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What S </BR></BR>In law, a formal document stating that a person (defendant) is notified to appear in court is a?", // 
+	answerSpeak : "", answer : "Summons"}) ;
+ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What S </BR></BR>Which author's autobiographical novel was called 'The Bell Jar'?", // 
+	answerSpeak : "", answer : "Sylvia Plath"}) ;
+
+
+quests[++questIndexBuilder] = { 
+		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
+		hoverover : "Songs you will know, but wish you did not after this.",
+		tags : "music,2024-3-3,InnerWheel,saturday",
+		questInfo: new Array()
+	};
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
+	spotify : '<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0zj10Su98FfBiDRKt97Pr1?utm_source=generator" width="100%" height="730" frameBorder="0" allowfullscreen="" allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"></iframe>',
+	answer : "Why does it always rain on me, Travis</BR>Golden Brown, The Stranglers</BR>Chelsea Dagger, The Fratellis</BR>Ruby, Kaiser Chiefs</BR>Rock DJ, Robbie Williams</BR>Don't look back in anger, Oasis</BR>Country House, Blur</BR>Ooh-Ahh, just a little bit, Gina G</BR>You're Gorgeous, Baby Bird</BR>Common People, Pulp", answerSpeak : "", question : ""}) ;
+
+
 //https://www.coventrytelegraph.net/whats-on/family-kids-news/23-general-knowledge-pub-quiz-27956650
 
 quests[++questIndexBuilder] = { 
