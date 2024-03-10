@@ -3296,22 +3296,22 @@ addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question :
 		questInfo: new Array()
 	};
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AP1GczO6VSmNWv1cFHwCLiyn1Q1N-QnTY9a2VVza-O9rGuMEu-RCTc3KhArJq2craHJpwnGU8E_bwl8ALT7l7bdFECTJBQYe6G8TPtAPLxNij1qnRZZzsI5qjub4VYVWsVCFLLxXAsLYiQ4LKkLVgoflkuNywQ=w702-h455-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "The 1% Club"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AP1GczOgPstWxzPTErzm65rCuIiSMY_TM_dKYndAz_oWOzPKw9a4CE5A1kT8_-OSi8RoyDBoSroLwVwRam_tVLRd_PIx38SMrgv4xP0_A_GD3FtuwIt6bBGB8wYc0rrNPkacrYVozZKhPWVCloRnUl5B5FDh-Q=w709-h506-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Who wants to be a Millionnaire"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AP1GczMIPrK9ZPpPjGEoMyas335w8W7b4cYI7XxptEIaFfwhPwVAzYKDZwTJjvCLnpmMPPkBUQXjlOhcdJgvsG6AfrYrbwbnMvC2EDOdHOZP5EKzhw3aSTStjTYAA_B80TekByiXvd9EWijSVqS1Y54LV2BaiQ=w1318-h906-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "The Chase"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AP1GczOS6Saq3Lkz61rvhc4cda6YEZi-nWZUr7n8xfhC03FkTj310oXqHdMswYo5CDeeGS1-YwNYogwyidbz4J8dRB5ZPr72b-fvuijpGuXXsjNsHHqmZKFtVMgI-YU_itULCwZbyUuHyYk-Vpxw78quXkCplA=w974-h570-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Michael McIntyre's The Wheel"}) ;
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ted draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AP1GczMb41dajlWD6oDcrbP7WY_s_x64vnhQ2a0z97Vx0aM0ckI-MUIQ8hX6CpVdnaiKXhbMtHhRbsiErRe3fLThvvVvpcUIxjx0KlSnYO2JSrK4xUrcB1QiIeR4KupoulokVuXAqUM-e-5G2UXNMRIImuLgQg=w806-h424-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "The Weakest Link"}) ;
 addQuest(quests[questIndexBuilder],{		type : quizQuestionTypePicture,	question : "What did Ian draw", // 
-	image : "",
+	image : "https://lh3.googleusercontent.com/pw/AP1GczP_4T4HFeP4SsOxG3RzQi4jAFa6ARBNYo5a3S8XXFZAZEJYbpt6hl7ddlYUI0JMwhmImvkLYm2slQEK_aLUtHBVzkKUDO10NPQOrBnspF5WRcu14Lbwt3gP0BfqsGf2U7zZi0GZu9mrjMQIQESs3SPl_A=w711-h493-s-no-gm?authuser=0",
 	answerimage : "", answerSpeak : "", answer : "Deal or No Deal"}) ;
 
 
