@@ -6492,7 +6492,7 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,
 quests[++questIndexBuilder] = { 
 		name : "Alphabet "+getAndIncrementCounterForType("Alphabet"),
 		hoverover : "Each answer starts with the same letter, and the answers are in alphabetical order",
-		tags : "2024-3-3,saturday,InnerWheel,surfers,alphabet", 
+		tags : "2024-3-10,saturday,InnerWheel,surfers,alphabet", 
 		questInfo: new Array() };
  addQuest(quests[questIndexBuilder],{		type : quizQuestionTypeText,	question : "What S </BR></BR>What is the name of the plant which is also called sea asparagus?", // 
 	answerSpeak : "", answer : "Samphire"}) ;
@@ -6519,7 +6519,7 @@ quests[++questIndexBuilder] = {
 quests[++questIndexBuilder] = { 
 		name : "Bad Covers " +getAndIncrementCounterForType("BadCovers"),
 		hoverover : "Songs you will know, but wish you did not after this.",
-		tags : "music,2024-3-3,InnerWheel,saturday",
+		tags : "music,2024-3-10,InnerWheel,saturday",
 		questInfo: new Array()
 	};
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypeSpotify,

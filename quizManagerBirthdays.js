@@ -422,6 +422,35 @@ addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-5",
 	question : "Who is this, born March 5th 1993?" ,	answer : "Harry Maguire", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Harry_Maguire_2021.jpg/220px-Harry_Maguire_2021.jpg"	});	
 
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-9",
+	question : "Who is this, born March 9th 1949?" ,	answer : "Neil Hamilton", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Neil_Hamilton_AM_%2828136586146%29.jpg/220px-Neil_Hamilton_AM_%2828136586146%29.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-9",
+	question : "Who is this, born March 9th 1952?" ,	answer : "Bill Beaumont", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Bill_Beaumont_2016.jpg/220px-Bill_Beaumont_2016.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-9",
+	question : "Who is this, born March 9th 1970?" ,	answer : "Martin Johnson", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Martin_Johnson_2015.JPG/220px-Martin_Johnson_2015.JPG"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-9",
+	question : "Who is this, born March 9th 1980?" ,	answer : "Matthew Gray Gubler", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Matthew_Gray_Gubler_takes_a_pic_with_Greg2600_in_New_York_City_2017.jpg/220px-Matthew_Gray_Gubler_takes_a_pic_with_Greg2600_in_New_York_City_2017.jpg"	});	
+
+
+
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-10",
+	question : "Who is this, born March 10th 1940?" ,	answer : "Chuck Norris", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Chuck_Norris_May_2015.jpg/220px-Chuck_Norris_May_2015.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-10",
+	question : "Who is this, born March 10th 1957?" ,	answer : "Osama Bin Laden", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Osama_bin_Laden_portrait.jpg/220px-Osama_bin_Laden_portrait.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-10",
+	question : "Who is this, born March 10th 1958?" ,	answer : "Sharon Stone", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Sharon_Stone-68391.jpg/220px-Sharon_Stone-68391.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-10",
+	question : "Who is this, born March 10th 1964?" ,	answer : "Prince Edward", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Prince_Edward_2022.jpg/220px-Prince_Edward_2022.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-10",
+	question : "Who is this, born March 10th 1969?" ,	answer : "Paget Brewster", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Paget_Brewster.jpg/220px-Paget_Brewster.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-10",
+	question : "Who is this, born March 10th 1971?" ,	answer : "John Hamm", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Jon_Hamm_at_PaleyFest_2014.jpg/220px-Jon_Hamm_at_PaleyFest_2014.jpg"	});	
+addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"3-10",
+	question : "Who is this, born March 10th 1983?" ,	answer : "Rafe Spall", answerSpeak : "", image : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Rafe_Spall_and_wife_Elize_Du_Toit_%288464856194%29_%28Spall_cropped%29.jpg/220px-Rafe_Spall_and_wife_Elize_Du_Toit_%288464856194%29_%28Spall_cropped%29.jpg"	});	
+
+
 /*
 
 addQuest(quests[questIndexBuilder],{	type : quizQuestionTypePicture, 		birthday:"M-D",
