@@ -1,5 +1,6 @@
 timezones = new Array(); // https://en.wikipedia.org/wiki/List_of_tz_database_time_zones 
 timezones.push({type : 'AEST',	localeName : "Australia, Sydney" , 		typeName : "Australia/Sydney"});
+timezones.push({type : 'AEST',	localeName : "Australia, Melbourne" , 	typeName : "Australia/Melbourne"});
 timezones.push({type : 'HK',	localeName : "Hong Kong" , 				typeName : "Asia/Hong_Kong"});
 timezones.push({type : 'IST',	localeName : "India" , 					typeName : "Asia/Kolkata"});
 timezones.push({type : 'CET',	localeName : "Central Europe" , 		typeName : "Europe/Paris" });
