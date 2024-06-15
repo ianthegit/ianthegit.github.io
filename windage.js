@@ -10,7 +10,9 @@ function createScreen() {
  	
  	
 	"<tr><td><span id='speedSpan' >"+
- 	"<tr>  <td>Windspeed </td><td>  <input type='number' id='windspeed' onchange='windspeedDataChanged(this.value)'> </td>  </tr> " +
+ 	"<tr>  <td>Windspeed </td><td>  <input type='number' id='windspeed' onchange='windspeedDataChanged(this.value)'> </td> <td> " +
+ 	setupDropdown('windspeedTypeSpan', 'windspeedType', 'setWindspeedType' , 0, 	new Array('Knotts', 'MPH' )) +
+ 	" </td> </tr> " +
  
  	"</span></td></tr>" +
  
@@ -25,6 +27,10 @@ function createScreen() {
  	
  	"</table></div>");}
  	
+ function setWindspeedType(windspeedType) {
+	 
+	 runCalculateWithAreaAndWindspeed(document.getElementById('totalArea').value, document.getElementById('windspeed').value)
+ }
  	
  function areaDataChanged(areaData) {
 	 runCalculateWithAreaAndWindspeed(areaData, document.getElementById('windspeed').value)
@@ -38,15 +44,17 @@ function createScreen() {
 
 function runCalculateWithAreaAndWindspeed(areaData, windspeedData) {
 	
+	windspeedType = document.getElementById('windspeedType').value;
+	
+	if (windspeedType == 'MPH') {
+		windspeedData = windspeedData / 1.151;
+	}
+	
 	windage = ( ( (windspeedData * windspeedData) / 18 ) * areaData ) / 1000;
 	
 	document.getElementById("windageCalculated").innerHTML =  parseFloat(windage.toFixed(1));
 }
 
-/*
-
-setupDropdown('tempPub', 'pubRange', 'setPubRange' , 0, 
-									new Array('Hell yes', 'Only for a couple', 'Not tonight Josephine' ))
 
 
 function setupDropdown(spanName, id, functionName, defaultSelected, options){
@@ -68,4 +76,3 @@ function setupDropdown(spanName, id, functionName, defaultSelected, options){
 	  return retVal;
 	 }
 	 
-	 */
