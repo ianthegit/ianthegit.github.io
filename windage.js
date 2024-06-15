@@ -11,7 +11,7 @@ function createScreen() {
  	
 	"<tr><td><span id='speedSpan' >"+
  	"<tr>  <td>Windspeed </td><td>  <input type='number' id='windspeed' onchange='windspeedDataChanged(this.value)'> </td> <td> " +
- 	setupDropdown('windspeedTypeSpan', 'windspeedType', 'setWindspeedType' , 0, 	new Array('Knotts', 'MPH' )) +
+ 	setupDropdown('windspeedTypeSpan', 'windspeedType', 'setWindspeedType' , 0, 	new Array('Knots', 'MPH' )) +
  	" </td> </tr> " +
  
  	"</span></td></tr>" +
