@@ -58,7 +58,7 @@ function runCalculateWithAreaAndWindspeed(areaData, windspeedData) {
 
 
 function setupDropdown(spanName, id, functionName, defaultSelected, options){
-	  var retVal = "<br/>";
+	  var retVal = "";
 	  retVal = retVal + '<span id="' + spanName + '"> <select name="' + id + '" id="' + id + '" onchange="'+ functionName + '();" >';
 	  lapIdCount =options.length;
 	  for (var i=0 ; i<lapIdCount ; i++){
