@@ -26,7 +26,9 @@ function calculateArea() {
 	numberOfContainersHighData = document.getElementById('numberOfContainersHigh').value;
 	deckHeightData = document.getElementById('deckHeight').value;
 	vesselLengthData = document.getElementById('vesselLength').value;
-	calculatedTotalArea = (deckHeightData + (numberOfContainersHighData * 2.4) ) * vesselLengthData;
+	calculatedTotalAreaContainer =  (numberOfContainersHighData * 2.4) ;
+	calculatedTotalAreaHeight = (1*deckHeightData) + (1*calculatedTotalAreaContainer ) ;
+	calculatedTotalArea = (calculatedTotalAreaHeight ) * vesselLengthData;
 	document.getElementById('totalArea').value = calculatedTotalArea;
 	runCalculateWithAreaAndWindspeed(calculatedTotalArea, document.getElementById('windspeed').value)
 }
