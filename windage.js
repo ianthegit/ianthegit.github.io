@@ -11,7 +11,7 @@ function createScreen() {
  	
 	"<tr><td><span id='speedSpan' >"+
  	"<tr>  <td>Windspeed </td><td>  <input type='number' id='windspeed' onchange='windspeedDataChanged(this.value)'> </td> <td> " +
- 	setupDropdown('windspeedTypeSpan', 'windspeedType', 'setWindspeedType' , 0, 	new Array('Knots', 'MPH' )) +
+ 	setupDropdown('windspeedTypeSpan', 'windspeedType', 'setWindspeedType' , 0, 	new Array('Knots', 'MPH', 'Metres per second' )) +
  	" </td> </tr> " +
  
  	"</span></td></tr>" +
@@ -48,6 +48,9 @@ function runCalculateWithAreaAndWindspeed(areaData, windspeedData) {
 	
 	if (windspeedType == 'MPH') {
 		windspeedData = windspeedData / 1.151;
+	}
+	if (windspeedType == 'Metres per second') {
+		windspeedData = windspeedData * 1.94384;
 	}
 	
 	windage = ( ( (windspeedData * windspeedData) / 18 ) * areaData ) / 1000;
