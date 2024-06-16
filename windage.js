@@ -25,8 +25,7 @@ function calculateArea() {
 	calculatedTotalAreaHeight = (1*deckHeightData) + (1*calculatedTotalAreaContainer ) ;//Hack to get around javascript concatonation not addition issue
 	calculatedTotalArea = (calculatedTotalAreaHeight ) * vesselLengthData;
 	document.getElementById('totalArea').value = calculatedTotalArea;
-	runCalculateWithAreaAndWindspeed(calculatedTotalArea, document.getElementById('windspeed').value)
-}
+	runCalculateWithAreaAndWindspeed(calculatedTotalArea, document.getElementById('windspeed').value)}
  function setWindspeedType(windspeedType) {
 	 runCalculateWithAreaAndWindspeed(document.getElementById('totalArea').value, document.getElementById('windspeed').value) }
  function areaDataChanged(areaData) {
@@ -40,8 +39,7 @@ function runCalculateWithAreaAndWindspeed(areaData, windspeedData) {
 	if (windspeedType == 'Metres/second') {
 		windspeedData = windspeedData * 1.94384;	}
 	windage = ( ( (windspeedData * windspeedData) / 18 ) * areaData ) / 1000;
-	document.getElementById("windageCalculated").innerHTML =  parseFloat(windage.toFixed(1));
-}
+	document.getElementById("windageCalculated").innerHTML =  parseFloat(windage.toFixed(1));}
 function setupDropdown(spanName, id, functionName, defaultSelected, options){
 	  var retVal = "";
 	  retVal = retVal + '<span id="' + spanName + '"> <select name="' + id + '" id="' + id + '" onchange="'+ functionName + '();" >';
@@ -57,5 +55,4 @@ function setupDropdown(spanName, id, functionName, defaultSelected, options){
 	    }
 	  }
 	  retVal = retVal + '</select></span>';
-	  return retVal;
- }
+	  return retVal; }
