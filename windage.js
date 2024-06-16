@@ -2,7 +2,7 @@ function createScreen() {
 	document.write("<div id='windage' class='grad' ><table border='0' >" +
 	"<tr><span id='areaCalcSpan'>"+  	"</span></tr>" +	"<tr><td><span id='areaSpan'>" + "</span></td></tr>" + "<tr>  <td>" +
  	setupDropdown('areaTypeCalcSpan', 'areaCalcType', 'setAreaTypeCalc' , 0, 	new Array('Total Area', 'Calculate Area' )) +
- 	" </td><td>  <input type='number' id='totalArea' onchange='areaDataChanged(this.value)'> </td>  <td>M<sup>2</sup></rd> </tr> " +
+ 	" </td><td>  <input type='number' id='totalArea' onchange='areaDataChanged(this.value)'> </td>  <td>M<sup>2</sup></td> </tr> " +
 	"<tr><td><span id='speedSpan' >"+ 	"<tr>  <td>Windspeed </td>" + 
  	" <td> " + 	setupDropdown('windspeedTypeSpan', 'windspeedType', 'setWindspeedType' , 0, new Array('Knots', 'MPH', 'Metres/second' )) + " </td>" + 
  	"<td>  <input type='number' id='windspeed' onchange='windspeedDataChanged(this.value)'> </td>" + 
