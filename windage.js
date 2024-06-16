@@ -1,36 +1,15 @@
 function createScreen() { 
-
 	document.write("<div id='windage' class='grad' ><table border='0' >" +
-
-
-	"<tr><span id='areaCalcSpan'>"+
-  	"</span></tr>" +
-
-	
-	"<tr><td><span id='areaSpan'>"+
-  	"</span></td></tr>" +
+	"<tr><span id='areaCalcSpan'>"+  	"</span></tr>" +	"<tr><td><span id='areaSpan'>"+  	"</span></td></tr>" +
   	"<tr>  <td>" +
  	setupDropdown('areaTypeCalcSpan', 'areaCalcType', 'setAreaTypeCalc' , 0, 	new Array('Total Area', 'Calculate Area' )) +
  	" </td><td>  <input type='number' id='totalArea' onchange='areaDataChanged(this.value)'> </td>  <td>M<sup>2</sup></rd> </tr> " +
- 	
- 	
-	"<tr><td><span id='speedSpan' >"+
- 	"<tr>  <td>Windspeed </td>" + 
+	"<tr><td><span id='speedSpan' >"+ 	"<tr>  <td>Windspeed </td>" + 
  	" <td> " + 	setupDropdown('windspeedTypeSpan', 'windspeedType', 'setWindspeedType' , 0, 	new Array('Knots', 'MPH', 'Metres/second' )) + " </td>" + 
  	"<td>  <input type='number' id='windspeed' onchange='windspeedDataChanged(this.value)'> </td>" + 
- 	" </tr> </span></td></tr>" +
- 
- 
- 	
- 	
-	"<tr><td><span id='calculationSpan' >"+
+ 	" </tr> </span></td></tr>" +	"<tr><td><span id='calculationSpan' >"+
  	"<tr>  <td>Windage is </td><td> <span id='windageCalculated'> </span> </td>  </tr> " +
- 
- 	"</span></td></tr>" +
-
- 	
- 	"</table></div>");}
- 	
+ 	"</span></td></tr>" + 	"</table></div>");}
 function setAreaTypeCalc() {
 	if (document.getElementById('areaCalcType').value == 'Total Area') {
 		document.getElementById("areaCalcSpan").innerHTML = "";
@@ -42,9 +21,7 @@ function setAreaTypeCalc() {
 		"<tr><td>Vessel length in M</td> <td><input type='number' id='vesselLength' onchange='calculateArea()'> </td> </tr></table>"
 		;
 	}
-		 
  }
- 	
 function calculateArea() {
 	numberOfContainersHighData = document.getElementById('numberOfContainersHigh').value;
 	deckHeightData = document.getElementById('deckHeight').value;
@@ -52,43 +29,24 @@ function calculateArea() {
 	calculatedTotalArea = (deckHeightData + (numberOfContainersHighData * 2.4) ) * vesselLengthData;
 	document.getElementById('totalArea').value = calculatedTotalArea;
 	runCalculateWithAreaAndWindspeed(calculatedTotalArea, document.getElementById('windspeed').value)
-	
 }
-
-
-
  function setWindspeedType(windspeedType) {
-	 
-	 runCalculateWithAreaAndWindspeed(document.getElementById('totalArea').value, document.getElementById('windspeed').value)
- }
- 	
+	 runCalculateWithAreaAndWindspeed(document.getElementById('totalArea').value, document.getElementById('windspeed').value) }
  function areaDataChanged(areaData) {
-	 runCalculateWithAreaAndWindspeed(areaData, document.getElementById('windspeed').value)
- }	
-
-
+	 runCalculateWithAreaAndWindspeed(areaData, document.getElementById('windspeed').value) }	
  function windspeedDataChanged(windspeedData) {
-	 runCalculateWithAreaAndWindspeed(document.getElementById('totalArea').value, windspeedData)
- }	
-
-
+	 runCalculateWithAreaAndWindspeed(document.getElementById('totalArea').value, windspeedData) }	
 function runCalculateWithAreaAndWindspeed(areaData, windspeedData) {
 	windspeedType = document.getElementById('windspeedType').value;
-	
 	if (windspeedType == 'MPH') {
 		windspeedData = windspeedData / 1.151;
 	}
 	if (windspeedType == 'Metres/second') {
 		windspeedData = windspeedData * 1.94384;
 	}
-	
 	windage = ( ( (windspeedData * windspeedData) / 18 ) * areaData ) / 1000;
-	
 	document.getElementById("windageCalculated").innerHTML =  parseFloat(windage.toFixed(1));
 }
-
-
-
 function setupDropdown(spanName, id, functionName, defaultSelected, options){
 	  var retVal = "";
 	  retVal = retVal + '<span id="' + spanName + '"> <select name="' + id + '" id="' + id + '" onchange="'+ functionName + '();" >';
@@ -106,5 +64,4 @@ function setupDropdown(spanName, id, functionName, defaultSelected, options){
 	  }
 	  retVal = retVal + '</select></span>';
 	  return retVal;
-	 }
-	 
+ }
