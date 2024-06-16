@@ -37,7 +37,7 @@ function setAreaTypeCalc() {
 	}
 	if (document.getElementById('areaCalcType').value == 'Calculate Area') {
 		document.getElementById("areaCalcSpan").innerHTML = 
-		"<table><tr><td>Number of 2.4M containers stacked above deck</td> <td><input type='number' id='numberOfContainersHigh' onchange='calculateArea()'> </td> </tr>" +
+		"<table><tr><td>Number of 2.4M containers</br> stacked above deck</td> <td><input type='number' id='numberOfContainersHigh' onchange='calculateArea()'> </td> </tr>" +
 		"<tr><td>Deck height in M</td> <td><input type='number' id='deckHeight' onchange='calculateArea()'> </td> </tr>" +
 		"<tr><td>Vessel length in M</td> <td><input type='number' id='vesselLength' onchange='calculateArea()'> </td> </tr></table>"
 		;
