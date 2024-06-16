@@ -27,7 +27,7 @@ function calculateArea() {
 	deckHeightData = document.getElementById('deckHeight').value;
 	vesselLengthData = document.getElementById('vesselLength').value;
 	calculatedTotalAreaContainer =  (numberOfContainersHighData * 2.4) ;
-	calculatedTotalAreaHeight = (1*deckHeightData) + (1*calculatedTotalAreaContainer ) ;
+	calculatedTotalAreaHeight = (1*deckHeightData) + (1*calculatedTotalAreaContainer ) ;//Hack to get around javascript concatonation not addition issue
 	calculatedTotalArea = (calculatedTotalAreaHeight ) * vesselLengthData;
 	document.getElementById('totalArea').value = calculatedTotalArea;
 	runCalculateWithAreaAndWindspeed(calculatedTotalArea, document.getElementById('windspeed').value)
