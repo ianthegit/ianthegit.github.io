@@ -34,9 +34,9 @@ function calculateArea() {
 function runCalculateWithAreaAndWindspeed(areaData, windspeedData) {
 	windspeedType = document.getElementById('windspeedType').value;
 	if (windspeedType == 'MPH') {
-		windspeedData = windspeedData / 1.151;	}
-	if (windspeedType == 'Metres/second') {
-		windspeedData = windspeedData * 1.94384;	}
+		windspeedData = windspeedData / 12.237;	}
+	if (windspeedType == 'Knots') {
+		windspeedData = windspeedData / 1.94384;	}
 	windage = ( ( (windspeedData * windspeedData) / 18 ) * areaData ) / 1000;
 	document.getElementById("windageCalculated").innerHTML =  parseFloat(windage.toFixed(1));}
 function setupDropdown(spanName, id, functionName, defaultSelected, options){
