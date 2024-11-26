@@ -30,13 +30,44 @@ function setupBaseScreen(){
 }
 
 function recalculate() {
-	
-	resultsData="<table> <tr> <td> Age</td> </tr> " 
-	
-	
-		for (var i=document.getElementById('ageNow').value ; i<100 ; i++){
-			resultsData=resultsData+"<tr><td>" + i + "</td></tr>"
 
+
+	ageNow=document.getElementById('ageNow').value; 
+	retirementAge=document.getElementById('retirementAge').value; 
+	iSAValueNow=document.getElementById('iSAValueNow').value; 
+	yearlyISAAddition=document.getElementById('yearlyISAAddition').value; 
+	pensionValueNow=document.getElementById('pensionValueNow').value; 
+	pensionYearlyAddition=document.getElementById('pensionYearlyAddition').value; 
+	expectedStatePension=document.getElementById('expectedStatePension').value; 
+	desiredYearlyIncome=document.getElementById('desiredYearlyIncome').value; 
+	expectedGrowthRate=document.getElementById('expectedGrowthRate').value; 
+	expectedInflationRate=document.getElementById('expectedInflationRate').value; 
+	otherIncome=document.getElementById('otherIncome').value; 
+
+	
+	resultsData="<table> <tr> <td> Age</td> <td>ISA</td><td>Pension</td></tr> " 
+	
+		startAge=document.getElementById('ageNow').value;
+		
+		for (var i=startAge ; i<100 ; i++){
+			
+			if (i==startAge) {
+				resultsData = resultsData +setupRow1(startAge, iSAValueNow, pensionValueNow);				
+			}
+			if (i!=startAge) {
+			
+				resultsData=resultsData+"<tr><td>" + i + "</td>"
+//				+"<td id='iSA"+i+"'>"  + "</td>"
+				+"<td id='iSA"+i+"'>" + recalculateISA( document.getElementById('iSA' + i-1).value, expectedGrowthRate) + "</td>"
+				+"<td id='pension"+i+"'>" + "</td>"
+				/*
+				+"<td>" + "</td>"
+				+"<td>" + "</td>"
+				+"<td>" + "</td>"
+				+"<td>" + "</td>"
+				*/
+				+"</tr>"
+			}		
 
 
 		}	
@@ -46,6 +77,16 @@ function recalculate() {
 	
 }
 
+function recalculateISA(lastYearsISA, expectedGrowthRate) {
+	return lastYearsISA * (expectedGrowthRate /100) ;
+	
+}
+function setupRow1(startAge, iSAValueNow, pensionValueNow) {
+	return "<tr><td>" + startAge + "</td>"
+			+"<td id='iSA"+startAge+"'>" + iSAValueNow+ "</td>"
+			+"<td id='pension"+startAge+"'>" + pensionValueNow+ "</td>";
+
+}
 function setupPresets(preset) {
 	document.getElementById('ageNow').value=56; 
 	document.getElementById('retirementAge').value=57; 
@@ -64,7 +105,7 @@ function setupPresets(preset) {
 		document.getElementById('retirementAge').value=40; 
 		document.getElementById('iSAValueNow').value=150000; 
 		document.getElementById('yearlyISAAddition').value=20000; 
-		document.getElementById('pensionValueNow').value=150000; 
+		document.getElementById('pensionValueNow').value=250000; 
 		document.getElementById('pensionYearlyAddition').value=40000; 
 		document.getElementById('expectedStatePension').value=12500; 
 		document.getElementById('desiredYearlyIncome').value=30000; 
