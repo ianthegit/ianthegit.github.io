@@ -56,9 +56,11 @@ function recalculate() {
 			}
 			if (i!=startAge) {
 			
+				lastISAFieldId= 'iSA' + (i-1);
+				
 				resultsData=resultsData+"<tr><td>" + i + "</td>"
 //				+"<td id='iSA"+i+"'>"  + "</td>"
-				+"<td id='iSA"+i+"'>" + recalculateISA( document.getElementById('iSA' + i-1).value, expectedGrowthRate) + "</td>"
+				+"<td id='iSA"+i+"'>" + recalculateISA( document.getElementById(lastISAFieldId).value, expectedGrowthRate) + "</td>"
 				+"<td id='pension"+i+"'>" + "</td>"
 				/*
 				+"<td>" + "</td>"
