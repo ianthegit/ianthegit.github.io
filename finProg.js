@@ -5,6 +5,7 @@ function createScreen() {
 	setupBaseScreen();
 	setupPresets(preset);	
 	recalculate();
+	redrawScreen();
 }
 
 function setupBaseScreen(){
@@ -44,24 +45,29 @@ function recalculate() {
 	expectedInflationRate=document.getElementById('expectedInflationRate').value; 
 	otherIncome=document.getElementById('otherIncome').value; 
 
+	startAge=document.getElementById('ageNow').value;
+		rowNumber = 0;
+		for (var i=startAge ; i<100 ; i++){
+			rowNumber++;
+			if (i==startAge) {
+				yearlyData[rowNumber] = {age:i, ISA:iSAValueNow, pension:pensionValueNow};
+			}
+			if (i!=startAge) {
+				yearlyData[rowNumber] = {age:i, ISA: recalculateISA( yearlyData[rowNumber-1].ISA, expectedGrowthRate), pension:recalculatePension( yearlyData[rowNumber-1].pension, expectedGrowthRate)};
+			}	
+	}
+}
 	
+function redrawScreen() {
 	resultsData="<table> <tr> <td> Age</td> <td>ISA</td><td>Pension</td></tr> " 
 	
 		startAge=document.getElementById('ageNow').value;
-		
-		for (var i=startAge ; i<100 ; i++){
-			
-			if (i==startAge) {
-				resultsData = resultsData +setupRow1(startAge, iSAValueNow, pensionValueNow);				
-			}
-			if (i!=startAge) {
-			
-				lastISAFieldId= 'iSA' + (i-1);
+	
+		for (var i=1 ; i<yearlyData.length ; i++){
 				
-				resultsData=resultsData+"<tr><td>" + i + "</td>"
-//				+"<td id='iSA"+i+"'>"  + "</td>"
-				+"<td id='iSA"+i+"'>" + recalculateISA( document.getElementById(lastISAFieldId).value, expectedGrowthRate) + "</td>"
-				+"<td id='pension"+i+"'>" + "</td>"
+				resultsData=resultsData+"<tr><td>" + yearlyData[i].age + "</td>"
+				+"<td>" + yearlyData[i].ISA + "</td>"
+				+"<td>" + yearlyData[i].pension + "</td>"
 				/*
 				+"<td>" + "</td>"
 				+"<td>" + "</td>"
@@ -69,8 +75,6 @@ function recalculate() {
 				+"<td>" + "</td>"
 				*/
 				+"</tr>"
-			}		
-
 
 		}	
 
@@ -78,10 +82,12 @@ function recalculate() {
 	document.getElementById('results').innerHTML=resultsData;
 	
 }
+function recalculatePension(lastYearsPension, expectedGrowthRate) {
+	return parseInt( +lastYearsPension + +(lastYearsPension * (expectedGrowthRate /100) ));
+}
 
 function recalculateISA(lastYearsISA, expectedGrowthRate) {
-	return lastYearsISA * (expectedGrowthRate /100) ;
-	
+	return parseInt( +lastYearsISA + +(lastYearsISA * (expectedGrowthRate /100)) );
 }
 function setupRow1(startAge, iSAValueNow, pensionValueNow) {
 	return "<tr><td>" + startAge + "</td>"
