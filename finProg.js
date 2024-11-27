@@ -25,10 +25,6 @@ function setupBaseScreen(){
  "<span id='results'> </span>"
   );
  
-  
- 
- //"<tr><td><input type='button' class='userBtnGo' value='Calculate' title='Calculate' id='Go' onclick='runCalculate()' /> </span></td></tr><tr><td><span id='data' >" + writeTeamsHTML(false) +"</span></td></tr></table></div>");
-	
 }
 
 function recalculate() {
@@ -95,12 +91,6 @@ function redrawScreen() {
 				+"<td>" + yearlyData[i].iSAWithdrawl + "</td>"
 				+"<td>" + yearlyData[i].pension + "</td>"
 				+"<td>" + yearlyData[i].pensionWithdrawl + "</td>"
-				/*
-				+"<td>" + "</td>"
-				+"<td>" + "</td>"
-				+"<td>" + "</td>"
-				+"<td>" + "</td>"
-				*/
 				+"</tr>"
 
 		}	
