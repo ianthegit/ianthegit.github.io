@@ -17,7 +17,7 @@ function setupBaseScreen(){
  "<tr><td>Age now</td><td> <input type='number' id='ageNow' onchange='recalculate()'> </td>  								<td>Retirement age</td><td> <input type='number' id='retirementAge' onchange='recalculate()'> </td> </tr>" +
  "<tr><td>ISA now</td><td> <input type='number' id='iSAValueNow' onchange='recalculate()'> </td>  						<td>ISA yearly saving</td><td> <input type='number' id='yearlyISAAddition' onchange='recalculate()'> </td> </tr>" +
  "<tr><td>Pension now</td><td> <input type='number' id='pensionValueNow' onchange='recalculate()'> </td>  			<td>Pension yearly saving</td><td> <input type='number' id='pensionYearlyAddition' onchange='recalculate()'> </td> </tr>" +
- "<tr><td>Expected state pension</td><td> <input type='number' id='expectedStatePension' onchange='recalculate()'> </td> <td>Other taxable income</td><td> <input type='number' id='otherIncome' onchange='recalculate()'> </td>   </tr>" +
+ "<tr><td>Expected state pension</td><td> <input type='number' id='expectedStatePension' onchange='recalculate()'> </td>  </tr>" + //<td>Other taxable income</td><td> <input type='number' id='otherIncome' onchange='recalculate()'> </td>   </tr>" +
  "<tr><td>Desired yearly income</td><td> <input type='number' id='desiredYearlyIncome' onchange='recalculate()'> </td>  	<td></td> </tr>" +
  "<tr><td>Expected growth rate</td><td> <input type='number' id='expectedGrowthRate' onchange='recalculate()'> </td>	<td>Expected inflation rate</td><td> <input type='number' id='expectedInflationRate' onchange='recalculate()'> </td> </tr>" +
  "<tr><td></td>  <td></td> </tr>" +
@@ -47,7 +47,8 @@ function recalculate() {
 	desiredYearlyIncome=document.getElementById('desiredYearlyIncome').value; 
 	expectedGrowthRate=document.getElementById('expectedGrowthRate').value; 
 	expectedInflationRate=document.getElementById('expectedInflationRate').value; 
-	otherIncome=document.getElementById('otherIncome').value; 
+//	otherIncome=document.getElementById('otherIncome').value; 
+	otherIncome=0; 
 
 	startAge=document.getElementById('ageNow').value;
 		rowNumber = 0;
@@ -211,7 +212,7 @@ function setupPresets(preset) {
 		document.getElementById('desiredYearlyIncome').value=40000; 
 		document.getElementById('expectedGrowthRate').value=4; 
 		document.getElementById('expectedInflationRate').value=2.5; 
-		document.getElementById('otherIncome').value=8000; 
+		//document.getElementById('otherIncome').value=8000; 
 		return;
 	}
 	if (preset == 'Reddit') {
@@ -225,7 +226,7 @@ function setupPresets(preset) {
 		document.getElementById('desiredYearlyIncome').value=30000; 
 		document.getElementById('expectedGrowthRate').value=8.5; 
 		document.getElementById('expectedInflationRate').value=2.5; 
-		document.getElementById('otherIncome').value=0; 
+		//document.getElementById('otherIncome').value=0; 
 		return;
 		}
 		
@@ -239,7 +240,7 @@ function setupPresets(preset) {
 	document.getElementById('desiredYearlyIncome').value=30000; 
 	document.getElementById('expectedGrowthRate').value=4; 
 	document.getElementById('expectedInflationRate').value=2.5; 
-	document.getElementById('otherIncome').value=0; 
+	//document.getElementById('otherIncome').value=0; 
 
 }
 
