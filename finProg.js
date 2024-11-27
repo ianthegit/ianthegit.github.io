@@ -226,6 +226,7 @@ function setupPresets(preset) {
 		document.getElementById('desiredYearlyIncome').value=30000; 
 		document.getElementById('expectedGrowthRate').value=8.5; 
 		document.getElementById('expectedInflationRate').value=2.5; 
+		document.getElementById('personalPensionAge').value=57; 
 		//document.getElementById('otherIncome').value=0; 
 		return;
 		}
