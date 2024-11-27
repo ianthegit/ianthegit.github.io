@@ -5,7 +5,6 @@ function createScreen() {
 	setupBaseScreen();
 	setupPresets(preset);	
 	recalculate();
-	redrawScreen();
 }
 
 function setupBaseScreen(){
@@ -13,6 +12,8 @@ function setupBaseScreen(){
  document.write("<div id='setupData'  ><table border='0' ><tr><td><span id='ControlFunctions' >" + 
  " </td></tr>" +
  
+ "<tr><td>Personal Pension drawdown age</td><td> <input type='number' id='personalPensionAge' onchange='recalculate()'> </td>  	<td>State pension age</td><td> <input type='number' id='statePensionAge' onchange='recalculate()'> </td> </tr>" +
+ "<tr><td>Tax-free yearly amount</td><td> <input type='number' id='taxFreeAmount' onchange='recalculate()'> </td>  	 </tr>" +
  "<tr><td>Age now</td><td> <input type='number' id='ageNow' onchange='recalculate()'> </td>  								<td>Retirement age</td><td> <input type='number' id='retirementAge' onchange='recalculate()'> </td> </tr>" +
  "<tr><td>ISA now</td><td> <input type='number' id='iSAValueNow' onchange='recalculate()'> </td>  						<td>ISA yearly saving</td><td> <input type='number' id='yearlyISAAddition' onchange='recalculate()'> </td> </tr>" +
  "<tr><td>Pension now</td><td> <input type='number' id='pensionValueNow' onchange='recalculate()'> </td>  			<td>Pension yearly saving</td><td> <input type='number' id='pensionYearlyAddition' onchange='recalculate()'> </td> </tr>" +
@@ -33,6 +34,9 @@ function setupBaseScreen(){
 function recalculate() {
 
 
+	personalPensionAge=document.getElementById('personalPensionAge').value; 
+	statePensionAge=document.getElementById('statePensionAge').value; 
+	taxFreeAmount=document.getElementById('taxFreeAmount').value; 
 	ageNow=document.getElementById('ageNow').value; 
 	retirementAge=document.getElementById('retirementAge').value; 
 	iSAValueNow=document.getElementById('iSAValueNow').value; 
@@ -50,24 +54,46 @@ function recalculate() {
 		for (var i=startAge ; i<100 ; i++){
 			rowNumber++;
 			if (i==startAge) {
-				yearlyData[rowNumber] = {age:i, ISA:iSAValueNow, pension:pensionValueNow};
+				yearlyData[rowNumber] = {age:i, ISA:iSAValueNow, pension:pensionValueNow, iSAWithdrawl:0, pensionWithdrawl:0, desiredYearlyIncome:desiredYearlyIncome, expectedStatePension:expectedStatePension, usedStatePension:0};
 			}
 			if (i!=startAge) {
-				yearlyData[rowNumber] = {age:i, ISA: recalculateISA( yearlyData[rowNumber-1].ISA, expectedGrowthRate), pension:recalculatePension( yearlyData[rowNumber-1].pension, expectedGrowthRate)};
+				expectedStatePension=calculateExpectedStatePention(expectedInflationRate,yearlyData[rowNumber-1].expectedStatePension );
+				usedStatePension=calculateUsedStatePension(i, statePensionAge, expectedStatePension );
+				desiredYearlyIncome = recalculateDesiredYearyIncome(expectedInflationRate,yearlyData[rowNumber-1].desiredYearlyIncome );
+				iSAWithdrawl = calculateISAWithdrawl(i,desiredYearlyIncome, retirementAge, yearlyData[rowNumber-1].ISA, personalPensionAge, taxFreeAmount);
+				iSAValue = recalculateISA(i,retirementAge, yearlyData[rowNumber-1].ISA, expectedGrowthRate,personalPensionAge, iSAWithdrawl,yearlyISAAddition);
+				pensionWithdrawl = calculatePensionWithdrawl(i, desiredYearlyIncome, retirementAge, yearlyData[rowNumber-1].pension, personalPensionAge, taxFreeAmount, iSAWithdrawl,expectedStatePension, statePensionAge);
+				pensionValue = recalculatePension(i, retirementAge, yearlyData[rowNumber-1].pension, expectedGrowthRate,pensionWithdrawl,pensionYearlyAddition);
+				yearlyData[rowNumber] = {	age:i, 
+											ISA: iSAValue, 
+											pension:pensionValue,
+											iSAWithdrawl:iSAWithdrawl,
+											pensionWithdrawl:pensionWithdrawl,
+											desiredYearlyIncome:desiredYearlyIncome,
+											expectedStatePension:expectedStatePension,
+											usedStatePension:usedStatePension
+										};
 			}	
 	}
+	redrawScreen();
+
 }
 	
 function redrawScreen() {
-	resultsData="<table> <tr> <td> Age</td> <td>ISA</td><td>Pension</td></tr> " 
+	resultsData="<table border='1'> <tr> <td> Age</td> <td>Expected State Pension</td><td>Used State Pension</td><td>Desired Yearly Income</td> <td>ISA</td><td>ISA Withdrawl</td><td>Pension</td><td>PensionWithdrawl</td></tr> " 
 	
 		startAge=document.getElementById('ageNow').value;
 	
 		for (var i=1 ; i<yearlyData.length ; i++){
-				
+			
 				resultsData=resultsData+"<tr><td>" + yearlyData[i].age + "</td>"
+				+"<td>" + yearlyData[i].expectedStatePension + "</td>"
+				+"<td>" + yearlyData[i].usedStatePension + "</td>"
+				+"<td>" + yearlyData[i].desiredYearlyIncome + "</td>"
 				+"<td>" + yearlyData[i].ISA + "</td>"
+				+"<td>" + yearlyData[i].iSAWithdrawl + "</td>"
 				+"<td>" + yearlyData[i].pension + "</td>"
+				+"<td>" + yearlyData[i].pensionWithdrawl + "</td>"
 				/*
 				+"<td>" + "</td>"
 				+"<td>" + "</td>"
@@ -82,12 +108,85 @@ function redrawScreen() {
 	document.getElementById('results').innerHTML=resultsData;
 	
 }
-function recalculatePension(lastYearsPension, expectedGrowthRate) {
-	return parseInt( +lastYearsPension + +(lastYearsPension * (expectedGrowthRate /100) ));
+
+function recalculateDesiredYearyIncome(expectedInflationRate, desiredYearlyIncome ) {
+	return parseInt( +desiredYearlyIncome + +(desiredYearlyIncome * (expectedInflationRate /100) ) );
+	
+}
+function calculateExpectedStatePention(expectedInflationRate, expectedStatePension ) {
+	return parseInt( +expectedStatePension + +(expectedStatePension * (expectedInflationRate /100) ) );
+	
+}
+function calculateUsedStatePension(age, statePensionAge, expectedStatePension ) {
+	if (age < statePensionAge) {
+		return 0; }
+	return expectedStatePension;	
+	
 }
 
-function recalculateISA(lastYearsISA, expectedGrowthRate) {
-	return parseInt( +lastYearsISA + +(lastYearsISA * (expectedGrowthRate /100)) );
+function recalculatePension(age, retirementAge, lastYearsPension, expectedGrowthRate, pensionWithdrawl, pensionYearlyAddition) {
+	if (age < retirementAge) {
+		return parseInt( +lastYearsPension + +(lastYearsPension * (expectedGrowthRate /100) ) - +pensionWithdrawl + +pensionYearlyAddition);
+	}
+	return parseInt( +lastYearsPension + +(lastYearsPension * (expectedGrowthRate /100) ) - +pensionWithdrawl);
+}
+
+function calculateISAWithdrawl(age, desiredYearlyIncome, retirementAge, lastYearsISA, personalPensionAge, taxFreeAmount) {
+	if (age < retirementAge) {
+		return 0;
+	}
+	if (age < personalPensionAge) {
+		if (lastYearsISA > desiredYearlyIncome) {
+			return desiredYearlyIncome;
+		}
+		return lastYearsISA;
+	}
+	if (lastYearsISA> (+desiredYearlyIncome - +taxFreeAmount)) {
+			return parseInt(+desiredYearlyIncome - +taxFreeAmount);
+	}
+	
+	return lastYearsISA;
+
+}
+
+function calculatePensionWithdrawl(age, desiredYearlyIncome, retirementAge, lastYearsPension, personalPensionAge, taxFreeAmount, iSAWithdrawl, expectedStatePension, statePensionAge){
+	if (age < retirementAge) {
+		return 0;
+	}
+	if (age < personalPensionAge) {
+		return 0;
+	}	
+	if (desiredYearlyIncome == iSAWithdrawl ) {
+		return 0;
+	}
+	if (desiredYearlyIncome > parseInt(+iSAWithdrawl + +lastYearsPension) ) {
+		if (age < statePensionAge) {
+			return parseInt(+desiredYearlyIncome - +iSAWithdrawl);
+		}
+		return parseInt(+desiredYearlyIncome - +iSAWithdrawl - +expectedStatePension);
+	}
+	
+	return parseInt(+desiredYearlyIncome - +iSAWithdrawl - +expectedStatePension);
+	
+	
+}
+
+
+function recalculateISA(age, retirementAge, lastYearsISA, expectedGrowthRate, personalPensionAge, iSAWithdrawl,yearlyISAAddition) {
+	if (age < retirementAge) {
+		return parseInt( +lastYearsISA + +(lastYearsISA * (expectedGrowthRate /100)) + +yearlyISAAddition );
+	}
+	if (age < personalPensionAge) {
+		if (lastYearsISA > desiredYearlyIncome) {
+			return parseInt( +lastYearsISA + +(lastYearsISA * (expectedGrowthRate /100)) - +iSAWithdrawl );
+		}
+		return 0;
+	}
+	if (lastYearsISA>= iSAWithdrawl) {
+			return parseInt( +lastYearsISA + +(lastYearsISA * (expectedGrowthRate /100)) - iSAWithdrawl);
+	}
+	
+	return lastYearsISA;
 }
 function setupRow1(startAge, iSAValueNow, pensionValueNow) {
 	return "<tr><td>" + startAge + "</td>"
@@ -96,31 +195,52 @@ function setupRow1(startAge, iSAValueNow, pensionValueNow) {
 
 }
 function setupPresets(preset) {
-	document.getElementById('ageNow').value=56; 
-	document.getElementById('retirementAge').value=57; 
-	document.getElementById('iSAValueNow').value=197000; 
-	document.getElementById('yearlyISAAddition').value=10000; 
-	document.getElementById('pensionValueNow').value=1002500; 
-	document.getElementById('pensionYearlyAddition').value=40000; 
-	document.getElementById('expectedStatePension').value=12500; 
-	document.getElementById('desiredYearlyIncome').value=60000; 
-	document.getElementById('expectedGrowthRate').value=4; 
-	document.getElementById('expectedInflationRate').value=2.5; 
-	document.getElementById('otherIncome').value=8000; 
+	document.getElementById('personalPensionAge').value=55; 
+	document.getElementById('statePensionAge').value=67; 
+	document.getElementById('taxFreeAmount').value=12580; 
+
 	
+	if (preset == 'me') {
+		document.getElementById('ageNow').value=56; 
+		document.getElementById('retirementAge').value=57; 
+		document.getElementById('iSAValueNow').value=197000; 
+		document.getElementById('yearlyISAAddition').value=10000; 
+		document.getElementById('pensionValueNow').value=1002500; 
+		document.getElementById('pensionYearlyAddition').value=40000; 
+		document.getElementById('expectedStatePension').value=12407; 
+		document.getElementById('desiredYearlyIncome').value=40000; 
+		document.getElementById('expectedGrowthRate').value=4; 
+		document.getElementById('expectedInflationRate').value=2.5; 
+		document.getElementById('otherIncome').value=8000; 
+		return;
+	}
 	if (preset == 'Reddit') {
 		document.getElementById('ageNow').value=33; 
 		document.getElementById('retirementAge').value=40; 
-		document.getElementById('iSAValueNow').value=150000; 
+		document.getElementById('iSAValueNow').value=120000; 
 		document.getElementById('yearlyISAAddition').value=20000; 
-		document.getElementById('pensionValueNow').value=250000; 
-		document.getElementById('pensionYearlyAddition').value=40000; 
-		document.getElementById('expectedStatePension').value=12500; 
+		document.getElementById('pensionValueNow').value=80000; 
+		document.getElementById('pensionYearlyAddition').value=60000; 
+		document.getElementById('expectedStatePension').value=12407; 
 		document.getElementById('desiredYearlyIncome').value=30000; 
-		document.getElementById('expectedGrowthRate').value=4; 
+		document.getElementById('expectedGrowthRate').value=8.5; 
 		document.getElementById('expectedInflationRate').value=2.5; 
 		document.getElementById('otherIncome').value=0; 
+		return;
 		}
+		
+	document.getElementById('ageNow').value=56; 
+	document.getElementById('retirementAge').value=57; 
+	document.getElementById('iSAValueNow').value=20000; 
+	document.getElementById('yearlyISAAddition').value=10000; 
+	document.getElementById('pensionValueNow').value=50000; 
+	document.getElementById('pensionYearlyAddition').value=10000; 
+	document.getElementById('expectedStatePension').value=12407; 
+	document.getElementById('desiredYearlyIncome').value=30000; 
+	document.getElementById('expectedGrowthRate').value=4; 
+	document.getElementById('expectedInflationRate').value=2.5; 
+	document.getElementById('otherIncome').value=0; 
+
 }
 
 
