@@ -77,17 +77,17 @@ function recalculate() {
 }
 	
 function redrawScreen() {
-	resultsData="<table border='1'> <tr> <td> Age</td> <td>Expected State Pension</td><td>Used State Pension</td><td>Desired Yearly Income</td> " + 
-	"<td>ISA</td><td>ISA Withdrawl</td><td>Pension</td><td>PensionWithdrawl</td><td>Total withdrawls</td><td>Total Income</td></tr> " 
+	resultsData="<table border='1'> <tr> <td> Age</td><td>Desired Yearly Income</td> <td>Expected State Pension</td><td>Used State Pension</td> " + 
+	"<td>ISA</td><td>ISA Withdrawl</td><td>Personal Pension</td><td>PensionWithdrawl</td><td>Total Withdrawls</td><td>Total Income</td></tr> " 
 	
 		startAge=document.getElementById('ageNow').value;
 	
 		for (var i=1 ; i<yearlyData.length ; i++){
 			
 				resultsData=resultsData+"<tr><td>" + yearlyData[i].age + "</td>"
+				+"<td>" + yearlyData[i].desiredYearlyIncome + "</td>"
 				+"<td>" + yearlyData[i].expectedStatePension + "</td>"
 				+"<td>" + yearlyData[i].usedStatePension + "</td>"
-				+"<td>" + yearlyData[i].desiredYearlyIncome + "</td>"
 				+"<td>" + yearlyData[i].ISA + "</td>"
 				+"<td>" + yearlyData[i].iSAWithdrawl + "</td>"
 				+"<td>" + yearlyData[i].pension + "</td>"
