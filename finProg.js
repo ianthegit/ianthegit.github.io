@@ -14,7 +14,7 @@ function setupBaseScreen(){
  "Basic Details </td></tr>" +
  
  "<tr><td>Minimum personal pension drawdown age</td><td> <input type='number' id='personalPensionAge' onchange='recalculate()'> </td>  	<td>State pension age</td><td> <input type='number' id='statePensionAge' onchange='recalculate()'> </td> </tr>" +
- "<tr><td>Tax-free yearly amount</td><td> <input type='number' id='taxFreeAmount' onchange='recalculate()'> </td>  	 </tr>" +
+ "<tr><td>Tax-free yearly amount</td><td> <input type='number' id='taxFreeAmount' onchange='recalculate()'> </td>  	<td>TMax lump sum</td><td> <input type='number' id='maxLumpSum' onchange='recalculate()'> </td>  </tr>" +
  "<tr><td>Expected growth rate</td><td> <input type='number' id='expectedGrowthRate' onchange='recalculate()'> </td>	<td>Expected inflation rate</td><td> <input type='number' id='expectedInflationRate' onchange='recalculate()'> </td> </tr>" +
  "<tr><td>Your specific details</td></tr>" +
  "<tr><td>Age now</td><td> <input type='number' id='ageNow' onchange='recalculate()'> </td>  								<td>Age you intend to stop working</td><td> <input type='number' id='retirementAge' onchange='recalculate()'> </td> </tr>" +
@@ -35,6 +35,7 @@ function recalculate() {
 	personalPensionAge=document.getElementById('personalPensionAge').value; 
 	statePensionAge=document.getElementById('statePensionAge').value; 
 	taxFreeAmount=document.getElementById('taxFreeAmount').value; 
+	maxLumpSum=document.getElementById('maxLumpSum').value; 
 	ageNow=document.getElementById('ageNow').value; 
 	retirementAge=document.getElementById('retirementAge').value; 
 	iSAValueNow=document.getElementById('iSAValueNow').value; 
@@ -62,7 +63,7 @@ function recalculate() {
 				desiredYearlyIncome = recalculateDesiredYearyIncome(expectedInflationRate,yearlyData[rowNumber-1].desiredYearlyIncome );
 				iSAWithdrawl = calculateISAWithdrawl(i,desiredYearlyIncome, retirementAge, yearlyData[rowNumber-1].ISA, personalPensionAge, taxFreeAmount, otherIncome);
 				iSAValue = recalculateISA(i,retirementAge, yearlyData[rowNumber-1].ISA, expectedGrowthRate,personalPensionAge, iSAWithdrawl,yearlyISAAddition);
-				pensionWithdrawl = calculatePensionWithdrawl(i, desiredYearlyIncome, retirementAge, yearlyData[rowNumber-1].pension, personalPensionAge, iSAWithdrawl,usedStatePension, statePensionAge, otherIncome, taxFreeLumpSum);
+				pensionWithdrawl = calculatePensionWithdrawl(i, desiredYearlyIncome, retirementAge, yearlyData[rowNumber-1].pension, personalPensionAge, iSAWithdrawl,usedStatePension, statePensionAge, otherIncome, taxFreeLumpSum,maxLumpSum);
 				pensionValue = recalculatePension(i, retirementAge, yearlyData[rowNumber-1].pension, expectedGrowthRate,pensionWithdrawl,pensionYearlyAddition);
 				yearlyData[rowNumber] = {	age:i, 
 											ISA: iSAValue, 
@@ -148,13 +149,16 @@ function calculateISAWithdrawl(age, desiredYearlyIncome, retirementAge, lastYear
 
 }
 
-function calculatePensionWithdrawl(age, desiredYearlyIncome, retirementAge, lastYearsPension, personalPensionAge, iSAWithdrawl, expectedStatePension, statePensionAge, otherIncome, taxFreeLumpSum){
+function calculatePensionWithdrawl(age, desiredYearlyIncome, retirementAge, lastYearsPension, personalPensionAge, iSAWithdrawl, expectedStatePension, statePensionAge, otherIncome, taxFreeLumpSum,maxLumpSum){
 
 	taxFreeLumpSumAmount=0;
 
 	if ((age == personalPensionAge  || personalPensionAge < retirementAge && age == retirementAge  ) && lumpSumTaken==0 ) {
 		if (taxFreeLumpSum != '0') {
 			taxFreeLumpSumAmount = parseInt(+lastYearsPension * +(+taxFreeLumpSum/100));
+			if (taxFreeLumpSumAmount > maxLumpSum) {
+				taxFreeLumpSum = maxLumpSum;
+			}
 			lumpSumTaken=1;
 		}
 	}
@@ -209,6 +213,7 @@ function setupPresets(preset) {
 	document.getElementById('personalPensionAge').value=55; 
 	document.getElementById('statePensionAge').value=67; 
 	document.getElementById('taxFreeAmount').value=12580; 
+	document.getElementById('maxLumpSum').value=268275; 
 
 	
 	if (preset == 'me') {
