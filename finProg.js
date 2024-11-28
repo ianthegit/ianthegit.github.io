@@ -227,7 +227,7 @@ function setupPresets(preset) {
 		document.getElementById('desiredYearlyIncome').value=52000; 
 		document.getElementById('expectedGrowthRate').value=4; 
 		document.getElementById('expectedInflationRate').value=2.5; 
-		document.getElementById('otherIncome').value=8000; 
+		document.getElementById('otherIncome').value=0; 
 		return;
 	}
 	if (preset == 'Reddit') {
