@@ -202,7 +202,7 @@ function setupPresets(preset) {
 		document.getElementById('pensionValueNow').value=1100000; 
 		document.getElementById('pensionYearlyAddition').value=60000; 
 		document.getElementById('expectedStatePension').value=12407; 
-		document.getElementById('desiredYearlyIncome').value=50000; 
+		document.getElementById('desiredYearlyIncome').value=52000; 
 		document.getElementById('expectedGrowthRate').value=4; 
 		document.getElementById('expectedInflationRate').value=2.5; 
 		//document.getElementById('otherIncome').value=8000; 
