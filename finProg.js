@@ -153,10 +153,8 @@ function calculatePensionWithdrawl(age, desiredYearlyIncome, retirementAge, last
 	taxFreeLumpSumAmount=0;
 
 	if ((age == personalPensionAge && retirementAge > personalPensionAge || personalPensionAge < retirementAge && age == retirementAge  ) && lumpSumTaken==0 ) {
-		console.log("taxFreeLumpSum = " + taxFreeLumpSum);
 		if (taxFreeLumpSum != '0') {
 			taxFreeLumpSumAmount = parseInt(+lastYearsPension * +(+taxFreeLumpSum/100));
-			console.log("taxFreeLumpSumAmount = " + taxFreeLumpSumAmount);
 			lumpSumTaken=1;
 		}
 	}
