@@ -14,7 +14,7 @@ function setupBaseScreen(){
  "Basic Details </td></tr>" +
  
  "<tr><td>Minimum personal pension drawdown age</td><td> <input type='number' id='personalPensionAge' onchange='recalculate()'> </td>  	<td>State pension age</td><td> <input type='number' id='statePensionAge' onchange='recalculate()'> </td> </tr>" +
- "<tr><td>Tax-free yearly amount</td><td> <input type='number' id='taxFreeAmount' onchange='recalculate()'> </td>  	<td>TMax lump sum</td><td> <input type='number' id='maxLumpSum' onchange='recalculate()'> </td>  </tr>" +
+ "<tr><td>Tax-free yearly amount</td><td> <input type='number' id='taxFreeAmount' onchange='recalculate()'> </td>  	<td>Max lump sum</td><td> <input type='number' id='maxLumpSum' onchange='recalculate()'> </td>  </tr>" +
  "<tr><td>Expected growth rate</td><td> <input type='number' id='expectedGrowthRate' onchange='recalculate()'> </td>	<td>Expected inflation rate</td><td> <input type='number' id='expectedInflationRate' onchange='recalculate()'> </td> </tr>" +
  "<tr><td>Your specific details</td></tr>" +
  "<tr><td>Age now</td><td> <input type='number' id='ageNow' onchange='recalculate()'> </td>  								<td>Age you intend to stop working</td><td> <input type='number' id='retirementAge' onchange='recalculate()'> </td> </tr>" +
@@ -157,7 +157,7 @@ function calculatePensionWithdrawl(age, desiredYearlyIncome, retirementAge, last
 		if (taxFreeLumpSum != '0') {
 			taxFreeLumpSumAmount = parseInt(+lastYearsPension * +(+taxFreeLumpSum/100));
 			if (taxFreeLumpSumAmount > maxLumpSum) {
-				taxFreeLumpSum = maxLumpSum;
+				taxFreeLumpSumAmount = maxLumpSum;
 			}
 			lumpSumTaken=1;
 		}
