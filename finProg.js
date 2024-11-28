@@ -199,10 +199,10 @@ function setupPresets(preset) {
 		document.getElementById('retirementAge').value=57; 
 		document.getElementById('iSAValueNow').value=197000; 
 		document.getElementById('yearlyISAAddition').value=10000; 
-		document.getElementById('pensionValueNow').value=1002500; 
-		document.getElementById('pensionYearlyAddition').value=40000; 
+		document.getElementById('pensionValueNow').value=1100000; 
+		document.getElementById('pensionYearlyAddition').value=60000; 
 		document.getElementById('expectedStatePension').value=12407; 
-		document.getElementById('desiredYearlyIncome').value=40000; 
+		document.getElementById('desiredYearlyIncome').value=50000; 
 		document.getElementById('expectedGrowthRate').value=4; 
 		document.getElementById('expectedInflationRate').value=2.5; 
 		//document.getElementById('otherIncome').value=8000; 
