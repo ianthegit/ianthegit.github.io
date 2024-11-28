@@ -1,3 +1,4 @@
+var lumpSumTaken=0;
 function createScreen() { 
 	yearlyData =[] ; 
 	preset = getURIString('preset'); 
@@ -19,8 +20,8 @@ function setupBaseScreen(){
  "<tr><td>Age now</td><td> <input type='number' id='ageNow' onchange='recalculate()'> </td>  								<td>Age you intend to stop working</td><td> <input type='number' id='retirementAge' onchange='recalculate()'> </td> </tr>" +
  "<tr><td>ISA now</td><td> <input type='number' id='iSAValueNow' onchange='recalculate()'> </td>  						<td>ISA yearly saving</td><td> <input type='number' id='yearlyISAAddition' onchange='recalculate()'> </td> </tr>" +
  "<tr><td>Pension now</td><td> <input type='number' id='pensionValueNow' onchange='recalculate()'> </td>  			<td>Pension yearly saving</td><td> <input type='number' id='pensionYearlyAddition' onchange='recalculate()'> </td> </tr>" +
- "<tr><td>Expected state pension</td><td> <input type='number' id='expectedStatePension' onchange='recalculate()'> </td>  </tr>" + //<td>Other taxable income</td><td> <input type='number' id='otherIncome' onchange='recalculate()'> </td>   </tr>" +
- "<tr><td>Desired yearly income from your estate</td><td> <input type='number' id='desiredYearlyIncome' onchange='recalculate()'> </td>  	<td></td> </tr>" +
+ "<tr><td>Expected state pension</td><td> <input type='number' id='expectedStatePension' onchange='recalculate()'> </td>  <td>Other taxable income</td><td> <input type='number' id='otherIncome' onchange='recalculate()'> </td>   </tr>" +
+ "<tr><td>Desired yearly income from your estate</td><td> <input type='number' id='desiredYearlyIncome' onchange='recalculate()'> </td>  	<td>Tax-free lump Sum " +setupDropdown('taxFreeLumpSumSpan', 'taxFreeLumpSum', 'recalculate' , 0, new Array(0, 25 )) + "%</td> </tr>" +
  "<tr><td></td>  <td></td> </tr>" +
  "</table>" +
  "<span id='results'> </span>"
@@ -29,7 +30,7 @@ function setupBaseScreen(){
 }
 
 function recalculate() {
-
+	lumpSumTaken=0;
 
 	personalPensionAge=document.getElementById('personalPensionAge').value; 
 	statePensionAge=document.getElementById('statePensionAge').value; 
@@ -44,23 +45,24 @@ function recalculate() {
 	desiredYearlyIncome=document.getElementById('desiredYearlyIncome').value; 
 	expectedGrowthRate=document.getElementById('expectedGrowthRate').value; 
 	expectedInflationRate=document.getElementById('expectedInflationRate').value; 
-//	otherIncome=document.getElementById('otherIncome').value; 
-	otherIncome=0; 
+	otherIncome=document.getElementById('otherIncome').value; 
+	taxFreeLumpSum=document.getElementById('taxFreeLumpSum').value; 
 
 	startAge=document.getElementById('ageNow').value;
 		rowNumber = 0;
 		for (var i=startAge ; i<100 ; i++){
 			rowNumber++;
 			if (i==startAge) {
-				yearlyData[rowNumber] = {age:i, ISA:iSAValueNow, pension:pensionValueNow, iSAWithdrawl:0, pensionWithdrawl:0, desiredYearlyIncome:desiredYearlyIncome, expectedStatePension:expectedStatePension, usedStatePension:0};
+				yearlyData[rowNumber] = {age:i, ISA:iSAValueNow, pension:pensionValueNow, iSAWithdrawl:0, pensionWithdrawl:0, desiredYearlyIncome:desiredYearlyIncome, expectedStatePension:expectedStatePension, usedStatePension:0, otherIncome:otherIncome};
 			}
 			if (i!=startAge) {
-				expectedStatePension=calculateExpectedStatePention(expectedInflationRate,yearlyData[rowNumber-1].expectedStatePension );
+				otherIncome=calculateOtherIncome(expectedInflationRate,yearlyData[rowNumber-1].otherIncome );
+				expectedStatePension=calculateExpectedStatePension(expectedInflationRate,yearlyData[rowNumber-1].expectedStatePension );
 				usedStatePension=calculateUsedStatePension(i, statePensionAge, expectedStatePension );
 				desiredYearlyIncome = recalculateDesiredYearyIncome(expectedInflationRate,yearlyData[rowNumber-1].desiredYearlyIncome );
-				iSAWithdrawl = calculateISAWithdrawl(i,desiredYearlyIncome, retirementAge, yearlyData[rowNumber-1].ISA, personalPensionAge, taxFreeAmount);
+				iSAWithdrawl = calculateISAWithdrawl(i,desiredYearlyIncome, retirementAge, yearlyData[rowNumber-1].ISA, personalPensionAge, taxFreeAmount, otherIncome);
 				iSAValue = recalculateISA(i,retirementAge, yearlyData[rowNumber-1].ISA, expectedGrowthRate,personalPensionAge, iSAWithdrawl,yearlyISAAddition);
-				pensionWithdrawl = calculatePensionWithdrawl(i, desiredYearlyIncome, retirementAge, yearlyData[rowNumber-1].pension, personalPensionAge, taxFreeAmount, iSAWithdrawl,usedStatePension, statePensionAge);
+				pensionWithdrawl = calculatePensionWithdrawl(i, desiredYearlyIncome, retirementAge, yearlyData[rowNumber-1].pension, personalPensionAge, iSAWithdrawl,usedStatePension, statePensionAge, otherIncome, taxFreeLumpSum);
 				pensionValue = recalculatePension(i, retirementAge, yearlyData[rowNumber-1].pension, expectedGrowthRate,pensionWithdrawl,pensionYearlyAddition);
 				yearlyData[rowNumber] = {	age:i, 
 											ISA: iSAValue, 
@@ -69,7 +71,8 @@ function recalculate() {
 											pensionWithdrawl:pensionWithdrawl,
 											desiredYearlyIncome:desiredYearlyIncome,
 											expectedStatePension:expectedStatePension,
-											usedStatePension:usedStatePension
+											usedStatePension:usedStatePension,
+											otherIncome:otherIncome
 										};
 			}	
 	}
@@ -78,7 +81,7 @@ function recalculate() {
 }
 	
 function redrawScreen() {
-	resultsData="<table border='1'> <tr> <td> Age</td><td>Desired Yearly Income</td> <td>Expected State Pension</td><td>Used State Pension</td> " + 
+	resultsData="<table border='1'> <tr> <td> Age</td><td>Desired Yearly Income</td> <td>Expected State Pension</td><td>Used State Pension</td> <td>Other Income</td> " + 
 	"<td>ISA</td><td>ISA Withdrawl</td><td>Personal Pension</td><td>PensionWithdrawl</td><td>Total Withdrawls</td><td>Total Income</td></tr> " 
 	
 		startAge=document.getElementById('ageNow').value;
@@ -89,12 +92,13 @@ function redrawScreen() {
 				+"<td align='right'>" + parseFloat(yearlyData[i].desiredYearlyIncome).toLocaleString() + "</td>"
 				+"<td align='right'>" + parseFloat(yearlyData[i].expectedStatePension).toLocaleString() + "</td>"
 				+"<td align='right'>" + parseFloat(yearlyData[i].usedStatePension).toLocaleString() + "</td>"
+				+"<td align='right'>" + parseFloat(yearlyData[i].otherIncome).toLocaleString() + "</td>"
 				+"<td align='right'>" + parseFloat(yearlyData[i].ISA).toLocaleString() + "</td>"
 				+"<td align='right'>" + parseFloat(yearlyData[i].iSAWithdrawl).toLocaleString() + "</td>"
 				+"<td align='right'>" + parseFloat(yearlyData[i].pension).toLocaleString() + "</td>"
 				+"<td align='right'>" + parseFloat(yearlyData[i].pensionWithdrawl).toLocaleString() + "</td>"
 				+"<td align='right'>" + parseFloat(parseInt(+yearlyData[i].iSAWithdrawl + +yearlyData[i].pensionWithdrawl)).toLocaleString() + "</td>"
-				+"<td align='right'>" + parseFloat(parseInt(+yearlyData[i].iSAWithdrawl + +yearlyData[i].pensionWithdrawl + +yearlyData[i].usedStatePension )).toLocaleString() + "</td>"
+				+"<td align='right'>" + parseFloat(parseInt(+yearlyData[i].iSAWithdrawl + +yearlyData[i].pensionWithdrawl + +yearlyData[i].usedStatePension + +yearlyData[i].otherIncome )).toLocaleString() + "</td>"
 				+"</tr>"
 
 		}	
@@ -106,17 +110,17 @@ function redrawScreen() {
 
 function recalculateDesiredYearyIncome(expectedInflationRate, desiredYearlyIncome ) {
 	return parseInt( +desiredYearlyIncome + +(desiredYearlyIncome * (expectedInflationRate /100) ) );
-	
 }
-function calculateExpectedStatePention(expectedInflationRate, expectedStatePension ) {
+function calculateExpectedStatePension(expectedInflationRate, expectedStatePension ) {
 	return parseInt( +expectedStatePension + +(expectedStatePension * (expectedInflationRate /100) ) );
-	
 }
 function calculateUsedStatePension(age, statePensionAge, expectedStatePension ) {
 	if (age < statePensionAge) {
 		return 0; }
 	return expectedStatePension;	
-	
+}
+function calculateOtherIncome(expectedInflationRate, otherIncome ) {
+	return parseInt( +otherIncome + +(otherIncome * (expectedInflationRate /100) ) );
 }
 
 function recalculatePension(age, retirementAge, lastYearsPension, expectedGrowthRate, pensionWithdrawl, pensionYearlyAddition) {
@@ -126,7 +130,7 @@ function recalculatePension(age, retirementAge, lastYearsPension, expectedGrowth
 	return parseInt( +lastYearsPension + +(lastYearsPension * (expectedGrowthRate /100) ) - +pensionWithdrawl);
 }
 
-function calculateISAWithdrawl(age, desiredYearlyIncome, retirementAge, lastYearsISA, personalPensionAge, taxFreeAmount) {
+function calculateISAWithdrawl(age, desiredYearlyIncome, retirementAge, lastYearsISA, personalPensionAge, taxFreeAmount, otherIncome) {
 	if (age < retirementAge) {
 		return 0;
 	}
@@ -136,33 +140,47 @@ function calculateISAWithdrawl(age, desiredYearlyIncome, retirementAge, lastYear
 		}
 		return lastYearsISA;
 	}
-	if (lastYearsISA> (+desiredYearlyIncome - +taxFreeAmount)) {
-			return parseInt(+desiredYearlyIncome - +taxFreeAmount);
+	if (lastYearsISA> (+desiredYearlyIncome - +taxFreeAmount -+otherIncome)) {
+			return parseInt(+desiredYearlyIncome - +taxFreeAmount - +otherIncome);
 	}
 	
 	return lastYearsISA;
 
 }
 
-function calculatePensionWithdrawl(age, desiredYearlyIncome, retirementAge, lastYearsPension, personalPensionAge, taxFreeAmount, iSAWithdrawl, expectedStatePension, statePensionAge){
+function calculatePensionWithdrawl(age, desiredYearlyIncome, retirementAge, lastYearsPension, personalPensionAge, iSAWithdrawl, expectedStatePension, statePensionAge, otherIncome, taxFreeLumpSum){
+
+	taxFreeLumpSumAmount=0;
+
+	if ((age == personalPensionAge && retirementAge > personalPensionAge || personalPensionAge < retirementAge && age == retirementAge  ) && lumpSumTaken==0 ) {
+		console.log("taxFreeLumpSum = " + taxFreeLumpSum);
+		if (taxFreeLumpSum != '0') {
+			taxFreeLumpSumAmount = parseInt(+lastYearsPension * +(+taxFreeLumpSum/100));
+			console.log("taxFreeLumpSumAmount = " + taxFreeLumpSumAmount);
+			lumpSumTaken=1;
+		}
+	}
+
 	if (age < retirementAge) {
-		return 0;
+		return taxFreeLumpSumAmount;
 	}
 	if (age < personalPensionAge) {
 		return 0;
 	}	
+
+
 	if (desiredYearlyIncome == iSAWithdrawl ) {
-		return 0;
+		return taxFreeLumpSumAmount;
 	}
-	if (desiredYearlyIncome > parseInt(+iSAWithdrawl + +lastYearsPension) ) {
+
+	if (desiredYearlyIncome > parseInt(+iSAWithdrawl + +lastYearsPension + +otherIncome) ) {
 		if (age < statePensionAge) {
-			return parseInt(+desiredYearlyIncome - +iSAWithdrawl);
+			return parseInt(+desiredYearlyIncome - +iSAWithdrawl - +otherIncome + +taxFreeLumpSumAmount);
 		}
-		return parseInt(+desiredYearlyIncome - +iSAWithdrawl - +expectedStatePension);
+		return parseInt(+desiredYearlyIncome - +iSAWithdrawl - +expectedStatePension - +otherIncome + +taxFreeLumpSumAmount);
 	}
 	
-	return parseInt(+desiredYearlyIncome - +iSAWithdrawl - +expectedStatePension);
-	
+	return parseInt(+desiredYearlyIncome - +iSAWithdrawl - +expectedStatePension - +otherIncome + +taxFreeLumpSumAmount);
 	
 }
 
@@ -206,7 +224,7 @@ function setupPresets(preset) {
 		document.getElementById('desiredYearlyIncome').value=52000; 
 		document.getElementById('expectedGrowthRate').value=4; 
 		document.getElementById('expectedInflationRate').value=2.5; 
-		//document.getElementById('otherIncome').value=8000; 
+		document.getElementById('otherIncome').value=8000; 
 		return;
 	}
 	if (preset == 'Reddit') {
@@ -221,7 +239,7 @@ function setupPresets(preset) {
 		document.getElementById('expectedGrowthRate').value=8.5; 
 		document.getElementById('expectedInflationRate').value=2.5; 
 		document.getElementById('personalPensionAge').value=57; 
-		//document.getElementById('otherIncome').value=0; 
+		document.getElementById('otherIncome').value=0; 
 		return;
 		}
 		
@@ -235,10 +253,27 @@ function setupPresets(preset) {
 	document.getElementById('desiredYearlyIncome').value=30000; 
 	document.getElementById('expectedGrowthRate').value=4; 
 	document.getElementById('expectedInflationRate').value=2.5; 
-	//document.getElementById('otherIncome').value=0; 
+	document.getElementById('otherIncome').value=0; 
 
 }
 
 
 function getURIString(paramName) { const urlParams = new URLSearchParams(window.location.search);
  if (urlParams.has(paramName)) {return urlParams.get(paramName);}; return null;}
+ 
+ function setupDropdown(spanName, id, functionName, defaultSelected, options){
+	  var retVal = "";
+	  retVal = retVal + '<span id="' + spanName + '"> <select name="' + id + '" id="' + id + '" onchange="'+ functionName + '();" >';
+	  lapIdCount =options.length;
+	  for (var i=0 ; i<lapIdCount ; i++){
+	   if (options[i]=='-') {
+	                retVal = retVal + '<optgroup label="----------"></optgroup>';   
+	            } else {
+	          retVal = retVal + '<option value="' + options[i] + '"' ;
+	       if (i==defaultSelected){
+	        retVal = retVal+' selected' ;	       }
+	       retVal = retVal + '>' + options[i] + '</option>';
+	    }
+	  }
+	  retVal = retVal + '</select></span>';
+	  return retVal; }
