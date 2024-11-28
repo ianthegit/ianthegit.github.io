@@ -10,16 +10,17 @@ function createScreen() {
 function setupBaseScreen(){
 	
  document.write("<div id='setupData'  ><table border='0' ><tr><td><span id='ControlFunctions' >" + 
- " </td></tr>" +
+ "Basic Details</td></tr>" +
  
  "<tr><td>Personal pension drawdown age</td><td> <input type='number' id='personalPensionAge' onchange='recalculate()'> </td>  	<td>State pension age</td><td> <input type='number' id='statePensionAge' onchange='recalculate()'> </td> </tr>" +
  "<tr><td>Tax-free yearly amount</td><td> <input type='number' id='taxFreeAmount' onchange='recalculate()'> </td>  	 </tr>" +
- "<tr><td>Age now</td><td> <input type='number' id='ageNow' onchange='recalculate()'> </td>  								<td>Retirement age</td><td> <input type='number' id='retirementAge' onchange='recalculate()'> </td> </tr>" +
+ "<tr><td>Expected growth rate</td><td> <input type='number' id='expectedGrowthRate' onchange='recalculate()'> </td>	<td>Expected inflation rate</td><td> <input type='number' id='expectedInflationRate' onchange='recalculate()'> </td> </tr>" +
+ "<tr><td>Your specific details</td></tr>" +
+ "<tr><td>Age now</td><td> <input type='number' id='ageNow' onchange='recalculate()'> </td>  								<td>Age you intend to stop working</td><td> <input type='number' id='retirementAge' onchange='recalculate()'> </td> </tr>" +
  "<tr><td>ISA now</td><td> <input type='number' id='iSAValueNow' onchange='recalculate()'> </td>  						<td>ISA yearly saving</td><td> <input type='number' id='yearlyISAAddition' onchange='recalculate()'> </td> </tr>" +
  "<tr><td>Pension now</td><td> <input type='number' id='pensionValueNow' onchange='recalculate()'> </td>  			<td>Pension yearly saving</td><td> <input type='number' id='pensionYearlyAddition' onchange='recalculate()'> </td> </tr>" +
  "<tr><td>Expected state pension</td><td> <input type='number' id='expectedStatePension' onchange='recalculate()'> </td>  </tr>" + //<td>Other taxable income</td><td> <input type='number' id='otherIncome' onchange='recalculate()'> </td>   </tr>" +
- "<tr><td>Desired yearly income</td><td> <input type='number' id='desiredYearlyIncome' onchange='recalculate()'> </td>  	<td></td> </tr>" +
- "<tr><td>Expected growth rate</td><td> <input type='number' id='expectedGrowthRate' onchange='recalculate()'> </td>	<td>Expected inflation rate</td><td> <input type='number' id='expectedInflationRate' onchange='recalculate()'> </td> </tr>" +
+ "<tr><td>Desired yearly income from your estate</td><td> <input type='number' id='desiredYearlyIncome' onchange='recalculate()'> </td>  	<td></td> </tr>" +
  "<tr><td></td>  <td></td> </tr>" +
  "</table>" +
  "<span id='results'> </span>"
