@@ -12,7 +12,7 @@ function setupBaseScreen(){
  document.write("<div id='setupData'  ><table border='0' ><tr><td><span id='ControlFunctions' >" + 
  " </td></tr>" +
  
- "<tr><td>Personal Pension drawdown age</td><td> <input type='number' id='personalPensionAge' onchange='recalculate()'> </td>  	<td>State pension age</td><td> <input type='number' id='statePensionAge' onchange='recalculate()'> </td> </tr>" +
+ "<tr><td>Personal pension drawdown age</td><td> <input type='number' id='personalPensionAge' onchange='recalculate()'> </td>  	<td>State pension age</td><td> <input type='number' id='statePensionAge' onchange='recalculate()'> </td> </tr>" +
  "<tr><td>Tax-free yearly amount</td><td> <input type='number' id='taxFreeAmount' onchange='recalculate()'> </td>  	 </tr>" +
  "<tr><td>Age now</td><td> <input type='number' id='ageNow' onchange='recalculate()'> </td>  								<td>Retirement age</td><td> <input type='number' id='retirementAge' onchange='recalculate()'> </td> </tr>" +
  "<tr><td>ISA now</td><td> <input type='number' id='iSAValueNow' onchange='recalculate()'> </td>  						<td>ISA yearly saving</td><td> <input type='number' id='yearlyISAAddition' onchange='recalculate()'> </td> </tr>" +
