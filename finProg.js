@@ -83,17 +83,17 @@ function redrawScreen() {
 		startAge=document.getElementById('ageNow').value;
 	
 		for (var i=1 ; i<yearlyData.length ; i++){
-			
+			//parseFloat(doubleNumber).toLocaleString()
 				resultsData=resultsData+"<tr><td>" + yearlyData[i].age + "</td>"
-				+"<td>" + yearlyData[i].desiredYearlyIncome + "</td>"
-				+"<td>" + yearlyData[i].expectedStatePension + "</td>"
-				+"<td>" + yearlyData[i].usedStatePension + "</td>"
-				+"<td>" + yearlyData[i].ISA + "</td>"
-				+"<td>" + yearlyData[i].iSAWithdrawl + "</td>"
-				+"<td>" + yearlyData[i].pension + "</td>"
-				+"<td>" + yearlyData[i].pensionWithdrawl + "</td>"
-				+"<td>" + parseInt(+yearlyData[i].iSAWithdrawl + +yearlyData[i].pensionWithdrawl) + "</td>"
-				+"<td>" + parseInt(+yearlyData[i].iSAWithdrawl + +yearlyData[i].pensionWithdrawl + +yearlyData[i].usedStatePension ) + "</td>"
+				+"<td align='right'>" + parseFloat(yearlyData[i].desiredYearlyIncome).toLocaleString() + "</td>"
+				+"<td align='right'>" + parseFloat(yearlyData[i].expectedStatePension).toLocaleString() + "</td>"
+				+"<td align='right'>" + parseFloat(yearlyData[i].usedStatePension).toLocaleString() + "</td>"
+				+"<td align='right'>" + parseFloat(yearlyData[i].ISA).toLocaleString() + "</td>"
+				+"<td align='right'>" + parseFloat(yearlyData[i].iSAWithdrawl).toLocaleString() + "</td>"
+				+"<td align='right'>" + parseFloat(yearlyData[i].pension).toLocaleString() + "</td>"
+				+"<td align='right'>" + parseFloat(yearlyData[i].pensionWithdrawl).toLocaleString() + "</td>"
+				+"<td align='right'>" + parseFloat(parseInt(+yearlyData[i].iSAWithdrawl + +yearlyData[i].pensionWithdrawl)).toLocaleString() + "</td>"
+				+"<td align='right'>" + parseFloat(parseInt(+yearlyData[i].iSAWithdrawl + +yearlyData[i].pensionWithdrawl + +yearlyData[i].usedStatePension )).toLocaleString() + "</td>"
 				+"</tr>"
 
 		}	
