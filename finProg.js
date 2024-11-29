@@ -313,7 +313,7 @@ function getURIString(paramName) { const urlParams = new URLSearchParams(window.
  if (urlParams.has(paramName)) {return urlParams.get(paramName);}; return null;}
  
  function createURLAndCopyToClipboard(){
-	 newURL = window.location.hostname + 'finProg.html?' ;
+	 newURL = window.location.hostname + '/finProg.html?' ;
 	 
 	 newURL = newURL.concat(' personalPensionAge=' + document.getElementById('personalPensionAge').value + ',' );
 	 newURL = newURL.concat( ' statePensionAge=' + document.getElementById('statePensionAge').value + ',' );
