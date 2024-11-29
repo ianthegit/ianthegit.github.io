@@ -10,8 +10,8 @@ function createScreen() {
 
 function setupBaseScreen(){
 	
- document.write("(WARNING - these calculations DO NOT take any income tax due on income into account) </BR> <div id='setupData'  ><table border='0' ><tr><td><span id='ControlFunctions' >" + 
- "Basic Details </td> <td><input type='button' value='Copy URL to Clipboard' title='Copy URL to Clipboard' id='C2C' onclick='createURLAndCopyToClipboard()' /></td></tr>" +
+ document.write("(WARNING - these calculations DO NOT take any income tax due on income into account) <td><input type='button' value='Copy URL to Clipboard' title='Copy URL to Clipboard' id='C2C' onclick='createURLAndCopyToClipboard()' /></td><</BR> <div id='setupData'  ><table border='0' ><tr><td><span id='ControlFunctions' >" + 
+ "Basic Details </td> /tr>" +
  
  "<tr><td>Minimum personal pension drawdown age</td><td> <input type='number' id='personalPensionAge' onchange='recalculate()'> </td>  	<td>State pension age</td><td> <input type='number' id='statePensionAge' onchange='recalculate()'> </td> </tr>" +
  "<tr><td>Tax-free yearly amount</td><td> <input type='number' id='taxFreeAmount' onchange='recalculate()'> </td>  	<td>Max lump sum</td><td> <input type='number' id='maxLumpSum' onchange='recalculate()'> </td>  </tr>" +
