@@ -306,6 +306,8 @@ function setupPresets(preset) {
 	otherIncome = getURIString('otherIncome'); 
 	if (otherIncome) { document.getElementById('otherIncome').value=otherIncome}
 
+	taxFreeLumpSum = getURIString('taxFreeLumpSum'); 
+	if (taxFreeLumpSum) { document.getElementById('taxFreeLumpSum').value=otherIncome}
 
 }
 
@@ -331,6 +333,7 @@ function getURIString(paramName) { const urlParams = new URLSearchParams(window.
 	 newURL = newURL.concat( 'expectedGrowthRate=' + document.getElementById('expectedGrowthRate').value + '&' );
 	 newURL = newURL.concat( 'expectedInflationRate=' + document.getElementById('expectedInflationRate').value + '&' );
 	 newURL = newURL.concat( 'otherIncome=' + document.getElementById('otherIncome').value + '&' );
+	 newURL = newURL.concat( 'taxFreeLumpSum=' + document.getElementById('taxFreeLumpSum').value + '&') ;
 //	 + ' =' + document.getElementById('').value + ','
 	 ;
 	
