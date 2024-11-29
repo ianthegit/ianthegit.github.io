@@ -22,7 +22,7 @@ function setupBaseScreen(){
  "<tr><td>ISA now</td><td> <input type='number' id='iSAValueNow' onchange='recalculate()'> </td>  						<td>ISA yearly saving</td><td> <input type='number' id='yearlyISAAddition' onchange='recalculate()'> </td> </tr>" +
  "<tr><td>Pension now</td><td> <input type='number' id='pensionValueNow' onchange='recalculate()'> </td>  			<td>Pension yearly saving</td><td> <input type='number' id='pensionYearlyAddition' onchange='recalculate()'> </td> </tr>" +
  "<tr><td>Expected state pension</td><td> <input type='number' id='expectedStatePension' onchange='recalculate()'> </td>  <td>Other taxable income</td><td> <input type='number' id='otherIncome' onchange='recalculate()'> </td>   </tr>" +
- "<tr><td>Desired yearly income from your estate</td><td> <input type='number' id='desiredYearlyIncome' onchange='recalculate()'> </td>  	<td>Tax-free lump Sum " +setupDropdown('taxFreeLumpSumSpan', 'taxFreeLumpSum', 'recalculate' , 0, new Array(0, 25 )) + "%</td> </tr>" +
+ "<tr><td>Desired yearly income from your estate</td><td> <input type='number' id='desiredYearlyIncome' onchange='recalculate()'> </td>  	<td>Tax-free lump Sum</td><td> " +setupDropdown('taxFreeLumpSumSpan', 'taxFreeLumpSum', 'recalculate' , 0, new Array(0, 25 )) + "%</td> </tr>" +
  "<tr><td></td>  <td></td> </tr>" +
  "</table>" +
  "<span id='results'> </span>"
