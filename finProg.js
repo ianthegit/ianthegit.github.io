@@ -10,7 +10,7 @@ function createScreen() {
 
 function setupBaseScreen(){
 	
- document.write("(WARNING - these calculations DO NOT take any income tax due on income into account) <input type='button' title='This will create a URL with your own setup values you can use to share your plan securely.  The data is never stored by us.' value='Copy URL to Clipboard' id='C2C' onclick='createURLAndCopyToClipboard()' /> </BR> " +
+ document.write("(WARNING - these calculations DO NOT take any income tax due on income into account) <input type='button' title='This will create a URL with your own setup values you can use to share your plan securely.  The data is never stored by us.' value='Copy shareable URL to Clipboard' id='C2C' onclick='createURLAndCopyToClipboard()' /> </BR> " +
  "<table border='0' ><tr><td><span id='ControlFunctions' >" + 
  "Basic Details </td> </tr>" +
  
