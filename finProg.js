@@ -315,21 +315,21 @@ function getURIString(paramName) { const urlParams = new URLSearchParams(window.
  function createURLAndCopyToClipboard(){
 	 newURL = window.location.hostname + '/finProg.html?' ;
 	 
-	 newURL = newURL.concat(' personalPensionAge=' + document.getElementById('personalPensionAge').value + ',' );
-	 newURL = newURL.concat( ' statePensionAge=' + document.getElementById('statePensionAge').value + ',' );
-	 newURL = newURL.concat(' taxFreeAmount=' + document.getElementById('taxFreeAmount').value + ',' );
-	 newURL = newURL.concat( ' maxLumpSum=' + document.getElementById('maxLumpSum').value + ',' );
-	 newURL = newURL.concat(' ageNow=' + document.getElementById('ageNow').value + ',' );
-	 newURL = newURL.concat( ' retirementAge=' + document.getElementById('retirementAge').value + ',' );
-	 newURL = newURL.concat( ' iSAValueNow=' + document.getElementById('iSAValueNow').value + ',' );
-	 newURL = newURL.concat( ' yearlyISAAddition=' + document.getElementById('yearlyISAAddition').value + ',' );
-	 newURL = newURL.concat( ' pensionValueNow=' + document.getElementById('pensionValueNow').value + ',' );
-	 newURL = newURL.concat( ' pensionYearlyAddition=' + document.getElementById('pensionYearlyAddition').value + ',' );
-	 newURL = newURL.concat( ' expectedStatePension=' + document.getElementById('expectedStatePension').value + ',' );
-	 newURL = newURL.concat( ' desiredYearlyIncome=' + document.getElementById('desiredYearlyIncome').value + ',' );
-	 newURL = newURL.concat( ' expectedGrowthRate=' + document.getElementById('expectedGrowthRate').value + ',' );
-	 newURL = newURL.concat( ' expectedInflationRate=' + document.getElementById('expectedInflationRate').value + ',' );
-	 newURL = newURL.concat( ' otherIncome=' + document.getElementById('otherIncome').value + ',' );
+	 newURL = newURL.concat('personalPensionAge=' + document.getElementById('personalPensionAge').value + ',' );
+	 newURL = newURL.concat( 'statePensionAge=' + document.getElementById('statePensionAge').value + ',' );
+	 newURL = newURL.concat('taxFreeAmount=' + document.getElementById('taxFreeAmount').value + ',' );
+	 newURL = newURL.concat( 'maxLumpSum=' + document.getElementById('maxLumpSum').value + ',' );
+	 newURL = newURL.concat('ageNow=' + document.getElementById('ageNow').value + ',' );
+	 newURL = newURL.concat( 'retirementAge=' + document.getElementById('retirementAge').value + ',' );
+	 newURL = newURL.concat( 'iSAValueNow=' + document.getElementById('iSAValueNow').value + ',' );
+	 newURL = newURL.concat( 'yearlyISAAddition=' + document.getElementById('yearlyISAAddition').value + ',' );
+	 newURL = newURL.concat( 'pensionValueNow=' + document.getElementById('pensionValueNow').value + ',' );
+	 newURL = newURL.concat( 'pensionYearlyAddition=' + document.getElementById('pensionYearlyAddition').value + ',' );
+	 newURL = newURL.concat( 'expectedStatePension=' + document.getElementById('expectedStatePension').value + ',' );
+	 newURL = newURL.concat( 'desiredYearlyIncome=' + document.getElementById('desiredYearlyIncome').value + ',' );
+	 newURL = newURL.concat( 'expectedGrowthRate=' + document.getElementById('expectedGrowthRate').value + ',' );
+	 newURL = newURL.concat( 'expectedInflationRate=' + document.getElementById('expectedInflationRate').value + ',' );
+	 newURL = newURL.concat( 'otherIncome=' + document.getElementById('otherIncome').value + ',' );
 //	 + ' =' + document.getElementById('').value + ','
 	 ;
 	
