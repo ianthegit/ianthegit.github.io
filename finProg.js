@@ -11,7 +11,7 @@ function createScreen() {
 function setupBaseScreen(){
 	
  document.write("(WARNING - these calculations DO NOT take any income tax due on income into account) </BR> <div id='setupData'  ><table border='0' ><tr><td><span id='ControlFunctions' >" + 
- "Basic Details </td></tr>" +
+ "Basic Details </td> <td><input type='button' value='Copy URL to Clipboard' title='Copy URL to Clipboard' id='C2C' onclick='createURLAndCopyToClipboard()' /></td></tr>" +
  
  "<tr><td>Minimum personal pension drawdown age</td><td> <input type='number' id='personalPensionAge' onchange='recalculate()'> </td>  	<td>State pension age</td><td> <input type='number' id='statePensionAge' onchange='recalculate()'> </td> </tr>" +
  "<tr><td>Tax-free yearly amount</td><td> <input type='number' id='taxFreeAmount' onchange='recalculate()'> </td>  	<td>Max lump sum</td><td> <input type='number' id='maxLumpSum' onchange='recalculate()'> </td>  </tr>" +
@@ -258,11 +258,84 @@ function setupPresets(preset) {
 	document.getElementById('expectedInflationRate').value=2.5; 
 	document.getElementById('otherIncome').value=0; 
 
+		
+		
+	uriValue = getURIString('personalPensionAge'); 
+	if (uriValue) { document.getElementById('personalPensionAge').value=  uriValue}
+
+	uriValue = getURIString('statePensionAge'); 
+	if (uriValue) { document.getElementById('statePensionAge').value=  uriValue}
+
+	uriValue = getURIString('taxFreeAmount'); 
+	if (uriValue) { document.getElementById('taxFreeAmount').value=  uriValue}
+
+	uriValue = getURIString('maxLumpSum'); 
+	if (uriValue) { document.getElementById('maxLumpSum').value=  uriValue}
+
+	uriValue = getURIString('ageNow'); 
+	if (uriValue) { document.getElementById('ageNow').value=  uriValue}
+
+	uriValue = getURIString('retirementAge'); 
+	if (uriValue) { document.getElementById('retirementAge').value=  uriValue}
+
+	uriValue = getURIString('iSAValueNow'); 
+	if (uriValue) { document.getElementById('iSAValueNow').value=  uriValue}
+
+	uriValue = getURIString('yearlyISAAddition'); 
+	if (uriValue) { document.getElementById('yearlyISAAddition').value=  uriValue}
+
+	uriValue = getURIString('pensionValueNow'); 
+	if (uriValue) { document.getElementById('pensionValueNow').value=  uriValue}
+
+	uriValue = getURIString('pensionYearlyAddition'); 
+	if (uriValue) { document.getElementById('pensionYearlyAddition').value=  uriValue}
+
+	uriValue = getURIString('expectedStatePension'); 
+	if (uriValue) { document.getElementById('expectedStatePension').value=  uriValue}
+
+	uriValue = getURIString('desiredYearlyIncome'); 
+	if (uriValue) { document.getElementById('desiredYearlyIncome').value=  uriValue}
+
+	uriValue = getURIString('expectedGrowthRate'); 
+	if (uriValue) { document.getElementById('expectedGrowthRate').value=  uriValue}
+
+	uriValue = getURIString('expectedInflationRate'); 
+	if (uriValue) { document.getElementById('expectedInflationRate').value=  uriValue}
+
+	uriValue = getURIString('otherIncome'); 
+	if (uriValue) { document.getElementById('otherIncome').value=  uriValue}
+
+
 }
 
 
 function getURIString(paramName) { const urlParams = new URLSearchParams(window.location.search);
  if (urlParams.has(paramName)) {return urlParams.get(paramName);}; return null;}
+ 
+ function createURLAndCopyToClipboard(){
+	 newURL = window.location.hostname + 'finProg.html?' ;
+	 
+	 newURL = newURL.concat(' personalPensionAge=' + document.getElementById('personalPensionAge').value + ',' );
+	 newURL = newURL.concat( ' statePensionAge=' + document.getElementById('statePensionAge').value + ',' );
+	 newURL = newURL.concat(' taxFreeAmount=' + document.getElementById('taxFreeAmount').value + ',' );
+	 newURL = newURL.concat( ' maxLumpSum=' + document.getElementById('maxLumpSum').value + ',' );
+	 newURL = newURL.concat(' ageNow=' + document.getElementById('ageNow').value + ',' );
+	 newURL = newURL.concat( ' retirementAge=' + document.getElementById('retirementAge').value + ',' );
+	 newURL = newURL.concat( ' iSAValueNow=' + document.getElementById('iSAValueNow').value + ',' );
+	 newURL = newURL.concat( ' yearlyISAAddition=' + document.getElementById('yearlyISAAddition').value + ',' );
+	 newURL = newURL.concat( ' pensionValueNow=' + document.getElementById('pensionValueNow').value + ',' );
+	 newURL = newURL.concat( ' pensionYearlyAddition=' + document.getElementById('pensionYearlyAddition').value + ',' );
+	 newURL = newURL.concat( ' expectedStatePension=' + document.getElementById('expectedStatePension').value + ',' );
+	 newURL = newURL.concat( ' desiredYearlyIncome=' + document.getElementById('desiredYearlyIncome').value + ',' );
+	 newURL = newURL.concat( ' expectedGrowthRate=' + document.getElementById('expectedGrowthRate').value + ',' );
+	 newURL = newURL.concat( ' expectedInflationRate=' + document.getElementById('expectedInflationRate').value + ',' );
+	 newURL = newURL.concat( ' otherIncome=' + document.getElementById('otherIncome').value + ',' );
+//	 + ' =' + document.getElementById('').value + ','
+	 ;
+	
+	navigator.clipboard.writeText(newURL);
+	alert("Your individual URL has been created and copied to the clipboard");
+ }
  
  function setupDropdown(spanName, id, functionName, defaultSelected, options){
 	  var retVal = "";
