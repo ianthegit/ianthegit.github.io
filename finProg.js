@@ -34,13 +34,27 @@ function setupBaseScreen(){
  "<tr><td>Desired yearly income from your estate</td><td> <input type='number' id='desiredYearlyIncome' onchange='recalculate()'> </td>  	<td>Tax-free lump Sum</td><td> " +setupDropdown('taxFreeLumpSumSpan', 'taxFreeLumpSum', 'recalculate' , tempTaxFreeLumpSum, new Array(0, 25 )) + "%</td> </tr>" +
  "<tr><td></td>  <td></td> </tr>" +
  "</table>" +
- "<span id='results'> </span>"
+ "<span id='results'> </span>" +
+ "<span id='monteCarlo'> </span>"
   );
  
 }
 
 function recalculate() {
 	recalculateOptionToReDraw(1);
+	
+	countMap={};
+	for (var monteCarloCount=1 ; monteCarloCount < 10000 ; monteCarloCount++) {
+		ageMoneyRunsOut=recalculateOptionToReDraw(0);
+		
+		if (countMap[ageMoneyRunsOut] === undefined) {
+    		countMap[ageMoneyRunsOut] = 1;
+  		} else {
+    		countMap[ageMoneyRunsOut]++;
+  		}
+	}
+	
+	drawMonteCarlo(countMap);
 }
 function recalculateOptionToReDraw(redraw) {
 	lumpSumTaken=0;
@@ -76,6 +90,11 @@ function recalculateOptionToReDraw(redraw) {
 				if (i < retirementAge) {
 					growthRateToUse=expectedGrowthRate;
 				}
+				if (redraw==0) {
+					growthRateToUse = historicalSPReturns[Math.floor(Math.random() * historicalSPReturns.length)];
+					
+					expectedInflationRate= historicalInflation[Math.floor(Math.random() * historicalInflation.length)];
+				}
 				otherIncome=calculateOtherIncome(expectedInflationRate,yearlyData[rowNumber-1].otherIncome );
 				expectedStatePension=calculateExpectedStatePension(expectedInflationRate,yearlyData[rowNumber-1].expectedStatePension );
 				usedStatePension=calculateUsedStatePension(i, statePensionAge, expectedStatePension );
@@ -86,6 +105,9 @@ function recalculateOptionToReDraw(redraw) {
 				pensionValue = recalculatePension(i, retirementAge, yearlyData[rowNumber-1].pension, growthRateToUse,pensionWithdrawl,pensionYearlyAddition);
 				if (pensionValue==0){
 					pensionWithdrawl=yearlyData[rowNumber-1].pension;
+					if (redraw==0){
+						return i;				
+					}
 				}
 				yearlyData[rowNumber] = {	age:i, 
 											ISA: iSAValue, 
@@ -99,7 +121,10 @@ function recalculateOptionToReDraw(redraw) {
 										};
 			}	
 	}
-	
+	if (redraw==0){
+		return 100;				
+	}
+
 	if (redraw==1) {
 		redrawScreen();
 	}
@@ -133,6 +158,23 @@ function redrawScreen() {
 	
 }
 
+function drawMonteCarlo(countMap) {
+
+	resultsData="<table border='1'> <tr> <td> Age</td><td>Number of times money runs out</td> </tr> " 
+	
+	startAge=document.getElementById('ageNow').value;
+	
+	for (let key in countMap) {
+		resultsData=resultsData+"<tr><td>" + key + "</td>"
+		+"<td align='right'>" + countMap[key] + "</td>"
+		+"</tr>"
+	}	
+
+	ageNow=ageNow+"</table>" ;
+	document.getElementById('monteCarlo').innerHTML=resultsData;
+	
+
+}
 function recalculateDesiredYearyIncome(expectedInflationRate, desiredYearlyIncome ) {
 	return parseInt( +desiredYearlyIncome + +(desiredYearlyIncome * (expectedInflationRate /100) ) );
 }
