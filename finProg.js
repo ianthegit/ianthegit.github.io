@@ -1,4 +1,7 @@
 var lumpSumTaken=0;
+	  
+historicalInflation=[1.0036,3.4475,4.1965,2.0185,3.2816,4.7738,3.9096,2.4821,4.6974,5.4467,6.3666,9.4448,7.0711,9.196,16.044,24.2073,16.5595,15.8403,8.2631,13.4213,17.9659,11.8766,8.5989,4.6093,4.9607,6.0714,3.4276,4.1489,4.1554,5.7602,8.0635,7.4618,4.5915,2.5586,2.219,2.6975,2.8518,2.2011,1.8206,1.753,1.183,1.5323,1.5204,1.3765,1.3904,2.0891,2.4557,2.3866,3.5214,1.9617,2.4927,3.8561,2.5732,2.2917,1.4511,0.368,1.0084,2.5578,2.2928,1.7381,0.9895,2.5184,7.922,6.794];
+
 function createScreen() { 
 	yearlyData =[] ; 
 	preset = getURIString('preset'); 
@@ -20,7 +23,8 @@ function setupBaseScreen(){
  
  "<tr><td>Minimum personal pension drawdown age</td><td> <input type='number' id='personalPensionAge' onchange='recalculate()'> </td>  	<td>State pension age</td><td> <input type='number' id='statePensionAge' onchange='recalculate()'> </td> </tr>" +
  "<tr><td>Tax-free yearly amount</td><td> <input type='number' id='taxFreeAmount' onchange='recalculate()'> </td>  	<td>Max lump sum</td><td> <input type='number' id='maxLumpSum' onchange='recalculate()'> </td>  </tr>" +
- "<tr><td>Expected growth rate</td><td> <input type='number' id='expectedGrowthRate' onchange='recalculate()'> </td>	<td>Expected inflation rate</td><td> <input type='number' id='expectedInflationRate' onchange='recalculate()'> </td> </tr>" +
+ "<tr><td>Expected growth rate (pre and post retirement)</td><td>  <table 'border=0'> <tr> <td>  <input maxlength='4' size='4' type='number' id='expectedGrowthRate' onchange='recalculate()'> </td></tr><tr><td>   <input maxlength='4' size='4' type='number' id='expectedGrowthRatePostRetirement' onchange='recalculate()'> </td> </td></tr></table> </td>" +
+ "	<td>Expected inflation rate</td><td> <input type='number' id='expectedInflationRate' onchange='recalculate()'> </td> </tr>" +
  "<tr><td>Your specific details</td></tr>" +
  "<tr><td>Age now</td><td> <input type='number' id='ageNow' onchange='recalculate()'> </td>  								<td>Age you intend to stop working</td><td> <input type='number' id='retirementAge' onchange='recalculate()'> </td> </tr>" +
  "<tr><td>ISA now</td><td> <input type='number' id='iSAValueNow' onchange='recalculate()'> </td>  						<td>ISA yearly saving</td><td> <input type='number' id='yearlyISAAddition' onchange='recalculate()'> </td> </tr>" +
@@ -50,9 +54,11 @@ function recalculate() {
 	expectedStatePension=document.getElementById('expectedStatePension').value; 
 	desiredYearlyIncome=document.getElementById('desiredYearlyIncome').value; 
 	expectedGrowthRate=document.getElementById('expectedGrowthRate').value; 
+	expectedGrowthRatePostRetirement=document.getElementById('expectedGrowthRatePostRetirement').value; 
 	expectedInflationRate=document.getElementById('expectedInflationRate').value; 
 	otherIncome=document.getElementById('otherIncome').value; 
 	taxFreeLumpSum=document.getElementById('taxFreeLumpSum').value; 
+
 
 	startAge=document.getElementById('ageNow').value;
 		rowNumber = 0;
@@ -62,14 +68,18 @@ function recalculate() {
 				yearlyData[rowNumber] = {age:i, ISA:iSAValueNow, pension:pensionValueNow, iSAWithdrawl:0, pensionWithdrawl:0, desiredYearlyIncome:desiredYearlyIncome, expectedStatePension:expectedStatePension, usedStatePension:0, otherIncome:otherIncome};
 			}
 			if (i!=startAge) {
+				growthRateToUse=expectedGrowthRatePostRetirement;
+				if (i < retirementAge) {
+					growthRateToUse=expectedGrowthRate;
+				}
 				otherIncome=calculateOtherIncome(expectedInflationRate,yearlyData[rowNumber-1].otherIncome );
 				expectedStatePension=calculateExpectedStatePension(expectedInflationRate,yearlyData[rowNumber-1].expectedStatePension );
 				usedStatePension=calculateUsedStatePension(i, statePensionAge, expectedStatePension );
 				desiredYearlyIncome = recalculateDesiredYearyIncome(expectedInflationRate,yearlyData[rowNumber-1].desiredYearlyIncome );
 				iSAWithdrawl = calculateISAWithdrawl(i,desiredYearlyIncome, retirementAge, yearlyData[rowNumber-1].ISA, personalPensionAge, taxFreeAmount, otherIncome);
-				iSAValue = recalculateISA(i,retirementAge, yearlyData[rowNumber-1].ISA, expectedGrowthRate,personalPensionAge, iSAWithdrawl,yearlyISAAddition);
+				iSAValue = recalculateISA(i,retirementAge, yearlyData[rowNumber-1].ISA, growthRateToUse,personalPensionAge, iSAWithdrawl,yearlyISAAddition);
 				pensionWithdrawl = calculatePensionWithdrawl(i, desiredYearlyIncome, retirementAge, yearlyData[rowNumber-1].pension, personalPensionAge, iSAWithdrawl,usedStatePension, statePensionAge, otherIncome, taxFreeLumpSum,maxLumpSum);
-				pensionValue = recalculatePension(i, retirementAge, yearlyData[rowNumber-1].pension, expectedGrowthRate,pensionWithdrawl,pensionYearlyAddition);
+				pensionValue = recalculatePension(i, retirementAge, yearlyData[rowNumber-1].pension, growthRateToUse,pensionWithdrawl,pensionYearlyAddition);
 				yearlyData[rowNumber] = {	age:i, 
 											ISA: iSAValue, 
 											pension:pensionValue,
@@ -231,6 +241,7 @@ function setupPresets(preset) {
 		document.getElementById('expectedStatePension').value=12407; 
 		document.getElementById('desiredYearlyIncome').value=52000; 
 		document.getElementById('expectedGrowthRate').value=4; 
+		document.getElementById('expectedGrowthRatePostRetirement').value=4; 
 		document.getElementById('expectedInflationRate').value=2.5; 
 		document.getElementById('otherIncome').value=0; 
 		return;
@@ -245,6 +256,7 @@ function setupPresets(preset) {
 		document.getElementById('expectedStatePension').value=12407; 
 		document.getElementById('desiredYearlyIncome').value=30000; 
 		document.getElementById('expectedGrowthRate').value=8.5; 
+		document.getElementById('expectedGrowthRatePostRetirement').value=4; 
 		document.getElementById('expectedInflationRate').value=2.5; 
 		document.getElementById('personalPensionAge').value=57; 
 		document.getElementById('otherIncome').value=0; 
@@ -259,7 +271,8 @@ function setupPresets(preset) {
 	document.getElementById('pensionYearlyAddition').value=10000; 
 	document.getElementById('expectedStatePension').value=12407; 
 	document.getElementById('desiredYearlyIncome').value=30000; 
-	document.getElementById('expectedGrowthRate').value=4; 
+	document.getElementById('expectedGrowthRate').value=8; 
+	document.getElementById('expectedGrowthRatePostRetirement').value=4; 
 	document.getElementById('expectedInflationRate').value=2.5; 
 	document.getElementById('otherIncome').value=0; 
 
@@ -304,6 +317,9 @@ function setupPresets(preset) {
 	expectedGrowthRate = getURIString('expectedGrowthRate'); 
 	if (expectedGrowthRate) { document.getElementById('expectedGrowthRate').value=expectedGrowthRate}
 
+	expectedGrowthRatePostRetirement = getURIString('expectedGrowthRatePostRetirement'); 
+	if (expectedGrowthRatePostRetirement) { document.getElementById('expectedGrowthRatePostRetirement').value=expectedGrowthRatePostRetirement}
+
 	expectedInflationRate = getURIString('expectedInflationRate'); 
 	if (expectedInflationRate) { document.getElementById('expectedInflationRate').value=expectedInflationRate}
 
@@ -332,6 +348,7 @@ function getURIString(paramName) { const urlParams = new URLSearchParams(window.
 	 newURL = newURL.concat( 'expectedStatePension=' + document.getElementById('expectedStatePension').value + '&' );
 	 newURL = newURL.concat( 'desiredYearlyIncome=' + document.getElementById('desiredYearlyIncome').value + '&' );
 	 newURL = newURL.concat( 'expectedGrowthRate=' + document.getElementById('expectedGrowthRate').value + '&' );
+	 newURL = newURL.concat( 'expectedGrowthRatePostRetirement=' + document.getElementById('expectedGrowthRatePostRetirement').value + '&' );
 	 newURL = newURL.concat( 'expectedInflationRate=' + document.getElementById('expectedInflationRate').value + '&' );
 	 newURL = newURL.concat( 'otherIncome=' + document.getElementById('otherIncome').value + '&' );
 	 newURL = newURL.concat( 'taxFreeLumpSum=' + document.getElementById('taxFreeLumpSum').value + '&') ;
