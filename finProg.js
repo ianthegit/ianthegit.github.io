@@ -44,7 +44,7 @@ function recalculate() {
 	recalculateOptionToReDraw(1);
 	
 	countMap={};
-	for (var monteCarloCount=1 ; monteCarloCount < 10000 ; monteCarloCount++) {
+	for (var monteCarloCount=1 ; monteCarloCount < 100000 ; monteCarloCount++) {
 		ageMoneyRunsOut=recalculateOptionToReDraw(0);
 		
 		if (countMap[ageMoneyRunsOut] === undefined) {
@@ -160,13 +160,13 @@ function redrawScreen() {
 
 function drawMonteCarlo(countMap) {
 
-	resultsData="<table border='1'> <tr> <td> Age</td><td>Number of times money runs out</td> </tr> " 
+	resultsData="</BR></BR>MonteCarlo Results - run using S&P and historical UK inflation data run 100,000 times </BR> </BR> <table border='1'> <tr> <td> Age</td><td>Number of times money runs out</td> </tr> " 
 	
 	startAge=document.getElementById('ageNow').value;
 	
 	for (let key in countMap) {
 		resultsData=resultsData+"<tr><td>" + key + "</td>"
-		+"<td align='right'>" + countMap[key] + "</td>"
+		+"<td align='right'>" + parseFloat(countMap[key]).toLocaleString() + "</td>"
 		+"</tr>"
 	}	
 
