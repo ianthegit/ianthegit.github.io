@@ -1,6 +1,7 @@
 var lumpSumTaken=0;
 	  
 historicalInflation=[1.0036,3.4475,4.1965,2.0185,3.2816,4.7738,3.9096,2.4821,4.6974,5.4467,6.3666,9.4448,7.0711,9.196,16.044,24.2073,16.5595,15.8403,8.2631,13.4213,17.9659,11.8766,8.5989,4.6093,4.9607,6.0714,3.4276,4.1489,4.1554,5.7602,8.0635,7.4618,4.5915,2.5586,2.219,2.6975,2.8518,2.2011,1.8206,1.753,1.183,1.5323,1.5204,1.3765,1.3904,2.0891,2.4557,2.3866,3.5214,1.9617,2.4927,3.8561,2.5732,2.2917,1.4511,0.368,1.0084,2.5578,2.2928,1.7381,0.9895,2.5184,7.922,6.794];
+historicalSPReturns=[-10.46,43.72,12.06,0.34,26.64,-8.81,22.61,16.42,12.4,-9.97,23.8,10.81,-8.24,3.56,14.22,18.76,-14.31,-25.9,37,23.83,-6.98,6.51,18.52,31.74,-4.7,20.42,22.34,6.15,31.24,18.49,5.81,16.54,31.48,-3.06,30.23,7.49,9.97,1.33,37.2,22.68,33.1,28.34,20.89,-9.03,-11.85,-21.97,28.36,10.74,4.83,15.61,5.48,-36.55,25.94,14.82,2.1,15.89,32.15,13.52,1.38,11.77,21.61,-4.23,29.24,18.02,28.47,-18.01]
 
 function createScreen() { 
 	yearlyData =[] ; 
@@ -83,6 +84,9 @@ function recalculateOptionToReDraw(redraw) {
 				iSAValue = recalculateISA(i,retirementAge, yearlyData[rowNumber-1].ISA, growthRateToUse,personalPensionAge, iSAWithdrawl,yearlyISAAddition);
 				pensionWithdrawl = calculatePensionWithdrawl(i, desiredYearlyIncome, retirementAge, yearlyData[rowNumber-1].pension, personalPensionAge, iSAWithdrawl,usedStatePension, statePensionAge, otherIncome, taxFreeLumpSum,maxLumpSum);
 				pensionValue = recalculatePension(i, retirementAge, yearlyData[rowNumber-1].pension, growthRateToUse,pensionWithdrawl,pensionYearlyAddition);
+				if (pensionValue==0){
+					pensionWithdrawl=yearlyData[rowNumber-1].pension;
+				}
 				yearlyData[rowNumber] = {	age:i, 
 											ISA: iSAValue, 
 											pension:pensionValue,
@@ -144,7 +148,15 @@ function calculateOtherIncome(expectedInflationRate, otherIncome ) {
 	return parseInt( +otherIncome + +(otherIncome * (expectedInflationRate /100) ) );
 }
 
+
 function recalculatePension(age, retirementAge, lastYearsPension, expectedGrowthRate, pensionWithdrawl, pensionYearlyAddition) {
+		recalculatedPension=recalculatePensionStep1(age, retirementAge, lastYearsPension, expectedGrowthRate, pensionWithdrawl, pensionYearlyAddition);
+		if (recalculatedPension < 0){
+			return 0;
+		}
+		return recalculatedPension;
+	}
+function recalculatePensionStep1(age, retirementAge, lastYearsPension, expectedGrowthRate, pensionWithdrawl, pensionYearlyAddition) {
 	if (age < retirementAge) {
 		return parseInt( +lastYearsPension + +(lastYearsPension * (expectedGrowthRate /100) ) - +pensionWithdrawl + +pensionYearlyAddition);
 	}
@@ -169,10 +181,12 @@ function calculateISAWithdrawl(age, desiredYearlyIncome, retirementAge, lastYear
 
 }
 
-function calculatePensionWithdrawl(age, desiredYearlyIncome, retirementAge, lastYearsPension, personalPensionAge, iSAWithdrawl, expectedStatePension, statePensionAge, otherIncome, taxFreeLumpSum,maxLumpSum){
+function calculatePensionWithdrawl(age, desiredYearlyIncome, retirementAge, lastYearsPension, personalPensionAge, iSAWithdrawl, usedStatePension, statePensionAge, otherIncome, taxFreeLumpSum,maxLumpSum){
 
 	taxFreeLumpSumAmount=0;
-
+	if (lastYearsPension == 0) {
+		return 0;
+	}
 	if ((age == personalPensionAge  || personalPensionAge < retirementAge && age == retirementAge  ) && lumpSumTaken==0 ) {
 		if (taxFreeLumpSum != '0') {
 			taxFreeLumpSumAmount = parseInt(+lastYearsPension * +(+taxFreeLumpSum/100));
@@ -199,10 +213,10 @@ function calculatePensionWithdrawl(age, desiredYearlyIncome, retirementAge, last
 		if (age < statePensionAge) {
 			return parseInt(+desiredYearlyIncome - +iSAWithdrawl - +otherIncome + +taxFreeLumpSumAmount);
 		}
-		return parseInt(+desiredYearlyIncome - +iSAWithdrawl - +expectedStatePension - +otherIncome + +taxFreeLumpSumAmount);
+		return parseInt(+desiredYearlyIncome - +iSAWithdrawl - +usedStatePension - +otherIncome + +taxFreeLumpSumAmount);
 	}
 	
-	return parseInt(+desiredYearlyIncome - +iSAWithdrawl - +expectedStatePension - +otherIncome + +taxFreeLumpSumAmount);
+	return parseInt(+desiredYearlyIncome - +iSAWithdrawl - +usedStatePension - +otherIncome + +taxFreeLumpSumAmount);
 	
 }
 
@@ -380,3 +394,5 @@ function getURIString(paramName) { const urlParams = new URLSearchParams(window.
 	  }
 	  retVal = retVal + '</select></span>';
 	  return retVal; }
+
+	  
