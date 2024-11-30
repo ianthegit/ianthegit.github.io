@@ -39,6 +39,9 @@ function setupBaseScreen(){
 }
 
 function recalculate() {
+	recalculateOptionToReDraw(1);
+}
+function recalculateOptionToReDraw(redraw) {
 	lumpSumTaken=0;
 
 	personalPensionAge=document.getElementById('personalPensionAge').value; 
@@ -92,8 +95,10 @@ function recalculate() {
 										};
 			}	
 	}
-	redrawScreen();
-
+	
+	if (redraw==1) {
+		redrawScreen();
+	}
 }
 	
 function redrawScreen() {
