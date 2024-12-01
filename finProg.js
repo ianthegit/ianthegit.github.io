@@ -1,5 +1,6 @@
 var lumpSumTaken=0;
-	  
+totalRuns=100000;
+  
 historicalInflation=[1.0036,3.4475,4.1965,2.0185,3.2816,4.7738,3.9096,2.4821,4.6974,5.4467,6.3666,9.4448,7.0711,9.196,16.044,24.2073,16.5595,15.8403,8.2631,13.4213,17.9659,11.8766,8.5989,4.6093,4.9607,6.0714,3.4276,4.1489,4.1554,5.7602,8.0635,7.4618,4.5915,2.5586,2.219,2.6975,2.8518,2.2011,1.8206,1.753,1.183,1.5323,1.5204,1.3765,1.3904,2.0891,2.4557,2.3866,3.5214,1.9617,2.4927,3.8561,2.5732,2.2917,1.4511,0.368,1.0084,2.5578,2.2928,1.7381,0.9895,2.5184,7.922,6.794];
 historicalSPReturns=[-10.46,43.72,12.06,0.34,26.64,-8.81,22.61,16.42,12.4,-9.97,23.8,10.81,-8.24,3.56,14.22,18.76,-14.31,-25.9,37,23.83,-6.98,6.51,18.52,31.74,-4.7,20.42,22.34,6.15,31.24,18.49,5.81,16.54,31.48,-3.06,30.23,7.49,9.97,1.33,37.2,22.68,33.1,28.34,20.89,-9.03,-11.85,-21.97,28.36,10.74,4.83,15.61,5.48,-36.55,25.94,14.82,2.1,15.89,32.15,13.52,1.38,11.77,21.61,-4.23,29.24,18.02,28.47,-18.01]
 
@@ -46,7 +47,7 @@ function recalculate() {
 	recalculateOptionToReDraw(1);
 	
 	countMap={};
-	for (var monteCarloCount=1 ; monteCarloCount < 100000 ; monteCarloCount++) {
+	for (var monteCarloCount=0 ; monteCarloCount < totalRuns ; monteCarloCount++) {
 		ageMoneyRunsOut=recalculateOptionToReDraw(0);
 		
 		if (countMap[ageMoneyRunsOut] === undefined) {
@@ -163,13 +164,15 @@ function redrawScreen() {
 
 function drawMonteCarlo(countMap) {
 
-	resultsData="</BR></BR>MonteCarlo Results - run using S&P and historical UK inflation data run 100,000 times </BR> </BR> <table border='1'> <tr> <td> Age</td><td>Number of times money runs out</td> </tr> " 
-	
+	resultsData="</BR></BR>MonteCarlo Results - run using S&P and historical UK inflation data run " + 	parseFloat(totalRuns).toLocaleString()
+		 + " times </BR> </BR> <table border='1'> <tr> <td> Age</td><td>Number of times money runs out</td> <td>Failures up to age</td></tr> " 
+	totalFailures=0;
 	startAge=document.getElementById('ageNow').value;
-	
 	for (let key in countMap) {
+		totalFailures=+totalFailures + +countMap[key] ;
 		resultsData=resultsData+"<tr><td>" + key + "</td>"
 		+"<td align='right'>" + parseFloat(countMap[key]).toLocaleString() + "</td>"
+		+"<td align='right'>" + parseFloat(totalFailures).toLocaleString() + "</td>"
 		+"</tr>"
 	}	
 
