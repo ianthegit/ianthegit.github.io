@@ -102,7 +102,10 @@ function recalculateOptionToReDraw(redraw) {
 				if (i >= retirementAge) {
 					growthRateToUse = growthRateToUse/  2;
 					if (growthRateToUse < (+expectedInflationRate - 2)) {
-						growthRateToUse = expectedInflationRate;
+						growthRateToUse = expectedInflationRate -2;
+					}
+					if (growthRateToUse > (+expectedInflationRate + 4)) {
+						growthRateToUse = expectedInflationRate + 2;
 					}
 				}
 			}
