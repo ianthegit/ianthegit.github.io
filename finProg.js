@@ -165,7 +165,7 @@ function redrawScreen() {
 function drawMonteCarlo(countMap) {
 
 	resultsData="</BR></BR>MonteCarlo Results - run using S&P and historical UK inflation data run " + 	parseFloat(totalRuns).toLocaleString()
-		 + " times </BR> </BR> <table border='1'> <tr> <td> Age</td><td>Number of times money runs out</td> <td>Failures up to age</td></tr> " 
+		 + " times </BR> </BR> <table border='1'> <tr> <td> Age</td><td>Number of times money runs out</td> <td>Failures up to age</td><td>% chance of money not running out</td></tr> " 
 	totalFailures=0;
 	startAge=document.getElementById('ageNow').value;
 	for (let key in countMap) {
@@ -173,6 +173,7 @@ function drawMonteCarlo(countMap) {
 		resultsData=resultsData+"<tr><td>" + key + "</td>"
 		+"<td align='right'>" + parseFloat(countMap[key]).toLocaleString() + "</td>"
 		+"<td align='right'>" + parseFloat(totalFailures).toLocaleString() + "</td>"
+		+"<td align='right'>" + parseFloat((totalFailures/totalRuns)*100).toLocaleString() + "%</td>"
 		+"</tr>"
 	}	
 
