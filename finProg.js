@@ -58,6 +58,8 @@ function recalculate() {
 	}
 	
 	drawMonteCarlo(countMap);
+	countMap=null;
+	yearlyData=[];
 }
 function recalculateOptionToReDraw(redraw) {
 	lumpSumTaken=0;
@@ -189,7 +191,6 @@ function drawMonteCarlo(countMap) {
 
 	ageNow=ageNow+"</table>" ;
 	document.getElementById('monteCarlo').innerHTML=resultsData;
-	
 
 }
 function recalculateDesiredYearyIncome(expectedInflationRate, desiredYearlyIncome ) {
