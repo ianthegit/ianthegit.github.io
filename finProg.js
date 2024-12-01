@@ -20,7 +20,7 @@ function setupBaseScreen(){
 		
  document.write("(WARNING - these calculations DO NOT take any income tax due on income into account) </BR></BR>"+
  "The numbers below are purely indicative, and are absolutely NOT an alternative to a proper Financial Advisor.</BR></BR>"+
- "<input type='button' title='This will create a URL with your own setup values you can use to share your plan securely.  The data is never stored by us.' value='Copy shareable URL to Clipboard' id='C2C' onclick='createURLAndCopyToClipboard()' /> </BR> " +
+ "<input type='button' title='This will create a URL with your own setup values you can use to share your plan securely.  The data is never stored by us.' value='Copy shareable URL to Clipboard' id='C2C' onclick='createURLAndCopyToClipboard()' /> </BR></BR> " +
  "<table border='0' ><tr><td><span id='ControlFunctions' >" + 
  "Basic Details </td> </tr>" +
  
