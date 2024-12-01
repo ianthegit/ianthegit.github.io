@@ -318,7 +318,7 @@ function setupPresets(preset) {
 		document.getElementById('expectedGrowthRate').value=4; 
 		document.getElementById('expectedGrowthRatePostRetirement').value=4; 
 		document.getElementById('expectedInflationRate').value=2.5; 
-		document.getElementById('otherIncome').value=0; 
+		document.getElementById('otherIncome').value=8000; 
 		return;
 	}
 	if (preset == 'Reddit') {
