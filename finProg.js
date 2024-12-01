@@ -97,7 +97,14 @@ function recalculateOptionToReDraw(redraw) {
 			if (redraw==0) {
 				growthRateToUse = historicalSPReturns[Math.floor(Math.random() * historicalSPReturns.length)];
 				
+				
 				expectedInflationRate= historicalInflation[Math.floor(Math.random() * historicalInflation.length)];
+				if (i >= retirementAge) {
+					growthRateToUse = growthRateToUse/  2;
+					if (growthRateToUse < (+expectedInflationRate - 2)) {
+						growthRateToUse = expectedInflationRate;
+					}
+				}
 			}
 			otherIncome=calculateOtherIncome(expectedInflationRate,yearlyData[rowNumber-1].otherIncome );
 			expectedStatePension=calculateExpectedStatePension(expectedInflationRate,yearlyData[rowNumber-1].expectedStatePension );
