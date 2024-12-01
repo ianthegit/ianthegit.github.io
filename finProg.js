@@ -18,7 +18,9 @@ function setupBaseScreen(){
 	if (tempTaxFreeLumpSum > 0) { tempTaxFreeLumpSum = 1};
 	
 		
- document.write("(WARNING - these calculations DO NOT take any income tax due on income into account) <input type='button' title='This will create a URL with your own setup values you can use to share your plan securely.  The data is never stored by us.' value='Copy shareable URL to Clipboard' id='C2C' onclick='createURLAndCopyToClipboard()' /> </BR> " +
+ document.write("(WARNING - these calculations DO NOT take any income tax due on income into account) </BR></BR>"+
+ "The numbers below are purely indicative, and are absolutely NOT an alternative to a proper Financial Advisor.</BR></BR>"+
+ "<input type='button' title='This will create a URL with your own setup values you can use to share your plan securely.  The data is never stored by us.' value='Copy shareable URL to Clipboard' id='C2C' onclick='createURLAndCopyToClipboard()' /> </BR> " +
  "<table border='0' ><tr><td><span id='ControlFunctions' >" + 
  "Basic Details </td> </tr>" +
  
@@ -79,47 +81,48 @@ function recalculateOptionToReDraw(redraw) {
 
 
 	startAge=document.getElementById('ageNow').value;
-		rowNumber = 0;
-		for (var i=startAge ; i<100 ; i++){
-			rowNumber++;
-			if (i==startAge) {
-				yearlyData[rowNumber] = {age:i, ISA:iSAValueNow, pension:pensionValueNow, iSAWithdrawl:0, pensionWithdrawl:0, desiredYearlyIncome:desiredYearlyIncome, expectedStatePension:expectedStatePension, usedStatePension:0, otherIncome:otherIncome};
+	yearlyData=[];
+	rowNumber = 0;
+	for (var i=startAge ; i<100 ; i++){
+		rowNumber++;
+		if (i==startAge) {
+			yearlyData[rowNumber] = {age:i, ISA:iSAValueNow, pension:pensionValueNow, iSAWithdrawl:0, pensionWithdrawl:0, desiredYearlyIncome:desiredYearlyIncome, expectedStatePension:expectedStatePension, usedStatePension:0, otherIncome:otherIncome};
+		}
+		if (i!=startAge) {
+			growthRateToUse=expectedGrowthRatePostRetirement;
+			if (i < retirementAge) {
+				growthRateToUse=expectedGrowthRate;
 			}
-			if (i!=startAge) {
-				growthRateToUse=expectedGrowthRatePostRetirement;
-				if (i < retirementAge) {
-					growthRateToUse=expectedGrowthRate;
+			if (redraw==0) {
+				growthRateToUse = historicalSPReturns[Math.floor(Math.random() * historicalSPReturns.length)];
+				
+				expectedInflationRate= historicalInflation[Math.floor(Math.random() * historicalInflation.length)];
+			}
+			otherIncome=calculateOtherIncome(expectedInflationRate,yearlyData[rowNumber-1].otherIncome );
+			expectedStatePension=calculateExpectedStatePension(expectedInflationRate,yearlyData[rowNumber-1].expectedStatePension );
+			usedStatePension=calculateUsedStatePension(i, statePensionAge, expectedStatePension );
+			desiredYearlyIncome = recalculateDesiredYearyIncome(expectedInflationRate,yearlyData[rowNumber-1].desiredYearlyIncome );
+			iSAWithdrawl = calculateISAWithdrawl(i,desiredYearlyIncome, retirementAge, yearlyData[rowNumber-1].ISA, personalPensionAge, taxFreeAmount, otherIncome);
+			iSAValue = recalculateISA(i,retirementAge, yearlyData[rowNumber-1].ISA, growthRateToUse,personalPensionAge, iSAWithdrawl,yearlyISAAddition);
+			pensionWithdrawl = calculatePensionWithdrawl(i, desiredYearlyIncome, retirementAge, yearlyData[rowNumber-1].pension, personalPensionAge, iSAWithdrawl,usedStatePension, statePensionAge, otherIncome, taxFreeLumpSum,maxLumpSum);
+			pensionValue = recalculatePension(i, retirementAge, yearlyData[rowNumber-1].pension, growthRateToUse,pensionWithdrawl,pensionYearlyAddition);
+			if (pensionValue==0){
+				pensionWithdrawl=yearlyData[rowNumber-1].pension;
+				if (redraw==0){
+					return i;				
 				}
-				if (redraw==0) {
-					growthRateToUse = historicalSPReturns[Math.floor(Math.random() * historicalSPReturns.length)];
-					
-					expectedInflationRate= historicalInflation[Math.floor(Math.random() * historicalInflation.length)];
-				}
-				otherIncome=calculateOtherIncome(expectedInflationRate,yearlyData[rowNumber-1].otherIncome );
-				expectedStatePension=calculateExpectedStatePension(expectedInflationRate,yearlyData[rowNumber-1].expectedStatePension );
-				usedStatePension=calculateUsedStatePension(i, statePensionAge, expectedStatePension );
-				desiredYearlyIncome = recalculateDesiredYearyIncome(expectedInflationRate,yearlyData[rowNumber-1].desiredYearlyIncome );
-				iSAWithdrawl = calculateISAWithdrawl(i,desiredYearlyIncome, retirementAge, yearlyData[rowNumber-1].ISA, personalPensionAge, taxFreeAmount, otherIncome);
-				iSAValue = recalculateISA(i,retirementAge, yearlyData[rowNumber-1].ISA, growthRateToUse,personalPensionAge, iSAWithdrawl,yearlyISAAddition);
-				pensionWithdrawl = calculatePensionWithdrawl(i, desiredYearlyIncome, retirementAge, yearlyData[rowNumber-1].pension, personalPensionAge, iSAWithdrawl,usedStatePension, statePensionAge, otherIncome, taxFreeLumpSum,maxLumpSum);
-				pensionValue = recalculatePension(i, retirementAge, yearlyData[rowNumber-1].pension, growthRateToUse,pensionWithdrawl,pensionYearlyAddition);
-				if (pensionValue==0){
-					pensionWithdrawl=yearlyData[rowNumber-1].pension;
-					if (redraw==0){
-						return i;				
-					}
-				}
-				yearlyData[rowNumber] = {	age:i, 
-											ISA: iSAValue, 
-											pension:pensionValue,
-											iSAWithdrawl:iSAWithdrawl,
-											pensionWithdrawl:pensionWithdrawl,
-											desiredYearlyIncome:desiredYearlyIncome,
-											expectedStatePension:expectedStatePension,
-											usedStatePension:usedStatePension,
-											otherIncome:otherIncome
-										};
-			}	
+			}
+			yearlyData[rowNumber] = {	age:i, 
+										ISA: iSAValue, 
+										pension:pensionValue,
+										iSAWithdrawl:iSAWithdrawl,
+										pensionWithdrawl:pensionWithdrawl,
+										desiredYearlyIncome:desiredYearlyIncome,
+										expectedStatePension:expectedStatePension,
+										usedStatePension:usedStatePension,
+										otherIncome:otherIncome
+									};
+		}	
 	}
 	if (redraw==0){
 		return 100;				
