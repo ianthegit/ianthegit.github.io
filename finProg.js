@@ -175,7 +175,7 @@ function redrawScreen() {
 function drawMonteCarlo(countMap) {
 
 	resultsData="</BR></BR>MonteCarlo Results - run using S&P and historical UK inflation data run " + 	parseFloat(totalRuns).toLocaleString()
-		 + " times </BR> </BR> <table border='1'> <tr> <td> Age</td><td>Number of times money runs out</td> <td>Failures up to age</td><td>% chance of money not running out</td></tr> " 
+		 + " times </BR>Growth post retirement is limited, to mimic an expected risk averse approach</BR> </BR> <table border='1'> <tr> <td> Age</td><td>Number of times money runs out</td> <td>Failures up to age</td><td>% chance of money not running out</td></tr> " 
 	totalFailures=0;
 	startAge=document.getElementById('ageNow').value;
 	for (let key in countMap) {
