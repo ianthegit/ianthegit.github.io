@@ -187,6 +187,9 @@ function drawMonteCarlo(countMap) {
 	totalFailures=0;
 	startAge=document.getElementById('ageNow').value;
 	for (let key in countMap) {
+		if (key == 100) {
+			break;
+		}
 		totalFailures=+totalFailures + +countMap[key] ;
 		resultsData=resultsData+"<tr><td>" + key + "</td>"
 		+"<td align='right'>" + parseFloat(countMap[key]).toLocaleString() + "</td>"
