@@ -6,8 +6,6 @@ historicalInflation=[1.0036,3.4475,4.1965,2.0185,3.2816,4.7738,3.9096,2.4821,4.6
 historicalSPReturns=[12.06,0.34,26.64,-8.81,22.61,16.42,12.4,-9.97,23.8,10.81,-8.24,3.56,14.22,18.76,-14.31,-25.9,37,23.83,-6.98,6.51,18.52,31.74,-4.7,20.42,22.34,6.15,31.24,18.49,5.81,16.54,31.48,-3.06,30.23,7.49,9.97,1.33,37.2,22.68,33.1,28.34,20.89,-9.03,-11.85,-21.97,28.36,10.74,4.83,15.61,5.48,-36.55,25.94,14.82,2.1,15.89,32.15,13.52,1.38,11.77,21.61,-4.23,29.24,18.02,28.47,-18.01]
 
 function createScreen() { 
-	console.log("historicalInflation " + historicalInflation.length)
-	console.log("historicalSPReturns " + historicalSPReturns.length)
 	yearlyData =[] ; 
 	preset = getURIString('preset'); 
 	if (!preset) { preset = 'Default'}
@@ -181,7 +179,7 @@ function redrawScreen() {
 function drawMonteCarlo(countMap) {
 
 	resultsData="</BR></BR>MonteCarlo Results - run using S&P and historical UK inflation data run " + 	parseFloat(totalRuns).toLocaleString()
-		 + " times </BR>Growth post retirement is limited, to mimic an expected risk averse approach</BR> </BR> <table border='1'> <tr> <td> Age</td><td>Number of times money runs out</td> <td>Failures up to age</td><td>% chance of money running out</td></tr> " 
+		 + " times </BR>Growth post retirement is limited, to mimic an expected risk averse approach</BR> </BR> <table border='1'> <tr> <td> Age</td><td>Number of times money runs out at age</td> <td>Failures up to age</td><td>% chance of money running out by age</td></tr> " 
 	totalFailures=0;
 	startAge=document.getElementById('ageNow').value;
 	for (let key in countMap) {
