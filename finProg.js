@@ -136,7 +136,7 @@ function recalculateOptionToReDraw(redraw,personalPensionAge,statePensionAge,tax
 										usedStatePension:usedStatePension,
 										otherIncome:otherIncome
 									};
-			if (i >= retirementAge && yearlyData[rowNumber].iSAWithdrawl + +yearlyData[rowNumber].pensionWithdrawl  == 0) {
+			if (i > retirementAge && (yearlyData[rowNumber].iSAWithdrawl + +yearlyData[rowNumber].pensionWithdrawl  == 0)) {
 				if (redraw==0){
 					return i;				
 				}
