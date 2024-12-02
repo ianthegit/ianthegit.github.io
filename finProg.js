@@ -125,9 +125,6 @@ function recalculateOptionToReDraw(redraw,personalPensionAge,statePensionAge,tax
 			pensionValue = recalculatePension(i, retirementAge, yearlyData[rowNumber-1].pension, growthRateToUse,pensionWithdrawl,pensionYearlyAddition);
 			if (pensionValue==0){
 				pensionWithdrawl=yearlyData[rowNumber-1].pension;
-				if (redraw==0){
-					return i;				
-				}
 			}
 			yearlyData[rowNumber] = {	age:i, 
 										ISA: iSAValue, 
@@ -139,6 +136,11 @@ function recalculateOptionToReDraw(redraw,personalPensionAge,statePensionAge,tax
 										usedStatePension:usedStatePension,
 										otherIncome:otherIncome
 									};
+			if (i >= retirementAge && yearlyData[rowNumber].iSAWithdrawl + +yearlyData[rowNumber].pensionWithdrawl  == 0) {
+				if (redraw==0){
+					return i;				
+				}
+			}
 		}	
 	}
 	if (redraw==0){
@@ -181,7 +183,7 @@ function redrawScreen() {
 function drawMonteCarlo(countMap) {
 
 	resultsData="</BR></BR>MonteCarlo Results - run using S&P and historical UK inflation data run " + 	parseFloat(totalRuns).toLocaleString()
-		 + " times </BR>Growth post retirement is limited, to mimic an expected risk averse approach</BR> </BR> <table border='1'> <tr> <td> Age</td><td>Number of times money runs out at age</td> <td>Failures up to age</td><td>% chance of money running out by age</td></tr> " 
+		 + " times </BR>Growth post retirement is limited, to mimic an expected risk averse approach</BR> </BR> <table border='1'> <tr> <td> Age</td><td>Number of times Savings and Pension money runs out at age</td> <td>Failures up to age</td><td>% chance of Savings and Pension money running out by age</td></tr> " 
 	totalFailures=0;
 	startAge=document.getElementById('ageNow').value;
 	for (let key in countMap) {
