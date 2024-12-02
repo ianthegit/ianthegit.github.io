@@ -181,7 +181,7 @@ function redrawScreen() {
 function drawMonteCarlo(countMap) {
 
 	resultsData="</BR></BR>MonteCarlo Results - run using S&P and historical UK inflation data run " + 	parseFloat(totalRuns).toLocaleString()
-		 + " times </BR>Growth post retirement is limited, to mimic an expected risk averse approach</BR> </BR> <table border='1'> <tr> <td> Age</td><td>Number of times money runs out</td> <td>Failures up to age</td><td>% chance of money not running out</td></tr> " 
+		 + " times </BR>Growth post retirement is limited, to mimic an expected risk averse approach</BR> </BR> <table border='1'> <tr> <td> Age</td><td>Number of times money runs out</td> <td>Failures up to age</td><td>% chance of money running out</td></tr> " 
 	totalFailures=0;
 	startAge=document.getElementById('ageNow').value;
 	for (let key in countMap) {
@@ -322,7 +322,7 @@ function setupPresets(preset) {
 		document.getElementById('pensionValueNow').value=1100000; 
 		document.getElementById('pensionYearlyAddition').value=60000; 
 		document.getElementById('expectedStatePension').value=20000; 
-		document.getElementById('desiredYearlyIncome').value=52000; 
+		document.getElementById('desiredYearlyIncome').value=60000; 
 		document.getElementById('expectedGrowthRate').value=4; 
 		document.getElementById('expectedGrowthRatePostRetirement').value=4; 
 		document.getElementById('expectedInflationRate').value=2.5; 
