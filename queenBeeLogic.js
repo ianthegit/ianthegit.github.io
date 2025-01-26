@@ -3,11 +3,10 @@
  */
 
  var words = ['abcde', 'efghi', 'hijkl'];
- var primaryLetter = 'e';
- const letters = [ 'f', 'g', 'i'];
+ var primaryLetter = 't';
+ const letters = [ 'e','h','y','o','n','p'];
  
  function checkForWords () {
-	 console.log('Start');
 	 for (var wordIndex=0 ; wordIndex<words.length ; wordIndex++){
 		 wordIterate: if (words[wordIndex].includes(primaryLetter)) {
 			 for (let i = 0; i < words[wordIndex].length; i++) {
