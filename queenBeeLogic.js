@@ -2,7 +2,7 @@
  * 
  */
 
- //const letters = [ 't', 'e','h','y','o','n','p'];
+ //file:///Users/hoppo/Documents/GitHub/ianthegit.github.io/queenBee.html?primaryLetter=t&letter=e&letter=h&letter=y&letter=o&letter=n&letter=n&letter=p&ignoreTime=Yes
  
  function checkForWords () {
 
@@ -13,7 +13,7 @@
 	if (hour < 21 ) {
 		window.alert('Cheeky.  Not until 9pm');
 		if ( ignoreTime==null) {
-			window.location.href = "http://www.w3schools.com";
+			window.location.href = "https://www.youtube.com/watch?v=IbW5K2F1N28";
 			}
 	}
 
