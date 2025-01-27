@@ -3,7 +3,7 @@
  */
 
  //file:///Users/hoppo/Documents/GitHub/ianthegit.github.io/queenBee.html?primaryLetter=t&letter=e&letter=h&letter=y&letter=o&letter=n&letter=n&letter=p&ignoreTime=Yes
- 
+ //https://www.hopgood.uk/thumbItIn.html?primaryLetter=t&letter=e&letter=h&letter=y&letter=o&letter=n&letter=n&letter=p&ignoreTime=OK
  function checkForWords () {
 
 	 ignoreTime = getURIString('ignoreTime');
@@ -36,7 +36,6 @@
 						 
 			 }
 			 solvedList.push(words[wordIndex])
-			 //document.getElementById("QueenBeeSolver").innerHTML = document.getElementById("QueenBeeSolver").innerHTML + words[wordIndex] + '  (' + words[wordIndex].length + ') </BR>';
 		 }	 
 	 }
 	 solvedList.sort();
@@ -56,7 +55,6 @@
 				document.getElementById(key).innerHTML = document.getElementById(key).innerHTML + solvedList[wordIndex] + "   ";
 			}	 
 		}
-  		//console.log(`Element ${key} occurs ${countMap[key]} times`);
 	}
  }
  
