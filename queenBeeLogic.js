@@ -5,6 +5,18 @@
  //const letters = [ 't', 'e','h','y','o','n','p'];
  
  function checkForWords () {
+
+	 ignoreTime = getURIString('ignoreTime');
+	 
+	 const d = new Date();
+	let hour = d.getHours();
+	if (hour < 21 ) {
+		window.alert('Cheeky.  Not until 9pm');
+		if ( ignoreTime==null) {
+			window.location.href = "http://www.w3schools.com";
+			}
+	}
+
 	 primaryLetter = getURIString('primaryLetter');
 	 secondaryLetters = getURIStrings('letter');
 	 
