@@ -3,12 +3,13 @@ pics= new Array();
 
 function createScreen() { 
 	setupPhotoArray();
-	document.write("<div id='SQQuiz' class='grad' >" + writePhotoStory() + "</BR></BR> <a href='mailto:ian" + "@hopgood.uk?subject=This is not about work, I promise&body=Hi, do you want a beer, I will pay all night'>email</a> " 
-	+"</BR></BR><a href='https://www.instagram.com/" + "ianhoppo/'>More pictures</a></div>");
+	document.write("<div id='SQQuiz' class='grad' style='font-family:verdana;font-size:25px' >" + writePhotoStory() + "</BR></BR> <table> <tr> <td><a href='mailto:ian" + 
+	"@hopgood.uk?subject=This is not about work, I promise&body=Hi, do you want a beer, I will pay all night'>eMail</a> " 
+	+"  </td> <td> &nbsp;   </td> <td>  <a href='https://www.instagram.com/" + "ianhoppo/'>Social</a> </rd></tr></table> </div>");
 	}
 	
 function writePhotoStory() {
-	retString = "<table border=1 style='font-family:'Verdana''>";
+	retString = "<span border=1 >Some sort of career timeline </BR></BR></span><table border=1 >";
 	for (var i = 0 ; i < pics.length ; i++) {
 	retString = retString + "<tr><td align='top'>" + pics[i].Dates + "</td><td align='right'>" + pics[i].Role + "</BR></BR><table>";
 		for (var j = 0 ; j < pics[i].Pictures.length ; j++) {
@@ -27,7 +28,7 @@ function setupPhotoArray(){
 	photoSubjectIndex=0;
 	
 	
-	pics.push({Dates: "1979-1988", Business:"Hopgoods", Role:"Lingere sales, carpet fitting, deliveries, cashing up, banking", Pictures:new Array("pictures/hopgoods2.jpg", "pictures/hopgoods1.jpg","pictures/hopgoods0.jpg")})
+	pics.push({Dates: "1979-1988", Business:"Hopgoods", Role:"Lingerie sales, carpet fitting, deliveries, cashing up, banking", Pictures:new Array("pictures/hopgoods2.jpg", "pictures/hopgoods1.jpg","pictures/hopgoods0.jpg")})
 	pics.push({Dates: "1988-1989", Business:"British Aerospace", Role:"Apprentice riviter, Enemy fire damage application, HQ finance application", Pictures:new Array("pictures/brough0.jpg", "pictures/brough1.jpg")})
 	pics.push({Dates: "1989", Business:"Chappell Farm", Role:"Harrower", Pictures:new Array("pictures/harrow.jpg")})
 	pics.push({Dates: "1989-1994", Business:"Suffolk Country COuncil - Education Department", Role:"Developer, SCO Admin, Informix DBA", Pictures:new Array("pictures/countyHall0.jpg")})
