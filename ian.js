@@ -61,8 +61,8 @@ function setupPhotoArray(){
 		Pictures:new Array("pictures/bangalore0.jpg", "pictures/bangalore2.jpg","pictures/ipswich1.jpg","pictures/neworleans0.jpg","pictures/pune0.jpg","pictures/pune3.jpg","pictures/sanFrancisco0.jpg","pictures/shed0.gif","pictures/shed1.jpg","pictures/shed2.jpg")})
 
 	people.push({Dates: "Social events have changed ", Business:" over the years", Role:"", 
-		Pictures:new Array("pictures/brough3.jpg", "pictures/catlin0.jpg", "pictures/catlinTri0.jpg", "pictures/catlinTri1.jpg", "pictures/catlin1.jpg","pictures/hac0.jpg","pictures/Wellington.jpg","pictures/Ipswich2.jpg","pictures/ipswich3.jpg","pictures/bangalore1.jpg",
-		"pictures/bangalore5.jpg","pictures/bangalore3.jpg","pictures/pune1.jpg","pictures/visitors0.jpg","pictures/visitors1.jpg","pictures/axaxl0.jpg","pictures/axaxl1.jpg","pictures/axaxl2.jpg","pictures/axaxl3.jpg")})
+		Pictures:new Array("pictures/brough3.jpg", "pictures/catlin0.jpg", "pictures/catlinTri2.jpg", "pictures/catlinTri0.jpg", "pictures/catlin1.jpg","pictures/hac0.jpg","pictures/Wellington.jpg","pictures/Ipswich2.jpg","pictures/ipswich3.jpg","pictures/bangalore1.jpg",
+		"pictures/bangalore6.jpg","pictures/bangalore3.jpg","pictures/pune1.jpg","pictures/visitors0.jpg","pictures/visitors1.jpg","pictures/axaxl0.jpg","pictures/axaxl1.jpg","pictures/axaxl2.jpg","pictures/axaxl3.jpg")})
 
 /*
 	pics.push({Dates: "", Business:"", Role:"", Pictures:new Array("pictures/0.jpg", "pictures/1.jpg")})
