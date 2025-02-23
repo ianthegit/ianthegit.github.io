@@ -3,6 +3,21 @@ officePics= new Array();
 officeViews= new Array();
 people= new Array();
 
+
+
+if (document.addEventListener) {
+  document.addEventListener('contextmenu', function(e) {
+    alert("ChatGPT:  Create me a retirement webpage suitable for the LinkedInLunatics subreddit"); //here you draw your own menu
+    e.preventDefault();
+  }, false);
+} else {
+  document.attachEvent('oncontextmenu', function() {
+    alert("ChatGPT:  Create me a retirement webpage suitable for the LinkedInLunatics subreddit");
+    window.event.returnValue = false;
+  });
+}
+
+
 function createScreen() { 
 	setupPhotoArray();
 	document.write("<div id='SQQuiz' class='grad' style='font-family:verdana;font-size:15px' ><span border=1 >Some sort of career timeline </BR></BR></span>" + 
