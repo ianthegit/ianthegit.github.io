@@ -32,7 +32,7 @@ function setupPhotoArray(){
 	pics.push({Dates: "1988-1989", Business:"British Aerospace", Role:"Apprentice riviter, Enemy fire damage application, HQ finance application", Pictures:new Array("pictures/brough0.jpg", "pictures/brough1.jpg")})
 	pics.push({Dates: "1989", Business:"Chappell Farm", Role:"Harrower", Pictures:new Array("pictures/harrow.jpg")})
 	pics.push({Dates: "1989-1994", Business:"Suffolk Country Council - Education Department", Role:"Developer, SCO Admin, Informix DBA", Pictures:new Array("pictures/countyHall0.jpg")})
-	pics.push({Dates: "1994-2025", Business:"Wellington Underwriting/Catlin/XL Catlin/AXA XL", Role:"Trainee Developer, Technical Architect, Developer, Technical Lead", Pictures:new Array("pictures/museumSt0.jpg", "pictures/mincing0.jpg", "pictures/mincing1.jpg", "pictures/gracechurch0.jpg")})
+	pics.push({Dates: "1994-2025", Business:"Wellington Underwriting/Catlin/XL Catlin/AXA XL", Role:"Trainee Developer, Technical Architect, Developer, Technical Lead", Pictures:new Array("pictures/museumSt0.jpg", "pictures/mincing0.jpg", "pictures/lloyds0.jpg", "pictures/mincing1.jpg", "pictures/cologne0.jpg", "pictures/gracechurch0.jpg", "pictures/ipswich0.jpg")})
 /*
 	pics.push({Dates: "", Business:"", Role:"", Pictures:new Array("pictures/0.jpg", "pictures/1.jpg")})
 	pics.push({Dates: "", Business:"", Role:"", Pictures:new Array("pictures/0.jpg", "pictures/1.jpg")})
