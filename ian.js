@@ -55,7 +55,7 @@ function setupPhotoArray(){
 	officePics.push({Dates: "1989", Business:"Chappell Farm", Role:"Harrower", Pictures:new Array("pictures/harrow.jpg")})
 	officePics.push({Dates: "1989-1994", Business:"Suffolk Country Council - Education Department", Role:"Developer, SCO Admin, Informix DBA", Pictures:new Array("pictures/countyHall0.jpg")})
 	officePics.push({Dates: "1994-2025", Business:"Wellington Underwriting/Catlin/XL Catlin/AXA XL", Role:"Trainee Developer, Technical Architect, Developer, Technical Lead", 
-		Pictures:new Array("pictures/museumSt0.jpg", "pictures/mincing0.jpg", "pictures/lloyds0.jpg", "pictures/mincing1.jpg", "pictures/cologne0.jpg", "pictures/gracechurch0.jpg", "pictures/ipswich0.jpg", "pictures/shed3.jpg")})
+		Pictures:new Array("pictures/museumSt0.jpg", "pictures/mincing0.jpg", "pictures/lloyds0.jpg", "pictures/mincing1.jpg", "pictures/cologne0.jpg", "pictures/gracechurch0.jpg", "pictures/leadenhallStDungeon.jpg", "pictures/ipswich0.jpg", "pictures/shed3.jpg")})
 
 	officeViews.push({Dates: "My career has given me the </BR>opportunity to see some amazing places,", Business:" sometimes out of the window", Role:"", 
 		Pictures:new Array("pictures/bangalore0.jpg", "pictures/bangalore2.jpg","pictures/ipswich1.jpg","pictures/neworleans0.jpg","pictures/pune0.jpg","pictures/pune3.jpg","pictures/sanFrancisco0.jpg","pictures/shed0.gif","pictures/shed1.jpg","pictures/shed2.jpg")})
