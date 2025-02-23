@@ -12,9 +12,9 @@ function createScreen() {
 	
 	"<table> <tr> <td><a href='mailto:ian" + 
 	"@hopgood.uk?subject=This is not about work, I promise&body=Hi, do you want a beer, I will pay all night'>eMail</a> " 
-	+"  </td> <td> &nbsp;   </td> <td>  <a href='https://www.instagram.com/" + "ianhoppo/'>Social</a> </rd></tr></table> </div>");
+	+"  </td> <td> &nbsp;   </td> <td>  <a href='https://www.instagram.com/" + "ianhoppo/'>Social</a> </td> <td> &nbsp;   </td> <td>  <a href='https://www.strava.com/athletes/" + "awesomest'>Biking</a> </td></tr></table> </div>");
 	}
-	
+	//https://www.strava.com/athletes/awesomest
 function writePhotoStory(pics) {
 	retString = "<table border=1 >";
 	for (var i = 0 ; i < pics.length ; i++) {
@@ -46,7 +46,7 @@ function setupPhotoArray(){
 		Pictures:new Array("pictures/bangalore0.jpg", "pictures/bangalore2.jpg","pictures/ipswich1.jpg","pictures/neworleans0.jpg","pictures/pune0.jpg","pictures/pune3.jpg","pictures/sanFrancisco0.jpg","pictures/shed0.gif","pictures/shed1.jpg","pictures/shed2.jpg")})
 
 	people.push({Dates: "Social events have changed ", Business:" over the years", Role:"", 
-		Pictures:new Array("pictures/brough3.jpg", "pictures/catlin0.jpg", "pictures/catlinTri0.jpg", "pictures/catlinTri1.jpg", "pictures/catlin1.jpg","pictures/hac0.jpg","pictures/Wellington.jpg","pictures/ipswich2.jpg","pictures/ipswich3.jpg","pictures/bangalore1.jpg","pictures/bangalore3.jpg","pictures/pune2.jpg","pictures/visitors0.jpg","pictures/visitors1.jpg")})
+		Pictures:new Array("pictures/brough3.jpg", "pictures/catlin0.jpg", "pictures/catlinTri0.jpg", "pictures/catlinTri1.jpg", "pictures/catlin1.jpg","pictures/hac0.jpg","pictures/Wellington.jpg","pictures/ipswich2.jpg","pictures/ipswich3.jpg","pictures/bangalore1.jpg","pictures/bangalore5.jpg","pictures/bangalore3.jpg","pictures/pune1.jpg","pictures/visitors0.jpg","pictures/visitors1.jpg")})
 
 /*
 	pics.push({Dates: "", Business:"", Role:"", Pictures:new Array("pictures/0.jpg", "pictures/1.jpg")})
