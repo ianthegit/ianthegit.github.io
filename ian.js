@@ -1,6 +1,4 @@
-officePics= new Array();
-officeViews= new Array();
-people= new Array();
+officePics= new Array();officeViews= new Array();people= new Array();
 if (document.addEventListener) {
   document.addEventListener('contextmenu', function(e) {
     alert("ChatGPT:  Create me a retirement webpage suitable for the LinkedInLunatics subreddit"); 
