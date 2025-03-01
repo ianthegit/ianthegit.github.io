@@ -21,7 +21,6 @@ function createScreen() {
 	writePhotoStory(officePics) + "</BR></BR> " + 
 	writePhotoStory(officeViews) + "</BR></BR> " + 
 	writePhotoStory(people) + "</BR></BR> " + 
-	
 	"<table> <tr> <td><a href='mailto:ian" + 
 	"@hopgood.uk?subject=This is not about work, I promise&body=Hi, do you want a beer, I will pay all night'>eMail</a> " 
 	+"  </td> <td> &nbsp;   </td> <td>  <a href='https://www.instagram.com/" + "ianhoppo/'>Social</a> </td> <td> &nbsp;   </td> <td>  <a href='https://www.strava.com/athletes/" + "awesomest'>Biking</a> </td></tr></table> </div>");
@@ -32,13 +31,11 @@ function writePhotoStory(pics) {
 	for (var i = 0 ; i < pics.length ; i++) {
 	retString = retString + "<tr><td align='top'>" + pics[i].Dates + "</BR></BR> " + pics[i].Business + "</td><td align='left'>" + pics[i].Role + "</BR></BR><span>";
 		for (var j = 0 ; j < pics[i].Pictures.length ; j++) {
-	
 			retString = retString + ' <a class="userBtnCareer" href="' + pics[i].Pictures[j] + '" target="_blank"> <img style="height:100%;width:100%;border:0;" src="' + pics[i].Pictures[j] + '" />  </a> ' 
 		}
 	retString = retString + "</span> </td>  </tr>"
 	}
 	retString = retString + "<table>";
-	
 	return retString;
 }	
 
@@ -53,5 +50,5 @@ function setupPhotoArray(){
 		Pictures:new Array("pictures/bangalore0.jpg", "pictures/bangalore2.jpg","pictures/ipswich1.jpg","pictures/catlin4.jpg","pictures/neworleans0.jpg","pictures/pune0.jpg","pictures/pune3.jpg","pictures/sanFrancisco0.jpg","pictures/AXAcouer2.jpg","pictures/shed0.gif","pictures/shed1.jpg","pictures/shed2.jpg")})
 	people.push({Dates: "Social events - beers or bikes for me", Business:"", Role:"", 
 		Pictures:new Array("pictures/brough3.jpg", "pictures/catlin2.jpg", "pictures/catlin3.jpg", "pictures/catlin5.jpg", "pictures/catlin6.jpg", "pictures/catlinTri2.jpg", "pictures/catlinTri0.jpg", "pictures/catlin1.jpg","pictures/hac0.jpg","pictures/Wellington.jpg","pictures/Ipswich2.jpg","pictures/ipswich3.jpg","pictures/bangalore1.jpg",
-		"pictures/bangalore6.jpg","pictures/bangalore3.jpg","pictures/pune1.jpg","pictures/visitors0.jpg","pictures/visitors1.jpg", "pictures/gracechurch1.jpg","pictures/axaxl0.jpg","pictures/axaxl1.jpg","pictures/axaxl2.jpg","pictures/axaxl3.jpg","pictures/AXAcouer0.jpg","pictures/AXAcouer1.jpg","pictures/AXAcouer3.png")})
+		"pictures/bangalore6.jpg","pictures/bangalore3.jpg","pictures/pune1.jpg","pictures/visitors0.jpg","pictures/visitors1.jpg", "pictures/gracechurch1.jpg","pictures/axaxl0.jpg","pictures/axaxl1.jpg","pictures/axaxl2.jpg","pictures/axaxl3.jpg","pictures/AXAcouer0.jpg","pictures/AXAcouer1.jpg","pictures/AXAcouer3.png","pictures/london2Paris.jpeg")})
 }
