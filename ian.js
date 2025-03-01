@@ -22,21 +22,20 @@ function createScreen() {
 	writePhotoStory(officeViews) + "</BR></BR> " + 
 	writePhotoStory(people) + "</BR></BR> " + 
 	"<table> <tr> <td><a href='mailto:ian" + 
-	"@hopgood.uk?subject=This is not about work, I promise&body=Hi, do you want a beer, I will pay all night'>eMail</a> " 
+	"@" + "hopgood.uk?subject=This is not about work, I promise&body=Hi, do you want a beer, I will pay all night'>eMail</a> " 
 	+"  </td> <td> &nbsp;   </td> <td>  <a href='https://www.instagram.com/" + "ianhoppo/'>Social</a> </td> <td> &nbsp;   </td> <td>  <a href='https://www.strava.com/athletes/" + "awesomest'>Biking</a> </td></tr></table> </div>");
 	}
 
 function writePhotoStory(pics) {
 	retString = "<table border=1 >";
 	for (var i = 0 ; i < pics.length ; i++) {
-	retString = retString + "<tr><td align='top'>" + pics[i].Dates + "</BR></BR> " + pics[i].Business + "</td><td align='left'>" + pics[i].Role + "</BR></BR><span>";
+		retString = retString + "<tr><td align='top'>" + pics[i].Dates + "</BR></BR> " + pics[i].Business + "</td><td align='left'>" + pics[i].Role + "</BR></BR><span>";
 		for (var j = 0 ; j < pics[i].Pictures.length ; j++) {
 			retString = retString + ' <a class="userBtnCareer" href="' + pics[i].Pictures[j] + '" target="_blank"> <img style="height:100%;width:100%;border:0;" src="' + pics[i].Pictures[j] + '" />  </a> ' 
 		}
-	retString = retString + "</span> </td>  </tr>"
+		retString = retString + "</span> </td>  </tr>"
 	}
-	retString = retString + "<table>";
-	return retString;
+	return retString + "<table>";
 }	
 
 function setupPhotoArray(){
