@@ -10,13 +10,21 @@ if (document.addEventListener) {
 function createScreen() { 
 	setupPhotoArray();
 	document.write("<div id='SQQuiz' class='grad' style='font-family:verdana;font-size:15px' ><span border=1 >Some sort of career timeline </BR></BR></span>" + 
-	writePhotoStory(officePics) + "</BR></BR> " +  writePhotoStory(officeViews) + "</BR></BR> " + 	writePhotoStory(people) + "</BR></BR> " + 
+	writePhotoStory(officePics) + "</BR></BR> " +  writePhotoList(officeViews) + "</BR></BR> " + 	writePhotoList(people) + "</BR></BR> " + 
 	"<table> <tr> <td><a href='mailto:ian" + "@" + "hopgood.uk?subject=This is not about work, I promise&body=Hi, do you want a beer, I will pay all night'>eMail</a> " 
 	+"  </td> <td> &nbsp;   </td> <td>  <a href='https://www.instagram.com/" + "ianhoppo/'>Social</a> </td> <td> &nbsp;   </td> <td>  <a href='https://www.strava.com/athletes/" + "awesomest'>Biking</a> </td></tr></table> </div>");	}
 function writePhotoStory(pics) {
 	retString = "<table border=1 >";
 	for (var i = 0 ; i < pics.length ; i++) {
 		retString = retString + "<tr><td align='top'>" + pics[i].Dates + "</BR></BR> " + pics[i].Business + "</td><td align='left'>" + pics[i].Role + "</BR></BR><span>";
+		for (var j = 0 ; j < pics[i].Pictures.length ; j++) {
+			retString = retString + ' <a class="userBtnCareer" href="' + pics[i].Pictures[j] + '" target="_blank"> <img style="height:100%;width:100%;border:0;" src="' + pics[i].Pictures[j] + '" />  </a> ' 		}
+		retString = retString + "</span> </td>  </tr>"	}
+	return retString + "<table>";}	
+function writePhotoList(pics) {
+	retString = " <table border=0 > ";
+	for (var i = 0 ; i < pics.length ; i++) {
+		retString = retString + " <tr><td align='left'>" + pics[i].Dates + "</BR></BR><span>";
 		for (var j = 0 ; j < pics[i].Pictures.length ; j++) {
 			retString = retString + ' <a class="userBtnCareer" href="' + pics[i].Pictures[j] + '" target="_blank"> <img style="height:100%;width:100%;border:0;" src="' + pics[i].Pictures[j] + '" />  </a> ' 		}
 		retString = retString + "</span> </td>  </tr>"	}
