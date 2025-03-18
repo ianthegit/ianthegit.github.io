@@ -40,4 +40,4 @@ function setupPhotoArray(){
 		Pictures:new Array("bangalore0.jpg", "bangalore2.jpg","ipswich1.jpg","catlin4.jpg","neworleans0.jpg","pune0.jpg","pune3.jpg","sanFrancisco0.jpg","AXAcouer2.jpg","shed0.gif","shed1.jpg","shed2.jpg")})
 	people.push({Dates: "Beers and bikes have always managed to make an appearance", Business:"", Role:"", 
 		Pictures:new Array("brough3.jpg", "catlin2.jpg", "catlin3.jpg", "catlin5.jpg", "catlin6.jpg", "catlinTri2.jpg", "catlinTri0.jpg", "catlin1.jpg","hac0.jpg","Wellington.jpg","Ipswich2.jpg","ipswich3.jpg","bangalore1.jpg",
-		"bangalore6.jpg","bangalore3.jpg","pune1.jpg","visitors0.jpg","visitors1.jpg", "gracechurch1.jpg","AXAcouer1.jpg","AXAcouer0.png","axaxl0.jpg","axaxl1.jpg","axaxl2.jpg","axaxl3.jpg","AXAcouer3.jpg","london2Paris.jpeg")})}
+		"bangalore6.jpg","bangalore3.jpg","pune1.jpg","visitors0.jpg","visitors1.jpg", "gracechurch1.jpg","AXAcouer0.jpg","AXAcouer1.jpg","axaxl0.jpg","axaxl1.jpg","axaxl2.jpg","axaxl3.jpg","AXAcouer3.png","london2Paris.jpeg")})}
