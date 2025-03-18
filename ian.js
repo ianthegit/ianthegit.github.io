@@ -37,7 +37,7 @@ function setupPhotoArray(){
 	officePics.push({Dates: "1994-2025", Business:"Wellington Underwriting/Catlin/XL Catlin/AXA XL", Role:"Trainee Developer, Technical Architect, Developer, Technical Lead: OpenROAD, ABF, Java", 
 		Pictures:new Array("museumSt0.jpg", "mincing0.jpg", "lloyds0.jpg", "mincing1.jpg", "cologne0.jpg", "gracechurch0.jpg", "leadenhallStDungeon.jpg", "ipswich0.jpg", "shed3.jpg")})
 	officeViews.push({Dates: "My career has given me the opportunity to travel on 3 continents, see some amazing places and things, sometimes simply out of the window", Business:"", Role:"", 
-		Pictures:new Array("bangalore0.jpg", "bangalore2.jpg","ipswich1.jpg","catlin4.jpg","neworleans0.jpg","pune0.jpg","pune3.jpg","sanFrancisco0.jpg","AXAcouer2.jpg","shed0.gif","shed1.jpg","shed2.jpg")})
+		Pictures:new Array("bangalore0.jpg", "bangalore2.jpg","ipswich1.jpg","catlin4.jpg","neworleans0.jpg","pune3.jpg","sanFrancisco0.jpg","AXAcouer2.jpg","pune0.jpg","shed0.gif","shed1.jpg","shed2.jpg")})
 	people.push({Dates: "Beers and bikes have always managed to make an appearance", Business:"", Role:"", 
 		Pictures:new Array("brough3.jpg", "catlin2.jpg", "catlin3.jpg", "catlin5.jpg", "catlin6.jpg", "catlinTri2.jpg", "catlinTri0.jpg", "catlin1.jpg","hac0.jpg","Wellington.jpg","Ipswich2.jpg","ipswich3.jpg","bangalore1.jpg",
 		"bangalore6.jpg","bangalore3.jpg","pune1.jpg","visitors0.jpg","visitors1.jpg", "gracechurch1.jpg","AXAcouer0.jpg","AXAcouer1.jpg","axaxl0.jpg","axaxl1.jpg","axaxl2.jpg","axaxl3.jpg","AXAcouer3.png","london2Paris.jpeg")})}
