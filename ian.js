@@ -10,9 +10,11 @@ if (document.addEventListener) {
 function createScreen() { 
 	setupPhotoArray();
 	document.write("<div id='SQQuiz' class='grad' style='font-family:verdana;font-size:15px' ><span border=1 >Some sort of career timeline </BR></BR></span>" + 
-	writePhotoStory(officePics) + "</BR></BR> " +  writePhotoList(officeViews) + "</BR></BR> " + 	writePhotoList(people) + "</BR></BR> " +	//writeVideoTabs(videos) + 	writeVideoDivs(videos) +
+	writePhotoStory(officePics) + "</BR></BR> " +  writePhotoList(officeViews) + "</BR></BR> " + 	writePhotoList(people) + "</BR></BR> " +
+	"As for what next - more of this: </BR></BR>" + writeVideoTabs(videos) + writeVideoDivs(videos) + '</BR></BR>' +
 	"<table> <tr> <td><a href='mailto:ian" + "@" + "hopgood.uk?subject=This is not about work, I promise&body=Want a beer, I will pay?'>eMail</a> " 
-	+"  </td> <td> &nbsp;   </td> <td>  <a href='https://www.instagram.com/" + "ianhoppo/'>Social</a> </td> <td> &nbsp;   </td> <td>  <a href='https://www.strava.com/athletes/" + "awesomest'>Biking</a> </td></tr></table> </div>");	}
+	+"  </td> <td> &nbsp;   </td> <td>  <a href='https://www.instagram.com/" + "ianhoppo/'>Social</a> </td> <td> &nbsp;   </td> <td>  <a href='https://www.strava.com/athletes/" + "awesomest'>Biking</a> </td></tr></table> </div>");	
+	document.getElementById("defaultOpen").click();}
 function writePhotoStory(pics) {
 	retString = "<table border=1 >";
 	for (var i = 0 ; i < pics.length ; i++) {
@@ -30,7 +32,7 @@ function writePhotoList(pics) {
 		writePics(pics, i);	}
 	return retString + "<table>";}	
 	
-function openCity(evt, cityName) {
+function openRide(evt, rideName) {
   // Declare all variables
   var i, tabcontent, tablinks;
 
@@ -47,18 +49,18 @@ function openCity(evt, cityName) {
   }
 
   // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(cityName).style.display = "block";
+  document.getElementById(rideName).style.display = "block";
   evt.currentTarget.className += " active";
 }
 
 function writeVideoTabs(videos) {
-	retString = "<div class='tab'>";
-	for (var i = 0 ; i < videos.length ; i++) {
-		retString = retString + "<button class='tablinks' onclick='openCity(event, '" + videos[i].Description + "')' ";
-		if (i=1) {
-			retString = retString + ' id="defaultOpen "';
+	retString = '<div class="tab">';
+	for (var j = 0 ; j < videos.length ; j++) {
+		retString = retString + '<button class="tablinks" onclick="openRide(event, \'' + videos[j].Description + '\')" ';
+		if (j==0) {
+			retString = retString + ' id="defaultOpen"';
 		}
-		retString = retString + '>' + videos[i].Description + '</button>';
+		retString = retString + '>' + videos[j].Description + '</button>';
 	}
 
 	return retString + "</div>";}	
@@ -66,39 +68,12 @@ function writeVideoTabs(videos) {
 function writeVideoDivs(videos) {
 	tabDivString = '';
 	for (var i = 0 ; i < videos.length ; i++) {
-		tabDivString = tabDivString + "<div id='" + videos[i].Description + '" class="tabcontent">  <iframe width="1120" height="630" src="https://www.youtube.com/embed/' + videos[i].EmbedCode +
+		tabDivString = tabDivString + '<div id="' + videos[i].Description + '" class="tabcontent">  <iframe width="1120" height="630" src="https://www.youtube.com/embed/' + videos[i].EmbedCode +
 		'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>'
 	}
 
 	return tabDivString ;}	
 	
-	
-/*
-
-
-<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'Reel 1')" id="defaultOpen">Reels 1 - 6</button>
-  <button class="tablinks" onclick="openCity(event, 'Reel 2')">Reels 7 - 14</button>
-  <button class="tablinks" onclick="openCity(event, 'Reel 3')">Reels 15 - 25</button>
-</div>
-
-<!-- Tab content -->
-<div id="Reel 1" class="tabcontent">
-  <iframe width="1120" height="630" src="https://www.youtube.com/embed/axGs4Q4QAg0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
-<div id="Reel 2" class="tabcontent">
-  <iframe width="1120" height="630" src="https://www.youtube.com/embed/g-aKfVh_gz4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
-<div id="Reel 3" class="tabcontent">
-  <iframe width="1120" height="630" src="https://www.youtube.com/embed/Gyxzd1q2-Jw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
-*/
-
-
-
 
 function setupPhotoArray(){
 	officePics.push({Dates: "1979-1988", Business:"Hopgoods", Role:"Carpet sales, lingerie sales, carpet fitting, deliveries, cashing up, banking", Pictures:new Array("hopgoods2.jpg", "hopgoods1.jpg","hopgoods0.jpg")})
@@ -112,7 +87,13 @@ function setupPhotoArray(){
 	people.push({Dates: "Beers and bikes have always managed to make an appearance", Business:"", Role:"", 
 		Pictures:new Array("brough3.jpg", "catlin2.jpg", "catlin3.jpg", "catlin5.jpg", "catlin6.jpg", "catlinTri2.jpg", "catlinTri0.jpg", "catlin1.jpg","hac0.jpg","Wellington.jpg","Ipswich2.jpg","ipswich3.jpg","bangalore1.jpg",
 		"bangalore6.jpg","bangalore3.jpg","pune1.jpg","visitors0.jpg","visitors1.jpg", "gracechurch1.jpg","AXAcouer0.jpg","AXAcouer1.jpg","axaxl0.jpg","axaxl1.jpg","axaxl2.jpg","axaxl3.jpg","AXAcouer3.png","london2Paris.jpeg")})
-	videos.push({Description:"Reel1", EmbedCode:"axGs4Q4QAg0"})
-	videos.push({Description:"Reel2", EmbedCode:"g-aKfVh_gz4"})
-	videos.push({Description:"Reel3", EmbedCode:"Gyxzd1q2-Jw"})
+	videos.push({Description:"Woodbridge 2 Lowestoft", EmbedCode:"e2xMkQb-etI?"})
+	videos.push({Description:"Debenham", EmbedCode:"f20-aiGl1oQ?"})
+	videos.push({Description:"Night", EmbedCode:"0FFiyXiGDLE?"})
+	videos.push({Description:"Forest", EmbedCode:"kVP7jAZxz6Q?"})
+	videos.push({Description:"Green Lanes", EmbedCode:"s7ZmRPLqspY?"})
+	videos.push({Description:"Ruff Stuff", EmbedCode:"h92l9AlTh0E?"})
+	videos.push({Description:"RSPB", EmbedCode:"J4bl5RQ8Tsg?"})
+	videos.push({Description:"Forest Explore", EmbedCode:"JHTkmXW_0Hw?"})
 	}
+	
