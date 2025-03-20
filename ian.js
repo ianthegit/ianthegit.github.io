@@ -10,7 +10,7 @@ if (document.addEventListener) {
 function createScreen() { 
 	setupPhotoArray();
 	document.write("<div id='SQQuiz' class='grad' style='font-family:verdana;font-size:15px' ><span border=1 >Some sort of career timeline </BR></BR></span>" + 
-	writePhotoStory(officePics) + "</BR></BR> " +  writePhotoList(officeViews) + "</BR></BR> " + 	writePhotoList(people) + "</BR></BR> " + 
+	writePhotoStory(officePics) + "</BR></BR> " +  writePhotoList(officeViews) + "</BR></BR> " + 	writePhotoList(people) + "</BR></BR> " +	//writeVideoTabs(videos) + 	writeVideoDivs(videos) +
 	"<table> <tr> <td><a href='mailto:ian" + "@" + "hopgood.uk?subject=This is not about work, I promise&body=Want a beer, I will pay?'>eMail</a> " 
 	+"  </td> <td> &nbsp;   </td> <td>  <a href='https://www.instagram.com/" + "ianhoppo/'>Social</a> </td> <td> &nbsp;   </td> <td>  <a href='https://www.strava.com/athletes/" + "awesomest'>Biking</a> </td></tr></table> </div>");	}
 function writePhotoStory(pics) {
@@ -52,16 +52,16 @@ function openCity(evt, cityName) {
 }
 
 function writeVideoTabs(videos) {
-	tabDivString = "<div class='tab'>";
+	retString = "<div class='tab'>";
 	for (var i = 0 ; i < videos.length ; i++) {
-		tabDivString = tabDivString + "<button class='tablinks' onclick='openCity(event, '" + videos[i].Description + ")' ";
+		retString = retString + "<button class='tablinks' onclick='openCity(event, '" + videos[i].Description + "')' ";
 		if (i=1) {
-			tabDivString = tabDivString + ' id="defaultOpen "'
+			retString = retString + ' id="defaultOpen "';
 		}
-		tabDivString = tabDivString + '>' + videos[i].Description + '</button>';
+		retString = retString + '>' + videos[i].Description + '</button>';
 	}
 
-	return tabDivString + "</div>";}	
+	return retString + "</div>";}	
 	
 function writeVideoDivs(videos) {
 	tabDivString = '';
@@ -112,7 +112,7 @@ function setupPhotoArray(){
 	people.push({Dates: "Beers and bikes have always managed to make an appearance", Business:"", Role:"", 
 		Pictures:new Array("brough3.jpg", "catlin2.jpg", "catlin3.jpg", "catlin5.jpg", "catlin6.jpg", "catlinTri2.jpg", "catlinTri0.jpg", "catlin1.jpg","hac0.jpg","Wellington.jpg","Ipswich2.jpg","ipswich3.jpg","bangalore1.jpg",
 		"bangalore6.jpg","bangalore3.jpg","pune1.jpg","visitors0.jpg","visitors1.jpg", "gracechurch1.jpg","AXAcouer0.jpg","AXAcouer1.jpg","axaxl0.jpg","axaxl1.jpg","axaxl2.jpg","axaxl3.jpg","AXAcouer3.png","london2Paris.jpeg")})
-	videos.push({Description: "Reel 1", EmbedCode: "axGs4Q4QAg0"})
-	videos.push({Description: "Reel 2", EmbedCode: "g-aKfVh_gz4"})
-	videos.push({Description: "Reel 3", EmbedCode: "Gyxzd1q2-Jw"})
+	videos.push({Description:"Reel1", EmbedCode:"axGs4Q4QAg0"})
+	videos.push({Description:"Reel2", EmbedCode:"g-aKfVh_gz4"})
+	videos.push({Description:"Reel3", EmbedCode:"Gyxzd1q2-Jw"})
 	}
