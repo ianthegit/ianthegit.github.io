@@ -31,50 +31,29 @@ function writePhotoList(pics) {
 		retString = retString + " <tr><td align='left'>" + pics[i].Dates + "</BR></BR><span>";
 		writePics(pics, i);	}
 	return retString + "<table>";}	
-	
 function openRide(evt, rideName) {
-  // Declare all variables
   var i, tabcontent, tablinks;
-
-  // Get all elements with class="tabcontent" and hide them
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-
-  // Get all elements with class="tablinks" and remove the class "active"
+    tabcontent[i].style.display = "none";  }
   tablinks = document.getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-
-  // Show the current tab, and add an "active" class to the button that opened the tab
+    tablinks[i].className = tablinks[i].className.replace(" active", "");  }
   document.getElementById(rideName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-
+  evt.currentTarget.className += " active";}
 function writeVideoTabs(videos) {
 	retString = '<div class="tab">';
 	for (var j = 0 ; j < videos.length ; j++) {
 		retString = retString + '<button class="tablinks" onclick="openRide(event, \'' + videos[j].Description + '\')" ';
-		if (j==0) {
-			retString = retString + ' id="defaultOpen"';
-		}
-		retString = retString + '>' + videos[j].Description + '</button>';
-	}
-
+		if (j==0) {	retString = retString + ' id="defaultOpen"'; }
+		retString = retString + '>' + videos[j].Description + '</button>';	}
 	return retString + "</div>";}	
-	
 function writeVideoDivs(videos) {
 	tabDivString = '';
 	for (var i = 0 ; i < videos.length ; i++) {
 		tabDivString = tabDivString + '<div id="' + videos[i].Description + '" class="tabcontent">  <iframe width="1120" height="630" src="https://www.youtube.com/embed/' + videos[i].EmbedCode +
-		'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>'
-	}
-
+		'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>'	}
 	return tabDivString ;}	
-	
-
 function setupPhotoArray(){
 	officePics.push({Dates: "1979-1988", Business:"Hopgoods", Role:"Carpet sales, lingerie sales, carpet fitting, deliveries, cashing up, banking", Pictures:new Array("hopgoods2.jpg", "hopgoods1.jpg","hopgoods0.jpg")})
 	officePics.push({Dates: "1988-1989", Business:"British Aerospace", Role:"Apprentice riviter, Enemy fire damage application, HQ finance application - Pascal, Fortran, QuickBasic, DB2", Pictures:new Array("brough0.jpg", "brough1.jpg", "brough2.jpg", "BAEtheStrand.jpg")})
@@ -95,5 +74,6 @@ function setupPhotoArray(){
 	videos.push({Description:"Ruff Stuff", EmbedCode:"h92l9AlTh0E?"})
 	videos.push({Description:"RSPB", EmbedCode:"J4bl5RQ8Tsg?"})
 	videos.push({Description:"Forest Explore", EmbedCode:"JHTkmXW_0Hw?"})
+	videos.push({Description:"Commute no more", EmbedCode:"kCkA7Ofdd4k?"})
 	}
 	
