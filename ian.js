@@ -67,5 +67,6 @@ function setupPhotoArray(){
 	videos.push({Description:"RSPB", EmbedCode:"J4bl5RQ8Tsg?"})
 	videos.push({Description:"Forest Explore", EmbedCode:"JHTkmXW_0Hw?"})
 	videos.push({Description:"Commute no more", EmbedCode:"kCkA7Ofdd4k?"})
+	videos.push({Description:"Rooley Moor", EmbedCode:"KTsNVflnd08?"})
 	}
 	
