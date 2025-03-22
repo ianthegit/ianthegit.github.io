@@ -3,7 +3,7 @@ function createScreen() {
 	setupPhotoArray();
 	document.write("<div id='SQQuiz' class='grad' style='font-family:verdana;font-size:15px' ><span border=1 >Some sort of career timeline </BR></BR></span>" + 
 	writePhotoStory(officePics) + "</BR></BR> " +  writePhotoList(officeViews) + "</BR></BR> " + 	writePhotoList(people) + "</BR></BR> " +
-	"As for what next - more of this: </BR></BR>" + writeVideoTabs(videos) + writeVideoDivs(videos) + '</BR></BR>' +
+	"As for what next - more of this: </BR></BR>" + writeVideoTabs(videos) + writeVideoDivs(videos) + '</BR></BR>' +writePhotoList(fam) + "</BR></BR> " +
 	"<table> <tr> <td><a href='mailto:ian" + "@" + "hopgood.uk?subject=This is not about work, I promise&body=Want a beer, I will pay?'>eMail</a> " 
 	+"  </td> <td> &nbsp;   </td> <td>  <a href='https://www.instagram.com/" + "ianhoppo/'>Social</a> </td> <td> &nbsp;   </td> <td>  <a href='https://www.strava.com/athletes/" + "awesomest'>Biking</a> </td></tr></table> </div>");	
 	document.getElementById("defaultOpen").click();}
@@ -69,6 +69,6 @@ function setupPhotoArray(){
 	videos.push({Description:"Commute no more", EmbedCode:"kCkA7Ofdd4k?"})
 	videos.push({Description:"Rooley Moor", EmbedCode:"KTsNVflnd08?"})
 	fam.push({Dates: "And a lot more time with this bunch", Business:"", Role:"", 
-		Pictures:new Array("famSinging.gif","fam0.jpg","fam1.jpg","fam2.jpg","fam3.jpg","fam4.jpg","fam5.jpg","fam6.jpg","fam7.jpg","fam8.jpg")})
+		Pictures:new Array("famSinging.gif","fam0.jpg","fam1.jpg","fam2.jpg","fam3.jpg","fam4.jpg","fam5.jpg","fam6.jpg","fam7.jpg")})
 	}
 	
