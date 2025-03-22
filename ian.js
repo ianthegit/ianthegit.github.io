@@ -51,7 +51,7 @@ function writeVideoTabs(videos) {
 function writeVideoDivs(videos) {
 	tabDivString = '';
 	for (var i = 0 ; i < videos.length ; i++) {
-		tabDivString = tabDivString + '<div id="' + videos[i].Description + '" class="tabcontent">  <iframe width="1120" height="630" src="https://www.youtube.com/embed/' + videos[i].EmbedCode +
+		tabDivString = tabDivString + '<div id="' + videos[i].Description + '" class="tabcontent">  <iframe src="https://www.youtube.com/embed/' + videos[i].EmbedCode +
 		'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>'	}
 	return tabDivString ;}	
 function setupPhotoArray(){
