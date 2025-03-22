@@ -47,7 +47,7 @@ function writeVideoDivs(videos) {
 		'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>'	}
 	return tabDivString ;}	
 function setupPhotoArray(){
-	officePics.push({Dates: "1979-1988", Business:"Hopgoods", Role:"Carpet sales, lingerie sales, carpet fitting, deliveries, cashing up, banking", Pictures:new Array("hopgoods2.jpg", "hopgoods1.jpg","hopgoods0.jpg")})
+	officePics.push({Dates: "1979-1988", Business:"Hopgoods", Role:"Carpet sales, lingerie sales, furniture sales, homeware sales, lino cutting, deliveries, data entry, cashing up, banking", Pictures:new Array("hopgoods2.jpg", "hopgoods1.jpg","hopgoods0.jpg")})
 	officePics.push({Dates: "1988-1989", Business:"British Aerospace", Role:"Apprentice riviter, Enemy fire damage application, HQ finance application - Pascal, Fortran, QuickBasic, DB2", Pictures:new Array("brough0.jpg", "brough1.jpg", "brough2.jpg", "BAEtheStrand.jpg")})
 	officePics.push({Dates: "1989", Business:"Chappell Farm", Role:"Harrower", Pictures:new Array("harrow.jpg")})
 	officePics.push({Dates: "1989-1994", Business:"Suffolk Country Council - Education Department", Role:"Developer, SCO Admin, Informix DBA: Informix4GL, SQL, Shell scripting", Pictures:new Array("countyHall0.jpg")})
