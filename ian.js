@@ -1,12 +1,4 @@
 officePics= new Array();officeViews= new Array();people= new Array();videos= new Array();
-if (document.addEventListener) {
-  document.addEventListener('contextmenu', function(e) {
-    alert("Are you really doing a code review of me now?  :)"); 
-    e.preventDefault(); }, false);
-} else {
-  document.attachEvent('oncontextmenu', function() {
-    alert("Are you really doing a code review of me now? :)");
-    window.event.returnValue = false;  });}
 function createScreen() { 
 	setupPhotoArray();
 	document.write("<div id='SQQuiz' class='grad' style='font-family:verdana;font-size:15px' ><span border=1 >Some sort of career timeline </BR></BR></span>" + 
