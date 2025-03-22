@@ -1,4 +1,4 @@
-officePics= new Array();officeViews= new Array();people= new Array();videos= new Array();
+officePics= new Array();officeViews= new Array();people= new Array();videos= new Array();fam= new Array();
 function createScreen() { 
 	setupPhotoArray();
 	document.write("<div id='SQQuiz' class='grad' style='font-family:verdana;font-size:15px' ><span border=1 >Some sort of career timeline </BR></BR></span>" + 
@@ -68,5 +68,7 @@ function setupPhotoArray(){
 	videos.push({Description:"Forest Explore", EmbedCode:"JHTkmXW_0Hw?"})
 	videos.push({Description:"Commute no more", EmbedCode:"kCkA7Ofdd4k?"})
 	videos.push({Description:"Rooley Moor", EmbedCode:"KTsNVflnd08?"})
+	fam.push({Dates: "And a lot more time with this bunch", Business:"", Role:"", 
+		Pictures:new Array("famSinging.gif","fam0.jpg","fam1.jpg","fam2.jpg","fam3.jpg","fam4.jpg","fam5.jpg","fam6.jpg","fam7.jpg","fam8.jpg")})
 	}
 	
