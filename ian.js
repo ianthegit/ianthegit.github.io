@@ -69,6 +69,6 @@ function setupPhotoArray(){
 	videos.push({Description:"Commute no more", EmbedCode:"kCkA7Ofdd4k?"})
 	videos.push({Description:"Rooley Moor", EmbedCode:"KTsNVflnd08?"})
 	fam.push({Dates: "And a lot more time with this bunch", Business:"", Role:"", 
-		Pictures:new Array("famSinging.gif","fam0.jpg","fam1.jpg","fam2.jpg","fam3.jpg","fam4.jpg","fam5.jpg","fam6.jpg","fam7.jpg")})
+		Pictures:new Array("famSinging.gif","fam1.jpg","fam3.jpg","fam4.jpg","fam5.jpg","fam6.jpg","fam7.jpg","fam0.jpg","fam2.jpg")})
 	}
 	
