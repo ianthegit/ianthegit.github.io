@@ -49,7 +49,7 @@ function writeVideoDivs(videos) {
 function setupPhotoArray(){
 	officePics.push({Dates: "1979-1988", Business:"Hopgoods </BR></BR>Stowmarket", Role:"Carpet sales, lingerie sales, furniture sales, homeware sales, lino cutting, deliveries, data entry, cashing up, banking", Pictures:new Array("hopgoods2.jpg", "hopgoods1.jpg","hopgoods0.jpg")})
 	officePics.push({Dates: "1988-1989", Business:"British Aerospace </BR></BR>Brough, The Strand", Role:"Apprentice riviter, Enemy fire damage application, HQ finance application - Pascal, Fortran, QuickBasic, DB2", Pictures:new Array("brough0.jpg", "brough1.jpg", "brough2.jpg", "BAEtheStrand.jpg")})
-	officePics.push({Dates: "1989", Business:"Chappell Farm", Role:"Harrower", Pictures:new Array("harrow.jpg")})
+	officePics.push({Dates: "1989", Business:"Chappell Farm </BR></BR> Stowupland", Role:"Harrower", Pictures:new Array("harrow.jpg")})
 	officePics.push({Dates: "1989-1994", Business:"Suffolk Country Council - Education Department </BR></BR>Ipswich", Role:"Developer, SCO Admin, Informix DBA: Informix4GL, SQL, Shell scripting", Pictures:new Array("countyHall0.jpg")})
 	officePics.push({Dates: "1994-2007", Business:"Wellington Underwriting </BR></BR>Ipswich, London, San Francisco, Oakland, New Orleans", Role:"Trainee Developer, Technical Architect: OpenROAD, ABF", 
 		Pictures:new Array("museumSt0.jpg", "mincing0.jpg", "lloyds0.jpg", "leadenhallSt.png", "sanFran1.png")})
