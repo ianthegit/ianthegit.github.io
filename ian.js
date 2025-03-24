@@ -51,8 +51,10 @@ function setupPhotoArray(){
 	officePics.push({Dates: "1988-1989", Business:"British Aerospace", Role:"Apprentice riviter, Enemy fire damage application, HQ finance application - Pascal, Fortran, QuickBasic, DB2", Pictures:new Array("brough0.jpg", "brough1.jpg", "brough2.jpg", "BAEtheStrand.jpg")})
 	officePics.push({Dates: "1989", Business:"Chappell Farm", Role:"Harrower", Pictures:new Array("harrow.jpg")})
 	officePics.push({Dates: "1989-1994", Business:"Suffolk Country Council - Education Department", Role:"Developer, SCO Admin, Informix DBA: Informix4GL, SQL, Shell scripting", Pictures:new Array("countyHall0.jpg")})
-	officePics.push({Dates: "1994-2025", Business:"Wellington Underwriting/Catlin/XL Catlin/AXA XL", Role:"Trainee Developer, Technical Architect, Developer, Technical Lead: OpenROAD, ABF, Java", 
-		Pictures:new Array("museumSt0.jpg", "mincing0.jpg", "lloyds0.jpg", "mincing1.jpg", "cologne0.jpg", "gracechurch0.jpg", "leadenhallStDungeon.jpg", "ipswich0.jpg", "shed3.jpg")})
+	officePics.push({Dates: "1994-2007", Business:"Wellington Underwriting", Role:"Trainee Developer, Technical Architect: OpenROAD, ABF", 
+		Pictures:new Array("museumSt0.jpg", "mincing0.jpg", "lloyds0.jpg", "leadenhallSt.png")})
+	officePics.push({Dates: "2007-2025", Business:"Catlin/XL Catlin/AXA XL", Role:"Developer, Technical Lead: Java", 
+		Pictures:new Array("mincing1.jpg", "cologne0.jpg", "lloyds1.jpg", "gracechurch0.jpg", "leadenhallStDungeon.jpg", "ipswich0.jpg", "shed3.jpg")})
 	officeViews.push({Dates: "My career has given me the opportunity to travel on 3 continents, see some amazing places and things, sometimes simply out of the window", Business:"", Role:"", 
 		Pictures:new Array("bangalore0.jpg", "bangalore2.jpg","ipswich1.jpg","catlin4.jpg","neworleans0.jpg","pune3.jpg","sanFrancisco0.jpg","AXAcouer2.jpg","pune0.jpg","shed0.gif","shed1.jpg","shed2.jpg")})
 	people.push({Dates: "Beers and bikes have always managed to make an appearance", Business:"", Role:"", 
@@ -68,5 +70,5 @@ function setupPhotoArray(){
 	videos.push({Description:"Forest Explore", EmbedCode:"JHTkmXW_0Hw?"})
 	videos.push({Description:"Commute no more", EmbedCode:"kCkA7Ofdd4k?"})
 	videos.push({Description:"Rooley Moor", EmbedCode:"KTsNVflnd08?"})
-	fam.push({Dates: "And a lot more time with this bunch", Business:"", Role:"", Pictures:new Array("famSinging.gif","fam1.jpg","fam3.jpg","fam4.jpg","fam5.jpg","fam6.jpg","fam7.jpg","fam0.jpg","fam2.jpg")})}
+	fam.push({Dates: "And a lot more time with this bunch", Business:"", Role:"", Pictures:new Array("fam1.jpg","famSinging.gif","fam3.jpg","fam4.jpg","fam5.jpg","fam6.jpg","fam7.jpg","fam0.jpg","fam2.jpg")})}
 	
