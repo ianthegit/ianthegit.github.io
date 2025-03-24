@@ -47,13 +47,13 @@ function writeVideoDivs(videos) {
 		'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>'	}
 	return tabDivString ;}	
 function setupPhotoArray(){
-	officePics.push({Dates: "1979-1988", Business:"Hopgoods", Role:"Carpet sales, lingerie sales, furniture sales, homeware sales, lino cutting, deliveries, data entry, cashing up, banking", Pictures:new Array("hopgoods2.jpg", "hopgoods1.jpg","hopgoods0.jpg")})
-	officePics.push({Dates: "1988-1989", Business:"British Aerospace", Role:"Apprentice riviter, Enemy fire damage application, HQ finance application - Pascal, Fortran, QuickBasic, DB2", Pictures:new Array("brough0.jpg", "brough1.jpg", "brough2.jpg", "BAEtheStrand.jpg")})
+	officePics.push({Dates: "1979-1988", Business:"Hopgoods </BR></BR>Stowmarket", Role:"Carpet sales, lingerie sales, furniture sales, homeware sales, lino cutting, deliveries, data entry, cashing up, banking", Pictures:new Array("hopgoods2.jpg", "hopgoods1.jpg","hopgoods0.jpg")})
+	officePics.push({Dates: "1988-1989", Business:"British Aerospace </BR></BR>Brough, The Strand", Role:"Apprentice riviter, Enemy fire damage application, HQ finance application - Pascal, Fortran, QuickBasic, DB2", Pictures:new Array("brough0.jpg", "brough1.jpg", "brough2.jpg", "BAEtheStrand.jpg")})
 	officePics.push({Dates: "1989", Business:"Chappell Farm", Role:"Harrower", Pictures:new Array("harrow.jpg")})
-	officePics.push({Dates: "1989-1994", Business:"Suffolk Country Council - Education Department", Role:"Developer, SCO Admin, Informix DBA: Informix4GL, SQL, Shell scripting", Pictures:new Array("countyHall0.jpg")})
-	officePics.push({Dates: "1994-2007", Business:"Wellington Underwriting", Role:"Trainee Developer, Technical Architect: OpenROAD, ABF", 
+	officePics.push({Dates: "1989-1994", Business:"Suffolk Country Council - Education Department </BR></BR>Ipswich", Role:"Developer, SCO Admin, Informix DBA: Informix4GL, SQL, Shell scripting", Pictures:new Array("countyHall0.jpg")})
+	officePics.push({Dates: "1994-2007", Business:"Wellington Underwriting </BR></BR>Ipswich, London, San Francisco, Oakland, New Orleans", Role:"Trainee Developer, Technical Architect: OpenROAD, ABF", 
 		Pictures:new Array("museumSt0.jpg", "mincing0.jpg", "lloyds0.jpg", "leadenhallSt.png", "sanFran1.png")})
-	officePics.push({Dates: "2007-2025", Business:"Catlin/XL Catlin/AXA XL", Role:"Developer, Technical Lead: Java", 
+	officePics.push({Dates: "2007-2025", Business:"Catlin/XL Catlin/AXA XL </BR></BR> London, Köln, Pune, Bengaluru, Ipswich, The VeloDrone", Role:"Developer, Technical Lead: Java", 
 		Pictures:new Array("mincing1.jpg", "cologne0.jpg", "lloyds1.jpg", "gracechurch0.jpg", "pune5.png", "TCSBangalore.png", "leadenhallStDungeon.jpg", "ipswich0.jpg", "shed3.jpg")})
 	officeViews.push({Dates: "My career has given me the opportunity to travel on 3 continents, see some amazing places and things, sometimes simply out of the window", Business:"", Role:"", 
 		Pictures:new Array("bangalore0.jpg", "bangalore2.jpg","ipswich1.jpg","catlin4.jpg","neworleans0.jpg","pune3.jpg","sanFrancisco0.jpg","AXAcouer2.jpg","pune0.jpg","shed0.gif","shed1.jpg","shed2.jpg")})
