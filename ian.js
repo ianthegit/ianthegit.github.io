@@ -63,6 +63,7 @@ function setupPhotoArray(){
 	videos.push({Description:"Forest", EmbedCode:"kVP7jAZxz6Q?"})
 	videos.push({Description:"Woodbridge 2 Lowestoft", EmbedCode:"e2xMkQb-etI?"})
 	videos.push({Description:"Debenham", EmbedCode:"f20-aiGl1oQ?"})
+	videos.push({Description:"Halesworth", EmbedCode:"BcQ68U1zskg?"})
 	videos.push({Description:"Night", EmbedCode:"0FFiyXiGDLE?"})
 	videos.push({Description:"Green Lanes", EmbedCode:"s7ZmRPLqspY?"})
 	videos.push({Description:"Ruff Stuff", EmbedCode:"h92l9AlTh0E?"})
@@ -72,3 +73,4 @@ function setupPhotoArray(){
 	videos.push({Description:"Rooley Moor", EmbedCode:"KTsNVflnd08?"})
 	fam.push({Dates: "And a lot more time with this bunch", Business:"", Role:"", Pictures:new Array("fam1.jpg","famSinging.gif","fam3.jpg","fam4.jpg","fam5.jpg","fam6.jpg","fam7.jpg","fam0.jpg","fam2.jpg")})}
 	
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/BcQ68U1zskg?si=CW_9zV3QJihWvw_M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
