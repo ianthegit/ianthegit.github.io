@@ -71,5 +71,6 @@ function setupPhotoArray(){
 	videos.push({Description:"Forest Explore", EmbedCode:"JHTkmXW_0Hw?"})
 	videos.push({Description:"Commute no more", EmbedCode:"kCkA7Ofdd4k?"})
 	videos.push({Description:"Rooley Moor", EmbedCode:"KTsNVflnd08?"})
+	videos.push({Description:"Box Hill off-road", EmbedCode:"1kg8muJIOH8?si=ayhnrRHNQ9AA_xOQ&amp;start=66"})
 	fam.push({Dates: "And a lot more time with this bunch", Business:"", Role:"", Pictures:new Array("fam1.jpg","famSinging.gif","fam3.jpg","fam4.jpg","fam5.jpg","fam6.jpg","fam7.jpg","fam0.jpg","fam2.jpg")})}
 	
