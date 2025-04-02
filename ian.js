@@ -63,6 +63,7 @@ function setupPhotoArray(){
 	videos.push({Description:"Forest", EmbedCode:"kVP7jAZxz6Q?"})
 	videos.push({Description:"Woodbridge 2 Lowestoft", EmbedCode:"e2xMkQb-etI?"})
 	videos.push({Description:"Box Hill off-road", EmbedCode:"1kg8muJIOH8?si=ayhnrRHNQ9AA_xOQ&amp;start=66"})
+	videos.push({Description:"Rendo", EmbedCode:"z-juTg5Ednk?"})
 	videos.push({Description:"Debenham", EmbedCode:"f20-aiGl1oQ?"})
 	videos.push({Description:"Halesworth", EmbedCode:"BcQ68U1zskg?"})
 	videos.push({Description:"Night", EmbedCode:"0FFiyXiGDLE?"})
