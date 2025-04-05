@@ -15,7 +15,7 @@ function writePhotoStory(pics) {
 	return retString + "<table>";}	
 function writePics(pics, i) {
     for (var j = 0; j < pics[i].Pictures.length; j++) {
-        retString = retString + ' <a class="userBtnCareer" href="pictures/' + pics[i].Pictures[j] + '" target="_blank"> <img style="height:100%;width:100%;border:0;" src="pictures/' + pics[i].Pictures[j] + '" />  </a> '; }
+        retString = retString + ' <a class="userBtnCareer" href="pictures/' + pics[i].Pictures[j] + '" target="_blank"> <img loading="lazy" style="height:100%;width:100%;border:0;" src="pictures/' + pics[i].Pictures[j] + '" />  </a> '; }
     retString = retString + "</span> </td>  </tr>"; }
 function writePhotoList(pics) {
 	retString = " <table border=0 > ";
