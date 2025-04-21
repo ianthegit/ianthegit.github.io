@@ -330,7 +330,7 @@ iframe {
    border:2px solid #dcdcdc;
    background-color:#dfdfdf;
    transform: scale(3); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-   transform-origin: top left;
+   transform-origin: center left;
 
   }.userBtnCareer:hoveroff {
 
