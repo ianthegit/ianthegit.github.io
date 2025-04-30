@@ -65,6 +65,7 @@ function setupPhotoArray(){
 	videos.push({Description:"Roubaix", EmbedCode:"es6G5W97hUk?"})
 	videos.push({Description:"Box Hill off-road", EmbedCode:"1kg8muJIOH8?si=ayhnrRHNQ9AA_xOQ&amp;start=66"})
 	videos.push({Description:"Sunset", EmbedCode:"HvyJTo40BhM?"})
+	videos.push({Description:"Fonnereau", EmbedCode:"_ofY_H_W33E?"})
 	videos.push({Description:"Coast", EmbedCode:"3qMy0uIAQsU?"})
 	videos.push({Description:"Rendo", EmbedCode:"z-juTg5Ednk?"})
 	videos.push({Description:"Debenham", EmbedCode:"f20-aiGl1oQ?"})
