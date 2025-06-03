@@ -48,23 +48,23 @@ function writeVideoDivs(videos) {
 	return tabDivString ;}	
 function setupPhotoArray(){
 	officePics.push({Dates: "1979-1988", Business:"Hopgoods </BR></BR>Stowmarket", Role:"Carpet sales, lingerie sales, furniture sales, homeware sales, lino cutting, deliveries, data entry, cashing up, banking", Pictures:new Array("horseAndCart.jpg", "hopgoods2.jpg", "hopgoods1.jpg","hopgoods0.jpg")})
-	officePics.push({Dates: "1988-1989", Business:"British Aerospace </BR></BR>Brough, The Strand", Role:"Apprentice riviter, Enemy fire damage application, HQ finance application - Pascal, Fortran, QuickBasic, DB2", Pictures:new Array("brough0.jpg", "brough1.jpg", "brough2.jpg", "BAEtheStrand.jpg")})
+	officePics.push({Dates: "1988-1989", Business:"British Aerospace </BR></BR>Brough, The Strand", Role:"Apprentice riviter, Enemy fire damage application, HQ finance application: Pascal, Fortran, QuickBasic, DB2", Pictures:new Array("brough0.jpg", "brough1.jpg", "brough2.jpg", "BAEtheStrand.jpg")})
 	officePics.push({Dates: "1989", Business:"Chappell Farm </BR></BR> Stowupland", Role:"Harrower", Pictures:new Array("harrow.jpg")})
 	officePics.push({Dates: "1989-1994", Business:"Suffolk Country Council - Education Department </BR></BR>Ipswich", Role:"Developer, SCO Admin, Informix DBA: Informix4GL, SQL, Shell scripting", Pictures:new Array("countyHall0.jpg")})
-	officePics.push({Dates: "1994-2007", Business:"Wellington Underwriting </BR></BR>Ipswich, London, San Francisco, Oakland, New Orleans", Role:"Trainee Developer, Technical Architect: OpenROAD, ABF", 
+	officePics.push({Dates: "1994-2007", Business:"Wellington Underwriting </BR></BR>Ipswich, London, San Francisco, Oakland, New Orleans", Role:"Trainee Developer, Technical Architect: Ingres, OpenROAD, ABF", 
 		Pictures:new Array("museumSt0.jpg", "mincing0.jpg", "lloyds0.jpg", "leadenhallSt.png", "sanFran1.png")})
-	officePics.push({Dates: "2007-2025", Business:"Catlin/XL Catlin/AXA XL </BR></BR> London, Köln, Pune, Bengaluru, Ipswich, The VeloDrone", Role:"Developer, Technical Lead: Java", 
+	officePics.push({Dates: "2007-2025", Business:"Catlin/XL Catlin/AXA XL </BR></BR> London, Köln, Pune, Bengaluru, Ipswich, The VeloDrone", Role:"Developer, Technical Lead: SQL Server, Java", 
 		Pictures:new Array("mincing1.jpg", "cologne0.jpg", "lloyds1.jpg", "gracechurch0.jpg", "pune5.png", "TCSBangalore.png", "leadenhallStDungeon.jpg", "ipswich0.jpg", "shed3.jpg")})
 	officeViews.push({Dates: "My career has given me the opportunity to travel on 3 continents, see some amazing places and things, sometimes simply out of the window", Business:"", Role:"", 
 		Pictures:new Array("bangalore0.jpg", "bangalore2.jpg","ipswich1.jpg","catlin4.jpg","neworleans0.jpg","pune3.jpg","sanFrancisco0.jpg","AXAcouer2.jpg","pune0.jpg","shed0.gif","shed1.jpg","shed2.jpg")})
 	people.push({Dates: "Beers and bikes have always managed to make an appearance", Business:"", Role:"", 
 		Pictures:new Array("brough3.jpg", "catlin2.jpg", "catlin3.jpg", "catlin5.jpg", "catlin6.jpg", "catlinTri2.jpg", "catlinTri0.jpg", "catlin1.jpg","hac0.jpg","Wellington.jpg","Ipswich2.jpg","ipswich3.jpg","bangalore1.jpg",
 		"bangalore6.jpg","bangalore3.jpg","pune1.jpg","visitors0.jpg","visitors1.jpg", "gracechurch1.jpg","AXAcouer0.jpg","AXAcouer1.jpg","axaxl0.jpg","axaxl1.jpg","axaxl2.jpg","axaxl3.jpg","london2Paris.jpeg")}) //,"AXAcouer3.png"
+	videos.push({Description:"Sunset", EmbedCode:"HvyJTo40BhM?"})
 	videos.push({Description:"Forest", EmbedCode:"kVP7jAZxz6Q?"})
 	videos.push({Description:"Woodbridge 2 Lowestoft", EmbedCode:"e2xMkQb-etI?"})
 	videos.push({Description:"Roubaix", EmbedCode:"es6G5W97hUk?"})
 	videos.push({Description:"Box Hill off-road", EmbedCode:"1kg8muJIOH8?si=ayhnrRHNQ9AA_xOQ&amp;start=66"})
-	videos.push({Description:"Sunset", EmbedCode:"HvyJTo40BhM?"})
 	videos.push({Description:"Fonnereau", EmbedCode:"_ofY_H_W33E?"})
 	videos.push({Description:"Coast", EmbedCode:"3qMy0uIAQsU?"})
 	videos.push({Description:"Rendo", EmbedCode:"z-juTg5Ednk?"})
@@ -78,4 +78,3 @@ function setupPhotoArray(){
 	videos.push({Description:"Commute no more", EmbedCode:"kCkA7Ofdd4k?"})
 	videos.push({Description:"Rooley Moor", EmbedCode:"KTsNVflnd08?"})
 	fam.push({Dates: "And a lot more time with this bunch", Business:"", Role:"", Pictures:new Array("fam1.jpg","famSinging.gif","fam3.jpg","fam4.jpg","fam5.jpg","fam6.jpg","fam7.jpg","fam0.jpg","fam2.jpg")})}
-	
