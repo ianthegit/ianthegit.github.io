@@ -62,6 +62,7 @@ function setupPhotoArray(){
 		"bangalore6.jpg","bangalore3.jpg","pune1.jpg","visitors0.jpg","visitors1.jpg", "gracechurch1.jpg","AXAcouer0.jpg","AXAcouer1.jpg","axaxl0.jpg","axaxl1.jpg","axaxl2.jpg","axaxl3.jpg","london2Paris.jpeg")}) //,"AXAcouer3.png"
 	videos.push({Description:"Sunset", EmbedCode:"HvyJTo40BhM?"})
 	videos.push({Description:"Forest", EmbedCode:"kVP7jAZxz6Q?"})
+	videos.push({Description:"Bridge", EmbedCode:"sgJf8sIwpro?"})
 	videos.push({Description:"Woodbridge 2 Lowestoft", EmbedCode:"e2xMkQb-etI?"})
 	videos.push({Description:"Roubaix", EmbedCode:"es6G5W97hUk?"})
 	videos.push({Description:"Box Hill off-road", EmbedCode:"1kg8muJIOH8?si=ayhnrRHNQ9AA_xOQ&amp;start=66"})
