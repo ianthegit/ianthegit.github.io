@@ -61,6 +61,7 @@ function setupPhotoArray(){
 		Pictures:new Array("brough3.jpg", "catlin2.jpg", "catlin3.jpg", "catlin5.jpg", "catlin6.jpg", "catlinTri2.jpg", "catlinTri0.jpg", "catlin1.jpg","hac0.jpg","Wellington.jpg","Ipswich2.jpg","ipswich3.jpg","bangalore1.jpg",
 		"bangalore6.jpg","bangalore3.jpg","pune1.jpg","visitors0.jpg","visitors1.jpg","visitors3.jpg", "gracechurch1.jpg","AXAcouer0.jpg","AXAcouer1.jpg","axaxl0.jpg","axaxl1.jpg","axaxl2.jpg","axaxl3.jpg","london2Paris.jpeg")}) //,"AXAcouer3.png"
 	videos.push({Description:"Sunset", EmbedCode:"HvyJTo40BhM?"})
+	videos.push({Description:"Paddle", EmbedCode:"Gu-TY_8Ema4?"})
 	videos.push({Description:"Forest", EmbedCode:"kVP7jAZxz6Q?"})
 	videos.push({Description:"Bridge", EmbedCode:"sgJf8sIwpro?"})
 	videos.push({Description:"Woodbridge 2 Lowestoft", EmbedCode:"e2xMkQb-etI?"})
