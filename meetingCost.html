@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting Cost Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+        }
+        h1 {
+            color: #0056b3;
+            margin-bottom: 20px;
+        }
+        .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .input-group input[type="number"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #28a745;
+        }
+        .disclaimer {
+            margin-top: 20px;
+            font-size: 0.8em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Meeting Cost Calculator</h1>
+
+        <div class="input-group">
+            <label for="attendees">Number of Attendees:</label>
+            <input type="number" id="attendees" value="2" min="1">
+        </div>
+
+        <div class="input-group">
+            <label for="avgHourlyRate">Average Hourly Rate (£):</label>
+            <input type="number" id="avgHourlyRate" value="30" min="0">
+        </div>
+
+        <div class="input-group">
+            <label for="costPerMinute">Cost Per Minute (£):</label>
+            <input type="number" id="costPerMinute" value="0.00" readonly>
+        </div>
+
+        <div class="result">
+            <p>Ongoing Cost: <span id="ongoingCost">£0.00</span></p>
+        </div>
+        
+        <div class="disclaimer">
+            <p>This is an estimated cost and does not include other meeting-related expenses.</p>
+        </div>
+    </div>
+
+    <script>
+        const attendeesInput = document.getElementById('attendees');
+        const avgHourlyRateInput = document.getElementById('avgHourlyRate');
+        const costPerMinuteDisplay = document.getElementById('costPerMinute');
+        const ongoingCostDisplay = document.getElementById('ongoingCost');
+
+        let totalOngoingCost = 0;
+        let costPerSecond = 0;
+
+        // Function to calculate the base rates
+        function calculateRates() {
+            const numAttendees = parseInt(attendeesInput.value);
+            const avgHourlyRate = parseFloat(avgHourlyRateInput.value);
+
+            if (isNaN(numAttendees) || numAttendees < 1) {
+                attendeesInput.value = 1;
+                return;
+            }
+            if (isNaN(avgHourlyRate) || avgHourlyRate < 0) {
+                avgHourlyRateInput.value = 0;
+                return;
+            }
+
+            const totalHourlyCost = numAttendees * avgHourlyRate;
+            const costPerMinute = totalHourlyCost / 60;
+            costPerSecond = costPerMinute / 60;
+
+            costPerMinuteDisplay.value = costPerMinute.toFixed(2);
+        }
+
+        // Function to update the ongoing cost every 5 seconds
+        function updateOngoingCost() {
+            // Add the cost of 5 seconds to the total
+            totalOngoingCost += (costPerSecond * 5);
+            ongoingCostDisplay.textContent = `£${totalOngoingCost.toFixed(2)}`;
+        }
+
+        // Function to parse URL parameters
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+
+        // Initialize values from URL parameters and start the timer
+        document.addEventListener('DOMContentLoaded', () => {
+            const initialAttendees = getUrlParameter('attendees');
+            const initialRate = getUrlParameter('rate');
+
+            if (initialAttendees) {
+                attendeesInput.value = parseInt(initialAttendees);
+            }
+            if (initialRate) {
+                avgHourlyRateInput.value = parseFloat(initialRate);
+            }
+
+            calculateRates();
+            updateOngoingCost(); // Initial update
+            
+            // Set an interval to update the cost every 1 seconds (1000 milliseconds)
+            setInterval(updateOngoingCost, 1000);
+        });
+
+        // Add event listeners for input changes to reset the timer
+        function handleInput() {
+            calculateRates();
+            // Reset the total cost and restart the timer
+            totalOngoingCost = 0;
+            ongoingCostDisplay.textContent = `£${totalOngoingCost.toFixed(2)}`;
+            // The existing setInterval will continue running with the new `costPerSecond` value.
+        }
+
+        attendeesInput.addEventListener('input', handleInput);
+        avgHourlyRateInput.addEventListener('input', handleInput);
+    </script>
+</body>
+</html>
