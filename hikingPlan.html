@@ -1,0 +1,171 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiking Time Estimator</title>
+    <style>
+        /* Basic styling for readability */
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .container { max-width: 800px; margin: auto; }
+        label, input, button, textarea { display: block; margin-bottom: 10px; }
+        input[type="number"], textarea { width: 100%; padding: 8px; box-sizing: border-box; }
+        textarea { height: 100px; resize: vertical; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>⛰️ Hiking Time Estimator</h1>
+        <p>Enter the hike details to calculate the estimated time of arrival (ETA) for each kilometer.</p>
+
+        <label for="grades">**Grades per Kilometer (%)**:</label>
+        <textarea id="grades" placeholder="Enter the average grade (up/down) for each kilometer, separated by commas. E.g., 5, -3, 10, 0, -8"></textarea>
+        
+        <label for="startDate">**Start Date and Time**:</label>
+        <input type="datetime-local" id="startDate" required>
+
+        <label for="avgSpeed">**Average Walking Speed (km/h)**:</label>
+        <input type="number" id="avgSpeed" value="4" min="0.1" step="0.1" required>
+
+        <button onclick="calculateETA()">**Calculate ETA**</button>
+
+        <hr>
+
+        <h2>⏱️ Results</h2>
+        <table id="resultsTable">
+            <thead>
+                <tr>
+                    <th>Kilometer</th>
+                    <th>Grade (%)</th>
+                    <th>Time for KM (min)</th>
+                    <th>Cumulative Time</th>
+                    <th>Estimated Time of Arrival (ETA)</th>
+                </tr>
+            </thead>
+            <tbody>
+                </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Paste the JavaScript code below into a <script> block, or link to a separate file (e.g., script.js)
+        // For simplicity, it's included here.
+        
+        function getAdjustedTime(grade, baseTimePerKm) {
+    let adjustment = 0;
+
+    // Adjustments are often based on a rate of time change per vertical gain/loss.
+    // For simplicity, we'll use an empirical factor on the *grade*.
+    
+    if (grade > 0) {
+        // Uphill: Time increases significantly.
+        // Penalty: (Grade / 5) * baseTimePerKm
+        // e.g., a 10% grade adds 2x the base time.
+        adjustment = baseTimePerKm * (Math.abs(grade) / 10); 
+    } else if (grade < 0) {
+        // Downhill: Time decreases slightly, up to a point, then increases (care).
+        // Reward/Penalty: (Grade / 20) * baseTimePerKm
+        // A -10% grade gives a 0.5x speed boost, up to a limit.
+        // We'll cap the speed boost to prevent unrealistic times.
+        adjustment = baseTimePerKm * (grade / 40); // Reward factor
+    }
+
+    // Ensure the time doesn't become negative or too low.
+    // Max reward (fastest time) is 70% of base time.
+    const minTimePerKm = baseTimePerKm * 0.3; 
+    
+    return Math.max(minTimePerKm, baseTimePerKm + adjustment);
+}
+
+
+function calculateETA() {
+    // 1. Get Input Values
+    const gradesInput = document.getElementById('grades').value;
+    const startDateInput = document.getElementById('startDate').value;
+    const avgSpeed = parseFloat(document.getElementById('avgSpeed').value);
+    const resultsTableBody = document.getElementById('resultsTable').querySelector('tbody');
+
+    // Clear previous results
+    resultsTableBody.innerHTML = ''; 
+
+    // Basic Validation
+    if (!gradesInput || !startDateInput || isNaN(avgSpeed) || avgSpeed <= 0) {
+        alert("Please ensure all fields are filled correctly and the average speed is positive.");
+        return;
+    }
+
+    // 2. Parse Inputs
+    // Grades: Convert comma-separated string to an array of numbers
+    const grades = gradesInput.split(',')
+        .map(s => parseFloat(s.trim()))
+        .filter(n => !isNaN(n)); // Remove any invalid/non-numeric entries
+
+    if (grades.length === 0) {
+        alert("Please enter at least one valid grade percentage.");
+        return;
+    }
+
+    // Start Time: Convert string to Date object
+    const startTime = new Date(startDateInput);
+    if (isNaN(startTime.getTime())) {
+        alert("Invalid start date/time. Please select a valid date and time.");
+        return;
+    }
+
+    // Base time per kilometer (at 0% grade) in minutes
+    // Time (h) = Distance (km) / Speed (km/h)
+    // Time (min) = (1 / avgSpeed) * 60
+    const baseTimePerKm = 60 / avgSpeed; // minutes/km
+
+    // 3. Calculation Loop
+    let cumulativeTimeMinutes = 0; // Total time elapsed in minutes
+    
+    grades.forEach((grade, index) => {
+        const kilometer = index + 1; // Start at KM 1
+
+        // Calculate the time for the current kilometer
+        const timeForThisKm = getAdjustedTime(grade, baseTimePerKm);
+        
+        // Update cumulative time
+        cumulativeTimeMinutes += timeForThisKm;
+
+        // Calculate the Estimated Time of Arrival (ETA)
+        // The time is the start time plus the cumulative minutes.
+        const etaTimestamp = startTime.getTime() + (cumulativeTimeMinutes * 60 * 1000);
+        const etaDate = new Date(etaTimestamp);
+
+        // Format the ETA for display
+        const formattedETA = etaDate.toLocaleString('en-US', {
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric'
+        });
+
+        // 4. Create and Insert Table Row
+        const newRow = resultsTableBody.insertRow();
+        newRow.insertCell().textContent = kilometer;
+        newRow.insertCell().textContent = grade.toFixed(1);
+        newRow.insertCell().textContent = timeForThisKm.toFixed(2);
+        
+        // Format cumulative time into H:M:S
+        const totalHours = Math.floor(cumulativeTimeMinutes / 60);
+        const totalMinutes = Math.floor(cumulativeTimeMinutes % 60);
+        const totalSeconds = Math.round((cumulativeTimeMinutes - Math.floor(cumulativeTimeMinutes)) * 60);
+        const formattedCumulativeTime = `${totalHours}h ${totalMinutes}m ${totalSeconds}s`;
+
+        newRow.insertCell().textContent = formattedCumulativeTime;
+        newRow.insertCell().textContent = formattedETA;
+    });
+}
+        
+    </script>
+</body>
+</html>
