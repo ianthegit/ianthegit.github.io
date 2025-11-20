@@ -21,10 +21,10 @@
 <body>
     <div class="container">
         <h1>⛰️ Hiking Time Estimator</h1>
-        <p>Enter the hike details to calculate the estimated time of arrival (ETA) for each kilometer.</p>
+        <p>Enter the hike details to calculate the estimated time of arrival (ETA) for each kilometre.</p>
 
-        <label for="grades">**Grades per Kilometer (%)**:</label>
-        <textarea id="grades" placeholder="Enter the average grade (up/down) for each kilometer, separated by commas. E.g., 5, -3, 10, 0, -8"></textarea>
+        <label for="grades">**Grades per kilometre (%)**:</label>
+        <textarea id="grades" placeholder="Enter the average grade (up/down) for each kilometre, separated by commas. E.g., 5, -3, 10, 0, -8"></textarea>
         
         <label for="startDate">**Start Date and Time**:</label>
         <input type="datetime-local" id="startDate" required>
@@ -40,7 +40,7 @@
         <table id="resultsTable">
             <thead>
                 <tr>
-                    <th>Kilometer</th>
+                    <th>kilometre</th>
                     <th>Grade (%)</th>
                     <th>Time for KM (min)</th>
                     <th>Cumulative Time</th>
@@ -117,7 +117,7 @@ function calculateETA() {
         return;
     }
 
-    // Base time per kilometer (at 0% grade) in minutes
+    // Base time per kilometre (at 0% grade) in minutes
     // Time (h) = Distance (km) / Speed (km/h)
     // Time (min) = (1 / avgSpeed) * 60
     const baseTimePerKm = 60 / avgSpeed; // minutes/km
@@ -126,9 +126,9 @@ function calculateETA() {
     let cumulativeTimeMinutes = 0; // Total time elapsed in minutes
     
     grades.forEach((grade, index) => {
-        const kilometer = index + 1; // Start at KM 1
+        const kilometre = index + 1; // Start at KM 1
 
-        // Calculate the time for the current kilometer
+        // Calculate the time for the current kilometre
         const timeForThisKm = getAdjustedTime(grade, baseTimePerKm);
         
         // Update cumulative time
@@ -151,7 +151,7 @@ function calculateETA() {
 
         // 4. Create and Insert Table Row
         const newRow = resultsTableBody.insertRow();
-        newRow.insertCell().textContent = kilometer;
+        newRow.insertCell().textContent = kilometre;
         newRow.insertCell().textContent = grade.toFixed(1);
         newRow.insertCell().textContent = timeForThisKm.toFixed(2);
         
