@@ -58,7 +58,7 @@
 
     <script>
          
-	photoURL='https://photos.app.goo.gl/6wBePL3fAGjg8SKr7'
+	photoURLInput='https://lh3.googleusercontent.com/pw/AP1GczPJD3_1PL9OTXdVEw92UJ5W5l1UV0gXUCYC4VJkm0ceMgS3UX-EaZ7D06-HQlamHAtPJOiT8UJjmxVVF5-nrupOHO2v2GLRbEqaqPt9rtfcFf28ubryewSxg73cgmrrrX2bYJDdGPB2iAU7wEFux6Aucw=w1170-h848-s-no-gm?authuser=0'
     function getURIString(paramName) { const urlParams = new URLSearchParams(window.location.search);
      if (urlParams.has(paramName)) {return urlParams.get(paramName);}; return null;}
     
@@ -86,8 +86,9 @@
     return Math.max(minTimePerKm, baseTimePerKm + adjustment);
 }
 
-    photoURLInput = getURIString('photoURLInput'); 
-	//if (photoURL) { document.getElementById('photoURL').value=photoURLInput}
+    //photoURLInput = getURIString('photoURLInput'); 
+	if (photoURLInput) {   document.getElementById('photo').innerHTML = ' <a class="userBtnCareer" href="' + photoURLInput + '" target="_blank"> <img loading="lazy" style="height:100%;width:100%;border:0;" src="' + photoURLInput + '" />  </a> '; }
+
 
     gradesInput = getURIString('gradesInput'); 
 	if (gradesInput) { document.getElementById('grades').value=gradesInput}
