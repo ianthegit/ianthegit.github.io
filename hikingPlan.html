@@ -58,7 +58,7 @@
 
     <script>
          
-	photoURLInput='https://lh3.googleusercontent.com/pw/AP1GczPJD3_1PL9OTXdVEw92UJ5W5l1UV0gXUCYC4VJkm0ceMgS3UX-EaZ7D06-HQlamHAtPJOiT8UJjmxVVF5-nrupOHO2v2GLRbEqaqPt9rtfcFf28ubryewSxg73cgmrrrX2bYJDdGPB2iAU7wEFux6Aucw=w1170-h848-s-no-gm?authuser=0'
+	photoURLInputTemp='https://lh3.googleusercontent.com/pw/AP1GczPJD3_1PL9OTXdVEw92UJ5W5l1UV0gXUCYC4VJkm0ceMgS3UX-EaZ7D06-HQlamHAtPJOiT8UJjmxVVF5-nrupOHO2v2GLRbEqaqPt9rtfcFf28ubryewSxg73cgmrrrX2bYJDdGPB2iAU7wEFux6Aucw=w1170-h848-s-no-gm?authuser=0'
     function getURIString(paramName) { const urlParams = new URLSearchParams(window.location.search);
      if (urlParams.has(paramName)) {return urlParams.get(paramName);}; return null;}
     
@@ -86,8 +86,6 @@
     return Math.max(minTimePerKm, baseTimePerKm + adjustment);
 }
 
-    //photoURLInput = getURIString('photoURLInput'); 
-	if (photoURLInput) {   document.getElementById('photo').innerHTML = ' <a class="userBtnCareer" href="' + photoURLInput + '" target="_blank"> <img loading="lazy" style="height:100%;width:100%;border:0;" src="' + photoURLInput + '" />  </a> '; }
 
 
     gradesInput = getURIString('gradesInput'); 
@@ -99,7 +97,8 @@
 	avgSpeedInput = getURIString('avgSpeedInput'); 
 	if (avgSpeedInput) { document.getElementById('avgSpeed').value=avgSpeedInput}
 
-
+	photoURLInput = getURIString('photoURLInput'); 
+	if (photoURLInput) {   document.getElementById('photo').innerHTML = ' <a class="userBtnCareer" href="' + photoURLInput + '" target="_blank"> <img loading="lazy" style="height:100%;width:100%;border:0;" src="' + photoURLInput + '" />  </a> '; }
 	
 function calculateETA() {
     // 1. Get Input Values
@@ -191,10 +190,63 @@ function createURLAndCopyToClipboard(){
 	//newURL = newURL.concat('photoURLInput=' + document.getElementById('photoURL').value + '&' );
 	newURL = newURL.concat('gradesInput=' + document.getElementById('grades').value + '&' );
 	newURL = newURL.concat('startDateInput=' + document.getElementById('startDate').value + '&' );
-	newURL = newURL.concat('avgSpeedInput=' + document.getElementById('avgSpeed').value  );
+	newURL = newURL.concat('avgSpeedInput=' + document.getElementById('avgSpeed').value + '&'  );
+	newURL = newURL.concat('photoURLInput=' + document.getElementById('photoURLInput').value  );
+	
+	
+	(async () => {
+	    const myLongLink = "newURL";
+
+	    console.log("Shortening...");
+	    const result = await shortenWithTinyURL(myLongLink);
+
+	    if (result) {
+	        // Do something with the result, like putting it in a text box
+	        // document.getElementById('resultInput').value = result;
+	        
+			navigator.clipboard.writeText(result);
+			alert("Your individual URL has been created and copied to the clipboard - it is ${result}");
+	
+//	        alert(`Your short link is: ${result}`);
+	    }
+	})();
+	
 	
 	navigator.clipboard.writeText(newURL);
 	alert("Your individual URL has been created and copied to the clipboard");
+}
+
+async function shortenWithTinyURL(longUrl) {
+    // 1. Validate input
+    if (!longUrl) {
+        console.error("Please provide a URL");
+        return null;
+    }
+
+    try {
+        // 2. Encode the URL to ensure special characters don't break the request
+        const encodedUrl = encodeURIComponent(longUrl);
+
+        // 3. The specific API endpoint for TinyURL's simple text response
+        const apiUrl = `https://tinyurl.com/api-create.php?url=${encodedUrl}`;
+
+        // 4. Make the fetch request
+        const response = await fetch(apiUrl);
+
+        // 5. Check if the request was successful
+        if (!response.ok) {
+            throw new Error(`Error: ${response.status} ${response.statusText}`);
+        }
+
+        // 6. TinyURL returns just the raw text of the new URL
+        const shortUrl = await response.text();
+        console.log(`Success! Shortened URL: ${shortUrl}`);
+        return shortUrl;
+
+    } catch (error) {
+        console.error("Failed to shorten URL:", error.message);
+        return null;
+    }
 }
         
     </script>
