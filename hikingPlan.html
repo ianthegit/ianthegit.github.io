@@ -194,14 +194,13 @@ function createURLAndCopyToClipboard(){
 	newURL = newURL.concat('gradesInput=' + document.getElementById('grades').value + '&' );
 	newURL = newURL.concat('startDateInput=' + document.getElementById('startDate').value + '&' );
 	newURL = newURL.concat('avgSpeedInput=' + document.getElementById('avgSpeed').value + '&'  );
-	newURL = newURL.concat('photoURLInput=' + document.getElementById('photoURLInput').value  );
+	newURL = newURL.concat('photoURLInput=' + photoURLInput );
 	
 	
 	(async () => {
-	    const myLongLink = "newURL";
 
 	    console.log("Shortening...");
-	    const result = await shortenWithTinyURL(myLongLink);
+	    const result = await shortenWithTinyURL(newURL);
 
 	    if (result) {
 	        // Do something with the result, like putting it in a text box
