@@ -208,7 +208,8 @@ function createURLAndCopyToClipboard(){
 	        
 			navigator.clipboard.writeText(result);
 			alert("Your individual URL has been created and copied to the clipboard - it is ${result}");
-	
+			navigator.clipboard.writeText(newURL);
+			return;	
 //	        alert(`Your short link is: ${result}`);
 	    }
 	})();
