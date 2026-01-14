@@ -252,29 +252,6 @@ async function shortenWithTinyURL(longUrl) {
     
     
     
-    const apiUrl = new URL('is.gd');
-    apiUrl.searchParams.set('format', 'simple'); // Request simple text response
-    apiUrl.searchParams.set('url', longUrl);
-    try {
-        // Make the GET request to the is.gd API
-        const response = await fetch(apiUrl.toString());
-        
-        // Check if the request was successful
-        if (!response.ok) {
-            // If the API returns an error, it often provides the message in the body
-            const errorMessage = await response.text();
-            throw new Error(`is.gd API error: ${errorMessage}`);
-        }
-        
-        // Get the shortened URL as plain text
-        const shortUrl = await response.text();
-        return shortUrl;
-
-    } catch (error) {
-        console.error("Error shortening URL:", error);
-        return null; // Or handle the error as appropriate for your application
-    }
-    
     
     
     try {
