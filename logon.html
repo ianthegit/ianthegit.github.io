@@ -51,7 +51,7 @@
     <div id="loginPage" class="card">
         <div id="urlDisplay" class="url-bar">📍 https://secure-training-portal.com</div>
         
-        <form id="loginForm" action="#" method="get">
+        <form id="loginForm" action="" method="GET">
             <label for="username">Username</label>
             <input type="text" id="username" name="username" autocomplete="username" placeholder="Username or eMail" required>
             
@@ -64,7 +64,8 @@
             <div class="strength-container"><div id="strengthBar"></div></div>
             <span id="strengthText">Strength: Too Short</span>
 
-            <button type="submit" class="btn btn-blue">Authorize Login</button>
+            <input type="hidden" name="status" value="success">
+            <button type="submit" class="btn btn-blue">Sign In</button>
         </form>
         <p id="feedback" style="text-align:center; font-size: 0.85rem; min-height: 1.2em;"></p>
     </div>
@@ -74,106 +75,90 @@
             <div style="font-size: 3rem;">🛡️</div>
             <h2>Identity Verified</h2>
             <div class="tip-box"><strong>Security Pro-Tip:</strong> <br><span id="tipText"></span></div>
-            <div style="background: #f8f9fa; padding: 10px; border-radius: 8px; margin-top: 15px;">
-                <label>Recent Activity</label>
-                <table class="history-table">
-                    <tr><td>Just now</td><td>Woodbridge, UK</td><td>✅ Success</td></tr>
-                    <tr><td>Yesterday</td><td>Woodbridge, UK</td><td>✅ Success</td></tr>
-                </table>
-            </div>
-            <br>
-            <button class="btn btn-blue" onclick="location.reload()">Secure Log Out</button>
+            <p style="font-size: 0.9rem; color: #666;">Chrome should have prompted to save your password.</p>
+            <button class="btn btn-blue" onclick="logout()">Secure Log Out</button>
         </div>
     </div>
 
     <div id="breachPage" class="card hidden">
         <div class="breach-ui">
             <h1>🚨 DATA BREACH</h1>
-            <p>That password is compromised and easily guessed by bots.</p>
-            <button class="btn" style="background: white; color: black; margin-top: 15px;" onclick="location.reload()">Start Over</button>
+            <p>That password is compromised!</p>
+            <button class="btn" style="background: white; color: black; margin-top: 15px;" onclick="logout()">Try Again</button>
         </div>
     </div>
 </div>
 
 <script>
-    let isPhishing = false;
-    const BREACHED = ["123456", "password", "password123", "password12", "password1", "qwerty", "welcome", "admin"];
+    const BREACHED = ["123456", "password", "password123", "qwerty", "welcome", "admin"];
     const tips = [
-        "TIP: A password manager prevents phishing because it won't autofill if the URL is wrong.",
-        "TIP: Your Master Password should be a long phrase that only you know.",
-        "TIP: Use the 'Show Password' eye icon only when you are alone to avoid 'shoulder surfing'."
+        "A password manager prevents phishing because it won't autofill if the URL is wrong.",
+        "Your Master Password should be a long phrase that only you know.",
+        "Password managers can identify fake 'phishing' sites because they won't offer to auto-fill them!"
     ];
 
-    function toggleVisibility() {
-        const passField = document.getElementById('password');
-        const eye = document.getElementById('eyeBtn');
-        if (passField.type === "password") {
-            passField.type = "text";
-            eye.innerText = "🙈";
+    // Logic to handle the "Reloaded" state
+    const params = new URLSearchParams(window.location.search);
+    const passValue = params.get('password');
+
+    if (params.get('status') === 'success') {
+        if (passValue && BREACHED.includes(passValue.toLowerCase())) {
+            document.getElementById('loginPage').classList.add('hidden');
+            document.getElementById('breachPage').classList.remove('hidden');
         } else {
-            passField.type = "password";
-            eye.innerText = "👁️";
+            document.getElementById('tipText').innerText = tips[Math.floor(Math.random() * tips.length)];
+            document.getElementById('loginPage').classList.add('hidden');
+            document.getElementById('dashboardPage').classList.remove('hidden');
         }
+    }
+
+    function logout() {
+        // This clears the URL parameters and takes us back to the clean login page
+        window.location.href = window.location.pathname;
+    }
+
+    function toggleVisibility() {
+        const p = document.getElementById('password');
+        const eye = document.getElementById('eyeBtn');
+        p.type = p.type === "password" ? "text" : "password";
+        eye.innerText = p.type === "password" ? "👁️" : "🙈";
     }
 
     function generateAndCopy() {
         const pass = "TR-" + Math.random().toString(36).toUpperCase().slice(-4) + "-" + Math.random().toString(36).slice(-4) + "!";
-        const el = document.createElement('textarea');
-        el.value = pass; document.body.appendChild(el); el.select();
-        document.execCommand('copy'); document.body.removeChild(el);
-        document.getElementById('feedback').innerText = "Copied! Paste it into the form.";
-        document.getElementById('feedback').style.color = "var(--primary)";
+        navigator.clipboard.writeText(pass);
+        const fb = document.getElementById('feedback');
+        fb.innerText = "Strong password copied! Now paste it into the form.";
+        fb.style.color = "var(--primary)";
     }
 
     function togglePhishing() {
-        isPhishing = true;
         const url = document.getElementById('urlDisplay');
         url.innerText = "⚠️ https://secure-trainining-p0rtal.com";
         url.classList.add('phishing-active');
-        document.getElementById('setupControls').style.opacity = "0.3";
+        document.getElementById('loginForm').onsubmit = function(e) {
+            e.preventDefault();
+            alert("❌ PHISHING ALERT! Notice the '0' in the URL? Your manager would NOT have filled this!");
+            logout();
+        };
     }
 
     function updateUI(p) {
-        let score = 0;
-        if (p.length > 8) score++;
-        if (/[A-Z]/.test(p)) score++;
-        if (/[0-9]/.test(p)) score++;
-        if (/[^A-Za-z0-9]/.test(p)) score++;
-        
+        let score = Math.min(p.length / 3, 4);
         const bar = document.getElementById('strengthBar');
         const text = document.getElementById('strengthText');
         const levels = [
-            {w:'20%', c:'var(--danger)', t:'Very Weak'}, {w:'40%', c:'var(--danger)', t:'Weak'},
+            {w:'20%', c:'var(--danger)', t:'Weak'}, {w:'40%', c:'var(--danger)', t:'Fair'},
             {w:'60%', c:'var(--warning)', t:'Good'}, {w:'80%', c:'var(--success)', t:'Strong'},
             {w:'100%', c:'var(--success)', t:'Excellent'}
         ];
-
-        if (p.length === 0) {
-            bar.style.width = '0%'; text.innerText = "Strength: Too Short";
-        } else {
-            const res = levels[Math.min(score, 4)];
+        if (p.length === 0) { bar.style.width = '0%'; text.innerText = "Strength: Too Short"; }
+        else {
+            const res = levels[Math.floor(score)];
             bar.style.width = res.w; bar.style.backgroundColor = res.c;
             text.innerText = "Strength: " + res.t; text.style.color = res.c;
         }
     }
-
-    document.getElementById('loginForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const p = document.getElementById('password').value;
-        if (isPhishing) {
-            alert("❌ PHISHING DETECTED! You entered your password into a fake URL.");
-            location.reload(); return;
-        }
-        if (BREACHED.includes(p.toLowerCase())) {
-            document.getElementById('loginPage').classList.add('hidden');
-            document.getElementById('breachPage').classList.remove('hidden');
-            return;
-        }
-        window.history.pushState({}, "", "#authorized");
-        document.getElementById('tipText').innerText = tips[Math.floor(Math.random() * tips.length)];
-        document.getElementById('loginPage').classList.add('hidden');
-        document.getElementById('dashboardPage').classList.remove('hidden');
-    });
 </script>
 </body>
 </html>
