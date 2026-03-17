@@ -21,132 +21,120 @@
         .btn { width: 100%; padding: 12px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 1rem; margin-top: 10px; transition: 0.2s; }
         .btn-blue { background: var(--primary); color: white; }
         .btn-green { background: var(--success); color: white; margin-bottom: 15px; }
-        .btn-outline { background: white; border: 1px solid #ccc; color: #666; margin-bottom: 25px; }
         
         .hidden { display: none !important; }
         .breach-ui { background: #1a1a1a; color: #ff4d4d; padding: 25px; border-radius: 8px; text-align: center; border: 2px solid #ff4d4d; }
-        .tip-box { background: #fff9e6; border-left: 4px solid #f39c12; padding: 15px; margin: 20px 0; border-radius: 0 4px 4px 0; font-size: 0.95rem; }
     </style>
 </head>
 <body>
 
 <div class="container">
     <div id="setupArea">
-        <button class="btn btn-green" onclick="generatePass()">Generate & Copy Strong Pass</button>
-        <button class="btn btn-outline" onclick="triggerPhishing()">Test Phishing Awareness</button>
+        <button class="btn btn-green" onclick="generatePass()">Generate Strong Pass</button>
     </div>
 
-    <div class="card" id="mainCard">
-        <div id="urlDisplay" class="url-bar">📍 https://your-training-portal.github.io</div>
+    <div class="card">
+        <div id="urlDisplay" class="url-bar">📍 https://secure-portal.training</div>
         
         <div id="loginView">
-            <form id="trainingForm" onsubmit="return handleLogin(event)">
+            <form id="trainingForm">
                 <label for="u">Username</label>
-                <div class="input-group">
-                    <input type="text" id="u" name="username" autocomplete="username" placeholder="Training_User" required>
-                </div>
+                <input type="text" id="u" name="username" autocomplete="username" placeholder="Student_User" required>
                 
                 <label for="p">Password</label>
                 <div class="input-group">
                     <input type="password" id="p" name="password" autocomplete="current-password" placeholder="Password" required>
-                    <button type="button" class="eye-btn" onclick="togglePass()" id="eye">👁️</button>
+                    <button type="button" class="eye-btn" onclick="togglePass()">👁️</button>
                 </div>
                 
-                <p id="msg" style="font-size: 0.8rem; text-align: center; color: var(--primary); min-height: 1.5em; margin: 10px 0;"></p>
-                <button type="submit" class="btn btn-blue">Authorize Login</button>
+                <p id="msg" style="font-size: 0.8rem; text-align: center; color: var(--primary); min-height: 1.5em;"></p>
+                <button type="submit" class="btn btn-blue">Sign In</button>
             </form>
+            <button class="btn" style="background:none; color:#666; font-size:0.8rem;" onclick="triggerPhishing()">Simulate Phishing Mode</button>
         </div>
 
         <div id="dashboardView" class="hidden">
             <div style="text-align: center;">
-                <div style="font-size: 3rem;">🛡️</div>
-                <h2>Secure Access Granted</h2>
-                <div class="tip-box">
-                    <strong>Security Pro-Tip:</strong><br>
-                    <span id="tipText"></span>
-                </div>
-                <button class="btn btn-blue" onclick="logout()">Secure Log Out</button>
+                <h2>✅ Access Granted</h2>
+                <p>Login successful.</p>
+                <button class="btn btn-blue" onclick="location.reload()">Log Out</button>
             </div>
         </div>
 
         <div id="breachView" class="hidden">
             <div class="breach-ui">
                 <h2>⚠️ BREACHED</h2>
-                <p>This password was found in a public leak. Use a random string!</p>
-                <button class="btn" style="background: white; color: black;" onclick="logout()">Try Again</button>
+                <p>Unsafe password. Try again!</p>
+                <button class="btn" style="background: white; color: black;" onclick="location.reload()">Reset</button>
             </div>
         </div>
     </div>
 </div>
 
 <script>
-    let isPhishingActive = false;
-    const BREACHED_PASSWORDS = ["123456", "password", "password123", "qwerty", "admin", "welcome"];
-    const tips = [
-        "A password manager prevents phishing by only filling passwords on the exact right URL.",
-        "MFA (Multi-Factor Authentication) is the single best way to secure your accounts.",
-        "Your Master Password is the most important key. Make it a long phrase, not a word."
-    ];
+    let isPhishing = false;
+    const BREACHED = ["123456", "password", "password123", "admin"];
 
     function togglePass() {
         const p = document.getElementById('p');
-        const eye = document.getElementById('eye');
         p.type = p.type === 'password' ? 'text' : 'password';
-        eye.innerText = p.type === 'password' ? '👁️' : '🙈';
     }
 
     function generatePass() {
-        const pass = "SEC-" + Math.random().toString(36).toUpperCase().slice(-4) + "-" + Math.random().toString(36).slice(-4) + "!";
-        navigator.clipboard.writeText(pass).then(() => {
-            document.getElementById('msg').innerText = "Copied! Now paste it into the form.";
-        });
+        try {
+            const pass = "SEC-" + Math.random().toString(36).toUpperCase().slice(-4) + "!" + Math.floor(Math.random()*99);
+            // Fallback for clipboard if navigator.clipboard is restricted
+            const el = document.createElement('textarea');
+            el.value = pass;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+            document.getElementById('msg').innerText = "Copied: " + pass;
+        } catch (e) {
+            console.error("Clipboard error", e);
+        }
     }
 
     function triggerPhishing() {
-        isPhishingActive = true;
+        isPhishing = true;
         const url = document.getElementById('urlDisplay');
-        url.innerText = "⚠️ https://your-trainining-p0rtal.github.io";
+        url.innerText = "⚠️ https://secure-p0rtal.training";
         url.classList.add('phishing-active');
-        document.getElementById('setupArea').style.opacity = "0.3";
     }
 
-    function logout() {
-        // Full reload clears state and resets UI
-        window.location.reload();
-    }
-
-    function handleLogin(e) {
-        // 1. Prevent GitHub from trying to process the form
+    document.getElementById('trainingForm').addEventListener('submit', function(e) {
+        // Essential: prevent the default form submission to a server
         e.preventDefault();
         
-        const user = document.getElementById('u').value;
-        const pass = document.getElementById('p').value;
+        try {
+            const pass = document.getElementById('p').value;
 
-        // 2. Phishing Logic
-        if (isPhishingActive) {
-            alert("🛑 PHISHING DETECTED!\n\nLook at the URL above. It has a '0' instead of an 'o'. Your password manager would have saved you here because it wouldn't recognize this fake site.");
-            logout();
-            return false;
-        }
+            if (isPhishing) {
+                alert("PHISHING ALERT! Check the URL.");
+                location.reload();
+                return;
+            }
 
-        // 3. Breach Logic
-        if (BREACHED_PASSWORDS.includes(pass.toLowerCase())) {
+            if (BREACHED.includes(pass.toLowerCase())) {
+                document.getElementById('loginView').classList.add('hidden');
+                document.getElementById('breachView').classList.remove('hidden');
+                return;
+            }
+
+            // Success Logic
             document.getElementById('loginView').classList.add('hidden');
-            document.getElementById('breachView').classList.remove('hidden');
-            return false;
+            document.getElementById('dashboardView').classList.remove('hidden');
+
+            // Signal to browser for password saving
+            if (window.history.pushState) {
+                window.history.pushState({}, "", "#success");
+            }
+        } catch (err) {
+            console.error("Login logic error", err);
+            alert("An error occurred. Please refresh.");
         }
-
-        // 4. Success Transition
-        document.getElementById('tipText').innerText = tips[Math.floor(Math.random() * tips.length)];
-        document.getElementById('loginView').classList.add('hidden');
-        document.getElementById('dashboardView').classList.remove('hidden');
-
-        // 5. THE CHROME TRIGGER
-        // On HTTPS (GitHub), pushState + a slight delay often forces the save prompt.
-        window.history.pushState({}, "", "#session-active");
-        
-        return false; // Stay on page but simulate "completion"
-    }
+    });
 </script>
 </body>
 </html>
