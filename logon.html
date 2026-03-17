@@ -85,4 +85,68 @@
     const tips = [
         "A password manager prevents phishing by only filling passwords on the exact right URL.",
         "MFA (Multi-Factor Authentication) is the single best way to secure your accounts.",
-        "Your Master Password is the most important key. Make it a long phrase, not a word
+        "Your Master Password is the most important key. Make it a long phrase, not a word."
+    ];
+
+    function togglePass() {
+        const p = document.getElementById('p');
+        const eye = document.getElementById('eye');
+        p.type = p.type === 'password' ? 'text' : 'password';
+        eye.innerText = p.type === 'password' ? '👁️' : '🙈';
+    }
+
+    function generatePass() {
+        const pass = "SEC-" + Math.random().toString(36).toUpperCase().slice(-4) + "-" + Math.random().toString(36).slice(-4) + "!";
+        navigator.clipboard.writeText(pass).then(() => {
+            document.getElementById('msg').innerText = "Copied! Now paste it into the form.";
+        });
+    }
+
+    function triggerPhishing() {
+        isPhishingActive = true;
+        const url = document.getElementById('urlDisplay');
+        url.innerText = "⚠️ https://your-trainining-p0rtal.github.io";
+        url.classList.add('phishing-active');
+        document.getElementById('setupArea').style.opacity = "0.3";
+    }
+
+    function logout() {
+        // Full reload clears state and resets UI
+        window.location.reload();
+    }
+
+    function handleLogin(e) {
+        // 1. Prevent GitHub from trying to process the form
+        e.preventDefault();
+        
+        const user = document.getElementById('u').value;
+        const pass = document.getElementById('p').value;
+
+        // 2. Phishing Logic
+        if (isPhishingActive) {
+            alert("🛑 PHISHING DETECTED!\n\nLook at the URL above. It has a '0' instead of an 'o'. Your password manager would have saved you here because it wouldn't recognize this fake site.");
+            logout();
+            return false;
+        }
+
+        // 3. Breach Logic
+        if (BREACHED_PASSWORDS.includes(pass.toLowerCase())) {
+            document.getElementById('loginView').classList.add('hidden');
+            document.getElementById('breachView').classList.remove('hidden');
+            return false;
+        }
+
+        // 4. Success Transition
+        document.getElementById('tipText').innerText = tips[Math.floor(Math.random() * tips.length)];
+        document.getElementById('loginView').classList.add('hidden');
+        document.getElementById('dashboardView').classList.remove('hidden');
+
+        // 5. THE CHROME TRIGGER
+        // On HTTPS (GitHub), pushState + a slight delay often forces the save prompt.
+        window.history.pushState({}, "", "#session-active");
+        
+        return false; // Stay on page but simulate "completion"
+    }
+</script>
+</body>
+</html>
