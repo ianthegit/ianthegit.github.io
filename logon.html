@@ -3,65 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="https://hopgood.uk/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Security Training Lab</title>
     <style>
         :root { --primary: #1877f2; --success: #42b72a; --danger: #d93025; --bg: #f0f2f5; }
-        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); display: flex; flex-direction: column; align-items: center; padding: 20px; }
-        .card { background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 400px; }
-        .url-bar { background: #eee; padding: 10px; border-radius: 6px; margin-bottom: 20px; font-family: monospace; text-align: center; border: 1px solid #ccc; font-size: 0.85rem; }
-        input { width: 100%; padding: 12px; margin-bottom: 10px; border: 1px solid #dddfe2; border-radius: 6px; box-sizing: border-box; font-size: 1rem; }
-        .btn { width: 100%; padding: 12px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; margin-bottom: 10px; }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); display: flex; flex-direction: column; align-items: center; padding: 20px; margin: 0; }
+        .container { width: 100%; max-width: 420px; margin-top: 40px; }
+        .card { background: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .url-bar { background: #eee; padding: 10px; border-radius: 6px; margin-bottom: 25px; font-family: monospace; text-align: center; border: 1px solid #ccc; font-size: 0.85rem; }
+        .phishing-active { background: #fff0f0; border-color: var(--danger); color: var(--danger); font-weight: bold; }
+        
+        label { display: block; margin-bottom: 6px; font-weight: 600; font-size: 0.85rem; }
+        .input-group { position: relative; width: 100%; margin-bottom: 15px; }
+        input { width: 100%; padding: 12px; border: 1px solid #dddfe2; border-radius: 6px; box-sizing: border-box; font-size: 1rem; }
+        .eye-btn { position: absolute; right: 10px; top: 10px; background: none; border: none; cursor: pointer; font-size: 1.2rem; color: #666; }
+        
+        .btn { width: 100%; padding: 12px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 1rem; margin-top: 10px; transition: 0.2s; }
         .btn-blue { background: var(--primary); color: white; }
-        .btn-green { background: var(--success); color: white; }
-        .hidden { display: none; }
+        .btn-green { background: var(--success); color: white; margin-bottom: 15px; }
+        .btn-outline { background: white; border: 1px solid #ccc; color: #666; margin-bottom: 25px; }
+        
+        .hidden { display: none !important; }
         .breach-ui { background: #1a1a1a; color: #ff4d4d; padding: 25px; border-radius: 8px; text-align: center; border: 2px solid #ff4d4d; }
+        .tip-box { background: #fff9e6; border-left: 4px solid #f39c12; padding: 15px; margin: 20px 0; border-radius: 0 4px 4px 0; font-size: 0.95rem; }
     </style>
 </head>
 <body>
 
-<div id="setup" style="margin-bottom: 20px; text-align: center; width: 400px;">
-    <button class="btn btn-green" onclick="generatePass()">1. Generate Strong Pass</button>
-    <button class="btn" style="background:white; color:#666; border:1px solid #ccc;" onclick="goPhish()">2. Test Phishing Mode</button>
-</div>
+<div class="container">
+    <div id="setupArea">
+        <button class="btn btn-green" onclick="generatePass()">Generate & Copy Strong Pass</button>
+        <button class="btn btn-outline" onclick="triggerPhishing()">Test Phishing Awareness</button>
+    </div>
 
-<div class="card">
-    <div id="urlDisplay" class="url-bar">📍 https://secure-training-portal.com</div>
-    
-    <div id="loginView">
-        <form id="trainingForm" target="hidden_iframe" action="about:blank" method="GET">
-            <label>Username</label>
-            <input type="text" id="u" name="username" autocomplete="username" placeholder="Username or eMail" required>
-            
-            <label>Password</label>
-            <div style="position:relative;">
-                <input type="password" id="p" name="password" autocomplete="current-password" placeholder="Password" required>
-                <button type="button" onclick="toggleView()" id="eye" style="position:absolute; right:10px; top:10px; border:none; background:none; cursor:pointer;">👁️</button>
+    <div class="card" id="mainCard">
+        <div id="urlDisplay" class="url-bar">📍 https://your-training-portal.github.io</div>
+        
+        <div id="loginView">
+            <form id="trainingForm" onsubmit="return handleLogin(event)">
+                <label for="u">Username</label>
+                <div class="input-group">
+                    <input type="text" id="u" name="username" autocomplete="username" placeholder="Training_User" required>
+                </div>
+                
+                <label for="p">Password</label>
+                <div class="input-group">
+                    <input type="password" id="p" name="password" autocomplete="current-password" placeholder="Password" required>
+                    <button type="button" class="eye-btn" onclick="togglePass()" id="eye">👁️</button>
+                </div>
+                
+                <p id="msg" style="font-size: 0.8rem; text-align: center; color: var(--primary); min-height: 1.5em; margin: 10px 0;"></p>
+                <button type="submit" class="btn btn-blue">Authorize Login</button>
+            </form>
+        </div>
+
+        <div id="dashboardView" class="hidden">
+            <div style="text-align: center;">
+                <div style="font-size: 3rem;">🛡️</div>
+                <h2>Secure Access Granted</h2>
+                <div class="tip-box">
+                    <strong>Security Pro-Tip:</strong><br>
+                    <span id="tipText"></span>
+                </div>
+                <button class="btn btn-blue" onclick="logout()">Secure Log Out</button>
             </div>
-            
-            <p id="msg" style="font-size:0.8rem; text-align:center; color:var(--primary); min-height: 1.2em;"></p>
-            <button type="submit" class="btn btn-blue">Sign In</button>
-        </form>
-    </div>
-
-    <div id="dashboardView" class="hidden">
-        <div style="text-align:center;">
-            <div style="font-size: 3rem;">✅</div>
-            <h2>Access Granted</h2>
-            <p>If the save prompt appeared, your manager is now protecting this account.</p>
-            <button class="btn btn-blue" onclick="location.reload()">Log Out</button>
         </div>
-    </div>
 
-    <div id="breachView" class="hidden">
-        <div class="breach-ui">
-            <h2>🚨 BREACHED!</h2>
-            <p>This common password is in hacker databases. Use the generator!</p>
-            <button class="btn" style="background:white; color:black;" onclick="location.reload()">Try Again</button>
+        <div id="breachView" class="hidden">
+            <div class="breach-ui">
+                <h2>⚠️ BREACHED</h2>
+                <p>This password was found in a public leak. Use a random string!</p>
+                <button class="btn" style="background: white; color: black;" onclick="logout()">Try Again</button>
+            </div>
         </div>
     </div>
 </div>
-
-<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
 
 <script>
-    let phishing = false;
+    let isPhishingActive = false;
+    const BREACHED_PASSWORDS = ["123456", "password", "password123", "qwerty", "admin", "welcome"];
+    const tips = [
+        "A password manager prevents phishing by only filling passwords on the exact right URL.",
+        "MFA (Multi-Factor Authentication) is the single best way to secure your accounts.",
+        "Your Master Password is the most important key. Make it a long phrase, not a word
