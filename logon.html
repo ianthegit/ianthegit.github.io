@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Security Training Lab</title>
     <style>
-        :root { --primary: #1877f2; --success: #42b72a; --danger: #d93025; --bg: #f0f2f5; }
+        :root { --primary: #1877f2; --success: #42b72a; --warning: #f3ba2f; --danger: #d93025; --bg: #f0f2f5; }
         body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); display: flex; flex-direction: column; align-items: center; padding: 20px; margin: 0; }
         .container { width: 100%; max-width: 420px; margin-top: 40px; }
         .card { background: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
@@ -14,10 +14,15 @@
         .phishing-active { background: #fff0f0; border-color: var(--danger); color: var(--danger); font-weight: bold; }
         
         label { display: block; margin-bottom: 6px; font-weight: 600; font-size: 0.85rem; }
-        .input-group { position: relative; width: 100%; margin-bottom: 15px; }
+        .input-group { position: relative; width: 100%; margin-bottom: 10px; }
         input { width: 100%; padding: 12px; border: 1px solid #dddfe2; border-radius: 6px; box-sizing: border-box; font-size: 1rem; }
         .eye-btn { position: absolute; right: 10px; top: 10px; background: none; border: none; cursor: pointer; font-size: 1.2rem; color: #666; }
         
+        /* Strength Indicator */
+        .strength-container { height: 6px; width: 100%; background: #eee; border-radius: 3px; margin-bottom: 5px; overflow: hidden; }
+        #strengthBar { height: 100%; width: 0%; transition: width 0.3s ease, background-color 0.3s ease; }
+        #strengthText { font-size: 0.75rem; display: block; text-align: right; margin-bottom: 15px; font-weight: bold; height: 1em; }
+
         .btn { width: 100%; padding: 12px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 1rem; margin-top: 10px; transition: 0.2s; }
         .btn-blue { background: var(--primary); color: white; }
         .btn-green { background: var(--success); color: white; margin-bottom: 15px; }
@@ -33,30 +38,33 @@
         <button class="btn btn-green" onclick="generatePass()">Generate Strong Pass</button>
     </div>
 
-    <div class="card">
+    <div class="card" id="mainCard">
         <div id="urlDisplay" class="url-bar">📍 https://secure-portal.training</div>
         
         <div id="loginView">
             <form id="trainingForm">
                 <label for="u">Username</label>
-                <input type="text" id="u" name="username" autocomplete="username" placeholder="Student_User" required>
+                <input type="text" id="u" name="username" autocomplete="username" placeholder="Username or eMail" required>
                 
                 <label for="p">Password</label>
                 <div class="input-group">
-                    <input type="password" id="p" name="password" autocomplete="current-password" placeholder="Password" required>
+                    <input type="password" id="p" name="password" autocomplete="current-password" placeholder="Password" required oninput="evaluateStrength(this.value)">
                     <button type="button" class="eye-btn" onclick="togglePass()">👁️</button>
                 </div>
                 
-                <p id="msg" style="font-size: 0.8rem; text-align: center; color: var(--primary); min-height: 1.5em;"></p>
+                <div class="strength-container"><div id="strengthBar"></div></div>
+                <span id="strengthText"></span>
+                
+                <p id="msg" style="font-size: 0.8rem; text-align: center; color: var(--primary); min-height: 1.5em; margin-top: 0;"></p>
                 <button type="submit" class="btn btn-blue">Sign In</button>
             </form>
-            <button class="btn" style="background:none; color:#666; font-size:0.8rem;" onclick="triggerPhishing()">Simulate Phishing Mode</button>
+            <button class="btn" style="background:none; color:#666; font-size:0.8rem; border:none; margin-top: 20px;" onclick="triggerPhishing()">Simulate Phishing Mode</button>
         </div>
 
         <div id="dashboardView" class="hidden">
             <div style="text-align: center;">
                 <h2>✅ Access Granted</h2>
-                <p>Login successful.</p>
+                <p>Login successful. Chrome should offer to save your credentials.</p>
                 <button class="btn btn-blue" onclick="location.reload()">Log Out</button>
             </div>
         </div>
@@ -64,8 +72,8 @@
         <div id="breachView" class="hidden">
             <div class="breach-ui">
                 <h2>⚠️ BREACHED</h2>
-                <p>Unsafe password. Try again!</p>
-                <button class="btn" style="background: white; color: black;" onclick="location.reload()">Reset</button>
+                <p>This password is on a hacker's list of 1.4 billion leaked credentials.</p>
+                <button class="btn" style="background: white; color: black;" onclick="location.reload()">Try Again</button>
             </div>
         </div>
     </div>
@@ -73,17 +81,47 @@
 
 <script>
     let isPhishing = false;
-    const BREACHED = ["123456", "password", "password123", "admin"];
+    const BREACHED = ["123456", "password", "password123", "admin", "welcome", "qwerty"];
 
     function togglePass() {
-        const p = document.getElementById('p');
-        p.type = p.type === 'password' ? 'text' : 'password';
+        try {
+            const p = document.getElementById('p');
+            p.type = (p.type === 'password') ? 'text' : 'password';
+        } catch(e) { console.error(e); }
+    }
+
+    function evaluateStrength(p) {
+        let score = 0;
+        if (p.length > 8) score++;
+        if (/[A-Z]/.test(p)) score++;
+        if (/[0-9]/.test(p)) score++;
+        if (/[^A-Za-z0-9]/.test(p)) score++;
+
+        const bar = document.getElementById('strengthBar');
+        const text = document.getElementById('strengthText');
+        const levels = [
+            {w:'20%', c:'var(--danger)', t:'Very Weak'},
+            {w:'40%', c:'var(--danger)', t:'Weak'},
+            {w:'60%', c:'var(--warning)', t:'Good'},
+            {w:'80%', c:'var(--success)', t:'Strong'},
+            {w:'100%', c:'var(--success)', t:'Excellent'}
+        ];
+
+        if (p.length === 0) {
+            bar.style.width = '0%';
+            text.innerText = "";
+        } else {
+            const res = levels[Math.min(score, 4)];
+            bar.style.width = res.w;
+            bar.style.backgroundColor = res.c;
+            text.innerText = res.t;
+            text.style.color = res.c;
+        }
     }
 
     function generatePass() {
         try {
             const pass = "SEC-" + Math.random().toString(36).toUpperCase().slice(-4) + "!" + Math.floor(Math.random()*99);
-            // Fallback for clipboard if navigator.clipboard is restricted
             const el = document.createElement('textarea');
             el.value = pass;
             document.body.appendChild(el);
@@ -91,9 +129,9 @@
             document.execCommand('copy');
             document.body.removeChild(el);
             document.getElementById('msg').innerText = "Copied: " + pass;
-        } catch (e) {
-            console.error("Clipboard error", e);
-        }
+            document.getElementById('p').value = pass;
+            evaluateStrength(pass);
+        } catch (e) { console.error(e); }
     }
 
     function triggerPhishing() {
@@ -103,38 +141,40 @@
         url.classList.add('phishing-active');
     }
 
-    document.getElementById('trainingForm').addEventListener('submit', function(e) {
-        // Essential: prevent the default form submission to a server
-        e.preventDefault();
-        
-        try {
-            const pass = document.getElementById('p').value;
+    // Attach listener via JS to avoid scope/uncaught errors in HTML
+    const form = document.getElementById('trainingForm');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            try {
+                const pass = document.getElementById('p').value;
 
-            if (isPhishing) {
-                alert("PHISHING ALERT! Check the URL.");
-                location.reload();
-                return;
-            }
+                if (isPhishing) {
+                    alert("PHISHING ALERT! Notice the '0' in the URL. Your manager wouldn't have autofilled this.");
+                    location.reload();
+                    return;
+                }
 
-            if (BREACHED.includes(pass.toLowerCase())) {
+                if (BREACHED.includes(pass.toLowerCase())) {
+                    document.getElementById('loginView').classList.add('hidden');
+                    document.getElementById('breachView').classList.remove('hidden');
+                    return;
+                }
+
+                // Successful Transition
                 document.getElementById('loginView').classList.add('hidden');
-                document.getElementById('breachView').classList.remove('hidden');
-                return;
-            }
+                document.getElementById('dashboardView').classList.remove('hidden');
 
-            // Success Logic
-            document.getElementById('loginView').classList.add('hidden');
-            document.getElementById('dashboardView').classList.remove('hidden');
-
-            // Signal to browser for password saving
-            if (window.history.pushState) {
-                window.history.pushState({}, "", "#success");
+                // History API can sometimes throw errors on certain origins
+                if (window.history && window.history.pushState) {
+                    try { window.history.pushState({}, "", "#success"); } catch(h) {}
+                }
+            } catch (err) {
+                console.error("Submission error:", err);
             }
-        } catch (err) {
-            console.error("Login logic error", err);
-            alert("An error occurred. Please refresh.");
-        }
-    });
+        });
+    }
 </script>
 </body>
 </html>
