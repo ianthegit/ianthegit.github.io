@@ -2,60 +2,107 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://hopgood.uk/favicon.png">
     <title>Security Training Lab</title>
     <style>
-        :root { --primary: #1877f2; --success: #42b72a; --warning: #f3ba2f; --danger: #d93025; --bg: #f0f2f5; }
-        body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); display: flex; flex-direction: column; align-items: center; padding: 20px; }
+        :root { --primary: #1877f2; --success: #42b72a; --danger: #d93025; --bg: #f0f2f5; }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); display: flex; flex-direction: column; align-items: center; padding: 20px; }
         .card { background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 400px; }
         .url-bar { background: #eee; padding: 10px; border-radius: 6px; margin-bottom: 20px; font-family: monospace; text-align: center; border: 1px solid #ccc; font-size: 0.85rem; }
         .phishing-active { background: #fff0f0; border-color: var(--danger); color: var(--danger); font-weight: bold; }
-        label { display: block; margin-bottom: 5px; font-weight: 600; font-size: 0.85rem; }
-        .pass-wrapper { position: relative; width: 100%; }
-        input { width: 100%; padding: 12px; margin-bottom: 10px; border: 1px solid #dddfe2; border-radius: 6px; box-sizing: border-box; font-size: 1rem; }
-        .toggle-btn { position: absolute; right: 10px; top: 10px; background: none; border: none; cursor: pointer; color: #666; font-size: 1.2rem; }
-        .strength-container { height: 6px; width: 100%; background: #eee; border-radius: 3px; margin-bottom: 5px; overflow: hidden; }
-        #strengthBar { height: 100%; width: 0%; transition: width 0.3s; }
+        input { width: 100%; padding: 12px; margin-bottom: 10px; border: 1px solid #dddfe2; border-radius: 6px; box-sizing: border-box; }
         .btn { width: 100%; padding: 12px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; margin-bottom: 10px; }
         .btn-blue { background: var(--primary); color: white; }
         .btn-green { background: var(--success); color: white; }
         .hidden { display: none; }
-        .tip-box { background: #fff9e6; border-left: 4px solid #f39c12; padding: 12px; margin: 15px 0; font-size: 0.9rem; }
         .breach-ui { background: #1a1a1a; color: #ff4d4d; padding: 25px; border-radius: 8px; text-align: center; border: 2px solid #ff4d4d; }
     </style>
 </head>
 <body>
 
-<div id="setupControls" style="margin-bottom: 20px; text-align: center; width: 400px;">
-    <button class="btn btn-green" onclick="generateAndCopy()">Generate Strong Password</button>
-    <button class="btn" style="background:transparent; border:1px solid #ccc; color:#666;" onclick="togglePhishing()">Simulate Phishing Mode</button>
+<div id="setup" style="margin-bottom: 20px; text-align: center; width: 400px;">
+    <button class="btn btn-green" onclick="generatePass()">1. Generate Strong Pass</button>
+    <button class="btn" style="background:white; color:#666; border:1px solid #ccc;" onclick="goPhish()">2. Test Phishing Mode</button>
 </div>
 
 <div class="card" id="mainCard">
     <div id="urlDisplay" class="url-bar">📍 https://secure-training-portal.com</div>
     
     <div id="loginView">
-        <form id="loginForm">
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" autocomplete="username" placeholder="Username or eMail" required>
-            
-            <label for="password">Password</label>
-            <div class="pass-wrapper">
-                <input type="password" id="password" name="password" autocomplete="current-password" placeholder="Enter password" required oninput="updateStrength(this.value)">
-                <button type="button" class="toggle-btn" onclick="toggleVisibility()" id="eyeBtn">👁️</button>
+        <form id="trainingForm">
+            <label>Username</label>
+            <input type="text" id="u" name="username" autocomplete="username" placeholder="Username or eMail" required>
+            <label>Password</label>
+            <div style="position:relative;">
+                <input type="password" id="p" name="password" autocomplete="current-password" placeholder="Password" required>
+                <button type="button" onclick="toggleView()" style="position:absolute; right:10px; top:10px; border:none; background:none; cursor:pointer;">👁️</button>
             </div>
-            
-            <div class="strength-container"><div id="strengthBar"></div></div>
-            <p id="feedback" style="font-size: 0.8rem; text-align: center; color: var(--primary); min-height: 1.2em;"></p>
-            
+            <p id="msg" style="font-size:0.8rem; text-align:center; color:var(--primary);"></p>
             <button type="submit" class="btn btn-blue">Sign In</button>
         </form>
     </div>
 
     <div id="dashboardView" class="hidden">
-        <div style="text-align: center;">
-            <div style="font-size: 3rem;">🛡️</div>
-            <h2>Access Granted</h2>
-            <div class="tip-box"><span id="tipText"></span></div>
-            <button class="btn btn-blue" onclick="logout()">Secure
+        <div style="text-align:center;">
+            <h2>✅ Access Granted</h2>
+            <p>Your password manager should have offered to save these credentials.</p>
+            <button class="btn btn-blue" onclick="location.reload()">Log Out</button>
+        </div>
+    </div>
+
+    <div id="breachView" class="hidden">
+        <div class="breach-ui">
+            <h2>🚨 BREACHED!</h2>
+            <p>This common password is in hacker databases. Use the generator!</p>
+            <button class="btn" style="background:white; color:black;" onclick="location.reload()">Try Again</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    let phishing = false;
+    const BREACH_LIST = ["123456", "password", "password123", "qwerty", "admin"];
+
+    function toggleView() {
+        const p = document.getElementById('p');
+        p.type = p.type === 'password' ? 'text' : 'password';
+    }
+
+    function generatePass() {
+        const pass = "TR-" + Math.random().toString(36).toUpperCase().slice(-4) + "!" + Math.floor(Math.random()*99);
+        navigator.clipboard.writeText(pass);
+        document.getElementById('msg').innerText = "Copied! Now paste it below.";
+    }
+
+    function goPhish() {
+        phishing = true;
+        document.getElementById('urlDisplay').innerText = "⚠️ https://secure-p0rtal.com";
+        document.getElementById('urlDisplay').classList.add('phishing-active');
+        document.getElementById('setup').style.opacity = "0.3";
+    }
+
+    document.getElementById('trainingForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const passVal = document.getElementById('p').value;
+
+        if (phishing) {
+            alert("PHISHING ALERT: You just entered a password on a fake site. Look at the URL!");
+            location.reload();
+            return;
+        }
+
+        if (BREACH_LIST.includes(passVal.toLowerCase())) {
+            document.getElementById('loginView').classList.add('hidden');
+            document.getElementById('breachView').classList.remove('hidden');
+            return;
+        }
+
+        // --- SUCCESS TRIGGER ---
+        // This simulates a "successful navigation" which triggers Chrome's save prompt
+        window.history.pushState({}, "", "#logged-in");
+        document.getElementById('loginView').classList.add('hidden');
+        document.getElementById('dashboardView').classList.remove('hidden');
+    });
+</script>
+</body>
+</html>
