@@ -1,164 +1,61 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://hopgood.uk/favicon.png">
-    <title>Cybersecurity Training Lab</title>
+    <title>Security Training Lab</title>
     <style>
-        :root { --primary: #1877f2; --success: #42b72a; --warning: #f3ba2f; --danger: #d93025; --bg: #f0f2f5; --card-bg: #ffffff; }
-        body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); display: flex; flex-direction: column; align-items: center; padding: 20px; color: #1c1e21; }
-        .container { width: 100%; max-width: 450px; }
-        .card { background: var(--card-bg); padding: 2rem; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); position: relative; }
-        
-        /* URL bar */
-        .url-bar { background: #eee; padding: 10px; border-radius: 6px; margin-bottom: 20px; font-family: monospace; text-align: center; border: 1px solid #ccc; font-size: 0.85rem; transition: all 0.3s; }
+        :root { --primary: #1877f2; --success: #42b72a; --warning: #f3ba2f; --danger: #d93025; --bg: #f0f2f5; }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); display: flex; flex-direction: column; align-items: center; padding: 20px; }
+        .card { background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 400px; }
+        .url-bar { background: #eee; padding: 10px; border-radius: 6px; margin-bottom: 20px; font-family: monospace; text-align: center; border: 1px solid #ccc; font-size: 0.85rem; }
         .phishing-active { background: #fff0f0; border-color: var(--danger); color: var(--danger); font-weight: bold; }
-        
-        /* Form & Visibility Toggle */
         label { display: block; margin-bottom: 5px; font-weight: 600; font-size: 0.85rem; }
         .pass-wrapper { position: relative; width: 100%; }
         input { width: 100%; padding: 12px; margin-bottom: 10px; border: 1px solid #dddfe2; border-radius: 6px; box-sizing: border-box; font-size: 1rem; }
-        .toggle-btn { position: absolute; right: 10px; top: 8px; background: none; border: none; cursor: pointer; font-size: 1.2rem; padding: 0; color: #666; }
-        
-        /* Strength Meter */
+        .toggle-btn { position: absolute; right: 10px; top: 10px; background: none; border: none; cursor: pointer; color: #666; font-size: 1.2rem; }
         .strength-container { height: 6px; width: 100%; background: #eee; border-radius: 3px; margin-bottom: 5px; overflow: hidden; }
-        #strengthBar { height: 100%; width: 0%; transition: width 0.3s ease; }
-        #strengthText { font-size: 0.75rem; display: block; text-align: right; margin-bottom: 15px; font-weight: bold; }
-
-        /* Buttons */
+        #strengthBar { height: 100%; width: 0%; transition: width 0.3s; }
         .btn { width: 100%; padding: 12px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; margin-bottom: 10px; }
         .btn-blue { background: var(--primary); color: white; }
         .btn-green { background: var(--success); color: white; }
-        .btn-outline { background: transparent; border: 1px solid #ccc; color: #666; }
-
         .hidden { display: none; }
         .tip-box { background: #fff9e6; border-left: 4px solid #f39c12; padding: 12px; margin: 15px 0; font-size: 0.9rem; }
-        .history-table { width: 100%; font-size: 0.8rem; border-collapse: collapse; margin-top: 10px; }
-        .history-table td { border-bottom: 1px solid #eee; padding: 8px; }
-        .breach-ui { background: #1a1a1a; color: #ff4d4d; padding: 20px; border-radius: 8px; text-align: center; border: 2px solid #ff4d4d; }
+        .breach-ui { background: #1a1a1a; color: #ff4d4d; padding: 25px; border-radius: 8px; text-align: center; border: 2px solid #ff4d4d; }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <div id="setupControls" style="margin-bottom: 20px; text-align: center;">
-        <button class="btn btn-green" onclick="generateAndCopy()">Generate Strong Password</button>
-        <button class="btn btn-outline" onclick="togglePhishing()">Simulate Phishing Mode</button>
-    </div>
+<div id="setupControls" style="margin-bottom: 20px; text-align: center; width: 400px;">
+    <button class="btn btn-green" onclick="generateAndCopy()">Generate Strong Password</button>
+    <button class="btn" style="background:transparent; border:1px solid #ccc; color:#666;" onclick="togglePhishing()">Simulate Phishing Mode</button>
+</div>
 
-    <div id="loginPage" class="card">
-        <div id="urlDisplay" class="url-bar">📍 https://secure-training-portal.com</div>
-        
-        <form id="loginForm" action="" method="GET">
+<div class="card" id="mainCard">
+    <div id="urlDisplay" class="url-bar">📍 https://secure-training-portal.com</div>
+    
+    <div id="loginView">
+        <form id="loginForm">
             <label for="username">Username</label>
             <input type="text" id="username" name="username" autocomplete="username" placeholder="Username or eMail" required>
             
             <label for="password">Password</label>
             <div class="pass-wrapper">
-                <input type="password" id="password" name="password" autocomplete="current-password" placeholder="Enter password" required oninput="updateUI(this.value)">
+                <input type="password" id="password" name="password" autocomplete="current-password" placeholder="Enter password" required oninput="updateStrength(this.value)">
                 <button type="button" class="toggle-btn" onclick="toggleVisibility()" id="eyeBtn">👁️</button>
             </div>
             
             <div class="strength-container"><div id="strengthBar"></div></div>
-            <span id="strengthText">Strength: Too Short</span>
-
-            <input type="hidden" name="status" value="success">
+            <p id="feedback" style="font-size: 0.8rem; text-align: center; color: var(--primary); min-height: 1.2em;"></p>
+            
             <button type="submit" class="btn btn-blue">Sign In</button>
         </form>
-        <p id="feedback" style="text-align:center; font-size: 0.85rem; min-height: 1.2em;"></p>
     </div>
 
-    <div id="dashboardPage" class="card hidden">
+    <div id="dashboardView" class="hidden">
         <div style="text-align: center;">
             <div style="font-size: 3rem;">🛡️</div>
-            <h2>Identity Verified</h2>
-            <div class="tip-box"><strong>Security Pro-Tip:</strong> <br><span id="tipText"></span></div>
-            <p style="font-size: 0.9rem; color: #666;">Chrome should have prompted to save your password.</p>
-            <button class="btn btn-blue" onclick="logout()">Secure Log Out</button>
-        </div>
-    </div>
-
-    <div id="breachPage" class="card hidden">
-        <div class="breach-ui">
-            <h1>🚨 DATA BREACH</h1>
-            <p>That password is compromised!</p>
-            <button class="btn" style="background: white; color: black; margin-top: 15px;" onclick="logout()">Try Again</button>
-        </div>
-    </div>
-</div>
-
-<script>
-    const BREACHED = ["123456", "password", "password123", "qwerty", "welcome", "admin"];
-    const tips = [
-        "A password manager prevents phishing because it won't autofill if the URL is wrong.",
-        "Your Master Password should be a long phrase that only you know.",
-        "Password managers can identify fake 'phishing' sites because they won't offer to auto-fill them!"
-    ];
-
-    // Logic to handle the "Reloaded" state
-    const params = new URLSearchParams(window.location.search);
-    const passValue = params.get('password');
-
-    if (params.get('status') === 'success') {
-        if (passValue && BREACHED.includes(passValue.toLowerCase())) {
-            document.getElementById('loginPage').classList.add('hidden');
-            document.getElementById('breachPage').classList.remove('hidden');
-        } else {
-            document.getElementById('tipText').innerText = tips[Math.floor(Math.random() * tips.length)];
-            document.getElementById('loginPage').classList.add('hidden');
-            document.getElementById('dashboardPage').classList.remove('hidden');
-        }
-    }
-
-    function logout() {
-        // This clears the URL parameters and takes us back to the clean login page
-        window.location.href = window.location.pathname;
-    }
-
-    function toggleVisibility() {
-        const p = document.getElementById('password');
-        const eye = document.getElementById('eyeBtn');
-        p.type = p.type === "password" ? "text" : "password";
-        eye.innerText = p.type === "password" ? "👁️" : "🙈";
-    }
-
-    function generateAndCopy() {
-        const pass = "TR-" + Math.random().toString(36).toUpperCase().slice(-4) + "-" + Math.random().toString(36).slice(-4) + "!";
-        navigator.clipboard.writeText(pass);
-        const fb = document.getElementById('feedback');
-        fb.innerText = "Strong password copied! Now paste it into the form.";
-        fb.style.color = "var(--primary)";
-    }
-
-    function togglePhishing() {
-        const url = document.getElementById('urlDisplay');
-        url.innerText = "⚠️ https://secure-trainining-p0rtal.com";
-        url.classList.add('phishing-active');
-        document.getElementById('loginForm').onsubmit = function(e) {
-            e.preventDefault();
-            alert("❌ PHISHING ALERT! Notice the '0' in the URL? Your manager would NOT have filled this!");
-            logout();
-        };
-    }
-
-    function updateUI(p) {
-        let score = Math.min(p.length / 3, 4);
-        const bar = document.getElementById('strengthBar');
-        const text = document.getElementById('strengthText');
-        const levels = [
-            {w:'20%', c:'var(--danger)', t:'Weak'}, {w:'40%', c:'var(--danger)', t:'Fair'},
-            {w:'60%', c:'var(--warning)', t:'Good'}, {w:'80%', c:'var(--success)', t:'Strong'},
-            {w:'100%', c:'var(--success)', t:'Excellent'}
-        ];
-        if (p.length === 0) { bar.style.width = '0%'; text.innerText = "Strength: Too Short"; }
-        else {
-            const res = levels[Math.floor(score)];
-            bar.style.width = res.w; bar.style.backgroundColor = res.c;
-            text.innerText = "Strength: " + res.t; text.style.color = res.c;
-        }
-    }
-</script>
-</body>
-</html>
+            <h2>Access Granted</h2>
+            <div class="tip-box"><span id="tipText"></span></div>
+            <button class="btn btn-blue" onclick="logout()">Secure
