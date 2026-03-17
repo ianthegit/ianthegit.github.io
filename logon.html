@@ -4,47 +4,49 @@
     <meta charset="UTF-8">
     <link rel="icon" href="https://hopgood.uk/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Security Training Lab</title>
+    <title>Cybersecurity Training Portal</title>
     <style>
         :root { --primary: #1877f2; --success: #42b72a; --warning: #f3ba2f; --danger: #d93025; --bg: #f0f2f5; }
         body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); display: flex; flex-direction: column; align-items: center; padding: 20px; margin: 0; }
         .container { width: 100%; max-width: 420px; margin-top: 40px; }
         .card { background: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-        .url-bar { background: #eee; padding: 10px; border-radius: 6px; margin-bottom: 25px; font-family: monospace; text-align: center; border: 1px solid #ccc; font-size: 0.85rem; }
-        .phishing-active { background: #fff0f0; border-color: var(--danger); color: var(--danger); font-weight: bold; }
+        
+        /* URL Bar */
+        .url-bar { background: #eee; padding: 10px; border-radius: 6px; margin-bottom: 25px; font-family: monospace; text-align: center; border: 1px solid #ccc; font-size: 0.85rem; position: relative; }
+        .phishing-active { background: #fff0f0; border-color: var(--danger); color: var(--danger); font-weight: bold; animation: pulse 2s infinite; }
         
         label { display: block; margin-bottom: 6px; font-weight: 600; font-size: 0.85rem; }
         .input-group { position: relative; width: 100%; margin-bottom: 10px; }
         input { width: 100%; padding: 12px; border: 1px solid #dddfe2; border-radius: 6px; box-sizing: border-box; font-size: 1rem; }
         .eye-btn { position: absolute; right: 10px; top: 10px; background: none; border: none; cursor: pointer; font-size: 1.2rem; color: #666; }
         
-        /* Strength Indicator */
+        /* Strength Bar */
         .strength-container { height: 6px; width: 100%; background: #eee; border-radius: 3px; margin-bottom: 5px; overflow: hidden; }
-        #strengthBar { height: 100%; width: 0%; transition: width 0.3s ease, background-color 0.3s ease; }
+        #strengthBar { height: 100%; width: 0%; transition: all 0.3s ease; }
         #strengthText { font-size: 0.75rem; display: block; text-align: right; margin-bottom: 15px; font-weight: bold; height: 1em; }
 
-        .btn { width: 100%; padding: 12px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 1rem; margin-top: 10px; transition: 0.2s; }
+        .btn { width: 100%; padding: 12px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 1rem; margin-top: 10px; }
         .btn-blue { background: var(--primary); color: white; }
-        .btn-green { background: var(--success); color: white; margin-bottom: 15px; }
+        .btn-green { background: var(--success); color: white; margin-bottom: 10px; }
+        .btn-phish { background: #fdf0f0; border: 1px solid #fab0b0; color: #d93025; font-size: 0.8rem; margin-top: 20px; }
         
         .hidden { display: none !important; }
         .breach-ui { background: #1a1a1a; color: #ff4d4d; padding: 25px; border-radius: 8px; text-align: center; border: 2px solid #ff4d4d; }
+        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.7; } 100% { opacity: 1; } }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div id="setupArea">
-        <button class="btn btn-green" onclick="generatePass()">Generate Strong Pass</button>
-    </div>
+    <button class="btn btn-green" onclick="generatePass()">Generate Strong Password</button>
 
-    <div class="card" id="mainCard">
+    <div class="card">
         <div id="urlDisplay" class="url-bar">📍 https://secure-portal.training</div>
         
         <div id="loginView">
             <form id="trainingForm">
                 <label for="u">Username</label>
-                <input type="text" id="u" name="username" autocomplete="username" placeholder="Username or eMail" required>
+                <input type="text" id="u" name="username" autocomplete="username" placeholder="Username" required>
                 
                 <label for="p">Password</label>
                 <div class="input-group">
@@ -55,39 +57,60 @@
                 <div class="strength-container"><div id="strengthBar"></div></div>
                 <span id="strengthText"></span>
                 
-                <p id="msg" style="font-size: 0.8rem; text-align: center; color: var(--primary); min-height: 1.5em; margin-top: 0;"></p>
+                <p id="msg" style="font-size: 0.8rem; text-align: center; color: var(--primary); min-height: 1.5em; margin: 0;"></p>
                 <button type="submit" class="btn btn-blue">Sign In</button>
             </form>
-            <button class="btn" style="background:none; color:#666; font-size:0.8rem; border:none; margin-top: 20px;" onclick="triggerPhishing()">Simulate Phishing Mode</button>
+
+            <button class="btn btn-phish" onclick="triggerPhishing()">⚠️ Simulate Phishing Attack</button>
         </div>
 
         <div id="dashboardView" class="hidden">
             <div style="text-align: center;">
-                <h2>✅ Access Granted</h2>
-                <p>Login successful. Chrome should offer to save your credentials.</p>
+                <div style="font-size: 3rem;">✅</div>
+                <h2>Secure Login Successful</h2>
+                <p>Chrome should now offer to save this password.</p>
                 <button class="btn btn-blue" onclick="location.reload()">Log Out</button>
             </div>
         </div>
 
         <div id="breachView" class="hidden">
             <div class="breach-ui">
-                <h2>⚠️ BREACHED</h2>
-                <p>This password is on a hacker's list of 1.4 billion leaked credentials.</p>
-                <button class="btn" style="background: white; color: black;" onclick="location.reload()">Try Again</button>
+                <h2>🚨 PASSWORD BREACHED</h2>
+                <p>This password was found in a known data leak. Choose something unique!</p>
+                <button class="btn" style="background: white; color: black;" onclick="location.reload()">Reset Training</button>
             </div>
         </div>
     </div>
 </div>
 
 <script>
-    let isPhishing = false;
+    let isPhishingActive = false;
     const BREACHED = ["123456", "password", "password123", "admin", "welcome", "qwerty"];
 
     function togglePass() {
-        try {
-            const p = document.getElementById('p');
-            p.type = (p.type === 'password') ? 'text' : 'password';
-        } catch(e) { console.error(e); }
+        const p = document.getElementById('p');
+        p.type = p.type === 'password' ? 'text' : 'password';
+    }
+
+    function triggerPhishing() {
+        isPhishingActive = true;
+        const url = document.getElementById('urlDisplay');
+        url.innerText = "⚠️ https://secure-p0rtal.training"; // Note the '0'
+        url.classList.add('phishing-active');
+        document.getElementById('msg').innerText = "Phishing simulation active!";
+    }
+
+    function generatePass() {
+        const pass = "SEC-" + Math.random().toString(36).toUpperCase().slice(-4) + "!" + Math.floor(Math.random()*99);
+        const el = document.createElement('textarea');
+        el.value = pass;
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+        document.getElementById('msg').innerText = "Copied: " + pass;
+        document.getElementById('p').value = pass;
+        evaluateStrength(pass);
     }
 
     function evaluateStrength(p) {
@@ -108,8 +131,7 @@
         ];
 
         if (p.length === 0) {
-            bar.style.width = '0%';
-            text.innerText = "";
+            bar.style.width = '0%'; text.innerText = "";
         } else {
             const res = levels[Math.min(score, 4)];
             bar.style.width = res.w;
@@ -119,62 +141,38 @@
         }
     }
 
-    function generatePass() {
+    document.getElementById('trainingForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
         try {
-            const pass = "SEC-" + Math.random().toString(36).toUpperCase().slice(-4) + "!" + Math.floor(Math.random()*99);
-            const el = document.createElement('textarea');
-            el.value = pass;
-            document.body.appendChild(el);
-            el.select();
-            document.execCommand('copy');
-            document.body.removeChild(el);
-            document.getElementById('msg').innerText = "Copied: " + pass;
-            document.getElementById('p').value = pass;
-            evaluateStrength(pass);
-        } catch (e) { console.error(e); }
-    }
+            const passValue = document.getElementById('p').value;
 
-    function triggerPhishing() {
-        isPhishing = true;
-        const url = document.getElementById('urlDisplay');
-        url.innerText = "⚠️ https://secure-p0rtal.training";
-        url.classList.add('phishing-active');
-    }
-
-    // Attach listener via JS to avoid scope/uncaught errors in HTML
-    const form = document.getElementById('trainingForm');
-    if (form) {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            try {
-                const pass = document.getElementById('p').value;
-
-                if (isPhishing) {
-                    alert("PHISHING ALERT! Notice the '0' in the URL. Your manager wouldn't have autofilled this.");
-                    location.reload();
-                    return;
-                }
-
-                if (BREACHED.includes(pass.toLowerCase())) {
-                    document.getElementById('loginView').classList.add('hidden');
-                    document.getElementById('breachView').classList.remove('hidden');
-                    return;
-                }
-
-                // Successful Transition
-                document.getElementById('loginView').classList.add('hidden');
-                document.getElementById('dashboardView').classList.remove('hidden');
-
-                // History API can sometimes throw errors on certain origins
-                if (window.history && window.history.pushState) {
-                    try { window.history.pushState({}, "", "#success"); } catch(h) {}
-                }
-            } catch (err) {
-                console.error("Submission error:", err);
+            // 1. Phishing Logic
+            if (isPhishingActive) {
+                alert("❌ PHISHING DETECTED!\n\nYou entered your password into a fake URL (look closely at the '0' in p0rtal).\n\nIn a real scenario, your password manager would have saved you because it would refuse to autofill on an unrecognized URL.");
+                location.reload();
+                return;
             }
-        });
-    }
+
+            // 2. Breach Logic
+            if (BREACHED.includes(passValue.toLowerCase())) {
+                document.getElementById('loginView').classList.add('hidden');
+                document.getElementById('breachView').classList.remove('hidden');
+                return;
+            }
+
+            // 3. Success Logic
+            document.getElementById('loginView').classList.add('hidden');
+            document.getElementById('dashboardView').classList.remove('hidden');
+
+            // Signal to Chrome to save the password
+            if (window.history && window.history.pushState) {
+                window.history.pushState({}, "", "#authorized");
+            }
+        } catch (err) {
+            console.error("Critical error:", err);
+        }
+    });
 </script>
 </body>
 </html>
