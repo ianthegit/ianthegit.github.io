@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pub Finder - Optimal Walking Distance</title>
+    <style>
+        body { font-family: sans-serif; max-width: 500px; margin: 50px auto; padding: 20px; line-height: 1.6; }
+        .input-group { display: flex; gap: 10px; margin-bottom: 20px; }
+        input { flex-grow: 1; padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+        button { padding: 8px 15px; cursor: pointer; background: #007bff; color: white; border: none; border-radius: 4px; }
+        button:hover { background: #0056b3; }
+        ul { list-style: none; padding: 0; }
+        li { background: #f4f4f4; margin: 5px 0; padding: 10px; border-radius: 4px; display: flex; justify-content: space-between; }
+        #result { margin-top: 20px; padding: 15px; border: 2px dashed #28a745; display: none; }
+        .remove-btn { background: #dc3545; font-size: 12px; }
+    </style>
+</head>
+<body>
+
+    <h2>🍻 Pub Finder</h2>
+    <p>Add the starting addresses of your group:</p>
+
+    <div class="input-group">
+        <input type="text" id="addressInput" placeholder="Enter an address (e.g. London Eye)">
+        <button onclick="addLocation()">Add</button>
+    </div>
+
+    <ul id="locationList"></ul>
+
+    <button id="calcBtn" style="width: 100%; margin-top: 10px; display: none;" onclick="calculate()">
+        Find the Best Pub Location
+    </button>
+
+    <div id="result">
+        <strong>Optimal Coordinates:</strong> <span id="coords"></span><br><br>
+        <a id="mapsLink" target="_blank" style="color: #007bff; text-decoration: underline;">
+            Click here to see nearby pubs on Google Maps
+        </a>
+    </div>
+
+    <script>
+        let locations = [];
+
+        async function addLocation() {
+            const input = document.getElementById('addressInput');
+            const query = input.value;
+            if (!query) return;
+
+            // Simple free Geocoding using Nominatim (OpenStreetMap)
+            try {
+                const response = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}`);
+                const data = await response.json();
+                
+                if (data.length > 0) {
+                    const loc = { 
+                        name: query, 
+                        lat: parseFloat(data[0].lat), 
+                        lng: parseFloat(data[0].lon) 
+                    };
+                    locations.push(loc);
+                    renderList();
+                    input.value = '';
+                } else {
+                    alert("Location not found. Try being more specific!");
+                }
+            } catch (err) {
+                alert("Error fetching location data.");
+            }
+        }
+
+        function renderList() {
+            const list = document.getElementById('locationList');
+            list.innerHTML = locations.map((loc, index) => `
+                <li>
+                    ${loc.name}
+                    <button class="remove-btn" onclick="removeLocation(${index})">Remove</button>
+                </li>
+            `).join('');
+            document.getElementById('calcBtn').style.display = locations.length > 1 ? 'block' : 'none';
+        }
+
+        function removeLocation(index) {
+            locations.splice(index, 1);
+            renderList();
+        }
+
+        // Weiszfeld's Algorithm
+        function calculate() {
+            let currentGuess = {
+                lat: locations.reduce((sum, p) => sum + p.lat, 0) / locations.length,
+                lng: locations.reduce((sum, p) => sum + p.lng, 0) / locations.length
+            };
+
+            for (let i = 0; i < 50; i++) {
+                let numLat = 0, numLng = 0, totalWeight = 0;
+                for (let p of locations) {
+                    let d = Math.sqrt(Math.pow(p.lat - currentGuess.lat, 2) + Math.pow(p.lng - currentGuess.lng, 2));
+                    if (d === 0) continue;
+                    let weight = 1 / d;
+                    numLat += p.lat * weight;
+                    numLng += p.lng * weight;
+                    totalWeight += weight;
+                }
+                currentGuess = { lat: numLat / totalWeight, lng: numLng / totalWeight };
+            }
+
+            // Show results
+            const resultDiv = document.getElementById('result');
+            document.getElementById('coords').innerText = `${currentGuess.lat.toFixed(5)}, ${currentGuess.lng.toFixed(5)}`;
+            
+            // Generate a Google Maps link searching for "pub" near that point
+            const mapsUrl = `https://www.google.com/maps/search/pub/@${currentGuess.lat},${currentGuess.lng},16z`;
+            document.getElementById('mapsLink').href = mapsUrl;
+            resultDiv.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
