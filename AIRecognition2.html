@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive DCNN Demonstration</title>
+    <!-- LOAD TENSORFLOW.JS VIA CDN -->
+    <script src="https://jsdelivr.net"></script>
+    <style>
+        body { font-family: sans-serif; padding: 20px; background: #f5f5f5; }
+        .container { max-width: 500px; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        canvas { border: 2px solid #333; background: black; cursor: crosshair; display: block; margin-bottom: 10px; }
+        button { padding: 10px 15px; font-size: 16px; margin-right: 10px; cursor: pointer; border-radius: 4px; border: none; background: #007BFF; color: white; }
+        button:disabled { background: #ccc; cursor: not-allowed; }
+        #clearBtn { background: #DC3545; }
+        #status { font-weight: bold; margin: 15px 0; color: #555; }
+        #result { font-size: 18px; color: #28a745; margin-top: 15px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Interactive DCNN Demo</h2>
+        <p>Draw inside the box below (280x280 pixels, matching MNIST proportions).</p>
+        
+        <!-- DRAWING CANVAS -->
+        <canvas id="drawCanvas" width="280" height="280"></canvas>
+        
+        <div>
+            <button id="classifyBtn" disabled>Classify Drawing</button>
+            <button id="clearBtn">Clear</button>
+        </div>
+
+        <div id="status">Status: Initializing system... Check Developer Console (F12)</div>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        let myCNN;
+        let isModelReady = false;
+
+        // --- 1. MODEL ARCHITECTURE ---
+        function createLectureCNN() {
+            const model = tf.sequential();
+            model.add(tf.layers.conv2d({ inputShape:, kernelSize: 3, filters: 8, activation: 'relu', kernelInitializer: 'varianceScaling' }));
+            model.add(tf.layers.maxPooling2d({ poolSize:, strides: [2, 2] }));
+            model.add(tf.layers.conv2d({ kernelSize: 3, filters: 16, activation: 'relu', kernelInitializer: 'varianceScaling' }));
+            model.add(tf.layers.maxPooling2d({ poolSize:, strides: [2, 2] }));
+            model.add(tf.layers.flatten());
+            model.add(tf.layers.dense({ units: 64, activation: 'relu', kernelInitializer: 'varianceScaling' }));
+            model.add(tf.layers.dense({ units: 10, activation: 'softmax', kernelInitializer: 'varianceScaling' }));
+            return model;
+        }
+
+        // --- 2. PIPELINE: CONVERT CANVAS TO TENSOR ---
+        function processCanvas() {
+            return tf.tidy(() => {
+                // Get canvas pixels as a 3D Tensor [280, 280, 3]
+                const rawTensor = tf.browser.fromPixels(canvas);
+                
+                // Convert to grayscale by slicing just 1 channel -> [280, 280, 1]
+                const grayTensor = rawTensor.slice([0, 0, 0], [280, 280, 1]);
+                
+                // Downsample image from 280x280 to the model's expected 28x28 input size
+                const resizedTensor = tf.image.resizeBilinear(grayTensor, [28, 28]);
+                
+                // Normalize pixel values from integers [0, 255] to floats [0, 1]
+                const normalizedTensor = resizedTensor.toFloat().div(tf.scalar(255));
+                
+                // Add a batch dimension -> [1, 28, 28, 1] so it can pass through the model
+                return normalizedTensor.expandDims(0);
+            });
+        }
+
+        // --- 3. RUN PIPELINE & LIVE TRAINING ---
+        async function runLiveDemo() {
+            myCNN = createLectureCNN();
+            myCNN.summary();
+            myCNN.compile({ optimizer: tf.train.adam(), loss: 'categoricalCrossentropy', metrics: ['accuracy'] });
+
+            document.getElementById('status').innerText = "Status: Training model on placeholder weights...";
+            
+            // Synthetic training loop just to show data movement
+            const xs = tf.randomNormal([100, 28, 28, 1]);
+            const ys = tf.oneHot(tf.randomUniform([100], 0, 10, 'int32'), 10);
+
+            await myCNN.fit(xs, ys, {
+                epochs: 3,
+                batchSize: 32,
+                callbacks: {
+                    onEpochEnd: (epoch, logs) => {
+                        console.log(`Training Progress - Epoch ${epoch + 1}: Loss = ${logs.loss.toFixed(4)}`);
+                    }
+                }
+            });
+
+            xs.dispose();
+            ys.dispose();
+
+            document.getElementById('status').innerText = "Status: Ready! Draw a shape and hit Classify.";
+            document.getElementById('classifyBtn').disabled = false;
+            isModelReady = true;
+        }
+
+        // --- 4. INTERACTIVE CANVAS DRAWING ENGINE ---
+        const canvas = document.getElementById('drawCanvas');
+        const ctx = canvas.getContext('2d');
+        let drawing = false;
+
+        // Configure brush strokes (White strokes on black background)
+        ctx.strokeStyle = 'white';
+        ctx.lineWidth = 16;
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
+
+        canvas.addEventListener('mousedown', (e) => { drawing = true; draw(e); });
+        canvas.addEventListener('mousemove', draw);
+        canvas.addEventListener('mouseup', () => { drawing = false; ctx.beginPath(); });
+        canvas.addEventListener('mouseleave', () => { drawing = false; ctx.beginPath(); });
+
+        function draw(e) {
+            if (!drawing) return;
+            const rect = canvas.getBoundingClientRect();
+            ctx.lineTo(e.clientX - rect.left, e.clientY - rect.top);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(e.clientX - rect.left, e.clientY - rect.top);
+        }
+
+        document.getElementById('clearBtn').addEventListener('click', () => {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            document.getElementById('result').innerText = "";
+        });
+
+        // --- 5. CLASSIFY CLICKS ---
+        document.getElementById('classifyBtn').addEventListener('click', () => {
+            if (!isModelReady) return;
+
+            // Extract canvas data cleanly
+            const inputTensor = processCanvas();
+
+            // Run inference forward pass
+            const prediction = myCNN.predict(inputTensor);
+            
+            // Extract the highest confidence index array asynchronously
+            const predictedClass = prediction.argMax(1).dataSync()[0];
+            const confidenceScores = prediction.dataSync();
+            const highestConfidence = (confidenceScores[predictedClass] * 100).toFixed(1);
+
+            document.getElementById('result').innerText = `Prediction: Class ${predictedClass} (${highestConfidence}% confidence)`;
+
+            // Always dispose tensors manually to prevent browser WebGL memory leaks
+            inputTensor.dispose();
+            prediction.dispose();
+        });
+
+        // Initialize script
+        runLiveDemo();
+    </script>
+</body>
+</html>
