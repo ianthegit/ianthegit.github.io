@@ -349,7 +349,7 @@
           <span>Barometric Pressure</span>
           <span id="val-pressure" class="control-value">1013 hPa (+0.00m)</span>
         </div>
-        <input type="range" id="input-pressure" min="970" max="1040" value="977" step="1">
+        <input type="range" id="input-pressure" min="910" max="1040" value="977" step="1">
       </div>
       <div class="control-group">
         <div class="control-label">
@@ -403,6 +403,22 @@
 </div>
 
 <script>
+const TIMEZONE = 'Europe/London';
+
+/**
+ * Helper to extract local UK hours + minutes from a Date object
+ */
+function getUKHoursOfDay(date) {
+  const timeStr = date.toLocaleTimeString('en-GB', {
+    timeZone: TIMEZONE,
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false
+  });
+  const [hour, minute] = timeStr.split(':').map(Number);
+  return hour + (minute / 60);
+}
+
 /**
  * 1. ASTRONOMICAL ANCHOR COMPUTATION
  */
@@ -442,7 +458,7 @@ function getNodalFactors(date) {
 /**
  * 3. ADVANCED CONSTITUENT SPEEDS & AMPLITUDES
  */
-const MSL = 2.15;          // Mean Sea Level (m)
+const MSL = 2.15;           // Mean Sea Level (m)
 const RIVERBED_FLOOR = 0.35; // Woodbridge channel floor (m)
 
 // Base Amplitudes (m)
@@ -537,6 +553,7 @@ function renderApp() {
 
   const statusDiv = document.getElementById('anchor-status');
   const anchorFormatted = ANCHOR_LOW_TIDE.toLocaleString('en-GB', { 
+    timeZone: TIMEZONE,
     weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit', timeZoneName: 'short' 
   });
   
@@ -593,7 +610,7 @@ function renderApp() {
 
     if (d < TOTAL_DAYS) {
       const dayDate = new Date(startOfDay.getTime() + d * 86400000);
-      const dateStr = dayDate.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' });
+      const dateStr = dayDate.toLocaleDateString('en-GB', { timeZone: TIMEZONE, weekday: 'short', day: 'numeric', month: 'short' });
       const phase = getTidePhase(dayDate);
       const midX = timeToX(d * 24 + 12);
 
@@ -664,7 +681,7 @@ function populateTable(tideEvents, minHighThreshold) {
     const evt = tideEvents[i];
 
     if (evt.type === 'LOW') {
-      const hoursOfDay = evt.time.getHours() + evt.time.getMinutes() / 60;
+      const hoursOfDay = getUKHoursOfDay(evt.time);
       const isAM = hoursOfDay >= 6.0 && hoursOfDay <= 9.0;
       const isPM = hoursOfDay >= 17.0 && hoursOfDay <= 19.0;
 
@@ -680,13 +697,13 @@ function populateTable(tideEvents, minHighThreshold) {
         if (precedingHigh && precedingHigh.height >= minHighThreshold) {
           matches++;
 
-          const dateStr = evt.time.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' });
+          const dateStr = evt.time.toLocaleDateString('en-GB', { timeZone: TIMEZONE, weekday: 'short', day: 'numeric', month: 'short' });
           const windowText = isAM ? 'AM (06:00-09:00)' : 'PM (17:00-19:00)';
           const badgeWindowClass = isAM ? 'badge-am' : 'badge-pm';
           const phase = getTidePhase(evt.time);
 
-          const lowTimeStr = evt.time.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
-          const highTimeStr = precedingHigh.time.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+          const lowTimeStr = evt.time.toLocaleTimeString('en-GB', { timeZone: TIMEZONE, hour: '2-digit', minute: '2-digit' });
+          const highTimeStr = precedingHigh.time.toLocaleTimeString('en-GB', { timeZone: TIMEZONE, hour: '2-digit', minute: '2-digit' });
           const highHeightStr = `${precedingHigh.height.toFixed(2)} m`;
 
           tbody.innerHTML += `
