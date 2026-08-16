@@ -197,18 +197,38 @@
 </div>
 
 <script>
-/**
- * Tidal Harmonic Model Calibrated for River Deben / Woodbridge
- * Anchor Point: Saturday 16th May/Aug Benchmark Low Tide at 07:50 BST
- */
-const ANCHOR_LOW_TIDE = new Date('2026-05-16T07:50:00+01:00');
+// Reference Anchor: Known Low Tide on Saturday at 07:50 BST
+const ANCHOR_LOW_TIDE = new Date('2026-08-15T07:50:00+01:00');
 
 const MSL = 2.15;          // Mean Sea Level (m)
-const M2_AMP = 1.35;       // Principal Lunar Amplitude (m)
-const M2_SPEED = 0.505868; // Radians / hour (12.42h period)
 
-const S2_AMP = 0.42;       // Principal Solar Amplitude (m)
-const S2_SPEED = 0.523599; // Radians / hour (12.00h period)
+// Tidal Amplitudes (m)
+const M2_AMP = 1.22;       // Principal Lunar (12.42h period)
+const S2_AMP = 0.38;       // Principal Solar (12.00h period)
+const N2_AMP = 0.25;       // Lunar Elliptic (12.66h period)
+const M4_AMP = 0.12;       // Shallow-water Quarter-Diurnal (6.21h) - ~10% of M2
+
+// Constituent Speeds in Radians per Hour
+const M2_SPEED = 0.505868; // 28.984104 deg/hr
+const S2_SPEED = 0.523599; // 30.000000 deg/hr
+const N2_SPEED = 0.496383; // 28.439730 deg/hr
+const M4_SPEED = M2_SPEED * 2; // 1.011736 rad/hr (57.968208 deg/hr)
+
+/**
+ * Calculates water level in meters including shallow-water estuarine distortion.
+ * M4 term introduces hydrodynamical asymmetry:
+ * - Flood (rise): Compressed to ~5.2 hours (steeper curve)
+ * - Ebb (fall): Extended to ~7.2 hours (flatter curve)
+ */
+function getTideHeight(date) {
+  const hoursFromAnchor = (date - ANCHOR_LOW_TIDE) / 3600000;
+  
+  return MSL 
+    - M2_AMP * Math.cos(M2_SPEED * hoursFromAnchor) 
+    - S2_AMP * Math.cos(S2_SPEED * hoursFromAnchor)
+    - N2_AMP * Math.cos(N2_SPEED * hoursFromAnchor)
+    + M4_AMP * Math.sin(M4_SPEED * hoursFromAnchor); // Estuarine asymmetry term
+}
 
 /**
  * Calculates water level in meters combining M2 and S2 constituents.
