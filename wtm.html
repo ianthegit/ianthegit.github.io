@@ -318,7 +318,7 @@
 
 <div class="container">
   <header>
-    <h1>Woodbridge Tide Mill - 14-Day Milling Schedule</h1>
+    <h1>Woodbridge Tide Mill - 30-Day Milling Schedule</h1>
     <p class="subtitle">Full Hydrodynamic Model with Live Operational & Weather Controls</p>
   </header>
 
@@ -342,14 +342,14 @@
           <span>Min Preceding High Tide</span>
           <span id="val-min-high" class="control-value">4.00 m</span>
         </div>
-        <input type="range" id="input-min-high" min="2.50" max="4.50" value="4.00" step="0.05">
+        <input type="range" id="input-min-high" min="2.50" max="4.50" value="3.80" step="0.05">
       </div>
       <div class="control-group">
         <div class="control-label">
           <span>Barometric Pressure</span>
           <span id="val-pressure" class="control-value">1013 hPa (+0.00m)</span>
         </div>
-        <input type="range" id="input-pressure" min="970" max="1040" value="1013" step="1">
+        <input type="range" id="input-pressure" min="970" max="1040" value="977" step="1">
       </div>
       <div class="control-group">
         <div class="control-label">
@@ -382,7 +382,7 @@
   </div>
 
   <div class="card">
-    <h3 style="margin-top:0; color: var(--primary);">Suitable Out-of-Hours Milling Opportunities (Next 14 Days)</h3>
+    <h3 style="margin-top:0; color: var(--primary);">Suitable Out-of-Hours Milling Opportunities (Next 30 Days)</h3>
     <table>
       <thead>
         <tr>
@@ -498,7 +498,7 @@ function getTidePhase(date) {
 }
 
 // Layout Dimensions
-const TOTAL_DAYS = 14;
+const TOTAL_DAYS = 30;
 const SVG_W = 2800;
 const SVG_H = 260;
 const PADDING = { top: 25, right: 20, bottom: 35, left: 40 };
@@ -706,7 +706,7 @@ function populateTable(tideEvents, minHighThreshold) {
   }
 
   if (matches === 0) {
-    tbody.innerHTML = `<tr><td colspan="7" style="text-align:center; color:#64748b; padding:24px;">No out-of-hours low tides over the next 14 days have a preceding high tide of at least <strong>${minHighThreshold.toFixed(2)}m</strong> under current weather settings.</td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="7" style="text-align:center; color:#64748b; padding:24px;">No out-of-hours low tides over the next 30 days have a preceding high tide of at least <strong>${minHighThreshold.toFixed(2)}m</strong> under current weather settings.</td></tr>`;
   }
 }
 
