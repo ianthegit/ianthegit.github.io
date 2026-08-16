@@ -167,20 +167,51 @@
 
 <script>
 /**
- * Directly fetches BBC Woodbridge tide data via CORS proxy.
+ * Fetches BBC tide data using multiple CORS proxies as fallbacks.
  */
 async function fetchBBCTideData() {
   const bbcUrl = 'https://www.bbc.co.uk/weather/coast-and-sea/tides/2633842';
-  const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(bbcUrl)}`;
-
-  const response = await fetch(proxyUrl);
-  if (!response.ok) throw new Error('Network error fetching tide data.');
   
-  const data = await response.json();
-  if (!data.contents) throw new Error('No data received from tide source.');
+  // List of public CORS proxies to attempt sequentially
+  const proxyTemplates = [
+    (url) => `https://corsproxy.io/?${encodeURIComponent(url)}`,
+    (url) => `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(url)}`,
+    (url) => `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`
+  ];
+
+  let rawHtml = null;
+
+  for (const buildProxyUrl of proxyTemplates) {
+    try {
+      const proxyUrl = buildProxyUrl(bbcUrl);
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 6000); // 6-second timeout per proxy
+
+      const response = await fetch(proxyUrl, { signal: controller.signal });
+      clearTimeout(timeoutId);
+
+      if (!response.ok) continue;
+
+      // Handle JSON response format vs raw text format
+      if (proxyUrl.includes('allorigins')) {
+        const json = await response.json();
+        rawHtml = json.contents;
+      } else {
+        rawHtml = await response.text();
+      }
+
+      if (rawHtml && rawHtml.includes('<table')) break; // Successfully retrieved HTML
+    } catch (e) {
+      console.warn('Proxy attempt failed, trying next...');
+    }
+  }
+
+  if (!rawHtml) {
+    throw new Error('All CORS proxies timed out or were blocked by BBC.');
+  }
 
   const parser = new DOMParser();
-  const doc = parser.parseFromString(data.contents, 'text/html');
+  const doc = parser.parseFromString(rawHtml, 'text/html');
 
   const tideEvents = [];
   const tableRows = doc.querySelectorAll('.wr-c-tides-table tr, table.tide-table tr');
@@ -207,7 +238,7 @@ async function fetchBBCTideData() {
   });
 
   if (tideEvents.length === 0) {
-    throw new Error('Could not parse tide elements from source.');
+    throw new Error('Could not parse tide elements from retrieved HTML.');
   }
 
   return tideEvents;
