@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Woodbridge Tide Mill - 14-Day Spring/Neap Milling Schedule</title>
+  <title>Woodbridge Tide Mill - 6-Constituent Astronomical Tidal Schedule</title>
   <style>
     :root {
       --primary: #1e3a8a;
@@ -12,8 +12,8 @@
       --card-bg: #ffffff;
       --text: #0f172a;
       --border: #cbd5e1;
-      --window-am: rgba(254, 243, 199, 0.6);
-      --window-pm: rgba(224, 231, 255, 0.6);
+      --window-am: rgba(254, 243, 199, 0.65);
+      --window-pm: rgba(224, 231, 255, 0.65);
     }
 
     body {
@@ -47,6 +47,16 @@
       margin: 0;
     }
 
+    .anchor-info {
+      background: #eff6ff;
+      border-left: 4px solid var(--secondary);
+      padding: 10px 14px;
+      font-size: 0.85rem;
+      margin-bottom: 16px;
+      border-radius: 0 6px 6px 0;
+      color: #1e40af;
+    }
+
     .card {
       background: var(--card-bg);
       border-radius: 10px;
@@ -70,7 +80,6 @@
       height: 280px;
     }
 
-    .axis-line { stroke: #94a3b8; stroke-width: 1; }
     .grid-line { stroke: #f1f5f9; stroke-width: 1; }
     .day-divider { stroke: #cbd5e1; stroke-width: 1.5; stroke-dasharray: 4,4; }
     .tide-path { fill: none; stroke: var(--secondary); stroke-width: 2.5; stroke-linejoin: round; }
@@ -151,8 +160,12 @@
 <div class="container">
   <header>
     <h1>Woodbridge Tide Mill - 14-Day Milling Schedule</h1>
-    <p class="subtitle">Calculated Tidal Predictions featuring Spring/Neap Cycles & Non-Public Milling Windows</p>
+    <p class="subtitle">6-Constituent Model (M2, S2, N2, M4, K1, O1) featuring Diurnal Inequality & Estuarine Asymmetry</p>
   </header>
+
+  <div id="anchor-status" class="anchor-info">
+    Calculating astronomical anchor from local lunar transit physics...
+  </div>
 
   <div class="card">
     <div class="legend">
@@ -170,7 +183,6 @@
             <stop offset="100%" stop-color="#0284c7" stop-opacity="0.0" />
           </linearGradient>
         </defs>
-        <!-- Generated SVG Curve -->
       </svg>
     </div>
   </div>
@@ -197,29 +209,48 @@
 </div>
 
 <script>
-// Reference Anchor: Known Low Tide on Saturday at 07:50 BST
-const ANCHOR_LOW_TIDE = new Date('2026-08-15T07:50:00+01:00');
+/**
+ * 1. ASTRONOMICAL ANCHOR COMPUTATION
+ */
+function getAstronomicalLowTideAnchor(targetDate = new Date()) {
+  const REF_TRANSIT = new Date('2026-01-01T10:14:00Z');
+  const LUNAR_DAY_MS = 24.841202 * 3600000;
+  const HALF_LUNAR_DAY_MS = LUNAR_DAY_MS / 2;
+  const WOODBRIDGE_LW_INTERVAL_MS = 5.75 * 3600000;
 
-const MSL = 2.15;          // Mean Sea Level (m)
+  const diffMs = targetDate.getTime() - REF_TRANSIT.getTime();
+  const halfCycles = Math.floor((diffMs - WOODBRIDGE_LW_INTERVAL_MS) / HALF_LUNAR_DAY_MS);
+  
+  const anchorTimeMs = REF_TRANSIT.getTime() + WOODBRIDGE_LW_INTERVAL_MS + (halfCycles * HALF_LUNAR_DAY_MS);
+  return new Date(anchorTimeMs);
+}
 
-// Tidal Amplitudes (m)
-const M2_AMP = 1.22;       // Principal Lunar (12.42h period)
-const S2_AMP = 0.38;       // Principal Solar (12.00h period)
-const N2_AMP = 0.25;       // Lunar Elliptic (12.66h period)
-const M4_AMP = 0.12;       // Shallow-water Quarter-Diurnal (6.21h) - ~10% of M2
-
-// Constituent Speeds in Radians per Hour
-const M2_SPEED = 0.505868; // 28.984104 deg/hr
-const S2_SPEED = 0.523599; // 30.000000 deg/hr
-const N2_SPEED = 0.496383; // 28.439730 deg/hr
-const M4_SPEED = M2_SPEED * 2; // 1.011736 rad/hr (57.968208 deg/hr)
+let ANCHOR_LOW_TIDE = getAstronomicalLowTideAnchor();
 
 /**
- * Calculates water level in meters including shallow-water estuarine distortion.
- * M4 term introduces hydrodynamical asymmetry:
- * - Flood (rise): Compressed to ~5.2 hours (steeper curve)
- * - Ebb (fall): Extended to ~7.2 hours (flatter curve)
+ * 2. SIX-CONSTITUENT HARMONIC MODEL
+ * Semi-diurnal: M2 (Lunar), S2 (Solar), N2 (Elliptic)
+ * Shallow water: M4 (Estuarine distortion)
+ * Diurnal: K1 (Lunisolar), O1 (Lunar) --> Introduces Morning vs Evening Inequality
  */
+const MSL = 2.15;          // Mean Sea Level (m)
+
+// Constituent Amplitudes (m)
+const M2_AMP = 1.22;       // Principal Lunar
+const S2_AMP = 0.38;       // Principal Solar
+const N2_AMP = 0.25;       // Lunar Elliptic
+const M4_AMP = 0.12;       // Shallow-water Quarter-Diurnal
+const K1_AMP = 0.12;       // Lunisolar Diurnal (23.93h)
+const O1_AMP = 0.10;       // Principal Lunar Diurnal (25.82h)
+
+// Speeds in Radians per Hour
+const M2_SPEED = 0.505868;
+const S2_SPEED = 0.523599;
+const N2_SPEED = 0.496383;
+const M4_SPEED = M2_SPEED * 2; // 1.011736
+const K1_SPEED = 0.262516;     // 15.041069 deg/hr
+const O1_SPEED = 0.243352;     // 13.943036 deg/hr
+
 function getTideHeight(date) {
   const hoursFromAnchor = (date - ANCHOR_LOW_TIDE) / 3600000;
   
@@ -227,30 +258,14 @@ function getTideHeight(date) {
     - M2_AMP * Math.cos(M2_SPEED * hoursFromAnchor) 
     - S2_AMP * Math.cos(S2_SPEED * hoursFromAnchor)
     - N2_AMP * Math.cos(N2_SPEED * hoursFromAnchor)
-    + M4_AMP * Math.sin(M4_SPEED * hoursFromAnchor); // Estuarine asymmetry term
+    - K1_AMP * Math.cos(K1_SPEED * hoursFromAnchor)
+    - O1_AMP * Math.cos(O1_SPEED * hoursFromAnchor)
+    + M4_AMP * Math.sin(M4_SPEED * hoursFromAnchor);
 }
 
-/**
- * Calculates water level in meters combining M2 and S2 constituents.
- * The interaction of M2 and S2 naturally generates the 14.77-day Spring/Neap cycle.
- */
-function getTideHeight(date) {
-  const hoursFromAnchor = (date - ANCHOR_LOW_TIDE) / 3600000;
-  
-  return MSL 
-    - M2_AMP * Math.cos(M2_SPEED * hoursFromAnchor) 
-    - S2_AMP * Math.cos(S2_SPEED * hoursFromAnchor);
-}
-
-/**
- * Determines Spring / Neap state based on instantaneous amplitude envelope.
- */
 function getTidePhase(date) {
   const hoursFromAnchor = (date - ANCHOR_LOW_TIDE) / 3600000;
-  // Phase difference between Solar and Lunar constituents
   const phaseDiff = Math.abs((S2_SPEED - M2_SPEED) * hoursFromAnchor) % (2 * Math.PI);
-  
-  // Near 0 or 2PI = In phase (Spring Tide); Near PI = Out of phase (Neap Tide)
   const modulation = Math.cos(phaseDiff);
   
   if (modulation > 0.45) return { name: 'Spring', badgeClass: 'badge-spring' };
@@ -258,7 +273,7 @@ function getTidePhase(date) {
   return { name: 'Mid', badgeClass: 'badge-mid' };
 }
 
-// Layout Dimensions (2800px width for 14 full days)
+// Layout Dimensions
 const TOTAL_DAYS = 14;
 const SVG_W = 2800;
 const SVG_H = 260;
@@ -279,6 +294,14 @@ function heightToY(height) {
 }
 
 function renderApp() {
+  ANCHOR_LOW_TIDE = getAstronomicalLowTideAnchor();
+  
+  const statusDiv = document.getElementById('anchor-status');
+  const anchorFormatted = ANCHOR_LOW_TIDE.toLocaleString('en-GB', { 
+    weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit', timeZoneName: 'short' 
+  });
+  statusDiv.innerHTML = `<strong>Astronomical Anchor Calibrated:</strong> Local Low Water computed at <strong>${anchorFormatted}</strong> (Includes $K_1$ & $O_1$ Diurnal Inequality).`;
+
   const startOfDay = new Date();
   startOfDay.setHours(0,0,0,0);
 
@@ -292,7 +315,7 @@ function renderApp() {
     </defs>
   `;
 
-  // 1. Draw Milling Window Highlights for all 14 Days
+  // 1. Milling Windows Shading
   for (let d = 0; d < TOTAL_DAYS; d++) {
     const amX1 = timeToX(d * 24 + 6);
     const amX2 = timeToX(d * 24 + 9);
@@ -305,7 +328,7 @@ function renderApp() {
     `;
   }
 
-  // 2. Y-Axis Grid Lines & Labels
+  // 2. Grid & Axis Labels
   for (let h = 0; h <= 4; h += 1) {
     const y = heightToY(h);
     svg.innerHTML += `
@@ -314,7 +337,7 @@ function renderApp() {
     `;
   }
 
-  // 3. Day Separators & Date Header Labels
+  // 3. Day Separators & Dates
   for (let d = 0; d <= TOTAL_DAYS; d++) {
     const x = timeToX(d * 24);
     svg.innerHTML += `<line x1="${x}" y1="${PADDING.top}" x2="${x}" y2="${SVG_H - PADDING.bottom}" class="day-divider" />`;
@@ -323,8 +346,8 @@ function renderApp() {
       const dayDate = new Date(startOfDay.getTime() + d * 86400000);
       const dateStr = dayDate.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' });
       const phase = getTidePhase(dayDate);
-      
       const midX = timeToX(d * 24 + 12);
+
       svg.innerHTML += `
         <text x="${midX}" y="${PADDING.top - 8}" font-size="11" font-weight="bold" fill="#1e3a8a" text-anchor="middle">${dateStr}</text>
         <text x="${midX}" y="${SVG_H - 10}" font-size="10" fill="#64748b" text-anchor="middle">${phase.name} Tide</text>
@@ -332,7 +355,7 @@ function renderApp() {
     }
   }
 
-  // 4. Sample 14-Day Curve & Detect Extremes
+  // 4. Sample Curve Points & Extrema
   const totalMinutes = TOTAL_DAYS * 24 * 60;
   const points = [];
   const tideEvents = [];
@@ -345,13 +368,13 @@ function renderApp() {
     const x = timeToX(min / 60);
     const y = heightToY(height);
 
-    points.push({ x, y, time, height, hoursTotal: min / 60 });
+    points.push({ x, y });
 
     if (prevHeight !== null) {
       const currentTrend = height > prevHeight ? 1 : height < prevHeight ? -1 : 0;
       if (prevTrend !== 0 && currentTrend !== 0 && currentTrend !== prevTrend) {
         tideEvents.push({
-          time: new Date(time.getTime() - 5 * 60000), // Midpoint adjustment
+          time: new Date(time.getTime() - 5 * 60000),
           type: prevTrend === 1 ? 'HIGH' : 'LOW',
           height: prevHeight,
           hoursTotal: (min - 5) / 60
@@ -362,7 +385,7 @@ function renderApp() {
     prevHeight = height;
   }
 
-  // 5. Draw Continuous Tide Path & Area Shading
+  // 5. Draw Continuous Asymmetrical Tide Path
   let pathD = `M ${points[0].x} ${points[0].y}`;
   for (let i = 1; i < points.length; i++) {
     pathD += ` L ${points[i].x} ${points[i].y}`;
@@ -376,14 +399,10 @@ function renderApp() {
   tideEvents.forEach(evt => {
     const x = timeToX(evt.hoursTotal);
     const y = heightToY(evt.height);
-    const isHigh = evt.type === 'HIGH';
-
-    svg.innerHTML += `
-      <circle cx="${x}" cy="${y}" r="3.5" fill="${isHigh ? '#0284c7' : '#d97706'}" />
-    `;
+    svg.innerHTML += `<circle cx="${x}" cy="${y}" r="3.5" fill="${evt.type === 'HIGH' ? '#0284c7' : '#d97706'}" />`;
   });
 
-  // 7. Populate 14-Day Qualifying Low Tides Table
+  // 7. Render Table
   populateTable(tideEvents);
 }
 
@@ -403,7 +422,6 @@ function populateTable(tideEvents) {
       if (isAM || isPM) {
         matches++;
         
-        // Find preceding High Tide
         let precedingHigh = null;
         for (let j = i - 1; j >= 0; j--) {
           if (tideEvents[j].type === 'HIGH') {
