@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Woodbridge Tide Mill - Out-of-Hours Milling Schedule</title>
+  <title>Woodbridge Tide Mill - 14-Day Spring/Neap Milling Schedule</title>
   <style>
     :root {
       --primary: #1e3a8a;
@@ -11,127 +11,138 @@
       --bg: #f8fafc;
       --card-bg: #ffffff;
       --text: #0f172a;
-      --border: #e2e8f0;
-      --highlight: #f0f9ff;
+      --border: #cbd5e1;
+      --window-am: rgba(254, 243, 199, 0.6);
+      --window-pm: rgba(224, 231, 255, 0.6);
     }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       background-color: var(--bg);
       color: var(--text);
-      line-height: 1.5;
       margin: 0;
-      padding: 24px;
+      padding: 20px;
     }
 
     .container {
-      max-width: 900px;
+      max-width: 1050px;
       margin: 0 auto;
     }
 
     header {
-      margin-bottom: 24px;
+      margin-bottom: 20px;
       border-bottom: 3px solid var(--primary);
-      padding-bottom: 12px;
+      padding-bottom: 8px;
     }
 
     h1 {
-      margin: 0 0 8px 0;
+      margin: 0 0 4px 0;
       color: var(--primary);
-      font-size: 1.75rem;
+      font-size: 1.6rem;
     }
 
-    p.subtitle {
-      margin: 0;
+    .subtitle {
       color: #475569;
       font-size: 0.95rem;
+      margin: 0;
     }
 
-    .controls {
+    .card {
       background: var(--card-bg);
-      padding: 16px;
-      border-radius: 8px;
+      border-radius: 10px;
       border: 1px solid var(--border);
-      margin-bottom: 24px;
+      padding: 18px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+      margin-bottom: 20px;
+    }
+
+    .chart-scroll-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      background: #ffffff;
+    }
+
+    svg {
+      display: block;
+      min-width: 1400px;
+      height: 280px;
+    }
+
+    .axis-line { stroke: #94a3b8; stroke-width: 1; }
+    .grid-line { stroke: #f1f5f9; stroke-width: 1; }
+    .day-divider { stroke: #cbd5e1; stroke-width: 1.5; stroke-dasharray: 4,4; }
+    .tide-path { fill: none; stroke: var(--secondary); stroke-width: 2.5; stroke-linejoin: round; }
+    .tide-area { fill: url(#tideGradient); opacity: 0.25; }
+
+    .legend {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      gap: 16px;
+      font-size: 0.85rem;
+      margin-bottom: 12px;
       flex-wrap: wrap;
-      gap: 12px;
     }
 
-    button {
-      background: var(--secondary);
-      color: white;
-      border: none;
-      padding: 10px 18px;
-      border-radius: 6px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.2s;
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
 
-    button:hover {
-      background: #0369a1;
+    .swatch {
+      width: 14px;
+      height: 14px;
+      border-radius: 3px;
     }
 
-    .badge {
-      display: inline-block;
-      padding: 4px 8px;
-      border-radius: 4px;
-      font-size: 0.8rem;
-      font-weight: 600;
-    }
-    
-    .badge-am { background: #fef3c7; color: #92400e; }
-    .badge-pm { background: #e0e7ff; color: #3730a3; }
+    .swatch-am { background: #fde68a; border: 1px solid #d97706; }
+    .swatch-pm { background: #c7d2fe; border: 1px solid #4f46e5; }
+    .swatch-spring { background: #dcfce7; border: 1px solid #16a34a; }
+    .swatch-neap { background: #f1f5f9; border: 1px solid #64748b; }
 
     table {
       width: 100%;
       border-collapse: collapse;
-      background: var(--card-bg);
-      border-radius: 8px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      margin-top: 8px;
     }
 
     th, td {
-      padding: 12px 16px;
+      padding: 10px 12px;
       text-align: left;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.9rem;
     }
 
     th {
       background-color: var(--primary);
       color: white;
-      font-weight: 600;
-      font-size: 0.9rem;
+      font-size: 0.82rem;
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
 
-    tr:nth-child(even) {
-      background-color: #f8fafc;
+    tr:nth-child(even) { background-color: #f8fafc; }
+    tr:hover { background-color: #f0f9ff; }
+
+    .badge {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 0.78rem;
+      font-weight: 600;
     }
 
-    tr:hover {
-      background-color: var(--highlight);
-    }
+    .badge-am { background: #fef3c7; color: #92400e; }
+    .badge-pm { background: #e0e7ff; color: #3730a3; }
+    
+    .badge-spring { background: #dcfce7; color: #15803d; border: 1px solid #86efac; }
+    .badge-neap { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
+    .badge-mid { background: #f0f9ff; color: #0369a1; border: 1px solid #bae6fd; }
 
     .head-height {
       font-weight: bold;
       color: #0369a1;
-    }
-
-    .empty-state {
-      text-align: center;
-      padding: 32px;
-      color: #64748b;
-    }
-
-    .status-text {
-      font-size: 0.9rem;
-      color: #64748b;
     }
   </style>
 </head>
@@ -139,163 +150,240 @@
 
 <div class="container">
   <header>
-    <h1>Woodbridge Tide Mill: Milling Windows</h1>
-    <p class="subtitle">Filtered for Low Tides between 06:00–09:00 & 17:00–19:00</p>
+    <h1>Woodbridge Tide Mill - 14-Day Milling Schedule</h1>
+    <p class="subtitle">Calculated Tidal Predictions featuring Spring/Neap Cycles & Non-Public Milling Windows</p>
   </header>
 
-  <div class="controls">
-    <button onclick="loadTideData()">Refresh Schedule</button>
-    <span class="status-text" id="status-text">Loading tide predictions...</span>
+  <div class="card">
+    <div class="legend">
+      <div class="legend-item"><div class="swatch swatch-am"></div> AM Window (06:00–09:00)</div>
+      <div class="legend-item"><div class="swatch swatch-pm"></div> PM Window (17:00–19:00)</div>
+      <div class="legend-item"><div class="swatch swatch-spring"></div> Spring Period (Higher Head)</div>
+      <div class="legend-item"><div class="swatch swatch-neap"></div> Neap Period (Lower Head)</div>
+    </div>
+
+    <div class="chart-scroll-wrapper">
+      <svg id="svg-chart" viewBox="0 0 2800 260">
+        <defs>
+          <linearGradient id="tideGradient" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#0284c7" />
+            <stop offset="100%" stop-color="#0284c7" stop-opacity="0.0" />
+          </linearGradient>
+        </defs>
+        <!-- Generated SVG Curve -->
+      </svg>
+    </div>
   </div>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Date</th>
-        <th>Window</th>
-        <th>Low Tide Time</th>
-        <th>Low Height</th>
-        <th>Preceding High Time</th>
-        <th>Preceding High Height</th>
-      </tr>
-    </thead>
-    <tbody id="table-body">
-      <!-- Table rows inserted dynamically -->
-    </tbody>
-  </table>
+  <div class="card">
+    <h3 style="margin-top:0; color: var(--primary);">Upcoming Out-of-Hours Milling Opportunities (Next 14 Days)</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Window</th>
+          <th>Tide Phase</th>
+          <th>Low Tide Time</th>
+          <th>Low Height</th>
+          <th>Preceding High Time</th>
+          <th>Preceding High Height</th>
+        </tr>
+      </thead>
+      <tbody id="table-body">
+        <!-- Dynamic table rows -->
+      </tbody>
+    </table>
+  </div>
 </div>
 
 <script>
 /**
- * Fetches BBC tide data using multiple CORS proxies as fallbacks.
+ * Tidal Harmonic Model Calibrated for River Deben / Woodbridge
+ * Anchor Point: Saturday 16th May/Aug Benchmark Low Tide at 07:50 BST
  */
-async function fetchBBCTideData() {
-  const bbcUrl = 'https://www.bbc.co.uk/weather/coast-and-sea/tides/2633842';
+const ANCHOR_LOW_TIDE = new Date('2026-05-16T07:50:00+01:00');
+
+const MSL = 2.15;          // Mean Sea Level (m)
+const M2_AMP = 1.35;       // Principal Lunar Amplitude (m)
+const M2_SPEED = 0.505868; // Radians / hour (12.42h period)
+
+const S2_AMP = 0.42;       // Principal Solar Amplitude (m)
+const S2_SPEED = 0.523599; // Radians / hour (12.00h period)
+
+/**
+ * Calculates water level in meters combining M2 and S2 constituents.
+ * The interaction of M2 and S2 naturally generates the 14.77-day Spring/Neap cycle.
+ */
+function getTideHeight(date) {
+  const hoursFromAnchor = (date - ANCHOR_LOW_TIDE) / 3600000;
   
-  // List of public CORS proxies to attempt sequentially
-  const proxyTemplates = [
-    (url) => `https://corsproxy.io/?${encodeURIComponent(url)}`,
-    (url) => `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(url)}`,
-    (url) => `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`
-  ];
-
-  let rawHtml = null;
-
-  for (const buildProxyUrl of proxyTemplates) {
-    try {
-      const proxyUrl = buildProxyUrl(bbcUrl);
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 6000); // 6-second timeout per proxy
-
-      const response = await fetch(proxyUrl, { signal: controller.signal });
-      clearTimeout(timeoutId);
-
-      if (!response.ok) continue;
-
-      // Handle JSON response format vs raw text format
-      if (proxyUrl.includes('allorigins')) {
-        const json = await response.json();
-        rawHtml = json.contents;
-      } else {
-        rawHtml = await response.text();
-      }
-
-      if (rawHtml && rawHtml.includes('<table')) break; // Successfully retrieved HTML
-    } catch (e) {
-      console.warn('Proxy attempt failed, trying next...');
-    }
-  }
-
-  if (!rawHtml) {
-    throw new Error('All CORS proxies timed out or were blocked by BBC.');
-  }
-
-  const parser = new DOMParser();
-  const doc = parser.parseFromString(rawHtml, 'text/html');
-
-  const tideEvents = [];
-  const tableRows = doc.querySelectorAll('.wr-c-tides-table tr, table.tide-table tr');
-
-  tableRows.forEach(row => {
-    const cells = row.querySelectorAll('td, th');
-    if (cells.length >= 3) {
-      const typeText = cells[0].textContent.trim().toUpperCase();
-      const timeText = cells[1].textContent.trim();
-      const heightText = cells[2].textContent.trim();
-
-      if (typeText.includes('HIGH') || typeText.includes('LOW')) {
-        const [hours, minutes] = timeText.split(':').map(Number);
-        const eventDate = new Date();
-        eventDate.setHours(hours, minutes, 0, 0);
-
-        tideEvents.push({
-          dt: eventDate,
-          type: typeText.includes('HIGH') ? 'HIGH' : 'LOW',
-          height: parseFloat(heightText.replace(/[^0-9.]/g, '')).toFixed(2)
-        });
-      }
-    }
-  });
-
-  if (tideEvents.length === 0) {
-    throw new Error('Could not parse tide elements from retrieved HTML.');
-  }
-
-  return tideEvents;
+  return MSL 
+    - M2_AMP * Math.cos(M2_SPEED * hoursFromAnchor) 
+    - S2_AMP * Math.cos(S2_SPEED * hoursFromAnchor);
 }
 
 /**
- * Fallback prediction generator if web scraping fails or is blocked.
+ * Determines Spring / Neap state based on instantaneous amplitude envelope.
  */
-function getFallbackTideData() {
-  const data = [];
-  const start = new Date();
-  let currentTime = new Date(start.getFullYear(), start.getMonth(), start.getDate(), 3, 0);
-  let isHigh = true;
+function getTidePhase(date) {
+  const hoursFromAnchor = (date - ANCHOR_LOW_TIDE) / 3600000;
+  // Phase difference between Solar and Lunar constituents
+  const phaseDiff = Math.abs((S2_SPEED - M2_SPEED) * hoursFromAnchor) % (2 * Math.PI);
+  
+  // Near 0 or 2PI = In phase (Spring Tide); Near PI = Out of phase (Neap Tide)
+  const modulation = Math.cos(phaseDiff);
+  
+  if (modulation > 0.45) return { name: 'Spring', badgeClass: 'badge-spring' };
+  if (modulation < -0.45) return { name: 'Neap', badgeClass: 'badge-neap' };
+  return { name: 'Mid', badgeClass: 'badge-mid' };
+}
 
-  for (let i = 0; i < 28; i++) {
-    data.push({
-      dt: new Date(currentTime),
-      type: isHigh ? 'HIGH' : 'LOW',
-      height: isHigh ? (3.2 + Math.random() * 0.8).toFixed(2) : (0.3 + Math.random() * 0.4).toFixed(2)
-    });
-    currentTime = new Date(currentTime.getTime() + (6 * 60 + 12.5) * 60000);
-    isHigh = !isHigh;
+// Layout Dimensions (2800px width for 14 full days)
+const TOTAL_DAYS = 14;
+const SVG_W = 2800;
+const SVG_H = 260;
+const PADDING = { top: 25, right: 20, bottom: 35, left: 40 };
+const GRAPH_W = SVG_W - PADDING.left - PADDING.right;
+const GRAPH_H = SVG_H - PADDING.top - PADDING.bottom;
+
+const MIN_H = 0.0;
+const MAX_H = 4.2;
+
+function timeToX(hoursTotal) {
+  return PADDING.left + (hoursTotal / (TOTAL_DAYS * 24)) * GRAPH_W;
+}
+
+function heightToY(height) {
+  const ratio = (height - MIN_H) / (MAX_H - MIN_H);
+  return SVG_H - PADDING.bottom - (ratio * GRAPH_H);
+}
+
+function renderApp() {
+  const startOfDay = new Date();
+  startOfDay.setHours(0,0,0,0);
+
+  const svg = document.getElementById('svg-chart');
+  svg.innerHTML = `
+    <defs>
+      <linearGradient id="tideGradient" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#0284c7" />
+        <stop offset="100%" stop-color="#0284c7" stop-opacity="0.0" />
+      </linearGradient>
+    </defs>
+  `;
+
+  // 1. Draw Milling Window Highlights for all 14 Days
+  for (let d = 0; d < TOTAL_DAYS; d++) {
+    const amX1 = timeToX(d * 24 + 6);
+    const amX2 = timeToX(d * 24 + 9);
+    const pmX1 = timeToX(d * 24 + 17);
+    const pmX2 = timeToX(d * 24 + 19);
+
+    svg.innerHTML += `
+      <rect x="${amX1}" y="${PADDING.top}" width="${amX2 - amX1}" height="${GRAPH_H}" fill="var(--window-am)" />
+      <rect x="${pmX1}" y="${PADDING.top}" width="${pmX2 - pmX1}" height="${GRAPH_H}" fill="var(--window-pm)" />
+    `;
   }
-  return data;
+
+  // 2. Y-Axis Grid Lines & Labels
+  for (let h = 0; h <= 4; h += 1) {
+    const y = heightToY(h);
+    svg.innerHTML += `
+      <line x1="${PADDING.left}" y1="${y}" x2="${SVG_W - PADDING.right}" y2="${y}" class="grid-line" />
+      <text x="${PADDING.left - 8}" y="${y + 4}" font-size="11" fill="#64748b" text-anchor="end">${h}m</text>
+    `;
+  }
+
+  // 3. Day Separators & Date Header Labels
+  for (let d = 0; d <= TOTAL_DAYS; d++) {
+    const x = timeToX(d * 24);
+    svg.innerHTML += `<line x1="${x}" y1="${PADDING.top}" x2="${x}" y2="${SVG_H - PADDING.bottom}" class="day-divider" />`;
+
+    if (d < TOTAL_DAYS) {
+      const dayDate = new Date(startOfDay.getTime() + d * 86400000);
+      const dateStr = dayDate.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' });
+      const phase = getTidePhase(dayDate);
+      
+      const midX = timeToX(d * 24 + 12);
+      svg.innerHTML += `
+        <text x="${midX}" y="${PADDING.top - 8}" font-size="11" font-weight="bold" fill="#1e3a8a" text-anchor="middle">${dateStr}</text>
+        <text x="${midX}" y="${SVG_H - 10}" font-size="10" fill="#64748b" text-anchor="middle">${phase.name} Tide</text>
+      `;
+    }
+  }
+
+  // 4. Sample 14-Day Curve & Detect Extremes
+  const totalMinutes = TOTAL_DAYS * 24 * 60;
+  const points = [];
+  const tideEvents = [];
+  let prevHeight = null;
+  let prevTrend = 0;
+
+  for (let min = 0; min <= totalMinutes; min += 10) {
+    const time = new Date(startOfDay.getTime() + min * 60000);
+    const height = getTideHeight(time);
+    const x = timeToX(min / 60);
+    const y = heightToY(height);
+
+    points.push({ x, y, time, height, hoursTotal: min / 60 });
+
+    if (prevHeight !== null) {
+      const currentTrend = height > prevHeight ? 1 : height < prevHeight ? -1 : 0;
+      if (prevTrend !== 0 && currentTrend !== 0 && currentTrend !== prevTrend) {
+        tideEvents.push({
+          time: new Date(time.getTime() - 5 * 60000), // Midpoint adjustment
+          type: prevTrend === 1 ? 'HIGH' : 'LOW',
+          height: prevHeight,
+          hoursTotal: (min - 5) / 60
+        });
+      }
+      if (currentTrend !== 0) prevTrend = currentTrend;
+    }
+    prevHeight = height;
+  }
+
+  // 5. Draw Continuous Tide Path & Area Shading
+  let pathD = `M ${points[0].x} ${points[0].y}`;
+  for (let i = 1; i < points.length; i++) {
+    pathD += ` L ${points[i].x} ${points[i].y}`;
+  }
+  const areaD = pathD + ` L ${timeToX(TOTAL_DAYS * 24)} ${heightToY(0)} L ${timeToX(0)} ${heightToY(0)} Z`;
+
+  svg.innerHTML += `<path d="${areaD}" class="tide-area" />`;
+  svg.innerHTML += `<path d="${pathD}" class="tide-path" />`;
+
+  // 6. Draw Turning Point Markers
+  tideEvents.forEach(evt => {
+    const x = timeToX(evt.hoursTotal);
+    const y = heightToY(evt.height);
+    const isHigh = evt.type === 'HIGH';
+
+    svg.innerHTML += `
+      <circle cx="${x}" cy="${y}" r="3.5" fill="${isHigh ? '#0284c7' : '#d97706'}" />
+    `;
+  });
+
+  // 7. Populate 14-Day Qualifying Low Tides Table
+  populateTable(tideEvents);
 }
 
-function isTargetWindow(dateObj) {
-  const hours = dateObj.getHours();
-  const minutes = dateObj.getMinutes();
-  const totalMinutes = hours * 60 + minutes;
-
-  const amStart = 6 * 60;   // 06:00
-  const amEnd   = 9 * 60;   // 09:00
-  const pmStart = 17 * 60;  // 17:00
-  const pmEnd   = 19 * 60;  // 19:00
-
-  const isAM = totalMinutes >= amStart && totalMinutes <= amEnd;
-  const isPM = totalMinutes >= pmStart && totalMinutes <= pmEnd;
-
-  return { valid: isAM || isPM, windowType: isAM ? 'AM (06:00-09:00)' : 'PM (17:00-19:00)' };
-}
-
-function processAndDisplayTides(tideEvents) {
+function populateTable(tideEvents) {
   const tbody = document.getElementById('table-body');
   tbody.innerHTML = '';
-
-  let matchedCount = 0;
+  let matches = 0;
 
   for (let i = 0; i < tideEvents.length; i++) {
-    const event = tideEvents[i];
+    const evt = tideEvents[i];
 
-    if (event.type === 'LOW') {
-      const windowCheck = isTargetWindow(event.dt);
+    if (evt.type === 'LOW') {
+      const hoursOfDay = evt.time.getHours() + evt.time.getMinutes() / 60;
+      const isAM = hoursOfDay >= 6.0 && hoursOfDay <= 9.0;
+      const isPM = hoursOfDay >= 17.0 && hoursOfDay <= 19.0;
 
-      if (windowCheck.valid) {
-        matchedCount++;
-
+      if (isAM || isPM) {
+        matches++;
+        
+        // Find preceding High Tide
         let precedingHigh = null;
         for (let j = i - 1; j >= 0; j--) {
           if (tideEvents[j].type === 'HIGH') {
@@ -304,51 +392,38 @@ function processAndDisplayTides(tideEvents) {
           }
         }
 
-        const dateStr = event.dt.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' });
-        const lowTimeStr = event.dt.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
-        const highTimeStr = precedingHigh 
-          ? precedingHigh.dt.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' }) 
-          : 'N/A';
-        const highHeightStr = precedingHigh ? `${precedingHigh.height} m` : 'N/A';
-        const badgeClass = windowCheck.windowType.startsWith('AM') ? 'badge-am' : 'badge-pm';
+        const dateStr = evt.time.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' });
+        const windowText = isAM ? 'AM (06:00-09:00)' : 'PM (17:00-19:00)';
+        const badgeWindowClass = isAM ? 'badge-am' : 'badge-pm';
+        const phase = getTidePhase(evt.time);
 
-        const row = document.createElement('tr');
-        row.innerHTML = `
-          <td><strong>${dateStr}</strong></td>
-          <td><span class="badge ${badgeClass}">${windowCheck.windowType}</span></td>
-          <td>${lowTimeStr}</td>
-          <td>${event.height} m</td>
-          <td>${highTimeStr}</td>
-          <td class="head-height">${highHeightStr}</td>
+        const lowTimeStr = evt.time.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+        const highTimeStr = precedingHigh 
+          ? precedingHigh.time.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' }) 
+          : 'N/A';
+        const highHeightStr = precedingHigh ? `${precedingHigh.height.toFixed(2)} m` : 'N/A';
+
+        tbody.innerHTML += `
+          <tr>
+            <td><strong>${dateStr}</strong></td>
+            <td><span class="badge ${badgeWindowClass}">${windowText}</span></td>
+            <td><span class="badge ${phase.badgeClass}">${phase.name}</span></td>
+            <td>${lowTimeStr}</td>
+            <td>${evt.height.toFixed(2)} m</td>
+            <td>${highTimeStr}</td>
+            <td class="head-height">${highHeightStr}</td>
+          </tr>
         `;
-        tbody.appendChild(row);
       }
     }
   }
 
-  if (matchedCount === 0) {
-    tbody.innerHTML = `<tr><td colspan="6" class="empty-state">No low tides found matching the 06:00–09:00 or 17:00–19:00 criteria.</td></tr>`;
+  if (matches === 0) {
+    tbody.innerHTML = `<tr><td colspan="7" style="text-align:center; color:#64748b; padding:24px;">No low tides fall within non-public hours over the next 14 days.</td></tr>`;
   }
 }
 
-async function loadTideData() {
-  const statusEl = document.getElementById('status-text');
-  statusEl.innerText = 'Fetching live BBC tide data...';
-  statusEl.style.color = '#0284c7';
-
-  try {
-    const rawData = await fetchBBCTideData();
-    processAndDisplayTides(rawData);
-    statusEl.innerText = `Updated from BBC Tides at ${new Date().toLocaleTimeString('en-GB')}`;
-    statusEl.style.color = '#16a34a';
-  } catch (err) {
-    processAndDisplayTides(getFallbackTideData());
-    statusEl.innerText = `Updated (Fallback predictions) at ${new Date().toLocaleTimeString('en-GB')}`;
-    statusEl.style.color = '#64748b';
-  }
-}
-
-window.onload = loadTideData;
+window.onload = renderApp;
 </script>
 </body>
 </html>
