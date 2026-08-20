@@ -363,6 +363,7 @@
     </table>
   </div>
 </div>
+
 <script>
 let TIMEZONE = 'Europe/London';
 
@@ -376,7 +377,8 @@ function parseTimeToHours(timeStr) {
   return h + (m / 60);
 }
 
-function getUKHoursOfDay(date) {
+// Convert a Date object to decimal hours in the target display timezone without state mutation
+function getHoursOfDayInZone(date) {
   const timeStr = date.toLocaleTimeString('en-GB', {
     timeZone: TIMEZONE,
     hour: '2-digit',
@@ -387,17 +389,20 @@ function getUKHoursOfDay(date) {
   return hour + (minute / 60);
 }
 
+// Fixed Astronomical Baseline: Recalibrated specifically to Woodbridge Marina / Town
+// Admiralty verified benchmark: 01 Sept 2026 Low Tide = 07:11 UTC (08:11 BST)
 function getAstronomicalLowTideAnchor(targetDate = new Date()) {
-  const REF_TRANSIT = new Date('2026-01-01T10:14:00Z');
+  const REF_TRANSIT = new Date('2026-09-01T07:11:00Z');
   const LUNAR_DAY_MS = 24.841202 * 3600000;
   const HALF_LUNAR_DAY_MS = LUNAR_DAY_MS / 2;
-  const WOODBRIDGE_LW_INTERVAL_MS = 5.75 * 3600000;
-  const diffMs = targetDate.getTime() - REF_TRANSIT.getTime();
-  const halfCycles = Math.floor((diffMs - WOODBRIDGE_LW_INTERVAL_MS) / HALF_LUNAR_DAY_MS);
   
-  const anchorTimeMs = REF_TRANSIT.getTime() + WOODBRIDGE_LW_INTERVAL_MS + (halfCycles * HALF_LUNAR_DAY_MS);
+  const diffMs = targetDate.getTime() - REF_TRANSIT.getTime();
+  const halfCycles = Math.floor(diffMs / HALF_LUNAR_DAY_MS);
+  
+  const anchorTimeMs = REF_TRANSIT.getTime() + (halfCycles * HALF_LUNAR_DAY_MS);
   return new Date(anchorTimeMs);
 }
+
 let ANCHOR_LOW_TIDE = getAstronomicalLowTideAnchor();
 
 function getNodalFactors(date) {
@@ -528,7 +533,7 @@ function renderApp() {
   });
   
   const tzLabel = TIMEZONE === 'UTC' ? 'UTC Standard' : 'Local UK (BST/GMT)';
-  statusDiv.innerHTML = `<strong>Timezone:</strong> ${tzLabel} | <strong>Anchor:</strong> <strong>${anchorFormatted}</strong> | <strong>Min High Cutoff:</strong> &ge; <strong>${minHighThreshold.toFixed(2)}m</strong>`;
+  statusDiv.innerHTML = `<strong>Location:</strong> Woodbridge Marina / Town | <strong>Display:</strong> ${tzLabel} | <strong>Anchor:</strong> <strong>${anchorFormatted}</strong>`;
   
   startOfDayGlobal = new Date();
   startOfDayGlobal.setHours(0,0,0,0);
@@ -543,7 +548,6 @@ function renderApp() {
     </defs>
   `;
   
-  // 1. Milling Windows Shading (Dynamic based on inputs)
   for (let d = 0; d < TOTAL_DAYS; d++) {
     const amX1 = timeToX(d * 24 + amStart);
     const amX2 = timeToX(d * 24 + amEnd);
@@ -698,7 +702,7 @@ function populateTable(tideEvents, minHighThreshold, amStart, amEnd, pmStart, pm
   for (let i = 0; i < tideEvents.length; i++) {
     const evt = tideEvents[i];
     if (evt.type === 'LOW') {
-      const hoursOfDay = getUKHoursOfDay(evt.time);
+      const hoursOfDay = getHoursOfDayInZone(evt.time);
       const isAM = hoursOfDay >= amStart && hoursOfDay <= amEnd;
       const isPM = hoursOfDay >= pmStart && hoursOfDay <= pmEnd;
       if (isAM || isPM) {
