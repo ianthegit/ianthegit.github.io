@@ -15,7 +15,6 @@
       --window-am: rgba(254, 243, 199, 0.65);
       --window-pm: rgba(224, 231, 255, 0.65);
     }
-
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       background-color: var(--bg);
@@ -23,31 +22,25 @@
       margin: 0;
       padding: 20px;
     }
-
     .container {
       max-width: 1050px;
       margin: 0 auto;
     }
-
     header {
       margin-bottom: 12px;
       border-bottom: 3px solid var(--primary);
       padding-bottom: 8px;
     }
-
     h1 {
       margin: 0 0 4px 0;
       color: var(--primary);
       font-size: 1.6rem;
     }
-
     .subtitle {
       color: #475569;
       font-size: 0.95rem;
       margin: 0;
     }
-
-    /* Widened & Slimmer Status Bar Container */
     .anchor-info {
       background: #eff6ff;
       border-left: 4px solid var(--secondary);
@@ -63,15 +56,12 @@
       width: 100%;
       box-sizing: border-box;
     }
-
     .anchor-text {
       flex: 1;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
-
-    /* Extra Small, Unobtrusive Micro-Button */
     .print-btn-subtle {
       background-color: transparent;
       color: #1e40af;
@@ -89,13 +79,11 @@
       transition: all 0.15s ease-in-out;
       flex-shrink: 0;
     }
-
     .print-btn-subtle:hover {
       background-color: #dbeafe;
       border-color: #93c5fd;
       color: #1e3a8a;
     }
-
     .card {
       background: var(--card-bg);
       border-radius: 10px;
@@ -104,11 +92,9 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.04);
       margin-bottom: 20px;
     }
-
-    /* Weather & Operational Sliders Grid */
     .controls-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
       gap: 16px;
       background: #f1f5f9;
       padding: 14px 18px;
@@ -116,13 +102,11 @@
       border: 1px solid #e2e8f0;
       margin-bottom: 16px;
     }
-
     .control-group {
       display: flex;
       flex-direction: column;
       gap: 6px;
     }
-
     .control-label {
       font-size: 0.85rem;
       font-weight: 600;
@@ -130,38 +114,68 @@
       display: flex;
       justify-content: space-between;
     }
-
     .control-value {
       color: var(--secondary);
       font-weight: 700;
     }
-
-    input[type=range] {
+    .time-range-group {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    input[type=range], select, input[type=time] {
       width: 100%;
       accent-color: var(--secondary);
       cursor: pointer;
     }
-
+    select, input[type=time] {
+      padding: 4px 6px;
+      border-radius: 4px;
+      border: 1px solid #cbd5e1;
+      background-color: #ffffff;
+      font-size: 0.85rem;
+      color: #334155;
+      font-weight: 600;
+      box-sizing: border-box;
+    }
     .chart-scroll-wrapper {
+      position: relative;
       width: 100%;
       overflow-x: auto;
       border: 1px solid #e2e8f0;
       border-radius: 8px;
       background: #ffffff;
     }
-
     svg {
       display: block;
       min-width: 1400px;
       height: 280px;
     }
-
     .grid-line { stroke: #f1f5f9; stroke-width: 1; }
     .day-divider { stroke: #cbd5e1; stroke-width: 1.5; stroke-dasharray: 4,4; }
     .tide-path { fill: none; stroke: var(--secondary); stroke-width: 2.5; stroke-linejoin: round; }
     .tide-area { fill: url(#tideGradient); opacity: 0.25; }
     .riverbed-line { stroke: #b45309; stroke-width: 1.5; stroke-dasharray: 2,2; }
     .head-threshold-line { stroke: #dc2626; stroke-width: 1.5; stroke-dasharray: 4,2; }
+    
+    .hover-line { stroke: #0284c7; stroke-width: 1.5; stroke-dasharray: 3,3; opacity: 0; pointer-events: none; }
+    .hover-dot { fill: #0284c7; stroke: #ffffff; stroke-width: 2; opacity: 0; pointer-events: none; }
+    
+    .tooltip {
+      position: absolute;
+      top: 12px;
+      display: none;
+      background: rgba(15, 23, 42, 0.9);
+      color: #ffffff;
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      pointer-events: none;
+      white-space: nowrap;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      z-index: 10;
+      transform: translateX(-50%);
+    }
 
     .legend {
       display: flex;
@@ -170,37 +184,31 @@
       margin-bottom: 12px;
       flex-wrap: wrap;
     }
-
     .legend-item {
       display: flex;
       align-items: center;
       gap: 6px;
     }
-
     .swatch {
       width: 14px;
       height: 14px;
       border-radius: 3px;
     }
-
     .swatch-am { background: #fde68a; border: 1px solid #d97706; }
     .swatch-pm { background: #c7d2fe; border: 1px solid #4f46e5; }
     .swatch-spring { background: #dcfce7; border: 1px solid #16a34a; }
     .swatch-neap { background: #f1f5f9; border: 1px solid #64748b; }
-
     table {
       width: 100%;
       border-collapse: collapse;
       margin-top: 8px;
     }
-
     th, td {
       padding: 10px 12px;
       text-align: left;
       border-bottom: 1px solid var(--border);
       font-size: 0.9rem;
     }
-
     th {
       background-color: var(--primary);
       color: white;
@@ -208,10 +216,8 @@
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
-
     tr:nth-child(even) { background-color: #f8fafc; }
     tr:hover { background-color: #f0f9ff; }
-
     .badge {
       display: inline-block;
       padding: 3px 8px;
@@ -219,109 +225,39 @@
       font-size: 0.78rem;
       font-weight: 600;
     }
-
     .badge-am { background: #fef3c7; color: #92400e; }
     .badge-pm { background: #e0e7ff; color: #3730a3; }
-    
     .badge-spring { background: #dcfce7; color: #15803d; border: 1px solid #86efac; }
     .badge-neap { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
     .badge-mid { background: #f0f9ff; color: #0369a1; border: 1px solid #bae6fd; }
-
     .head-height {
       font-weight: bold;
       color: #0369a1;
     }
-
-    /* Dedicated Print & PDF Export Rules */
     @media print {
-      @page {
-        size: A4 portrait;
-        margin: 12mm;
-      }
-
-      body {
-        background-color: #ffffff !important;
-        color: #000000 !important;
-        padding: 0;
-        margin: 0;
-      }
-
-      .container {
-        max-width: 100% !important;
-      }
-
-      header {
-        border-bottom: 2px solid #000;
-        margin-bottom: 12px;
-        padding-bottom: 6px;
-      }
-
-      .controls-grid, .print-btn-subtle, .subtitle {
-        display: none !important;
-      }
-
-      .anchor-info {
-        border-left: 3px solid #000;
-        background: #f8fafc !important;
-        color: #000 !important;
-        padding: 6px 10px;
-        margin-bottom: 12px;
-        font-size: 0.8rem;
-      }
-
-      .card {
-        box-shadow: none !important;
-        border: 1px solid #cbd5e1 !important;
-        padding: 12px !important;
-        margin-bottom: 12px !important;
-        page-break-inside: avoid;
-      }
-
-      .chart-scroll-wrapper {
-        border: 1px solid #cbd5e1 !important;
-        overflow: visible !important;
-      }
-
-      svg {
-        min-width: 100% !important;
-        width: 100% !important;
-        height: auto !important;
-      }
-
-      table {
-        page-break-inside: auto;
-      }
-
-      tr {
-        page-break-inside: avoid !important;
-        page-break-after: auto;
-      }
-
-      th {
-        background-color: #f1f5f9 !important;
-        color: #000 !important;
-        border-bottom: 2px solid #000 !important;
-      }
-
-      td {
-        border-bottom: 1px solid #e2e8f0 !important;
-      }
-
-      * {
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
-      }
+      @page { size: A4 portrait; margin: 12mm; }
+      body { background-color: #ffffff !important; color: #000000 !important; padding: 0; margin: 0; }
+      .container { max-width: 100% !important; }
+      header { border-bottom: 2px solid #000; margin-bottom: 12px; padding-bottom: 6px; }
+      .controls-grid, .print-btn-subtle, .subtitle, .tooltip { display: none !important; }
+      .anchor-info { border-left: 3px solid #000; background: #f8fafc !important; color: #000 !important; padding: 6px 10px; margin-bottom: 12px; font-size: 0.8rem; }
+      .card { box-shadow: none !important; border: 1px solid #cbd5e1 !important; padding: 12px !important; margin-bottom: 12px !important; page-break-inside: avoid; }
+      .chart-scroll-wrapper { border: 1px solid #cbd5e1 !important; overflow: visible !important; }
+      svg { min-width: 100% !important; width: 100% !important; height: auto !important; }
+      table { page-break-inside: auto; }
+      tr { page-break-inside: avoid !important; page-break-after: auto; }
+      th { background-color: #f1f5f9 !important; color: #000 !important; border-bottom: 2px solid #000 !important; }
+      td { border-bottom: 1px solid #e2e8f0 !important; }
+      * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
     }
   </style>
 </head>
 <body>
-
 <div class="container">
   <header>
     <h1>Woodbridge Tide Mill - 30-Day Milling Schedule</h1>
     <p class="subtitle">Full Hydrodynamic Model with Live Operational & Weather Controls</p>
   </header>
-
   <div class="anchor-info">
     <div id="anchor-status" class="anchor-text">
       Calculating astronomical anchor from local lunar transit physics...
@@ -334,13 +270,41 @@
       Print
     </button>
   </div>
-
   <div class="card">
     <div class="controls-grid">
       <div class="control-group">
         <div class="control-label">
-          <span>Min Preceding High Tide</span>
-          <span id="val-min-high" class="control-value">4.00 m</span>
+          <span>Display Time Standard</span>
+        </div>
+        <select id="select-timezone">
+          <option value="Europe/London" selected>Local UK Time (BST / GMT)</option>
+          <option value="UTC">Admiralty Standard (UTC / GMT)</option>
+        </select>
+      </div>
+      <div class="control-group">
+        <div class="control-label">
+          <span>AM Milling Window</span>
+        </div>
+        <div class="time-range-group">
+          <input type="time" id="input-am-start" value="06:00">
+          <span style="font-size:0.8rem; color:#64748b;">to</span>
+          <input type="time" id="input-am-end" value="09:00">
+        </div>
+      </div>
+      <div class="control-group">
+        <div class="control-label">
+          <span>PM Milling Window</span>
+        </div>
+        <div class="time-range-group">
+          <input type="time" id="input-pm-start" value="17:00">
+          <span style="font-size:0.8rem; color:#64748b;">to</span>
+          <input type="time" id="input-pm-end" value="19:30">
+        </div>
+      </div>
+      <div class="control-group">
+        <div class="control-label">
+          <span>Min Preceding High</span>
+          <span id="val-min-high" class="control-value">3.80 m</span>
         </div>
         <input type="range" id="input-min-high" min="2.50" max="4.50" value="3.80" step="0.05">
       </div>
@@ -349,27 +313,26 @@
           <span>Barometric Pressure</span>
           <span id="val-pressure" class="control-value">1013 hPa (+0.00m)</span>
         </div>
-        <input type="range" id="input-pressure" min="910" max="1040" value="977" step="1">
+        <input type="range" id="input-pressure" min="910" max="1040" value="1013" step="1">
       </div>
       <div class="control-group">
         <div class="control-label">
-          <span>Wind Stress / Storm Surge</span>
+          <span>Wind / Surge</span>
           <span id="val-wind" class="control-value">+0.00 m</span>
         </div>
         <input type="range" id="input-wind" min="-0.50" max="1.00" value="0.00" step="0.05">
       </div>
     </div>
-
     <div class="legend">
-      <div class="legend-item"><div class="swatch swatch-am"></div> AM Window (06:00–09:00)</div>
-      <div class="legend-item"><div class="swatch swatch-pm"></div> PM Window (17:00–19:00)</div>
+      <div class="legend-item"><div class="swatch swatch-am"></div> AM Window (<span id="legend-am-text">06:00–09:00</span>)</div>
+      <div class="legend-item"><div class="swatch swatch-pm"></div> PM Window (<span id="legend-pm-text">17:00–19:30</span>)</div>
       <div class="legend-item"><div class="swatch swatch-spring"></div> Spring Period</div>
       <div class="legend-item"><div class="swatch swatch-neap"></div> Neap Period</div>
       <div class="legend-item"><span style="color:#dc2626; font-weight:bold;">---</span> Min High Cutoff</div>
       <div class="legend-item"><span style="color:#b45309; font-weight:bold;">---</span> Channel Floor (0.35m)</div>
     </div>
-
-    <div class="chart-scroll-wrapper">
+    <div class="chart-scroll-wrapper" id="chart-container">
+      <div id="chart-tooltip" class="tooltip"></div>
       <svg id="svg-chart" viewBox="0 0 2800 260">
         <defs>
           <linearGradient id="tideGradient" x1="0" y1="0" x2="0" y2="1">
@@ -380,7 +343,6 @@
       </svg>
     </div>
   </div>
-
   <div class="card">
     <h3 style="margin-top:0; color: var(--primary);">Suitable Out-of-Hours Milling Opportunities (Next 30 Days)</h3>
     <table>
@@ -401,13 +363,19 @@
     </table>
   </div>
 </div>
-
 <script>
-const TIMEZONE = 'Europe/London';
+let TIMEZONE = 'Europe/London';
 
-/**
- * Helper to extract local UK hours + minutes from a Date object
- */
+function getSelectedTimezone() {
+  return document.getElementById('select-timezone').value;
+}
+
+function parseTimeToHours(timeStr) {
+  if (!timeStr) return 0;
+  const [h, m] = timeStr.split(':').map(Number);
+  return h + (m / 60);
+}
+
 function getUKHoursOfDay(date) {
   const timeStr = date.toLocaleTimeString('en-GB', {
     timeZone: TIMEZONE,
@@ -419,27 +387,19 @@ function getUKHoursOfDay(date) {
   return hour + (minute / 60);
 }
 
-/**
- * 1. ASTRONOMICAL ANCHOR COMPUTATION
- */
 function getAstronomicalLowTideAnchor(targetDate = new Date()) {
   const REF_TRANSIT = new Date('2026-01-01T10:14:00Z');
   const LUNAR_DAY_MS = 24.841202 * 3600000;
   const HALF_LUNAR_DAY_MS = LUNAR_DAY_MS / 2;
   const WOODBRIDGE_LW_INTERVAL_MS = 5.75 * 3600000;
-
   const diffMs = targetDate.getTime() - REF_TRANSIT.getTime();
   const halfCycles = Math.floor((diffMs - WOODBRIDGE_LW_INTERVAL_MS) / HALF_LUNAR_DAY_MS);
   
   const anchorTimeMs = REF_TRANSIT.getTime() + WOODBRIDGE_LW_INTERVAL_MS + (halfCycles * HALF_LUNAR_DAY_MS);
   return new Date(anchorTimeMs);
 }
-
 let ANCHOR_LOW_TIDE = getAstronomicalLowTideAnchor();
 
-/**
- * 2. 18.6-YEAR LUNAR NODAL FACTOR CALCULATION
- */
 function getNodalFactors(date) {
   const year = date.getUTCFullYear();
   const startOfYear = new Date(Date.UTC(year, 0, 0));
@@ -447,7 +407,6 @@ function getNodalFactors(date) {
   const tYears = (year + dayOfYear / 365.25) - 2000;
   
   const omegaRad = ((259.16 - 19.34 * tYears) % 360) * (Math.PI / 180);
-
   return {
     f_M2: 1.000 - 0.037 * Math.cos(omegaRad),
     f_O1: 1.008 + 0.187 * Math.cos(omegaRad),
@@ -455,13 +414,9 @@ function getNodalFactors(date) {
   };
 }
 
-/**
- * 3. ADVANCED CONSTITUENT SPEEDS & AMPLITUDES
- */
 const MSL = 2.15;           // Mean Sea Level (m)
 const RIVERBED_FLOOR = 0.35; // Woodbridge channel floor (m)
 
-// Base Amplitudes (m)
 const M2_AMP = 1.22;       
 const S2_AMP = 0.38;       
 const N2_AMP = 0.25;       
@@ -470,7 +425,6 @@ const M6_AMP = 0.05;
 const K1_AMP = 0.12;       
 const O1_AMP = 0.10;       
 
-// Speeds (Rad/hr)
 const M2_SPEED = 0.505868;
 const S2_SPEED = 0.523599;
 const N2_SPEED = 0.496383;
@@ -489,7 +443,6 @@ function getSurgeOffset() {
 function getTideHeight(date) {
   const hoursFromAnchor = (date - ANCHOR_LOW_TIDE) / 3600000;
   const nodal = getNodalFactors(date);
-
   let rawHeight = MSL 
     - (M2_AMP * nodal.f_M2) * Math.cos(M2_SPEED * hoursFromAnchor) 
     - S2_AMP * Math.cos(S2_SPEED * hoursFromAnchor)
@@ -498,7 +451,6 @@ function getTideHeight(date) {
     - (O1_AMP * nodal.f_O1) * Math.cos(O1_SPEED * hoursFromAnchor)
     + M4_AMP * Math.sin(M4_SPEED * hoursFromAnchor)
     - M6_AMP * Math.cos(M6_SPEED * hoursFromAnchor);
-
   const totalHeight = rawHeight + getSurgeOffset();
   return Math.max(RIVERBED_FLOOR, totalHeight);
 }
@@ -513,19 +465,24 @@ function getTidePhase(date) {
   return { name: 'Mid', badgeClass: 'badge-mid' };
 }
 
-// Layout Dimensions
 const TOTAL_DAYS = 30;
 const SVG_W = 2800;
 const SVG_H = 260;
 const PADDING = { top: 25, right: 20, bottom: 35, left: 40 };
 const GRAPH_W = SVG_W - PADDING.left - PADDING.right;
 const GRAPH_H = SVG_H - PADDING.top - PADDING.bottom;
-
 const MIN_H = 0.0;
 const MAX_H = 4.2;
 
+let startOfDayGlobal = new Date();
+
 function timeToX(hoursTotal) {
   return PADDING.left + (hoursTotal / (TOTAL_DAYS * 24)) * GRAPH_W;
+}
+
+function xToTime(x) {
+  const hoursTotal = ((x - PADDING.left) / GRAPH_W) * (TOTAL_DAYS * 24);
+  return new Date(startOfDayGlobal.getTime() + hoursTotal * 3600000);
 }
 
 function heightToY(height) {
@@ -539,17 +496,30 @@ function updateControlLabels() {
   const windVal = parseFloat(document.getElementById('input-wind').value);
   const pSurge = (1013 - pressVal) * 0.01;
   const pSign = pSurge >= 0 ? '+' : '';
+  
+  const amStartStr = document.getElementById('input-am-start').value;
+  const amEndStr = document.getElementById('input-am-end').value;
+  const pmStartStr = document.getElementById('input-pm-start').value;
+  const pmEndStr = document.getElementById('input-pm-end').value;
 
   document.getElementById('val-min-high').innerText = `${minHighVal.toFixed(2)} m`;
   document.getElementById('val-pressure').innerText = `${pressVal} hPa (${pSign}${pSurge.toFixed(2)}m)`;
   document.getElementById('val-wind').innerText = `${windVal >= 0 ? '+' : ''}${windVal.toFixed(2)} m`;
+  
+  document.getElementById('legend-am-text').innerText = `${amStartStr}–${amEndStr}`;
+  document.getElementById('legend-pm-text').innerText = `${pmStartStr}–${pmEndStr}`;
 }
 
 function renderApp() {
+  TIMEZONE = getSelectedTimezone();
   updateControlLabels();
   ANCHOR_LOW_TIDE = getAstronomicalLowTideAnchor();
   
   const minHighThreshold = parseFloat(document.getElementById('input-min-high').value);
+  const amStart = parseTimeToHours(document.getElementById('input-am-start').value);
+  const amEnd = parseTimeToHours(document.getElementById('input-am-end').value);
+  const pmStart = parseTimeToHours(document.getElementById('input-pm-start').value);
+  const pmEnd = parseTimeToHours(document.getElementById('input-pm-end').value);
 
   const statusDiv = document.getElementById('anchor-status');
   const anchorFormatted = ANCHOR_LOW_TIDE.toLocaleString('en-GB', { 
@@ -557,12 +527,12 @@ function renderApp() {
     weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit', timeZoneName: 'short' 
   });
   
-  const sampleNodal = getNodalFactors(new Date());
-  statusDiv.innerHTML = `<strong>Calibrated Anchor:</strong> <strong>${anchorFormatted}</strong> | <strong>Min High Cutoff:</strong> &ge; <strong>${minHighThreshold.toFixed(2)}m</strong> | <strong>Nodal Multipliers (f):</strong> M2: ${sampleNodal.f_M2.toFixed(3)}, O1: ${sampleNodal.f_O1.toFixed(3)}, K1: ${sampleNodal.f_K1.toFixed(3)}`;
-
-  const startOfDay = new Date();
-  startOfDay.setHours(0,0,0,0);
-
+  const tzLabel = TIMEZONE === 'UTC' ? 'UTC Standard' : 'Local UK (BST/GMT)';
+  statusDiv.innerHTML = `<strong>Timezone:</strong> ${tzLabel} | <strong>Anchor:</strong> <strong>${anchorFormatted}</strong> | <strong>Min High Cutoff:</strong> &ge; <strong>${minHighThreshold.toFixed(2)}m</strong>`;
+  
+  startOfDayGlobal = new Date();
+  startOfDayGlobal.setHours(0,0,0,0);
+  
   const svg = document.getElementById('svg-chart');
   svg.innerHTML = `
     <defs>
@@ -572,21 +542,19 @@ function renderApp() {
       </linearGradient>
     </defs>
   `;
-
-  // 1. Milling Windows Shading
+  
+  // 1. Milling Windows Shading (Dynamic based on inputs)
   for (let d = 0; d < TOTAL_DAYS; d++) {
-    const amX1 = timeToX(d * 24 + 6);
-    const amX2 = timeToX(d * 24 + 9);
-    const pmX1 = timeToX(d * 24 + 17);
-    const pmX2 = timeToX(d * 24 + 19);
-
+    const amX1 = timeToX(d * 24 + amStart);
+    const amX2 = timeToX(d * 24 + amEnd);
+    const pmX1 = timeToX(d * 24 + pmStart);
+    const pmX2 = timeToX(d * 24 + pmEnd);
     svg.innerHTML += `
-      <rect x="${amX1}" y="${PADDING.top}" width="${amX2 - amX1}" height="${GRAPH_H}" fill="var(--window-am)" />
-      <rect x="${pmX1}" y="${PADDING.top}" width="${pmX2 - pmX1}" height="${GRAPH_H}" fill="var(--window-pm)" />
+      <rect x="${amX1}" y="${PADDING.top}" width="${Math.max(0, amX2 - amX1)}" height="${GRAPH_H}" fill="var(--window-am)" />
+      <rect x="${pmX1}" y="${PADDING.top}" width="${Math.max(0, pmX2 - pmX1)}" height="${GRAPH_H}" fill="var(--window-pm)" />
     `;
   }
-
-  // 2. Grid & Axis Labels
+  
   for (let h = 0; h <= 4; h += 1) {
     const y = heightToY(h);
     svg.innerHTML += `
@@ -594,48 +562,38 @@ function renderApp() {
       <text x="${PADDING.left - 8}" y="${y + 4}" font-size="11" fill="#64748b" text-anchor="end">${h}m</text>
     `;
   }
-
-  // Draw Minimum High Threshold Reference Line
+  
   const minHighY = heightToY(minHighThreshold);
   svg.innerHTML += `<line x1="${PADDING.left}" y1="${minHighY}" x2="${SVG_W - PADDING.right}" y2="${minHighY}" class="head-threshold-line" />`;
-
-  // Draw Riverbed Floor Line
   const floorY = heightToY(RIVERBED_FLOOR);
   svg.innerHTML += `<line x1="${PADDING.left}" y1="${floorY}" x2="${SVG_W - PADDING.right}" y2="${floorY}" class="riverbed-line" />`;
-
-  // 3. Day Separators & Dates
+  
   for (let d = 0; d <= TOTAL_DAYS; d++) {
     const x = timeToX(d * 24);
     svg.innerHTML += `<line x1="${x}" y1="${PADDING.top}" x2="${x}" y2="${SVG_H - PADDING.bottom}" class="day-divider" />`;
-
     if (d < TOTAL_DAYS) {
-      const dayDate = new Date(startOfDay.getTime() + d * 86400000);
+      const dayDate = new Date(startOfDayGlobal.getTime() + d * 86400000);
       const dateStr = dayDate.toLocaleDateString('en-GB', { timeZone: TIMEZONE, weekday: 'short', day: 'numeric', month: 'short' });
       const phase = getTidePhase(dayDate);
       const midX = timeToX(d * 24 + 12);
-
       svg.innerHTML += `
         <text x="${midX}" y="${PADDING.top - 8}" font-size="11" font-weight="bold" fill="#1e3a8a" text-anchor="middle">${dateStr}</text>
         <text x="${midX}" y="${SVG_H - 10}" font-size="10" fill="#64748b" text-anchor="middle">${phase.name} Tide</text>
       `;
     }
   }
-
-  // 4. Sample Curve Points & Extrema
+  
   const totalMinutes = TOTAL_DAYS * 24 * 60;
   const points = [];
   const tideEvents = [];
   let prevHeight = null;
   let prevTrend = 0;
-
   for (let min = 0; min <= totalMinutes; min += 10) {
-    const time = new Date(startOfDay.getTime() + min * 60000);
+    const time = new Date(startOfDayGlobal.getTime() + min * 60000);
     const height = getTideHeight(time);
     const x = timeToX(min / 60);
     const y = heightToY(height);
-
     points.push({ x, y });
-
     if (prevHeight !== null) {
       const currentTrend = height > prevHeight ? 1 : height < prevHeight ? -1 : 0;
       if (prevTrend !== 0 && currentTrend !== 0 && currentTrend !== prevTrend) {
@@ -650,41 +608,99 @@ function renderApp() {
     }
     prevHeight = height;
   }
-
-  // 5. Draw Continuous Tide Path
+  
   let pathD = `M ${points[0].x} ${points[0].y}`;
   for (let i = 1; i < points.length; i++) {
     pathD += ` L ${points[i].x} ${points[i].y}`;
   }
   const areaD = pathD + ` L ${timeToX(TOTAL_DAYS * 24)} ${heightToY(0)} L ${timeToX(0)} ${heightToY(0)} Z`;
-
   svg.innerHTML += `<path d="${areaD}" class="tide-area" />`;
   svg.innerHTML += `<path d="${pathD}" class="tide-path" />`;
-
-  // 6. Draw Turning Point Markers
+  
   tideEvents.forEach(evt => {
     const x = timeToX(evt.hoursTotal);
     const y = heightToY(evt.height);
     svg.innerHTML += `<circle cx="${x}" cy="${y}" r="3.5" fill="${evt.type === 'HIGH' ? '#0284c7' : '#d97706'}" />`;
   });
 
-  // 7. Render Table
-  populateTable(tideEvents, minHighThreshold);
+  svg.innerHTML += `<line id="hover-line" class="hover-line" y1="${PADDING.top}" y2="${SVG_H - PADDING.bottom}" x1="0" x2="0" />`;
+  svg.innerHTML += `<circle id="hover-dot" class="hover-dot" r="5" cx="0" cy="0" />`;
+
+  populateTable(tideEvents, minHighThreshold, amStart, amEnd, pmStart, pmEnd);
+  setupChartHover();
 }
 
-function populateTable(tideEvents, minHighThreshold) {
+function setupChartHover() {
+  const svg = document.getElementById('svg-chart');
+  const hoverLine = document.getElementById('hover-line');
+  const hoverDot = document.getElementById('hover-dot');
+  const tooltip = document.getElementById('chart-tooltip');
+  const container = document.getElementById('chart-container');
+
+  svg.addEventListener('mousemove', (e) => {
+    const rect = svg.getBoundingClientRect();
+    const scaleX = SVG_W / rect.width;
+    const mouseX = (e.clientX - rect.left) * scaleX;
+
+    if (mouseX >= PADDING.left && mouseX <= SVG_W - PADDING.right) {
+      const hoverTime = xToTime(mouseX);
+      const height = getTideHeight(hoverTime);
+      const dotY = heightToY(height);
+
+      hoverLine.setAttribute('x1', mouseX);
+      hoverLine.setAttribute('x2', mouseX);
+      hoverLine.style.opacity = '1';
+
+      hoverDot.setAttribute('cx', mouseX);
+      hoverDot.setAttribute('cy', dotY);
+      hoverDot.style.opacity = '1';
+
+      const timeStr = hoverTime.toLocaleTimeString('en-GB', {
+        timeZone: TIMEZONE,
+        hour: '2-digit',
+        minute: '2-digit'
+      });
+      const dateStr = hoverTime.toLocaleDateString('en-GB', {
+        timeZone: TIMEZONE,
+        weekday: 'short',
+        day: 'numeric',
+        month: 'short'
+      });
+      const tzAbbr = TIMEZONE === 'UTC' ? 'UTC' : 'BST';
+
+      tooltip.style.display = 'block';
+      tooltip.style.left = `${e.clientX - container.getBoundingClientRect().left}px`;
+      tooltip.innerHTML = `<strong>${dateStr} ${timeStr} ${tzAbbr}</strong><br/>Height: <strong>${height.toFixed(2)}m</strong>`;
+    } else {
+      hoverLine.style.opacity = '0';
+      hoverDot.style.opacity = '0';
+      tooltip.style.display = 'none';
+    }
+  });
+
+  svg.addEventListener('mouseleave', () => {
+    hoverLine.style.opacity = '0';
+    hoverDot.style.opacity = '0';
+    tooltip.style.display = 'none';
+  });
+}
+
+function populateTable(tideEvents, minHighThreshold, amStart, amEnd, pmStart, pmEnd) {
   const tbody = document.getElementById('table-body');
   tbody.innerHTML = '';
   let matches = 0;
 
+  const amStartStr = document.getElementById('input-am-start').value;
+  const amEndStr = document.getElementById('input-am-end').value;
+  const pmStartStr = document.getElementById('input-pm-start').value;
+  const pmEndStr = document.getElementById('input-pm-end').value;
+
   for (let i = 0; i < tideEvents.length; i++) {
     const evt = tideEvents[i];
-
     if (evt.type === 'LOW') {
       const hoursOfDay = getUKHoursOfDay(evt.time);
-      const isAM = hoursOfDay >= 6.0 && hoursOfDay <= 9.0;
-      const isPM = hoursOfDay >= 17.0 && hoursOfDay <= 19.0;
-
+      const isAM = hoursOfDay >= amStart && hoursOfDay <= amEnd;
+      const isPM = hoursOfDay >= pmStart && hoursOfDay <= pmEnd;
       if (isAM || isPM) {
         let precedingHigh = null;
         for (let j = i - 1; j >= 0; j--) {
@@ -693,19 +709,15 @@ function populateTable(tideEvents, minHighThreshold) {
             break;
           }
         }
-
         if (precedingHigh && precedingHigh.height >= minHighThreshold) {
           matches++;
-
           const dateStr = evt.time.toLocaleDateString('en-GB', { timeZone: TIMEZONE, weekday: 'short', day: 'numeric', month: 'short' });
-          const windowText = isAM ? 'AM (06:00-09:00)' : 'PM (17:00-19:00)';
+          const windowText = isAM ? `AM (${amStartStr}-${amEndStr})` : `PM (${pmStartStr}-${pmEndStr})`;
           const badgeWindowClass = isAM ? 'badge-am' : 'badge-pm';
           const phase = getTidePhase(evt.time);
-
           const lowTimeStr = evt.time.toLocaleTimeString('en-GB', { timeZone: TIMEZONE, hour: '2-digit', minute: '2-digit' });
           const highTimeStr = precedingHigh.time.toLocaleTimeString('en-GB', { timeZone: TIMEZONE, hour: '2-digit', minute: '2-digit' });
           const highHeightStr = `${precedingHigh.height.toFixed(2)} m`;
-
           tbody.innerHTML += `
             <tr>
               <td><strong>${dateStr}</strong></td>
@@ -721,17 +733,19 @@ function populateTable(tideEvents, minHighThreshold) {
       }
     }
   }
-
   if (matches === 0) {
-    tbody.innerHTML = `<tr><td colspan="7" style="text-align:center; color:#64748b; padding:24px;">No out-of-hours low tides over the next 30 days have a preceding high tide of at least <strong>${minHighThreshold.toFixed(2)}m</strong> under current weather settings.</td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="7" style="text-align:center; color:#64748b; padding:24px;">No out-of-hours low tides over the next 30 days have a preceding high tide of at least <strong>${minHighThreshold.toFixed(2)}m</strong> within the configured milling windows under current weather settings.</td></tr>`;
   }
 }
 
-// Live Event Listeners for Input Controls
+document.getElementById('select-timezone').addEventListener('change', renderApp);
+document.getElementById('input-am-start').addEventListener('change', renderApp);
+document.getElementById('input-am-end').addEventListener('change', renderApp);
+document.getElementById('input-pm-start').addEventListener('change', renderApp);
+document.getElementById('input-pm-end').addEventListener('change', renderApp);
 document.getElementById('input-min-high').addEventListener('input', renderApp);
 document.getElementById('input-pressure').addEventListener('input', renderApp);
 document.getElementById('input-wind').addEventListener('input', renderApp);
-
 window.onload = renderApp;
 </script>
 </body>
