@@ -34,7 +34,7 @@ function calculateArea() {
 function runCalculateWithAreaAndWindspeed(areaData, windspeedData) {
 	windspeedType = document.getElementById('windspeedType').value;
 	if (windspeedType == 'MPH') {
-		windspeedData = windspeedData / 12.237;	}
+		windspeedData = windspeedData / 2.237;	}
 	if (windspeedType == 'Knots') {
 		windspeedData = windspeedData / 1.94384;	}
 	windage = ( ( (windspeedData * windspeedData) / 18 ) * areaData ) / 1000;
