@@ -1,23 +1,273 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
-<link rel="stylesheet" href="quizManager.css">
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Windage</title>
-<style>
-	HTML{font-size: calc((1vh+1vw)/2)}
-</style>
-<link rel="icon" href="https://hopgood.uk/favicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Windage Calculator</title>
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --primary-hover: #1e40af;
+      --bg-card: #ffffff;
+      --bg-accent: #f8fafc;
+      --border: #e2e8f0;
+      --text: #0f172a;
+      --text-muted: #64748b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    body {
+      background-color: #f1f5f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 1rem;
+    }
+
+    .calculator-card {
+      background: var(--bg-card);
+      border-radius: 12px;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      width: 100%;
+      max-width: 550px;
+    }
+
+    .calculator-card h2 {
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem;
+    }
+
+    /* Grid Layout Setup */
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+
+    .full-width {
+      grid-column: 1 / -1;
+    }
+
+    /* Dynamic Container Styling */
+    .sub-grid {
+      background-color: var(--bg-accent);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    /* Form Elements */
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    label {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .input-group {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    input[type="number"], select {
+      width: 100%;
+      padding: 0.6rem 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: 0.95rem;
+      color: var(--text);
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    input[type="number"]:focus, select:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.15);
+    }
+
+    .unit {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    /* Output Section */
+    .result-box {
+      margin-top: 0.5rem;
+      background-color: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 8px;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .result-box span {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .result-value {
+      font-size: 1.5rem !important;
+      font-weight: 700 !important;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 480px) {
+      .grid-container, .sub-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
-<script type="text/javascript" src='windage.js' ></script>
-<script type='text/javascript'>
-	// <![CDATA [
-		createScreen();
-	// ] ] >
+
+<div class="calculator-card">
+  <h2>Windage Force Calculator</h2>
+
+  <div class="grid-container">
+    
+    <div class="form-group full-width">
+      <label for="areaCalcType">Area Mode</label>
+      <select id="areaCalcType">
+        <option value="Total Area" selected>Direct Total Area</option>
+        <option value="Calculate Area">Calculate Area from Dimensions</option>
+      </select>
+    </div>
+
+    <div id="areaCalcContainer" class="sub-grid full-width" style="display: none;">
+      <div class="form-group">
+        <label for="numberOfContainersHigh">Containers High (2.4m)</label>
+        <input type="number" id="numberOfContainersHigh" min="0" placeholder="0">
+      </div>
+
+      <div class="form-group">
+        <label for="deckHeight">Deck Height (m)</label>
+        <input type="number" id="deckHeight" min="0" placeholder="0">
+      </div>
+
+      <div class="form-group full-width">
+        <label for="vesselLength">Vessel Length (m)</label>
+        <input type="number" id="vesselLength" min="0" placeholder="0">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="totalArea">Total Area</label>
+      <div class="input-group">
+        <input type="number" id="totalArea" placeholder="0">
+        <span class="unit">m²</span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="windspeedType">Speed Unit</label>
+      <select id="windspeedType">
+        <option value="Knots" selected>Knots</option>
+        <option value="MPH">MPH</option>
+        <option value="Metres/second">m/s</option>
+      </select>
+    </div>
+
+    <div class="form-group full-width">
+      <label for="windspeed">Wind Speed</label>
+      <input type="number" id="windspeed" placeholder="Enter wind speed">
+    </div>
+
+    <div class="result-box full-width">
+      <span>Calculated Windage:</span>
+      <div>
+        <span id="windageCalculated" class="result-value">0.0</span>
+        <span class="unit">Tonnes</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  // DOM References
+  const areaCalcType = document.getElementById('areaCalcType');
+  const areaCalcContainer = document.getElementById('areaCalcContainer');
+  const totalAreaInput = document.getElementById('totalArea');
+  const windspeedInput = document.getElementById('windspeed');
+  const windspeedType = document.getElementById('windspeedType');
+  const windageOutput = document.getElementById('windageCalculated');
+
+  const containersInput = document.getElementById('numberOfContainersHigh');
+  const deckHeightInput = document.getElementById('deckHeight');
+  const vesselLengthInput = document.getElementById('vesselLength');
+
+  // Toggle dynamic area form
+  areaCalcType.addEventListener('change', () => {
+    if (areaCalcType.value === 'Calculate Area') {
+      areaCalcContainer.style.display = 'grid';
+    } else {
+      areaCalcContainer.style.display = 'none';
+    }
+    calculateWindage();
+  });
+
+  // Calculate area from dimensions
+  function calculateAreaFromDimensions() {
+    const containers = parseFloat(containersInput.value) || 0;
+    const deckHeight = parseFloat(deckHeightInput.value) || 0;
+    const vesselLength = parseFloat(vesselLengthInput.value) || 0;
+
+    const totalHeight = deckHeight + (containers * 2.4);
+    const calculatedArea = totalHeight * vesselLength;
+
+    totalAreaInput.value = calculatedArea ? calculatedArea.toFixed(2) : 0;
+    calculateWindage();
+  }
+
+  // Calculate final windage force
+  function calculateWindage() {
+    const area = parseFloat(totalAreaInput.value) || 0;
+    let speed = parseFloat(windspeedInput.value) || 0;
+    const type = windspeedType.value;
+
+    // Standardize to metres/second
+    if (type === 'MPH') {
+      speed /= 2.23694;
+    } else if (type === 'Knots') {
+      speed /= 1.94384;
+    }
+
+    // Aerodynamic force formula
+    const windage = ((Math.pow(speed, 2) / 18) * area) / 1000;
+    windageOutput.innerText = windage.toFixed(1);
+  }
+
+  // Event Listeners using Event Delegation/Binding
+  [containersInput, deckHeightInput, vesselLengthInput].forEach(element => {
+    element.addEventListener('input', calculateAreaFromDimensions);
+  });
+
+  [totalAreaInput, windspeedInput, windspeedType].forEach(element => {
+    element.addEventListener('input', calculateWindage);
+  });
 </script>
+
 </body>
 </html>
