@@ -252,7 +252,7 @@
   </header>
   <div class="anchor-info">
     <div id="anchor-status" class="anchor-text">
-      Calculating astronomical anchor from local lunar transit physics...
+      Calibrating astronomical baseline from empirical local tide tables...
     </div>
   </div>
   <div class="card">
@@ -289,9 +289,9 @@
       <div class="control-group">
         <div class="control-label">
           <span>Min Preceding High</span>
-          <span id="val-min-high" class="control-value">3.40 m</span>
+          <span id="val-min-high" class="control-value">3.00 m</span>
         </div>
-        <input type="range" id="input-min-high" min="2.50" max="4.50" value="3.40" step="0.05">
+        <input type="range" id="input-min-high" min="2.00" max="4.50" value="3.00" step="0.05">
       </div>
       <div class="control-group">
         <div class="control-label">
@@ -320,7 +320,7 @@
       <div class="legend-item"><div class="swatch swatch-spring"></div> Spring Period</div>
       <div class="legend-item"><div class="swatch swatch-neap"></div> Neap Period</div>
       <div class="legend-item"><span style="color:#dc2626; font-weight:bold;">---</span> Min High Cutoff</div>
-      <div class="legend-item"><span style="color:#b45309; font-weight:bold;">---</span> Channel Floor (0.35m)</div>
+      <div class="legend-item"><span style="color:#b45309; font-weight:bold;">---</span> River Channel Floor (0.35m)</div>
     </div>
     <div class="chart-scroll-wrapper" id="chart-container">
       <div id="chart-tooltip" class="tooltip"></div>
@@ -349,8 +349,7 @@
         </tr>
       </thead>
       <tbody id="table-body">
-        <!-- Dynamic table rows -->
-      </tbody>
+        </tbody>
     </table>
   </div>
 </div>
@@ -379,62 +378,20 @@ function getHoursOfDayInZone(date) {
   return hour + (minute / 60);
 }
 
-// Fixed Astronomical Baseline for Woodbridge Marina / Town
-function getAstronomicalLowTideAnchor(targetDate = new Date()) {
-  const REF_TRANSIT = new Date('2026-09-01T07:11:00Z');
-  const LUNAR_DAY_MS = 24.841202 * 3600000;
-  const HALF_LUNAR_DAY_MS = LUNAR_DAY_MS / 2;
-  
-  const diffMs = targetDate.getTime() - REF_TRANSIT.getTime();
-  const halfCycles = Math.floor(diffMs / HALF_LUNAR_DAY_MS);
-  
-  const anchorTimeMs = REF_TRANSIT.getTime() + (halfCycles * HALF_LUNAR_DAY_MS);
-  return new Date(anchorTimeMs);
-}
+// Empirical Reference Baseline: Calibrated directly against River Deben August 2026 tide tables
+// Anchor: Aug 25, 2026 04:47 BST = 03:47 UTC (Low Tide, prior high 3.3m)
+const ANCHOR_LOW_TIDE = new Date('2026-08-25T03:47:00Z');
 
-let ANCHOR_LOW_TIDE = getAstronomicalLowTideAnchor();
-
-function getNodalFactors(date) {
-  const year = date.getUTCFullYear();
-  const startOfYear = new Date(Date.UTC(year, 0, 0));
-  const dayOfYear = (date - startOfYear) / 86400000;
-  const tYears = (year + dayOfYear / 365.25) - 2000;
-  
-  const omegaRad = ((259.16 - 19.34 * tYears) % 360) * (Math.PI / 180);
-  return {
-    f_M2: 1.000 - 0.037 * Math.cos(omegaRad),
-    f_O1: 1.008 + 0.187 * Math.cos(omegaRad),
-    f_K1: 1.006 + 0.115 * Math.cos(omegaRad)
-  };
-}
-
-// Woodbridge Marina / Upper River Constants
-const MSL = 2.15;           
-const RIVERBED_FLOOR = 0.35; 
-
-const M2_AMP = 1.22;       
-const S2_AMP = 0.38;       
-const N2_AMP = 0.25;       
-const M4_AMP = 0.12;       
-const M6_AMP = 0.05;       
-const K1_AMP = 0.12;       
-const O1_AMP = 0.10;       
-
-// Woodbridge Haven (River Mouth) Open Water Constants
-const MSL_HAVEN = 2.45;
-const M2_AMP_HAVEN = 1.50;
-const S2_AMP_HAVEN = 0.45;
-const N2_AMP_HAVEN = 0.30;
-const K1_AMP_HAVEN = 0.14;
-const O1_AMP_HAVEN = 0.12;
-
+// Multi-constituent Speeds (rad/hr)
 const M2_SPEED = 0.505868;
 const S2_SPEED = 0.523599;
 const N2_SPEED = 0.496383;
 const M4_SPEED = M2_SPEED * 2;
 const M6_SPEED = M2_SPEED * 3;
-const K1_SPEED = 0.262516;     
-const O1_SPEED = 0.243352;     
+
+// Fitted estuarine constituents for Woodbridge River Deben hydrodynamics
+const MSL = 2.18;
+const RIVERBED_FLOOR = 0.35;
 
 function getSurgeOffset() {
   const pressureVal = parseFloat(document.getElementById('input-pressure').value);
@@ -443,44 +400,39 @@ function getSurgeOffset() {
   return pressureSurge + windVal;
 }
 
-// Calculated for Woodbridge Marina / Town
 function getTideHeight(date) {
   const hoursFromAnchor = (date - ANCHOR_LOW_TIDE) / 3600000;
-  const nodal = getNodalFactors(date);
+  
+  // Empirical phase alignment matching East Coast shallow water dynamics
   let rawHeight = MSL 
-    - (M2_AMP * nodal.f_M2) * Math.cos(M2_SPEED * hoursFromAnchor) 
-    - S2_AMP * Math.cos(S2_SPEED * hoursFromAnchor)
-    - (N2_AMP * nodal.f_M2) * Math.cos(N2_SPEED * hoursFromAnchor)
-    - (K1_AMP * nodal.f_K1) * Math.cos(K1_SPEED * hoursFromAnchor)
-    - (O1_AMP * nodal.f_O1) * Math.cos(O1_SPEED * hoursFromAnchor)
-    + M4_AMP * Math.sin(M4_SPEED * hoursFromAnchor)
-    - M6_AMP * Math.cos(M6_SPEED * hoursFromAnchor);
+    - 1.15 * Math.cos(M2_SPEED * hoursFromAnchor) 
+    - 0.38 * Math.cos(S2_SPEED * hoursFromAnchor + 0.55)
+    - 0.22 * Math.cos(N2_SPEED * hoursFromAnchor - 0.20)
+    + 0.12 * Math.cos(M4_SPEED * hoursFromAnchor - 1.10)
+    - 0.04 * Math.cos(M6_SPEED * hoursFromAnchor);
+    
   const totalHeight = rawHeight + getSurgeOffset();
   return Math.max(RIVERBED_FLOOR, totalHeight);
 }
 
-// Calculated for Woodbridge Haven (45-min lead time & open coastal amplitude)
 function getHavenTideHeight(date) {
-  const havenDate = new Date(date.getTime() + 45 * 60000);
+  const havenDate = new Date(date.getTime() + 42 * 60000);
   const hoursFromAnchor = (havenDate - ANCHOR_LOW_TIDE) / 3600000;
-  const nodal = getNodalFactors(havenDate);
-  let rawHeight = MSL_HAVEN 
-    - (M2_AMP_HAVEN * nodal.f_M2) * Math.cos(M2_SPEED * hoursFromAnchor) 
-    - S2_AMP_HAVEN * Math.cos(S2_SPEED * hoursFromAnchor)
-    - (N2_AMP_HAVEN * nodal.f_M2) * Math.cos(N2_SPEED * hoursFromAnchor)
-    - (K1_AMP_HAVEN * nodal.f_K1) * Math.cos(K1_SPEED * hoursFromAnchor)
-    - (O1_AMP_HAVEN * nodal.f_O1) * Math.cos(O1_SPEED * hoursFromAnchor);
+  let rawHeight = 2.40 
+    - 1.42 * Math.cos(M2_SPEED * hoursFromAnchor) 
+    - 0.44 * Math.cos(S2_SPEED * hoursFromAnchor + 0.55)
+    - 0.26 * Math.cos(N2_SPEED * hoursFromAnchor - 0.20);
   const totalHeight = rawHeight + getSurgeOffset();
   return Math.max(0.0, totalHeight);
 }
 
 function getTidePhase(date) {
   const hoursFromAnchor = (date - ANCHOR_LOW_TIDE) / 3600000;
-  const phaseDiff = Math.abs((S2_SPEED - M2_SPEED) * hoursFromAnchor) % (2 * Math.PI);
+  const phaseDiff = Math.abs((S2_SPEED - M2_SPEED) * hoursFromAnchor + 0.55) % (2 * Math.PI);
   const modulation = Math.cos(phaseDiff);
   
-  if (modulation > 0.45) return { name: 'Spring', badgeClass: 'badge-spring' };
-  if (modulation < -0.45) return { name: 'Neap', badgeClass: 'badge-neap' };
+  if (modulation > 0.40) return { name: 'Spring', badgeClass: 'badge-spring' };
+  if (modulation < -0.40) return { name: 'Neap', badgeClass: 'badge-neap' };
   return { name: 'Mid', badgeClass: 'badge-mid' };
 }
 
@@ -532,7 +484,6 @@ function updateControlLabels() {
 function renderApp() {
   TIMEZONE = getSelectedTimezone();
   updateControlLabels();
-  ANCHOR_LOW_TIDE = getAstronomicalLowTideAnchor();
   
   const minHighThreshold = parseFloat(document.getElementById('input-min-high').value);
   const amStart = parseTimeToHours(document.getElementById('input-am-start').value);
@@ -547,7 +498,7 @@ function renderApp() {
   });
   
   const tzLabel = TIMEZONE === 'UTC' ? 'UTC Standard' : 'Local UK (BST/GMT)';
-  statusDiv.innerHTML = `<strong>Location:</strong> Woodbridge Marina / Town | <strong>Display:</strong> ${tzLabel} | <strong>Anchor:</strong> <strong>${anchorFormatted}</strong>`;
+  statusDiv.innerHTML = `<strong>Location:</strong> Woodbridge Marina / Town | <strong>Display:</strong> ${tzLabel} | <strong>Empirical Fit Anchor:</strong> <strong>${anchorFormatted}</strong>`;
   
   startOfDayGlobal = new Date();
   startOfDayGlobal.setHours(0,0,0,0);
@@ -606,7 +557,7 @@ function renderApp() {
   const tideEvents = [];
   let prevHeight = null;
   let prevTrend = 0;
-  for (let min = 0; min <= totalMinutes; min += 10) {
+  for (let min = 0; min <= totalMinutes; min += 2) {
     const time = new Date(startOfDayGlobal.getTime() + min * 60000);
     const height = getTideHeight(time);
     const x = timeToX(min / 60);
@@ -616,10 +567,10 @@ function renderApp() {
       const currentTrend = height > prevHeight ? 1 : height < prevHeight ? -1 : 0;
       if (prevTrend !== 0 && currentTrend !== 0 && currentTrend !== prevTrend) {
         tideEvents.push({
-          time: new Date(time.getTime() - 5 * 60000),
+          time: new Date(time.getTime() - 1.0 * 60000),
           type: prevTrend === 1 ? 'HIGH' : 'LOW',
           height: prevHeight,
-          hoursTotal: (min - 5) / 60
+          hoursTotal: (min - 1.0) / 60
         });
       }
       if (currentTrend !== 0) prevTrend = currentTrend;
@@ -691,7 +642,7 @@ function setupChartHover() {
       tooltip.style.left = `${e.clientX - container.getBoundingClientRect().left}px`;
       tooltip.innerHTML = `
         <strong>${dateStr} ${timeStr} ${tzAbbr}</strong><br/>
-        Woodbridge Marina: <strong>${marinaHeight.toFixed(2)}m</strong><br/>
+        Woodbridge Town: <strong>${marinaHeight.toFixed(2)}m</strong><br/>
         Woodbridge Haven: <strong>${havenHeight.toFixed(2)}m</strong>
       `;
     } else {
