@@ -165,11 +165,12 @@
       position: absolute;
       top: 12px;
       display: none;
-      background: rgba(15, 23, 42, 0.9);
+      background: rgba(15, 23, 42, 0.92);
       color: #ffffff;
-      padding: 6px 10px;
+      padding: 8px 12px;
       border-radius: 6px;
       font-size: 0.78rem;
+      line-height: 1.4;
       pointer-events: none;
       white-space: nowrap;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
@@ -304,9 +305,9 @@
       <div class="control-group">
         <div class="control-label">
           <span>Min Preceding High</span>
-          <span id="val-min-high" class="control-value">3.80 m</span>
+          <span id="val-min-high" class="control-value">3.40 m</span>
         </div>
-        <input type="range" id="input-min-high" min="2.50" max="4.50" value="3.80" step="0.05">
+        <input type="range" id="input-min-high" min="2.50" max="4.50" value="3.40" step="0.05">
       </div>
       <div class="control-group">
         <div class="control-label">
@@ -377,7 +378,6 @@ function parseTimeToHours(timeStr) {
   return h + (m / 60);
 }
 
-// Convert a Date object to decimal hours in the target display timezone without state mutation
 function getHoursOfDayInZone(date) {
   const timeStr = date.toLocaleTimeString('en-GB', {
     timeZone: TIMEZONE,
@@ -389,8 +389,7 @@ function getHoursOfDayInZone(date) {
   return hour + (minute / 60);
 }
 
-// Fixed Astronomical Baseline: Recalibrated specifically to Woodbridge Marina / Town
-// Admiralty verified benchmark: 01 Sept 2026 Low Tide = 07:11 UTC (08:11 BST)
+// Fixed Astronomical Baseline for Woodbridge Marina / Town
 function getAstronomicalLowTideAnchor(targetDate = new Date()) {
   const REF_TRANSIT = new Date('2026-09-01T07:11:00Z');
   const LUNAR_DAY_MS = 24.841202 * 3600000;
@@ -419,8 +418,9 @@ function getNodalFactors(date) {
   };
 }
 
-const MSL = 2.15;           // Mean Sea Level (m)
-const RIVERBED_FLOOR = 0.35; // Woodbridge channel floor (m)
+// Woodbridge Marina / Upper River Constants
+const MSL = 2.15;           
+const RIVERBED_FLOOR = 0.35; 
 
 const M2_AMP = 1.22;       
 const S2_AMP = 0.38;       
@@ -429,6 +429,14 @@ const M4_AMP = 0.12;
 const M6_AMP = 0.05;       
 const K1_AMP = 0.12;       
 const O1_AMP = 0.10;       
+
+// Woodbridge Haven (River Mouth) Open Water Constants
+const MSL_HAVEN = 2.45;
+const M2_AMP_HAVEN = 1.50;
+const S2_AMP_HAVEN = 0.45;
+const N2_AMP_HAVEN = 0.30;
+const K1_AMP_HAVEN = 0.14;
+const O1_AMP_HAVEN = 0.12;
 
 const M2_SPEED = 0.505868;
 const S2_SPEED = 0.523599;
@@ -445,6 +453,7 @@ function getSurgeOffset() {
   return pressureSurge + windVal;
 }
 
+// Calculated for Woodbridge Marina / Town
 function getTideHeight(date) {
   const hoursFromAnchor = (date - ANCHOR_LOW_TIDE) / 3600000;
   const nodal = getNodalFactors(date);
@@ -458,6 +467,21 @@ function getTideHeight(date) {
     - M6_AMP * Math.cos(M6_SPEED * hoursFromAnchor);
   const totalHeight = rawHeight + getSurgeOffset();
   return Math.max(RIVERBED_FLOOR, totalHeight);
+}
+
+// Calculated for Woodbridge Haven (45-min lead time & open coastal amplitude)
+function getHavenTideHeight(date) {
+  const havenDate = new Date(date.getTime() + 45 * 60000); // Haven leads Town by ~45 mins
+  const hoursFromAnchor = (havenDate - ANCHOR_LOW_TIDE) / 3600000;
+  const nodal = getNodalFactors(havenDate);
+  let rawHeight = MSL_HAVEN 
+    - (M2_AMP_HAVEN * nodal.f_M2) * Math.cos(M2_SPEED * hoursFromAnchor) 
+    - S2_AMP_HAVEN * Math.cos(S2_SPEED * hoursFromAnchor)
+    - (N2_AMP_HAVEN * nodal.f_M2) * Math.cos(N2_SPEED * hoursFromAnchor)
+    - (K1_AMP_HAVEN * nodal.f_K1) * Math.cos(K1_SPEED * hoursFromAnchor)
+    - (O1_AMP_HAVEN * nodal.f_O1) * Math.cos(O1_SPEED * hoursFromAnchor);
+  const totalHeight = rawHeight + getSurgeOffset();
+  return Math.max(0.0, totalHeight);
 }
 
 function getTidePhase(date) {
@@ -648,8 +672,9 @@ function setupChartHover() {
 
     if (mouseX >= PADDING.left && mouseX <= SVG_W - PADDING.right) {
       const hoverTime = xToTime(mouseX);
-      const height = getTideHeight(hoverTime);
-      const dotY = heightToY(height);
+      const marinaHeight = getTideHeight(hoverTime);
+      const havenHeight = getHavenTideHeight(hoverTime);
+      const dotY = heightToY(marinaHeight);
 
       hoverLine.setAttribute('x1', mouseX);
       hoverLine.setAttribute('x2', mouseX);
@@ -674,7 +699,11 @@ function setupChartHover() {
 
       tooltip.style.display = 'block';
       tooltip.style.left = `${e.clientX - container.getBoundingClientRect().left}px`;
-      tooltip.innerHTML = `<strong>${dateStr} ${timeStr} ${tzAbbr}</strong><br/>Height: <strong>${height.toFixed(2)}m</strong>`;
+      tooltip.innerHTML = `
+        <strong>${dateStr} ${timeStr} ${tzAbbr}</strong><br/>
+        Woodbridge Marina: <strong>${marinaHeight.toFixed(2)}m</strong><br/>
+        Woodbridge Haven: <strong>${havenHeight.toFixed(2)}m</strong>
+      `;
     } else {
       hoverLine.style.opacity = '0';
       hoverDot.style.opacity = '0';
