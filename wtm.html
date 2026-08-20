@@ -44,45 +44,17 @@
     .anchor-info {
       background: #eff6ff;
       border-left: 4px solid var(--secondary);
-      padding: 6px 16px;
+      padding: 8px 16px;
       font-size: 0.82rem;
       margin-bottom: 16px;
       border-radius: 0 6px 6px 0;
       color: #1e40af;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-      width: 100%;
       box-sizing: border-box;
     }
     .anchor-text {
-      flex: 1;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-    }
-    .print-btn-subtle {
-      background-color: transparent;
-      color: #1e40af;
-      border: 1px solid #bfdbfe;
-      padding: 2px 6px;
-      font-size: 0.7rem;
-      font-weight: 500;
-      border-radius: 3px;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 3px;
-      white-space: nowrap;
-      line-height: 1;
-      transition: all 0.15s ease-in-out;
-      flex-shrink: 0;
-    }
-    .print-btn-subtle:hover {
-      background-color: #dbeafe;
-      border-color: #93c5fd;
-      color: #1e3a8a;
     }
     .card {
       background: var(--card-bg);
@@ -94,7 +66,7 @@
     }
     .controls-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 16px;
       background: #f1f5f9;
       padding: 14px 18px;
@@ -137,6 +109,25 @@
       color: #334155;
       font-weight: 600;
       box-sizing: border-box;
+    }
+    .btn-print-pdf {
+      background-color: #ffffff;
+      color: var(--primary);
+      border: 1px solid #cbd5e1;
+      padding: 5px 10px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border-radius: 4px;
+      cursor: pointer;
+      align-self: flex-end;
+      width: 100%;
+      box-sizing: border-box;
+      transition: all 0.15s ease-in-out;
+    }
+    .btn-print-pdf:hover {
+      background-color: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
     }
     .chart-scroll-wrapper {
       position: relative;
@@ -240,7 +231,7 @@
       body { background-color: #ffffff !important; color: #000000 !important; padding: 0; margin: 0; }
       .container { max-width: 100% !important; }
       header { border-bottom: 2px solid #000; margin-bottom: 12px; padding-bottom: 6px; }
-      .controls-grid, .print-btn-subtle, .subtitle, .tooltip { display: none !important; }
+      .controls-grid, .subtitle, .tooltip { display: none !important; }
       .anchor-info { border-left: 3px solid #000; background: #f8fafc !important; color: #000 !important; padding: 6px 10px; margin-bottom: 12px; font-size: 0.8rem; }
       .card { box-shadow: none !important; border: 1px solid #cbd5e1 !important; padding: 12px !important; margin-bottom: 12px !important; page-break-inside: avoid; }
       .chart-scroll-wrapper { border: 1px solid #cbd5e1 !important; overflow: visible !important; }
@@ -263,13 +254,6 @@
     <div id="anchor-status" class="anchor-text">
       Calculating astronomical anchor from local lunar transit physics...
     </div>
-    <button class="print-btn-subtle" onclick="window.print()" title="Print / PDF">
-      <svg width="10" height="10" fill="currentColor" viewBox="0 0 16 16">
-        <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/>
-        <path d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm1 3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-3z"/>
-      </svg>
-      Print
-    </button>
   </div>
   <div class="card">
     <div class="controls-grid">
@@ -322,6 +306,12 @@
           <span id="val-wind" class="control-value">+0.00 m</span>
         </div>
         <input type="range" id="input-wind" min="-0.50" max="1.00" value="0.00" step="0.05">
+      </div>
+      <div class="control-group" style="justify-content: flex-end;">
+        <div class="control-label" style="visibility: hidden;">
+          <span>Action</span>
+        </div>
+        <button class="btn-print-pdf" onclick="window.print()">Print to PDF</button>
       </div>
     </div>
     <div class="legend">
@@ -471,7 +461,7 @@ function getTideHeight(date) {
 
 // Calculated for Woodbridge Haven (45-min lead time & open coastal amplitude)
 function getHavenTideHeight(date) {
-  const havenDate = new Date(date.getTime() + 45 * 60000); // Haven leads Town by ~45 mins
+  const havenDate = new Date(date.getTime() + 45 * 60000);
   const hoursFromAnchor = (havenDate - ANCHOR_LOW_TIDE) / 3600000;
   const nodal = getNodalFactors(havenDate);
   let rawHeight = MSL_HAVEN 
