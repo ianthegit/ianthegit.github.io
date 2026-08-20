@@ -498,7 +498,7 @@ function renderApp() {
   });
   
   const tzLabel = TIMEZONE === 'UTC' ? 'UTC Standard' : 'Local UK (BST/GMT)';
-  statusDiv.innerHTML = `<strong>Location:</strong> Woodbridge Marina / Town | <strong>Display:</strong> ${tzLabel} | <strong>Empirical Fit Anchor:</strong> <strong>${anchorFormatted}</strong>`;
+  statusDiv.innerHTML = `<strong>Location:</strong> Woodbridge Tide Mill | <strong>Display:</strong> ${tzLabel} | <strong>Empirical Fit Anchor:</strong> <strong>${anchorFormatted}</strong>`;
   
   startOfDayGlobal = new Date();
   startOfDayGlobal.setHours(0,0,0,0);
@@ -642,7 +642,7 @@ function setupChartHover() {
       tooltip.style.left = `${e.clientX - container.getBoundingClientRect().left}px`;
       tooltip.innerHTML = `
         <strong>${dateStr} ${timeStr} ${tzAbbr}</strong><br/>
-        Woodbridge Town: <strong>${marinaHeight.toFixed(2)}m</strong><br/>
+        Woodbridge Tide Mill: <strong>${marinaHeight.toFixed(2)}m</strong><br/>
         Woodbridge Haven: <strong>${havenHeight.toFixed(2)}m</strong>
       `;
     } else {
