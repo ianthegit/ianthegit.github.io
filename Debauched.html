@@ -25,8 +25,6 @@
       min-height: 100vh;
       box-sizing: border-box;
     }
-
-    /* Fullscreen background image with overlay */
     body::before {
       content: "";
       position: fixed;
@@ -40,7 +38,6 @@
       background-position: center;
       background-repeat: no-repeat;
     }
-
     .card {
       background: var(--card-bg);
       backdrop-filter: blur(8px);
@@ -59,7 +56,6 @@
       flex-wrap: wrap;
       gap: 1rem;
     }
-
     .total-score {
       font-size: 1.5rem;
       font-weight: bold;
@@ -69,29 +65,24 @@
       border-radius: 6px;
       border: 1px solid #bfdbfe;
     }
-
     .status-bar {
       font-size: 0.9rem;
       color: #475569;
       margin-top: 0.5rem;
     }
-
     .controls {
       display: flex;
       gap: 0.5rem;
       flex-wrap: wrap;
       margin-bottom: 1rem;
     }
-
     select, button {
       padding: 0.6rem 1rem;
       font-size: 1rem;
       border-radius: 6px;
       border: 1px solid var(--border);
     }
-
     select { flex-grow: 1; }
-
     button {
       background-color: var(--primary);
       color: white;
@@ -99,10 +90,8 @@
       cursor: pointer;
       font-weight: 600;
     }
-
     button:hover:not(:disabled) { opacity: 0.9; }
     button:disabled { background-color: var(--disabled); cursor: not-allowed; }
-
     button.badge-btn {
       background-color: var(--success);
       width: 100%;
@@ -110,26 +99,21 @@
       font-size: 1.2rem;
       margin-top: 1rem;
     }
-
     table {
       width: 100%;
       border-collapse: collapse;
       margin-top: 1rem;
     }
-
     th, td {
       padding: 0.75rem;
       text-align: left;
       border-bottom: 1px solid var(--border);
     }
-
     th { background-color: rgba(241, 245, 249, 0.8); }
-
     .action-select {
       font-size: 0.85rem;
       padding: 0.3rem;
     }
-
     .action-tag {
       display: inline-block;
       background: #e2e8f0;
@@ -138,13 +122,11 @@
       font-size: 0.85rem;
       margin-top: 0.25rem;
     }
-
     .btn-remove {
       background: #ef4444;
       padding: 0.2rem 0.5rem;
       font-size: 0.8rem;
     }
-
     #badge-canvas { display: none; }
   </style>
 </head>
@@ -155,10 +137,9 @@
         <h1 style="margin:0;">Walk Event</h1>
         <div class="status-bar" id="time-status">Initializing...</div>
       </div>
-      <div class="total-score">Total Points: <span id="total-score">0</span></div>
+      <div class="total-score">Total Points: <span id="total-score">???</span></div>
     </div>
   </div>
-
   <div class="card">
     <h2>Check-In</h2>
     <div class="controls">
@@ -183,12 +164,10 @@
     </table>
     <button id="badge-btn" class="badge-btn" style="display: none;">Generate Badge</button>
   </div>
-
   <canvas id="badge-canvas"></canvas>
-
   <script>
     const EVENT_CONFIG = {
-      startTime: "2026-09-12T10:00:00",
+      startTime: "2026-06-12T10:00:00",
       endTime: "2026-09-12T19:00:00",
       badgeImage: "debauchedDebenSemi.jpg",
       locations: [
@@ -199,7 +178,8 @@
         { id: "LOC5", name: "HMS Vale", score: 10 },
         { id: "LOC6", name: "The Boatyard", score: 30 },
         { id: "LOC7", name: "The Anchor", score: 45 },
-        { id: "LOC8", name: "The Cherry Tree Inn", score: 50 }
+        { id: "LOC8", name: "The Cherry Tree Inn", score: 50 },
+        { id: "FINAL", name: "Finished!", score: Math.floor(Math.random() * 61) - 50 }
       ],
       actions: [
         { action: "Pint of water", score: -30 },
@@ -210,13 +190,13 @@
         { action: "Hot drink and cake", score: -25 }
       ]
     };
-
     let startTime = new Date(EVENT_CONFIG.startTime);
     let endTime = new Date(EVENT_CONFIG.endTime);
     let checkins = JSON.parse(localStorage.getItem('walk_checkins') || '[]');
+    let isEventCompletedManual = JSON.parse(localStorage.getItem('walk_completed') || 'false');
     let totalScore = 0;
     let isEventActive = false;
-
+    let isRevealed = false;
     function init() {
       populateLocationDropdown();
       checkEventStatus();
@@ -224,60 +204,64 @@
       calculateTotal();
       setInterval(checkEventStatus, 10000);
     }
-
     function populateLocationDropdown() {
       const select = document.getElementById('location-select');
+      select.innerHTML = '<option value="">-- Select Location --</option>';
       EVENT_CONFIG.locations.forEach(loc => {
         const opt = document.createElement('option');
         opt.value = loc.id;
-        opt.textContent = `${loc.name} (+${loc.score} pts)`;
+        opt.textContent = loc.name;
         select.appendChild(opt);
       });
     }
-
     function checkEventStatus() {
       const now = new Date();
       const timeStatus = document.getElementById('time-status');
       const checkinBtn = document.getElementById('checkin-btn');
       const locationSelect = document.getElementById('location-select');
       const badgeBtn = document.getElementById('badge-btn');
-
       timeStatus.textContent = `Event Window: ${startTime.toLocaleString()} - ${endTime.toLocaleString()}`;
-
-      if (now >= startTime && now <= endTime) {
+      const timeExpired = now > endTime;
+      const timeStarted = now >= startTime;
+      if (isEventCompletedManual || timeExpired) {
+        isEventActive = false;
+        isRevealed = true;
+        checkinBtn.disabled = true;
+        locationSelect.disabled = true;
+        badgeBtn.style.display = 'block';
+        
+        if (isEventCompletedManual) {
+          timeStatus.textContent += ' (Event Completed at Final Stop!)';
+        } else {
+          timeStatus.textContent += ' (Event Ended)';
+        }
+      } else if (timeStarted && !timeExpired) {
         isEventActive = true;
+        isRevealed = false;
         checkinBtn.disabled = false;
         locationSelect.disabled = false;
         badgeBtn.style.display = 'none';
       } else {
         isEventActive = false;
+        isRevealed = false;
         checkinBtn.disabled = true;
         locationSelect.disabled = true;
-        document.querySelectorAll('.action-select').forEach(sel => sel.disabled = true);
-        
-        if (now > endTime) {
-          timeStatus.textContent += ' (Event Ended)';
-          badgeBtn.style.display = 'block';
-        } else {
-          timeStatus.textContent += ' (Event Has Not Started)';
-        }
+        badgeBtn.style.display = 'none';
+        timeStatus.textContent += ' (Event Has Not Started)';
       }
+      calculateTotal();
     }
-
     document.getElementById('checkin-btn').addEventListener('click', () => {
       if (!isEventActive) return;
       const select = document.getElementById('location-select');
       const locId = select.value;
       if (!locId) return;
-
       if (checkins.some(c => c.id === locId)) {
         alert('You have already checked in to this location.');
         return;
       }
-
       const locData = EVENT_CONFIG.locations.find(l => l.id === locId);
       if (!locData) return;
-
       checkins.push({
         id: locData.id,
         name: locData.name,
@@ -286,52 +270,48 @@
         actionScore: 0,
         totalItemScore: locData.score
       });
-
+      if (locId === 'FINAL') {
+        isEventCompletedManual = true;
+        localStorage.setItem('walk_completed', 'true');
+      }
       select.value = '';
       saveAndSync();
     });
-
     function renderTable() {
       const tbody = document.getElementById('log-body');
       tbody.innerHTML = '';
-
       checkins.forEach((item, index) => {
         const tr = document.createElement('tr');
         let actionCellContent = '';
-
         if (item.action) {
-          const formattedScore = item.actionScore >= 0 ? `+${item.actionScore}` : item.actionScore;
-          actionCellContent = `<span class="action-tag">${item.action} (${formattedScore})</span>`;
+          const formattedScore = isRevealed ? (item.actionScore >= 0 ? ` (+${item.actionScore})` : ` (${item.actionScore})`) : '';
+          actionCellContent = `<span class="action-tag">${item.action}${formattedScore}</span>`;
         } else if (isEventActive) {
           actionCellContent = `
             <select class="action-select" data-index="${index}">
               <option value="">-- Add Action --</option>
-              ${EVENT_CONFIG.actions.map((a, i) => {
-                const pts = a.score >= 0 ? `+${a.score}` : a.score;
-                return `<option value="${i}">${a.action} (${pts})</option>`;
-              }).join('')}
+              ${EVENT_CONFIG.actions.map((a, i) => `<option value="${i}">${a.action}</option>`).join('')}
             </select>
           `;
         } else {
           actionCellContent = '<em>No action taken</em>';
         }
-
+        const displayedBase = isRevealed ? item.baseScore : '???';
+        const displayedTotal = isRevealed ? item.totalItemScore : '???';
         tr.innerHTML = `
           <td>${item.name}</td>
-          <td>${item.baseScore}</td>
+          <td>${displayedBase}</td>
           <td>${actionCellContent}</td>
-          <td><strong>${item.totalItemScore}</strong></td>
-          <td><button class="btn-remove" onclick="removeCheckin(${index})">X</button></td>
+          <td><strong>${displayedTotal}</strong></td>
+          <td><button class="btn-remove" onclick="removeCheckin(${index})" ${!isEventActive ? 'disabled' : ''}>X</button></td>
         `;
         tbody.appendChild(tr);
       });
-
       document.querySelectorAll('.action-select').forEach(select => {
         select.addEventListener('change', (e) => {
           const idx = e.target.getAttribute('data-index');
           const actionIdx = e.target.value;
           if (actionIdx === '') return;
-
           const selectedAction = EVENT_CONFIG.actions[actionIdx];
           checkins[idx].action = selectedAction.action;
           checkins[idx].actionScore = selectedAction.score;
@@ -341,29 +321,30 @@
         });
       });
     }
-
     function removeCheckin(index) {
       if (!isEventActive) return;
+      
+      if (checkins[index].id === 'FINAL') {
+        isEventCompletedManual = false;
+        localStorage.setItem('walk_completed', 'false');
+      }
       checkins.splice(index, 1);
       saveAndSync();
     }
-
     function saveAndSync() {
       localStorage.setItem('walk_checkins', JSON.stringify(checkins));
+      checkEventStatus();
       renderTable();
       calculateTotal();
     }
-
     function calculateTotal() {
       totalScore = checkins.reduce((sum, item) => sum + item.totalItemScore, 0);
-      document.getElementById('total-score').textContent = totalScore;
+      document.getElementById('total-score').textContent = isRevealed ? totalScore : '???';
     }
-
     document.getElementById('badge-btn').addEventListener('click', () => {
       const canvas = document.getElementById('badge-canvas');
       const ctx = canvas.getContext('2d');
       const img = new Image();
-
       const generateBadge = () => {
         ctx.fillStyle = '#ffffff';
         ctx.strokeStyle = '#000000';
@@ -373,7 +354,6 @@
         ctx.strokeText(scoreText, 40, 60);
         ctx.fillText(scoreText, 40, 60);
         ctx.font = '22px sans-serif';
-
         let yPos = 120;
         checkins.forEach((item) => {
           let line = `• ${item.name} (+${item.baseScore})`;
@@ -385,20 +365,17 @@
           ctx.fillText(line, 40, yPos);
           yPos += 35;
         });
-
         const link = document.createElement('a');
         link.download = 'Walk-Badge.jpg';
         link.href = canvas.toDataURL('image/jpeg');
         link.click();
       };
-
       img.onload = () => {
         canvas.width = img.width;
         canvas.height = img.height;
         ctx.drawImage(img, 0, 0);
         generateBadge();
       };
-
       img.onerror = () => {
         canvas.width = 800;
         canvas.height = 600;
@@ -406,10 +383,8 @@
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         generateBadge();
       };
-
       img.src = EVENT_CONFIG.badgeImage;
     });
-
     init();
   </script>
 </body>
