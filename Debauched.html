@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Walk Tracker & Scorecard</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #0f172a;
+      --border: #cbd5e1;
+      --primary: #2563eb;
+      --success: #16a34a;
+      --disabled: #94a3b8;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .header-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .total-score {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--primary);
+      background: #eff6ff;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      border: 1px solid #bfdbfe;
+    }
+
+    .status-bar {
+      font-size: 0.9rem;
+      color: #475569;
+      margin-top: 0.5rem;
+    }
+
+    .controls {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+
+    select, button {
+      padding: 0.6rem 1rem;
+      font-size: 1rem;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+    }
+
+    select { flex-grow: 1; }
+
+    button {
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    button:hover:not(:disabled) { opacity: 0.9; }
+    button:disabled { background-color: var(--disabled); cursor: not-allowed; }
+
+    button.badge-btn {
+      background-color: var(--success);
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    th, td {
+      padding: 0.75rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    th { background-color: #f1f5f9; }
+
+    .action-select {
+      font-size: 0.85rem;
+      padding: 0.3rem;
+    }
+
+    .action-tag {
+      display: inline-block;
+      background: #e2e8f0;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      margin-top: 0.25rem;
+    }
+
+    #badge-canvas { display: none; }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="header-flex">
+      <div>
+        <h1 style="margin:0;">Walk Event</h1>
+        <div class="status-bar" id="time-status">Initializing...</div>
+      </div>
+      <div class="total-score">Total Points: <span id="total-score">0</span></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Check-In</h2>
+    <div class="controls">
+      <select id="location-select" disabled>
+        <option value="">-- Select Location --</option>
+      </select>
+      <button id="checkin-btn" disabled>Check-In</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Location</th>
+          <th>Base Score</th>
+          <th>Action Logged</th>
+          <th>Total Item Score</th>
+        </tr>
+      </thead>
+      <tbody id="log-body">
+        <!-- Dynamic Check-ins -->
+      </tbody>
+    </table>
+
+    <button id="badge-btn" class="badge-btn" style="display: none;">Generate Badge</button>
+  </div>
+
+  <canvas id="badge-canvas"></canvas>
+
+  <script>
+    // ==========================================
+    // CONFIGURATION DATA
+    // Edit your event details directly here!
+    // ==========================================
+
+    const EVENT_CONFIG = {
+      // Event window times
+      startTime: "2026-09-12T10:00:00",
+      endTime: "2026-09-12T19:00:00",
+      
+      // Image used for badge generation
+      badgeImage: "debauchedDebenSemi.jpg",
+
+      // Available locations: [ID, Name, Base Score]
+      locations: [
+        { id: "LOC1", name: "The Horse and Groom", score: 100 },
+        { id: "LOC2", name: "The Ramsholt Arms", score: 5 },
+        { id: "LOC3", name: "The Wilford Bridge", score: 20 },
+        { id: "LOC4", name: "The Coach and Horses", score: 25 },
+        { id: "LOC5", name: "HMS Vale", score: 10 },
+        { id: "LOC6", name: "The Boatyard", score: 30 },
+        { id: "LOC7", name: "The Anchor", score: 45 },
+        { id: "LOC8", name: "The Cherry Tree Inn", score: 50 }
+      ],
+
+      // Available actions: [Action Name, Additional Score]
+      actions: [
+        { action: "Pint of water", score: -30 },
+        { action: "Pint or large wine", score: 30 },
+        { action: "1/2 pint or small/medium wine", score: 15 },
+        { action: "Main course", score: 50 },
+        { action: "Main course and pudding", score: 100 },
+        { action: "Hot drink and cake", score: -25 }
+      ]
+    };
+
+    // ==========================================
+    // APPLICATION LOGIC
+    // ==========================================
+
+    let startTime = new Date(EVENT_CONFIG.startTime);
+    let endTime = new Date(EVENT_CONFIG.endTime);
+    let checkins = [];
+    let totalScore = 0;
+    let isEventActive = false;
+
+    function init() {
+      populateLocationDropdown();
+      checkEventStatus();
+      setInterval(checkEventStatus, 10000); // Check time status every 10 seconds
+    }
+
+    function populateLocationDropdown() {
+      const select = document.getElementById('location-select');
+      EVENT_CONFIG.locations.forEach(loc => {
+        const opt = document.createElement('option');
+        opt.value = loc.id;
+        opt.textContent = `${loc.name} (+${loc.score} pts)`;
+        select.appendChild(opt);
+      });
+    }
+
+    function checkEventStatus() {
+      const now = new Date();
+      const timeStatus = document.getElementById('time-status');
+      const checkinBtn = document.getElementById('checkin-btn');
+      const locationSelect = document.getElementById('location-select');
+      const badgeBtn = document.getElementById('badge-btn');
+
+      timeStatus.textContent = `Event Window: ${startTime.toLocaleString()} - ${endTime.toLocaleString()}`;
+
+      if (now >= startTime && now <= endTime) {
+        isEventActive = true;
+        checkinBtn.disabled = false;
+        locationSelect.disabled = false;
+        badgeBtn.style.display = 'none';
+      } else {
+        isEventActive = false;
+        checkinBtn.disabled = true;
+        locationSelect.disabled = true;
+
+        document.querySelectorAll('.action-select').forEach(sel => sel.disabled = true);
+
+        if (now > endTime) {
+          timeStatus.textContent += ' (Event Ended)';
+          badgeBtn.style.display = 'block';
+        } else {
+          timeStatus.textContent += ' (Event Has Not Started)';
+        }
+      }
+    }
+
+    document.getElementById('checkin-btn').addEventListener('click', () => {
+      if (!isEventActive) return;
+
+      const select = document.getElementById('location-select');
+      const locId = select.value;
+      if (!locId) return;
+
+      const locData = EVENT_CONFIG.locations.find(l => l.id === locId);
+      if (!locData) return;
+
+      const checkinObj = {
+        id: locData.id,
+        name: locData.name,
+        baseScore: locData.score,
+        action: null,
+        actionScore: 0,
+        totalItemScore: locData.score
+      };
+
+      checkins.push(checkinObj);
+      renderTable();
+      calculateTotal();
+    });
+
+    function renderTable() {
+      const tbody = document.getElementById('log-body');
+      tbody.innerHTML = '';
+
+      checkins.forEach((item, index) => {
+        const tr = document.createElement('tr');
+
+        let actionCellContent = '';
+        if (item.action) {
+          actionCellContent = `<span class="action-tag">${item.action} (+${item.actionScore})</span>`;
+        } else if (isEventActive) {
+          actionCellContent = `
+            <select class="action-select" data-index="${index}">
+              <option value="">-- Add Action --</option>
+              ${EVENT_CONFIG.actions.map((a, i) => `<option value="${i}">${a.action} (+${a.score})</option>`).join('')}
+            </select>
+          `;
+        } else {
+          actionCellContent = '<em>No action taken</em>';
+        }
+
+        tr.innerHTML = `
+          <td>${item.name}</td>
+          <td>${item.baseScore}</td>
+          <td>${actionCellContent}</td>
+          <td><strong>${item.totalItemScore}</strong></td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      document.querySelectorAll('.action-select').forEach(select => {
+        select.addEventListener('change', (e) => {
+          const idx = e.target.getAttribute('data-index');
+          const actionIdx = e.target.value;
+          if (actionIdx === '') return;
+
+          const selectedAction = EVENT_CONFIG.actions[actionIdx];
+          checkins[idx].action = selectedAction.action;
+          checkins[idx].actionScore = selectedAction.score;
+          checkins[idx].totalItemScore = checkins[idx].baseScore + selectedAction.score;
+
+          renderTable();
+          calculateTotal();
+        });
+      });
+    }
+
+    function calculateTotal() {
+      totalScore = checkins.reduce((sum, item) => sum + item.totalItemScore, 0);
+      document.getElementById('total-score').textContent = totalScore;
+    }
+
+    document.getElementById('badge-btn').addEventListener('click', () => {
+      const canvas = document.getElementById('badge-canvas');
+      const ctx = canvas.getContext('2d');
+      const img = new Image();
+
+      img.onload = () => {
+        canvas.width = img.width;
+        canvas.height = img.height;
+
+        ctx.drawImage(img, 0, 0);
+
+        ctx.fillStyle = '#ffffff';
+        ctx.strokeStyle = '#000000';
+        ctx.lineWidth = 4;
+
+        ctx.font = 'bold 42px sans-serif';
+        const scoreText = `TOTAL SCORE: ${totalScore}`;
+        ctx.strokeText(scoreText, 40, 60);
+        ctx.fillText(scoreText, 40, 60);
+
+        ctx.font = '22px sans-serif';
+        let yPos = 120;
+        checkins.forEach((item) => {
+          let line = `• ${item.name} (+${item.baseScore})`;
+          if (item.action) {
+            line += ` | Action: ${item.action} (+${item.actionScore})`;
+          }
+          ctx.strokeText(line, 40, yPos);
+          ctx.fillText(line, 40, yPos);
+          yPos += 35;
+        });
+
+        const link = document.createElement('a');
+        link.download = 'Walk-Badge.jpg';
+        link.href = canvas.toDataURL('image/jpeg');
+        link.click();
+      };
+
+      img.src = EVENT_CONFIG.badgeImage;
+    });
+
+    init();
+  </script>
+</body>
+</html>
