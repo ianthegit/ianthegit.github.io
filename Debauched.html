@@ -229,7 +229,7 @@
 
   <script>
     const EVENT_CONFIG = {
-      startTime: "2026-06-12T10:00:00",
+      startTime: "2026-09-12T10:00:00",
       endTime: "2026-09-12T19:00:00",
       badgeImage: "debauchedDebenSemi.jpg",
       locations: [
@@ -322,4 +322,231 @@
 
     document.getElementById('checkin-btn').addEventListener('click', () => {
       if (!isEventActive) return;
-      const select =
+      const select = document.getElementById('location-select');
+      const locId = select.value;
+      if (!locId) return;
+      if (checkins.some(c => c.id === locId)) {
+        alert('You have already checked in to this location.');
+        return;
+      }
+      const locData = EVENT_CONFIG.locations.find(l => l.id === locId);
+      if (!locData) return;
+      checkins.push({
+        id: locData.id,
+        name: locData.name,
+        baseScore: locData.score,
+        action: null,
+        actionScore: 0,
+        totalItemScore: locData.score
+      });
+      if (locId === 'FINAL') {
+        isEventCompletedManual = true;
+        localStorage.setItem('walk_completed', 'true');
+      }
+      select.value = '';
+      saveAndSync();
+    });
+
+    function renderTable() {
+      const tbody = document.getElementById('log-body');
+      tbody.innerHTML = '';
+      checkins.forEach((item, index) => {
+        const tr = document.createElement('tr');
+        let actionCellContent = '';
+        if (item.action) {
+          const formattedScore = isRevealed ? (item.actionScore >= 0 ? ` (+${item.actionScore})` : ` (${item.actionScore})`) : '';
+          actionCellContent = `<span class="action-tag">${item.action}${formattedScore}</span>`;
+        } else if (isEventActive) {
+          actionCellContent = `
+            <select class="action-select" data-index="${index}">
+              <option value="">-- Add Action --</option>
+              ${EVENT_CONFIG.actions.map((a, i) => `<option value="${i}">${a.action}</option>`).join('')}
+            </select>
+          `;
+        } else {
+          actionCellContent = '<em>No action taken</em>';
+        }
+        const displayedBase = isRevealed ? item.baseScore : '???';
+        const displayedTotal = isRevealed ? item.totalItemScore : '???';
+        tr.innerHTML = `
+          <td>${item.name}</td>
+          <td>${displayedBase}</td>
+          <td>${actionCellContent}</td>
+          <td><strong>${displayedTotal}</strong></td>
+          <td><button class="btn-remove" onclick="removeCheckin(${index})" ${!isEventActive ? 'disabled' : ''}>X</button></td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      document.querySelectorAll('.action-select').forEach(select => {
+        select.addEventListener('change', (e) => {
+          const idx = e.target.getAttribute('data-index');
+          const actionIdx = e.target.value;
+          if (actionIdx === '') return;
+          const selectedAction = EVENT_CONFIG.actions[actionIdx];
+          checkins[idx].action = selectedAction.action;
+          checkins[idx].actionScore = selectedAction.score;
+          checkins[idx].totalItemScore = checkins[idx].baseScore + selectedAction.score;
+          
+          saveAndSync();
+        });
+      });
+    }
+
+    function removeCheckin(index) {
+      if (!isEventActive) return;
+      if (checkins[index].id === 'FINAL') {
+        isEventCompletedManual = false;
+        localStorage.setItem('walk_completed', 'false');
+      }
+      checkins.splice(index, 1);
+      saveAndSync();
+    }
+
+    function saveAndSync() {
+      localStorage.setItem('walk_checkins', JSON.stringify(checkins));
+      checkEventStatus();
+      renderTable();
+      calculateTotal();
+    }
+
+    function calculateTotal() {
+      totalScore = checkins.reduce((sum, item) => sum + item.totalItemScore, 0);
+      document.getElementById('total-score').textContent = isRevealed ? totalScore : '???';
+    }
+
+    document.getElementById('badge-btn').addEventListener('click', () => {
+      const canvas = document.getElementById('badge-canvas');
+      const ctx = canvas.getContext('2d');
+      const img = new Image();
+      
+      const drawBadgeCard = () => {
+        const padding = 40;
+        const cardWidth = canvas.width - (padding * 2);
+        
+        ctx.fillStyle = 'rgba(15, 23, 42, 0.65)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        
+        const cardX = padding;
+        const cardY = padding;
+        const cardHeight = canvas.height - (padding * 2);
+        
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.92)';
+        ctx.beginPath();
+        ctx.roundRect(cardX, cardY, cardWidth, cardHeight, 12);
+        ctx.fill();
+        ctx.strokeStyle = '#cbd5e1';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+        
+        ctx.fillStyle = '#0f172a';
+        ctx.font = 'bold 32px system-ui, sans-serif';
+        ctx.fillText('Walk Event Scorecard', cardX + 30, cardY + 60);
+        
+        ctx.fillStyle = '#475569';
+        ctx.font = '16px system-ui, sans-serif';
+        ctx.fillText(`Event Window: ${startTime.toLocaleString()} - ${endTime.toLocaleString()}`, cardX + 30, cardY + 90);
+        
+        const totalText = `Total Points: ${isRevealed ? totalScore : '???'}`;
+        ctx.font = 'bold 22px system-ui, sans-serif';
+        const textWidth = ctx.measureText(totalText).width;
+        
+        const badgeW = textWidth + 30;
+        const badgeH = 45;
+        const badgeX = cardX + cardWidth - badgeW - 30;
+        const badgeY = cardY + 45;
+        
+        ctx.fillStyle = '#eff6ff';
+        ctx.beginPath();
+        ctx.roundRect(badgeX, badgeY, badgeW, badgeH, 6);
+        ctx.fill();
+        ctx.strokeStyle = '#bfdbfe';
+        ctx.lineWidth = 1;
+        ctx.stroke();
+        
+        ctx.fillStyle = '#2563eb';
+        ctx.fillText(totalText, badgeX + 15, badgeY + 30);
+        
+        let currentY = cardY + 140;
+        ctx.fillStyle = 'rgba(241, 245, 249, 0.9)';
+        ctx.fillRect(cardX + 30, currentY, cardWidth - 60, 40);
+        
+        ctx.fillStyle = '#0f172a';
+        ctx.font = 'bold 16px system-ui, sans-serif';
+        const col1 = cardX + 45;
+        const col2 = cardX + 350;
+        const col3 = cardX + 470;
+        const col4 = cardX + cardWidth - 120;
+        
+        ctx.fillText('Location', col1, currentY + 26);
+        ctx.fillText('Base Score', col2, currentY + 26);
+        ctx.fillText('Action Logged', col3, currentY + 26);
+        ctx.fillText('Total Score', col4, currentY + 26);
+        
+        currentY += 40;
+        
+        ctx.font = '16px system-ui, sans-serif';
+        checkins.forEach((item) => {
+          ctx.strokeStyle = '#cbd5e1';
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.moveTo(cardX + 30, currentY);
+          ctx.lineTo(cardX + cardWidth - 30, currentY);
+          ctx.stroke();
+          
+          ctx.fillStyle = '#0f172a';
+          ctx.font = '16px system-ui, sans-serif';
+          ctx.fillText(item.name, col1, currentY + 30);
+          
+          const displayedBase = isRevealed ? item.baseScore : '???';
+          const displayedTotal = isRevealed ? item.totalItemScore : '???';
+          ctx.fillText(displayedBase, col2, currentY + 30);
+          
+          if (item.action) {
+            const formattedScore = isRevealed ? (item.actionScore >= 0 ? ` (+${item.actionScore})` : ` (${item.actionScore})`) : '';
+            ctx.fillStyle = '#475569';
+            ctx.fillText(`${item.action}${formattedScore}`, col3, currentY + 30);
+          } else {
+            ctx.fillStyle = '#94a3b8';
+            ctx.fillText('No action taken', col3, currentY + 30);
+          }
+          
+          ctx.fillStyle = '#0f172a';
+          ctx.font = 'bold 16px system-ui, sans-serif';
+          ctx.fillText(displayedTotal, col4, currentY + 30);
+          
+          currentY += 45;
+        });
+
+        const dataUrl = canvas.toDataURL('image/jpeg', 0.95);
+        const imgElement = document.getElementById('generated-badge');
+        const badgeContainer = document.getElementById('badge-card');
+        
+        imgElement.src = dataUrl;
+        badgeContainer.style.display = 'block';
+        badgeContainer.scrollIntoView({ behavior: 'smooth' });
+      };
+
+      img.onload = () => {
+        canvas.width = img.width > 900 ? img.width : 900;
+        const calculatedHeight = 240 + (checkins.length * 45);
+        canvas.height = Math.max(img.height, calculatedHeight);
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        drawBadgeCard();
+      };
+      
+      img.onerror = () => {
+        canvas.width = 900;
+        canvas.height = 240 + (checkins.length * 45);
+        ctx.fillStyle = '#1e293b';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        drawBadgeCard();
+      };
+      
+      img.src = EVENT_CONFIG.badgeImage;
+    });
+
+    init();
+  </script>
+</body>
+</html>
