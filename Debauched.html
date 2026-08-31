@@ -235,21 +235,23 @@
       locations: [
         { id: "LOC1", name: "The (Old) Horse and Groom", score: 100 },
         { id: "LOC2", name: "The Ramsholt Arms", score: 5 },
-        { id: "LOC3", name: "The Wilford Bridge", score: 20 },
-        { id: "LOC4", name: "The Coach and Horses", score: 25 },
-        { id: "LOC5", name: "HMS Vale", score: 10 },
-        { id: "LOC6", name: "The Boatyard", score: 30 },
-        { id: "LOC7", name: "The Anchor", score: 45 },
-        { id: "LOC8", name: "The Cherry Tree Inn", score: 50 },
+        { id: "LOC3", name: "The Sutton Hoo viewing platform and Cafe", score: 25 },
+        { id: "LOC4", name: "The Wilford Bridge", score: 20 },
+        { id: "LOC5", name: "The Coach and Horses", score: 25 },
+        { id: "LOC6", name: "HMS Vale", score: 10 },
+        { id: "LOC7", name: "The Boatyard", score: 30 },
+        { id: "LOC8", name: "The Anchor", score: 45 },
+        { id: "LOC9", name: "The Cherry Tree Inn", score: 50 },
         { id: "FINAL", name: "Finished!", score: Math.floor(Math.random() * 61) - 50 }
       ],
       actions: [
-        { action: "Pint of water", score: -30 },
         { action: "Pint or large wine", score: 30 },
+        { action: "Pint of water", score: -30 },
         { action: "1/2 pint or small/medium wine", score: 15 },
         { action: "Main course", score: 50 },
         { action: "Main course and pudding", score: 100 },
-        { action: "Hot drink and cake", score: -25 }
+        { action: "Hot drink and cake", score: -25 },
+        { action: "Just looked in the window and walked away", score: -250 }
       ]
     };
 
@@ -416,136 +418,138 @@
     }
 
     document.getElementById('badge-btn').addEventListener('click', () => {
-      const canvas = document.getElementById('badge-canvas');
-      const ctx = canvas.getContext('2d');
-      const img = new Image();
-      
-      const drawBadgeCard = () => {
-        const padding = 40;
-        const cardWidth = canvas.width - (padding * 2);
-        
-        ctx.fillStyle = 'rgba(15, 23, 42, 0.65)';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-        
-        const cardX = padding;
-        const cardY = padding;
-        const cardHeight = canvas.height - (padding * 2);
-        
-        ctx.fillStyle = 'rgba(255, 255, 255, 0.92)';
-        ctx.beginPath();
-        ctx.roundRect(cardX, cardY, cardWidth, cardHeight, 12);
-        ctx.fill();
-        ctx.strokeStyle = '#cbd5e1';
-        ctx.lineWidth = 2;
-        ctx.stroke();
-        
-        ctx.fillStyle = '#0f172a';
-        ctx.font = 'bold 32px system-ui, sans-serif';
-        ctx.fillText('Walk Event Scorecard', cardX + 30, cardY + 60);
-        
-        ctx.fillStyle = '#475569';
-        ctx.font = '16px system-ui, sans-serif';
-        ctx.fillText(`Event Window: ${startTime.toLocaleString()} - ${endTime.toLocaleString()}`, cardX + 30, cardY + 90);
-        
-        const totalText = `Total Points: ${isRevealed ? totalScore : '???'}`;
-        ctx.font = 'bold 22px system-ui, sans-serif';
-        const textWidth = ctx.measureText(totalText).width;
-        
-        const badgeW = textWidth + 30;
-        const badgeH = 45;
-        const badgeX = cardX + cardWidth - badgeW - 30;
-        const badgeY = cardY + 45;
-        
-        ctx.fillStyle = '#eff6ff';
-        ctx.beginPath();
-        ctx.roundRect(badgeX, badgeY, badgeW, badgeH, 6);
-        ctx.fill();
-        ctx.strokeStyle = '#bfdbfe';
-        ctx.lineWidth = 1;
-        ctx.stroke();
-        
-        ctx.fillStyle = '#2563eb';
-        ctx.fillText(totalText, badgeX + 15, badgeY + 30);
-        
-        let currentY = cardY + 140;
-        ctx.fillStyle = 'rgba(241, 245, 249, 0.9)';
-        ctx.fillRect(cardX + 30, currentY, cardWidth - 60, 40);
-        
-        ctx.fillStyle = '#0f172a';
-        ctx.font = 'bold 16px system-ui, sans-serif';
-        const col1 = cardX + 45;
-        const col2 = cardX + 350;
-        const col3 = cardX + 470;
-        const col4 = cardX + cardWidth - 120;
-        
-        ctx.fillText('Location', col1, currentY + 26);
-        ctx.fillText('Base Score', col2, currentY + 26);
-        ctx.fillText('Action Logged', col3, currentY + 26);
-        ctx.fillText('Total Score', col4, currentY + 26);
-        
-        currentY += 40;
-        
-        ctx.font = '16px system-ui, sans-serif';
-        checkins.forEach((item) => {
-          ctx.strokeStyle = '#cbd5e1';
-          ctx.lineWidth = 1;
-          ctx.beginPath();
-          ctx.moveTo(cardX + 30, currentY);
-          ctx.lineTo(cardX + cardWidth - 30, currentY);
-          ctx.stroke();
-          
-          ctx.fillStyle = '#0f172a';
-          ctx.font = '16px system-ui, sans-serif';
-          ctx.fillText(item.name, col1, currentY + 30);
-          
-          const displayedBase = isRevealed ? item.baseScore : '???';
-          const displayedTotal = isRevealed ? item.totalItemScore : '???';
-          ctx.fillText(displayedBase, col2, currentY + 30);
-          
-          if (item.action) {
-            const formattedScore = isRevealed ? (item.actionScore >= 0 ? ` (+${item.actionScore})` : ` (${item.actionScore})`) : '';
-            ctx.fillStyle = '#475569';
-            ctx.fillText(`${item.action}${formattedScore}`, col3, currentY + 30);
-          } else {
-            ctx.fillStyle = '#94a3b8';
-            ctx.fillText('No action taken', col3, currentY + 30);
-          }
-          
-          ctx.fillStyle = '#0f172a';
-          ctx.font = 'bold 16px system-ui, sans-serif';
-          ctx.fillText(displayedTotal, col4, currentY + 30);
-          
-          currentY += 45;
-        });
+    	  const canvas = document.getElementById('badge-canvas');
+    	  const ctx = canvas.getContext('2d');
+    	  const img = new Image();
+    	  
+    	  const drawBadgeCard = () => {
+    	    const padding = 40;
+    	    const contentWidth = canvas.width - (padding * 2);
+    	    let currentY = padding + 40;
 
-        const dataUrl = canvas.toDataURL('image/jpeg', 0.95);
-        const imgElement = document.getElementById('generated-badge');
-        const badgeContainer = document.getElementById('badge-card');
-        
-        imgElement.src = dataUrl;
-        badgeContainer.style.display = 'block';
-        badgeContainer.scrollIntoView({ behavior: 'smooth' });
-      };
+    	    // Set text shadow defaults for maximum readability against background photo
+    	    ctx.shadowColor = 'rgba(0, 0, 0, 0.85)';
+    	    ctx.shadowBlur = 8;
+    	    ctx.shadowOffsetX = 1;
+    	    ctx.shadowOffsetY = 2;
 
-      img.onload = () => {
-        canvas.width = img.width > 900 ? img.width : 900;
-        const calculatedHeight = 240 + (checkins.length * 45);
-        canvas.height = Math.max(img.height, calculatedHeight);
-        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-        drawBadgeCard();
-      };
-      
-      img.onerror = () => {
-        canvas.width = 900;
-        canvas.height = 240 + (checkins.length * 45);
-        ctx.fillStyle = '#1e293b';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-        drawBadgeCard();
-      };
-      
-      img.src = EVENT_CONFIG.badgeImage;
-    });
+    	    // --- Header Section ---
+    	    ctx.fillStyle = '#ffffff';
+    	    ctx.font = 'bold 36px system-ui, sans-serif';
+    	    ctx.fillText('Walk Event Scorecard', padding, currentY);
 
+    	    ctx.fillStyle = '#cbd5e1';
+    	    ctx.font = '16px system-ui, sans-serif';
+    	    ctx.fillText(`Event Window: ${startTime.toLocaleString()} - ${endTime.toLocaleString()}`, padding, currentY + 30);
+
+    	    // --- Total Score ---
+    	    const totalText = `Total Points: ${isRevealed ? totalScore : '???'}`;
+    	    ctx.fillStyle = '#38bdf8'; // Bright accent color for points
+    	    ctx.font = 'bold 28px system-ui, sans-serif';
+    	    const textWidth = ctx.measureText(totalText).width;
+    	    ctx.fillText(totalText, canvas.width - padding - textWidth, currentY);
+
+    	    currentY += 80;
+
+    	    // --- Table Headers ---
+    	    ctx.fillStyle = '#38bdf8';
+    	    ctx.font = 'bold 18px system-ui, sans-serif';
+    	    
+    	    const col1 = padding;
+    	    const col2 = padding + 320;
+    	    const col3 = padding + 450;
+    	    const col4 = canvas.width - padding - 100;
+
+    	    ctx.fillText('Location', col1, currentY);
+    	    ctx.fillText('Base', col2, currentY);
+    	    ctx.fillText('Action Logged', col3, currentY);
+    	    ctx.fillText('Total', col4, currentY);
+
+    	    currentY += 15;
+
+    	    // Header Divider Line
+    	    ctx.strokeStyle = 'rgba(255, 255, 255, 0.4)';
+    	    ctx.lineWidth = 2;
+    	    ctx.beginPath();
+    	    ctx.moveTo(padding, currentY);
+    	    ctx.lineTo(canvas.width - padding, currentY);
+    	    ctx.stroke();
+
+    	    currentY += 35;
+
+    	    // --- Table Rows ---
+    	    checkins.forEach((item) => {
+    	      // Location Name
+    	      ctx.fillStyle = '#ffffff';
+    	      ctx.font = '600 16px system-ui, sans-serif';
+    	      ctx.fillText(item.name, col1, currentY);
+
+    	      // Base Score
+    	      const displayedBase = isRevealed ? item.baseScore : '???';
+    	      ctx.fillStyle = '#e2e8f0';
+    	      ctx.font = '16px system-ui, sans-serif';
+    	      ctx.fillText(displayedBase, col2, currentY);
+
+    	      // Action
+    	      if (item.action) {
+    	        const formattedScore = isRevealed ? (item.actionScore >= 0 ? ` (+${item.actionScore})` : ` (${item.actionScore})`) : '';
+    	        ctx.fillStyle = '#cbd5e1';
+    	        ctx.fillText(`${item.action}${formattedScore}`, col3, currentY);
+    	      } else {
+    	        ctx.fillStyle = '#94a3b8';
+    	        ctx.fillText('No action taken', col3, currentY);
+    	      }
+
+    	      // Total Item Score
+    	      const displayedTotal = isRevealed ? item.totalItemScore : '???';
+    	      ctx.fillStyle = '#ffffff';
+    	      ctx.font = 'bold 16px system-ui, sans-serif';
+    	      ctx.fillText(displayedTotal, col4, currentY);
+
+    	      // Row Divider Line
+    	      ctx.strokeStyle = 'rgba(255, 255, 255, 0.15)';
+    	      ctx.lineWidth = 1;
+    	      ctx.beginPath();
+    	      ctx.moveTo(padding, currentY + 12);
+    	      ctx.lineTo(canvas.width - padding, currentY + 12);
+    	      ctx.stroke();
+
+    	      currentY += 45;
+    	    });
+
+    	    // Output final image
+    	    const dataUrl = canvas.toDataURL('image/jpeg', 0.95);
+    	    const imgElement = document.getElementById('generated-badge');
+    	    const badgeContainer = document.getElementById('badge-card');
+
+    	    imgElement.src = dataUrl;
+    	    badgeContainer.style.display = 'block';
+    	    badgeContainer.scrollIntoView({ behavior: 'smooth' });
+    	  };
+
+    	  img.onload = () => {
+    	    canvas.width = img.width > 900 ? img.width : 900;
+    	    const calculatedHeight = 220 + (checkins.length * 45);
+    	    canvas.height = Math.max(img.height, calculatedHeight);
+    	    
+    	    // Reset shadow before drawing background image so background isn't blurred
+    	    ctx.shadowColor = 'transparent';
+    	    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+    	    
+    	    drawBadgeCard();
+    	  };
+
+    	  img.onerror = () => {
+    	    canvas.width = 900;
+    	    canvas.height = 220 + (checkins.length * 45);
+    	    ctx.fillStyle = '#0f172a';
+    	    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    	    drawBadgeCard();
+    	  };
+
+    	  img.src = EVENT_CONFIG.badgeImage;
+    	});
+    
     init();
   </script>
 </body>
