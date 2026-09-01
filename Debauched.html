@@ -18,7 +18,6 @@
     * {
       box-sizing: border-box;
     }
-
     body {
       font-family: system-ui, -apple-system, sans-serif;
       color: var(--text);
@@ -170,7 +169,6 @@
       color: #64748b;
       margin-bottom: 0.5rem;
     }
-
     @media (min-width: 600px) {
       body { padding: 2rem 1rem; }
       .card { padding: 1.5rem; }
@@ -218,15 +216,12 @@
     
     <button id="badge-btn" class="badge-btn" style="display: none;">Generate Badge</button>
   </div>
-
   <div class="card badge-output-container" id="badge-card">
     <h2>Your Walk Badge</h2>
     <p class="save-instruction">Tap and hold (or right-click) the image below to save it to your Photos!</p>
     <img id="generated-badge" alt="Generated Walk Scorecard Badge" />
   </div>
-
   <canvas id="badge-canvas"></canvas>
-
   <script>
     const EVENT_CONFIG = {
       startTime: "2026-09-12T10:30:00",
@@ -254,7 +249,6 @@
         { action: "Just looked in the window and walked away", score: -250 }
       ]
     };
-
     let startTime = new Date(EVENT_CONFIG.startTime);
     let endTime = new Date(EVENT_CONFIG.endTime);
     let checkins = JSON.parse(localStorage.getItem('walk_checkins') || '[]');
@@ -262,7 +256,6 @@
     let totalScore = 0;
     let isEventActive = false;
     let isRevealed = false;
-
     function init() {
       populateLocationDropdown();
       checkEventStatus();
@@ -270,7 +263,6 @@
       calculateTotal();
       setInterval(checkEventStatus, 10000);
     }
-
     function populateLocationDropdown() {
       const select = document.getElementById('location-select');
       select.innerHTML = '<option value="">-- Select Location --</option>';
@@ -281,7 +273,6 @@
         select.appendChild(opt);
       });
     }
-
     function checkEventStatus() {
       const now = new Date();
       const timeStatus = document.getElementById('time-status');
@@ -292,7 +283,6 @@
       timeStatus.textContent = `Event Window: ${startTime.toLocaleString()} - ${endTime.toLocaleString()}`;
       const timeExpired = now > endTime;
       const timeStarted = now >= startTime;
-
       if (isEventCompletedManual || timeExpired) {
         isEventActive = false;
         isRevealed = true;
@@ -321,7 +311,6 @@
       }
       calculateTotal();
     }
-
     document.getElementById('checkin-btn').addEventListener('click', () => {
       if (!isEventActive) return;
       const select = document.getElementById('location-select');
@@ -348,7 +337,6 @@
       select.value = '';
       saveAndSync();
     });
-
     function renderTable() {
       const tbody = document.getElementById('log-body');
       tbody.innerHTML = '';
@@ -379,7 +367,6 @@
         `;
         tbody.appendChild(tr);
       });
-
       document.querySelectorAll('.action-select').forEach(select => {
         select.addEventListener('change', (e) => {
           const idx = e.target.getAttribute('data-index');
@@ -394,7 +381,6 @@
         });
       });
     }
-
     function removeCheckin(index) {
       if (!isEventActive) return;
       if (checkins[index].id === 'FINAL') {
@@ -404,24 +390,20 @@
       checkins.splice(index, 1);
       saveAndSync();
     }
-
     function saveAndSync() {
       localStorage.setItem('walk_checkins', JSON.stringify(checkins));
       checkEventStatus();
       renderTable();
       calculateTotal();
     }
-
     function calculateTotal() {
       totalScore = checkins.reduce((sum, item) => sum + item.totalItemScore, 0);
       document.getElementById('total-score').textContent = isRevealed ? totalScore : '???';
     }
-
     document.getElementById('badge-btn').addEventListener('click', () => {
     	  const canvas = document.getElementById('badge-canvas');
     	  const ctx = canvas.getContext('2d');
     	  const img = new Image();
-
     	  const drawBadgeCard = () => {
     	    // 1. Mobile Detection & Dynamic Scaling
     	    const isMobile = canvas.width < 600;
@@ -440,59 +422,47 @@
     	    
     	    // Vertical Centering
     	    let currentY = Math.max(padding + 20, (canvas.height - totalContentHeight) / 2);
-
     	    // Text Shadow for Readability against Image
     	    ctx.shadowColor = 'rgba(0, 0, 0, 0.9)';
     	    ctx.shadowBlur = 6;
     	    ctx.shadowOffsetX = 1;
     	    ctx.shadowOffsetY = 2;
-
     	    // --- Header Section ---
     	    ctx.textAlign = 'center';
     	    
-    	    ctx.fillStyle = '#38bdf8';
+    	    ctx.fillStyle = '#ec4899';
     	    ctx.font = titleFont;
     	    ctx.fillText('Walk Event Scorecard', canvas.width / 2, currentY);
-
-    	    ctx.fillStyle = '#7dd3fc';
+    	    ctx.fillStyle = '#f472b6';
     	    ctx.font = subFont;
     	    ctx.fillText(`Event Window: ${startTime.toLocaleString()}`, canvas.width / 2, currentY + (isMobile ? 22 : 28));
-
     	    const totalText = `Total Points: ${isRevealed ? totalScore : '???'}`;
-    	    ctx.fillStyle = '#38bdf8';
+    	    ctx.fillStyle = '#ec4899';
     	    ctx.font = totalFont;
     	    ctx.fillText(totalText, canvas.width / 2, currentY + (isMobile ? 50 : 65));
-
     	    currentY += isMobile ? 80 : 100;
-
     	    // --- Responsive Column Widths ---
     	    ctx.textAlign = 'left';
     	    const col1 = padding;
     	    const col2 = padding + (tableWidth * (isMobile ? 0.38 : 0.40));
     	    const col3 = padding + (tableWidth * (isMobile ? 0.52 : 0.58));
     	    const col4 = padding + tableWidth - (isMobile ? 40 : 60);
-
     	    // --- Table Headers ---
-    	    ctx.fillStyle = '#38bdf8';
+    	    ctx.fillStyle = '#ec4899';
     	    ctx.font = headerFont;
-
     	    ctx.fillText('Location', col1, currentY);
     	    ctx.fillText('Base', col2, currentY);
     	    ctx.fillText('Action Logged', col3, currentY);
     	    ctx.fillText('Total', col4, currentY);
-
     	    currentY += 10;
-
     	    // Divider Line
-    	    ctx.strokeStyle = 'rgba(56, 189, 248, 0.4)';
+    	    ctx.strokeStyle = 'rgba(236, 72, 153, 0.4)';
     	    ctx.lineWidth = 1.5;
     	    ctx.beginPath();
     	    ctx.moveTo(padding, currentY);
     	    ctx.lineTo(padding + tableWidth, currentY);
     	    ctx.stroke();
-
     	    currentY += isMobile ? 25 : 35;
-
     	    // --- Table Rows ---
     	    checkins.forEach((item) => {
     	      // Truncate location name if too long for mobile column
@@ -505,55 +475,45 @@
     	        }
     	        locName += '...';
     	      }
-
     	      // Location Name
-    	      ctx.fillStyle = '#38bdf8';
+    	      ctx.fillStyle = '#ec4899';
     	      ctx.fillText(locName, col1, currentY);
-
     	      // Base Score
     	      const displayedBase = isRevealed ? item.baseScore : '???';
-    	      ctx.fillStyle = '#38bdf8';
+    	      ctx.fillStyle = '#ec4899';
     	      ctx.fillText(displayedBase, col2, currentY);
-
     	      // Action
     	      if (item.action) {
     	        const formattedScore = isRevealed ? (item.actionScore >= 0 ? ` (+${item.actionScore})` : ` (${item.actionScore})`) : '';
-    	        ctx.fillStyle = '#7dd3fc';
+    	        ctx.fillStyle = '#f472b6';
     	        ctx.fillText(`${item.action}${formattedScore}`, col3, currentY);
     	      } else {
-    	        ctx.fillStyle = 'rgba(56, 189, 248, 0.6)';
+    	        ctx.fillStyle = 'rgba(236, 72, 153, 0.6)';
     	        ctx.fillText('None', col3, currentY);
     	      }
-
     	      // Total Item Score
     	      const displayedTotal = isRevealed ? item.totalItemScore : '???';
-    	      ctx.fillStyle = '#38bdf8';
+    	      ctx.fillStyle = '#ec4899';
     	      ctx.font = `bold ${isMobile ? '13px' : '16px'} system-ui, sans-serif`;
     	      ctx.fillText(displayedTotal, col4, currentY);
-
     	      // Row Line
-    	      ctx.strokeStyle = 'rgba(56, 189, 248, 0.2)';
+    	      ctx.strokeStyle = 'rgba(236, 72, 153, 0.2)';
     	      ctx.lineWidth = 1;
     	      ctx.beginPath();
     	      ctx.moveTo(padding, currentY + 8);
     	      ctx.lineTo(padding + tableWidth, currentY + 8);
     	      ctx.stroke();
-
     	      currentY += rowHeight;
     	    });
-
     	    ctx.textAlign = 'left';
-
     	    // Output Image
     	    const dataUrl = canvas.toDataURL('image/jpeg', 0.95);
     	    const imgElement = document.getElementById('generated-badge');
     	    const badgeContainer = document.getElementById('badge-card');
-
     	    imgElement.src = dataUrl;
     	    badgeContainer.style.display = 'block';
     	    badgeContainer.scrollIntoView({ behavior: 'smooth' });
     	  };
-
     	  img.onload = () => {
     	    // Keep minimum mobile width for quality rendering
     	    canvas.width = Math.max(img.width, 600);
@@ -565,7 +525,6 @@
     	    
     	    drawBadgeCard();
     	  };
-
     	  img.onerror = () => {
     	    canvas.width = 600;
     	    canvas.height = 220 + (checkins.length * 45) + 120;
@@ -573,7 +532,6 @@
     	    ctx.fillRect(0, 0, canvas.width, canvas.height);
     	    drawBadgeCard();
     	  };
-
     	  img.src = EVENT_CONFIG.badgeImage;
     	});
     
