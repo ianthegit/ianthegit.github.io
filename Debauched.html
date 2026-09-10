@@ -406,18 +406,15 @@
     	  const ctx = canvas.getContext('2d');
     	  const img = new Image();
 
-    	  // Helper function to draw razor-sharp text with high contrast
     	  function drawSharpText(text, x, y, font, color, strokeColor = '#0f172a') {
     	    ctx.font = font;
-    	    ctx.shadowBlur = 0; // Turn off blur entirely to stop fuzziness
+    	    ctx.shadowBlur = 0; 
     	    
-    	    // Draw crisp outline/shadow offset first for readability
     	    ctx.strokeStyle = strokeColor;
     	    ctx.lineWidth = 3;
     	    ctx.lineJoin = 'round';
     	    ctx.strokeText(text, Math.floor(x), Math.floor(y));
 
-    	    // Draw main text crisp on top
     	    ctx.fillStyle = color;
     	    ctx.fillText(text, Math.floor(x), Math.floor(y));
     	  }
@@ -427,7 +424,6 @@
     	    const padding = isMobile ? 20 : 40;
     	    const tableWidth = canvas.width - (padding * 2);
     	    
-    	    // Dynamic Font Sizes
     	    const titleFont = isMobile ? 'bold 24px system-ui, sans-serif' : 'bold 36px system-ui, sans-serif';
     	    const subFont = isMobile ? '600 13px system-ui, sans-serif' : '600 16px system-ui, sans-serif';
     	    const totalFont = isMobile ? 'bold 20px system-ui, sans-serif' : 'bold 26px system-ui, sans-serif';
@@ -439,7 +435,6 @@
     	    
     	    let currentY = Math.max(padding + 20, (canvas.height - totalContentHeight) / 2);
 
-    	    // --- Header Section ---
     	    ctx.textAlign = 'center';
     	    
     	    drawSharpText('Deben Debauchery Lazy Semi Scorecard', canvas.width / 2, currentY, titleFont, '#f472b6');
@@ -463,14 +458,12 @@
 
     	    currentY += isMobile ? 85 : 110;
 
-    	    // --- Responsive Column Widths ---
     	    ctx.textAlign = 'left';
     	    const col1 = padding;
     	    const col2 = padding + (tableWidth * (isMobile ? 0.38 : 0.40));
     	    const col3 = padding + (tableWidth * (isMobile ? 0.52 : 0.58));
     	    const col4 = padding + tableWidth - (isMobile ? 40 : 60);
 
-    	    // --- Table Headers ---
     	    drawSharpText('Location', col1, currentY, headerFont, '#f472b6');
     	    drawSharpText('Base', col2, currentY, headerFont, '#f472b6');
     	    drawSharpText('Action Logged', col3, currentY, headerFont, '#f472b6');
@@ -478,7 +471,6 @@
     	    
     	    currentY += 10;
 
-    	    // Divider Line
     	    ctx.shadowBlur = 0;
     	    ctx.strokeStyle = '#f472b6';
     	    ctx.lineWidth = 2;
@@ -489,7 +481,6 @@
 
     	    currentY += isMobile ? 25 : 35;
 
-    	    // --- Table Rows ---
     	    checkins.forEach((item) => {
     	      let locName = item.name;
     	      const maxLocWidth = col2 - col1 - 10;
@@ -502,14 +493,10 @@
     	        locName += '...';
     	      }
 
-    	      // Location Name
     	      drawSharpText(locName, col1, currentY, cellFont, '#fbcfe8');
-
-    	      // Base Score
     	      const displayedBase = isRevealed ? item.baseScore : '???';
     	      drawSharpText(displayedBase, col2, currentY, cellFont, '#fbcfe8');
 
-    	      // Action
     	      if (item.action) {
     	        const formattedScore = isRevealed ? (item.actionScore >= 0 ? ` (+${item.actionScore})` : ` (${item.actionScore})`) : '';
     	        drawSharpText(`${item.action}${formattedScore}`, col3, currentY, cellFont, '#f472b6');
@@ -517,11 +504,9 @@
     	        drawSharpText('None', col3, currentY, cellFont, '#f472b6');
     	      }
 
-    	      // Total Item Score
     	      const displayedTotal = isRevealed ? item.totalItemScore : '???';
     	      drawSharpText(displayedTotal, col4, currentY, `bold ${isMobile ? '14px' : '16px'} system-ui, sans-serif`, '#f472b6');
 
-    	      // Row Line
     	      ctx.strokeStyle = 'rgba(244, 114, 182, 0.4)';
     	      ctx.lineWidth = 1;
     	      ctx.beginPath();
@@ -532,7 +517,6 @@
     	      currentY += rowHeight;
     	    });
 
-    	    // Output Image
     	    const dataUrl = canvas.toDataURL('image/jpeg', 0.98);
     	    const imgElement = document.getElementById('generated-badge');
     	    const badgeContainer = document.getElementById('badge-card');
