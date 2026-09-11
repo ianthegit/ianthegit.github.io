@@ -220,7 +220,7 @@
             checkedInLocations: Array.from(checkedInLocations),
             visitHistory: visitHistory,
             isGameOver: isGameOver,
-            expiry: Date.now() + ONE_DAY_MS
+            expiry: new Date().setHours(23, 59, 59, 999)
         };
         localStorage.setItem(storageKey, JSON.stringify(stateData));
     }
