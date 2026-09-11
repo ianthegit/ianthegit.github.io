@@ -53,11 +53,10 @@
             font-weight: bold;
         }
         button:hover { background-color: #218838; }
-        .btn-reset {
-            background-color: #6c757d;
-            font-size: 12px;
-            padding: 5px;
-            margin-top: 10px;
+        button:disabled {
+            background-color: #cccccc;
+            color: #666666;
+            cursor: not-allowed;
         }
         .hidden { display: none; }
         .alert {
@@ -88,9 +87,9 @@
         
         <div class="form-group">
             <label for="activity-select">Select Activity Performed:</label>
-            <select id="activity-select"></select>
+            <select id="activity-select" onchange="validateActivitySelection()"></select>
         </div>
-        <button id="checkin-btn" onclick="attemptCheckIn()">Check In Here</button>
+        <button id="checkin-btn" onclick="attemptCheckIn()" disabled>Check In Here</button>
     </div>
     <!-- End Game View -->
     <div id="game-over-ui" class="hidden">
@@ -100,12 +99,11 @@
         <canvas id="final-canvas" class="hidden"></canvas>
         <img id="downloadable-image" alt="Final Scorecard" style="width: 100%; border-radius: 8px;" />
     </div>
-    <button class="btn-reset" onclick="resetSession()">Reset Game Data</button>
 </div>
 <script>
     // Utility for random point generator
     const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
-
+    
     // --- 1. GAME DATA SETTINGS BY CONFIG ID ---
     const globalActivities = [
         { name: "Pint or large wine", points: 30 },
@@ -114,14 +112,14 @@
         { name: "Hot drink & a snack", points: getRandomInt(-15, -50) },
         { name: "Walked on by", points: getRandomInt(-35, -80) }
     ];
-
+    
     const gameConfigurations = {
         "Debauched": {
             title: "Debauched Deben - the lazy semi",
             backgroundImage: "DebauchedDebenSemi.jpg",
             endTime: new Date(new Date().setHours(19, 0, 0, 0)).toISOString(),
             locations: [
-                { id: "start", name: "The (old) Horse and Groom", lat: 52.0906, lon: 1.3111, points: getRandomInt(60, 80) }, //52.09071183069532, 1.31112411451117
+                { id: "start", name: "The (old) Horse and Groom", lat: 52.0906, lon: 1.3111, points: getRandomInt(60, 80) }, 
                 { id: "loc1", name: "The Ramsholt Arms", lat: 52.0236, lon: 1.3155, points: getRandomInt(25, 35) },
                 { id: "loc2", name: "Sutton Hoo Cafe", lat: 52.0950, lon: 1.3200, points: getRandomInt(25, 45) },
                 { id: "loc3", name: "The Wilford Bridge", lat: 52.1031, lon: 1.3425, points: getRandomInt(25, 45) },
@@ -168,7 +166,6 @@
         
         populateActivities();
         loadSavedState();
-
         if (isGameOver) {
             endGame("Game completed in previous session.");
         } else {
@@ -216,27 +213,46 @@
         }
     }
 
-    function resetSession() {
-        localStorage.removeItem(`game_state_${configKey}`);
-        location.reload();
-    }
-
     function populateActivities() {
         const actSelect = document.getElementById('activity-select');
-        actSelect.innerHTML = '';
+        actSelect.innerHTML = '<option value="" disabled selected>-- Select Activity --</option>';
         globalActivities.forEach((act, index) => {
             const opt = document.createElement('option');
             opt.value = index;
             opt.innerText = `${act.name} (+??? pts)`;
             actSelect.appendChild(opt);
         });
+        validateActivitySelection();
+    }
+
+    function validateActivitySelection() {
+        const actSelect = document.getElementById('activity-select');
+        const checkinBtn = document.getElementById('checkin-btn');
+        // Enable button only if a valid option is selected
+        if (actSelect.value !== "") {
+            checkinBtn.disabled = false;
+        } else {
+            checkinBtn.disabled = true;
+        }
+    }
+
+    function resetActivityDropdown() {
+        const actSelect = document.getElementById('activity-select');
+        actSelect.value = "";
+        validateActivitySelection();
     }
 
     // --- 4. CHECK-IN LOGIC ---
     function attemptCheckIn() {
         if (isGameOver) return;
-
         const actIndex = document.getElementById('activity-select').value;
+        
+        // Safety guard for unselected dropdown
+        if (actIndex === "" || actIndex === null) {
+            showMessage("Please select an activity first!", "danger");
+            return;
+        }
+
         const activity = globalActivities[actIndex];
 
         if (checkedInLocations.size >= config.locations.length) {
@@ -251,7 +267,6 @@
                     const userLon = position.coords.longitude;
                     
                     let matchedLocation = null;
-
                     const hasStart = config.locations.some(l => l.id === 'start');
                     if (hasStart && !checkedInLocations.has('start')) {
                         const startLoc = config.locations.find(l => l.id === 'start');
@@ -262,7 +277,6 @@
                     } else {
                         for (let loc of config.locations) {
                             if (checkedInLocations.has(loc.id)) continue;
-
                             const distYards = calculateDistanceYards(userLat, userLon, loc.lat, loc.lon);
                             if (distYards <= 100) {
                                 matchedLocation = loc;
@@ -276,7 +290,6 @@
                         const earnedPoints = matchedLocation.points + activity.points;
                         totalPoints += earnedPoints;
                         checkedInLocations.add(matchedLocation.id);
-
                         visitHistory.push({
                             type: 'success',
                             locationName: matchedLocation.name,
@@ -284,8 +297,9 @@
                             activityName: activity.name,
                             actPoints: activity.points
                         });
-
                         showMessage(`Success! Checked in at "${matchedLocation.name}". Points recorded for final reveal!`, "success");
+                        
+                        resetActivityDropdown(); // Reset dropdown for the next check-in
 
                         if (matchedLocation.id === 'endPoint') {
                             endGame("Reached the final end point!");
@@ -296,11 +310,8 @@
                         // FAILED CHECK-IN (Shows Lat/Long)
                         const penalty = getRandomInt(1, 100);
                         totalPoints -= penalty;
-
-                        // Round coordinates to 5 decimal places for clean UI display
                         const formattedLat = userLat.toFixed(5);
                         const formattedLon = userLon.toFixed(5);
-
                         visitHistory.push({
                             type: 'fail',
                             locationName: "Unknown Spot",
@@ -308,7 +319,6 @@
                             userLat: formattedLat,
                             userLon: formattedLon
                         });
-
                         const startMsg = (hasStart && !checkedInLocations.has('start')) ? " (You must be at the 'Start' location first)" : "";
                         
                         showMessage(
@@ -317,6 +327,8 @@
                             `Penalty recorded!`, 
                             "danger"
                         );
+
+                        resetActivityDropdown(); // Reset dropdown for the next check-in
                         saveState();
                     }
                 },
@@ -389,7 +401,6 @@
             let startY = 180;
             ctx.textAlign = "left";
             ctx.font = "18px Arial";
-
             if (visitHistory.length === 0) {
                 ctx.fillText("No check-in attempts recorded.", 70, startY);
                 startY += 40;
@@ -421,11 +432,9 @@
             ctx.moveTo(70, startY + 10);
             ctx.lineTo(canvas.width - 70, startY + 10);
             ctx.stroke();
-
             ctx.fillStyle = "#00FFCC";
             ctx.font = "bold 34px Arial";
             ctx.fillText(`FINAL SCORE: ${totalPoints} PTS`, 70, startY + 70);
-
             const dataUrl = canvas.toDataURL("image/png");
             const imgElement = document.getElementById('downloadable-image');
             imgElement.src = dataUrl;
