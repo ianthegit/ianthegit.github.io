@@ -373,7 +373,7 @@
                         for (let loc of config.locations) {
                             if (checkedInLocations.has(loc.id)) continue;
                             const distYards = calculateDistanceYards(userLat, userLon, loc.lat, loc.lon);
-                            if (distYards <= 100) {
+                            if (distYards <= 150) {
                                 matchedLocation = loc;
                                 break;
                             }
