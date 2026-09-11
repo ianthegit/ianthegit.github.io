@@ -150,7 +150,7 @@
     let config = null;
     let totalPoints = 0;
     let checkedInLocations = new Set();
-    let visitHistory = []; // Array of { type: 'success'|'fail', locationName, locPoints, activityName, actPoints, penalty }
+    let visitHistory = []; // Array of { type: 'success'|'fail', locationName, locPoints, activityName, actPoints, penalty, userLat, userLon }
     let isGameOver = false;
     const ONE_DAY_MS = 24 * 60 * 60 * 1000;
 
@@ -232,14 +232,13 @@
         });
     }
 
-    // --- 4. CHECK-IN LOGIC (ITERATIVE SEARCH) ---
+    // --- 4. CHECK-IN LOGIC ---
     function attemptCheckIn() {
         if (isGameOver) return;
 
         const actIndex = document.getElementById('activity-select').value;
         const activity = globalActivities[actIndex];
 
-        // Check if all locations have been visited
         if (checkedInLocations.size >= config.locations.length) {
             showMessage("You have already checked into all available locations!", "danger");
             return;
@@ -253,7 +252,6 @@
                     
                     let matchedLocation = null;
 
-                    // Rule: If 'start' exists and hasn't been checked into, ONLY test the 'start' location
                     const hasStart = config.locations.some(l => l.id === 'start');
                     if (hasStart && !checkedInLocations.has('start')) {
                         const startLoc = config.locations.find(l => l.id === 'start');
@@ -262,20 +260,19 @@
                             matchedLocation = startLoc;
                         }
                     } else {
-                        // Otherwise scan through all unchecked locations
                         for (let loc of config.locations) {
                             if (checkedInLocations.has(loc.id)) continue;
 
                             const distYards = calculateDistanceYards(userLat, userLon, loc.lat, loc.lon);
                             if (distYards <= 100) {
                                 matchedLocation = loc;
-                                break; // Match found
+                                break;
                             }
                         }
                     }
 
                     if (matchedLocation) {
-                        // SUCCESSFUL AUTOMATIC CHECK-IN
+                        // SUCCESSFUL CHECK-IN
                         const earnedPoints = matchedLocation.points + activity.points;
                         totalPoints += earnedPoints;
                         checkedInLocations.add(matchedLocation.id);
@@ -296,18 +293,30 @@
                             saveState();
                         }
                     } else {
-                        // FAILED CHECK-IN (Not within 100 yards of any valid location)
+                        // FAILED CHECK-IN (Shows Lat/Long)
                         const penalty = getRandomInt(1, 100);
                         totalPoints -= penalty;
 
+                        // Round coordinates to 5 decimal places for clean UI display
+                        const formattedLat = userLat.toFixed(5);
+                        const formattedLon = userLon.toFixed(5);
+
                         visitHistory.push({
                             type: 'fail',
-                            locationName: "Unknown Spot (Too far)",
-                            penalty: penalty
+                            locationName: "Unknown Spot",
+                            penalty: penalty,
+                            userLat: formattedLat,
+                            userLon: formattedLon
                         });
 
                         const startMsg = (hasStart && !checkedInLocations.has('start')) ? " (You must be at the 'Start' location first)" : "";
-                        showMessage(`Check-in failed! You are not within 100 yards of an available location${startMsg}. Penalty recorded!`, "danger");
+                        
+                        showMessage(
+                            `Check-in failed! You are not within 100 yards of an available location${startMsg}.<br>` +
+                            `<strong>Your Location:</strong> Lat: ${formattedLat}, Lon: ${formattedLon}<br>` +
+                            `Penalty recorded!`, 
+                            "danger"
+                        );
                         saveState();
                     }
                 },
@@ -367,17 +376,15 @@
             canvas.height = 1100;
             ctx.drawImage(bgImg, 0, 0, canvas.width, canvas.height);
             
-            // Dark semi-transparent overlay
             ctx.fillStyle = "rgba(0, 0, 0, 0.7)";
             ctx.fillRect(40, 40, canvas.width - 80, canvas.height - 80);
             
-            // Header
             ctx.fillStyle = "#FFFFFF";
             ctx.font = "bold 36px Arial";
             ctx.textAlign = "center";
             ctx.fillText(config.title, canvas.width / 2, 90);
             ctx.font = "24px Arial";
-            ctx.fillText("Scorecard", canvas.width / 2, 130);
+            ctx.fillText("Final Mystery Scorecard", canvas.width / 2, 130);
             
             let startY = 180;
             ctx.textAlign = "left";
@@ -401,14 +408,13 @@
                         ctx.fillText(`${idx + 1}. [FAILED] Check-In Attempt`, 70, startY);
                         
                         ctx.fillStyle = "#FFAAAA";
-                        ctx.fillText(`   Out of Range Penalty (-${item.penalty} pts)`, 70, startY + 24);
+                        ctx.fillText(`   Lat: ${item.userLat}, Lon: ${item.userLon} (-${item.penalty} pts)`, 70, startY + 24);
                         
                         startY += 60;
                     }
                 });
             }
             
-            // Divider line
             ctx.strokeStyle = "#FFFFFF";
             ctx.lineWidth = 2;
             ctx.beginPath();
@@ -416,12 +422,10 @@
             ctx.lineTo(canvas.width - 70, startY + 10);
             ctx.stroke();
 
-            // Total Score
             ctx.fillStyle = "#00FFCC";
             ctx.font = "bold 34px Arial";
             ctx.fillText(`FINAL SCORE: ${totalPoints} PTS`, 70, startY + 70);
 
-            // Generate image element for mobile touch download
             const dataUrl = canvas.toDataURL("image/png");
             const imgElement = document.getElementById('downloadable-image');
             imgElement.src = dataUrl;
