@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Location Check-In Game</title>
+    <!-- Leaflet CSS for Interactive Map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -18,7 +20,7 @@
         .container {
             max-width: 600px;
             margin: 0 auto;
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.92);
             padding: 20px;
             border-radius: 12px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
@@ -58,6 +60,12 @@
             color: #666666;
             cursor: not-allowed;
         }
+        .btn-share {
+            background-color: #007bff;
+        }
+        .btn-share:hover {
+            background-color: #0069d9;
+        }
         .hidden { display: none; }
         .alert {
             padding: 10px;
@@ -67,6 +75,17 @@
         }
         .alert-danger { background-color: #dc3545; }
         .alert-success { background-color: #28a745; }
+        
+        /* Map Container Styling */
+        #map {
+            height: 250px;
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            z-index: 1;
+        }
+
         #final-canvas {
             width: 100%;
             height: auto;
@@ -83,6 +102,10 @@
         <div class="status-box">
             Points: <span id="user-points">???</span> | Status: <span id="game-status">In Progress</span>
         </div>
+        
+        <!-- Interactive Map View -->
+        <div id="map"></div>
+
         <div id="message-box"></div>
         
         <div class="form-group">
@@ -91,15 +114,20 @@
         </div>
         <button id="checkin-btn" onclick="attemptCheckIn()" disabled>Check In Here</button>
     </div>
+
     <!-- End Game View -->
     <div id="game-over-ui" class="hidden">
         <h2>Game Over!</h2>
         <p id="game-over-reason"></p>
+        <button class="btn-share" onclick="shareScorecard()">Share Scorecard 📤</button>
         <p><strong>Long-press or right-click the image below to save your result card:</strong></p>
         <canvas id="final-canvas" class="hidden"></canvas>
         <img id="downloadable-image" alt="Final Scorecard" style="width: 100%; border-radius: 8px;" />
     </div>
 </div>
+
+<!-- Leaflet JS Library -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script>
     // Utility for random point generator
     const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
@@ -119,16 +147,16 @@
             backgroundImage: "DebauchedDebenSemi.jpg",
             endTime: new Date(new Date().setHours(19, 0, 0, 0)).toISOString(),
             locations: [
-                { id: "start", name: "The (old) Horse and Groom", lat: 52.0906, lon: 1.31120, points: getRandomInt(60, 80) }, //52.09060321495434, 1.3112086130201213
-                { id: "loc1", name: "The Ramsholt Arms", lat: 52.0236, lon: 1.3615, points: getRandomInt(25, 35) }, //52.023643461136814, 1.3615602887394034
-                { id: "loc2", name: "Sutton Hoo Cafe", lat: 52.0945, lon: 1.3411, points: getRandomInt(25, 45) }, //52.094535917221954, 1.3411536593265259
-                { id: "loc3", name: "The Wilford Bridge", lat: 52.1028, lon: 1.3425, points: getRandomInt(25, 45) }, //52.10314154159601, 1.3425897290376436
-                { id: "loc4", name: "The Coach & Horses", lat: 52.1035, lon: 1.3287, points: getRandomInt(25, 45) }, //52.10353483064319, 1.3287362412907646
-                { id: "loc5", name: "HMS Vale", lat: 52.1013, lon: 1.3317, points: getRandomInt(25, 45) }, //52.10132592780669, 1.331759608921999
-                { id: "loc6", name: "The Red Lion", lat: 52.0944, lon: 1.3212, points: getRandomInt(25, 45) }, //52.09442596531011, 1.321271128011934
-                { id: "loc7", name: "The Boathouse", lat: 52.0904, lon: 1.3204, points: getRandomInt(25, 45) }, //52.09044402834151, 1.320412686978259
-                { id: "loc8", name: "The Anchor", lat: 52.0910, lon: 1.3176, points: getRandomInt(25, 45) }, //52.091008069312004, 1.3176034382544104
-                { id: "endPoint", name: "Cherry Tree Inn", lat: 52.0899, lon: 1.3102, points: getRandomInt(-50, 50) } //52.08992443877369, 1.3102416178190162
+                { id: "start", name: "The (old) Horse and Groom", lat: 52.0906, lon: 1.3111, points: getRandomInt(60, 80) }, 
+                { id: "loc1", name: "The Ramsholt Arms", lat: 52.0236, lon: 1.3155, points: getRandomInt(25, 35) },
+                { id: "loc2", name: "Sutton Hoo Cafe", lat: 52.0950, lon: 1.3200, points: getRandomInt(25, 45) },
+                { id: "loc3", name: "The Wilford Bridge", lat: 52.1031, lon: 1.3425, points: getRandomInt(25, 45) },
+                { id: "loc4", name: "The Coach & Horses", lat: 52.1035, lon: 1.3288, points: getRandomInt(25, 45) },
+                { id: "loc5", name: "HMS Vale", lat: 52.1013, lon: 1.3317, points: getRandomInt(25, 45) },
+                { id: "loc6", name: "The Red Lion", lat: 52.0944, lon: 1.3212, points: getRandomInt(25, 45) },
+                { id: "loc7", name: "The Boathouse", lat: 52.0904, lon: 1.3203, points: getRandomInt(25, 45) },
+                { id: "loc8", name: "The Anchor", lat: 52.0909, lon: 1.3175, points: getRandomInt(25, 45) },
+                { id: "endPoint", name: "Cherry Tree Inn", lat: 52.0899, lon: 1.3044, points: getRandomInt(-20, 20) }
             ]
         },
         "city1": {
@@ -151,6 +179,11 @@
     let visitHistory = []; // Array of { type: 'success'|'fail', locationName, locPoints, activityName, actPoints, penalty, userLat, userLon }
     let isGameOver = false;
     const ONE_DAY_MS = 24 * 60 * 60 * 1000;
+    
+    // Map Variables
+    let map = null;
+    let userMarker = null;
+    let locationMarkers = {};
 
     // --- 3. INITIALIZATION & LOCALSTORAGE RECOVERY ---
     window.onload = function() {
@@ -166,10 +199,12 @@
         
         populateActivities();
         loadSavedState();
+
         if (isGameOver) {
             endGame("Game completed in previous session.");
         } else {
             document.getElementById('game-ui').classList.remove('hidden');
+            initMap();
         }
         if (config.endTime) {
             setInterval(checkTimer, 5000);
@@ -228,12 +263,7 @@
     function validateActivitySelection() {
         const actSelect = document.getElementById('activity-select');
         const checkinBtn = document.getElementById('checkin-btn');
-        // Enable button only if a valid option is selected
-        if (actSelect.value !== "") {
-            checkinBtn.disabled = false;
-        } else {
-            checkinBtn.disabled = true;
-        }
+        checkinBtn.disabled = (actSelect.value === "");
     }
 
     function resetActivityDropdown() {
@@ -242,12 +272,74 @@
         validateActivitySelection();
     }
 
-    // --- 4. CHECK-IN LOGIC ---
+    // --- 4. MAP INITIALIZATION & UPDATES ---
+    function initMap() {
+        const defaultLat = config.locations[0].lat;
+        const defaultLon = config.locations[0].lon;
+        
+        map = L.map('map').setView([defaultLat, defaultLon], 13);
+        
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap'
+        }).addTo(map);
+
+        renderMapMarkers();
+        updateUserLocationOnMap();
+    }
+
+    function renderMapMarkers() {
+        config.locations.forEach(loc => {
+            const isCheckedIn = checkedInLocations.has(loc.id);
+            let markerColor = isCheckedIn ? '#28a745' : (loc.id === 'endPoint' ? '#dc3545' : '#007bff');
+            
+            // Marker circle styling
+            const markerOptions = {
+                radius: 8,
+                fillColor: markerColor,
+                color: '#ffffff',
+                weight: 2,
+                opacity: 1,
+                fillOpacity: 0.9
+            };
+
+            if (locationMarkers[loc.id]) {
+                map.removeLayer(locationMarkers[loc.id]);
+            }
+
+            const marker = L.circleMarker([loc.lat, loc.lon], markerOptions).addTo(map);
+            marker.bindPopup(`<b>${loc.name}</b><br>${isCheckedIn ? 'Checked In ✔️' : 'Unvisited'}`);
+            locationMarkers[loc.id] = marker;
+        });
+    }
+
+    function updateUserLocationOnMap() {
+        if ("geolocation" in navigator) {
+            navigator.geolocation.getCurrentPosition(pos => {
+                const lat = pos.coords.latitude;
+                const lon = pos.coords.longitude;
+                
+                if (userMarker) {
+                    userMarker.setLatLng([lat, lon]);
+                } else {
+                    userMarker = L.circleMarker([lat, lon], {
+                        radius: 7,
+                        fillColor: '#3388ff',
+                        color: '#ffffff',
+                        weight: 3,
+                        fillOpacity: 1
+                    }).addTo(map);
+                    userMarker.bindPopup("<b>You are here</b>");
+                }
+            }, null, { enableHighAccuracy: true });
+        }
+    }
+
+    // --- 5. CHECK-IN LOGIC ---
     function attemptCheckIn() {
         if (isGameOver) return;
         const actIndex = document.getElementById('activity-select').value;
         
-        // Safety guard for unselected dropdown
         if (actIndex === "" || actIndex === null) {
             showMessage("Please select an activity first!", "danger");
             return;
@@ -266,6 +358,9 @@
                     const userLat = position.coords.latitude;
                     const userLon = position.coords.longitude;
                     
+                    // Update user dot position on map
+                    if (userMarker) userMarker.setLatLng([userLat, userLon]);
+
                     let matchedLocation = null;
                     const hasStart = config.locations.some(l => l.id === 'start');
                     if (hasStart && !checkedInLocations.has('start')) {
@@ -299,7 +394,8 @@
                         });
                         showMessage(`Success! Checked in at "${matchedLocation.name}". Points recorded for final reveal!`, "success");
                         
-                        resetActivityDropdown(); // Reset dropdown for the next check-in
+                        renderMapMarkers();
+                        resetActivityDropdown();
 
                         if (matchedLocation.id === 'endPoint') {
                             endGame("Reached the final end point!");
@@ -307,7 +403,7 @@
                             saveState();
                         }
                     } else {
-                        // FAILED CHECK-IN (Shows Lat/Long)
+                        // FAILED CHECK-IN
                         const penalty = getRandomInt(1, 100);
                         totalPoints -= penalty;
                         const formattedLat = userLat.toFixed(5);
@@ -328,7 +424,7 @@
                             "danger"
                         );
 
-                        resetActivityDropdown(); // Reset dropdown for the next check-in
+                        resetActivityDropdown();
                         saveState();
                     }
                 },
@@ -342,7 +438,7 @@
         }
     }
 
-    // --- 5. UTILITY & DISTANCE CALCULATIONS ---
+    // --- 6. UTILITY & DISTANCE CALCULATIONS ---
     function calculateDistanceYards(lat1, lon1, lat2, lon2) {
         const R = 6371e3;
         const rad = Math.PI / 180;
@@ -368,7 +464,7 @@
         }
     }
 
-    // --- 6. END GAME & CANVAS GENERATION ---
+    // --- 7. END GAME, CANVAS GENERATION & SHARE ---
     function endGame(reason) {
         isGameOver = true;
         saveState();
@@ -435,10 +531,35 @@
             ctx.fillStyle = "#00FFCC";
             ctx.font = "bold 34px Arial";
             ctx.fillText(`FINAL SCORE: ${totalPoints} PTS`, 70, startY + 70);
+            
             const dataUrl = canvas.toDataURL("image/png");
             const imgElement = document.getElementById('downloadable-image');
             imgElement.src = dataUrl;
         };
+    }
+
+    async function shareScorecard() {
+        const canvas = document.getElementById('final-canvas');
+        canvas.toBlob(async (blob) => {
+            const file = new File([blob], 'scorecard.png', { type: 'image/png' });
+            if (navigator.share && navigator.canShare && navigator.canShare({ files: [file] })) {
+                try {
+                    await navigator.share({
+                        title: config.title,
+                        text: `I finished ${config.title} with a score of ${totalPoints} PTS! Check out my scorecard:`,
+                        files: [file]
+                    });
+                } catch (err) {
+                    console.error("Error sharing:", err);
+                }
+            } else {
+                // Fallback direct download link
+                const link = document.createElement('a');
+                link.download = 'scorecard.png';
+                link.href = canvas.toDataURL();
+                link.click();
+            }
+        });
     }
 </script>
 </body>
