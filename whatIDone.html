@@ -366,7 +366,7 @@
                     if (hasStart && !checkedInLocations.has('start')) {
                         const startLoc = config.locations.find(l => l.id === 'start');
                         const distYards = calculateDistanceYards(userLat, userLon, startLoc.lat, startLoc.lon);
-                        if (distYards <= 100) {
+                        if (distYards <= 130) {
                             matchedLocation = startLoc;
                         }
                     } else {
@@ -418,7 +418,7 @@
                         const startMsg = (hasStart && !checkedInLocations.has('start')) ? " (You must be at the 'Start' location first)" : "";
                         
                         showMessage(
-                            `Check-in failed! You are not within 100 yards of an available location${startMsg}.<br>` +
+                            `Check-in failed! You are not within 130 yards of an available location${startMsg}.<br>` +
                             `<strong>Your Location:</strong> Lat: ${formattedLat}, Lon: ${formattedLon}<br>` +
                             `Penalty recorded!`, 
                             "danger"
