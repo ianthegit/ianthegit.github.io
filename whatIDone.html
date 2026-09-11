@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Check-In Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        h1, h2 { text-align: center; }
+
+        .status-box {
+            background: #e9ecef;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .form-group { margin-bottom: 15px; }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        select, button {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover { background-color: #218838; }
+
+        .btn-reset {
+            background-color: #6c757d;
+            font-size: 12px;
+            padding: 5px;
+            margin-top: 10px;
+        }
+
+        .hidden { display: none; }
+
+        .alert {
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            color: white;
+        }
+        .alert-danger { background-color: #dc3545; }
+        .alert-success { background-color: #28a745; }
+
+        #final-canvas {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 id="game-title">Loading Game...</h1>
+    
+    <div id="game-ui" class="hidden">
+        <div class="status-box">
+            Points: <span id="user-points">0</span> | Status: <span id="game-status">In Progress</span>
+        </div>
+
+        <div id="message-box"></div>
+
+        <div class="form-group">
+            <label for="location-select">Select Location:</label>
+            <select id="location-select"></select>
+        </div>
+
+        <div class="form-group">
+            <label for="activity-select">Select Activity Performed:</label>
+            <select id="activity-select"></select>
+        </div>
+
+        <button id="checkin-btn" onclick="attemptCheckIn()">Check In</button>
+    </div>
+
+    <!-- End Game View -->
+    <div id="game-over-ui" class="hidden">
+        <h2>Game Over!</h2>
+        <p id="game-over-reason"></p>
+        <p><strong>Long-press or right-click the image below to save your result card:</strong></p>
+        <canvas id="final-canvas" class="hidden"></canvas>
+        <img id="downloadable-image" alt="Final Scorecard" style="width: 100%; border-radius: 8px;" />
+    </div>
+
+    <button class="btn-reset" onclick="resetSession()">Reset Game Data</button>
+</div>
+
+<script>
+    // --- 1. GAME DATA SETTINGS BY CONFIG ID ---
+    const globalActivities = [
+        { name: "Walking / Running", points: 10 },
+        { name: "Litter Cleanup", points: 25 },
+        { name: "Photography", points: 15 },
+        { name: "Sightseeing", points: 5 }
+    ];
+
+    const gameConfigurations = {
+        "trail1": {
+            title: "Nature Trail Challenge",
+            backgroundImage: "images/nature.jpg",
+            endTime: null,
+            locations: [
+                { id: "start", name: "Trail Head", lat: 52.0938, lon: 1.3182, points: 50 },
+                { id: "loc2", name: "Old Oak Tree", lat: 52.0945, lon: 1.3190, points: 20 },
+                { id: "loc3", name: "River Bridge", lat: 52.0950, lon: 1.3200, points: 30 },
+                { id: "endPoint", name: "Visitor Center (Finish)", lat: 52.0960, lon: 1.3210, points: 100 }
+            ]
+        },
+        "city1": {
+            title: "City Center Hunt",
+            backgroundImage: "images/city.jpg",
+            endTime: new Date(Date.now() + 3600000).toISOString(),
+            locations: [
+                { id: "start", name: "Central Station", lat: 51.5074, lon: -0.1278, points: 10 },
+                { id: "loc2", name: "Town Square", lat: 51.5080, lon: -0.1280, points: 15 },
+                { id: "loc3", name: "Museum Entrance", lat: 51.5085, lon: -0.1290, points: 20 }
+            ]
+        }
+    };
+
+    // --- 2. GAME STATE VARIABLES ---
+    let configKey = "trail1";
+    let config = null;
+    let totalPoints = 0;
+    let checkedInLocations = new Set();
+    let visitHistory = []; // Array of { locationName, locPoints, activityName, actPoints }
+    let isGameOver = false;
+
+    const ONE_DAY_MS = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
+
+    // --- 3. INITIALIZATION & LOCALSTORAGE RECOVERY ---
+    window.onload = function() {
+        const query = window.location.search.substring(1);
+        const paramKey = query.split('&')[0].split('=')[0];
+        
+        if (paramKey && gameConfigurations[paramKey]) {
+            configKey = paramKey;
+        }
+        config = gameConfigurations[configKey];
+
+        document.getElementById('game-title').innerText = config.title;
+        document.body.style.backgroundImage = `url('${config.backgroundImage}')`;
+
+        populateDropdowns();
+
+        // Restore persisted state if available
+        loadSavedState();
+
+        if (isGameOver) {
+            endGame("Game completed in previous session.");
+        } else {
+            document.getElementById('game-ui').classList.remove('hidden');
+        }
+
+        if (config.endTime) {
+            setInterval(checkTimer, 5000);
+            checkTimer();
+        }
+    };
+
+    function saveState() {
+        const storageKey = `game_state_${configKey}`;
+        const stateData = {
+            totalPoints: totalPoints,
+            checkedInLocations: Array.from(checkedInLocations),
+            visitHistory: visitHistory,
+            isGameOver: isGameOver,
+            expiry: Date.now() + ONE_DAY_MS // Set 1 day expiration timestamp
+        };
+        localStorage.setItem(storageKey, JSON.stringify(stateData));
+    }
+
+    function loadSavedState() {
+        const storageKey = `game_state_${configKey}`;
+        const itemStr = localStorage.getItem(storageKey);
+
+        if (!itemStr) return;
+
+        try {
+            const stateData = JSON.parse(itemStr);
+            const now = Date.now();
+
+            // Check if stored data has expired (older than 24h)
+            if (now > stateData.expiry) {
+                localStorage.removeItem(storageKey);
+                return;
+            }
+
+            // Restore properties
+            totalPoints = stateData.totalPoints || 0;
+            checkedInLocations = new Set(stateData.checkedInLocations || []);
+            visitHistory = stateData.visitHistory || [];
+            isGameOver = stateData.isGameOver || false;
+
+            updatePointsDisplay();
+        } catch (e) {
+            console.error("Error reading saved state", e);
+            localStorage.removeItem(storageKey);
+        }
+    }
+
+    function resetSession() {
+        localStorage.removeItem(`game_state_${configKey}`);
+        location.reload();
+    }
+
+    function populateDropdowns() {
+        const locSelect = document.getElementById('location-select');
+        const actSelect = document.getElementById('activity-select');
+
+        locSelect.innerHTML = '';
+        actSelect.innerHTML = '';
+
+        config.locations.forEach(loc => {
+            const opt = document.createElement('option');
+            opt.value = loc.id;
+            opt.innerText = `${loc.name} (${loc.points} pts)`;
+            locSelect.appendChild(opt);
+        });
+
+        globalActivities.forEach((act, index) => {
+            const opt = document.createElement('option');
+            opt.value = index;
+            opt.innerText = `${act.name} (+${act.points} pts)`;
+            actSelect.appendChild(opt);
+        });
+    }
+
+    // --- 4. CHECK-IN LOGIC ---
+    function attemptCheckIn() {
+        if (isGameOver) return;
+
+        const locId = document.getElementById('location-select').value;
+        const actIndex = document.getElementById('activity-select').value;
+
+        const location = config.locations.find(l => l.id === locId);
+        const activity = globalActivities[actIndex];
+
+        if (checkedInLocations.has(locId)) {
+            showMessage("You have already checked into this location!", "danger");
+            return;
+        }
+
+        const hasStart = config.locations.some(l => l.id === 'start');
+        if (hasStart && !checkedInLocations.has('start') && locId !== 'start') {
+            showMessage("You must check in at the 'Start' location first!", "danger");
+            return;
+        }
+
+        if ("geolocation" in navigator) {
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    const userLat = position.coords.latitude;
+                    const userLon = position.coords.longitude;
+                    
+                    const distanceYards = calculateDistanceYards(userLat, userLon, location.lat, location.lon);
+
+                    if (distanceYards <= 100) {
+                        const earnedPoints = location.points + activity.points;
+                        totalPoints += earnedPoints;
+                        checkedInLocations.add(locId);
+
+                        visitHistory.push({
+                            locationName: location.name,
+                            locPoints: location.points,
+                            activityName: activity.name,
+                            actPoints: activity.points
+                        });
+
+                        updatePointsDisplay();
+                        showMessage(`Success! Checked in at ${location.name}. +${earnedPoints} pts!`, "success");
+
+                        if (locId === 'endPoint') {
+                            endGame("Reached the final end point!");
+                        } else {
+                            saveState(); // Save state on success
+                        }
+                    } else {
+                        const penalty = Math.floor(Math.random() * 100) + 1;
+                        totalPoints -= penalty;
+                        updatePointsDisplay();
+                        showMessage(`Check-in failed! You are roughly ${Math.round(distanceYards)} yards away (must be within 100 yards). Penalty: -${penalty} pts!`, "danger");
+                        saveState(); // Save state on penalty
+                    }
+                },
+                (error) => {
+                    showMessage("Error getting GPS location. Please enable location services.", "danger");
+                },
+                { enableHighAccuracy: true }
+            );
+        } else {
+            showMessage("Geolocation is not supported by your browser.", "danger");
+        }
+    }
+
+    // --- 5. UTILITY & DISTANCE CALCULATIONS ---
+    function calculateDistanceYards(lat1, lon1, lat2, lon2) {
+        const R = 6371e3;
+        const rad = Math.PI / 180;
+        const dLat = (lat2 - lat1) * rad;
+        const dLon = (lon2 - lon1) * rad;
+        
+        const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+                  Math.cos(lat1 * rad) * Math.cos(lat2 * rad) *
+                  Math.sin(dLon/2) * Math.sin(dLon/2);
+        
+        const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+        return R * c * 1.09361; // Return in yards
+    }
+
+    function updatePointsDisplay() {
+        document.getElementById('user-points').innerText = totalPoints;
+    }
+
+    function showMessage(msg, type) {
+        const msgBox = document.getElementById('message-box');
+        msgBox.innerHTML = `<div class="alert alert-${type}">${msg}</div>`;
+    }
+
+    function checkTimer() {
+        if (config.endTime && new Date() >= new Date(config.endTime) && !isGameOver) {
+            endGame("Time has expired!");
+        }
+    }
+
+    // --- 6. END GAME & CANVAS GENERATION ---
+    function endGame(reason) {
+        isGameOver = true;
+        saveState(); // Persist game-over state
+
+        document.getElementById('game-ui').classList.add('hidden');
+        document.getElementById('game-over-ui').classList.remove('hidden');
+        document.getElementById('game-over-reason').innerText = reason;
+
+        generateSummaryCanvas();
+    }
+
+    function generateSummaryCanvas() {
+        const canvas = document.getElementById('final-canvas');
+        const ctx = canvas.getContext('2d');
+
+        const bgImg = new Image();
+        bgImg.src = config.backgroundImage;
+
+        bgImg.onload = function() {
+            canvas.width = 800;
+            canvas.height = 1000;
+
+            ctx.drawImage(bgImg, 0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = "rgba(0, 0, 0, 0.65)";
+            ctx.fillRect(40, 40, canvas.width - 80, canvas.height - 80);
+
+            ctx.fillStyle = "#FFFFFF";
+            ctx.font = "bold 36px Arial";
+            ctx.textAlign = "center";
+            ctx.fillText(config.title, canvas.width / 2, 100);
+
+            ctx.font = "24px Arial";
+            ctx.fillText("Summary Report", canvas.width / 2, 140);
+
+            let startY = 200;
+            ctx.textAlign = "left";
+            ctx.font = "20px Arial";
+
+            if (visitHistory.length === 0) {
+                ctx.fillText("No locations checked into.", 80, startY);
+                startY += 40;
+            } else {
+                visitHistory.forEach((item, idx) => {
+                    ctx.fillStyle = "#FFD700";
+                    ctx.fillText(`${idx + 1}. ${item.locationName} (${item.locPoints} pts)`, 80, startY);
+                    
+                    ctx.fillStyle = "#FFFFFF";
+                    ctx.fillText(`   Activity: ${item.activityName} (+${item.actPoints} pts)`, 80, startY + 28);
+                    
+                    startY += 70;
+                });
+            }
+
+            ctx.strokeStyle = "#FFFFFF";
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(80, startY);
+            ctx.lineTo(canvas.width - 80, startY);
+            ctx.stroke();
+
+            ctx.fillStyle = "#00FFCC";
+            ctx.font = "bold 32px Arial";
+            ctx.fillText(`TOTAL POINTS: ${totalPoints}`, 80, startY + 60);
+
+            const dataUrl = canvas.toDataURL("image/png");
+            const imgElement = document.getElementById('downloadable-image');
+            imgElement.src = dataUrl;
+        };
+    }
+</script>
+</body>
+</html>
