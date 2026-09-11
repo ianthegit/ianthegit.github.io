@@ -85,7 +85,6 @@
             border: 1px solid #ccc;
             z-index: 1;
         }
-
         #final-canvas {
             width: 100%;
             height: auto;
@@ -105,7 +104,6 @@
         
         <!-- Interactive Map View -->
         <div id="map"></div>
-
         <div id="message-box"></div>
         
         <div class="form-group">
@@ -114,7 +112,6 @@
         </div>
         <button id="checkin-btn" onclick="attemptCheckIn()" disabled>Check In Here</button>
     </div>
-
     <!-- End Game View -->
     <div id="game-over-ui" class="hidden">
         <h2>Game Over!</h2>
@@ -125,7 +122,6 @@
         <img id="downloadable-image" alt="Final Scorecard" style="width: 100%; border-radius: 8px;" />
     </div>
 </div>
-
 <!-- Leaflet JS Library -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script>
@@ -170,7 +166,6 @@
             ]
         }
     };
-
     // --- 2. GAME STATE VARIABLES ---
     let configKey = "Debauched";
     let config = null;
@@ -184,7 +179,6 @@
     let map = null;
     let userMarker = null;
     let locationMarkers = {};
-
     // --- 3. INITIALIZATION & LOCALSTORAGE RECOVERY ---
     window.onload = function() {
         const query = window.location.search.substring(1);
@@ -199,7 +193,6 @@
         
         populateActivities();
         loadSavedState();
-
         if (isGameOver) {
             endGame("Game completed in previous session.");
         } else {
@@ -211,7 +204,6 @@
             checkTimer();
         }
     };
-
     function saveState() {
         const storageKey = `game_state_${configKey}`;
         const stateData = {
@@ -224,7 +216,6 @@
         };
         localStorage.setItem(storageKey, JSON.stringify(stateData));
     }
-
     function loadSavedState() {
         const storageKey = `game_state_${configKey}`;
         const itemStr = localStorage.getItem(storageKey);
@@ -247,7 +238,6 @@
             localStorage.removeItem(storageKey);
         }
     }
-
     function populateActivities() {
         const actSelect = document.getElementById('activity-select');
         actSelect.innerHTML = '<option value="" disabled selected>-- Select Activity --</option>';
@@ -259,19 +249,16 @@
         });
         validateActivitySelection();
     }
-
     function validateActivitySelection() {
         const actSelect = document.getElementById('activity-select');
         const checkinBtn = document.getElementById('checkin-btn');
         checkinBtn.disabled = (actSelect.value === "");
     }
-
     function resetActivityDropdown() {
         const actSelect = document.getElementById('activity-select');
         actSelect.value = "";
         validateActivitySelection();
     }
-
     // --- 4. MAP INITIALIZATION & UPDATES ---
     function initMap() {
         const defaultLat = config.locations[0].lat;
@@ -283,11 +270,9 @@
             maxZoom: 19,
             attribution: '© OpenStreetMap'
         }).addTo(map);
-
         renderMapMarkers();
         updateUserLocationOnMap();
     }
-
     function renderMapMarkers() {
         config.locations.forEach(loc => {
             const isCheckedIn = checkedInLocations.has(loc.id);
@@ -302,17 +287,14 @@
                 opacity: 1,
                 fillOpacity: 0.9
             };
-
             if (locationMarkers[loc.id]) {
                 map.removeLayer(locationMarkers[loc.id]);
             }
-
             const marker = L.circleMarker([loc.lat, loc.lon], markerOptions).addTo(map);
             marker.bindPopup(`<b>${loc.name}</b><br>${isCheckedIn ? 'Checked In ✔️' : 'Unvisited'}`);
             locationMarkers[loc.id] = marker;
         });
     }
-
     function updateUserLocationOnMap() {
         if ("geolocation" in navigator) {
             navigator.geolocation.getCurrentPosition(pos => {
@@ -334,7 +316,6 @@
             }, null, { enableHighAccuracy: true });
         }
     }
-
     // --- 5. CHECK-IN LOGIC ---
     function attemptCheckIn() {
         if (isGameOver) return;
@@ -344,14 +325,11 @@
             showMessage("Please select an activity first!", "danger");
             return;
         }
-
         const activity = globalActivities[actIndex];
-
         if (checkedInLocations.size >= config.locations.length) {
             showMessage("You have already checked into all available locations!", "danger");
             return;
         }
-
         if ("geolocation" in navigator) {
             navigator.geolocation.getCurrentPosition(
                 (position) => {
@@ -360,7 +338,6 @@
                     
                     // Update user dot position on map
                     if (userMarker) userMarker.setLatLng([userLat, userLon]);
-
                     let matchedLocation = null;
                     const hasStart = config.locations.some(l => l.id === 'start');
                     if (hasStart && !checkedInLocations.has('start')) {
@@ -379,7 +356,6 @@
                             }
                         }
                     }
-
                     if (matchedLocation) {
                         // SUCCESSFUL CHECK-IN
                         const earnedPoints = matchedLocation.points + activity.points;
@@ -396,7 +372,6 @@
                         
                         renderMapMarkers();
                         resetActivityDropdown();
-
                         if (matchedLocation.id === 'endPoint') {
                             endGame("Reached the final end point!");
                         } else {
@@ -423,7 +398,6 @@
                             `Penalty recorded!`, 
                             "danger"
                         );
-
                         resetActivityDropdown();
                         saveState();
                     }
@@ -437,7 +411,6 @@
             showMessage("Geolocation is not supported by your browser.", "danger");
         }
     }
-
     // --- 6. UTILITY & DISTANCE CALCULATIONS ---
     function calculateDistanceYards(lat1, lon1, lat2, lon2) {
         const R = 6371e3;
@@ -452,18 +425,15 @@
         const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
         return R * c * 1.09361;
     }
-
     function showMessage(msg, type) {
         const msgBox = document.getElementById('message-box');
         msgBox.innerHTML = `<div class="alert alert-${type}">${msg}</div>`;
     }
-
     function checkTimer() {
         if (config.endTime && new Date() >= new Date(config.endTime) && !isGameOver) {
             endGame("Time has expired!");
         }
     }
-
     // --- 7. END GAME, CANVAS GENERATION & SHARE ---
     function endGame(reason) {
         isGameOver = true;
@@ -473,7 +443,6 @@
         document.getElementById('game-over-reason').innerText = reason;
         generateSummaryCanvas();
     }
-
     function generateSummaryCanvas() {
         const canvas = document.getElementById('final-canvas');
         const ctx = canvas.getContext('2d');
@@ -482,54 +451,76 @@
         bgImg.onload = function() {
             canvas.width = 800;
             canvas.height = 1100;
+            
+            // 1. Draw Background Image directly (Shaded box removed)
             ctx.drawImage(bgImg, 0, 0, canvas.width, canvas.height);
             
-            ctx.fillStyle = "rgba(0, 0, 0, 0.7)";
-            ctx.fillRect(40, 40, canvas.width - 80, canvas.height - 80);
+            // 2. Setup Hot Pink text style & dark outline parameters
+            const hotPink = "#FF69B4";
+            ctx.fillStyle = hotPink;
+            ctx.strokeStyle = "#000000"; // Black outline for contrast against any image
+            ctx.lineWidth = 3;
             
-            ctx.fillStyle = "#FFFFFF";
-            ctx.font = "bold 36px Arial";
+            // Title & Subtitle
+            ctx.font = "bold 38px Arial";
             ctx.textAlign = "center";
+            ctx.strokeText(config.title, canvas.width / 2, 90);
             ctx.fillText(config.title, canvas.width / 2, 90);
-            ctx.font = "24px Arial";
+            
+            ctx.font = "bold 26px Arial";
+            ctx.strokeText("Final Mystery Scorecard", canvas.width / 2, 130);
             ctx.fillText("Final Mystery Scorecard", canvas.width / 2, 130);
             
+            // Activity Log Lines
             let startY = 180;
             ctx.textAlign = "left";
-            ctx.font = "18px Arial";
+            ctx.font = "bold 20px Arial";
+            
             if (visitHistory.length === 0) {
+                ctx.strokeText("No check-in attempts recorded.", 70, startY);
                 ctx.fillText("No check-in attempts recorded.", 70, startY);
                 startY += 40;
             } else {
                 visitHistory.forEach((item, idx) => {
                     if (item.type === 'success') {
-                        ctx.fillStyle = "#FFD700"; // Gold
-                        ctx.fillText(`${idx + 1}. [SUCCESS] ${item.locationName} (+${item.locPoints} pts)`, 70, startY);
+                        const line1 = `${idx + 1}. [SUCCESS] ${item.locationName} (+${item.locPoints} pts)`;
+                        const line2 = `   Activity: ${item.activityName} (${item.actPoints >= 0 ? '+' : ''}${item.actPoints} pts)`;
                         
-                        ctx.fillStyle = "#FFFFFF";
-                        ctx.fillText(`   Activity: ${item.activityName} (${item.actPoints >= 0 ? '+' : ''}${item.actPoints} pts)`, 70, startY + 24);
+                        ctx.strokeText(line1, 70, startY);
+                        ctx.fillText(line1, 70, startY);
+                        
+                        ctx.strokeText(line2, 70, startY + 24);
+                        ctx.fillText(line2, 70, startY + 24);
                         
                         startY += 60;
                     } else if (item.type === 'fail') {
-                        ctx.fillStyle = "#FF6B6B"; // Red
-                        ctx.fillText(`${idx + 1}. [FAILED] Check-In Attempt`, 70, startY);
+                        const failLine1 = `${idx + 1}. [FAILED] Check-In Attempt`;
+                        const failLine2 = `   Lat: ${item.userLat}, Lon: ${item.userLon} (-${item.penalty} pts)`;
                         
-                        ctx.fillStyle = "#FFAAAA";
-                        ctx.fillText(`   Lat: ${item.userLat}, Lon: ${item.userLon} (-${item.penalty} pts)`, 70, startY + 24);
+                        ctx.strokeText(failLine1, 70, startY);
+                        ctx.fillText(failLine1, 70, startY);
+                        
+                        ctx.strokeText(failLine2, 70, startY + 24);
+                        ctx.fillText(failLine2, 70, startY + 24);
                         
                         startY += 60;
                     }
                 });
             }
             
-            ctx.strokeStyle = "#FFFFFF";
-            ctx.lineWidth = 2;
+            // Hot Pink Separator Line
+            ctx.strokeStyle = hotPink;
+            ctx.lineWidth = 4;
             ctx.beginPath();
             ctx.moveTo(70, startY + 10);
             ctx.lineTo(canvas.width - 70, startY + 10);
             ctx.stroke();
-            ctx.fillStyle = "#00FFCC";
-            ctx.font = "bold 34px Arial";
+            
+            // Final Score Header
+            ctx.font = "bold 36px Arial";
+            ctx.strokeStyle = "#000000";
+            ctx.lineWidth = 4;
+            ctx.strokeText(`FINAL SCORE: ${totalPoints} PTS`, 70, startY + 70);
             ctx.fillText(`FINAL SCORE: ${totalPoints} PTS`, 70, startY + 70);
             
             const dataUrl = canvas.toDataURL("image/png");
@@ -537,7 +528,6 @@
             imgElement.src = dataUrl;
         };
     }
-
     async function shareScorecard() {
         const canvas = document.getElementById('final-canvas');
         canvas.toBlob(async (blob) => {
