@@ -15,7 +15,6 @@
             background-repeat: no-repeat;
             color: #333;
         }
-
         .container {
             max-width: 600px;
             margin: 0 auto;
@@ -24,9 +23,7 @@
             border-radius: 12px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
-
         h1, h2 { text-align: center; }
-
         .status-box {
             background: #e9ecef;
             padding: 10px;
@@ -34,15 +31,12 @@
             margin-bottom: 15px;
             font-weight: bold;
         }
-
         .form-group { margin-bottom: 15px; }
-
         label {
             display: block;
             margin-bottom: 5px;
             font-weight: bold;
         }
-
         select, button {
             width: 100%;
             padding: 10px;
@@ -51,7 +45,6 @@
             font-size: 16px;
             margin-bottom: 10px;
         }
-
         button {
             background-color: #28a745;
             color: white;
@@ -59,18 +52,14 @@
             cursor: pointer;
             font-weight: bold;
         }
-
         button:hover { background-color: #218838; }
-
         .btn-reset {
             background-color: #6c757d;
             font-size: 12px;
             padding: 5px;
             margin-top: 10px;
         }
-
         .hidden { display: none; }
-
         .alert {
             padding: 10px;
             border-radius: 6px;
@@ -79,7 +68,6 @@
         }
         .alert-danger { background-color: #dc3545; }
         .alert-success { background-color: #28a745; }
-
         #final-canvas {
             width: 100%;
             height: auto;
@@ -89,7 +77,6 @@
     </style>
 </head>
 <body>
-
 <div class="container">
     <h1 id="game-title">Loading Game...</h1>
     
@@ -97,22 +84,14 @@
         <div class="status-box">
             Points: <span id="user-points">???</span> | Status: <span id="game-status">In Progress</span>
         </div>
-
         <div id="message-box"></div>
-
-        <div class="form-group">
-            <label for="location-select">Select Location:</label>
-            <select id="location-select"></select>
-        </div>
-
+        
         <div class="form-group">
             <label for="activity-select">Select Activity Performed:</label>
             <select id="activity-select"></select>
         </div>
-
-        <button id="checkin-btn" onclick="attemptCheckIn()">Check In</button>
+        <button id="checkin-btn" onclick="attemptCheckIn()">Check In Here</button>
     </div>
-
     <!-- End Game View -->
     <div id="game-over-ui" class="hidden">
         <h2>Game Over!</h2>
@@ -121,10 +100,8 @@
         <canvas id="final-canvas" class="hidden"></canvas>
         <img id="downloadable-image" alt="Final Scorecard" style="width: 100%; border-radius: 8px;" />
     </div>
-
     <button class="btn-reset" onclick="resetSession()">Reset Game Data</button>
 </div>
-
 <script>
     // Utility for random point generator
     const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
@@ -145,15 +122,15 @@
             endTime: new Date(new Date().setHours(19, 0, 0, 0)).toISOString(),
             locations: [
                 { id: "start", name: "The (old) Horse and Groom", lat: 52.0938, lon: 1.3182, points: getRandomInt(60, 80) }, 
-                { id: "loc1", name: "The Ramsholt Arms", lat: 52.0236, lon: 1.3155, points: getRandomInt(25, 35) }, //52.02363899711209, 1.3615526650484622
-                { id: "loc2", name: "Sutton Hoo Cafe", lat: 52.0950, lon: 1.3200, points: getRandomInt(25, 45) }, //52.09455363737182, 1.3410402089590456
-                { id: "loc3", name: "The Wilford Bridge", lat: 52.1031, lon: 1.3425, points: getRandomInt(25, 45) }, // 52.10312407450913, 1.3425065635580744
-                { id: "loc4", name: "The Coach & Horses", lat: 52.1035, lon: 1.3288, points: getRandomInt(25, 45) }, // 52.10351364443693, 1.3288035621084262
-                { id: "loc5", name: "HMS Vale ", lat: 52.1013, lon: 1.3317, points: getRandomInt(25, 45) }, //52.101332285861346, 1.3317218055183568
-                { id: "loc6", name: "The Red Lion", lat: 52.0944, lon: 1.3212, points: getRandomInt(25, 45) }, // 52.09441224728816, 1.3212420465822494
-                { id: "loc7", name: "The Boathouse", lat: 52.0904, lon: 1.3203, points: getRandomInt(25, 45) }, // 52.09045731323048, 1.3203922924861773
-                { id: "loc8", name: "The Anchor", lat: 52.0909, lon: 1.3175, points: getRandomInt(25, 45) }, // 52.09098798327805, 1.3175972921953125
-                { id: "endPoint", name: "Cherry Tree Inn", lat: 52.0899, lon: 1.3044, points: getRandomInt(25, 45) } // 52.08999149631798, 1.3044330415583067
+                { id: "loc1", name: "The Ramsholt Arms", lat: 52.0236, lon: 1.3155, points: getRandomInt(25, 35) },
+                { id: "loc2", name: "Sutton Hoo Cafe", lat: 52.0950, lon: 1.3200, points: getRandomInt(25, 45) },
+                { id: "loc3", name: "The Wilford Bridge", lat: 52.1031, lon: 1.3425, points: getRandomInt(25, 45) },
+                { id: "loc4", name: "The Coach & Horses", lat: 52.1035, lon: 1.3288, points: getRandomInt(25, 45) },
+                { id: "loc5", name: "HMS Vale", lat: 52.1013, lon: 1.3317, points: getRandomInt(25, 45) },
+                { id: "loc6", name: "The Red Lion", lat: 52.0944, lon: 1.3212, points: getRandomInt(25, 45) },
+                { id: "loc7", name: "The Boathouse", lat: 52.0904, lon: 1.3203, points: getRandomInt(25, 45) },
+                { id: "loc8", name: "The Anchor", lat: 52.0909, lon: 1.3175, points: getRandomInt(25, 45) },
+                { id: "endPoint", name: "Cherry Tree Inn", lat: 52.0899, lon: 1.3044, points: getRandomInt(25, 45) }
             ]
         },
         "city1": {
@@ -169,13 +146,12 @@
     };
 
     // --- 2. GAME STATE VARIABLES ---
-    let configKey = "trail1";
+    let configKey = "Debauched";
     let config = null;
     let totalPoints = 0;
     let checkedInLocations = new Set();
     let visitHistory = []; // Array of { type: 'success'|'fail', locationName, locPoints, activityName, actPoints, penalty }
     let isGameOver = false;
-
     const ONE_DAY_MS = 24 * 60 * 60 * 1000;
 
     // --- 3. INITIALIZATION & LOCALSTORAGE RECOVERY ---
@@ -187,13 +163,10 @@
             configKey = paramKey;
         }
         config = gameConfigurations[configKey];
-
         document.getElementById('game-title').innerText = config.title;
         document.body.style.backgroundImage = `url('${config.backgroundImage}')`;
-
-        populateDropdowns();
-
-        // Restore persisted state if available
+        
+        populateActivities();
         loadSavedState();
 
         if (isGameOver) {
@@ -201,7 +174,6 @@
         } else {
             document.getElementById('game-ui').classList.remove('hidden');
         }
-
         if (config.endTime) {
             setInterval(checkTimer, 5000);
             checkTimer();
@@ -211,7 +183,7 @@
     function saveState() {
         const storageKey = `game_state_${configKey}`;
         const stateData = {
-            configLocations: config.locations, // Preserve randomized base points
+            configLocations: config.locations,
             totalPoints: totalPoints,
             checkedInLocations: Array.from(checkedInLocations),
             visitHistory: visitHistory,
@@ -224,16 +196,13 @@
     function loadSavedState() {
         const storageKey = `game_state_${configKey}`;
         const itemStr = localStorage.getItem(storageKey);
-
         if (!itemStr) return;
-
         try {
             const stateData = JSON.parse(itemStr);
             if (Date.now() > stateData.expiry) {
                 localStorage.removeItem(storageKey);
                 return;
             }
-
             if (stateData.configLocations) {
                 config.locations = stateData.configLocations;
             }
@@ -241,7 +210,6 @@
             checkedInLocations = new Set(stateData.checkedInLocations || []);
             visitHistory = stateData.visitHistory || [];
             isGameOver = stateData.isGameOver || false;
-
         } catch (e) {
             console.error("Error reading saved state", e);
             localStorage.removeItem(storageKey);
@@ -253,20 +221,9 @@
         location.reload();
     }
 
-    function populateDropdowns() {
-        const locSelect = document.getElementById('location-select');
+    function populateActivities() {
         const actSelect = document.getElementById('activity-select');
-
-        locSelect.innerHTML = '';
         actSelect.innerHTML = '';
-
-        config.locations.forEach(loc => {
-            const opt = document.createElement('option');
-            opt.value = loc.id;
-            opt.innerText = `${loc.name} (??? pts)`;
-            locSelect.appendChild(opt);
-        });
-
         globalActivities.forEach((act, index) => {
             const opt = document.createElement('option');
             opt.value = index;
@@ -275,24 +232,16 @@
         });
     }
 
-    // --- 4. CHECK-IN LOGIC ---
+    // --- 4. CHECK-IN LOGIC (ITERATIVE SEARCH) ---
     function attemptCheckIn() {
         if (isGameOver) return;
 
-        const locId = document.getElementById('location-select').value;
         const actIndex = document.getElementById('activity-select').value;
-
-        const location = config.locations.find(l => l.id === locId);
         const activity = globalActivities[actIndex];
 
-        if (checkedInLocations.has(locId)) {
-            showMessage("You have already checked into this location!", "danger");
-            return;
-        }
-
-        const hasStart = config.locations.some(l => l.id === 'start');
-        if (hasStart && !checkedInLocations.has('start') && locId !== 'start') {
-            showMessage("You must check in at the 'Start' location first!", "danger");
+        // Check if all locations have been visited
+        if (checkedInLocations.size >= config.locations.length) {
+            showMessage("You have already checked into all available locations!", "danger");
             return;
         }
 
@@ -302,41 +251,63 @@
                     const userLat = position.coords.latitude;
                     const userLon = position.coords.longitude;
                     
-                    const distanceYards = calculateDistanceYards(userLat, userLon, location.lat, location.lon);
+                    let matchedLocation = null;
 
-                    if (distanceYards <= 100) {
-                        // SUCCESSFUL CHECK-IN
-                        const earnedPoints = location.points + activity.points;
+                    // Rule: If 'start' exists and hasn't been checked into, ONLY test the 'start' location
+                    const hasStart = config.locations.some(l => l.id === 'start');
+                    if (hasStart && !checkedInLocations.has('start')) {
+                        const startLoc = config.locations.find(l => l.id === 'start');
+                        const distYards = calculateDistanceYards(userLat, userLon, startLoc.lat, startLoc.lon);
+                        if (distYards <= 100) {
+                            matchedLocation = startLoc;
+                        }
+                    } else {
+                        // Otherwise scan through all unchecked locations
+                        for (let loc of config.locations) {
+                            if (checkedInLocations.has(loc.id)) continue;
+
+                            const distYards = calculateDistanceYards(userLat, userLon, loc.lat, loc.lon);
+                            if (distYards <= 100) {
+                                matchedLocation = loc;
+                                break; // Match found
+                            }
+                        }
+                    }
+
+                    if (matchedLocation) {
+                        // SUCCESSFUL AUTOMATIC CHECK-IN
+                        const earnedPoints = matchedLocation.points + activity.points;
                         totalPoints += earnedPoints;
-                        checkedInLocations.add(locId);
+                        checkedInLocations.add(matchedLocation.id);
 
                         visitHistory.push({
                             type: 'success',
-                            locationName: location.name,
-                            locPoints: location.points,
+                            locationName: matchedLocation.name,
+                            locPoints: matchedLocation.points,
                             activityName: activity.name,
                             actPoints: activity.points
                         });
 
-                        showMessage(`Success! Checked in at ${location.name}. Points recorded for the final reveal!`, "success");
+                        showMessage(`Success! Checked in at "${matchedLocation.name}". Points recorded for final reveal!`, "success");
 
-                        if (locId === 'endPoint') {
+                        if (matchedLocation.id === 'endPoint') {
                             endGame("Reached the final end point!");
                         } else {
                             saveState();
                         }
                     } else {
-                        // FAILED CHECK-IN (Penalty randomized each attempt)
+                        // FAILED CHECK-IN (Not within 100 yards of any valid location)
                         const penalty = getRandomInt(1, 100);
                         totalPoints -= penalty;
 
                         visitHistory.push({
                             type: 'fail',
-                            locationName: location.name,
+                            locationName: "Unknown Spot (Too far)",
                             penalty: penalty
                         });
 
-                        showMessage(`Check-in failed! You are roughly ${Math.round(distanceYards)} yards away (must be within 100 yards). Penalty recorded for final reveal!`, "danger");
+                        const startMsg = (hasStart && !checkedInLocations.has('start')) ? " (You must be at the 'Start' location first)" : "";
+                        showMessage(`Check-in failed! You are not within 100 yards of an available location${startMsg}. Penalty recorded!`, "danger");
                         saveState();
                     }
                 },
@@ -380,40 +351,34 @@
     function endGame(reason) {
         isGameOver = true;
         saveState();
-
         document.getElementById('game-ui').classList.add('hidden');
         document.getElementById('game-over-ui').classList.remove('hidden');
         document.getElementById('game-over-reason').innerText = reason;
-
         generateSummaryCanvas();
     }
 
     function generateSummaryCanvas() {
         const canvas = document.getElementById('final-canvas');
         const ctx = canvas.getContext('2d');
-
         const bgImg = new Image();
         bgImg.src = config.backgroundImage;
-
         bgImg.onload = function() {
             canvas.width = 800;
             canvas.height = 1100;
-
             ctx.drawImage(bgImg, 0, 0, canvas.width, canvas.height);
-
+            
             // Dark semi-transparent overlay
             ctx.fillStyle = "rgba(0, 0, 0, 0.7)";
             ctx.fillRect(40, 40, canvas.width - 80, canvas.height - 80);
-
+            
             // Header
             ctx.fillStyle = "#FFFFFF";
             ctx.font = "bold 36px Arial";
             ctx.textAlign = "center";
             ctx.fillText(config.title, canvas.width / 2, 90);
-
             ctx.font = "24px Arial";
-            ctx.fillText("Final Mystery Scorecard", canvas.width / 2, 130);
-
+            ctx.fillText("Scorecard", canvas.width / 2, 130);
+            
             let startY = 180;
             ctx.textAlign = "left";
             ctx.font = "18px Arial";
@@ -428,21 +393,21 @@
                         ctx.fillText(`${idx + 1}. [SUCCESS] ${item.locationName} (+${item.locPoints} pts)`, 70, startY);
                         
                         ctx.fillStyle = "#FFFFFF";
-                        ctx.fillText(`   Activity: ${item.activityName} (+${item.actPoints} pts)`, 70, startY + 24);
+                        ctx.fillText(`   Activity: ${item.activityName} (${item.actPoints >= 0 ? '+' : ''}${item.actPoints} pts)`, 70, startY + 24);
                         
                         startY += 60;
                     } else if (item.type === 'fail') {
                         ctx.fillStyle = "#FF6B6B"; // Red
-                        ctx.fillText(`${idx + 1}. [FAILED] ${item.locationName}`, 70, startY);
+                        ctx.fillText(`${idx + 1}. [FAILED] Check-In Attempt`, 70, startY);
                         
                         ctx.fillStyle = "#FFAAAA";
-                        ctx.fillText(`   Distance Penalty (-${item.penalty} pts)`, 70, startY + 24);
+                        ctx.fillText(`   Out of Range Penalty (-${item.penalty} pts)`, 70, startY + 24);
                         
                         startY += 60;
                     }
                 });
             }
-
+            
             // Divider line
             ctx.strokeStyle = "#FFFFFF";
             ctx.lineWidth = 2;
