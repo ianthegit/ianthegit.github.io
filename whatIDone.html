@@ -95,7 +95,7 @@
     
     <div id="game-ui" class="hidden">
         <div class="status-box">
-            Points: <span id="user-points">0</span> | Status: <span id="game-status">In Progress</span>
+            Points: <span id="user-points">???</span> | Status: <span id="game-status">In Progress</span>
         </div>
 
         <div id="message-box"></div>
@@ -126,34 +126,44 @@
 </div>
 
 <script>
+    // Utility for random point generator
+    const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+
     // --- 1. GAME DATA SETTINGS BY CONFIG ID ---
     const globalActivities = [
-        { name: "Walking / Running", points: 10 },
-        { name: "Litter Cleanup", points: 25 },
-        { name: "Photography", points: 15 },
-        { name: "Sightseeing", points: 5 }
+        { name: "Pint or large wine", points: 30 },
+        { name: "Water or soft drink", points: -15 },
+        { name: "Alcohol free", points: -50 },
+        { name: "Hot drink & a snack", points: getRandomInt(-15, -50) },
+        { name: "Walked on by", points: getRandomInt(-35, -80) }
     ];
 
     const gameConfigurations = {
-        "trail1": {
-            title: "Nature Trail Challenge",
-            backgroundImage: "images/nature.jpg",
-            endTime: null,
+        "Debauched": {
+            title: "Debauched Deben - the lazy semi",
+            backgroundImage: "DebauchedDebenSemi.jpg",
+            endTime: new Date(new Date().setHours(19, 0, 0, 0)).toISOString(),
             locations: [
-                { id: "start", name: "Trail Head", lat: 52.0938, lon: 1.3182, points: 50 },
-                { id: "loc2", name: "Old Oak Tree", lat: 52.0945, lon: 1.3190, points: 20 },
-                { id: "loc3", name: "River Bridge", lat: 52.0950, lon: 1.3200, points: 30 },
-                { id: "endPoint", name: "Visitor Center (Finish)", lat: 52.0960, lon: 1.3210, points: 100 }
+                { id: "start", name: "The (old) Horse and Groom", lat: 52.0938, lon: 1.3182, points: getRandomInt(60, 80) }, 
+                { id: "loc1", name: "The Ramsholt Arms", lat: 52.0236, lon: 1.3155, points: getRandomInt(25, 35) }, //52.02363899711209, 1.3615526650484622
+                { id: "loc2", name: "Sutton Hoo Cafe", lat: 52.0950, lon: 1.3200, points: getRandomInt(25, 45) }, //52.09455363737182, 1.3410402089590456
+                { id: "loc3", name: "The Wilford Bridge", lat: 52.1031, lon: 1.3425, points: getRandomInt(25, 45) }, // 52.10312407450913, 1.3425065635580744
+                { id: "loc4", name: "The Coach & Horses", lat: 52.1035, lon: 1.3288, points: getRandomInt(25, 45) }, // 52.10351364443693, 1.3288035621084262
+                { id: "loc5", name: "HMS Vale ", lat: 52.1013, lon: 1.3317, points: getRandomInt(25, 45) }, //52.101332285861346, 1.3317218055183568
+                { id: "loc6", name: "The Red Lion", lat: 52.0944, lon: 1.3212, points: getRandomInt(25, 45) }, // 52.09441224728816, 1.3212420465822494
+                { id: "loc7", name: "The Boathouse", lat: 52.0904, lon: 1.3203, points: getRandomInt(25, 45) }, // 52.09045731323048, 1.3203922924861773
+                { id: "loc8", name: "The Anchor", lat: 52.0909, lon: 1.3175, points: getRandomInt(25, 45) }, // 52.09098798327805, 1.3175972921953125
+                { id: "endPoint", name: "Cherry Tree Inn", lat: 52.0899, lon: 1.3044, points: getRandomInt(25, 45) } // 52.08999149631798, 1.3044330415583067
             ]
         },
         "city1": {
             title: "City Center Hunt",
             backgroundImage: "images/city.jpg",
-            endTime: new Date(Date.now() + 3600000).toISOString(),
+            endTime: null,
             locations: [
-                { id: "start", name: "Central Station", lat: 51.5074, lon: -0.1278, points: 10 },
-                { id: "loc2", name: "Town Square", lat: 51.5080, lon: -0.1280, points: 15 },
-                { id: "loc3", name: "Museum Entrance", lat: 51.5085, lon: -0.1290, points: 20 }
+                { id: "start", name: "Central Station", lat: 51.5074, lon: -0.1278, points: getRandomInt(10, 30) },
+                { id: "loc2", name: "Town Square", lat: 51.5080, lon: -0.1280, points: getRandomInt(15, 40) },
+                { id: "loc3", name: "Museum Entrance", lat: 51.5085, lon: -0.1290, points: getRandomInt(20, 50) }
             ]
         }
     };
@@ -163,10 +173,10 @@
     let config = null;
     let totalPoints = 0;
     let checkedInLocations = new Set();
-    let visitHistory = []; // Array of { locationName, locPoints, activityName, actPoints }
+    let visitHistory = []; // Array of { type: 'success'|'fail', locationName, locPoints, activityName, actPoints, penalty }
     let isGameOver = false;
 
-    const ONE_DAY_MS = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
+    const ONE_DAY_MS = 24 * 60 * 60 * 1000;
 
     // --- 3. INITIALIZATION & LOCALSTORAGE RECOVERY ---
     window.onload = function() {
@@ -201,11 +211,12 @@
     function saveState() {
         const storageKey = `game_state_${configKey}`;
         const stateData = {
+            configLocations: config.locations, // Preserve randomized base points
             totalPoints: totalPoints,
             checkedInLocations: Array.from(checkedInLocations),
             visitHistory: visitHistory,
             isGameOver: isGameOver,
-            expiry: Date.now() + ONE_DAY_MS // Set 1 day expiration timestamp
+            expiry: Date.now() + ONE_DAY_MS
         };
         localStorage.setItem(storageKey, JSON.stringify(stateData));
     }
@@ -218,21 +229,19 @@
 
         try {
             const stateData = JSON.parse(itemStr);
-            const now = Date.now();
-
-            // Check if stored data has expired (older than 24h)
-            if (now > stateData.expiry) {
+            if (Date.now() > stateData.expiry) {
                 localStorage.removeItem(storageKey);
                 return;
             }
 
-            // Restore properties
+            if (stateData.configLocations) {
+                config.locations = stateData.configLocations;
+            }
             totalPoints = stateData.totalPoints || 0;
             checkedInLocations = new Set(stateData.checkedInLocations || []);
             visitHistory = stateData.visitHistory || [];
             isGameOver = stateData.isGameOver || false;
 
-            updatePointsDisplay();
         } catch (e) {
             console.error("Error reading saved state", e);
             localStorage.removeItem(storageKey);
@@ -254,14 +263,14 @@
         config.locations.forEach(loc => {
             const opt = document.createElement('option');
             opt.value = loc.id;
-            opt.innerText = `${loc.name} (${loc.points} pts)`;
+            opt.innerText = `${loc.name} (??? pts)`;
             locSelect.appendChild(opt);
         });
 
         globalActivities.forEach((act, index) => {
             const opt = document.createElement('option');
             opt.value = index;
-            opt.innerText = `${act.name} (+${act.points} pts)`;
+            opt.innerText = `${act.name} (+??? pts)`;
             actSelect.appendChild(opt);
         });
     }
@@ -296,31 +305,39 @@
                     const distanceYards = calculateDistanceYards(userLat, userLon, location.lat, location.lon);
 
                     if (distanceYards <= 100) {
+                        // SUCCESSFUL CHECK-IN
                         const earnedPoints = location.points + activity.points;
                         totalPoints += earnedPoints;
                         checkedInLocations.add(locId);
 
                         visitHistory.push({
+                            type: 'success',
                             locationName: location.name,
                             locPoints: location.points,
                             activityName: activity.name,
                             actPoints: activity.points
                         });
 
-                        updatePointsDisplay();
-                        showMessage(`Success! Checked in at ${location.name}. +${earnedPoints} pts!`, "success");
+                        showMessage(`Success! Checked in at ${location.name}. Points recorded for the final reveal!`, "success");
 
                         if (locId === 'endPoint') {
                             endGame("Reached the final end point!");
                         } else {
-                            saveState(); // Save state on success
+                            saveState();
                         }
                     } else {
-                        const penalty = Math.floor(Math.random() * 100) + 1;
+                        // FAILED CHECK-IN (Penalty randomized each attempt)
+                        const penalty = getRandomInt(1, 100);
                         totalPoints -= penalty;
-                        updatePointsDisplay();
-                        showMessage(`Check-in failed! You are roughly ${Math.round(distanceYards)} yards away (must be within 100 yards). Penalty: -${penalty} pts!`, "danger");
-                        saveState(); // Save state on penalty
+
+                        visitHistory.push({
+                            type: 'fail',
+                            locationName: location.name,
+                            penalty: penalty
+                        });
+
+                        showMessage(`Check-in failed! You are roughly ${Math.round(distanceYards)} yards away (must be within 100 yards). Penalty recorded for final reveal!`, "danger");
+                        saveState();
                     }
                 },
                 (error) => {
@@ -345,11 +362,7 @@
                   Math.sin(dLon/2) * Math.sin(dLon/2);
         
         const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-        return R * c * 1.09361; // Return in yards
-    }
-
-    function updatePointsDisplay() {
-        document.getElementById('user-points').innerText = totalPoints;
+        return R * c * 1.09361;
     }
 
     function showMessage(msg, type) {
@@ -366,7 +379,7 @@
     // --- 6. END GAME & CANVAS GENERATION ---
     function endGame(reason) {
         isGameOver = true;
-        saveState(); // Persist game-over state
+        saveState();
 
         document.getElementById('game-ui').classList.add('hidden');
         document.getElementById('game-over-ui').classList.remove('hidden');
@@ -384,51 +397,66 @@
 
         bgImg.onload = function() {
             canvas.width = 800;
-            canvas.height = 1000;
+            canvas.height = 1100;
 
             ctx.drawImage(bgImg, 0, 0, canvas.width, canvas.height);
 
-            ctx.fillStyle = "rgba(0, 0, 0, 0.65)";
+            // Dark semi-transparent overlay
+            ctx.fillStyle = "rgba(0, 0, 0, 0.7)";
             ctx.fillRect(40, 40, canvas.width - 80, canvas.height - 80);
 
+            // Header
             ctx.fillStyle = "#FFFFFF";
             ctx.font = "bold 36px Arial";
             ctx.textAlign = "center";
-            ctx.fillText(config.title, canvas.width / 2, 100);
+            ctx.fillText(config.title, canvas.width / 2, 90);
 
             ctx.font = "24px Arial";
-            ctx.fillText("Summary Report", canvas.width / 2, 140);
+            ctx.fillText("Final Mystery Scorecard", canvas.width / 2, 130);
 
-            let startY = 200;
+            let startY = 180;
             ctx.textAlign = "left";
-            ctx.font = "20px Arial";
+            ctx.font = "18px Arial";
 
             if (visitHistory.length === 0) {
-                ctx.fillText("No locations checked into.", 80, startY);
+                ctx.fillText("No check-in attempts recorded.", 70, startY);
                 startY += 40;
             } else {
                 visitHistory.forEach((item, idx) => {
-                    ctx.fillStyle = "#FFD700";
-                    ctx.fillText(`${idx + 1}. ${item.locationName} (${item.locPoints} pts)`, 80, startY);
-                    
-                    ctx.fillStyle = "#FFFFFF";
-                    ctx.fillText(`   Activity: ${item.activityName} (+${item.actPoints} pts)`, 80, startY + 28);
-                    
-                    startY += 70;
+                    if (item.type === 'success') {
+                        ctx.fillStyle = "#FFD700"; // Gold
+                        ctx.fillText(`${idx + 1}. [SUCCESS] ${item.locationName} (+${item.locPoints} pts)`, 70, startY);
+                        
+                        ctx.fillStyle = "#FFFFFF";
+                        ctx.fillText(`   Activity: ${item.activityName} (+${item.actPoints} pts)`, 70, startY + 24);
+                        
+                        startY += 60;
+                    } else if (item.type === 'fail') {
+                        ctx.fillStyle = "#FF6B6B"; // Red
+                        ctx.fillText(`${idx + 1}. [FAILED] ${item.locationName}`, 70, startY);
+                        
+                        ctx.fillStyle = "#FFAAAA";
+                        ctx.fillText(`   Distance Penalty (-${item.penalty} pts)`, 70, startY + 24);
+                        
+                        startY += 60;
+                    }
                 });
             }
 
+            // Divider line
             ctx.strokeStyle = "#FFFFFF";
             ctx.lineWidth = 2;
             ctx.beginPath();
-            ctx.moveTo(80, startY);
-            ctx.lineTo(canvas.width - 80, startY);
+            ctx.moveTo(70, startY + 10);
+            ctx.lineTo(canvas.width - 70, startY + 10);
             ctx.stroke();
 
+            // Total Score
             ctx.fillStyle = "#00FFCC";
-            ctx.font = "bold 32px Arial";
-            ctx.fillText(`TOTAL POINTS: ${totalPoints}`, 80, startY + 60);
+            ctx.font = "bold 34px Arial";
+            ctx.fillText(`FINAL SCORE: ${totalPoints} PTS`, 70, startY + 70);
 
+            // Generate image element for mobile touch download
             const dataUrl = canvas.toDataURL("image/png");
             const imgElement = document.getElementById('downloadable-image');
             imgElement.src = dataUrl;
