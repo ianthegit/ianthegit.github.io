@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge JSON Builder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1, h2 { color: #2c3e50; }
+        .section {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 12px;
+        }
+        .form-row {
+            display: flex;
+            gap: 10px;
+        }
+        .form-row .form-group {
+            flex: 1;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        input[type="text"], input[type="number"], input[type="datetime-local"] {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        .dynamic-item {
+            background: #ffffff;
+            border: 1px solid #ced4da;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        .btn-remove {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 4px 8px;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+            font-size: 12px;
+        }
+        .btn-add {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .btn-action {
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .btn-primary { background-color: #28a745; color: white; }
+        .btn-secondary { background-color: #17a2b8; color: white; }
+        textarea {
+            width: 100%;
+            height: 250px;
+            font-family: monospace;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            background: #272822;
+            color: #f8f8f2;
+        }
+        .hint {
+            font-size: 12px;
+            color: #6c757d;
+            margin-top: 2px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Challenge JSON Builder</h1>
+    <p>Use this tool to build JSON files for your check-in game challenges.</p>
+
+    <!-- General Settings -->
+    <div class="section">
+        <h2>1. Game Settings</h2>
+        <div class="form-group">
+            <label for="cfg-filename">Configuration / Filename Key:</label>
+            <input type="text" id="cfg-filename" placeholder="e.g. Debauched or city1">
+            <div class="hint">This matches your URL query string (e.g. ?Debauched requires Debauched.json)</div>
+        </div>
+        <div class="form-group">
+            <label for="cfg-title">Game Title:</label>
+            <input type="text" id="cfg-title" placeholder="Debauched Deben - the lazy semi">
+        </div>
+        <div class="form-group">
+            <label for="cfg-bg">Background Image Filename / Path:</label>
+            <input type="text" id="cfg-bg" placeholder="DebauchedDebenSemi.jpg">
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="cfg-radius">Check-In Radius (Yards):</label>
+                <input type="number" id="cfg-radius" value="150">
+            </div>
+            <div class="form-group">
+                <label for="cfg-endtime">End Time (Optional):</label>
+                <input type="datetime-local" id="cfg-endtime">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="cfg-pen-min">Failed Check-In Penalty Min:</label>
+                <input type="number" id="cfg-pen-min" value="1">
+            </div>
+            <div class="form-group">
+                <label for="cfg-pen-max">Failed Check-In Penalty Max:</label>
+                <input type="number" id="cfg-pen-max" value="150">
+            </div>
+        </div>
+    </div>
+
+    <!-- Activities Section -->
+    <div class="section">
+        <h2>2. Activities</h2>
+        <div id="activities-container"></div>
+        <button class="btn-add" onclick="addActivity()">+ Add Activity</button>
+    </div>
+
+    <!-- Locations Section -->
+    <div class="section">
+        <h2>3. Locations</h2>
+        <div id="locations-container"></div>
+        <button class="btn-add" onclick="addLocation()">+ Add Location</button>
+    </div>
+
+    <!-- Output Section -->
+    <div class="section">
+        <h2>4. Generated JSON Output</h2>
+        <button class="btn-action btn-primary" onclick="generateJSON()">Generate JSON</button>
+        <button class="btn-action btn-secondary" onclick="downloadJSON()">Download .json File</button>
+        <br><br>
+        <textarea id="json-output" readonly placeholder="Click 'Generate JSON' to preview JSON here..."></textarea>
+    </div>
+</div>
+
+<script>
+    // Initial setup with default values matching your existing setup
+    window.onload = function() {
+        // Pre-fill defaults for quick creation
+        document.getElementById('cfg-filename').value = 'Debauched';
+        document.getElementById('cfg-title').value = 'Debauched Deben - the lazy semi';
+        document.getElementById('cfg-bg').value = 'DebauchedDebenSemi.jpg';
+        document.getElementById('cfg-radius').value = 150;
+
+        // Populate sample activities
+        addActivity('Pint or large wine', 30, null);
+        addActivity('Water or soft drink', -15, null);
+        addActivity('Alcohol free', -50, null);
+        addActivity('Hot drink & a snack', null, -50, -15);
+        addActivity('Walked on by', null, -80, -35);
+
+        // Populate sample locations
+        addLocation('start', 'The (old) Horse and Groom', '52.09061142160037, 1.3111865203257376', 60, 80);
+        addLocation('loc1', 'The Ramsholt Arms', '52.023634253403074, 1.3615457911115905', 25, 35);
+        addLocation('endPoint', 'Cherry Tree Inn', '52.08988465293428, 1.3102236072883162', -20, 20);
+    };
+
+    function addActivity(name = '', fixedPoints = '', minPoints = '', maxPoints = '') {
+        const container = document.getElementById('activities-container');
+        const div = document.createElement('div');
+        div.className = 'dynamic-item activity-item';
+        div.innerHTML = `
+            <button class="btn-remove" onclick="this.parentElement.remove()">Remove</button>
+            <div class="form-group">
+                <label>Activity Name:</label>
+                <input type="text" class="act-name" value="${name}" placeholder="e.g. Pint of Ghost Ship">
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Fixed Points (Optional):</label>
+                    <input type="number" class="act-fixed" value="${fixedPoints !== null ? fixedPoints : ''}" placeholder="e.g. 30">
+                </div>
+                <div class="form-group">
+                    <label>Min Points Range:</label>
+                    <input type="number" class="act-min" value="${minPoints !== null ? minPoints : ''}" placeholder="-50">
+                </div>
+                <div class="form-group">
+                    <label>Max Points Range:</label>
+                    <input type="number" class="act-max" value="${maxPoints !== null ? maxPoints : ''}" placeholder="-15">
+                </div>
+            </div>
+            <div class="hint">Enter either a Fixed Point value OR a Min/Max Range.</div>
+        `;
+        container.appendChild(div);
+    }
+
+    function addLocation(id = '', name = '', coords = '', minPoints = '', maxPoints = '') {
+        const container = document.getElementById('locations-container');
+        const div = document.createElement('div');
+        div.className = 'dynamic-item location-item';
+        div.innerHTML = `
+            <button class="btn-remove" onclick="this.parentElement.remove()">Remove</button>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Location ID:</label>
+                    <input type="text" class="loc-id" value="${id}" placeholder="e.g. start, loc1, endPoint">
+                    <div class="hint">Use "start" for starting point, "endPoint" for final point.</div>
+                </div>
+                <div class="form-group">
+                    <label>Location Name:</label>
+                    <input type="text" class="loc-name" value="${name}" placeholder="e.g. The Wilford Bridge">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Google Maps Coordinates (Lat, Lon):</label>
+                <input type="text" class="loc-coords" value="${coords}" placeholder="e.g. 52.09061142160037, 1.3111865203257376">
+                <div class="hint">Directly copy-paste from Google Maps.</div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Min Points Range:</label>
+                    <input type="number" class="loc-min" value="${minPoints}" placeholder="25">
+                </div>
+                <div class="form-group">
+                    <label>Max Points Range:</label>
+                    <input type="number" class="loc-max" value="${maxPoints}" placeholder="45">
+                </div>
+            </div>
+        `;
+        container.appendChild(div);
+    }
+
+    // Parse Google Maps raw input string into float [lat, lon]
+    function parseCoordinates(coordString) {
+        if (!coordString) return { lat: 0, lon: 0 };
+        const parts = coordString.split(',');
+        if (parts.length >= 2) {
+            const lat = parseFloat(parts[0].trim());
+            const lon = parseFloat(parts[1].trim());
+            if (!isNaN(lat) && !isNaN(lon)) {
+                return { lat, lon };
+            }
+        }
+        return null;
+    }
+
+    function buildJSONObject() {
+        const title = document.getElementById('cfg-title').value;
+        const bg = document.getElementById('cfg-bg').value;
+        const radius = parseInt(document.getElementById('cfg-radius').value, 10) || 150;
+        const endTimeVal = document.getElementById('cfg-endtime').value;
+        const penMin = parseInt(document.getElementById('cfg-pen-min').value, 10) || 1;
+        const penMax = parseInt(document.getElementById('cfg-pen-max').value, 10) || 150;
+
+        // Build Activities
+        const activities = [];
+        document.querySelectorAll('.activity-item').forEach(item => {
+            const name = item.querySelector('.act-name').value;
+            const fixedVal = item.querySelector('.act-fixed').value;
+            const minVal = item.querySelector('.act-min').value;
+            const maxVal = item.querySelector('.act-max').value;
+
+            if (name) {
+                const actObj = { name: name };
+                if (fixedVal !== '') {
+                    actObj.points = parseInt(fixedVal, 10);
+                } else if (minVal !== '' && maxVal !== '') {
+                    actObj.pointsMin = parseInt(minVal, 10);
+                    actObj.pointsMax = parseInt(maxVal, 10);
+                }
+                activities.push(actObj);
+            }
+        });
+
+        // Build Locations
+        const locations = [];
+        let coordError = false;
+
+        document.querySelectorAll('.location-item').forEach(item => {
+            const id = item.querySelector('.loc-id').value;
+            const name = item.querySelector('.loc-name').value;
+            const rawCoords = item.querySelector('.loc-coords').value;
+            const minPoints = item.querySelector('.loc-min').value;
+            const maxPoints = item.querySelector('.loc-max').value;
+
+            const parsedCoords = parseCoordinates(rawCoords);
+            if (!parsedCoords) {
+                alert(`Invalid Google Maps coordinate format in location: "${name}"`);
+                coordError = true;
+                return;
+            }
+
+            if (id && name) {
+                const locObj = {
+                    id: id,
+                    name: name,
+                    lat: parsedCoords.lat,
+                    lon: parsedCoords.lon
+                };
+                if (minPoints !== '' && maxPoints !== '') {
+                    locObj.pointsMin = parseInt(minPoints, 10);
+                    locObj.pointsMax = parseInt(maxPoints, 10);
+                } else if (minPoints !== '') {
+                    locObj.points = parseInt(minPoints, 10);
+                }
+                locations.push(locObj);
+            }
+        });
+
+        if (coordError) return null;
+
+        return {
+            title: title,
+            backgroundImage: bg,
+            checkInRadiusYards: radius,
+            failPenalty: { min: penMin, max: penMax },
+            endTime: endTimeVal ? new Date(endTimeVal).toISOString() : null,
+            activities: activities,
+            locations: locations
+        };
+    }
+
+    function generateJSON() {
+        const jsonObj = buildJSONObject();
+        if (jsonObj) {
+            document.getElementById('json-output').value = JSON.stringify(jsonObj, null, 2);
+        }
+    }
+
+    function downloadJSON() {
+        const jsonObj = buildJSONObject();
+        if (!jsonObj) return;
+
+        let filename = document.getElementById('cfg-filename').value.trim();
+        if (!filename) filename = 'challenge';
+        if (!filename.endsWith('.json')) filename += '.json';
+
+        const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(jsonObj, null, 2));
+        const downloadAnchor = document.createElement('a');
+        downloadAnchor.setAttribute("href", dataStr);
+        downloadAnchor.setAttribute("download", filename);
+        document.body.appendChild(downloadAnchor);
+        downloadAnchor.click();
+        downloadAnchor.remove();
+    }
+</script>
+</body>
+</html>
