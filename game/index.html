@@ -436,7 +436,17 @@
     }
 
     function checkTimer() {
-        if (config.endTime && new Date() >= new Date(config.endTime) && !isGameOver) {
+        if (!config.endTime || isGameOver) return;
+
+        const now = new Date();
+        
+        // Parse target hours and minutes from the config string
+        const targetDate = new Date(config.endTime);
+        const targetHours = targetDate.getHours();
+        const targetMinutes = targetDate.getMinutes();
+
+        // Check if current time today has reached or passed the cutoff time
+        if (now.getHours() > targetHours || (now.getHours() === targetHours && now.getMinutes() >= targetMinutes)) {
             endGame("Time has expired!");
         }
     }
