@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>App Icon Cropper</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; text-align: center; }
+        canvas { border: 2px solid #ccc; border-radius: 20%; margin-top: 15px; }
+        button { padding: 10px 20px; font-size: 16px; background-color: #28a745; color: white; border: none; border-radius: 6px; cursor: pointer; margin-top: 15px; }
+        button:hover { background-color: #218838; }
+    </style>
+</head>
+<body>
+
+    <h2>PWA App Icon Generator (512x512 PNG)</h2>
+    <p>Select your photo below to crop and generate a centered 512x512 square icon:</p>
+
+    <input type="file" id="imageInput" accept="image/*"><br>
+    
+    <canvas id="iconCanvas" width="512" height="512"></canvas><br>
+    
+    <button id="downloadBtn" style="display:none;" onclick="downloadIcon()">Download icon-512.png 📥</button>
+
+<script>
+    const imageInput = document.getElementById('imageInput');
+    const canvas = document.getElementById('iconCanvas');
+    const ctx = canvas.getContext('2d');
+    const downloadBtn = document.getElementById('downloadBtn');
+
+    imageInput.addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = function(event) {
+            const img = new Image();
+            img.onload = function() {
+                // Determine square crop focusing on face/upper area
+                const minDim = Math.min(img.width, img.height);
+                const sourceX = (img.width - minDim) / 2;
+                // Offset slightly upward toward top for portraits to capture the face nicely
+                const sourceY = Math.max(0, (img.height - minDim) * 0.25);
+
+                // Clear canvas
+                ctx.clearRect(0, 0, 512, 512);
+
+                // Draw cropped square image scaled to 512x512
+                ctx.drawImage(img, sourceX, sourceY, minDim, minDim, 0, 0, 512, 512);
+
+                downloadBtn.style.display = 'inline-block';
+            };
+            img.src = event.target.result;
+        };
+        reader.readAsDataURL(file);
+    });
+
+    function downloadIcon() {
+        const link = document.createElement('a');
+        link.download = 'icon-512.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+    }
+</script>
+
+</body>
+</html>
