@@ -4,6 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Windage Calculator</title>
+
+  <!-- PWA Specific Tags -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1e3a8a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Windage Calc">
+  <link rel="icon" type="image/svg+xml" href="icon.svg">
+  <link rel="apple-touch-icon" href="icon.svg">
+
   <style>
     :root {
       --primary: #1e3a8a;
@@ -14,14 +24,12 @@
       --text: #0f172a;
       --text-muted: #64748b;
     }
-
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     }
-
     body {
       background-color: #f1f5f9;
       display: flex;
@@ -30,7 +38,6 @@
       min-height: 100vh;
       padding: 1rem;
     }
-
     .calculator-card {
       background: var(--bg-card);
       border-radius: 12px;
@@ -39,24 +46,20 @@
       width: 100%;
       max-width: 550px;
     }
-
     .calculator-card h2 {
       color: var(--primary);
       margin-bottom: 1.5rem;
       font-size: 1.5rem;
     }
-
     /* Grid Layout Setup */
     .grid-container {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1.25rem;
     }
-
     .full-width {
       grid-column: 1 / -1;
     }
-
     /* Dynamic Container Styling */
     .sub-grid {
       background-color: var(--bg-accent);
@@ -67,26 +70,22 @@
       grid-template-columns: 1fr 1fr;
       gap: 1rem;
     }
-
     /* Form Elements */
     .form-group {
       display: flex;
       flex-direction: column;
       gap: 0.35rem;
     }
-
     label {
       font-size: 0.875rem;
       font-weight: 600;
       color: var(--text);
     }
-
     .input-group {
       display: flex;
       align-items: center;
       gap: 0.5rem;
     }
-
     input[type="number"], select {
       width: 100%;
       padding: 0.6rem 0.75rem;
@@ -97,18 +96,15 @@
       outline: none;
       transition: border-color 0.2s ease, box-shadow 0.2s ease;
     }
-
     input[type="number"]:focus, select:focus {
       border-color: var(--primary);
       box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.15);
     }
-
     .unit {
       font-size: 0.85rem;
       font-weight: 600;
       color: var(--text-muted);
     }
-
     /* Output Section */
     .result-box {
       margin-top: 0.5rem;
@@ -120,18 +116,15 @@
       justify-content: space-between;
       align-items: center;
     }
-
     .result-box span {
       font-size: 0.95rem;
       font-weight: 600;
       color: var(--primary);
     }
-
     .result-value {
       font-size: 1.5rem !important;
       font-weight: 700 !important;
     }
-
     /* Responsive adjustments */
     @media (max-width: 480px) {
       .grid-container, .sub-grid {
@@ -141,10 +134,8 @@
   </style>
 </head>
 <body>
-
 <div class="calculator-card">
   <h2>Windage Force Calculator</h2>
-
   <div class="grid-container">
     
     <div class="form-group full-width">
@@ -154,24 +145,20 @@
         <option value="Calculate Area">Calculate Area from Dimensions</option>
       </select>
     </div>
-
     <div id="areaCalcContainer" class="sub-grid full-width" style="display: none;">
       <div class="form-group">
         <label for="numberOfContainersHigh">Containers High (2.4m)</label>
         <input type="number" id="numberOfContainersHigh" min="0" placeholder="0">
       </div>
-
       <div class="form-group">
         <label for="deckHeight">Deck Height (m)</label>
         <input type="number" id="deckHeight" min="0" placeholder="0">
       </div>
-
       <div class="form-group full-width">
         <label for="vesselLength">Vessel Length (m)</label>
         <input type="number" id="vesselLength" min="0" placeholder="0">
       </div>
     </div>
-
     <div class="form-group">
       <label for="totalArea">Total Area</label>
       <div class="input-group">
@@ -179,7 +166,6 @@
         <span class="unit">m²</span>
       </div>
     </div>
-
     <div class="form-group">
       <label for="windspeedType">Speed Unit</label>
       <select id="windspeedType">
@@ -188,12 +174,10 @@
         <option value="Metres/second">m/s</option>
       </select>
     </div>
-
     <div class="form-group full-width">
       <label for="windspeed">Wind Speed</label>
       <input type="number" id="windspeed" placeholder="Enter wind speed">
     </div>
-
     <div class="result-box full-width">
       <span>Calculated Windage:</span>
       <div>
@@ -201,10 +185,8 @@
         <span class="unit">Tonnes</span>
       </div>
     </div>
-
   </div>
 </div>
-
 <script>
   // DOM References
   const areaCalcType = document.getElementById('areaCalcType');
@@ -213,15 +195,17 @@
   const windspeedInput = document.getElementById('windspeed');
   const windspeedType = document.getElementById('windspeedType');
   const windageOutput = document.getElementById('windageCalculated');
-
   const containersInput = document.getElementById('numberOfContainersHigh');
   const deckHeightInput = document.getElementById('deckHeight');
   const vesselLengthInput = document.getElementById('vesselLength');
 
-  window.onload = async function() {
-      if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('sw.js').catch(err => console.log('SW Registration failed', err));
-      }
+  // Register Service Worker
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js')
+        .then(reg => console.log('Service Worker registered successfully:', reg.scope))
+        .catch(err => console.error('Service Worker registration failed:', err));
+    });
   }
   
   // Toggle dynamic area form
@@ -239,10 +223,8 @@
     const containers = parseFloat(containersInput.value) || 0;
     const deckHeight = parseFloat(deckHeightInput.value) || 0;
     const vesselLength = parseFloat(vesselLengthInput.value) || 0;
-
     const totalHeight = deckHeight + (containers * 2.4);
     const calculatedArea = totalHeight * vesselLength;
-
     totalAreaInput.value = calculatedArea ? calculatedArea.toFixed(2) : 0;
     calculateWindage();
   }
@@ -252,28 +234,24 @@
     const area = parseFloat(totalAreaInput.value) || 0;
     let speed = parseFloat(windspeedInput.value) || 0;
     const type = windspeedType.value;
-
     // Standardize to metres/second
     if (type === 'MPH') {
       speed /= 2.23694;
     } else if (type === 'Knots') {
       speed /= 1.94384;
     }
-
     // Aerodynamic force formula
     const windage = ((Math.pow(speed, 2) / 18) * area) / 1000;
     windageOutput.innerText = windage.toFixed(1);
   }
 
-  // Event Listeners using Event Delegation/Binding
+  // Event Listeners
   [containersInput, deckHeightInput, vesselLengthInput].forEach(element => {
     element.addEventListener('input', calculateAreaFromDimensions);
   });
-
   [totalAreaInput, windspeedInput, windspeedType].forEach(element => {
     element.addEventListener('input', calculateWindage);
   });
 </script>
-
 </body>
 </html>
