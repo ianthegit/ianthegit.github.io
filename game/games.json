@@ -1,0 +1,26 @@
+[
+  {
+    "key": "Debauched",
+    "title": "Debauched Deben - the lazy semi",
+    "lat": 52.0906,
+    "lon": 1.3111,
+    "startDate": null,
+    "endDate": "2027-12-31"
+  },
+  {
+    "key": "city1",
+    "title": "City Centre Challenge",
+    "lat": 51.5074,
+    "lon": -0.1278,
+    "startDate": "2026-01-01",
+    "endDate": "2026-12-31"
+  },
+  {
+    "key": "yorkshire",
+    "title": "Yorkshire Three Peaks Walk",
+    "lat": 54.1523,
+    "lon": -2.3364,
+    "startDate": null,
+    "endDate": null
+  }
+]
