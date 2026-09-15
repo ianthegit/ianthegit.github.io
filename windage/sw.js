@@ -1,10 +1,9 @@
-const CACHE_NAME = 'windage-calc-v1';
+const CACHE_NAME = 'windage-calc-v2';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
   './manifest.json',
-  './icon-192.png',
-  './icon-512.png'
+  './icon.svg'
 ];
 
 // Install Event - Cache assets
