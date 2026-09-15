@@ -376,6 +376,26 @@
         document.body.appendChild(downloadAnchor);
         downloadAnchor.click();
         downloadAnchor.remove();
+        
+        generateGamesJsonSnippet();
+    }
+    
+ // Example helper added inside builder.html to output the games.json snippet:
+    function generateGamesJsonSnippet() {
+        const key = document.getElementById('cfg-filename').value.trim();
+        const title = document.getElementById('cfg-title').value;
+        const firstLocCoords = parseCoordinates(document.querySelector('.loc-coords').value);
+        
+        const entry = {
+            key: key,
+            title: title,
+            lat: firstLocCoords ? firstLocCoords.lat : 0,
+            lon: firstLocCoords ? firstLocCoords.lon : 0,
+            startDate: null, // Set e.g. "2026-01-01"
+            endDate: null   // Set e.g. "2027-12-31"
+        };
+        
+        console.log("Add this entry to games.json:", JSON.stringify(entry, null, 2));
     }
 </script>
 </body>

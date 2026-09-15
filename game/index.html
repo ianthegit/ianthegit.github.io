@@ -5,14 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Location Check-In Game</title>
     
-    <!-- PWA & Mobile Web App Meta Tags -->
-    <link rel="manifest" href="manifest.json">
+    <!-- Dynamic PWA Manifest Script -->
+    <script>
+      const currentQuery = window.location.search;
+      const dynamicManifest = {
+        "name": "Location Check-In Game",
+        "short_name": "CheckInGame",
+        "start_url": "./index.html" + currentQuery,
+        "display": "standalone",
+        "background_color": "#ffffff",
+        "theme_color": "#28a745",
+        "icons": [
+          {
+            "src": "icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+          }
+        ]
+      };
+      const stringManifest = JSON.stringify(dynamicManifest);
+      const blob = new Blob([stringManifest], {type: 'application/json'});
+      const link = document.createElement('link');
+      link.rel = 'manifest';
+      link.href = URL.createObjectURL(blob);
+      document.head.appendChild(link);
+    </script>
+
     <meta name="theme-color" content="#28a745">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="CheckInGame">
     <link rel="apple-touch-icon" href="icon-512.png">
-
+    
     <!-- Leaflet CSS for Interactive Map -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
     <style>
@@ -29,7 +54,7 @@
         .container {
             max-width: 600px;
             margin: 0 auto;
-            background: rgba(255, 255, 255, 0.92);
+            background: rgba(255, 255, 255, 0.94);
             padding: 20px;
             border-radius: 12px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
@@ -69,12 +94,8 @@
             color: #666666;
             cursor: not-allowed;
         }
-        .btn-share {
-            background-color: #007bff;
-        }
-        .btn-share:hover {
-            background-color: #0069d9;
-        }
+        .btn-share { background-color: #007bff; }
+        .btn-share:hover { background-color: #0069d9; }
         .hidden { display: none; }
         .alert {
             padding: 10px;
@@ -99,15 +120,31 @@
             border-radius: 8px;
             margin-top: 15px;
         }
+        .selector-bar {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
     </style>
 </head>
 <body>
 <div class="container">
+
+    <!-- Active Games Selector Dropdown Bar -->
+    <div class="selector-bar">
+        <label for="challenge-dropdown">Nearby / Active Games:</label>
+        <select id="challenge-dropdown" onchange="switchChallenge(this.value)">
+            <option value="" disabled selected>Acquiring location...</option>
+        </select>
+    </div>
+
     <h1 id="game-title">Loading Game Configuration...</h1>
     
     <div id="game-ui" class="hidden">
         <div class="status-box">
-            Points: <span id="user-points">???</span> | Status: <span id="game-status">In Progress</span>
+            Points: <span id="user-points">0</span> | Status: <span id="game-status">In Progress</span>
         </div>
         
         <div id="map"></div>
@@ -132,7 +169,6 @@
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script>
-    // Helper to evaluate fixed points or random point ranges from JSON
     const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
     const resolvePoints = (item) => {
         if (typeof item.points === 'number') return item.points;
@@ -142,46 +178,166 @@
         return 0;
     };
 
-    let configKey = "Debauched";
+    // Default configuration template for dynamic OpenStreetMap Pub/Bar/Cafe game
+    const DEFAULT_OPEN_GAME_CONFIG = {
+        title: "Pub & Cafe Explorer (Open)",
+        backgroundImage: "",
+        checkInRadiusYards: 100,
+        failPenalty: { min: 5, max: 25 },
+        isOpenStreetMapMode: true,
+        activities: [
+            { name: "Pint or large wine", points: 30 },
+            { name: "Water or soft drink", points: -15 },
+            { name: "Alcohol free beer/wine", points: -50 },
+            { name: "Hot drink & a snack", pointsMin: -50, pointsMax: -15 },
+            { name: "Walked on by", pointsMin: -80, pointsMax: -35 }
+        ],
+        locations: []
+    };
+
+    let configKey = "default";
     let config = null;
     let totalPoints = 0;
     let checkedInLocations = new Set();
     let visitHistory = [];
     let isGameOver = false;
-
     let map = null;
     let userMarker = null;
     let locationMarkers = {};
+    let userCoords = null;
 
     window.onload = async function() {
-        // Register Service Worker for PWA
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('sw.js').catch(err => console.log('SW Registration failed', err));
         }
 
         const query = window.location.search.substring(1);
-        const paramKey = query.split('&')[0].split('=')[0];
-        if (paramKey) {
-            configKey = paramKey;
+        let paramKey = query.split('&')[0].split('=')[0];
+
+        if (!paramKey) {
+            paramKey = localStorage.getItem('last_active_challenge') || "default";
+        } else {
+            localStorage.setItem('last_active_challenge', paramKey);
         }
+        configKey = paramKey;
+
+        // Acquire Location & Load Dynamic Game List
+        if ("geolocation" in navigator) {
+            navigator.geolocation.getCurrentPosition(
+                async (pos) => {
+                    userCoords = { lat: pos.coords.latitude, lon: pos.coords.longitude };
+                    await loadAndFilterChallengeList(userCoords.lat, userCoords.lon);
+                    await initializeGame(configKey);
+                },
+                async (err) => {
+                    console.warn("GPS unavailable. Loading games without distance filter.");
+                    await loadAndFilterChallengeList(null, null);
+                    await initializeGame(configKey);
+                },
+                { enableHighAccuracy: true }
+            );
+        } else {
+            await loadAndFilterChallengeList(null, null);
+            await initializeGame(configKey);
+        }
+    };
+
+    // Calculation Helpers
+    function calculateDistanceMiles(lat1, lon1, lat2, lon2) {
+        const R = 3958.8; // Radius in miles
+        const rad = Math.PI / 180;
+        const dLat = (lat2 - lat1) * rad;
+        const dLon = (lon2 - lon1) * rad;
+        const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                  Math.cos(lat1 * rad) * Math.cos(lat2 * rad) *
+                  Math.sin(dLon / 2) * Math.sin(dLon / 2);
+        return R * (2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a)));
+    }
+
+    function calculateDistanceYards(lat1, lon1, lat2, lon2) {
+        return calculateDistanceMiles(lat1, lon1, lat2, lon2) * 1760;
+    }
+
+    // Check if current date falls within game start/end date limits
+    function isGameActiveDate(startDateStr, endDateStr) {
+        const now = new Date();
+        let start = startDateStr ? new Date(startDateStr) : null;
+        if (start) start.setHours(0, 0, 0, 0);
+
+        let end = endDateStr ? new Date(endDateStr) : null;
+        if (end) end.setHours(23, 59, 59, 999);
+
+        if (!start && !end) return true;
+        if (!start && end) return now <= end;
+        if (start && !end) return now >= start;
+        return now >= start && now <= end;
+    }
+
+    // Load available games from games.json & filter by 1-mile radius + dates
+    async function loadAndFilterChallengeList(lat, lon) {
+        const dropdown = document.getElementById('challenge-dropdown');
+        dropdown.innerHTML = '';
+
+        // Always include the default OpenStreetMap dynamic game as option 1
+        const defaultOpt = document.createElement('option');
+        defaultOpt.value = "default";
+        defaultOpt.innerText = "Default: Pub/Bar/Cafe Explorer (Open)";
+        dropdown.appendChild(defaultOpt);
 
         try {
-            const response = await fetch(`./${configKey}.json`);
-            if (!response.ok) throw new Error(`Could not load ${configKey}.json`);
-            config = await response.json();
-            
-            // Process dynamic point values in JSON
+            const response = await fetch('./games.json');
+            if (response.ok) {
+                const challenges = await response.json();
+                challenges.forEach(item => {
+                    if (!isGameActiveDate(item.startDate, item.endDate)) return;
+
+                    let withinDistance = true;
+                    let distMiles = null;
+                    if (lat !== null && lon !== null && item.lat !== undefined && item.lon !== undefined) {
+                        distMiles = calculateDistanceMiles(lat, lon, item.lat, item.lon);
+                        withinDistance = distMiles <= 1.0; // Filter within 1 mile
+                    }
+
+                    if (withinDistance) {
+                        const opt = document.createElement('option');
+                        opt.value = item.key;
+                        const distLabel = distMiles !== null ? ` (${distMiles.toFixed(2)} mi)` : '';
+                        opt.innerText = `${item.title}${distLabel}`;
+                        dropdown.appendChild(opt);
+                    }
+                });
+            }
+        } catch (e) {
+            console.warn("games.json not found or failed to load. Default mode active.");
+        }
+
+        dropdown.value = configKey;
+    }
+
+    async function initializeGame(key) {
+        try {
+            if (key === "default") {
+                config = JSON.parse(JSON.stringify(DEFAULT_OPEN_GAME_CONFIG));
+            } else {
+                const response = await fetch(`./${key}.json`);
+                if (!response.ok) throw new Error(`Could not load ${key}.json`);
+                config = await response.json();
+            }
+
+            // Flag if the game relies on dynamic OpenStreetMap pub lookup
+            config.isOpenStreetMapMode = !config.locations || config.locations.length === 0;
+
             config.checkInRadiusYards = config.checkInRadiusYards || 150;
             config.failPenalty = config.failPenalty || { min: 1, max: 150 };
-            config.activities.forEach(act => {
-                act.points = resolvePoints(act);
-            });
-            config.locations.forEach(loc => {
-                loc.points = resolvePoints(loc);
-            });
+            config.activities.forEach(act => { act.points = resolvePoints(act); });
+            if (config.locations) {
+                config.locations.forEach(loc => { loc.points = resolvePoints(loc); });
+            } else {
+                config.locations = [];
+            }
 
             document.getElementById('game-title').innerText = config.title;
-            document.body.style.backgroundImage = `url('${config.backgroundImage}')`;
+            document.body.style.backgroundImage = config.backgroundImage ? `url('${config.backgroundImage}')` : 'none';
 
             populateActivities();
             loadSavedState();
@@ -202,7 +358,13 @@
             document.getElementById('message-box').innerHTML = `<div class="alert alert-danger">${err.message}</div>`;
             document.getElementById('game-ui').classList.remove('hidden');
         }
-    };
+    }
+
+    function switchChallenge(newKey) {
+        if (!newKey) return;
+        localStorage.setItem('last_active_challenge', newKey);
+        window.location.search = `?${newKey}`;
+    }
 
     function saveState() {
         const storageKey = `game_state_${configKey}`;
@@ -227,13 +389,15 @@
                 localStorage.removeItem(storageKey);
                 return;
             }
-            if (stateData.configLocations) {
+            if (stateData.configLocations && stateData.configLocations.length > 0) {
                 config.locations = stateData.configLocations;
             }
             totalPoints = stateData.totalPoints || 0;
             checkedInLocations = new Set(stateData.checkedInLocations || []);
             visitHistory = stateData.visitHistory || [];
             isGameOver = stateData.isGameOver || false;
+            
+            document.getElementById('user-points').innerText = totalPoints;
         } catch (e) {
             console.error("Error reading saved state", e);
             localStorage.removeItem(storageKey);
@@ -265,24 +429,35 @@
     }
 
     function initMap() {
-        const defaultLat = config.locations[0].lat;
-        const defaultLon = config.locations[0].lon;
-        
-        map = L.map('map').setView([defaultLat, defaultLon], 13);
-        
+        let initialLat = 52.0906;
+        let initialLon = 1.3111;
+
+        if (userCoords) {
+            initialLat = userCoords.lat;
+            initialLon = userCoords.lon;
+        } else if (config.locations && config.locations.length > 0) {
+            initialLat = config.locations[0].lat;
+            initialLon = config.locations[0].lon;
+        }
+
+        map = L.map('map').setView([initialLat, initialLon], 15);
+
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution: '© OpenStreetMap'
         }).addTo(map);
+
         renderMapMarkers();
         updateUserLocationOnMap();
     }
 
     function renderMapMarkers() {
+        if (!map || !config.locations) return;
+
         config.locations.forEach(loc => {
             const isCheckedIn = checkedInLocations.has(loc.id);
             let markerColor = isCheckedIn ? '#28a745' : (loc.id === 'endPoint' ? '#dc3545' : '#007bff');
-            
+
             const markerOptions = {
                 radius: 8,
                 fillColor: markerColor,
@@ -305,12 +480,13 @@
             navigator.geolocation.getCurrentPosition(pos => {
                 const lat = pos.coords.latitude;
                 const lon = pos.coords.longitude;
-                
+                userCoords = { lat, lon };
+
                 if (userMarker) {
                     userMarker.setLatLng([lat, lon]);
                 } else {
                     userMarker = L.circleMarker([lat, lon], {
-                        radius: 7,
+                        radius: 8,
                         fillColor: '#3388ff',
                         color: '#ffffff',
                         weight: 3,
@@ -322,131 +498,166 @@
         }
     }
 
-    function attemptCheckIn() {
+    // Dynamic OpenStreetMap Query for nearby pubs, bars, cafes
+    async function queryNearbyPubFromOSM(lat, lon, radiusYards) {
+        const radiusMeters = Math.round(radiusYards * 0.9144);
+        const overpassQuery = `
+            [out:json];
+            (
+              node["amenity"~"pub|bar|cafe|restaurant"](around:${radiusMeters}, ${lat}, ${lon});
+              way["amenity"~"pub|bar|cafe|restaurant"](around:${radiusMeters}, ${lat}, ${lon});
+            );
+            out center;
+        `;
+        const url = `https://overpass-api.de/api/interpreter?data=${encodeURIComponent(overpassQuery)}`;
+
+        try {
+            const res = await fetch(url);
+            const data = await res.json();
+            if (data.elements && data.elements.length > 0) {
+                const el = data.elements[0];
+                const venueName = (el.tags && el.tags.name) ? el.tags.name : "Local Establishment";
+                const venueId = "osm_" + el.id;
+                const venueLat = el.lat || (el.center ? el.center.lat : lat);
+                const venueLon = el.lon || (el.center ? el.center.lon : lon);
+
+                return {
+                    id: venueId,
+                    name: venueName,
+                    lat: venueLat,
+                    lon: venueLon,
+                    points: getRandomInt(20, 50)
+                };
+            }
+        } catch (e) {
+            console.error("OSM Overpass search failed", e);
+        }
+        return null;
+    }
+
+    async function attemptCheckIn() {
         if (isGameOver) return;
         const actIndex = document.getElementById('activity-select').value;
-        
         if (actIndex === "" || actIndex === null) {
             showMessage("Please select an activity first!", "danger");
             return;
         }
         const activity = config.activities[actIndex];
-        if (checkedInLocations.size >= config.locations.length) {
-            showMessage("You have already checked into all available locations!", "danger");
+
+        if (!("geolocation" in navigator)) {
+            showMessage("Geolocation is not supported by your browser.", "danger");
             return;
         }
-        if ("geolocation" in navigator) {
-            navigator.geolocation.getCurrentPosition(
-                (position) => {
-                    const userLat = position.coords.latitude;
-                    const userLon = position.coords.longitude;
-                    
-                    if (userMarker) userMarker.setLatLng([userLat, userLon]);
-                    let matchedLocation = null;
+
+        document.getElementById('checkin-btn').disabled = true;
+        showMessage("Verifying GPS location...", "success");
+
+        navigator.geolocation.getCurrentPosition(
+            async (position) => {
+                const userLat = position.coords.latitude;
+                const userLon = position.coords.longitude;
+                if (userMarker) userMarker.setLatLng([userLat, userLon]);
+
+                let matchedLocation = null;
+
+                // Mode A: Fixed pre-defined locations
+                if (!config.isOpenStreetMapMode && config.locations.length > 0) {
                     const hasStart = config.locations.some(l => l.id === 'start');
-                    
+
                     if (hasStart && !checkedInLocations.has('start')) {
                         const startLoc = config.locations.find(l => l.id === 'start');
-                        const distYards = calculateDistanceYards(userLat, userLon, startLoc.lat, startLoc.lon);
-                        if (distYards <= config.checkInRadiusYards) {
+                        if (calculateDistanceYards(userLat, userLon, startLoc.lat, startLoc.lon) <= config.checkInRadiusYards) {
                             matchedLocation = startLoc;
                         }
                     } else {
                         for (let loc of config.locations) {
                             if (checkedInLocations.has(loc.id)) continue;
-                            const distYards = calculateDistanceYards(userLat, userLon, loc.lat, loc.lon);
-                            if (distYards <= config.checkInRadiusYards) {
+                            if (calculateDistanceYards(userLat, userLon, loc.lat, loc.lon) <= config.checkInRadiusYards) {
                                 matchedLocation = loc;
                                 break;
                             }
                         }
                     }
-
+                } 
+                // Mode B: Dynamic OpenStreetMap detection
+                else {
+                    matchedLocation = await queryNearbyPubFromOSM(userLat, userLon, config.checkInRadiusYards);
+                    if (matchedLocation && checkedInLocations.has(matchedLocation.id)) {
+                        showMessage(`You have already checked into ${matchedLocation.name} today!`, "danger");
+                        resetActivityDropdown();
+                        return;
+                    }
                     if (matchedLocation) {
-                        const earnedPoints = matchedLocation.points + activity.points;
-                        totalPoints += earnedPoints;
-                        checkedInLocations.add(matchedLocation.id);
-                        visitHistory.push({
-                            type: 'success',
-                            locationName: matchedLocation.name,
-                            locPoints: matchedLocation.points,
-                            activityName: activity.name,
-                            actPoints: activity.points
-                        });
-                        showMessage(`Success! Checked in at "${matchedLocation.name}". Points recorded for final reveal!`, "success");
-                        
-                        renderMapMarkers();
-                        resetActivityDropdown();
-                        if (matchedLocation.id === 'endPoint') {
-                            endGame("Reached the final end point!");
-                        } else {
-                            saveState();
-                        }
+                        // Dynamically add venue to locations array so it appears on map
+                        config.locations.push(matchedLocation);
+                    }
+                }
+
+                // Process Check-In outcome
+                if (matchedLocation) {
+                    const earnedPoints = matchedLocation.points + activity.points;
+                    totalPoints += earnedPoints;
+                    checkedInLocations.add(matchedLocation.id);
+                    visitHistory.push({
+                        type: 'success',
+                        locationName: matchedLocation.name,
+                        locPoints: matchedLocation.points,
+                        activityName: activity.name,
+                        actPoints: activity.points
+                    });
+
+                    document.getElementById('user-points').innerText = totalPoints;
+                    showMessage(`Success! Checked in at "${matchedLocation.name}". Points recorded!`, "success");
+
+                    renderMapMarkers();
+                    resetActivityDropdown();
+
+                    if (matchedLocation.id === 'endPoint') {
+                        endGame("Reached the final end point!");
                     } else {
-                        const penalty = getRandomInt(config.failPenalty.min, config.failPenalty.max);
-                        totalPoints -= penalty;
-                        const formattedLat = userLat.toFixed(5);
-                        const formattedLon = userLon.toFixed(5);
-                        visitHistory.push({
-                            type: 'fail',
-                            locationName: "Unknown Spot",
-                            penalty: penalty,
-                            userLat: formattedLat,
-                            userLon: formattedLon
-                        });
-                        const startMsg = (hasStart && !checkedInLocations.has('start')) ? " (You must be at the 'Start' location first)" : "";
-                        
-                        showMessage(
-                            `Check-in failed! You are not within ${config.checkInRadiusYards} yards of an available location${startMsg}.<br>` +
-                            `<strong>Your Location:</strong> Lat: ${formattedLat}, Lon: ${formattedLon}<br>` +
-                            `Penalty recorded!`, 
-                            "danger"
-                        );
-                        resetActivityDropdown();
                         saveState();
                     }
-                },
-                (error) => {
-                    showMessage("Error getting GPS location. Please enable location services.", "danger");
-                },
-                { enableHighAccuracy: true }
-            );
-        } else {
-            showMessage("Geolocation is not supported by your browser.", "danger");
-        }
-    }
+                } else {
+                    const penalty = getRandomInt(config.failPenalty.min, config.failPenalty.max);
+                    totalPoints -= penalty;
+                    const formattedLat = userLat.toFixed(5);
+                    const formattedLon = userLon.toFixed(5);
 
-    function calculateDistanceYards(lat1, lon1, lat2, lon2) {
-        const R = 6371e3;
-        const rad = Math.PI / 180;
-        const dLat = (lat2 - lat1) * rad;
-        const dLon = (lon2 - lon1) * rad;
-        
-        const a = Math.sin(dLat/2) * Math.sin(dLat/2) +
-                  Math.cos(lat1 * rad) * Math.cos(lat2 * rad) *
-                  Math.sin(dLon/2) * Math.sin(dLon/2);
-        
-        const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-        return R * c * 1.09361;
+                    visitHistory.push({
+                        type: 'fail',
+                        locationName: "Unknown Spot",
+                        penalty: penalty,
+                        userLat: formattedLat,
+                        userLon: formattedLon
+                    });
+
+                    document.getElementById('user-points').innerText = totalPoints;
+                    showMessage(
+                        `Check-in failed! No registered pub/bar/cafe found within ${config.checkInRadiusYards} yards.<br>` +
+                        `<strong>Your Location:</strong> Lat: ${formattedLat}, Lon: ${formattedLon}<br>Penalty applied!`, 
+                        "danger"
+                    );
+                    resetActivityDropdown();
+                    saveState();
+                }
+            },
+            (error) => {
+                showMessage("Error getting GPS location. Please enable location services.", "danger");
+                resetActivityDropdown();
+            },
+            { enableHighAccuracy: true }
+        );
     }
 
     function showMessage(msg, type) {
-        const msgBox = document.getElementById('message-box');
-        msgBox.innerHTML = `<div class="alert alert-${type}">${msg}</div>`;
+        document.getElementById('message-box').innerHTML = `<div class="alert alert-${type}">${msg}</div>`;
     }
 
     function checkTimer() {
         if (!config.endTime || isGameOver) return;
-
         const now = new Date();
-        
-        // Parse target hours and minutes from the config string
         const targetDate = new Date(config.endTime);
-        const targetHours = targetDate.getHours();
-        const targetMinutes = targetDate.getMinutes();
-
-        // Check if current time today has reached or passed the cutoff time
-        if (now.getHours() > targetHours || (now.getHours() === targetHours && now.getMinutes() >= targetMinutes)) {
+        if (now.getHours() > targetDate.getHours() || (now.getHours() === targetDate.getHours() && now.getMinutes() >= targetDate.getMinutes())) {
             endGame("Time has expired!");
         }
     }
@@ -464,78 +675,84 @@
         const canvas = document.getElementById('final-canvas');
         const ctx = canvas.getContext('2d');
         const bgImg = new Image();
-        bgImg.src = config.backgroundImage;
-        bgImg.onload = function() {
+
+        const renderCanvasContent = () => {
             canvas.width = 800;
             canvas.height = 1100;
-            
-            ctx.drawImage(bgImg, 0, 0, canvas.width, canvas.height);
-            
+
+            if (bgImg.src && bgImg.complete) {
+                ctx.drawImage(bgImg, 0, 0, canvas.width, canvas.height);
+            } else {
+                ctx.fillStyle = "#ffffff";
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+            }
+
             const hotPink = "#FF69B4";
             ctx.fillStyle = hotPink;
             ctx.strokeStyle = "#000000";
             ctx.lineWidth = 3;
-            
+
             ctx.font = "bold 38px Arial";
             ctx.textAlign = "center";
             ctx.strokeText(config.title, canvas.width / 2, 90);
             ctx.fillText(config.title, canvas.width / 2, 90);
-            
+
             ctx.font = "bold 26px Arial";
-            ctx.strokeText("Final Mystery Scorecard", canvas.width / 2, 130);
-            ctx.fillText("Final Mystery Scorecard", canvas.width / 2, 130);
-            
+            ctx.strokeText("Final Scorecard", canvas.width / 2, 130);
+            ctx.fillText("Final Scorecard", canvas.width / 2, 130);
+
             let startY = 180;
             ctx.textAlign = "left";
             ctx.font = "bold 20px Arial";
-            
+
             if (visitHistory.length === 0) {
                 ctx.strokeText("No check-in attempts recorded.", 70, startY);
                 ctx.fillText("No check-in attempts recorded.", 70, startY);
-                startY += 40;
             } else {
                 visitHistory.forEach((item, idx) => {
                     if (item.type === 'success') {
                         const line1 = `${idx + 1}. [SUCCESS] ${item.locationName} (+${item.locPoints} pts)`;
                         const line2 = `   Activity: ${item.activityName} (${item.actPoints >= 0 ? '+' : ''}${item.actPoints} pts)`;
-                        
                         ctx.strokeText(line1, 70, startY);
                         ctx.fillText(line1, 70, startY);
                         ctx.strokeText(line2, 70, startY + 24);
                         ctx.fillText(line2, 70, startY + 24);
-                        
                         startY += 60;
                     } else if (item.type === 'fail') {
                         const failLine1 = `${idx + 1}. [FAILED] Check-In Attempt`;
                         const failLine2 = `   Lat: ${item.userLat}, Lon: ${item.userLon} (-${item.penalty} pts)`;
-                        
                         ctx.strokeText(failLine1, 70, startY);
                         ctx.fillText(failLine1, 70, startY);
                         ctx.strokeText(failLine2, 70, startY + 24);
                         ctx.fillText(failLine2, 70, startY + 24);
-                        
                         startY += 60;
                     }
                 });
             }
-            
+
             ctx.strokeStyle = hotPink;
             ctx.lineWidth = 4;
             ctx.beginPath();
             ctx.moveTo(70, startY + 10);
             ctx.lineTo(canvas.width - 70, startY + 10);
             ctx.stroke();
-            
+
             ctx.font = "bold 36px Arial";
             ctx.strokeStyle = "#000000";
             ctx.lineWidth = 4;
             ctx.strokeText(`FINAL SCORE: ${totalPoints} PTS`, 70, startY + 70);
             ctx.fillText(`FINAL SCORE: ${totalPoints} PTS`, 70, startY + 70);
-            
-            const dataUrl = canvas.toDataURL("image/png");
-            const imgElement = document.getElementById('downloadable-image');
-            imgElement.src = dataUrl;
+
+            document.getElementById('downloadable-image').src = canvas.toDataURL("image/png");
         };
+
+        if (config.backgroundImage) {
+            bgImg.src = config.backgroundImage;
+            bgImg.onload = renderCanvasContent;
+            bgImg.onerror = renderCanvasContent;
+        } else {
+            renderCanvasContent();
+        }
     }
 
     async function shareScorecard() {
