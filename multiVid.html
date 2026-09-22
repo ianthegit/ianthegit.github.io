@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Multi-Source Video Grid Recorder</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .control-panel {
+            background: #1f1f1f;
+            padding: 20px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 800px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+        .input-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        input[type="text"] {
+            flex: 1;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #333;
+            background: #2d2d2d;
+            color: #fff;
+            font-size: 14px;
+        }
+        .file-input-label {
+            padding: 10px 15px;
+            background: #333;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            display: inline-block;
+            border: 1px dashed #555;
+        }
+        .file-input-label:hover { background: #444; }
+        input[type="file"] { display: none; }
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #333;
+            padding-top: 15px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .btn-add { background-color: #007acc; color: white; }
+        .btn-add:hover { background-color: #0098ff; }
+        .btn-start { background-color: #238636; color: white; }
+        .btn-start:hover { background-color: #2ea043; }
+        .btn-stop { background-color: #da3637; color: white; display: none; }
+        .btn-stop:hover { background-color: #f85149; }
+        .btn-clear { background-color: #555; color: white; }
+        .btn-clear:hover { background-color: #666; }
+        #recordingStatus {
+            font-weight: bold;
+            color: #8b949e;
+        }
+        /* Responsive Dynamic Grid Layout */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 15px;
+            width: 100%;
+            max-width: 1000px;
+            background: #1f1f1f;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            box-sizing: border-box;
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            background-color: #000;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .video-container video, 
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            object-fit: cover;
+        }
+        .remove-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: rgba(218, 54, 55, 0.8);
+            color: white;
+            border: none;
+            border-radius: 3px;
+            padding: 2px 8px;
+            cursor: pointer;
+            z-index: 10;
+            font-size: 11px;
+        }
+        .remove-btn:hover { background: rgba(248, 81, 73, 1); }
+        .placeholder-text {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 40px;
+            color: #666;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dynamic Multi-Source Video Grid</h1>
+        <p>Add video URLs, web streams, YouTube links, or upload local files, then capture the whole grid.</p>
+    </header>
+    <div class="control-panel">
+        <div class="input-group">
+            <input type="text" id="videoUrlInput" placeholder="Paste Direct MP4 link, Twitch stream, or YouTube URL here...">
+            <button class="btn-add" id="addUrlBtn">Add URL</button>
+        </div>
+        
+        <div style="margin-bottom: 15px; display: flex; align-items: center; gap: 15px;">
+            <span>Or add cloud/local videos:</span>
+            <label class="file-input-label">
+                📂 Choose Local File (Apple/Google Photos download)
+                <input type="file" id="fileInput" accept="video/*" multiple>
+            </label>
+        </div>
+        <div class="action-buttons">
+            <div>
+                <button id="startBtn" class="btn-start">🎥 Start Recording Grid</button>
+                <button id="stopBtn" class="btn-stop">🛑 Stop and Save Capture</button>
+            </div>
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <div id="recordingStatus">Status: Idle</div>
+                <button class="btn-clear" id="clearBtn">Clear Grid</button>
+            </div>
+        </div>
+    </div>
+    <div class="video-grid" id="videoGrid">
+        <div class="placeholder-text" id="placeholder">No videos added yet. Add URLs or files above to populate the grid.</div>
+    </div>
+
+    <script>
+        const videoGrid = document.getElementById('videoGrid');
+        const videoUrlInput = document.getElementById('videoUrlInput');
+        const addUrlBtn = document.getElementById('addUrlBtn');
+        const fileInput = document.getElementById('fileInput');
+        const clearBtn = document.getElementById('clearBtn');
+        const placeholder = document.getElementById('placeholder');
+        
+        const startBtn = document.getElementById('startBtn');
+        const stopBtn = document.getElementById('stopBtn');
+        const statusText = document.getElementById('recordingStatus');
+        
+        let mediaRecorder;
+        let recordedChunks = [];
+
+        // Helper to strip out the placeholder text
+        function checkPlaceholder() {
+            if (videoGrid.querySelectorAll('.video-container').length > 0) {
+                placeholder.style.display = 'none';
+            } else {
+                placeholder.style.display = 'block';
+            }
+        }
+
+        // Helper to extract clean YouTube IDs from various link structures
+        function getYouTubeId(url) {
+            const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+            const match = url.match(regExp);
+            return (match && match[2].length === 11) ? match[2] : null;
+        }
+
+        // Core layout generator function
+        function createVideoCard(sourceSrc, isYouTube = false) {
+            const container = document.createElement('div');
+            container.className = 'video-container';
+            
+            const removeBtn = document.createElement('button');
+            removeBtn.className = 'remove-btn';
+            removeBtn.innerText = '✕ Remove';
+            removeBtn.onclick = () => {
+                container.remove();
+                checkPlaceholder();
+            };
+            container.appendChild(removeBtn);
+
+            if (isYouTube) {
+                // Construct standard embed iframe with auto-looping protocols
+                const iframe = document.createElement('iframe');
+                iframe.src = `https://www.youtube.com/embed/${sourceSrc}?autoplay=1&mute=1&loop=1&playlist=${sourceSrc}&controls=0`;
+                iframe.allow = "autoplay; encrypted-media";
+                container.appendChild(iframe);
+            } else {
+                // Construct default HTML5 video element
+                const video = document.createElement('video');
+                video.src = sourceSrc;
+                video.autoplay = true;
+                video.loop = true;
+                video.muted = true;
+                video.controls = false;
+                video.playsInline = true;
+                container.appendChild(video);
+            }
+
+            videoGrid.appendChild(container);
+            checkPlaceholder();
+        }
+
+        // Handle Add URL Button Click
+        addUrlBtn.addEventListener('click', () => {
+            const urlValue = videoUrlInput.value.trim();
+            if (!urlValue) return;
+            const ytId = getYouTubeId(urlValue);
+            if (ytId) {
+                createVideoCard(ytId, true);
+            } else {
+                // Treat as direct video stream URL
+                createVideoCard(urlValue, false);
+            }
+            videoUrlInput.value = '';
+        });
+
+        // Handle Local File System Changes
+        fileInput.addEventListener('change', (event) => {
+            const files = event.target.files;
+            for (let i = 0; i < files.length; i++) {
+                const fileUrl = URL.createObjectURL(files[i]);
+                createVideoCard(fileUrl, false);
+            }
+            fileInput.value = ''; // Reset target
+        });
+
+        // Reset the canvas grid
+        clearBtn.addEventListener('click', () => {
+            const items = videoGrid.querySelectorAll('.video-container');
+            items.forEach(item => item.remove());
+            checkPlaceholder();
+        });
+
+        /* --- Recorder Engine --- */
+        startBtn.addEventListener('click', async () => {
+            recordedChunks = [];
+            try {
+                // Request modern window capture framework
+                const stream = await navigator.mediaDevices.getDisplayMedia({
+                    video: { cursor: "always" },
+                    audio: true
+                });
+
+                let options = { mimeType: 'video/webm; codecs=vp9' };
+                if (!MediaRecorder.isTypeSupported(options.mimeType)) {
+                    options = { mimeType: 'video/webm' };
+                }
+
+                mediaRecorder = new MediaRecorder(stream, options);
+
+                mediaRecorder.ondataavailable = (e) => {
+                    if (e.data.size > 0) recordedChunks.push(e.data);
+                };
+
+                mediaRecorder.onstop = () => {
+                    const blob = new Blob(recordedChunks, { type: 'video/webm' });
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = `dynamic-grid-capture-${Date.now()}.webm`;
+                    document.body.appendChild(a);
+                    a.click();
+                    setTimeout(() => {
+                        document.body.removeChild(a);
+                        window.URL.revokeObjectURL(url);
+                    }, 100);
+
+                    startBtn.style.display = 'inline-block';
+                    stopBtn.style.display = 'none';
+                    statusText.innerText = "Status: Idle";
+                };
+
+                mediaRecorder.start();
+                startBtn.style.display = 'none';
+                stopBtn.style.display = 'inline-block';
+                statusText.innerText = "Status: 🔴 RECORDING GRID...";
+
+                const videoTrack = stream.getVideoTracks()[0];
+                if (videoTrack) {
+                    videoTrack.onended = () => {
+                        if (mediaRecorder && mediaRecorder.state !== 'inactive') {
+                            mediaRecorder.stop();
+                        }
+                    };
+                }
+            } catch (err) {
+                console.error(err);
+                statusText.innerText = "Status: Capture Error/Cancelled";
+            }
+        });
+
+        stopBtn.addEventListener('click', () => {
+            if (mediaRecorder && mediaRecorder.state !== 'inactive') {
+                if (mediaRecorder.stream) {
+                    mediaRecorder.stream.getTracks().forEach(track => track.stop());
+                }
+                mediaRecorder.stop();
+            }
+        });
+    </script>
+</body>
+</html>
