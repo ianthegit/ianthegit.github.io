@@ -31,7 +31,6 @@
       link.href = URL.createObjectURL(blob);
       document.head.appendChild(link);
     </script>
-
     <meta name="theme-color" content="#28a745">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -131,7 +130,6 @@
 </head>
 <body>
 <div class="container">
-
     <!-- Active Games Selector Dropdown Bar -->
     <div class="selector-bar">
         <label for="challenge-dropdown">Nearby / Active Games:</label>
@@ -139,7 +137,6 @@
             <option value="" disabled selected>Acquiring location...</option>
         </select>
     </div>
-
     <h1 id="game-title">Loading Game Configuration...</h1>
     
     <div id="game-ui" class="hidden">
@@ -156,7 +153,6 @@
         </div>
         <button id="checkin-btn" onclick="attemptCheckIn()" disabled>Check In Here</button>
     </div>
-
     <div id="game-over-ui" class="hidden">
         <h2>Game Over!</h2>
         <p id="game-over-reason"></p>
@@ -166,7 +162,6 @@
         <img id="downloadable-image" alt="Final Scorecard" style="width: 100%; border-radius: 8px;" />
     </div>
 </div>
-
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script>
     const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
@@ -177,7 +172,6 @@
         }
         return 0;
     };
-
     // Default configuration template for dynamic OpenStreetMap Pub/Bar/Cafe game
     const DEFAULT_OPEN_GAME_CONFIG = {
         title: "Pub & Cafe Explorer (Open)",
@@ -191,11 +185,11 @@
             { name: "Water or soft drink", points: -15 },
             { name: "Alcohol free beer/wine", points: -50 },
             { name: "Hot drink & a snack", pointsMin: -50, pointsMax: -15 },
-            { name: "Walked on by", pointsMin: -80, pointsMax: -35 }
+            { name: "Walked on by", pointsMin: -80, pointsMax: -35 },
+            { name: "Finished!", pointsMin: -100, pointsMax: 100 }
         ],
         locations: []
     };
-
     let configKey = "default";
     let config = null;
     let totalPoints = 0;
@@ -206,22 +200,18 @@
     let userMarker = null;
     let locationMarkers = {};
     let userCoords = null;
-
     window.onload = async function() {
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('sw.js').catch(err => console.log('SW Registration failed', err));
         }
-
         const query = window.location.search.substring(1);
         let paramKey = query.split('&')[0].split('=')[0];
-
         if (!paramKey) {
             paramKey = localStorage.getItem('last_active_challenge') || "default";
         } else {
             localStorage.setItem('last_active_challenge', paramKey);
         }
         configKey = paramKey;
-
         // Acquire Location & Load Dynamic Game List
         if ("geolocation" in navigator) {
             navigator.geolocation.getCurrentPosition(
@@ -242,7 +232,6 @@
             await initializeGame(configKey);
         }
     };
-
     // Calculation Helpers
     function calculateDistanceMiles(lat1, lon1, lat2, lon2) {
         const R = 3958.8; // Radius in miles
@@ -254,51 +243,42 @@
                   Math.sin(dLon / 2) * Math.sin(dLon / 2);
         return R * (2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a)));
     }
-
     function calculateDistanceYards(lat1, lon1, lat2, lon2) {
         return calculateDistanceMiles(lat1, lon1, lat2, lon2) * 1760;
     }
-
     // Check if current date falls within game start/end date limits
     function isGameActiveDate(startDateStr, endDateStr) {
         const now = new Date();
         let start = startDateStr ? new Date(startDateStr) : null;
         if (start) start.setHours(0, 0, 0, 0);
-
         let end = endDateStr ? new Date(endDateStr) : null;
         if (end) end.setHours(23, 59, 59, 999);
-
         if (!start && !end) return true;
         if (!start && end) return now <= end;
         if (start && !end) return now >= start;
         return now >= start && now <= end;
     }
-
     // Load available games from games.json & filter by 1-mile radius + dates
     async function loadAndFilterChallengeList(lat, lon) {
         const dropdown = document.getElementById('challenge-dropdown');
         dropdown.innerHTML = '';
-
         // Always include the default OpenStreetMap dynamic game as option 1
         const defaultOpt = document.createElement('option');
         defaultOpt.value = "default";
         defaultOpt.innerText = "Default: Pub/Bar/Cafe Explorer (Open)";
         dropdown.appendChild(defaultOpt);
-
         try {
             const response = await fetch('./games.json');
             if (response.ok) {
                 const challenges = await response.json();
                 challenges.forEach(item => {
                     if (!isGameActiveDate(item.startDate, item.endDate)) return;
-
                     let withinDistance = true;
                     let distMiles = null;
                     if (lat !== null && lon !== null && item.lat !== undefined && item.lon !== undefined) {
                         distMiles = calculateDistanceMiles(lat, lon, item.lat, item.lon);
                         withinDistance = distMiles <= 1.0; // Filter within 1 mile
                     }
-
                     if (withinDistance) {
                         const opt = document.createElement('option');
                         opt.value = item.key;
@@ -311,10 +291,8 @@
         } catch (e) {
             console.warn("games.json not found or failed to load. Default mode active.");
         }
-
         dropdown.value = configKey;
     }
-
     async function initializeGame(key) {
         try {
             if (key === "default") {
@@ -324,10 +302,8 @@
                 if (!response.ok) throw new Error(`Could not load ${key}.json`);
                 config = await response.json();
             }
-
             // Flag if the game relies on dynamic OpenStreetMap pub lookup
             config.isOpenStreetMapMode = !config.locations || config.locations.length === 0;
-
             config.checkInRadiusYards = config.checkInRadiusYards || 150;
             config.failPenalty = config.failPenalty || { min: 1, max: 150 };
             config.activities.forEach(act => { act.points = resolvePoints(act); });
@@ -336,20 +312,16 @@
             } else {
                 config.locations = [];
             }
-
             document.getElementById('game-title').innerText = config.title;
             document.body.style.backgroundImage = config.backgroundImage ? `url('${config.backgroundImage}')` : 'none';
-
             populateActivities();
             loadSavedState();
-
             if (isGameOver) {
                 endGame("Game completed in previous session.");
             } else {
                 document.getElementById('game-ui').classList.remove('hidden');
                 initMap();
             }
-
             if (config.endTime) {
                 setInterval(checkTimer, 5000);
                 checkTimer();
@@ -360,13 +332,11 @@
             document.getElementById('game-ui').classList.remove('hidden');
         }
     }
-
     function switchChallenge(newKey) {
         if (!newKey) return;
         localStorage.setItem('last_active_challenge', newKey);
         window.location.search = `?${newKey}`;
     }
-
     function saveState() {
         const storageKey = `game_state_${configKey}`;
         const stateData = {
@@ -379,7 +349,6 @@
         };
         localStorage.setItem(storageKey, JSON.stringify(stateData));
     }
-
     function loadSavedState() {
         const storageKey = `game_state_${configKey}`;
         const itemStr = localStorage.getItem(storageKey);
@@ -404,7 +373,6 @@
             localStorage.removeItem(storageKey);
         }
     }
-
     function populateActivities() {
         const actSelect = document.getElementById('activity-select');
         actSelect.innerHTML = '<option value="" disabled selected>-- Select Activity --</option>';
@@ -416,23 +384,19 @@
         });
         validateActivitySelection();
     }
-
     function validateActivitySelection() {
         const actSelect = document.getElementById('activity-select');
         const checkinBtn = document.getElementById('checkin-btn');
         checkinBtn.disabled = (actSelect.value === "");
     }
-
     function resetActivityDropdown() {
         const actSelect = document.getElementById('activity-select');
         actSelect.value = "";
         validateActivitySelection();
     }
-
     function initMap() {
         let initialLat = 52.0906;
         let initialLon = 1.3111;
-
         if (userCoords) {
             initialLat = userCoords.lat;
             initialLon = userCoords.lon;
@@ -440,25 +404,19 @@
             initialLat = config.locations[0].lat;
             initialLon = config.locations[0].lon;
         }
-
         map = L.map('map').setView([initialLat, initialLon], 15);
-
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution: '© OpenStreetMap'
         }).addTo(map);
-
         renderMapMarkers();
         updateUserLocationOnMap();
     }
-
     function renderMapMarkers() {
         if (!map || !config.locations) return;
-
         config.locations.forEach(loc => {
             const isCheckedIn = checkedInLocations.has(loc.id);
             let markerColor = isCheckedIn ? '#28a745' : (loc.id === 'endPoint' ? '#dc3545' : '#007bff');
-
             const markerOptions = {
                 radius: 8,
                 fillColor: markerColor,
@@ -475,14 +433,12 @@
             locationMarkers[loc.id] = marker;
         });
     }
-
     function updateUserLocationOnMap() {
         if ("geolocation" in navigator) {
             navigator.geolocation.getCurrentPosition(pos => {
                 const lat = pos.coords.latitude;
                 const lon = pos.coords.longitude;
                 userCoords = { lat, lon };
-
                 if (userMarker) {
                     userMarker.setLatLng([lat, lon]);
                 } else {
@@ -498,7 +454,6 @@
             }, null, { enableHighAccuracy: true });
         }
     }
-
     // Dynamic OpenStreetMap Query for nearby pubs, bars, cafes
     async function queryNearbyPubFromOSM(lat, lon, radiusYards) {
         const radiusMeters = Math.round(radiusYards * 0.9144);
@@ -511,7 +466,6 @@
             out center;
         `;
         const url = `https://overpass-api.de/api/interpreter?data=${encodeURIComponent(overpassQuery)}`;
-
         try {
             const res = await fetch(url);
             const data = await res.json();
@@ -521,7 +475,6 @@
                 const venueId = "osm_" + el.id;
                 const venueLat = el.lat || (el.center ? el.center.lat : lat);
                 const venueLon = el.lon || (el.center ? el.center.lon : lon);
-
                 return {
                     id: venueId,
                     name: venueName,
@@ -535,7 +488,6 @@
         }
         return null;
     }
-
     async function attemptCheckIn() {
         if (isGameOver) return;
         const actIndex = document.getElementById('activity-select').value;
@@ -544,27 +496,21 @@
             return;
         }
         const activity = config.activities[actIndex];
-
         if (!("geolocation" in navigator)) {
             showMessage("Geolocation is not supported by your browser.", "danger");
             return;
         }
-
         document.getElementById('checkin-btn').disabled = true;
         showMessage("Verifying GPS location...", "success");
-
         navigator.geolocation.getCurrentPosition(
             async (position) => {
                 const userLat = position.coords.latitude;
                 const userLon = position.coords.longitude;
                 if (userMarker) userMarker.setLatLng([userLat, userLon]);
-
                 let matchedLocation = null;
-
                 // Mode A: Fixed pre-defined locations
                 if (!config.isOpenStreetMapMode && config.locations.length > 0) {
                     const hasStart = config.locations.some(l => l.id === 'start');
-
                     if (hasStart && !checkedInLocations.has('start')) {
                         const startLoc = config.locations.find(l => l.id === 'start');
                         if (calculateDistanceYards(userLat, userLon, startLoc.lat, startLoc.lon) <= config.checkInRadiusYards) {
@@ -593,29 +539,37 @@
                         config.locations.push(matchedLocation);
                     }
                 }
-
+                
                 // Process Check-In outcome
-                if (matchedLocation) {
-                    const earnedPoints = matchedLocation.points + activity.points;
+                if (matchedLocation || activity.name === "Finished!") {
+                    const locPoints = matchedLocation ? matchedLocation.points : 0;
+                    const locationName = matchedLocation ? matchedLocation.name : "Game Finished";
+                    const earnedPoints = locPoints + activity.points;
+                    
                     totalPoints += earnedPoints;
-                    checkedInLocations.add(matchedLocation.id);
+                    if (matchedLocation) {
+                        checkedInLocations.add(matchedLocation.id);
+                    }
+                    
                     visitHistory.push({
                         type: 'success',
-                        locationName: matchedLocation.name,
-                        locPoints: matchedLocation.points,
+                        locationName: locationName,
+                        locPoints: locPoints,
                         activityName: activity.name,
                         actPoints: activity.points
                     });
-
+                    
                     document.getElementById('user-points').innerText = totalPoints;
-                    showMessage(`Success! Checked in at "${matchedLocation.name}". Points recorded!`, "success");
-
-                    renderMapMarkers();
                     resetActivityDropdown();
 
-                    if (matchedLocation.id === 'endPoint') {
+                    // Check for Game Completion conditions
+                    if (activity.name === "Finished!") {
+                        endGame("Player completed the game!");
+                    } else if (matchedLocation && matchedLocation.id === 'endPoint') {
                         endGame("Reached the final end point!");
                     } else {
+                        showMessage(`Success! Checked in at "${locationName}". Points recorded!`, "success");
+                        renderMapMarkers();
                         saveState();
                     }
                 } else {
@@ -623,7 +577,6 @@
                     totalPoints -= penalty;
                     const formattedLat = userLat.toFixed(5);
                     const formattedLon = userLon.toFixed(5);
-
                     visitHistory.push({
                         type: 'fail',
                         locationName: "Unknown Spot",
@@ -631,7 +584,6 @@
                         userLat: formattedLat,
                         userLon: formattedLon
                     });
-
                     document.getElementById('user-points').innerText = totalPoints;
                     showMessage(
                         `Check-in failed! No registered pub/bar/cafe found within ${config.checkInRadiusYards} yards.<br>` +
@@ -649,11 +601,9 @@
             { enableHighAccuracy: true }
         );
     }
-
     function showMessage(msg, type) {
         document.getElementById('message-box').innerHTML = `<div class="alert alert-${type}">${msg}</div>`;
     }
-
     function checkTimer() {
         if (!config.endTime || isGameOver) return;
         const now = new Date();
@@ -662,7 +612,6 @@
             endGame("Time has expired!");
         }
     }
-
     function endGame(reason) {
         isGameOver = true;
         saveState();
@@ -671,48 +620,41 @@
         document.getElementById('game-over-reason').innerText = reason;
         generateSummaryCanvas();
     }
-
     function generateSummaryCanvas() {
         const canvas = document.getElementById('final-canvas');
         const ctx = canvas.getContext('2d');
         const bgImg = new Image();
-
         const renderCanvasContent = () => {
             canvas.width = 800;
             canvas.height = 1100;
-
             if (bgImg.src && bgImg.complete) {
                 ctx.drawImage(bgImg, 0, 0, canvas.width, canvas.height);
             } else {
                 ctx.fillStyle = "#ffffff";
                 ctx.fillRect(0, 0, canvas.width, canvas.height);
             }
-
             const hotPink = "#FF69B4";
             ctx.fillStyle = hotPink;
             ctx.strokeStyle = "#000000";
             ctx.lineWidth = 3;
-
             ctx.font = "bold 38px Arial";
             ctx.textAlign = "center";
             ctx.strokeText(config.title, canvas.width / 2, 90);
             ctx.fillText(config.title, canvas.width / 2, 90);
-
             ctx.font = "bold 26px Arial";
             ctx.strokeText("Final Scorecard", canvas.width / 2, 130);
             ctx.fillText("Final Scorecard", canvas.width / 2, 130);
-
             let startY = 180;
             ctx.textAlign = "left";
             ctx.font = "bold 20px Arial";
-
             if (visitHistory.length === 0) {
                 ctx.strokeText("No check-in attempts recorded.", 70, startY);
                 ctx.fillText("No check-in attempts recorded.", 70, startY);
             } else {
                 visitHistory.forEach((item, idx) => {
                     if (item.type === 'success') {
-                        const line1 = `${idx + 1}. [SUCCESS] ${item.locationName} (+${item.locPoints} pts)`;
+                        const locText = item.locPoints !== 0 ? ` (+${item.locPoints} pts)` : '';
+                        const line1 = `${idx + 1}. [SUCCESS] ${item.locationName}${locText}`;
                         const line2 = `   Activity: ${item.activityName} (${item.actPoints >= 0 ? '+' : ''}${item.actPoints} pts)`;
                         ctx.strokeText(line1, 70, startY);
                         ctx.fillText(line1, 70, startY);
@@ -730,23 +672,19 @@
                     }
                 });
             }
-
             ctx.strokeStyle = hotPink;
             ctx.lineWidth = 4;
             ctx.beginPath();
             ctx.moveTo(70, startY + 10);
             ctx.lineTo(canvas.width - 70, startY + 10);
             ctx.stroke();
-
             ctx.font = "bold 36px Arial";
             ctx.strokeStyle = "#000000";
             ctx.lineWidth = 4;
             ctx.strokeText(`FINAL SCORE: ${totalPoints} PTS`, 70, startY + 70);
             ctx.fillText(`FINAL SCORE: ${totalPoints} PTS`, 70, startY + 70);
-
             document.getElementById('downloadable-image').src = canvas.toDataURL("image/png");
         };
-
         if (config.backgroundImage) {
             bgImg.src = config.backgroundImage;
             bgImg.onload = renderCanvasContent;
@@ -755,7 +693,6 @@
             renderCanvasContent();
         }
     }
-
     async function shareScorecard() {
         const canvas = document.getElementById('final-canvas');
         canvas.toBlob(async (blob) => {
