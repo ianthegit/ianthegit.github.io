@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Woodbridge Tide Mill Calculator</title>
+
+    <!-- PWA / Web App Manifest Meta -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="mobile-web-app-capable" content="yes">
+    
+    <!-- iOS / Safari Support -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Tide Mill">
+	<link rel="icon" type="image/svg+xml" href="wtmIcon.svg">
+	<link rel="apple-touch-icon" href="wtmIcon.svg">
+
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --primary: #38bdf8;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #f59e0b;
+            --border: #334155;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin: 0 0 8px 0;
+            color: var(--primary);
+        }
+
+        p.subtitle {
+            margin: 0;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .controls {
+            background: var(--card-bg);
+            padding: 16px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        label {
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        input[type="date"] {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .card h2 {
+            font-size: 1.1rem;
+            margin-top: 0;
+            margin-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 8px;
+            color: var(--primary);
+        }
+
+        .tide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 12px;
+        }
+
+        .tide-event {
+            background: rgba(15, 23, 42, 0.6);
+            padding: 12px;
+            border-radius: 6px;
+            border-left: 4px solid var(--border);
+        }
+
+        .tide-event.high {
+            border-left-color: var(--primary);
+        }
+
+        .tide-event.low {
+            border-left-color: var(--accent);
+        }
+
+        .tide-type {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+        }
+
+        .tide-time {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .tide-height {
+            font-size: 0.85rem;
+            color: var(--text-main);
+        }
+
+        .sill-depth {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .params-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .params-list li {
+            margin-bottom: 6px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .params-list span.val {
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        canvas {
+            width: 100%;
+            height: 180px;
+            background: rgba(15, 23, 42, 0.6);
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Woodbridge Tide Mill Predictor</h1>
+        <p class="subtitle">Upper River Deben / Woodbridge Marina Local Model</p>
+    </header>
+
+    <div class="controls">
+        <label for="dateSelect">Select Date:</label>
+        <input type="date" id="dateSelect">
+    </div>
+
+    <div class="card">
+        <h2>High & Low Water (Local Clock Time / BST)</h2>
+        <div id="tideEvents" class="tide-grid">
+            <!-- Dynamically populated -->
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>24-Hour Tide Profile (Water Depth)</h2>
+        <canvas id="tideChart"></canvas>
+    </div>
+
+    <div class="card">
+        <h2>Model Calibration Parameters</h2>
+        <ul class="params-list">
+            <li><span>Location Baseline:</span> <span class="val">Woodbridge Tide Mill Quay</span></li>
+            <li><span>River Deben Propagation Lag:</span> <span class="val">+40 mins (from Haven)</span></li>
+            <li><span>Mill Sill Elevation:</span> <span class="val">1.60m above Chart Datum</span></li>
+            <li><span>Principal M2 Constituent:</span> <span class="val">Amp: 1.48m | Speed: 28.984°/hr</span></li>
+            <li><span>Principal S2 Constituent:</span> <span class="val">Amp: 0.42m | Speed: 30.000°/hr</span></li>
+            <li><span>Shallow Water M4 Constituent:</span> <span class="val">Amp: 0.11m | Speed: 57.968°/hr</span></li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    // --- LOCAL HARMONIC ENGINE & CONSTANTS ---
+    const DEBEN_LAG_MINUTES = 40;
+    const SILL_HEIGHT_CD = 1.60;
+    
+    const EPOCH_REF = new Date(Date.UTC(2026, 0, 1, 0, 0, 0)).getTime();
+    const M2_AMP = 1.48, M2_SPEED = 28.9841042 * (Math.PI / 180) / 3600000;
+    const S2_AMP = 0.42, S2_SPEED = 30.0000000 * (Math.PI / 180) / 3600000;
+    const M4_AMP = 0.11, M4_SPEED = 57.9682084 * (Math.PI / 180) / 3600000;
+    const Z0 = 2.05;
+
+    const M2_PHASE = 2.15;
+    const S2_PHASE = 1.28;
+    const M4_PHASE = 4.10;
+
+    function getTideHeightCD(utcTimestamp) {
+        const evalTime = utcTimestamp - (DEBEN_LAG_MINUTES * 60 * 1000);
+        const dt = evalTime - EPOCH_REF;
+
+        const hM2 = M2_AMP * Math.cos(M2_SPEED * dt - M2_PHASE);
+        const hS2 = S2_AMP * Math.cos(S2_SPEED * dt - S2_PHASE);
+        const hM4 = M4_AMP * Math.cos(M4_SPEED * dt - M4_PHASE);
+
+        return Z0 + hM2 + hS2 + hM4;
+    }
+
+    function toLocalISO(d) {
+        const year = d.getFullYear();
+        const month = String(d.getMonth() + 1).padStart(2, '0');
+        const day = String(d.getDate()).padStart(2, '0');
+        return `${year}-${month}-${day}`;
+    }
+
+    function calculateAndRender() {
+        const dateInput = document.getElementById('dateSelect').value;
+        if (!dateInput) return;
+
+        const [yr, mo, dy] = dateInput.split('-').map(Number);
+        
+        const dayStart = new Date(yr, mo - 1, dy, 0, 0, 0);
+        const dayEnd = new Date(yr, mo - 1, dy, 23, 59, 59);
+
+        const samples = [];
+        const stepMs = 5 * 60 * 1000;
+        
+        for (let t = dayStart.getTime(); t <= dayEnd.getTime(); t += stepMs) {
+            const heightCD = getTideHeightCD(t);
+            samples.push({
+                time: new Date(t),
+                heightCD: heightCD,
+                heightSill: Math.max(0, heightCD - SILL_HEIGHT_CD)
+            });
+        }
+
+        const events = [];
+        for (let i = 1; i < samples.length - 1; i++) {
+            const prev = samples[i - 1].heightCD;
+            const curr = samples[i].heightCD;
+            const next = samples[i + 1].heightCD;
+
+            if (curr > prev && curr > next) {
+                events.push({ type: 'High', data: samples[i] });
+            } else if (curr < prev && curr < next) {
+                events.push({ type: 'Low', data: samples[i] });
+            }
+        }
+
+        renderEvents(events);
+        renderChart(samples);
+    }
+
+    function renderEvents(events) {
+        const container = document.getElementById('tideEvents');
+        container.innerHTML = '';
+
+        if (events.length === 0) {
+            container.innerHTML = '<p style="color:var(--text-muted)">No extrema detected for this period.</p>';
+            return;
+        }
+
+        events.forEach(ev => {
+            const div = document.createElement('div');
+            div.className = `tide-event ${ev.type.toLowerCase()}`;
+            
+            const timeStr = ev.data.time.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false });
+            const heightCD = ev.data.heightCD.toFixed(2);
+            const heightSill = ev.data.heightSill.toFixed(2);
+
+            div.innerHTML = `
+                <div class="tide-type">${ev.type} Water</div>
+                <div class="tide-time">${timeStr}</div>
+                <div class="tide-height">${heightCD}m <small style="color:var(--text-muted)">CD</small></div>
+                <div class="sill-depth">${heightSill}m over sill</div>
+            `;
+            container.appendChild(div);
+        });
+    }
+
+    function renderChart(samples) {
+        const canvas = document.getElementById('tideChart');
+        const ctx = canvas.getContext('2d');
+        
+        const rect = canvas.getBoundingClientRect();
+        canvas.width = rect.width * window.devicePixelRatio;
+        canvas.height = rect.height * window.devicePixelRatio;
+        ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+
+        const width = rect.width;
+        const height = rect.height;
+
+        ctx.clearRect(0, 0, width, height);
+
+        const padding = 25;
+        const graphWidth = width - (padding * 2);
+        const graphHeight = height - (padding * 2);
+
+        const minH = 0;
+        const maxH = 4.5;
+
+        function getX(index) {
+            return padding + (index / (samples.length - 1)) * graphWidth;
+        }
+
+        function getY(heightCD) {
+            return height - padding - ((heightCD - minH) / (maxH - minH)) * graphHeight;
+        }
+
+        const sillY = getY(SILL_HEIGHT_CD);
+        ctx.beginPath();
+        ctx.setLineDash([4, 4]);
+        ctx.strokeStyle = '#f59e0b';
+        ctx.lineWidth = 1;
+        ctx.moveTo(padding, sillY);
+        ctx.lineTo(width - padding, sillY);
+        ctx.stroke();
+        ctx.setLineDash([]);
+
+        ctx.fillStyle = '#f59e0b';
+        ctx.font = '10px sans-serif';
+        ctx.fillText('Mill Sill (1.60m CD)', padding + 5, sillY - 4);
+
+        ctx.beginPath();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = '#38bdf8';
+
+        samples.forEach((pt, i) => {
+            const x = getX(i);
+            const y = getY(pt.heightCD);
+            if (i === 0) ctx.moveTo(x, y);
+            else ctx.lineTo(x, y);
+        });
+        ctx.stroke();
+
+        ctx.fillStyle = '#94a3b8';
+        ctx.font = '10px sans-serif';
+        ctx.textAlign = 'center';
+
+        for (let h = 0; h <= 24; h += 6) {
+            const idx = Math.floor((h / 24) * (samples.length - 1));
+            const x = getX(idx);
+            const label = `${String(h).padStart(2, '0')}:00`;
+            ctx.fillText(label, x, height - 5);
+        }
+    }
+
+    // App Initialization & Service Worker Registration
+    document.addEventListener('DOMContentLoaded', () => {
+        const dateInput = document.getElementById('dateSelect');
+        dateInput.value = toLocalISO(new Date());
+        dateInput.addEventListener('change', calculateAndRender);
+        calculateAndRender();
+
+        // Register Service Worker for PWA functionality
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./sw.js')
+                .then((reg) => console.log('Service Worker registered successfully:', reg.scope))
+                .catch((err) => console.error('Service Worker registration failed:', err));
+        }
+    });
+</script>
+
+</body>
+</html>

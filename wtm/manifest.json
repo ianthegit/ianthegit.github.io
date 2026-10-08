@@ -1,0 +1,18 @@
+{
+  "name": "Woodbridge Tide Mill Milling Schedule",
+  "short_name": "Tide Milling",
+  "description": "Offline-first local tide calculator for the Woodbridge Tide Mill.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "wtmIcon.svg",
+      "sizes": "48x48 72x72 96x96 128x128 192x192 256x256 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

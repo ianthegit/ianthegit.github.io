@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Dark App Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    
+    <!-- Water Gradient -->
+    <linearGradient id="waterGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+
+    <!-- Roof Gradient -->
+    <linearGradient id="roofGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ea580c"/>
+      <stop offset="100%" stop-color="#c2410c"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Base App Tile Background -->
+  <rect width="512" height="512" rx="100" fill="url(#bgGrad)"/>
+  
+  <!-- Outer Glow Ring -->
+  <rect x="16" y="16" width="480" height="480" rx="84" fill="none" stroke="#334155" stroke-width="8"/>
+
+  <!-- Water & Tidal Waves -->
+  <path d="M 32 380 Q 140 360 256 380 T 480 380 L 480 480 L 32 480 Z" fill="url(#waterGrad)" opacity="0.85"/>
+  <path d="M 32 405 Q 120 390 220 410 T 480 400 L 480 480 L 32 480 Z" fill="#0284c7"/>
+
+  <!-- Quay Base Wall -->
+  <rect x="80" y="340" width="352" height="45" fill="#475569" rx="4"/>
+  <line x1="80" y1="355" x2="432" y2="355" stroke="#334155" stroke-width="4"/>
+
+  <!-- Water Wheel (Lower Right) -->
+  <g transform="translate(360, 350)">
+    <circle cx="0" cy="0" r="42" fill="none" stroke="#f59e0b" stroke-width="8"/>
+    <circle cx="0" cy="0" r="12" fill="#f59e0b"/>
+    <line x1="0" y1="-42" x2="0" y2="42" stroke="#f59e0b" stroke-width="5"/>
+    <line x1="-42" y1="0" x2="42" y2="0" stroke="#f59e0b" stroke-width="5"/>
+    <line x1="-30" y1="-30" x2="30" y2="30" stroke="#f59e0b" stroke-width="5"/>
+    <line x1="-30" y1="30" x2="30" y2="-30" stroke="#f59e0b" stroke-width="5"/>
+  </g>
+
+  <!-- Main Mill Structure (White Cladding) -->
+  <polygon points="120,340 120,180 210,100 300,100 370,180 370,340" fill="#f8fafc"/>
+  
+  <!-- Weatherboard Siding Lines -->
+  <line x1="120" y1="200" x2="370" y2="200" stroke="#e2e8f0" stroke-width="3"/>
+  <line x1="120" y1="230" x2="370" y2="230" stroke="#e2e8f0" stroke-width="3"/>
+  <line x1="120" y1="260" x2="370" y2="260" stroke="#e2e8f0" stroke-width="3"/>
+  <line x1="120" y1="290" x2="370" y2="290" stroke="#e2e8f0" stroke-width="3"/>
+  <line x1="120" y1="320" x2="370" y2="320" stroke="#e2e8f0" stroke-width="3"/>
+
+  <!-- Terracotta Roof Sections -->
+  <!-- Main Gambrel Top -->
+  <polygon points="195,85 295,85 315,105 175,105" fill="url(#roofGrad)"/>
+  <!-- Gambrel Slopes -->
+  <polygon points="175,105 210,100 120,180 105,185" fill="url(#roofGrad)"/>
+  <polygon points="315,105 280,100 370,180 385,185" fill="url(#roofGrad)"/>
+
+  <!-- Central Windows & Hoist Door -->
+  <rect x="231" y="120" width="28" height="36" fill="#1e293b" rx="2"/>
+  <rect x="231" y="180" width="28" height="45" fill="#0f172a" rx="2"/> <!-- Main Hatch -->
+  <rect x="160" y="220" width="24" height="32" fill="#1e293b" rx="2"/>
+  <rect x="306" y="220" width="24" height="32" fill="#1e293b" rx="2"/>
+  <rect x="160" y="280" width="24" height="32" fill="#1e293b" rx="2"/>
+  <rect x="306" y="280" width="24" height="32" fill="#1e293b" rx="2"/>
+
+  <!-- Window Frame Accents -->
+  <path d="M 231 138 H 259 M 245 120 V 156" stroke="#94a3b8" stroke-width="2"/>
+  <path d="M 160 236 H 184 M 172 220 V 252" stroke="#94a3b8" stroke-width="2"/>
+  <path d="M 306 236 H 330 M 318 220 V 252" stroke="#94a3b8" stroke-width="2"/>
+
+  <!-- Tide Gauge Indicator Overlay -->
+  <rect x="52" y="120" width="28" height="200" rx="6" fill="#1e293b" stroke="#334155" stroke-width="3"/>
+  <line x1="60" y1="150" x2="72" y2="150" stroke="#94a3b8" stroke-width="3"/>
+  <line x1="60" y1="190" x2="72" y2="190" stroke="#94a3b8" stroke-width="3"/>
+  <line x1="60" y1="230" x2="72" y2="230" stroke="#94a3b8" stroke-width="3"/>
+  <line x1="60" y1="270" x2="72" y2="270" stroke="#94a3b8" stroke-width="3"/>
+  <!-- High Water Mark Level -->
+  <polygon points="52,185 80,185 66,200" fill="#f59e0b"/>
+</svg>
