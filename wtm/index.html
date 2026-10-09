@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Woodbridge Tide Mill - Hydrodynamic Milling Schedule</title>
-
   <!-- PWA & Icon links -->
   <link rel="manifest" href="manifest.json">
   <link rel="icon" type="image/svg+xml" href="wtmIcon.svg">
@@ -14,7 +13,6 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Tide Mill">
-
   <style>
     :root {
       --primary: #1e3a8a;
@@ -25,6 +23,7 @@
       --border: #cbd5e1;
       --window-am: rgba(254, 243, 199, 0.65);
       --window-pm: rgba(224, 231, 255, 0.65);
+      --window-closed: rgba(220, 252, 231, 0.65);
     }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -34,7 +33,7 @@
       padding: 20px;
     }
     .container {
-      max-width: 1050px;
+      max-width: 1100px;
       margin: 0 auto;
     }
     header {
@@ -106,12 +105,12 @@
       align-items: center;
       gap: 6px;
     }
-    input[type=range], select, input[type=time] {
+    input[type=range], select, input[type=time], input[type=text] {
       width: 100%;
       accent-color: var(--secondary);
       cursor: pointer;
     }
-    select, input[type=time] {
+    select, input[type=time], input[type=text] {
       padding: 4px 6px;
       border-radius: 4px;
       border: 1px solid #cbd5e1;
@@ -198,6 +197,7 @@
     }
     .swatch-am { background: #fde68a; border: 1px solid #d97706; }
     .swatch-pm { background: #c7d2fe; border: 1px solid #4f46e5; }
+    .swatch-closed { background: #bbf7d0; border: 1px solid #16a34a; }
     .swatch-spring { background: #dcfce7; border: 1px solid #16a34a; }
     .swatch-neap { background: #f1f5f9; border: 1px solid #64748b; }
     table {
@@ -229,6 +229,7 @@
     }
     .badge-am { background: #fef3c7; color: #92400e; }
     .badge-pm { background: #e0e7ff; color: #3730a3; }
+    .badge-closed { background: #dcfce7; color: #14532d; border: 1px solid #86efac; }
     .badge-spring { background: #dcfce7; color: #15803d; border: 1px solid #86efac; }
     .badge-neap { background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; }
     .badge-mid { background: #f0f9ff; color: #0369a1; border: 1px solid #bae6fd; }
@@ -275,6 +276,16 @@
           <option value="Europe/London" selected>Local UK Time (BST / GMT)</option>
           <option value="UTC">Admiralty Standard (UTC / GMT)</option>
         </select>
+      </div>
+      <div class="control-group">
+        <div class="control-label">
+          <span>Closed Period (MM-DD)</span>
+        </div>
+        <div class="time-range-group">
+          <input type="text" id="input-closed-start" value="11-01" placeholder="11-01" style="text-align:center;">
+          <span style="font-size:0.8rem; color:#64748b;">to</span>
+          <input type="text" id="input-closed-end" value="03-31" placeholder="03-31" style="text-align:center;">
+        </div>
       </div>
       <div class="control-group">
         <div class="control-label">
@@ -325,8 +336,9 @@
       </div>
     </div>
     <div class="legend">
-      <div class="legend-item"><div class="swatch swatch-am"></div> AM Window (<span id="legend-am-text">06:00–09:00</span>)</div>
-      <div class="legend-item"><div class="swatch swatch-pm"></div> PM Window (<span id="legend-pm-text">17:00–19:30</span>)</div>
+      <div class="legend-item"><div class="swatch swatch-am"></div> Open AM (<span id="legend-am-text">06:00–09:00</span>)</div>
+      <div class="legend-item"><div class="swatch swatch-pm"></div> Open PM (<span id="legend-pm-text">17:00–19:30</span>)</div>
+      <div class="legend-item"><div class="swatch swatch-closed"></div> Closed Period (06:00–19:30)</div>
       <div class="legend-item"><div class="swatch swatch-spring"></div> Spring Period</div>
       <div class="legend-item"><div class="swatch swatch-neap"></div> Neap Period</div>
       <div class="legend-item"><span style="color:#dc2626; font-weight:bold;">---</span> Min High Cutoff</div>
@@ -345,12 +357,12 @@
     </div>
   </div>
   <div class="card">
-    <h3 style="margin-top:0; color: var(--primary);">Suitable Out-of-Hours Milling Opportunities (Next 30 Days)</h3>
+    <h3 style="margin-top:0; color: var(--primary);">Suitable Milling Opportunities (Next 30 Days)</h3>
     <table>
       <thead>
         <tr>
           <th>Date</th>
-          <th>Window</th>
+          <th>Window / Season</th>
           <th>Tide Phase</th>
           <th>Low Tide Time</th>
           <th>Low Height</th>
@@ -384,10 +396,37 @@ function getHoursOfDayInZone(date) {
   return hour + (minute / 60);
 }
 
+// Check if a date falls within the closed period (MM-DD)
+function isClosedPeriod(date) {
+  const startStr = document.getElementById('input-closed-start').value.trim();
+  const endStr = document.getElementById('input-closed-end').value.trim();
+  
+  if (!startStr || !endStr) return false;
+  
+  const [sMonth, sDay] = startStr.split('-').map(Number);
+  const [eMonth, eDay] = endStr.split('-').map(Number);
+  
+  if (isNaN(sMonth) || isNaN(sDay) || isNaN(eMonth) || isNaN(eDay)) return false;
+  
+  // Get date MM-DD in selected time zone
+  const month = parseInt(date.toLocaleDateString('en-GB', { timeZone: TIMEZONE, month: '2-digit' }), 10);
+  const day = parseInt(date.toLocaleDateString('en-GB', { timeZone: TIMEZONE, day: '2-digit' }), 10);
+  
+  const currentVal = month * 100 + day;
+  const startVal = sMonth * 100 + sDay;
+  const endVal = eMonth * 100 + eDay;
+  
+  if (startVal <= endVal) {
+    return currentVal >= startVal && currentVal <= endVal;
+  } else {
+    // Crosses calendar year (e.g., Nov 1 to Mar 31 -> 1101 to 0331)
+    return currentVal >= startVal || currentVal <= endVal;
+  }
+}
+
 // Empirical Reference Baseline: Calibrated directly against River Deben August 2026 tide tables
 // Anchor: Aug 25, 2026 04:47 BST = 03:47 UTC (Low Tide, prior high 3.3m)
 const ANCHOR_LOW_TIDE = new Date('2026-08-25T03:47:00Z');
-
 // Multi-constituent Speeds (rad/hr)
 const M2_SPEED = 0.505868;
 const S2_SPEED = 0.523599;
@@ -413,8 +452,8 @@ function getTideHeight(date) {
   let rawHeight = MSL 
     - 1.15 * Math.cos(M2_SPEED * hoursFromAnchor) 
     - 0.38 * Math.cos(S2_SPEED * hoursFromAnchor + 0.55)
-    - 0.22 * Math.cos(N2_SPEED * hoursFromAnchor + 0.20)
-    + 0.12 * Math.cos(M4_SPEED * hoursFromAnchor + 1.10)
+    - 0.22 * Math.cos(N2_SPEED * hoursFromAnchor - 0.20)
+    + 0.12 * Math.cos(M4_SPEED * hoursFromAnchor - 1.10)
     - 0.04 * Math.cos(M6_SPEED * hoursFromAnchor);
     
   const totalHeight = rawHeight + getSurgeOffset();
@@ -427,7 +466,7 @@ function getHavenTideHeight(date) {
   let rawHeight = 2.40 
     - 1.42 * Math.cos(M2_SPEED * hoursFromAnchor) 
     - 0.44 * Math.cos(S2_SPEED * hoursFromAnchor + 0.55)
-    - 0.26 * Math.cos(N2_SPEED * hoursFromAnchor + 0.20);
+    - 0.26 * Math.cos(N2_SPEED * hoursFromAnchor - 0.20);
   const totalHeight = rawHeight + getSurgeOffset();
   return Math.max(0.0, totalHeight);
 }
@@ -517,14 +556,26 @@ function renderApp() {
   `;
   
   for (let d = 0; d < TOTAL_DAYS; d++) {
-    const amX1 = timeToX(d * 24 + amStart);
-    const amX2 = timeToX(d * 24 + amEnd);
-    const pmX1 = timeToX(d * 24 + pmStart);
-    const pmX2 = timeToX(d * 24 + pmEnd);
-    svg.innerHTML += `
-      <rect x="${amX1}" y="${PADDING.top}" width="${Math.max(0, amX2 - amX1)}" height="${GRAPH_H}" fill="var(--window-am)" />
-      <rect x="${pmX1}" y="${PADDING.top}" width="${Math.max(0, pmX2 - pmX1)}" height="${GRAPH_H}" fill="var(--window-pm)" />
-    `;
+    const dayDate = new Date(startOfDayGlobal.getTime() + d * 86400000);
+    const inClosed = isClosedPeriod(dayDate);
+    
+    if (inClosed) {
+      // Closed period allows milling continuously between 06:00 and 19:30
+      const cX1 = timeToX(d * 24 + 6);
+      const cX2 = timeToX(d * 24 + 19.5);
+      svg.innerHTML += `
+        <rect x="${cX1}" y="${PADDING.top}" width="${Math.max(0, cX2 - cX1)}" height="${GRAPH_H}" fill="var(--window-closed)" />
+      `;
+    } else {
+      const amX1 = timeToX(d * 24 + amStart);
+      const amX2 = timeToX(d * 24 + amEnd);
+      const pmX1 = timeToX(d * 24 + pmStart);
+      const pmX2 = timeToX(d * 24 + pmEnd);
+      svg.innerHTML += `
+        <rect x="${amX1}" y="${PADDING.top}" width="${Math.max(0, amX2 - amX1)}" height="${GRAPH_H}" fill="var(--window-am)" />
+        <rect x="${pmX1}" y="${PADDING.top}" width="${Math.max(0, pmX2 - pmX1)}" height="${GRAPH_H}" fill="var(--window-pm)" />
+      `;
+    }
   }
   
   for (let h = 0; h <= 4; h += 1) {
@@ -661,13 +712,40 @@ function populateTable(tideEvents, minHighThreshold, amStart, amEnd, pmStart, pm
   const amEndStr = document.getElementById('input-am-end').value;
   const pmStartStr = document.getElementById('input-pm-start').value;
   const pmEndStr = document.getElementById('input-pm-end').value;
+
   for (let i = 0; i < tideEvents.length; i++) {
     const evt = tideEvents[i];
     if (evt.type === 'LOW') {
       const hoursOfDay = getHoursOfDayInZone(evt.time);
-      const isAM = hoursOfDay >= amStart && hoursOfDay <= amEnd;
-      const isPM = hoursOfDay >= pmStart && hoursOfDay <= pmEnd;
-      if (isAM || isPM) {
+      const closed = isClosedPeriod(evt.time);
+      
+      let isMatch = false;
+      let windowText = '';
+      let badgeWindowClass = '';
+      
+      if (closed) {
+        // Closed season: milling allowed 06:00 to 19:30
+        if (hoursOfDay >= 6.0 && hoursOfDay <= 19.5) {
+          isMatch = true;
+          windowText = 'Closed Season (06:00–19:30)';
+          badgeWindowClass = 'badge-closed';
+        }
+      } else {
+        // Open season out-of-hours windows
+        const isAM = hoursOfDay >= amStart && hoursOfDay <= amEnd;
+        const isPM = hoursOfDay >= pmStart && hoursOfDay <= pmEnd;
+        if (isAM) {
+          isMatch = true;
+          windowText = `AM (${amStartStr}-${amEndStr})`;
+          badgeWindowClass = 'badge-am';
+        } else if (isPM) {
+          isMatch = true;
+          windowText = `PM (${pmStartStr}-${pmEndStr})`;
+          badgeWindowClass = 'badge-pm';
+        }
+      }
+
+      if (isMatch) {
         let precedingHigh = null;
         for (let j = i - 1; j >= 0; j--) {
           if (tideEvents[j].type === 'HIGH') {
@@ -678,8 +756,6 @@ function populateTable(tideEvents, minHighThreshold, amStart, amEnd, pmStart, pm
         if (precedingHigh && precedingHigh.height >= minHighThreshold) {
           matches++;
           const dateStr = evt.time.toLocaleDateString('en-GB', { timeZone: TIMEZONE, weekday: 'short', day: 'numeric', month: 'short' });
-          const windowText = isAM ? `AM (${amStartStr}-${amEndStr})` : `PM (${pmStartStr}-${pmEndStr})`;
-          const badgeWindowClass = isAM ? 'badge-am' : 'badge-pm';
           const phase = getTidePhase(evt.time);
           const lowTimeStr = evt.time.toLocaleTimeString('en-GB', { timeZone: TIMEZONE, hour: '2-digit', minute: '2-digit' });
           const highTimeStr = precedingHigh.time.toLocaleTimeString('en-GB', { timeZone: TIMEZONE, hour: '2-digit', minute: '2-digit' });
@@ -700,11 +776,13 @@ function populateTable(tideEvents, minHighThreshold, amStart, amEnd, pmStart, pm
     }
   }
   if (matches === 0) {
-    tbody.innerHTML = `<tr><td colspan="7" style="text-align:center; color:#64748b; padding:24px;">No out-of-hours low tides over the next 30 days have a preceding high tide of at least <strong>${minHighThreshold.toFixed(2)}m</strong> within the configured milling windows under current weather settings.</td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="7" style="text-align:center; color:#64748b; padding:24px;">No suitable low tides over the next 30 days have a preceding high tide of at least <strong>${minHighThreshold.toFixed(2)}m</strong> within the configured milling windows or closed season schedule under current weather settings.</td></tr>`;
   }
 }
 
 document.getElementById('select-timezone').addEventListener('change', renderApp);
+document.getElementById('input-closed-start').addEventListener('change', renderApp);
+document.getElementById('input-closed-end').addEventListener('change', renderApp);
 document.getElementById('input-am-start').addEventListener('change', renderApp);
 document.getElementById('input-am-end').addEventListener('change', renderApp);
 document.getElementById('input-pm-start').addEventListener('change', renderApp);
