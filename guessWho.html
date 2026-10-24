@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Logic Mystery - Detective Grid Puzzle</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['Cinzel', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        noir: {
+                            900: '#0c0f14',
+                            800: '#141923',
+                            700: '#1e2536',
+                            600: '#2b354d',
+                            accent: '#d4af37', // Gold accent
+                            accentHover: '#f3c63f',
+                            red: '#e53e3e',
+                            green: '#38a169'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom styles for grid and interactive elements */
+        body {
+            background-color: #0c0f14;
+            color: #e2e8f0;
+            user-select: none;
+        }
+
+        /* Logic Grid Header Rotate & Alignment */
+        .header-vertical {
+            writing-mode: vertical-lr;
+            transform: rotate(180deg);
+            white-space: nowrap;
+        }
+
+        /* Custom Scrollbars */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #141923;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2b354d;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d4af37;
+        }
+
+        .grid-cell {
+            transition: all 0.15s ease-in-out;
+        }
+        .grid-cell:hover {
+            background-color: rgba(212, 175, 55, 0.15) !important;
+        }
+
+        /* Pulsing outline for victory */
+        @keyframes goldGlow {
+            0%, 100% { border-color: #d4af37; box-shadow: 0 0 10px rgba(212, 175, 55, 0.5); }
+            50% { border-color: #f3c63f; box-shadow: 0 0 20px rgba(243, 198, 63, 0.8); }
+        }
+        .victory-glow {
+            animation: goldGlow 2s infinite;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col font-sans antialiased text-slate-200">
+
+    <!-- Header Navigation -->
+    <header class="border-b border-slate-800 bg-noir-800/90 backdrop-blur sticky top-0 z-30 px-4 py-3">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center shadow-lg shadow-amber-900/30 text-slate-950 font-extrabold text-xl">
+                    <i class="fa-solid fa-user-secret"></i>
+                </div>
+                <div>
+                    <h1 class="font-serif font-bold text-xl md:text-2xl text-amber-400 tracking-wide flex items-center gap-2">
+                        DAILY LOGIC MYSTERY
+                    </h1>
+                    <p class="text-xs text-slate-400 hidden sm:block">Solve the mystery using pure deductive reasoning</p>
+                </div>
+            </div>
+
+            <!-- Controls & Timer Bar -->
+            <div class="flex items-center gap-2 sm:gap-4">
+                <!-- Date Picker / Archive -->
+                <div class="flex items-center bg-noir-700 rounded-lg border border-slate-700 px-2 py-1">
+                    <i class="fa-solid fa-calendar-day text-amber-400 text-sm mr-2"></i>
+                    <input type="date" id="datePicker" class="bg-transparent text-xs sm:text-sm text-slate-200 font-medium focus:outline-none cursor-pointer">
+                </div>
+
+                <!-- Live Timer Display -->
+                <div class="bg-noir-900 border border-amber-500/30 rounded-lg px-3 py-1 text-center min-w-[80px]">
+                    <span class="text-[10px] uppercase tracking-wider text-slate-400 block -mb-1">Time</span>
+                    <span id="timerDisplay" class="font-mono text-base sm:text-lg font-bold text-amber-300">00:00</span>
+                </div>
+
+                <!-- Info / Help Button -->
+                <button id="btnHelp" class="w-9 h-9 rounded-lg bg-noir-700 hover:bg-slate-700 text-slate-300 hover:text-white transition flex items-center justify-center border border-slate-700" title="How to Play">
+                    <i class="fa-solid fa-circle-question"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="flex-1 max-w-7xl w-full mx-auto p-3 sm:p-6 flex flex-col lg:flex-row gap-6">
+
+        <!-- Left Column: Case Clues & Case Notes -->
+        <section class="lg:w-2/5 flex flex-col gap-4">
+            
+            <!-- Case File Info Banner -->
+            <div class="bg-noir-800 rounded-xl border border-slate-700/80 p-4 shadow-xl relative overflow-hidden">
+                <div class="absolute -right-6 -bottom-6 opacity-5 text-amber-400 text-9xl pointer-events-none">
+                    <i class="fa-solid fa-folder-open"></i>
+                </div>
+                <div class="flex justify-between items-start mb-2">
+                    <div>
+                        <span class="text-xs uppercase font-semibold text-amber-500 tracking-wider">Case File #<span id="caseNumber">001</span></span>
+                        <h2 id="caseTitle" class="font-serif text-lg sm:text-xl font-bold text-slate-100">The Manor House Incident</h2>
+                    </div>
+                    <span id="puzzleStatusBadge" class="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-700 text-slate-300">Unsolved</span>
+                </div>
+                <p class="text-xs text-slate-400">
+                    4 Suspects, 4 Weapons, 4 Locations, and 4 Times. Exactly one unique combination fits the crime scene. Read the clues below and mark the deduction grid.
+                </p>
+            </div>
+
+            <!-- Clues Box -->
+            <div class="bg-noir-800 rounded-xl border border-slate-700/80 p-4 shadow-xl flex-1 flex flex-col">
+                <div class="flex items-center justify-between mb-3 border-b border-slate-700 pb-2">
+                    <h3 class="font-serif font-bold text-base text-amber-400 flex items-center gap-2">
+                        <i class="fa-solid fa-magnifying-glass"></i> Investigation Clues
+                    </h3>
+                    <span id="clueCount" class="text-xs bg-noir-900 border border-slate-700 px-2 py-0.5 rounded text-slate-400">0 Clues</span>
+                </div>
+
+                <ul id="cluesList" class="space-y-2.5 text-xs sm:text-sm text-slate-300 flex-1 overflow-y-auto max-h-[380px] lg:max-h-none pr-1">
+                    <!-- Clues populated dynamically -->
+                </ul>
+            </div>
+
+            <!-- Action Controls -->
+            <div class="flex items-center gap-2">
+                <button id="btnUndo" class="flex-1 bg-noir-800 hover:bg-slate-700 border border-slate-700 text-slate-300 py-2.5 px-3 rounded-lg text-xs font-semibold flex items-center justify-center gap-2 transition disabled:opacity-40">
+                    <i class="fa-solid fa-rotate-left"></i> Undo
+                </button>
+                <button id="btnReset" class="flex-1 bg-noir-800 hover:bg-slate-700 border border-slate-700 text-slate-300 py-2.5 px-3 rounded-lg text-xs font-semibold flex items-center justify-center gap-2 transition">
+                    <i class="fa-solid fa-trash-can"></i> Reset Grid
+                </button>
+                <button id="btnAutoX" class="flex-1 bg-noir-800 hover:bg-amber-900/40 border border-amber-600/40 text-amber-300 py-2.5 px-3 rounded-lg text-xs font-semibold flex items-center justify-center gap-2 transition" title="Auto-fill cross marks (X) in row and column when a tick (✓) is placed">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> Auto-X: <span id="autoXStatus" class="text-amber-400 font-bold">ON</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Right Column: Interactive Logic Grid -->
+        <section class="lg:w-3/5 bg-noir-800 rounded-xl border border-slate-700/80 p-3 sm:p-5 shadow-xl flex flex-col justify-between overflow-x-auto">
+            
+            <div class="mb-3 flex items-center justify-between min-w-[500px]">
+                <div class="flex items-center gap-4 text-xs text-slate-400">
+                    <span class="flex items-center gap-1.5"><span class="w-4 h-4 rounded bg-noir-900 border border-slate-600 inline-block"></span> Empty</span>
+                    <span class="flex items-center gap-1.5"><span class="w-4 h-4 rounded bg-red-950/80 border border-red-700/80 text-red-400 text-[10px] flex items-center justify-center font-bold">✕</span> False (Right-Click)</span>
+                    <span class="flex items-center gap-1.5"><span class="w-4 h-4 rounded bg-emerald-950/80 border border-emerald-600/80 text-emerald-400 text-[10px] flex items-center justify-center font-bold">✓</span> True (Left-Click)</span>
+                </div>
+                <div class="text-xs text-slate-400 italic">
+                    Click cell to toggle state
+                </div>
+            </div>
+
+            <!-- Non-Mirrored 3x3 Logic Grid Container -->
+            <div id="gridWrapper" class="relative overflow-x-auto select-none min-w-[540px]">
+                <!-- Dynamic Logic Grid will be rendered here -->
+            </div>
+
+            <!-- Bottom Check / Submit Button Bar -->
+            <div class="mt-4 pt-3 border-t border-slate-700/80 flex items-center justify-between min-w-[500px]">
+                <span class="text-xs text-slate-400" id="markedCountDisplay">0 / 48 cells marked</span>
+                <button id="btnSubmit" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-6 py-2.5 rounded-lg text-sm shadow-lg shadow-amber-500/20 transition flex items-center gap-2">
+                    <i class="fa-solid fa-check-double"></i> Verify Solution
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Help Modal -->
+    <div id="helpModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-noir-800 border border-slate-700 rounded-xl max-w-lg w-full p-6 shadow-2xl relative">
+            <button class="modal-close absolute top-4 right-4 text-slate-400 hover:text-white text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 class="font-serif text-xl font-bold text-amber-400 mb-3 flex items-center gap-2">
+                <i class="fa-solid fa-graduation-cap"></i> How to Solve Logic Grids
+            </h3>
+            <div class="space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed max-h-[70vh] overflow-y-auto pr-2">
+                <p>
+                    Every suspect, weapon, location, and time is paired uniquely in a 1-to-1 relationship. Your goal is to find all true pairs.
+                </p>
+                <div class="bg-noir-900 p-3 rounded-lg border border-slate-700 space-y-2">
+                    <p class="font-semibold text-amber-300">Basic Grid Controls:</p>
+                    <ul class="list-disc list-inside space-y-1 text-xs">
+                        <li><strong class="text-slate-200">Left-click / Tap:</strong> Toggle through <strong>Empty</strong> &rarr; <strong>Cross (✕)</strong> &rarr; <strong>Tick (✓)</strong>.</li>
+                        <li><strong class="text-slate-200">Right-click:</strong> Quick-mark a cell as <strong>Cross (✕)</strong>.</li>
+                    </ul>
+                </div>
+                <div class="bg-noir-900 p-3 rounded-lg border border-slate-700 space-y-2">
+                    <p class="font-semibold text-amber-300">Deduction Rules:</p>
+                    <ul class="list-disc list-inside space-y-1 text-xs">
+                        <li>When a <strong class="text-emerald-400">Tick (✓)</strong> is placed, no other item in that row or column block can match. Place crosses in the rest of that 4x4 section!</li>
+                        <li>Use elimination: If 3 cells in a 4x4 block row are crosses, the 4th cell <strong>must</strong> be a tick.</li>
+                        <li>Cross-reference: If Scarlett was at 3:00 PM, and 3:00 PM was in the Library, then Scarlett was in the Library!</li>
+                    </ul>
+                </div>
+            </div>
+            <button class="modal-close mt-5 w-full bg-slate-700 hover:bg-slate-600 text-white font-semibold py-2 rounded-lg text-sm transition">
+                Got it, let's solve!
+            </button>
+        </div>
+    </div>
+
+    <!-- Victory Modal -->
+    <div id="victoryModal" class="fixed inset-0 bg-slate-950/85 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-noir-800 border-2 border-amber-500 rounded-2xl max-w-md w-full p-6 text-center shadow-2xl relative victory-glow">
+            <div class="w-16 h-16 bg-gradient-to-tr from-amber-500 to-amber-300 text-slate-950 rounded-full flex items-center justify-center text-3xl mx-auto mb-4 shadow-lg shadow-amber-500/30">
+                <i class="fa-solid fa-trophy"></i>
+            </div>
+            <h2 class="font-serif text-2xl font-extrabold text-amber-400 mb-1">CASE SOLVED!</h2>
+            <p id="victorySubtitle" class="text-xs text-slate-400 mb-4">You successfully cracked the daily mystery.</p>
+
+            <!-- Stats Box -->
+            <div class="grid grid-cols-2 gap-3 bg-noir-900 p-3 rounded-xl border border-slate-700 mb-5">
+                <div>
+                    <span class="text-[10px] uppercase tracking-wider text-slate-400 block">Solving Time</span>
+                    <span id="victoryTime" class="font-mono text-xl font-bold text-emerald-400">00:00</span>
+                </div>
+                <div>
+                    <span class="text-[10px] uppercase tracking-wider text-slate-400 block">Puzzle Date</span>
+                    <span id="victoryDate" class="font-mono text-sm font-semibold text-slate-200 mt-1 block">2026-10-24</span>
+                </div>
+            </div>
+
+            <!-- Solution Summary Accordion -->
+            <div id="solutionSummary" class="bg-noir-900/60 p-3 rounded-xl border border-slate-700/80 mb-5 text-left text-xs space-y-1 text-slate-300">
+                <p class="font-semibold text-amber-400 mb-2 border-b border-slate-700 pb-1">Final Investigation Report:</p>
+                <div id="solutionSummaryList" class="space-y-1 font-mono text-[11px]">
+                    <!-- Solution list -->
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <button id="btnShare" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl shadow-lg shadow-emerald-600/30 transition flex items-center justify-center gap-2 text-sm">
+                    <i class="fa-solid fa-share-nodes"></i> Share Results to Clipboard
+                </button>
+                <button class="modal-close bg-noir-700 hover:bg-slate-700 text-slate-300 py-2.5 px-4 rounded-xl text-xs font-semibold transition">
+                    Close Case File
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-5 right-5 bg-amber-500 text-slate-950 font-bold px-4 py-2.5 rounded-lg shadow-2xl transition-all duration-300 opacity-0 transform translate-y-4 pointer-events-none z-50 text-xs sm:text-sm flex items-center gap-2">
+        <i class="fa-solid fa-circle-info"></i> <span id="toastMsg">Notification</span>
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        /**
+         * MASTER CATEGORIES DATA & POOLS
+         */
+        const MASTER_DATA = {
+            persons: ['Scarlet', 'Mustard', 'Green', 'Peacock'],
+            implements: ['Dagger', 'Candlestick', 'Revolver', 'Rope'],
+            places: ['Library', 'Kitchen', 'Ballroom', 'Conservatory'],
+            times: ['1:00 PM', '3:00 PM', '6:00 PM', '9:00 PM']
+        };
+
+        // Time order for relative clues ("earlier than", "later than")
+        const TIME_ORDER = ['1:00 PM', '3:00 PM', '6:00 PM', '9:00 PM'];
+
+        /**
+         * SEEDED PSEUDO-RANDOM NUMBER GENERATOR (Mulberry32)
+         */
+        function mulberry32(a) {
+            return function() {
+                var t = a += 0x6D2B79F5;
+                t = Math.imul(t ^ (t >>> 15), t | 1);
+                t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+                return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+            }
+        }
+
+        function stringToSeed(str) {
+            let hash = 0;
+            for (let i = 0; i < str.length; i++) {
+                hash = Math.imul(31, hash) + str.charCodeAt(i) | 0;
+            }
+            return hash;
+        }
+
+        let rng = Math.random; // Default to standard RNG, replaced when date is set
+
+        function seededShuffle(array) {
+            let arr = [...array];
+            for (let i = arr.length - 1; i > 0; i--) {
+                const j = Math.floor(rng() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            return arr;
+        }
+
+        /**
+         * PUZZLE GENERATOR & SOLVER
+         */
+        let currentSolution = []; // Array of 4 objects { person, implement, place, time }
+        let generatedClues = [];
+        let currentDateStr = '';
+        let gameTimer = null;
+        let timerSeconds = 0;
+        let timerStarted = false;
+        let autoFillCrosses = true;
+        let moveHistory = [];
+
+        // Grid Cell States
+        // 0 = Empty, 1 = Cross (X), 2 = Tick (✓)
+        let gridState = {};
+
+        /**
+         * Initialize Day's Game
+         */
+        function initDailyGame(dateStr) {
+            currentDateStr = dateStr;
+            const seed = stringToSeed("DEDUCTION_MYSTERY_" + dateStr);
+            rng = mulberry32(seed);
+
+            // Update Header Case Number
+            const dateNum = dateStr.replace(/-/g, '');
+            document.getElementById('caseNumber').innerText = dateNum.slice(-4);
+            document.getElementById('victoryDate').innerText = dateStr;
+
+            // Generate unique solution mapping
+            const shuffledPersons = MASTER_DATA.persons; // Keep static row labels for standard display
+            const shuffledImplements = seededShuffle(MASTER_DATA.implements);
+            const shuffledPlaces = seededShuffle(MASTER_DATA.places);
+            const shuffledTimes = seededShuffle(MASTER_DATA.times);
+
+            currentSolution = [];
+            for (let i = 0; i < 4; i++) {
+                currentSolution.push({
+                    person: shuffledPersons[i],
+                    implement: shuffledImplements[i],
+                    place: shuffledPlaces[i],
+                    time: shuffledTimes[i]
+                });
+            }
+
+            // Generate strictly solvable clues
+            generatedClues = generateCluesForSolution(currentSolution);
+
+            // Reset Board & Timer
+            resetTimer();
+            gridState = {};
+            moveHistory = [];
+            
+            // Build UI Grid and Render Clues
+            renderGridUI();
+            renderClues();
+
+            // Load saved state if available for this specific date
+            loadLocalState();
+
+            updateStatusBadge();
+            updateMarkedCount();
+        }
+
+        /**
+         * Generate Clues
+         */
+        function generateCluesForSolution(solution) {
+            let clues = [];
+
+            // Helper to get element details
+            const getPerson = (p) => solution.find(s => s.person === p);
+            const getImpl = (imp) => solution.find(s => s.implement === imp);
+            const getPlace = (pl) => solution.find(s => s.place === pl);
+
+            // Type 1: Direct Match Clues ("The person with Dagger was in Library")
+            for (let i = 0; i < 4; i++) {
+                const sol = solution[i];
+                if (i === 0) {
+                    clues.push({
+                        text: `${sol.person} was seen at ${sol.time}.`,
+                        type: 'direct'
+                    });
+                } else if (i === 1) {
+                    clues.push({
+                        text: `The ${sol.implement} was used in the ${sol.place}.`,
+                        type: 'direct'
+                    });
+                } else if (i === 2) {
+                    clues.push({
+                        text: `The item used at ${sol.time} was the ${sol.implement}.`,
+                        type: 'direct'
+                    });
+                } else if (i === 3) {
+                    clues.push({
+                        text: `${sol.person} carried out their plan in the ${sol.place}.`,
+                        type: 'direct'
+                    });
+                }
+            }
+
+            // Type 2: Negative Clues ("Green was not in the Kitchen")
+            const p1 = solution[0].person;
+            const unusedPlace1 = MASTER_DATA.places.find(p => p !== solution[0].place);
+            clues.push({
+                text: `${p1} was NOT in the ${unusedPlace1}.`,
+                type: 'negative'
+            });
+
+            const p2 = solution[1].person;
+            const unusedImpl1 = MASTER_DATA.implements.find(i => i !== solution[1].implement);
+            clues.push({
+                text: `${p2} did NOT use the ${unusedImpl1}.`,
+                type: 'negative'
+            });
+
+            // Type 3: Relative Time Clues ("Mustard was seen earlier than the person in Ballroom")
+            // Find two people with different times
+            const solA = solution[0];
+            const solB = solution[1];
+            const timeAIdx = TIME_ORDER.indexOf(solA.time);
+            const timeBIdx = TIME_ORDER.indexOf(solB.time);
+
+            if (timeAIdx < timeBIdx) {
+                clues.push({
+                    text: `${solA.person} was active EARLIER than the person in the ${solB.place}.`,
+                    type: 'relative'
+                });
+            } else {
+                clues.push({
+                    text: `${solB.person} was active EARLIER than the person with the ${solA.implement}.`,
+                    type: 'relative'
+                });
+            }
+
+            // Additional linking clue
+            const solC = solution[2];
+            clues.push({
+                text: `The incident in the ${solC.place} occurred at ${solC.time}.`,
+                type: 'direct'
+            });
+
+            return clues;
+        }
+
+        /**
+         * Render human-readable clue list
+         */
+        function renderClues() {
+            const listEl = document.getElementById('cluesList');
+            document.getElementById('clueCount').innerText = `${generatedClues.length} Clues`;
+            listEl.innerHTML = '';
+
+            generatedClues.forEach((clue, idx) => {
+                const li = document.createElement('li');
+                li.className = "bg-noir-900/80 border border-slate-700/70 p-3 rounded-lg flex items-start gap-2.5 transition hover:border-amber-500/50 cursor-pointer group";
+                li.innerHTML = `
+                    <span class="w-5 h-5 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-amber-500 group-hover:text-slate-950 transition">
+                        ${idx + 1}
+                    </span>
+                    <span class="text-slate-200 leading-snug group-hover:text-white transition">${clue.text}</span>
+                `;
+                // Click to mark clue as completed/read
+                li.addEventListener('click', () => {
+                    li.classList.toggle('opacity-40');
+                    li.classList.toggle('line-through');
+                });
+                listEl.appendChild(li);
+            });
+        }
+
+        /**
+         * RENDER NON-REDUNDANT 3x3 LOGIC GRID UI
+         * Standard non-mirrored logic grid pairing structure:
+         * Rows Categories:
+         *   1. Person (4)
+         *   2. Implement (4)
+         *   3. Place (4)
+         * Cols Categories:
+         *   1. Implement (4)
+         *   2. Place (4)
+         *   3. Time (4)
+         * Subgrid Layout (Top-Left 3x3 logical layout):
+         *   Row Block 1 (Person) vs: Implement (Col1), Place (Col2), Time (Col3)
+         *   Row Block 2 (Implement) vs: Place (Col2), Time (Col3)
+         *   Row Block 3 (Place) vs: Time (Col3)
+         */
+        function renderGridUI() {
+            const wrapper = document.getElementById('gridWrapper');
+            wrapper.innerHTML = '';
+
+            // Grid categories definition
+            const rowCategories = [
+                { id: 'person', title: 'Suspects', items: MASTER_DATA.persons },
+                { id: 'implement', title: 'Weapons', items: MASTER_DATA.implements },
+                { id: 'place', title: 'Locations', items: MASTER_DATA.places }
+            ];
+
+            const colCategories = [
+                { id: 'implement', title: 'Weapons', items: MASTER_DATA.implements },
+                { id: 'place', title: 'Locations', items: MASTER_DATA.places },
+                { id: 'time', title: 'Times', items: MASTER_DATA.times }
+            ];
+
+            const table = document.createElement('table');
+            table.className = "w-full border-collapse text-xs select-none";
+
+            // 1. TOP HEADER ROWS (Category titles & Column items)
+            const thead = document.createElement('thead');
+            
+            // Header Row 1: Category Titles
+            const trCatHeader = document.createElement('tr');
+            // Empty corner cell for row category titles
+            const thCorner = document.createElement('th');
+            thCorner.colSpan = 2;
+            thCorner.rowSpan = 2;
+            thCorner.className = "bg-noir-900 border border-slate-700 p-2 text-amber-400 font-serif font-bold text-center";
+            thCorner.innerText = "EVIDENCE GRID";
+            trCatHeader.appendChild(thCorner);
+
+            colCategories.forEach(colCat => {
+                const th = document.createElement('th');
+                th.colSpan = 4;
+                th.className = "bg-noir-900/90 border border-slate-700 py-1.5 px-2 text-amber-400 font-serif font-semibold text-center tracking-wider uppercase text-[11px]";
+                th.innerText = colCat.title;
+                trCatHeader.appendChild(th);
+            });
+            thead.appendChild(trCatHeader);
+
+            // Header Row 2: Sub-item names (Vertical orientation)
+            const trSubHeader = document.createElement('tr');
+            colCategories.forEach(colCat => {
+                colCat.items.forEach(item => {
+                    const th = document.createElement('th');
+                    th.className = "bg-noir-800 border border-slate-700/80 p-1 h-24 align-bottom text-slate-300 font-medium text-[11px]";
+                    th.innerHTML = `<div class="header-vertical text-left max-h-20 truncate">${item}</div>`;
+                    trSubHeader.appendChild(th);
+                });
+            });
+            thead.appendChild(trSubHeader);
+            table.appendChild(thead);
+
+            // 2. GRID BODY
+            const tbody = document.createElement('tbody');
+
+            rowCategories.forEach((rowCat, rCatIdx) => {
+                rowCat.items.forEach((rowItem, rItemIdx) => {
+                    const tr = document.createElement('tr');
+
+                    // Left Row Category Title (Span 1st row of group)
+                    if (rItemIdx === 0) {
+                        const tdCat = document.createElement('td');
+                        tdCat.rowSpan = 4;
+                        tdCat.className = "bg-noir-900/90 border border-slate-700 p-1 text-center font-serif font-semibold text-amber-400 uppercase tracking-wider text-[11px] h-full";
+                        tdCat.innerHTML = `<div class="header-vertical text-center mx-auto">${rowCat.title}</div>`;
+                        tr.appendChild(tdCat);
+                    }
+
+                    // Row Item Name
+                    const tdRowLabel = document.createElement('td');
+                    tdRowLabel.className = "bg-noir-800 border border-slate-700/80 px-2 py-1.5 text-slate-200 font-medium whitespace-nowrap text-[11px]";
+                    tdRowLabel.innerText = rowItem;
+                    tr.appendChild(tdRowLabel);
+
+                    // Decision Cells across column blocks
+                    colCategories.forEach((colCat, cCatIdx) => {
+                        // Check non-redundancy: Only show top-left valid subgrids
+                        // Pair condition: row category index <= column category index relative mapping
+                        const isSubgridValid = isValidSubgridPair(rowCat.id, colCat.id);
+
+                        colCat.items.forEach((colItem, cItemIdx) => {
+                            const tdCell = document.createElement('td');
+
+                            if (isSubgridValid) {
+                                const cellKey = `${rowCat.id}:${rowItem}|${colCat.id}:${colItem}`;
+                                tdCell.className = "grid-cell w-9 h-9 border border-slate-700/60 text-center align-middle cursor-pointer font-extrabold text-sm relative bg-noir-900/40";
+                                tdCell.dataset.key = cellKey;
+                                tdCell.dataset.rowCat = rowCat.id;
+                                tdCell.dataset.rowItem = rowItem;
+                                tdCell.dataset.colCat = colCat.id;
+                                tdCell.dataset.colItem = colItem;
+
+                                // Right-click handler
+                                tdCell.addEventListener('contextmenu', (e) => {
+                                    e.preventDefault();
+                                    handleCellClick(tdCell, true);
+                                });
+
+                                // Left-click handler
+                                tdCell.addEventListener('click', () => {
+                                    handleCellClick(tdCell, false);
+                                });
+
+                                updateCellDOM(tdCell, gridState[cellKey] || 0);
+                            } else {
+                                // Blocked/Redundant section
+                                tdCell.className = "bg-slate-950/80 border border-slate-800/80 pointer-events-none opacity-20";
+                            }
+
+                            tr.appendChild(tdCell);
+                        });
+                    });
+
+                    tbody.appendChild(tr);
+                });
+            });
+
+            table.appendChild(tbody);
+            wrapper.appendChild(table);
+        }
+
+        /**
+         * Determines if a subgrid block is part of the non-redundant set
+         */
+        function isValidSubgridPair(rowCatId, colCatId) {
+            const validPairs = [
+                'person-implement',
+                'person-place',
+                'person-time',
+                'implement-place',
+                'implement-time',
+                'place-time'
+            ];
+            return validPairs.includes(`${rowCatId}-${colCatId}`);
+        }
+
+        /**
+         * Handle Cell Clicks and Toggles
+         */
+        function handleCellClick(cellEl, isRightClick) {
+            const key = cellEl.dataset.key;
+            const currentState = gridState[key] || 0;
+            let newState = 0;
+
+            if (isRightClick) {
+                newState = currentState === 1 ? 0 : 1; // Toggle cross on right-click
+            } else {
+                // Cycle through: 0 (Empty) -> 1 (Cross) -> 2 (Tick) -> 0
+                newState = (currentState + 1) % 3;
+            }
+
+            // Start timer on first interaction
+            if (!timerStarted) {
+                startTimer();
+            }
+
+            // Save history for undo
+            moveHistory.push({ key: key, prevState: currentState, newState: newState });
+
+            gridState[key] = newState;
+            updateCellDOM(cellEl, newState);
+
+            // Auto-X Rule Logic when a tick (2) is set
+            if (newState === 2 && autoFillCrosses) {
+                applyAutoX(cellEl.dataset.rowCat, cellEl.dataset.rowItem, cellEl.dataset.colCat, cellEl.dataset.colItem, key);
+            }
+
+            saveLocalState();
+            updateMarkedCount();
+            checkAutoVictory();
+        }
+
+        /**
+         * Update individual cell display in DOM
+         */
+        function updateCellDOM(cellEl, state) {
+            if (state === 1) {
+                // Cross (X)
+                cellEl.innerHTML = '<span class="text-red-400 font-bold">✕</span>';
+                cellEl.style.backgroundColor = 'rgba(153, 27, 27, 0.25)';
+            } else if (state === 2) {
+                // Tick (✓)
+                cellEl.innerHTML = '<span class="text-emerald-400 font-extrabold text-base">✓</span>';
+                cellEl.style.backgroundColor = 'rgba(6, 78, 59, 0.45)';
+            } else {
+                // Empty
+                cellEl.innerHTML = '';
+                cellEl.style.backgroundColor = '';
+            }
+        }
+
+        /**
+         * Auto-fill Crosses in row and column inside the same subgrid block when a Tick is placed
+         */
+        function applyAutoX(rowCat, rowItem, colCat, colItem, triggerKey) {
+            const allSubgridCells = document.querySelectorAll(`[data-row-cat="${rowCat}"][data-col-cat="${colCat}"]`);
+            
+            allSubgridCells.forEach(cell => {
+                const k = cell.dataset.key;
+                if (k !== triggerKey) {
+                    const isSameRow = cell.dataset.rowItem === rowItem;
+                    const isSameCol = cell.dataset.colItem === colItem;
+
+                    if (isSameRow || isSameCol) {
+                        if (gridState[k] !== 1) {
+                            gridState[k] = 1;
+                            updateCellDOM(cell, 1);
+                        }
+                    }
+                }
+            });
+        }
+
+        /**
+         * Undo Last Action
+         */
+        function undoLastMove() {
+            if (moveHistory.length === 0) return;
+            const lastMove = moveHistory.pop();
+            gridState[lastMove.key] = lastMove.prevState;
+            
+            const cellEl = document.querySelector(`[data-key="${lastMove.key}"]`);
+            if (cellEl) {
+                updateCellDOM(cellEl, lastMove.prevState);
+            }
+
+            saveLocalState();
+            updateMarkedCount();
+            showToast("Move Undone");
+        }
+
+        /**
+         * Reset Grid
+         */
+        function resetGrid() {
+            if (confirm("Are you sure you want to clear all grid entries for this puzzle?")) {
+                gridState = {};
+                moveHistory = [];
+                document.querySelectorAll('.grid-cell').forEach(cell => {
+                    updateCellDOM(cell, 0);
+                });
+                saveLocalState();
+                updateMarkedCount();
+                showToast("Grid Cleared");
+            }
+        }
+
+        /**
+         * Check if board matches solution
+         */
+        function checkSolution() {
+            let correctTicksCount = 0;
+            let incorrectTicks = 0;
+
+            // There are 6 subgrids, each having 4 correct ticks = 24 correct ticks total
+            const requiredTickPairs = [
+                // Extract pairs from current solution
+            ];
+
+            currentSolution.forEach(sol => {
+                requiredTickPairs.push({ rCat: 'person', rItem: sol.person, cCat: 'implement', cItem: sol.implement });
+                requiredTickPairs.push({ rCat: 'person', rItem: sol.person, cCat: 'place', cItem: sol.place });
+                requiredTickPairs.push({ rCat: 'person', rItem: sol.person, cCat: 'time', cItem: sol.time });
+                requiredTickPairs.push({ rCat: 'implement', rItem: sol.implement, cCat: 'place', cItem: sol.place });
+                requiredTickPairs.push({ rCat: 'implement', rItem: sol.implement, cCat: 'time', cItem: sol.time });
+                requiredTickPairs.push({ rCat: 'place', rItem: sol.place, cCat: 'time', cItem: sol.time });
+            });
+
+            // Check if all required ticks exist and no invalid ticks are present
+            requiredTickPairs.forEach(pair => {
+                const key = `${pair.rCat}:${pair.rItem}|${pair.cCat}:${pair.cItem}`;
+                if (gridState[key] === 2) {
+                    correctTicksCount++;
+                }
+            });
+
+            // Count total ticks currently on board
+            let totalTicksOnBoard = 0;
+            Object.keys(gridState).forEach(k => {
+                if (gridState[k] === 2) totalTicksOnBoard++;
+            });
+
+            if (correctTicksCount === 24 && totalTicksOnBoard === 24) {
+                handleVictory();
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function checkAutoVictory() {
+            let totalTicksOnBoard = 0;
+            Object.keys(gridState).forEach(k => {
+                if (gridState[k] === 2) totalTicksOnBoard++;
+            });
+
+            if (totalTicksOnBoard >= 24) {
+                if (checkSolution()) {
+                    // Victory triggered
+                }
+            }
+        }
+
+        /**
+         * Victory Trigger
+         */
+        function handleVictory() {
+            stopTimer();
+            updateStatusBadge(true);
+
+            // Populate Solution Summary List
+            const summaryList = document.getElementById('solutionSummaryList');
+            summaryList.innerHTML = '';
+            currentSolution.forEach(s => {
+                const item = document.createElement('div');
+                item.className = "flex justify-between border-b border-slate-800 pb-1";
+                item.innerHTML = `<span class="text-amber-400 font-bold">${s.person}:</span> <span>${s.implement} • ${s.place} • ${s.time}</span>`;
+                summaryList.appendChild(item);
+            });
+
+            document.getElementById('victoryTime').innerText = formatTime(timerSeconds);
+            document.getElementById('victoryModal').classList.remove('hidden');
+
+            saveLocalState(true);
+        }
+
+        /**
+         * TIMER FUNCTIONS
+         */
+        function startTimer() {
+            if (timerStarted) return;
+            timerStarted = true;
+            gameTimer = setInterval(() => {
+                timerSeconds++;
+                document.getElementById('timerDisplay').innerText = formatTime(timerSeconds);
+            }, 1000);
+        }
+
+        function stopTimer() {
+            if (gameTimer) {
+                clearInterval(gameTimer);
+                gameTimer = null;
+            }
+        }
+
+        function resetTimer() {
+            stopTimer();
+            timerStarted = false;
+            timerSeconds = 0;
+            document.getElementById('timerDisplay').innerText = "00:00";
+        }
+
+        function formatTime(seconds) {
+            const m = Math.floor(seconds / 60).toString().padStart(2, '0');
+            const s = (seconds % 60).toString().padStart(2, '0');
+            return `${m}:${s}`;
+        }
+
+        /**
+         * LOCAL STORAGE PERSISTENCE
+         */
+        function saveLocalState(isSolved = false) {
+            const stateObj = {
+                gridState: gridState,
+                timerSeconds: timerSeconds,
+                timerStarted: timerStarted,
+                isSolved: isSolved || (document.getElementById('puzzleStatusBadge').innerText === 'Solved')
+            };
+            localStorage.setItem(`logic_puzzle_${currentDateStr}`, JSON.stringify(stateObj));
+        }
+
+        function loadLocalState() {
+            const saved = localStorage.getItem(`logic_puzzle_${currentDateStr}`);
+            if (saved) {
+                try {
+                    const parsed = JSON.parse(saved);
+                    gridState = parsed.gridState || {};
+                    timerSeconds = parsed.timerSeconds || 0;
+                    document.getElementById('timerDisplay').innerText = formatTime(timerSeconds);
+
+                    if (parsed.timerStarted && !parsed.isSolved) {
+                        startTimer();
+                    }
+
+                    if (parsed.isSolved) {
+                        updateStatusBadge(true);
+                    }
+
+                    // Restore grid cell states
+                    Object.keys(gridState).forEach(k => {
+                        const cell = document.querySelector(`[data-key="${k}"]`);
+                        if (cell) {
+                            updateCellDOM(cell, gridState[k]);
+                        }
+                    });
+                } catch (e) {
+                    console.error("Failed to load state", e);
+                }
+            }
+        }
+
+        /**
+         * SHARE RESULTS FUNCTION
+         */
+        function shareResults() {
+            const puzzleNum = currentDateStr.replace(/-/g, '').slice(-4);
+            const timeFormatted = formatTime(timerSeconds);
+            
+            const shareText = `Daily Logic Mystery #${puzzleNum} (${currentDateStr})\n` +
+                              `Time: ${timeFormatted}\n` +
+                              `🧩 Solved using pure deduction!\n\n` +
+                              `Play at: ${window.location.href}`;
+
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(shareText).then(() => {
+                    showToast("Results copied to clipboard!");
+                }).catch(() => {
+                    fallbackCopy(shareText);
+                });
+            } else {
+                fallbackCopy(shareText);
+            }
+        }
+
+        function fallbackCopy(text) {
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+            showToast("Results copied to clipboard!");
+        }
+
+        /**
+         * UI HELPERS
+         */
+        function updateStatusBadge(solved = false) {
+            const badge = document.getElementById('puzzleStatusBadge');
+            if (solved) {
+                badge.innerText = 'Solved';
+                badge.className = 'text-xs font-bold px-2.5 py-1 rounded-full bg-emerald-950 text-emerald-400 border border-emerald-600/50';
+            } else {
+                badge.innerText = 'In Progress';
+                badge.className = 'text-xs font-semibold px-2.5 py-1 rounded-full bg-amber-950/60 text-amber-400 border border-amber-600/40';
+            }
+        }
+
+        function updateMarkedCount() {
+            let count = 0;
+            Object.keys(gridState).forEach(k => {
+                if (gridState[k] !== 0) count++;
+            });
+            document.getElementById('markedCountDisplay').innerText = `${count} / 96 cells marked`;
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMsg').innerText = msg;
+            toast.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
+            }, 2500);
+        }
+
+        /**
+         * INITIALIZATION & EVENT LISTENERS
+         */
+        window.addEventListener('DOMContentLoaded', () => {
+            // Set default date to today YYYY-MM-DD
+            const todayStr = new Date().toISOString().split('T')[0];
+            const dateInput = document.getElementById('datePicker');
+            dateInput.value = todayStr;
+
+            initDailyGame(todayStr);
+
+            // Date picker change event
+            dateInput.addEventListener('change', (e) => {
+                if (e.target.value) {
+                    initDailyGame(e.target.value);
+                }
+            });
+
+            // Action Buttons
+            document.getElementById('btnUndo').addEventListener('click', undoLastMove);
+            document.getElementById('btnReset').addEventListener('click', resetGrid);
+            
+            const btnAutoX = document.getElementById('btnAutoX');
+            btnAutoX.addEventListener('click', () => {
+                autoFillCrosses = !autoFillCrosses;
+                document.getElementById('autoXStatus').innerText = autoFillCrosses ? 'ON' : 'OFF';
+                showToast(`Auto-X helper ${autoFillCrosses ? 'Enabled' : 'Disabled'}`);
+            });
+
+            document.getElementById('btnSubmit').addEventListener('click', () => {
+                if (!checkSolution()) {
+                    showToast("Solution incomplete or contains errors. Keep investigating!");
+                }
+            });
+
+            // Modals Logic
+            document.getElementById('btnHelp').addEventListener('click', () => {
+                document.getElementById('helpModal').classList.remove('hidden');
+            });
+
+            document.querySelectorAll('.modal-close').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.getElementById('helpModal').classList.add('hidden');
+                    document.getElementById('victoryModal').classList.add('hidden');
+                });
+            });
+
+            document.getElementById('btnShare').addEventListener('click', shareResults);
+        });
+    </script>
+</body>
+</html>
