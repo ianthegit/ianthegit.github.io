@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoppo Whodunnit - Detective Logic Grid Puzzle</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['Cinzel', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        noir: {
+                            900: '#0c0f14',
+                            800: '#141923',
+                            700: '#1e2536',
+                            600: '#2b354d',
+                            accent: '#d4af37',
+                            accentHover: '#f3c63f',
+                            red: '#e53e3e',
+                            green: '#38a169'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0c0f14;
+            color: #e2e8f0;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        .header-vertical {
+            writing-mode: vertical-lr;
+            transform: rotate(180deg);
+            white-space: nowrap;
+        }
+
+        /* Logic Grid Table Styling - No Inner Scroll, Pure Responsive Flow */
+        .logic-grid-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .logic-grid-table {
+            border-collapse: separate;
+            border-spacing: 0;
+            background-color: #0c0f14;
+            margin: 0 auto;
+            table-layout: fixed;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .logic-cell {
+            box-sizing: border-box;
+            border-right: 1px solid #2b354d;
+            border-bottom: 1px solid #2b354d;
+            text-align: center;
+            vertical-align: middle;
+            font-weight: 800;
+            padding: 0;
+            height: 32px;
+            font-size: 0.85rem;
+        }
+
+        @media (min-width: 480px) {
+            .logic-cell {
+                height: 38px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (min-width: 640px) {
+            .logic-cell {
+                height: 44px;
+                font-size: 1.15rem;
+            }
+        }
+
+        .logic-cell-active {
+            cursor: pointer;
+            background-color: rgba(20, 25, 35, 0.9);
+        }
+        .logic-cell-active:hover {
+            background-color: rgba(212, 175, 55, 0.25) !important;
+        }
+
+        .logic-cell-disabled {
+            background-color: rgba(12, 15, 20, 0.95);
+            background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.03) 0, rgba(255, 255, 255, 0.03) 10px, transparent 10px, transparent 20px);
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+
+        /* 3px Gold Category Dividers */
+        .thick-cat-right {
+            border-right: 3px solid #d4af37 !important;
+        }
+        .thick-cat-bottom {
+            border-bottom: 3px solid #d4af37 !important;
+        }
+
+        @keyframes goldGlow {
+            0%, 100% { border-color: #d4af37; box-shadow: 0 0 10px rgba(212, 175, 55, 0.5); }
+            50% { border-color: #f3c63f; box-shadow: 0 0 20px rgba(243, 198, 63, 0.8); }
+        }
+        .victory-glow {
+            animation: goldGlow 2s infinite;
+        }
+
+        @keyframes redPulse {
+            0%, 100% { border-color: #ef4444; box-shadow: 0 0 10px rgba(239, 68, 68, 0.5); }
+            50% { border-color: #f87171; box-shadow: 0 0 20px rgba(248, 113, 113, 0.8); }
+        }
+        .failure-glow {
+            animation: redPulse 2s infinite;
+        }
+
+        @keyframes eggRainbow {
+            0% { border-color: #f43f5e; box-shadow: 0 0 15px rgba(244, 63, 94, 0.6); }
+            33% { border-color: #a855f7; box-shadow: 0 0 15px rgba(168, 85, 247, 0.6); }
+            66% { border-color: #06b6d4; box-shadow: 0 0 15px rgba(6, 182, 212, 0.6); }
+            100% { border-color: #eab308; box-shadow: 0 0 15px rgba(234, 179, 8, 0.6); }
+        }
+        .easter-egg-glow {
+            animation: eggRainbow 3s infinite alternate;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col font-sans antialiased text-slate-200">
+
+    <!-- Header Navigation -->
+    <header class="border-b border-slate-800 bg-noir-800/90 backdrop-blur sticky top-0 z-40 px-3 sm:px-4 py-3">
+        <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
+            <div class="flex items-center gap-2 sm:gap-3">
+                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center shadow-lg shadow-amber-900/30 text-slate-950 font-extrabold text-lg sm:text-xl shrink-0">
+                    <i class="fa-solid fa-user-secret"></i>
+                </div>
+                <div>
+                    <h1 class="font-serif font-bold text-base sm:text-2xl text-amber-400 tracking-wide flex items-center gap-2">
+                        HOPPO WHODUNNIT
+                    </h1>
+                    <p class="text-[10px] sm:text-xs text-slate-400 hidden sm:block">Detective Logic Puzzle • <span id="dayModeBadge" class="text-amber-300 font-semibold">Weekday Edition (4x4)</span></p>
+                </div>
+            </div>
+
+            <!-- Controls & Timer Bar -->
+            <div class="flex items-center gap-2 sm:gap-4">
+                <!-- Date Picker / Archive -->
+                <div class="flex items-center bg-noir-700 rounded-lg border border-slate-700 px-2 py-1">
+                    <i class="fa-solid fa-calendar-day text-amber-400 text-xs sm:text-sm mr-1.5"></i>
+                    <input type="date" id="datePicker" class="bg-transparent text-xs sm:text-sm text-slate-200 font-medium focus:outline-none cursor-pointer">
+                </div>
+
+                <!-- Live Countdown Display -->
+                <div id="timerContainer" class="bg-noir-900 border border-amber-500/30 rounded-lg px-2 sm:px-3 py-1 text-center min-w-[75px] sm:min-w-[95px]">
+                    <span class="text-[9px] sm:text-[10px] uppercase tracking-wider text-slate-400 block -mb-0.5 sm:-mb-1">Time Left</span>
+                    <span id="timerDisplay" class="font-mono text-xs sm:text-lg font-bold text-amber-300">10:00</span>
+                </div>
+
+                <!-- Info / Help Button -->
+                <button id="btnHelp" class="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-noir-700 hover:bg-slate-700 text-slate-300 hover:text-white transition flex items-center justify-center border border-slate-700 shrink-0" title="How to Play">
+                    <i class="fa-solid fa-circle-question text-sm sm:text-base"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container - Standard Page Scroll -->
+    <main class="flex-1 max-w-7xl w-full mx-auto p-3 sm:p-6 flex flex-col lg:flex-row gap-6">
+
+        <!-- Left Column: Case Clues & Case Notes -->
+        <section class="lg:w-2/5 flex flex-col gap-4">
+            
+            <!-- Case File Info Banner -->
+            <div class="bg-noir-800 rounded-xl border border-slate-700/80 p-4 shadow-xl relative overflow-hidden">
+                <div class="absolute -right-6 -bottom-6 opacity-5 text-amber-400 text-9xl pointer-events-none">
+                    <i class="fa-solid fa-folder-open"></i>
+                </div>
+                <div class="flex justify-between items-start mb-2">
+                    <div>
+                        <span class="text-[10px] sm:text-xs uppercase font-semibold text-amber-500 tracking-wider">Hoppo Case File #<span id="caseNumber">001</span></span>
+                        <h2 id="caseTitle" class="font-serif text-base sm:text-xl font-bold text-slate-100">The Mystery Docket</h2>
+                    </div>
+                    <span id="puzzleStatusBadge" class="text-xs font-semibold px-2.5 py-1 rounded-full bg-slate-700 text-slate-300">Unsolved</span>
+                </div>
+                <p id="caseDescription" class="text-xs text-slate-400">
+                    4 Suspects, 4 Weapons, 4 Locations, and 4 Times. Read the clues below and mark the logic grid to deduce the truth.
+                </p>
+            </div>
+
+            <!-- Clues Box -->
+            <div class="bg-noir-800 rounded-xl border border-slate-700/80 p-4 shadow-xl flex-1 flex flex-col">
+                <div class="flex items-center justify-between mb-3 border-b border-slate-700 pb-2">
+                    <h3 class="font-serif font-bold text-sm sm:text-base text-amber-400 flex items-center gap-2">
+                        <i class="fa-solid fa-magnifying-glass"></i> Investigation Clues
+                    </h3>
+                    <span id="clueCount" class="text-xs bg-noir-900 border border-slate-700 px-2 py-0.5 rounded text-slate-400">0 Clues</span>
+                </div>
+
+                <ul id="cluesList" class="space-y-2 text-xs sm:text-sm text-slate-300 flex-1 pr-1">
+                    <!-- Clues populated dynamically -->
+                </ul>
+            </div>
+
+            <!-- Action Controls -->
+            <div class="flex items-center gap-2">
+                <button id="btnUndo" class="flex-1 bg-noir-800 hover:bg-slate-700 border border-slate-700 text-slate-300 py-2.5 px-2 sm:px-3 rounded-lg text-xs font-semibold flex items-center justify-center gap-1.5 transition">
+                    <i class="fa-solid fa-rotate-left"></i> Undo
+                </button>
+                <button id="btnReset" class="flex-1 bg-noir-800 hover:bg-slate-700 border border-slate-700 text-slate-300 py-2.5 px-2 sm:px-3 rounded-lg text-xs font-semibold flex items-center justify-center gap-1.5 transition">
+                    <i class="fa-solid fa-trash-can"></i> Reset
+                </button>
+                <button id="btnAutoX" class="flex-1 bg-noir-800 hover:bg-slate-700 border border-slate-700 text-slate-300 py-2.5 px-2 sm:px-3 rounded-lg text-xs font-semibold flex items-center justify-center gap-1.5 transition" title="Auto-fill cross marks (X) in row and column when a tick (✓) is placed">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> Auto-X: <span id="autoXStatus" class="text-slate-400 font-bold">OFF</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Right Column: Natural Flow Responsive Logic Grid -->
+        <section class="lg:w-3/5 bg-noir-800 rounded-xl border border-slate-700/80 p-2 sm:p-5 shadow-xl flex flex-col justify-between">
+            
+            <div class="mb-3 flex items-center justify-between flex-wrap gap-2 px-1">
+                <div class="flex items-center gap-2 sm:gap-3 text-[11px] sm:text-xs text-slate-400">
+                    <span class="flex items-center gap-1"><span class="w-3.5 h-3.5 rounded bg-noir-900 border border-slate-600 inline-block"></span> Empty</span>
+                    <span class="flex items-center gap-1"><span class="w-3.5 h-3.5 rounded bg-red-950/80 border border-red-700/80 text-red-400 text-[10px] flex items-center justify-center font-bold">✕</span> False</span>
+                    <span class="flex items-center gap-1"><span class="w-3.5 h-3.5 rounded bg-emerald-950/80 border border-emerald-600/80 text-emerald-400 text-[10px] flex items-center justify-center font-bold">✓</span> True</span>
+                </div>
+                <div class="text-[10px] sm:text-[11px] text-slate-400 italic">
+                    Left-click / Tap: Cycle • Right-click: Place ✕
+                </div>
+            </div>
+
+            <!-- Grid Container - Natural Flow, No Inner Scrollbar -->
+            <div id="gridWrapper" class="logic-grid-wrapper p-1 border border-amber-500/30 rounded-lg bg-noir-900/80">
+                <!-- Logic Grid Table Rendered Here -->
+            </div>
+
+            <!-- Bottom Check / Submit Button Bar -->
+            <div class="mt-4 pt-3 border-t border-slate-700/80 flex items-center justify-between px-1">
+                <span class="text-[11px] sm:text-xs text-slate-400" id="markedCountDisplay">0 / 48 cells marked</span>
+                <button id="btnSubmit" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-4 sm:px-5 py-2 sm:py-2.5 rounded-lg text-xs sm:text-sm shadow-lg shadow-amber-500/20 transition flex items-center gap-2">
+                    <i class="fa-solid fa-check-double"></i> Verify Solution
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Help Modal -->
+    <div id="helpModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-noir-800 border border-slate-700 rounded-xl max-w-lg w-full p-6 shadow-2xl relative">
+            <button class="modal-close absolute top-4 right-4 text-slate-400 hover:text-white text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 class="font-serif text-xl font-bold text-amber-400 mb-3 flex items-center gap-2">
+                <i class="fa-solid fa-graduation-cap"></i> How to Play Hoppo Whodunnit
+            </h3>
+            <div class="space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed max-h-[70vh] overflow-y-auto pr-2">
+                <p>
+                    Every suspect, weapon, location, and time has an exact 1-to-1 match.
+                </p>
+                <div class="bg-noir-900 p-3 rounded-lg border border-slate-700 space-y-2">
+                    <p class="font-semibold text-amber-300">Rules & Schedule:</p>
+                    <ul class="list-disc list-inside space-y-1 text-xs">
+                        <li><strong class="text-slate-200">Weekdays (Mon-Fri):</strong> 4 elements (Pam, Phil, Ian, Sandra) • 10-minute timer.</li>
+                        <li><strong class="text-slate-200">Weekends (Sat-Sun):</strong> 5 elements selected from Charlie, Sam, Ted, Lucy, Alice, Will • 15-minute timer.</li>
+                    </ul>
+                </div>
+                <div class="bg-noir-900 p-3 rounded-lg border border-slate-700 space-y-2">
+                    <p class="font-semibold text-amber-300">Grid Controls:</p>
+                    <ul class="list-disc list-inside space-y-1 text-xs">
+                        <li><strong class="text-slate-200">Left-Click / Tap:</strong> Cycle empty &rarr; Cross (✕) &rarr; Tick (✓).</li>
+                        <li><strong class="text-slate-200">Right-Click:</strong> Direct Cross (✕).</li>
+                    </ul>
+                </div>
+            </div>
+            <button class="modal-close mt-5 w-full bg-slate-700 hover:bg-slate-600 text-white font-semibold py-2 rounded-lg text-sm transition">
+                Got it!
+            </button>
+        </div>
+    </div>
+
+    <!-- Victory Modal -->
+    <div id="victoryModal" class="fixed inset-0 bg-slate-950/85 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-noir-800 border-2 border-amber-500 rounded-2xl max-w-md w-full p-6 text-center shadow-2xl relative victory-glow">
+            <div class="w-16 h-16 bg-gradient-to-tr from-amber-500 to-amber-300 text-slate-950 rounded-full flex items-center justify-center text-3xl mx-auto mb-4 shadow-lg shadow-amber-500/30">
+                <i class="fa-solid fa-trophy"></i>
+            </div>
+            <h2 class="font-serif text-2xl font-extrabold text-amber-400 mb-1">CASE SOLVED!</h2>
+            <p class="text-xs text-slate-400 mb-4">You cracked today's Hoppo Whodunnit case!</p>
+
+            <div class="grid grid-cols-2 gap-3 bg-noir-900 p-3 rounded-xl border border-slate-700 mb-5">
+                <div>
+                    <span class="text-[10px] uppercase tracking-wider text-slate-400 block">Time Taken</span>
+                    <span id="victoryTime" class="font-mono text-xl font-bold text-emerald-400">00:00</span>
+                </div>
+                <div>
+                    <span class="text-[10px] uppercase tracking-wider text-slate-400 block">Puzzle Mode</span>
+                    <span id="victoryMode" class="font-mono text-xs font-semibold text-amber-300 mt-1 block">Weekday (4x4)</span>
+                </div>
+            </div>
+
+            <div class="bg-noir-900/60 p-3 rounded-xl border border-slate-700/80 mb-5 text-left text-xs space-y-1 text-slate-300">
+                <p class="font-semibold text-amber-400 mb-2 border-b border-slate-700 pb-1">Hoppo Investigation Report:</p>
+                <div id="solutionSummaryList" class="space-y-1 font-mono text-[11px]"></div>
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <button id="btnShareVictory" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl shadow-lg shadow-emerald-600/30 transition flex items-center justify-center gap-2 text-sm">
+                    <i class="fa-solid fa-share-nodes"></i> Share Results to Clipboard
+                </button>
+                <button class="modal-close bg-noir-700 hover:bg-slate-700 text-slate-300 py-2.5 px-4 rounded-xl text-xs font-semibold transition">
+                    Close Case File
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Over Modal -->
+    <div id="gameOverModal" class="fixed inset-0 bg-slate-950/85 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-noir-800 border-2 border-red-500 rounded-2xl max-w-md w-full p-6 text-center shadow-2xl relative failure-glow">
+            <div class="w-16 h-16 bg-gradient-to-tr from-red-600 to-red-400 text-white rounded-full flex items-center justify-center text-3xl mx-auto mb-4 shadow-lg shadow-red-600/30">
+                <i class="fa-solid fa-hourglass-end"></i>
+            </div>
+            <h2 class="font-serif text-2xl font-extrabold text-red-400 mb-1">TIME EXPIRED!</h2>
+            <p class="text-xs text-slate-400 mb-4">The suspect escaped before you completed the evidence grid.</p>
+
+            <div class="bg-noir-900 p-3 rounded-xl border border-slate-700 mb-5">
+                <span class="text-[10px] uppercase tracking-wider text-slate-400 block">Puzzle Date</span>
+                <span id="failureDate" class="font-mono text-sm font-semibold text-slate-200 mt-1 block">2026-10-24</span>
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <button id="btnShareFailure" class="bg-noir-700 hover:bg-slate-700 text-slate-200 font-bold py-2.5 px-4 rounded-xl transition flex items-center justify-center gap-2 text-sm border border-slate-600">
+                    <i class="fa-solid fa-share-nodes"></i> Share Attempt
+                </button>
+                <button id="btnRestartPuzzle" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-2.5 px-4 rounded-xl shadow-lg transition text-sm">
+                    <i class="fa-solid fa-arrow-rotate-left"></i> Try Again
+                </button>
+                <button class="modal-close bg-noir-800 hover:bg-slate-700 text-slate-400 py-2 px-4 rounded-xl text-xs transition">
+                    Dismiss
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Easter Egg Modal -->
+    <div id="easterEggModal" class="fixed inset-0 bg-slate-950/85 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-noir-800 border-2 border-purple-500 rounded-2xl max-w-md w-full p-6 text-center shadow-2xl relative easter-egg-glow">
+            <div class="w-16 h-16 bg-gradient-to-tr from-purple-500 via-pink-500 to-amber-400 text-white rounded-full flex items-center justify-center text-3xl mx-auto mb-4 shadow-lg shadow-purple-500/40">
+                🐣
+            </div>
+            <h2 class="font-serif text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-amber-300 mb-1">
+                HOPPO EASTER EGG UNLOCKED! 🕵️‍♂️
+            </h2>
+            <p class="text-xs text-slate-300 mb-4">
+                You ticked every cell in the top-left suspect box! Here is today's full solution:
+            </p>
+
+            <div class="bg-noir-900 p-4 rounded-xl border border-purple-500/40 mb-5 text-left text-xs space-y-2">
+                <p class="font-bold text-amber-400 border-b border-slate-700 pb-1">Revealed Solution Docket:</p>
+                <div id="easterEggSolutionList" class="space-y-1.5 font-mono text-[11px] text-slate-200"></div>
+            </div>
+
+            <button class="modal-close w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold py-2.5 px-4 rounded-xl text-sm transition shadow-lg">
+                Awesome! Close Secret Modal
+            </button>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-5 right-5 bg-amber-500 text-slate-950 font-bold px-4 py-2.5 rounded-lg shadow-2xl transition-all duration-300 opacity-0 transform translate-y-4 pointer-events-none z-50 text-xs sm:text-sm flex items-center gap-2">
+        <i class="fa-solid fa-circle-info"></i> <span id="toastMsg">Notification</span>
+    </div>
+
+    <!-- JavaScript Engine -->
+    <script>
+        /**
+         * MASTER CATEGORIES DATA & POOLS
+         */
+        const WEEKDAY_SUSPECTS = ['Pam', 'Phil', 'Ian', 'Sandra'];
+        const WEEKEND_SUSPECT_POOL = ['Charlie', 'Sam', 'Ted', 'Lucy', 'Alice', 'Will'];
+
+        const IMPLEMENT_POOL = ['Dagger', 'Candlestick', 'Revolver', 'Rope', 'Poison'];
+        const PLACE_POOL = ['Library', 'Kitchen', 'Ballroom', 'Conservatory', 'Billiards'];
+        const TIME_ORDER_5 = ['1:00 PM', '3:00 PM', '5:00 PM', '7:00 PM', '9:00 PM'];
+
+        /**
+         * PRNG (Mulberry32)
+         */
+        function mulberry32(a) {
+            return function() {
+                var t = a += 0x6D2B79F5;
+                t = Math.imul(t ^ (t >>> 15), t | 1);
+                t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+                return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+            }
+        }
+
+        function stringToSeed(str) {
+            let hash = 0;
+            for (let i = 0; i < str.length; i++) {
+                hash = Math.imul(31, hash) + str.charCodeAt(i) | 0;
+            }
+            return hash;
+        }
+
+        let rng = Math.random;
+
+        function seededShuffle(array) {
+            let arr = [...array];
+            for (let i = arr.length - 1; i > 0; i--) {
+                const j = Math.floor(rng() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            return arr;
+        }
+
+        /**
+         * GAME STATE
+         */
+        let currentSolution = [];
+        let generatedClues = [];
+        let currentDateStr = '';
+        let isWeekend = false;
+        let elementCount = 4;
+        let totalAllowedSeconds = 600;
+        let timeRemainingSeconds = 600;
+        let gameTimer = null;
+        let timerStarted = false;
+        let isGameOver = false;
+        let autoFillCrosses = false; // Off by default
+        let moveHistory = [];
+        let gridState = {};
+
+        // Active Category Items
+        let activePersons = [];
+        let activeImplements = [];
+        let activePlaces = [];
+        let activeTimes = [];
+
+        function checkIsWeekend(dateStr) {
+            const dateParts = dateStr.split('-');
+            const year = parseInt(dateParts[0], 10);
+            const month = parseInt(dateParts[1], 10) - 1;
+            const day = parseInt(dateParts[2], 10);
+            const dateObj = new Date(year, month, day);
+            const dayOfWeek = dateObj.getDay();
+            return (dayOfWeek === 0 || dayOfWeek === 6);
+        }
+
+        function initDailyGame(dateStr) {
+            currentDateStr = dateStr;
+            isWeekend = checkIsWeekend(dateStr);
+            elementCount = isWeekend ? 5 : 4;
+            totalAllowedSeconds = isWeekend ? 900 : 600;
+
+            const seed = stringToSeed("HOPPO_WHODUNNIT_" + dateStr);
+            rng = mulberry32(seed);
+
+            if (isWeekend) {
+                const shuffled6 = seededShuffle(WEEKEND_SUSPECT_POOL);
+                activePersons = shuffled6.slice(0, 5);
+                activeImplements = IMPLEMENT_POOL.slice(0, 5);
+                activePlaces = PLACE_POOL.slice(0, 5);
+                activeTimes = TIME_ORDER_5.slice(0, 5);
+            } else {
+                activePersons = [...WEEKDAY_SUSPECTS];
+                activeImplements = IMPLEMENT_POOL.slice(0, 4);
+                activePlaces = PLACE_POOL.slice(0, 4);
+                activeTimes = TIME_ORDER_5.slice(0, 4);
+            }
+
+            document.getElementById('dayModeBadge').innerText = isWeekend ? "Weekend Special (5x5 • 15 Min Limit)" : "Weekday Edition (4x4 • 10 Min Limit)";
+            document.getElementById('caseNumber').innerText = dateStr.replace(/-/g, '').slice(-4);
+            document.getElementById('caseDescription').innerText = `${elementCount} Suspects, ${elementCount} Weapons, ${elementCount} Locations, and ${elementCount} Times. Read the clues below and mark the logic grid to deduce the truth.`;
+
+            // Solution generation
+            const shufImp = seededShuffle(activeImplements);
+            const shufPlc = seededShuffle(activePlaces);
+            const shufTim = seededShuffle(activeTimes);
+
+            currentSolution = [];
+            for (let i = 0; i < elementCount; i++) {
+                currentSolution.push({
+                    person: activePersons[i],
+                    implement: shufImp[i],
+                    place: shufPlc[i],
+                    time: shufTim[i]
+                });
+            }
+
+            generatedClues = generateCluesForSolution(currentSolution);
+
+            resetTimer();
+            gridState = {};
+            moveHistory = [];
+            isGameOver = false;
+
+            renderGridUI();
+            renderClues();
+            loadLocalState();
+            updateStatusBadge();
+            updateMarkedCount();
+        }
+
+        function generateCluesForSolution(solution) {
+            let clues = [];
+
+            for (let i = 0; i < elementCount; i++) {
+                const sol = solution[i];
+                if (i === 0) {
+                    clues.push({ text: `${sol.person} was seen at ${sol.time}.`, type: 'direct' });
+                } else if (i === 1) {
+                    clues.push({ text: `The ${sol.implement} was located in the ${sol.place}.`, type: 'direct' });
+                } else if (i === 2) {
+                    clues.push({ text: `The weapon used at ${sol.time} was the ${sol.implement}.`, type: 'direct' });
+                } else if (i === 3) {
+                    clues.push({ text: `${sol.person} was in the ${sol.place}.`, type: 'direct' });
+                } else if (i === 4) {
+                    clues.push({ text: `${sol.person} committed their action with the ${sol.implement}.`, type: 'direct' });
+                }
+            }
+
+            const unusedPlace1 = activePlaces.find(p => p !== solution[0].place);
+            clues.push({ text: `${solution[0].person} was NOT in the ${unusedPlace1}.`, type: 'negative' });
+
+            const unusedImpl1 = activeImplements.find(imp => imp !== solution[1].implement);
+            clues.push({ text: `${solution[1].person} did NOT use the ${unusedImpl1}.`, type: 'negative' });
+
+            if (elementCount === 5) {
+                const unusedTime1 = activeTimes.find(t => t !== solution[2].time);
+                clues.push({ text: `The ${solution[2].implement} was NOT used at ${unusedTime1}.`, type: 'negative' });
+            }
+
+            const solA = solution[0];
+            const solB = solution[1];
+            const timeAIdx = activeTimes.indexOf(solA.time);
+            const timeBIdx = activeTimes.indexOf(solB.time);
+
+            if (timeAIdx < timeBIdx) {
+                clues.push({ text: `${solA.person} was active EARLIER than the person in the ${solB.place}.`, type: 'relative' });
+            } else {
+                clues.push({ text: `${solB.person} was active EARLIER than the person with the ${solA.implement}.`, type: 'relative' });
+            }
+
+            const solC = solution[Math.min(2, elementCount - 1)];
+            clues.push({ text: `The incident in the ${solC.place} occurred at ${solC.time}.`, type: 'direct' });
+
+            return clues;
+        }
+
+        function renderClues() {
+            const listEl = document.getElementById('cluesList');
+            document.getElementById('clueCount').innerText = `${generatedClues.length} Clues`;
+            listEl.innerHTML = '';
+
+            generatedClues.forEach((clue, idx) => {
+                const li = document.createElement('li');
+                li.className = "bg-noir-900/80 border border-slate-700/70 p-2.5 rounded-lg flex items-start gap-2.5 transition hover:border-amber-500/50 cursor-pointer group";
+                li.innerHTML = `
+                    <span class="w-5 h-5 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-amber-500 group-hover:text-slate-950 transition">
+                        ${idx + 1}
+                    </span>
+                    <span class="text-slate-200 leading-snug group-hover:text-white transition text-xs sm:text-sm">${clue.text}</span>
+                `;
+                li.addEventListener('click', () => {
+                    li.classList.toggle('opacity-40');
+                    li.classList.toggle('line-through');
+                });
+                listEl.appendChild(li);
+            });
+        }
+
+        /**
+         * RENDER LOGIC GRID WITH NATURAL RESPONSIVE TABLE FLOW
+         */
+        function renderGridUI() {
+            const wrapper = document.getElementById('gridWrapper');
+            wrapper.innerHTML = '';
+
+            const rowCategories = [
+                { id: 'person', title: 'Suspects', items: activePersons },
+                { id: 'implement', title: 'Weapons', items: activeImplements },
+                { id: 'place', title: 'Locations', items: activePlaces }
+            ];
+
+            const colCategories = [
+                { id: 'time', title: 'Times', items: activeTimes },
+                { id: 'place', title: 'Locations', items: activePlaces },
+                { id: 'implement', title: 'Weapons', items: activeImplements }
+            ];
+
+            const table = document.createElement('table');
+            table.className = "logic-grid-table select-none";
+
+            const thead = document.createElement('thead');
+            
+            // Header Row 1: Column Category Names
+            const trCatHeader = document.createElement('tr');
+            
+            const thCorner1 = document.createElement('th');
+            thCorner1.colSpan = 2;
+            thCorner1.className = "thick-cat-right thick-cat-bottom border-b border-slate-700 bg-noir-900";
+            trCatHeader.appendChild(thCorner1);
+
+            colCategories.forEach((colCat, cIdx) => {
+                const th = document.createElement('th');
+                th.colSpan = elementCount;
+                let classes = "border-b border-slate-700 py-1.5 px-1 text-amber-400 font-serif font-bold text-center tracking-wider uppercase text-[9px] sm:text-[11px] thick-cat-bottom bg-noir-900";
+                if (cIdx < colCategories.length - 1) classes += " thick-cat-right";
+                th.className = classes;
+                th.innerText = colCat.title;
+                trCatHeader.appendChild(th);
+            });
+            thead.appendChild(trCatHeader);
+
+            // Header Row 2: Column Category Items
+            const trSubHeader = document.createElement('tr');
+            
+            const thCorner2 = document.createElement('th');
+            thCorner2.colSpan = 2;
+            thCorner2.className = "thick-cat-right thick-cat-bottom border-b border-slate-700 bg-noir-900";
+            trSubHeader.appendChild(thCorner2);
+
+            colCategories.forEach((colCat, cIdx) => {
+                colCat.items.forEach((item, itemIdx) => {
+                    const th = document.createElement('th');
+                    let classes = "border-b border-slate-700 border-r border-slate-700/60 p-0.5 sm:p-1 h-20 sm:h-24 align-bottom text-slate-300 font-medium text-[9px] sm:text-[11px] thick-cat-bottom bg-noir-800";
+                    if (itemIdx === colCat.items.length - 1 && cIdx < colCategories.length - 1) {
+                        classes += " thick-cat-right";
+                    }
+                    th.className = classes;
+                    th.innerHTML = `<div class="header-vertical text-left max-h-16 sm:max-h-20 truncate mx-auto">${item}</div>`;
+                    trSubHeader.appendChild(th);
+                });
+            });
+            thead.appendChild(trSubHeader);
+            table.appendChild(thead);
+
+            // Table Body
+            const tbody = document.createElement('tbody');
+
+            rowCategories.forEach((rowCat, rIdx) => {
+                rowCat.items.forEach((rowItem, rItemIdx) => {
+                    const tr = document.createElement('tr');
+
+                    // Column 1: Row Category Title
+                    if (rItemIdx === 0) {
+                        const tdCat = document.createElement('td');
+                        tdCat.rowSpan = elementCount;
+                        let catClasses = "p-0.5 sm:p-1 text-center font-serif font-bold text-amber-400 uppercase tracking-wider text-[9px] sm:text-[11px] bg-noir-900";
+                        if (rIdx < rowCategories.length - 1) catClasses += " thick-cat-bottom";
+                        tdCat.className = catClasses;
+                        tdCat.innerHTML = `<div class="header-vertical text-center mx-auto">${rowCat.title}</div>`;
+                        tr.appendChild(tdCat);
+                    }
+
+                    // Column 2: Row Item Name
+                    const tdRowLabel = document.createElement('td');
+                    let labelClasses = "px-1 sm:px-2 py-1 text-slate-200 font-medium whitespace-nowrap text-[9px] sm:text-[11px] bg-noir-800 border-r border-slate-700/60";
+                    if (rItemIdx === rowCat.items.length - 1 && rIdx < rowCategories.length - 1) {
+                        labelClasses += " thick-cat-bottom";
+                    }
+                    tdRowLabel.className = labelClasses;
+                    tdRowLabel.innerText = rowItem;
+                    tr.appendChild(tdRowLabel);
+
+                    // Subgrid cells
+                    colCategories.forEach((colCat, cIdx) => {
+                        const isActive = isSubgridActive(rowCat.id, colCat.id);
+
+                        colCat.items.forEach((colItem, cItemIdx) => {
+                            const tdCell = document.createElement('td');
+                            
+                            let cellClasses = "logic-cell ";
+
+                            if (cItemIdx === colCat.items.length - 1 && cIdx < colCategories.length - 1) {
+                                cellClasses += " thick-cat-right";
+                            }
+                            if (rItemIdx === rowCat.items.length - 1 && rIdx < rowCategories.length - 1) {
+                                cellClasses += " thick-cat-bottom";
+                            }
+
+                            if (isActive) {
+                                const cellKey = `${rowCat.id}:${rowItem}|${colCat.id}:${colItem}`;
+                                cellClasses += " logic-cell-active";
+                                tdCell.className = cellClasses;
+                                tdCell.dataset.key = cellKey;
+                                tdCell.dataset.rowCat = rowCat.id;
+                                tdCell.dataset.rowItem = rowItem;
+                                tdCell.dataset.colCat = colCat.id;
+                                tdCell.dataset.colItem = colItem;
+
+                                tdCell.addEventListener('contextmenu', (e) => {
+                                    e.preventDefault();
+                                    if (!isGameOver) handleCellClick(tdCell, true);
+                                });
+
+                                tdCell.addEventListener('click', () => {
+                                    if (!isGameOver) handleCellClick(tdCell, false);
+                                });
+
+                                updateCellDOM(tdCell, gridState[cellKey] || 0);
+                            } else {
+                                cellClasses += " logic-cell-disabled";
+                                tdCell.className = cellClasses;
+                                tdCell.innerHTML = '';
+                            }
+
+                            tr.appendChild(tdCell);
+                        });
+                    });
+
+                    tbody.appendChild(tr);
+                });
+            });
+
+            table.appendChild(tbody);
+            wrapper.appendChild(table);
+        }
+
+        function isSubgridActive(rowCatId, colCatId) {
+            if (rowCatId === 'person') return true;
+            if (rowCatId === 'implement') {
+                return colCatId === 'time' || colCatId === 'place';
+            }
+            if (rowCatId === 'place') {
+                return colCatId === 'time';
+            }
+            return false;
+        }
+
+        function handleCellClick(cellEl, isRightClick) {
+            const key = cellEl.dataset.key;
+            const currentState = gridState[key] || 0;
+            let newState = 0;
+
+            if (isRightClick) {
+                newState = currentState === 1 ? 0 : 1;
+            } else {
+                newState = (currentState + 1) % 3;
+            }
+
+            if (!timerStarted && !isGameOver) {
+                startTimer();
+            }
+
+            moveHistory.push({ key: key, prevState: currentState, newState: newState });
+            gridState[key] = newState;
+            updateCellDOM(cellEl, newState);
+
+            if (newState === 2 && autoFillCrosses) {
+                applyAutoX(cellEl.dataset.rowCat, cellEl.dataset.rowItem, cellEl.dataset.colCat, cellEl.dataset.colItem, key);
+            }
+
+            saveLocalState();
+            updateMarkedCount();
+
+            // Easter Egg check & Victory check
+            if (!checkEasterEggTrigger()) {
+                checkAutoVictory();
+            }
+        }
+
+        function updateCellDOM(cellEl, state) {
+            if (state === 1) {
+                cellEl.innerHTML = '<span class="text-red-400 font-extrabold">✕</span>';
+                cellEl.style.backgroundColor = 'rgba(153, 27, 27, 0.35)';
+            } else if (state === 2) {
+                cellEl.innerHTML = '<span class="text-emerald-400 font-black">✓</span>';
+                cellEl.style.backgroundColor = 'rgba(6, 78, 59, 0.55)';
+            } else {
+                cellEl.innerHTML = '';
+                cellEl.style.backgroundColor = '';
+            }
+        }
+
+        function applyAutoX(rowCat, rowItem, colCat, colItem, triggerKey) {
+            const allSubgridCells = document.querySelectorAll(`[data-row-cat="${rowCat}"][data-col-cat="${colCat}"]`);
+            allSubgridCells.forEach(cell => {
+                const k = cell.dataset.key;
+                if (k !== triggerKey) {
+                    if (cell.dataset.rowItem === rowItem || cell.dataset.colItem === colItem) {
+                        if (gridState[k] !== 1) {
+                            gridState[k] = 1;
+                            updateCellDOM(cell, 1);
+                        }
+                    }
+                }
+            });
+        }
+
+        /**
+         * EASTER EGG DETECTOR
+         * Triggered if all cells in the top-left subgrid (Suspects vs Times) are set to tick (✓)
+         */
+        function checkEasterEggTrigger() {
+            const topLeftCells = document.querySelectorAll('[data-row-cat="person"][data-col-cat="time"]');
+            if (!topLeftCells || topLeftCells.length === 0) return false;
+
+            let allTicked = true;
+            topLeftCells.forEach(cell => {
+                const key = cell.dataset.key;
+                if (gridState[key] !== 2) {
+                    allTicked = false;
+                }
+            });
+
+            if (allTicked) {
+                triggerEasterEggModal();
+                return true;
+            }
+            return false;
+        }
+
+        function triggerEasterEggModal() {
+            const listEl = document.getElementById('easterEggSolutionList');
+            listEl.innerHTML = '';
+
+            currentSolution.forEach(s => {
+                const row = document.createElement('div');
+                row.className = "flex justify-between border-b border-purple-800/50 pb-1";
+                row.innerHTML = `<span class="text-purple-300 font-bold">${s.person}:</span> <span>${s.implement} • ${s.place} • ${s.time}</span>`;
+                listEl.appendChild(row);
+            });
+
+            document.getElementById('easterEggModal').classList.remove('hidden');
+            showToast("🐣 Hoppo Easter Egg Unlocked!");
+        }
+
+        function undoLastMove() {
+            if (moveHistory.length === 0 || isGameOver) return;
+            const lastMove = moveHistory.pop();
+            gridState[lastMove.key] = lastMove.prevState;
+            
+            const cellEl = document.querySelector(`[data-key="${lastMove.key}"]`);
+            if (cellEl) updateCellDOM(cellEl, lastMove.prevState);
+
+            saveLocalState();
+            updateMarkedCount();
+            showToast("Move Undone");
+        }
+
+        function resetGrid() {
+            if (isGameOver) return;
+            if (confirm("Are you sure you want to clear all marked entries?")) {
+                gridState = {};
+                moveHistory = [];
+                document.querySelectorAll('.logic-cell-active').forEach(cell => updateCellDOM(cell, 0));
+                saveLocalState();
+                updateMarkedCount();
+                showToast("Grid Cleared");
+            }
+        }
+
+        /**
+         * TIMER ENGINE
+         */
+        function startTimer() {
+            if (timerStarted || isGameOver) return;
+            timerStarted = true;
+            gameTimer = setInterval(() => {
+                timeRemainingSeconds--;
+                updateTimerDisplay();
+
+                if (timeRemainingSeconds <= 0) {
+                    handleGameOver();
+                }
+            }, 1000);
+        }
+
+        function stopTimer() {
+            if (gameTimer) {
+                clearInterval(gameTimer);
+                gameTimer = null;
+            }
+            timerStarted = false;
+        }
+
+        function resetTimer() {
+            stopTimer();
+            timeRemainingSeconds = totalAllowedSeconds;
+            updateTimerDisplay();
+        }
+
+        function updateTimerDisplay() {
+            const display = document.getElementById('timerDisplay');
+            const container = document.getElementById('timerContainer');
+
+            display.innerText = formatTime(timeRemainingSeconds);
+
+            if (timeRemainingSeconds <= 60 && timeRemainingSeconds > 0) {
+                container.className = "bg-red-950 border border-red-500 rounded-lg px-2 sm:px-3 py-1 text-center min-w-[75px] sm:min-w-[95px] animate-pulse";
+                display.className = "font-mono text-xs sm:text-lg font-bold text-red-400";
+            } else {
+                container.className = "bg-noir-900 border border-amber-500/30 rounded-lg px-2 sm:px-3 py-1 text-center min-w-[75px] sm:min-w-[95px]";
+                display.className = "font-mono text-xs sm:text-lg font-bold text-amber-300";
+            }
+        }
+
+        function formatTime(seconds) {
+            const m = Math.floor(Math.max(0, seconds) / 60).toString().padStart(2, '0');
+            const s = (Math.max(0, seconds) % 60).toString().padStart(2, '0');
+            return `${m}:${s}`;
+        }
+
+        /**
+         * VICTORY & GAME OVER LOGIC
+         */
+        function checkSolution() {
+            let correctTicksCount = 0;
+            const targetTicks = 6 * elementCount; // 6 active subgrids * N elements
+
+            const requiredTickPairs = [];
+            currentSolution.forEach(sol => {
+                requiredTickPairs.push({ rCat: 'person', rItem: sol.person, cCat: 'time', cItem: sol.time });
+                requiredTickPairs.push({ rCat: 'person', rItem: sol.person, cCat: 'place', cItem: sol.place });
+                requiredTickPairs.push({ rCat: 'person', rItem: sol.person, cCat: 'implement', cItem: sol.implement });
+                requiredTickPairs.push({ rCat: 'implement', rItem: sol.implement, cCat: 'time', cItem: sol.time });
+                requiredTickPairs.push({ rCat: 'implement', rItem: sol.implement, cCat: 'place', cItem: sol.place });
+                requiredTickPairs.push({ rCat: 'place', rItem: sol.place, cCat: 'time', cItem: sol.time });
+            });
+
+            requiredTickPairs.forEach(pair => {
+                const key = `${pair.rCat}:${pair.rItem}|${pair.cCat}:${pair.cItem}`;
+                if (gridState[key] === 2) correctTicksCount++;
+            });
+
+            let totalTicksOnBoard = 0;
+            Object.keys(gridState).forEach(k => {
+                if (gridState[k] === 2) totalTicksOnBoard++;
+            });
+
+            if (correctTicksCount === targetTicks && totalTicksOnBoard === targetTicks) {
+                handleVictory();
+                return true;
+            }
+            return false;
+        }
+
+        function checkAutoVictory() {
+            let totalTicksOnBoard = 0;
+            Object.keys(gridState).forEach(k => {
+                if (gridState[k] === 2) totalTicksOnBoard++;
+            });
+
+            if (totalTicksOnBoard >= (6 * elementCount)) {
+                checkSolution();
+            }
+        }
+
+        function handleVictory() {
+            stopTimer();
+            isGameOver = true;
+            updateStatusBadge(true);
+
+            const summaryList = document.getElementById('solutionSummaryList');
+            summaryList.innerHTML = '';
+            currentSolution.forEach(s => {
+                const item = document.createElement('div');
+                item.className = "flex justify-between border-b border-slate-800 pb-1";
+                item.innerHTML = `<span class="text-amber-400 font-bold">${s.person}:</span> <span>${s.implement} • ${s.place} • ${s.time}</span>`;
+                summaryList.appendChild(item);
+            });
+
+            const elapsed = totalAllowedSeconds - timeRemainingSeconds;
+            document.getElementById('victoryTime').innerText = formatTime(elapsed);
+            document.getElementById('victoryMode').innerText = isWeekend ? "Weekend (5x5)" : "Weekday (4x4)";
+            document.getElementById('victoryModal').classList.remove('hidden');
+
+            saveLocalState(true);
+        }
+
+        function handleGameOver() {
+            stopTimer();
+            isGameOver = true;
+            document.getElementById('failureDate').innerText = currentDateStr;
+            document.getElementById('gameOverModal').classList.remove('hidden');
+        }
+
+        /**
+         * PERSISTENCE
+         */
+        function saveLocalState(isSolved = false) {
+            const stateObj = {
+                gridState: gridState,
+                timeRemainingSeconds: timeRemainingSeconds,
+                timerStarted: timerStarted,
+                isSolved: isSolved || (document.getElementById('puzzleStatusBadge').innerText === 'Solved')
+            };
+            localStorage.setItem(`hoppo_whodunnit_${currentDateStr}`, JSON.stringify(stateObj));
+        }
+
+        function loadLocalState() {
+            const saved = localStorage.getItem(`hoppo_whodunnit_${currentDateStr}`);
+            if (saved) {
+                try {
+                    const parsed = JSON.parse(saved);
+                    gridState = parsed.gridState || {};
+                    timeRemainingSeconds = parsed.timeRemainingSeconds ?? totalAllowedSeconds;
+                    updateTimerDisplay();
+
+                    if (parsed.timerStarted && !parsed.isSolved && timeRemainingSeconds > 0) {
+                        startTimer();
+                    }
+
+                    if (parsed.isSolved) {
+                        updateStatusBadge(true);
+                        isGameOver = true;
+                    }
+
+                    Object.keys(gridState).forEach(k => {
+                        const cell = document.querySelector(`[data-key="${k}"]`);
+                        if (cell) updateCellDOM(cell, gridState[k]);
+                    });
+                } catch (e) {
+                    console.error("State loading error", e);
+                }
+            }
+        }
+
+        /**
+         * SHARE FUNCTION
+         */
+        function shareResults(success = true) {
+            const puzzleNum = currentDateStr.replace(/-/g, '').slice(-4);
+            const elapsed = totalAllowedSeconds - timeRemainingSeconds;
+            const modeText = isWeekend ? "Weekend 5x5" : "Weekday 4x4";
+            
+            let shareText = '';
+            if (success) {
+                shareText = `Hoppo Whodunnit #${puzzleNum} (${currentDateStr})\n` +
+                            `Mode: ${modeText}\n` +
+                            `Result: Solved in ${formatTime(elapsed)}! 🔍✨\n\n` +
+                            `Play today's case: ${window.location.href}`;
+            } else {
+                shareText = `Hoppo Whodunnit #${puzzleNum} (${currentDateStr})\n` +
+                            `Mode: ${modeText}\n` +
+                            `Result: Time Expired ⌛\n\n` +
+                            `Try your deduction skills: ${window.location.href}`;
+            }
+
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(shareText).then(() => {
+                    showToast("Results copied to clipboard!");
+                }).catch(() => fallbackCopy(shareText));
+            } else {
+                fallbackCopy(shareText);
+            }
+        }
+
+        function fallbackCopy(text) {
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+            showToast("Results copied to clipboard!");
+        }
+
+        /**
+         * UI HELPERS
+         */
+        function updateStatusBadge(solved = false) {
+            const badge = document.getElementById('puzzleStatusBadge');
+            if (solved) {
+                badge.innerText = 'Solved';
+                badge.className = 'text-xs font-bold px-2.5 py-1 rounded-full bg-emerald-950 text-emerald-400 border border-emerald-600/50';
+            } else {
+                badge.innerText = 'In Progress';
+                badge.className = 'text-xs font-semibold px-2.5 py-1 rounded-full bg-amber-950/60 text-amber-400 border border-amber-600/40';
+            }
+        }
+
+        function updateMarkedCount() {
+            let count = 0;
+            Object.keys(gridState).forEach(k => {
+                if (gridState[k] !== 0) count++;
+            });
+            const totalCells = 6 * (elementCount * elementCount);
+            document.getElementById('markedCountDisplay').innerText = `${count} / ${totalCells} active cells marked`;
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMsg').innerText = msg;
+            toast.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
+            }, 2500);
+        }
+
+        /**
+         * INIT ON LOAD
+         */
+        window.addEventListener('DOMContentLoaded', () => {
+            const todayStr = new Date().toISOString().split('T')[0];
+            const dateInput = document.getElementById('datePicker');
+            dateInput.value = todayStr;
+
+            initDailyGame(todayStr);
+
+            dateInput.addEventListener('change', (e) => {
+                if (e.target.value) {
+                    initDailyGame(e.target.value);
+                }
+            });
+
+            document.getElementById('btnUndo').addEventListener('click', undoLastMove);
+            document.getElementById('btnReset').addEventListener('click', resetGrid);
+            
+            document.getElementById('btnAutoX').addEventListener('click', () => {
+                autoFillCrosses = !autoFillCrosses;
+                const statusEl = document.getElementById('autoXStatus');
+                statusEl.innerText = autoFillCrosses ? 'ON' : 'OFF';
+                statusEl.className = autoFillCrosses ? 'text-amber-400 font-bold' : 'text-slate-400 font-bold';
+                showToast(`Auto-X helper ${autoFillCrosses ? 'Enabled' : 'Disabled'}`);
+            });
+
+            document.getElementById('btnSubmit').addEventListener('click', () => {
+                if (!checkSolution()) {
+                    showToast("Solution incomplete or contains errors!");
+                }
+            });
+
+            document.getElementById('btnHelp').addEventListener('click', () => {
+                document.getElementById('helpModal').classList.remove('hidden');
+            });
+
+            document.querySelectorAll('.modal-close').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.getElementById('helpModal').classList.add('hidden');
+                    document.getElementById('victoryModal').classList.add('hidden');
+                    document.getElementById('gameOverModal').classList.add('hidden');
+                    document.getElementById('easterEggModal').classList.add('hidden');
+                });
+            });
+
+            document.getElementById('btnRestartPuzzle').addEventListener('click', () => {
+                document.getElementById('gameOverModal').classList.add('hidden');
+                gridState = {};
+                moveHistory = [];
+                isGameOver = false;
+                resetTimer();
+                renderGridUI();
+                saveLocalState();
+                updateMarkedCount();
+            });
+
+            document.getElementById('btnShareVictory').addEventListener('click', () => shareResults(true));
+            document.getElementById('btnShareFailure').addEventListener('click', () => shareResults(false));
+        });
+    </script>
+</body>
+</html>
