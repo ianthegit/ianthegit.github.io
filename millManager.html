@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Woodbridge Tide Mill Manager</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Nunito', sans-serif;
+      background-color: #1a1512;
+      color: #f3efe6;
+      user-select: none;
+    }
+    h1, h2, h3, h4, .font-serif-title {
+      font-family: 'Cinzel', serif;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #2a221d;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #5c4738;
+      border-radius: 3px;
+    }
+    /* Wood texture background effect */
+    .bg-wood {
+      background-color: #261e19;
+      background-image: radial-gradient(#3a2e26 1px, transparent 0);
+      background-size: 16px 16px;
+    }
+    .panel-bg {
+      background: rgba(43, 34, 28, 0.92);
+      border: 1px solid #544133;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+    .btn-wood {
+      background: linear-gradient(180deg, #7c5c43 0%, #593f2d 100%);
+      border: 1px solid #997355;
+      color: #fff8ee;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+      transition: all 0.15s ease;
+    }
+    .btn-wood:hover:not(:disabled) {
+      background: linear-gradient(180deg, #8d694d 0%, #684b36 100%);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    }
+    .btn-wood:active:not(:disabled) {
+      transform: translateY(1px);
+      box-shadow: 0 1px 2px rgba(0,0,0,0.4);
+    }
+    .btn-wood:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      filter: grayscale(0.8);
+    }
+    .btn-blue {
+      background: linear-gradient(180deg, #2b6cb0 0%, #1c4ed8 100%);
+      border: 1px solid #60a5fa;
+    }
+    .btn-blue:hover:not(:disabled) {
+      background: linear-gradient(180deg, #3b82f6 0%, #2563eb 100%);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-wood text-amber-50 overflow-x-hidden">
+
+  <!-- TOP HUD NAVIGATION -->
+  <header class="bg-stone-900 border-b border-amber-900/60 px-4 py-2 sticky top-0 z-30 shadow-md">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+      <!-- Title & Era info -->
+      <div class="flex items-center space-x-3">
+        <div class="w-9 h-9 rounded-full bg-amber-700 flex items-center justify-center text-xl shadow-inner border border-amber-500">
+          ⚙️
+        </div>
+        <div>
+          <h1 class="text-lg font-bold text-amber-200 tracking-wide leading-tight">Woodbridge Tide Mill</h1>
+          <p class="text-xs text-amber-400/80">River Deben, Suffolk • <span id="hud-difficulty-name">Miller</span></p>
+        </div>
+      </div>
+
+      <!-- Time & Tide Widget -->
+      <div class="flex items-center bg-stone-950/80 px-4 py-1.5 rounded-lg border border-amber-900/40 space-x-4 text-sm">
+        <div class="text-center">
+          <span class="text-xs text-stone-400 block uppercase tracking-wider">Day</span>
+          <span id="hud-day" class="font-bold text-amber-400">Day 1</span>
+        </div>
+        <div class="h-6 w-px bg-stone-800"></div>
+        <div class="text-center">
+          <span class="text-xs text-stone-400 block uppercase tracking-wider">Time</span>
+          <span id="hud-time" class="font-bold text-amber-300">06:00</span>
+        </div>
+        <div class="h-6 w-px bg-stone-800"></div>
+        <div class="text-center">
+          <span class="text-xs text-stone-400 block uppercase tracking-wider">River Tide</span>
+          <span id="hud-tide-state" class="font-bold text-cyan-400">High Tide</span>
+        </div>
+      </div>
+
+      <!-- Key Resources HUD -->
+      <div class="flex items-center space-x-5 text-sm">
+        <div class="flex items-center space-x-1.5" title="Gold Sovereign Funds">
+          <span class="text-xl">🪙</span>
+          <div>
+            <div class="text-[10px] text-stone-400 uppercase leading-none">Funds</div>
+            <div id="hud-gold" class="font-bold text-yellow-400 text-base">£150.00</div>
+          </div>
+        </div>
+
+        <div class="flex items-center space-x-1.5" title="Town & Bakery Reputation">
+          <span class="text-xl">⭐</span>
+          <div>
+            <div class="text-[10px] text-stone-400 uppercase leading-none">Reputation</div>
+            <div id="hud-rep" class="font-bold text-amber-300 text-base">50 / 100</div>
+          </div>
+        </div>
+
+        <div class="flex items-center space-x-1.5" title="Mill Pool Water Level">
+          <span class="text-xl">🌊</span>
+          <div>
+            <div class="text-[10px] text-stone-400 uppercase leading-none">Mill Pool</div>
+            <div id="hud-pond-level" class="font-bold text-blue-400 text-base">80%</div>
+          </div>
+        </div>
+
+        <!-- Controls: Pause, Audio, Speed -->
+        <div class="flex items-center space-x-2 pl-2 border-l border-stone-800">
+          <button id="btn-audio-toggle" class="p-2 rounded bg-stone-800 hover:bg-stone-700 text-amber-200 border border-amber-900/40" title="Toggle Sound Effects">
+            🔊
+          </button>
+          <button id="btn-pause-toggle" class="px-3 py-1.5 rounded bg-amber-800 hover:bg-amber-700 font-bold text-xs uppercase tracking-wider text-amber-100 border border-amber-600">
+            Pause
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN APPLICATION CONTENT CONTAINER -->
+  <main class="max-w-7xl mx-auto w-full p-4 flex-1 flex flex-col gap-4">
+
+    <!-- ALERT BANNER FOR EVENTS -->
+    <div id="alert-banner" class="hidden bg-amber-950/90 border-l-4 border-amber-500 p-3 rounded shadow-lg flex items-center justify-between text-sm">
+      <div class="flex items-center space-x-3">
+        <span id="alert-icon" class="text-2xl">⚠️</span>
+        <span id="alert-text" class="text-amber-100 font-medium">Alert message content here...</span>
+      </div>
+      <button id="alert-dismiss" class="text-xs bg-amber-900 hover:bg-amber-800 text-amber-200 px-3 py-1 rounded">Dismiss</button>
+    </div>
+
+    <!-- MAIN DASHBOARD GRID -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 flex-1">
+
+      <!-- LEFT COLUMN: CANVAS VISUALIZER & MILL CONTROLS (7 COLS) -->
+      <div class="lg:col-span-7 flex flex-col gap-4">
+        
+        <!-- VISUAL SIMULATION CANVAS PANEL -->
+        <div class="panel-bg rounded-xl p-3 flex flex-col relative overflow-hidden">
+          <div class="flex justify-between items-center mb-2 px-1">
+            <h2 class="font-bold text-amber-200 text-base flex items-center gap-2">
+              <span>🌊</span> Mill Pond & Wheel Race Visualizer
+            </h2>
+            <div class="text-xs text-amber-400/80 bg-stone-900/80 px-2 py-1 rounded border border-amber-950">
+              Wheel Status: <span id="wheel-status-text" class="font-bold text-emerald-400">Idle</span>
+            </div>
+          </div>
+
+          <!-- Canvas Container -->
+          <div class="relative w-full aspect-[16/9] bg-stone-950 rounded-lg overflow-hidden border border-amber-900/50">
+            <canvas id="millCanvas" class="w-full h-full block"></canvas>
+
+            <!-- Overlay Water Head Meter -->
+            <div class="absolute bottom-2 left-2 bg-stone-900/80 border border-stone-700/60 rounded px-2.5 py-1 text-xs backdrop-blur-sm">
+              <span class="text-stone-400">Water Head Difference:</span>
+              <span id="canvas-head-diff" class="font-bold text-cyan-300 ml-1">2.4 m</span>
+            </div>
+
+            <!-- Overlay Wheel Speed -->
+            <div class="absolute bottom-2 right-2 bg-stone-900/80 border border-stone-700/60 rounded px-2.5 py-1 text-xs backdrop-blur-sm">
+              <span class="text-stone-400">Wheel Speed:</span>
+              <span id="canvas-rpm" class="font-bold text-amber-300 ml-1">0 RPM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- MILL OPERATIONS CONTROLS -->
+        <div class="panel-bg rounded-xl p-4 flex flex-col gap-3">
+          <h3 class="font-serif-title font-bold text-amber-200 text-sm tracking-wider uppercase border-b border-amber-900/40 pb-2 flex items-center justify-between">
+            <span>🎛️ Mill Machinery & Water Controls</span>
+            <span class="text-xs text-stone-400 font-sans font-normal">Manage sluice gate & millstones</span>
+          </h3>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <!-- Sluice Gate Control Panel -->
+            <div class="bg-stone-900/70 p-3 rounded-lg border border-amber-900/30 flex flex-col justify-between">
+              <div>
+                <div class="flex justify-between items-center mb-1">
+                  <span class="text-sm font-semibold text-amber-300">Sluice Gate</span>
+                  <span id="sluice-status-badge" class="text-xs px-2 py-0.5 rounded bg-stone-800 text-stone-300 border border-stone-700">Closed</span>
+                </div>
+                <p class="text-xs text-stone-400 mb-3">Open gate during Flooding Tide to refill pond; open during Ebb to drive wheel.</p>
+              </div>
+              <div class="flex gap-2">
+                <button id="btn-toggle-sluice" class="btn-wood flex-1 py-2 px-3 rounded text-sm font-bold flex justify-center items-center gap-2">
+                  <span>🚪</span> <span id="btn-sluice-text">Open Sluice Gate</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Millstone Engagement & Gap Control -->
+            <div class="bg-stone-900/70 p-3 rounded-lg border border-amber-900/30 flex flex-col justify-between">
+              <div>
+                <div class="flex justify-between items-center mb-1">
+                  <span class="text-sm font-semibold text-amber-300">Millstone Clutch & Gap</span>
+                  <span id="milling-status-badge" class="text-xs px-2 py-0.5 rounded bg-rose-950 text-rose-300 border border-rose-800">Disengaged</span>
+                </div>
+                <p class="text-xs text-stone-400 mb-2">Engage clutch to mill selected raw grain into flour when water power is available.</p>
+                
+                <!-- Stone Gap Setting -->
+                <div class="flex items-center justify-between text-xs my-2 bg-stone-950 p-1.5 rounded border border-stone-800">
+                  <span class="text-stone-400">Grind Quality:</span>
+                  <select id="select-stone-gap" class="bg-stone-900 text-amber-200 text-xs rounded border border-amber-800 px-2 py-1 outline-none">
+                    <option value="coarse">Coarse Grind (Fast / Standard Flour)</option>
+                    <option value="medium" selected>Medium Grind (Balanced)</option>
+                    <option value="fine">Fine Grind (Slow / Fine White Flour)</option>
+                  </select>
+                </div>
+              </div>
+
+              <button id="btn-toggle-milling" class="btn-wood flex-1 py-2 px-3 rounded text-sm font-bold flex justify-center items-center gap-2">
+                <span>⚙️</span> <span id="btn-milling-text">Engage Millstones</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Active Milling Grain Selector & Progress -->
+          <div class="bg-stone-900/90 p-3 rounded-lg border border-amber-900/50 flex flex-col gap-2">
+            <div class="flex justify-between items-center text-xs">
+              <span class="font-semibold text-amber-300">Target Raw Grain to Grind:</span>
+              <span id="milling-rate-text" class="text-stone-400">Rate: 0.0 kg/min</span>
+            </div>
+            <div class="flex flex-wrap sm:flex-nowrap gap-2 items-center">
+              <select id="select-active-grain" class="bg-stone-950 border border-amber-800 text-amber-100 text-sm rounded px-3 py-1.5 flex-1 outline-none focus:border-amber-500">
+                <option value="wheat">Wheat (Stock: 0 kg)</option>
+                <option value="rye">Rye Grain (Stock: 0 kg)</option>
+                <option value="spelt">Spelt Grain (Stock: 0 kg)</option>
+                <option value="barley">Barley (Stock: 0 kg)</option>
+                <option value="heritage">Heritage Grain (Stock: 0 kg)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT COLUMN: TABBED MANAGEMENT PANELS (5 COLS) -->
+      <div class="lg:col-span-5 flex flex-col gap-4">
+        
+        <!-- MANAGEMENT TABS CONTAINER -->
+        <div class="panel-bg rounded-xl p-4 flex flex-col flex-1 min-h-[480px]">
+          
+          <!-- TAB NAVIGATION HEADER -->
+          <div class="flex border-b border-amber-900/50 gap-1 mb-4 overflow-x-auto custom-scrollbar pb-1">
+            <button data-tab="inventory" class="tab-btn px-3 py-1.5 rounded-t-lg text-xs font-bold uppercase tracking-wider bg-amber-900/60 text-amber-200 border-t border-x border-amber-700">
+              📦 Silo & Stocks
+            </button>
+            <button data-tab="market" class="tab-btn px-3 py-1.5 rounded-t-lg text-xs font-bold uppercase tracking-wider text-stone-400 hover:text-amber-200">
+              🚢 Grain Trade
+            </button>
+            <button data-tab="contracts" class="tab-btn px-3 py-1.5 rounded-t-lg text-xs font-bold uppercase tracking-wider text-stone-400 hover:text-amber-200">
+              🥖 Bakery Orders
+            </button>
+            <button data-tab="upgrades" class="tab-btn px-3 py-1.5 rounded-t-lg text-xs font-bold uppercase tracking-wider text-stone-400 hover:text-amber-200">
+              🔨 Maintenance
+            </button>
+          </div>
+
+          <!-- TAB 1: INVENTORY & SILO MANAGEMENT -->
+          <div id="tab-inventory" class="tab-content flex-1 flex flex-col gap-3">
+            <div class="flex justify-between items-center text-xs text-stone-400 bg-stone-900/80 px-3 py-1.5 rounded border border-stone-800">
+              <span>Grain Silo Capacity: <strong id="silo-capacity-text" class="text-amber-300">0 / 500 kg</strong></span>
+              <span>Flour Store: <strong id="flour-capacity-text" class="text-amber-300">0 / 500 kg</strong></span>
+            </div>
+
+            <!-- Raw Grains List -->
+            <div class="bg-stone-900/50 rounded-lg p-2.5 border border-amber-900/30">
+              <h4 class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2 flex justify-between">
+                <span>🌾 Raw Grain Inventory</span>
+              </h4>
+              <div id="raw-grain-list" class="space-y-1.5 text-xs">
+                <!-- Dynamic Grain Items Inserted Here -->
+              </div>
+            </div>
+
+            <!-- Processed Flours List -->
+            <div class="bg-stone-900/50 rounded-lg p-2.5 border border-amber-900/30">
+              <h4 class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2 flex justify-between">
+                <span>💰 Flour Inventory & Retail Sell</span>
+              </h4>
+              <div id="flour-inventory-list" class="space-y-1.5 text-xs">
+                <!-- Dynamic Flour Items Inserted Here -->
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 2: GRAIN MARKET / RIVER BARGE DELIVERIES -->
+          <div id="tab-market" class="tab-content hidden flex-1 flex flex-col gap-3">
+            <div class="text-xs text-stone-300 bg-stone-900/80 p-2.5 rounded border border-amber-950">
+              🚢 <strong>Deben Estuary Barges & Carts:</strong> Purchase raw grains delivered directly to the mill silo. Prices fluctuate based on market demand.
+            </div>
+
+            <div id="market-offers-list" class="space-y-2.5 overflow-y-auto max-h-[380px] custom-scrollbar pr-1">
+              <!-- Dynamic Market Grain Offers Inserted Here -->
+            </div>
+          </div>
+
+          <!-- TAB 3: BAKERY & TOWN CONTRACT ORDERS -->
+          <div id="tab-contracts" class="tab-content hidden flex-1 flex flex-col gap-3">
+            <div class="text-xs text-stone-300 bg-stone-900/80 p-2.5 rounded border border-amber-950">
+              🥖 <strong>Woodbridge Bakery Contracts:</strong> Deliver custom flour types to local bakers for bonus cash and reputation rewards.
+            </div>
+
+            <div id="contracts-list" class="space-y-2.5 overflow-y-auto max-h-[380px] custom-scrollbar pr-1">
+              <!-- Dynamic Contracts Inserted Here -->
+            </div>
+          </div>
+
+          <!-- TAB 4: UPGRADES, CAT TEAM & MAINTENANCE -->
+          <div id="tab-upgrades" class="tab-content hidden flex-1 flex flex-col gap-3">
+            <!-- Mill Health & Pest Indicators -->
+            <div class="grid grid-cols-2 gap-2 text-xs">
+              <div class="bg-stone-900/80 p-2 rounded border border-stone-800">
+                <div class="text-stone-400">Mill Race Silt:</div>
+                <div id="status-silt" class="font-bold text-amber-300 text-sm">Low (5%)</div>
+              </div>
+              <div class="bg-stone-900/80 p-2 rounded border border-stone-800">
+                <div class="text-stone-400">Rodent Infestation:</div>
+                <div id="status-rodents" class="font-bold text-emerald-400 text-sm">None (0%)</div>
+              </div>
+              <div class="bg-stone-900/80 p-2 rounded border border-stone-800">
+                <div class="text-stone-400">Millstones Wear:</div>
+                <div id="status-stones-wear" class="font-bold text-amber-300 text-sm">12%</div>
+              </div>
+              <div class="bg-stone-900/80 p-2 rounded border border-stone-800">
+                <div class="text-stone-400">Mill Cat Crew:</div>
+                <div id="status-cats" class="font-bold text-amber-200 text-sm">1 Cat (Barnaby)</div>
+              </div>
+            </div>
+
+            <div class="border-t border-amber-900/40 my-1"></div>
+
+            <!-- Upgrades & Actions List -->
+            <div id="upgrades-list" class="space-y-2.5 overflow-y-auto max-h-[320px] custom-scrollbar pr-1 text-xs">
+              <!-- Upgrades dynamically loaded here -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- GAME OVER / SEASON SUMMARY MODAL -->
+  <div id="modal-summary" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+    <div class="panel-bg max-w-lg w-full rounded-xl p-6 flex flex-col gap-4 border-2 border-amber-600">
+      <h2 id="modal-summary-title" class="text-2xl font-bold text-amber-300 text-center font-serif-title">Day Complete</h2>
+      <div id="modal-summary-body" class="text-sm text-stone-300 space-y-2">
+        <!-- Summary Stats Here -->
+      </div>
+      <button id="modal-summary-btn" class="btn-wood py-2.5 px-6 rounded-lg font-bold text-sm w-full mt-2">
+        Continue Operations
+      </button>
+    </div>
+  </div>
+
+  <!-- INITIAL START & DIFFICULTY SELECT MODAL -->
+  <div id="modal-start" class="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4">
+    <div class="panel-bg max-w-2xl w-full rounded-2xl p-6 flex flex-col gap-5 border-2 border-amber-700 shadow-2xl">
+      <div class="text-center">
+        <h2 class="text-3xl font-extrabold text-amber-200 tracking-wide font-serif-title mb-1">Woodbridge Tide Mill Manager</h2>
+        <p class="text-xs text-amber-400/90 uppercase tracking-widest font-semibold">Historic Mill Simulation • Deben Estuary, Suffolk</p>
+      </div>
+
+      <p class="text-sm text-stone-300 leading-relaxed text-center px-4">
+        Welcome to the helm of Woodbridge's iconic 18th-century Tide Mill. Harness the power of the river Deben's rising and falling tides, fill the mill pool, grind fine flours, satisfy local Woodbridge bakeries, and defend your grain silos from hungry river rats!
+      </p>
+
+      <div class="space-y-3 my-2">
+        <h3 class="text-xs font-bold uppercase text-amber-400 tracking-wider">Select Milling Mastery Level:</h3>
+        
+        <!-- Difficulty Option 1 -->
+        <label class="block p-3.5 rounded-xl border border-amber-900/60 bg-stone-900/90 hover:border-amber-500 cursor-pointer transition">
+          <div class="flex items-center">
+            <input type="radio" name="difficulty" value="easy" class="text-amber-600 focus:ring-0">
+            <div class="ml-3">
+              <div class="font-bold text-amber-200 text-sm">Mill Cat, the Silty Apprentice <span class="text-xs font-normal text-emerald-400 ml-2">(Easy / Casual)</span></div>
+              <div class="text-xs text-stone-400 mt-0.5">Generous tide windows, high water head, mild rodent threats, and forgiving market margins.</div>
+            </div>
+          </div>
+        </label>
+
+        <!-- Difficulty Option 2 -->
+        <label class="block p-3.5 rounded-xl border border-amber-500 bg-amber-950/40 hover:border-amber-400 cursor-pointer transition">
+          <div class="flex items-center">
+            <input type="radio" name="difficulty" value="medium" checked class="text-amber-600 focus:ring-0">
+            <div class="ml-3">
+              <div class="font-bold text-amber-100 text-sm">Miller - The Daily Grind <span class="text-xs font-normal text-amber-400 ml-2">(Standard)</span></div>
+              <div class="text-xs text-stone-400 mt-0.5">Realistic tide cycles, dynamic bakery orders, moderate silt accumulation, and pest threats.</div>
+            </div>
+          </div>
+        </label>
+
+        <!-- Difficulty Option 3 -->
+        <label class="block p-3.5 rounded-xl border border-amber-900/60 bg-stone-900/90 hover:border-amber-500 cursor-pointer transition">
+          <div class="flex items-center">
+            <input type="radio" name="difficulty" value="hard" class="text-amber-600 focus:ring-0">
+            <div class="ml-3">
+              <div class="font-bold text-amber-200 text-sm">Mill Master, the Tide Tycoon <span class="text-xs font-normal text-rose-400 ml-2">(Hard / Expert)</span></div>
+              <div class="text-xs text-stone-400 mt-0.5">Strict tide timing, heavy silt buildup requiring costly dredging, rapid millstone wear, and rare specialty grain contracts.</div>
+            </div>
+          </div>
+        </label>
+      </div>
+
+      <button id="btn-start-game" class="btn-wood py-3 px-8 rounded-xl font-extrabold text-base tracking-wide text-amber-100 uppercase shadow-lg hover:scale-[1.01]">
+        Begin Milling Operations ⚙️
+      </button>
+    </div>
+  </div>
+
+  <!-- GAME LOGIC SCRIPT -->
+  <script>
+    /**
+     * WOODBRIDGE TIDE MILL MANAGER - MAIN ENGINE
+     */
+    
+    // --- Web Audio Synth Sound FX Engine ---
+    class SoundEngine {
+      constructor() {
+        this.ctx = null;
+        this.enabled = true;
+      }
+      init() {
+        if (!this.ctx) {
+          const AudioContext = window.AudioContext || window.webkitAudioContext;
+          if (AudioContext) this.ctx = new AudioContext();
+        }
+      }
+      playClick() {
+        if (!this.enabled || !this.ctx) return;
+        try {
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(400, this.ctx.currentTime);
+          osc.frequency.exponentialRampToValueAtTime(150, this.ctx.currentTime + 0.05);
+          gain.gain.setValueAtTime(0.15, this.ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.01, this.ctx.currentTime + 0.05);
+          osc.connect(gain);
+          gain.connect(this.ctx.destination);
+          osc.start();
+          osc.stop(this.ctx.currentTime + 0.05);
+        } catch(e){}
+      }
+      playSplash() {
+        if (!this.enabled || !this.ctx) return;
+        try {
+          const bufferSize = this.ctx.sampleRate * 0.15;
+          const buffer = this.ctx.createBuffer(1, bufferSize, this.ctx.sampleRate);
+          const data = buffer.getChannelData(0);
+          for (let i = 0; i < bufferSize; i++) data[i] = Math.random() * 2 - 1;
+          const noise = this.ctx.createBufferSource();
+          noise.buffer = buffer;
+          const filter = this.ctx.createBiquadFilter();
+          filter.type = 'lowpass';
+          filter.frequency.value = 600;
+          const gain = this.ctx.createGain();
+          gain.gain.setValueAtTime(0.2, this.ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.01, this.ctx.currentTime + 0.15);
+          noise.connect(filter);
+          filter.connect(gain);
+          gain.connect(this.ctx.destination);
+          noise.start();
+        } catch(e){}
+      }
+      playMeow() {
+        if (!this.enabled || !this.ctx) return;
+        try {
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(550, this.ctx.currentTime);
+          osc.frequency.linearRampToValueAtTime(750, this.ctx.currentTime + 0.15);
+          osc.frequency.linearRampToValueAtTime(450, this.ctx.currentTime + 0.35);
+          gain.gain.setValueAtTime(0.1, this.ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.01, this.ctx.currentTime + 0.35);
+          osc.connect(gain);
+          gain.connect(this.ctx.destination);
+          osc.start();
+          osc.stop(this.ctx.currentTime + 0.35);
+        } catch(e){}
+      }
+      playGrind() {
+        if (!this.enabled || !this.ctx) return;
+        try {
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          osc.type = 'sawtooth';
+          osc.frequency.setValueAtTime(80, this.ctx.currentTime);
+          gain.gain.setValueAtTime(0.08, this.ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + 0.2);
+          osc.connect(gain);
+          gain.connect(this.ctx.destination);
+          osc.start();
+          osc.stop(this.ctx.currentTime + 0.2);
+        } catch(e){}
+      }
+    }
+    const sound = new SoundEngine();
+
+    // --- GAME STATE DECLARATION ---
+    const state = {
+      difficulty: 'medium', // 'easy', 'medium', 'hard'
+      paused: false,
+      day: 1,
+      minute: 360, // Starts at 06:00 AM (in minutes)
+      gold: 150.0,
+      reputation: 50,
+      
+      // Tide Engine Constants
+      tideCycleMins: 720,
+      riverLevel: 100, // % 0 to 100
+      pondLevel: 85,  // % 0 to 100
+      
+      // Mill Controls
+      sluiceOpen: false,
+      millingEngaged: false, // Intent/Toggle set by player
+      stoneGap: 'medium', // 'coarse', 'medium', 'fine'
+      activeGrain: 'wheat',
+      wheelSpeedRpm: 0,
+      
+      // Storage Capacities
+      maxSilo: 500,
+      maxFlour: 500,
+      
+      // Inventory (kg)
+      grains: {
+        wheat: 120,
+        rye: 40,
+        spelt: 0,
+        barley: 0,
+        heritage: 0
+      },
+      flours: {
+        wholemeal: 30,
+        fine_white: 10,
+        rye_flour: 0,
+        spelt_flour: 0,
+        heritage_blend: 0
+      },
+      
+      // Maintenance & Pest Levels (%)
+      siltLevel: 5,
+      rodentInfestation: 0,
+      millstoneWear: 10,
+      catCount: 1,
+
+      // Economics & Contracts
+      contracts: [],
+      marketOffers: []
+    };
+
+    // --- DATA DEFINITIONS ---
+    const GRAIN_TYPES = {
+      wheat: { name: 'Raw Wheat', basePrice: 0.8, yields: 'wholemeal', fineYield: 'fine_white' },
+      rye: { name: 'Rye Grain', basePrice: 1.1, yields: 'rye_flour' },
+      spelt: { name: 'Spelt Grain', basePrice: 1.4, yields: 'spelt_flour' },
+      barley: { name: 'Barley Grain', basePrice: 0.9, yields: 'wholemeal' },
+      heritage: { name: 'Heritage Grain', basePrice: 2.2, yields: 'heritage_blend' }
+    };
+
+    const FLOUR_TYPES = {
+      wholemeal: { name: 'Wholemeal Flour', baseSellPrice: 1.8 },
+      fine_white: { name: 'Fine White Flour', baseSellPrice: 2.5 },
+      rye_flour: { name: 'Dark Rye Flour', baseSellPrice: 2.4 },
+      spelt_flour: { name: 'Artisan Spelt Flour', baseSellPrice: 3.1 },
+      heritage_blend: { name: 'Heritage Mill Flour', baseSellPrice: 4.8 }
+    };
+
+    const BAKERY_NAMES = [
+      "Deben Estuary Bakehouse",
+      "Woodbridge Market Tavern",
+      "Suffolk Heritage Bakes",
+      "St. Mary's Monastery Oven",
+      "Crown & Anchor Inn Bakery"
+    ];
+
+    // --- INITIALIZATION & EVENT LISTENERS ---
+    window.onload = function() {
+      initCanvas();
+      setupEventListeners();
+      renderUI();
+      
+      // Start loop
+      setInterval(gameTick, 1000); // 1 second real-time = 10 game minutes
+      requestAnimationFrame(renderCanvasLoop);
+    };
+
+    function setupEventListeners() {
+      // Audio toggle
+      document.getElementById('btn-audio-toggle').addEventListener('click', () => {
+        sound.enabled = !sound.enabled;
+        document.getElementById('btn-audio-toggle').textContent = sound.enabled ? '🔊' : '🔇';
+      });
+
+      // Pause toggle
+      document.getElementById('btn-pause-toggle').addEventListener('click', () => {
+        state.paused = !state.paused;
+        document.getElementById('btn-pause-toggle').textContent = state.paused ? 'Resume' : 'Pause';
+      });
+
+      // Difficulty / Start Game
+      document.getElementById('btn-start-game').addEventListener('click', () => {
+        sound.init();
+        sound.playClick();
+        const selected = document.querySelector('input[name="difficulty"]:checked').value;
+        applyDifficulty(selected);
+        document.getElementById('modal-start').classList.add('hidden');
+        generateDailyMarket();
+        generateDailyContracts();
+        renderUI();
+      });
+
+      // Sluice Gate Toggle
+      document.getElementById('btn-toggle-sluice').addEventListener('click', () => {
+        sound.playClick();
+        state.sluiceOpen = !state.sluiceOpen;
+        if (state.sluiceOpen) sound.playSplash();
+        renderUI();
+      });
+
+      // Milling Toggle - PERSISTENT CLUTCH TOGGLE
+      document.getElementById('btn-toggle-milling').addEventListener('click', () => {
+        sound.playClick();
+        state.millingEngaged = !state.millingEngaged;
+        
+        if (state.millingEngaged) {
+          if (!state.sluiceOpen || state.wheelSpeedRpm <= 3) {
+            showAlert("Millstones engaged! Open Sluice Gate during Ebbing tide for water power.", "⚙️");
+          } else if ((state.grains[state.activeGrain] || 0) <= 0) {
+            showAlert(`Millstones engaged! Hopper is empty for ${GRAIN_TYPES[state.activeGrain].name}. Load grain to start grinding.`, "🌾");
+          }
+        }
+        renderUI();
+      });
+
+      // Stone Gap Selection
+      document.getElementById('select-stone-gap').addEventListener('change', (e) => {
+        state.stoneGap = e.target.value;
+      });
+
+      // Active Grain Selection
+      document.getElementById('select-active-grain').addEventListener('change', (e) => {
+        state.activeGrain = e.target.value;
+        renderUI();
+      });
+
+      // Tabs Navigation
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          sound.playClick();
+          const targetTab = btn.getAttribute('data-tab');
+          
+          document.querySelectorAll('.tab-btn').forEach(b => {
+            b.classList.remove('bg-amber-900/60', 'text-amber-200', 'border-t', 'border-x', 'border-amber-700');
+            b.classList.add('text-stone-400');
+          });
+          btn.classList.add('bg-amber-900/60', 'text-amber-200', 'border-t', 'border-x', 'border-amber-700');
+          btn.classList.remove('text-stone-400');
+
+          document.querySelectorAll('.tab-content').forEach(content => content.classList.add('hidden'));
+          document.getElementById(`tab-${targetTab}`).classList.remove('hidden');
+        });
+      });
+
+      // Modal Summary Dismiss
+      document.getElementById('modal-summary-btn').addEventListener('click', () => {
+        document.getElementById('modal-summary').classList.add('hidden');
+        state.paused = false;
+      });
+
+      // Alert dismiss
+      document.getElementById('alert-dismiss').addEventListener('click', () => {
+        document.getElementById('alert-banner').classList.add('hidden');
+      });
+    }
+
+    function applyDifficulty(diff) {
+      state.difficulty = diff;
+      document.getElementById('hud-difficulty-name').textContent = 
+        diff === 'easy' ? 'Mill Cat' : (diff === 'medium' ? 'Miller' : 'Mill Master');
+
+      if (diff === 'easy') {
+        state.gold = 250.0;
+        state.grains.wheat = 200;
+        state.catCount = 2;
+        state.maxSilo = 800;
+        state.maxFlour = 800;
+      } else if (diff === 'hard') {
+        state.gold = 80.0;
+        state.grains.wheat = 60;
+        state.catCount = 0;
+        state.siltLevel = 20;
+      }
+    }
+
+    // --- CORE GAME LOOP (TIME & PHYSICS) ---
+    function gameTick() {
+      if (state.paused || document.getElementById('modal-start').classList.contains('hidden') === false) return;
+
+      // Advance Time by 10 minutes each second
+      state.minute += 10;
+      if (state.minute >= 1440) {
+        state.minute = 0;
+        state.day += 1;
+        triggerEndOfDay();
+      }
+
+      // 1. TIDE CYCLE CALCULATIONS
+      const cyclePos = state.minute % state.tideCycleMins;
+      const tideAngle = (cyclePos / state.tideCycleMins) * 2 * Math.PI;
+      state.riverLevel = Math.round(50 + 45 * Math.cos(tideAngle)); // 5% to 95% height
+
+      let tidePhase = "High Tide";
+      if (cyclePos >= 90 && cyclePos < 270) tidePhase = "Ebbing Tide (Best Milling!)";
+      else if (cyclePos >= 270 && cyclePos < 450) tidePhase = "Low Tide";
+      else if (cyclePos >= 450 && cyclePos < 630) tidePhase = "Flooding Tide (Filling Pool)";
+      
+      document.getElementById('hud-tide-state').textContent = tidePhase;
+
+      // 2. WATER FLOW & MILL POND PHYSICS
+      let headDifference = state.pondLevel - state.riverLevel;
+
+      if (state.sluiceOpen) {
+        if (state.riverLevel > state.pondLevel) {
+          // River is higher -> Fill Mill Pond (Flooding Tide)
+          const fillRate = 3.5 * (1 - state.siltLevel / 100);
+          state.pondLevel = Math.min(100, state.pondLevel + fillRate);
+        } else {
+          // Mill Pond is higher -> Water flows out driving wheel
+          const drainRate = 2.5;
+          state.pondLevel = Math.max(0, state.pondLevel - drainRate);
+        }
+      }
+
+      // Calculate Wheel Speed (RPM)
+      if (state.sluiceOpen && headDifference > 5) {
+        let baseRpm = Math.min(24, Math.max(0, headDifference * 0.4));
+        baseRpm *= (1 - (state.siltLevel * 0.006));
+        state.wheelSpeedRpm = Math.round(baseRpm);
+      } else {
+        state.wheelSpeedRpm = 0;
+      }
+
+      // 3. MILLING PROCESS SIMULATION
+      // Check operational readiness while keeping clutch engaged
+      const currentStock = state.grains[state.activeGrain] || 0;
+      const hasWaterPower = state.wheelSpeedRpm > 3;
+      const hasGrain = currentStock > 0;
+
+      if (state.millingEngaged && hasWaterPower && hasGrain) {
+        processMillingTick();
+      }
+
+      // 4. WEAR & ENVIRONMENTAL TICK
+      if (state.wheelSpeedRpm > 0) {
+        if (state.millingEngaged && hasGrain) {
+          state.millstoneWear = Math.min(100, state.millstoneWear + 0.1);
+        }
+        if (state.riverLevel > state.pondLevel && state.sluiceOpen) {
+          const siltInc = state.difficulty === 'hard' ? 0.3 : 0.15;
+          state.siltLevel = Math.min(100, state.siltLevel + siltInc);
+        }
+      }
+
+      // 5. RODENT THREAT SYSTEM
+      let rodentChance = state.difficulty === 'hard' ? 0.08 : 0.03;
+      if (Math.random() < rodentChance && state.rodentInfestation < 50) {
+        state.rodentInfestation += 1;
+      }
+      if (state.catCount > 0 && state.rodentInfestation > 0) {
+        state.rodentInfestation = Math.max(0, state.rodentInfestation - (state.catCount * 0.5));
+      }
+      if (state.rodentInfestation > 10) {
+        const eaten = Math.floor(state.rodentInfestation * 0.2);
+        if (state.grains[state.activeGrain] > 0) {
+          state.grains[state.activeGrain] = Math.max(0, state.grains[state.activeGrain] - eaten);
+        }
+      }
+
+      renderUI();
+    }
+
+    // Process single tick of active milling
+    function processMillingTick() {
+      const selectedGrain = state.activeGrain;
+      const currentStock = state.grains[selectedGrain] || 0;
+
+      if (currentStock <= 0) return;
+
+      // Calculate grinding speed based on wheel RPM and stone gap
+      let speedFactor = 1.0;
+      if (state.stoneGap === 'coarse') speedFactor = 1.5;
+      if (state.stoneGap === 'fine') speedFactor = 0.7;
+
+      const efficiency = 1 - (state.millstoneWear / 150);
+      let grindAmount = Math.min(currentStock, (state.wheelSpeedRpm * 0.6 * speedFactor * efficiency));
+      grindAmount = Math.round(grindAmount * 10) / 10;
+
+      if (grindAmount > 0) {
+        // Deduct raw grain
+        state.grains[selectedGrain] -= grindAmount;
+
+        // Determine output flour
+        let outputFlourKey = GRAIN_TYPES[selectedGrain].yields;
+        if (selectedGrain === 'wheat' && state.stoneGap === 'fine') {
+          outputFlourKey = GRAIN_TYPES.wheat.fineYield; // Fine White Flour
+        }
+
+        // Add to flour storage
+        const currentFlourTotal = Object.values(state.flours).reduce((a,b)=>a+b, 0);
+        if (currentFlourTotal + grindAmount <= state.maxFlour) {
+          state.flours[outputFlourKey] = (state.flours[outputFlourKey] || 0) + grindAmount;
+        } else {
+          showAlert("Flour storage full! Sell flour or upgrade storage.", "📦");
+        }
+
+        if (Math.random() < 0.2) sound.playGrind();
+      }
+    }
+
+    // --- DAILY EVENT GENERATOR ---
+    function triggerEndOfDay() {
+      state.paused = true;
+      
+      const summaryBody = document.getElementById('modal-summary-body');
+      summaryBody.innerHTML = `
+        <p><strong>Day ${state.day - 1} Summary:</strong></p>
+        <ul class="list-disc pl-5 space-y-1">
+          <li>Gold Sovereigns: <span class="text-yellow-400 font-bold">£${state.gold.toFixed(2)}</span></li>
+          <li>Mill Reputation: <span class="text-amber-300 font-bold">${state.reputation} / 100</span></li>
+          <li>Silt Buildup: <span class="text-amber-300">${Math.round(state.siltLevel)}%</span></li>
+          <li>Millstone Wear: <span class="text-amber-300">${Math.round(state.millstoneWear)}%</span></li>
+          <li>Active Mill Cats: <span class="text-amber-300">${state.catCount}</span></li>
+        </ul>
+      `;
+
+      document.getElementById('modal-summary-title').textContent = `Day ${state.day - 1} Complete`;
+      document.getElementById('modal-summary').classList.remove('hidden');
+
+      generateDailyMarket();
+      generateDailyContracts();
+    }
+
+    function generateDailyMarket() {
+      state.marketOffers = [];
+      const keys = Object.keys(GRAIN_TYPES);
+      
+      keys.forEach(key => {
+        const mult = 0.8 + Math.random() * 0.4;
+        const pricePerKg = Math.round(GRAIN_TYPES[key].basePrice * mult * 100) / 100;
+        const amountAvailable = Math.floor(80 + Math.random() * 150);
+
+        state.marketOffers.push({
+          grainKey: key,
+          name: GRAIN_TYPES[key].name,
+          priceKg: pricePerKg,
+          availableKg: amountAvailable
+        });
+      });
+    }
+
+    function generateDailyContracts() {
+      state.contracts = [];
+      const bakeryNames = [...BAKERY_NAMES].sort(() => 0.5 - Math.random()).slice(0, 3);
+      const flourKeys = Object.keys(FLOUR_TYPES);
+
+      bakeryNames.forEach(bakery => {
+        const requiredFlour = flourKeys[Math.floor(Math.random() * flourKeys.length)];
+        const amountKg = Math.floor(30 + Math.random() * 60);
+        const bonusMult = 1.3 + Math.random() * 0.4;
+        const rewardGold = Math.round(amountKg * FLOUR_TYPES[requiredFlour].baseSellPrice * bonusMult * 10) / 10;
+        const repReward = Math.floor(4 + Math.random() * 5);
+
+        state.contracts.push({
+          id: Math.random().toString(36).substr(2, 9),
+          client: bakery,
+          flourKey: requiredFlour,
+          flourName: FLOUR_TYPES[requiredFlour].name,
+          amountKg: amountKg,
+          rewardGold: rewardGold,
+          repReward: repReward
+        });
+      });
+    }
+
+    // --- UI RENDER ENGINE ---
+    function renderUI() {
+      // HUD updates
+      document.getElementById('hud-day').textContent = `Day ${state.day}`;
+      
+      const hours = Math.floor(state.minute / 60);
+      const mins = state.minute % 60;
+      const timeStr = `${hours.toString().padStart(2, '0')}:${mins.toString().padStart(2, '0')}`;
+      document.getElementById('hud-time').textContent = timeStr;
+      
+      document.getElementById('hud-gold').textContent = `£${state.gold.toFixed(2)}`;
+      document.getElementById('hud-rep').textContent = `${state.reputation} / 100`;
+      document.getElementById('hud-pond-level').textContent = `${Math.round(state.pondLevel)}%`;
+
+      // Wheel Status
+      const wheelText = document.getElementById('wheel-status-text');
+      if (state.wheelSpeedRpm > 0) {
+        wheelText.textContent = `Turning (${state.wheelSpeedRpm} RPM)`;
+        wheelText.className = "font-bold text-emerald-400";
+      } else {
+        wheelText.textContent = "Idle";
+        wheelText.className = "font-bold text-amber-500";
+      }
+
+      // Sluice Gate Control UI
+      const sluiceBadge = document.getElementById('sluice-status-badge');
+      const sluiceBtnText = document.getElementById('btn-sluice-text');
+      if (state.sluiceOpen) {
+        sluiceBadge.textContent = "Open";
+        sluiceBadge.className = "text-xs px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800";
+        sluiceBtnText.textContent = "Close Sluice Gate";
+      } else {
+        sluiceBadge.textContent = "Closed";
+        sluiceBadge.className = "text-xs px-2 py-0.5 rounded bg-stone-800 text-stone-300 border border-stone-700";
+        sluiceBtnText.textContent = "Open Sluice Gate";
+      }
+
+      // Millstone Engagement Status Badges & Warnings
+      const millBadge = document.getElementById('milling-status-badge');
+      const millBtnText = document.getElementById('btn-milling-text');
+      const currentStock = state.grains[state.activeGrain] || 0;
+      const hasWaterPower = state.wheelSpeedRpm > 3;
+      const hasGrain = currentStock > 0;
+
+      if (state.millingEngaged) {
+        millBtnText.textContent = "Disengage Millstones";
+        if (hasWaterPower && hasGrain) {
+          millBadge.textContent = "Stones Engaged & Grinding";
+          millBadge.className = "text-xs px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800 font-bold animate-pulse";
+        } else if (!hasWaterPower && !hasGrain) {
+          millBadge.textContent = "Engaged (Waiting: Water & Grain)";
+          millBadge.className = "text-xs px-2 py-0.5 rounded bg-amber-950 text-amber-300 border border-amber-800";
+        } else if (!hasWaterPower) {
+          millBadge.textContent = "Engaged (Waiting for Water Power)";
+          millBadge.className = "text-xs px-2 py-0.5 rounded bg-amber-950 text-amber-300 border border-amber-800";
+        } else {
+          millBadge.textContent = "Engaged (Waiting: Empty Hopper)";
+          millBadge.className = "text-xs px-2 py-0.5 rounded bg-amber-950 text-amber-300 border border-amber-800";
+        }
+      } else {
+        millBadge.textContent = "Disengaged";
+        millBadge.className = "text-xs px-2 py-0.5 rounded bg-rose-950 text-rose-300 border border-rose-800";
+        millBtnText.textContent = "Engage Millstones";
+      }
+
+      // Milling Rate Indicator
+      const rateText = document.getElementById('milling-rate-text');
+      if (state.millingEngaged && hasWaterPower && hasGrain) {
+        const estRate = (state.wheelSpeedRpm * 0.6 * (state.stoneGap==='coarse'?1.5:(state.stoneGap==='fine'?0.7:1.0))).toFixed(1);
+        rateText.textContent = `Rate: ~${estRate} kg/min`;
+        rateText.className = "font-bold text-emerald-400";
+      } else if (state.millingEngaged) {
+        if (!hasWaterPower) rateText.textContent = "Rate: 0.0 kg/min (No Water Flow)";
+        else rateText.textContent = "Rate: 0.0 kg/min (No Grain in Hopper)";
+        rateText.className = "text-amber-400";
+      } else {
+        rateText.textContent = `Rate: 0.0 kg/min`;
+        rateText.className = "text-stone-400";
+      }
+
+      // Active Grain Select dropdown options update
+      const grainSelect = document.getElementById('select-active-grain');
+      const currentSelectedVal = grainSelect.value;
+      grainSelect.innerHTML = '';
+      Object.keys(GRAIN_TYPES).forEach(k => {
+        const opt = document.createElement('option');
+        opt.value = k;
+        opt.textContent = `${GRAIN_TYPES[k].name} (Stock: ${Math.round(state.grains[k] || 0)} kg)`;
+        if (k === currentSelectedVal) opt.selected = true;
+        grainSelect.appendChild(opt);
+      });
+
+      // Canvas overlays
+      const headDiff = Math.max(0, (state.pondLevel - state.riverLevel) * 0.04).toFixed(1);
+      document.getElementById('canvas-head-diff').textContent = `${headDiff} m`;
+      document.getElementById('canvas-rpm').textContent = `${state.wheelSpeedRpm} RPM`;
+
+      // Render tab panels
+      renderInventoryTab();
+      renderMarketTab();
+      renderContractsTab();
+      renderUpgradesTab();
+    }
+
+    function renderInventoryTab() {
+      const totalGrain = Object.values(state.grains).reduce((a,b)=>a+b, 0);
+      const totalFlour = Object.values(state.flours).reduce((a,b)=>a+b, 0);
+
+      document.getElementById('silo-capacity-text').textContent = `${Math.round(totalGrain)} / ${state.maxSilo} kg`;
+      document.getElementById('flour-capacity-text').textContent = `${Math.round(totalFlour)} / ${state.maxFlour} kg`;
+
+      // Raw Grain List
+      const rawContainer = document.getElementById('raw-grain-list');
+      rawContainer.innerHTML = '';
+      Object.keys(GRAIN_TYPES).forEach(k => {
+        const amount = Math.round(state.grains[k] || 0);
+        const div = document.createElement('div');
+        div.className = "flex justify-between items-center bg-stone-950/60 px-2.5 py-1 rounded border border-stone-800";
+        div.innerHTML = `
+          <span class="text-stone-300 font-medium">${GRAIN_TYPES[k].name}</span>
+          <span class="font-bold ${amount > 0 ? 'text-amber-200' : 'text-stone-500'}">${amount} kg</span>
+        `;
+        rawContainer.appendChild(div);
+      });
+
+      // Flour Inventory & Quick Sell
+      const flourContainer = document.getElementById('flour-inventory-list');
+      flourContainer.innerHTML = '';
+      Object.keys(FLOUR_TYPES).forEach(k => {
+        const amount = Math.round(state.flours[k] || 0);
+        const unitPrice = FLOUR_TYPES[k].baseSellPrice;
+        const div = document.createElement('div');
+        div.className = "flex justify-between items-center bg-stone-950/60 px-2.5 py-1 rounded border border-stone-800";
+        div.innerHTML = `
+          <div>
+            <span class="text-amber-100 font-medium">${FLOUR_TYPES[k].name}</span>
+            <span class="text-[10px] text-stone-400 block">Market: £${unitPrice.toFixed(2)} / kg</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <span class="font-bold ${amount > 0 ? 'text-emerald-300' : 'text-stone-500'}">${amount} kg</span>
+            <button onclick="sellFlourDirect('${k}', 10)" ${amount < 10 ? 'disabled' : ''} class="btn-wood text-[10px] px-2 py-1 rounded">
+              Sell 10kg
+            </button>
+          </div>
+        `;
+        flourContainer.appendChild(div);
+      });
+    }
+
+    function renderMarketTab() {
+      const marketContainer = document.getElementById('market-offers-list');
+      marketContainer.innerHTML = '';
+
+      state.marketOffers.forEach(offer => {
+        const card = document.createElement('div');
+        card.className = "bg-stone-950/80 p-2.5 rounded-lg border border-amber-900/40 flex justify-between items-center";
+        card.innerHTML = `
+          <div>
+            <div class="font-bold text-amber-200 text-xs">${offer.name}</div>
+            <div class="text-[10px] text-stone-400">Price: <strong class="text-yellow-400">£${offer.priceKg.toFixed(2)}/kg</strong> • Barge Stock: ${offer.availableKg}kg</div>
+          </div>
+          <div class="flex gap-1">
+            <button onclick="buyGrain('${offer.grainKey}', 25, ${offer.priceKg})" class="btn-wood text-xs px-2 py-1 rounded">
+              +25kg (£${(offer.priceKg * 25).toFixed(1)})
+            </button>
+            <button onclick="buyGrain('${offer.grainKey}', 50, ${offer.priceKg})" class="btn-wood text-xs px-2 py-1 rounded">
+              +50kg
+            </button>
+          </div>
+        `;
+        marketContainer.appendChild(card);
+      });
+    }
+
+    function renderContractsTab() {
+      const container = document.getElementById('contracts-list');
+      container.innerHTML = '';
+
+      if (state.contracts.length === 0) {
+        container.innerHTML = `<div class="text-center text-xs text-stone-500 py-4">No active contracts today. Check back tomorrow!</div>`;
+        return;
+      }
+
+      state.contracts.forEach(contract => {
+        const available = Math.round(state.flours[contract.flourKey] || 0);
+        const canFulfill = available >= contract.amountKg;
+
+        const card = document.createElement('div');
+        card.className = "bg-stone-950/80 p-3 rounded-lg border border-amber-900/40 flex flex-col gap-2";
+        card.innerHTML = `
+          <div class="flex justify-between items-start">
+            <div>
+              <div class="font-bold text-amber-200 text-xs">${contract.client}</div>
+              <div class="text-[11px] text-stone-300">Requires: <strong>${contract.amountKg} kg of ${contract.flourName}</strong></div>
+            </div>
+            <div class="text-right">
+              <div class="text-xs font-bold text-yellow-400">£${contract.rewardGold.toFixed(2)}</div>
+              <div class="text-[10px] text-amber-300">+${contract.repReward} Rep</div>
+            </div>
+          </div>
+          <div class="flex justify-between items-center text-[10px] text-stone-400 border-t border-stone-800/80 pt-1.5">
+            <span>In Flour Storage: <strong class="${canFulfill ? 'text-emerald-400':'text-rose-400'}">${available} / ${contract.amountKg} kg</strong></span>
+            <button onclick="fulfillContract('${contract.id}')" ${!canFulfill ? 'disabled' : ''} class="btn-wood text-xs px-3 py-1 rounded font-bold">
+              Fulfill Order
+            </button>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function renderUpgradesTab() {
+      document.getElementById('status-silt').textContent = `${Math.round(state.siltLevel)}%`;
+      document.getElementById('status-silt').className = state.siltLevel > 30 ? 'font-bold text-rose-400 text-sm' : 'font-bold text-amber-300 text-sm';
+      
+      document.getElementById('status-rodents').textContent = `${Math.round(state.rodentInfestation)}%`;
+      document.getElementById('status-rodents').className = state.rodentInfestation > 20 ? 'font-bold text-rose-400 text-sm' : 'font-bold text-emerald-400 text-sm';
+
+      document.getElementById('status-stones-wear').textContent = `${Math.round(state.millstoneWear)}%`;
+      document.getElementById('status-cats').textContent = `${state.catCount} Cat(s)`;
+
+      const container = document.getElementById('upgrades-list');
+      container.innerHTML = `
+        <!-- Dredge Silt -->
+        <div class="bg-stone-950/80 p-2.5 rounded border border-stone-800 flex justify-between items-center">
+          <div>
+            <div class="font-bold text-amber-200">Hire River Deben Dredger</div>
+            <div class="text-stone-400 text-[10px]">Clears 30% silt from wheel race channel.</div>
+          </div>
+          <button onclick="dredgeSilt()" ${state.gold < 40 || state.siltLevel < 5 ? 'disabled' : ''} class="btn-wood text-xs px-2.5 py-1 rounded">
+            Dredge (£40)
+          </button>
+        </div>
+
+        <!-- Dress Millstones -->
+        <div class="bg-stone-950/80 p-2.5 rounded border border-stone-800 flex justify-between items-center">
+          <div>
+            <div class="font-bold text-amber-200">Dress & Sharpen Millstones</div>
+            <div class="text-stone-400 text-[10px]">Restores stone grinding surfaces to 0% wear.</div>
+          </div>
+          <button onclick="dressMillstones()" ${state.gold < 30 || state.millstoneWear < 5 ? 'disabled' : ''} class="btn-wood text-xs px-2.5 py-1 rounded">
+            Dress (£30)
+          </button>
+        </div>
+
+        <!-- Adopt Mill Cat -->
+        <div class="bg-stone-950/80 p-2.5 rounded border border-stone-800 flex justify-between items-center">
+          <div>
+            <div class="font-bold text-amber-200">Adopt Barn Cat</div>
+            <div class="text-stone-400 text-[10px]">Permanently keeps rat infestations under control.</div>
+          </div>
+          <button onclick="adoptCat()" ${state.gold < 25 ? 'disabled' : ''} class="btn-wood text-xs px-2.5 py-1 rounded">
+            Adopt (£25)
+          </button>
+        </div>
+
+        <!-- Expand Grain Silo -->
+        <div class="bg-stone-950/80 p-2.5 rounded border border-stone-800 flex justify-between items-center">
+          <div>
+            <div class="font-bold text-amber-200">Expand Grain Silo</div>
+            <div class="text-stone-400 text-[10px]">Increases max grain silo capacity by +250kg.</div>
+          </div>
+          <button onclick="expandSilo()" ${state.gold < 100 ? 'disabled' : ''} class="btn-wood text-xs px-2.5 py-1 rounded">
+            Expand (£100)
+          </button>
+        </div>
+      `;
+    }
+
+    // --- PLAYER ACTION HANDLERS ---
+    window.sellFlourDirect = function(flourKey, kgAmount) {
+      if ((state.flours[flourKey] || 0) < kgAmount) return;
+      sound.playClick();
+      const revenue = kgAmount * FLOUR_TYPES[flourKey].baseSellPrice;
+      state.flours[flourKey] -= kgAmount;
+      state.gold += revenue;
+      showAlert(`Sold ${kgAmount}kg of ${FLOUR_TYPES[flourKey].name} for £${revenue.toFixed(2)}`, "💰");
+      renderUI();
+    };
+
+    window.buyGrain = function(grainKey, kgAmount, unitPrice) {
+      const cost = kgAmount * unitPrice;
+      if (state.gold < cost) {
+        showAlert("Not enough Gold Sovereigns!", "⚠️");
+        return;
+      }
+      const totalGrain = Object.values(state.grains).reduce((a,b)=>a+b, 0);
+      if (totalGrain + kgAmount > state.maxSilo) {
+        showAlert("Grain Silo is full! Upgrade storage first.", "📦");
+        return;
+      }
+
+      sound.playClick();
+      state.gold -= cost;
+      state.grains[grainKey] = (state.grains[grainKey] || 0) + kgAmount;
+      showAlert(`Bought ${kgAmount}kg of ${GRAIN_TYPES[grainKey].name} via barge delivery.`, "🚢");
+      renderUI();
+    };
+
+    window.fulfillContract = function(contractId) {
+      const idx = state.contracts.findIndex(c => c.id === contractId);
+      if (idx === -1) return;
+      const c = state.contracts[idx];
+
+      if ((state.flours[c.flourKey] || 0) >= c.amountKg) {
+        sound.playClick();
+        state.flours[c.flourKey] -= c.amountKg;
+        state.gold += c.rewardGold;
+        state.reputation = Math.min(100, state.reputation + c.repReward);
+        
+        showAlert(`Contract completed for ${c.client}! Earned £${c.rewardGold.toFixed(2)} and +${c.repReward} Rep.`, "🥖");
+        state.contracts.splice(idx, 1);
+        renderUI();
+      }
+    };
+
+    window.dredgeSilt = function() {
+      if (state.gold >= 40) {
+        sound.playClick();
+        sound.playSplash();
+        state.gold -= 40;
+        state.siltLevel = Math.max(0, state.siltLevel - 30);
+        showAlert("Dredger hired! Mill race silt reduced.", "🚜");
+        renderUI();
+      }
+    };
+
+    window.dressMillstones = function() {
+      if (state.gold >= 30) {
+        sound.playClick();
+        state.gold -= 30;
+        state.millstoneWear = 0;
+        showAlert("Millstones sharpened and dressed to perfection!", "⚙️");
+        renderUI();
+      }
+    };
+
+    window.adoptCat = function() {
+      if (state.gold >= 25) {
+        sound.playMeow();
+        state.gold -= 25;
+        state.catCount += 1;
+        showAlert("Adopted a new mill cat! Rats beware.", "🐱");
+        renderUI();
+      }
+    };
+
+    window.expandSilo = function() {
+      if (state.gold >= 100) {
+        sound.playClick();
+        state.gold -= 100;
+        state.maxSilo += 250;
+        showAlert("Grain Silo capacity expanded by +250 kg!", "🏗️");
+        renderUI();
+      }
+    };
+
+    function showAlert(msg, icon = "⚠️") {
+      document.getElementById('alert-text').textContent = msg;
+      document.getElementById('alert-icon').textContent = icon;
+      document.getElementById('alert-banner').classList.remove('hidden');
+    }
+
+    // --- CANVAS VISUALIZER (3D-LIKE HYBRID 2D MILL SIMULATION) ---
+    let canvas, ctx;
+    let wheelAngle = 0;
+
+    function initCanvas() {
+      canvas = document.getElementById('millCanvas');
+      ctx = canvas.getContext('2d');
+      resizeCanvas();
+      window.addEventListener('resize', resizeCanvas);
+    }
+
+    function resizeCanvas() {
+      if (!canvas) return;
+      canvas.width = canvas.parentElement.clientWidth;
+      canvas.height = canvas.parentElement.clientHeight;
+    }
+
+    function renderCanvasLoop() {
+      if (!ctx) return;
+      const w = canvas.width;
+      const h = canvas.height;
+
+      // Clear Canvas
+      ctx.clearRect(0, 0, w, h);
+
+      // Sky & Background Gradient
+      const skyGrad = ctx.createLinearGradient(0, 0, 0, h * 0.5);
+      skyGrad.addColorStop(0, '#1e293b');
+      skyGrad.addColorStop(1, '#334155');
+      ctx.fillStyle = skyGrad;
+      ctx.fillRect(0, 0, w, h);
+
+      // 1. MILL POND WATER (LEFT SIDE)
+      const pondY = h * 0.7 - (state.pondLevel / 100) * (h * 0.45);
+      ctx.fillStyle = '#1e40af';
+      ctx.fillRect(0, pondY, w * 0.4, h - pondY);
+      
+      // Pond Water Highlights
+      ctx.fillStyle = '#3b82f6';
+      ctx.fillRect(0, pondY, w * 0.4, 4);
+
+      // 2. RIVER DEBEN TIDE LEVEL (RIGHT SIDE)
+      const riverY = h * 0.7 - (state.riverLevel / 100) * (h * 0.45);
+      ctx.fillStyle = '#0284c7';
+      ctx.fillRect(w * 0.6, riverY, w * 0.4, h - riverY);
+
+      // River Water Surface Line
+      ctx.fillStyle = '#38bdf8';
+      ctx.fillRect(w * 0.6, riverY, w * 0.4, 4);
+
+      // 3. MILL RACE CHANNEL & SLUICE WALL (CENTER)
+      ctx.fillStyle = '#44403c'; // Stone structure
+      ctx.fillRect(w * 0.38, h * 0.2, w * 0.24, h * 0.8);
+
+      // Sluice Gate Aperture
+      ctx.fillStyle = '#1c1917';
+      ctx.fillRect(w * 0.44, h * 0.55, w * 0.12, h * 0.3);
+
+      // Animated Sluice Gate Door
+      const gateOpenOffset = state.sluiceOpen ? h * 0.2 : 0;
+      ctx.fillStyle = '#78350f'; // Wooden gate
+      ctx.fillRect(w * 0.445, (h * 0.55) - gateOpenOffset, w * 0.11, h * 0.28);
+      ctx.strokeStyle = '#451a03';
+      ctx.strokeRect(w * 0.445, (h * 0.55) - gateOpenOffset, w * 0.11, h * 0.28);
+
+      // Water Flowing Through Sluice Gate if open
+      if (state.sluiceOpen && (state.pondLevel > state.riverLevel || state.riverLevel > state.pondLevel)) {
+        ctx.fillStyle = 'rgba(56, 189, 248, 0.6)';
+        ctx.fillRect(w * 0.44, h * 0.68, w * 0.12, h * 0.15);
+      }
+
+      // 4. HISTORIC WOODBRIDGE TIDE MILL BUILDING (LEFT STRUCTURE)
+      ctx.fillStyle = '#78350f'; // Timber building frame
+      ctx.fillRect(0, h * 0.1, w * 0.38, h * 0.45);
+      
+      // Roof
+      ctx.beginPath();
+      ctx.moveTo(0, h * 0.1);
+      ctx.lineTo(w * 0.19, h * 0.02);
+      ctx.lineTo(w * 0.38, h * 0.1);
+      ctx.fillStyle = '#292524';
+      ctx.fill();
+
+      // Windows & Doors
+      ctx.fillStyle = '#fef08a';
+      ctx.fillRect(w * 0.05, h * 0.2, w * 0.06, h * 0.08);
+      ctx.fillRect(w * 0.25, h * 0.2, w * 0.06, h * 0.08);
+
+      // 5. ANIMATED WATER WHEEL (CENTER RIGHT)
+      const wheelX = w * 0.5;
+      const wheelY = h * 0.65;
+      const wheelRadius = Math.min(w, h) * 0.18;
+
+      if (state.wheelSpeedRpm > 0) {
+        wheelAngle += (state.wheelSpeedRpm * 0.005);
+      }
+
+      ctx.save();
+      ctx.translate(wheelX, wheelY);
+      ctx.rotate(wheelAngle);
+
+      // Outer Wheel Rim
+      ctx.strokeStyle = '#9a3412';
+      ctx.lineWidth = 6;
+      ctx.beginPath();
+      ctx.arc(0, 0, wheelRadius, 0, Math.PI * 2);
+      ctx.stroke();
+
+      // Inner Hub
+      ctx.fillStyle = '#451a03';
+      ctx.beginPath();
+      ctx.arc(0, 0, wheelRadius * 0.25, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Spokes & Water Buckets
+      const spokeCount = 12;
+      for (let i = 0; i < spokeCount; i++) {
+        const ang = (i * Math.PI * 2) / spokeCount;
+        ctx.strokeStyle = '#b45309';
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.moveTo(0, 0);
+        ctx.lineTo(Math.cos(ang) * wheelRadius, Math.sin(ang) * wheelRadius);
+        ctx.stroke();
+
+        // Bucket Blades
+        ctx.fillStyle = '#78350f';
+        ctx.fillRect(Math.cos(ang) * (wheelRadius - 8), Math.sin(ang) * (wheelRadius - 8), 12, 6);
+      }
+
+      ctx.restore();
+
+      // Silt deposit visualization
+      if (state.siltLevel > 0) {
+        const siltHeight = (state.siltLevel / 100) * (h * 0.08);
+        ctx.fillStyle = '#713f12';
+        ctx.fillRect(w * 0.44, h * 0.85 - siltHeight, w * 0.12, siltHeight);
+      }
+
+      requestAnimationFrame(renderCanvasLoop);
+    }
+  </script>
+</body>
+</html>
