@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Circuit Weaver - Daily Puzzle & Competition</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            dark: '#0a0f1d',
+                            card: '#111827',
+                            accent: '#06b6d4',
+                            glow: '#3b82f6',
+                        }
+                    },
+                    boxShadow: {
+                        'glow-cyan': '0 0 15px rgba(6, 182, 212, 0.4)',
+                        'glow-purple': '0 0 15px rgba(168, 85, 247, 0.4)',
+                        'glow-amber': '0 0 15px rgba(245, 158, 11, 0.4)',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- PWA Manifest Meta -->
+    <meta name="theme-color" content="#0a0f1d">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Circuit Weaver">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230a0f1d'/><circle cx='30' cy='30' r='12' fill='%2306b6d4'/><circle cx='70' cy='70' r='12' fill='%2306b6d4'/><path d='M30 30 L70 70' stroke='%2306b6d4' stroke-width='8' stroke-linecap='round'/></svg>">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0f1d;
+            color: #f3f4f6;
+            touch-action: manipulation;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0f1d;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1f2937;
+            border-radius: 3px;
+        }
+        .glass-panel {
+            background: rgba(17, 24, 39, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        #canvas-container {
+            touch-action: none;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between overflow-x-hidden">
+
+    <!-- Header Navigation -->
+    <header class="w-full max-w-xl mx-auto px-4 py-3 flex items-center justify-between border-b border-gray-800">
+        <div class="flex items-center space-x-2">
+            <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center shadow-glow-cyan">
+                <i class="fa-solid font-bold text-white text-sm">⚡</i>
+            </div>
+            <div>
+                <h1 class="text-lg font-black tracking-wider text-white flex items-center gap-1.5">
+                    CIRCUIT WEAVER
+                </h1>
+                <p id="daily-puzzle-num" class="text-xs text-cyan-400 mono font-semibold">DAILY #---</p>
+            </div>
+        </div>
+
+        <!-- Action Controls -->
+        <div class="flex items-center space-x-2">
+            <button id="btn-help" title="How to Play" class="w-9 h-9 rounded-lg glass-panel hover:bg-gray-800 text-gray-300 hover:text-cyan-400 transition-colors flex items-center justify-center">
+                <i class="fa-solid fa-circle-question text-base"></i>
+            </button>
+            <button id="btn-stats" title="Statistics" class="w-9 h-9 rounded-lg glass-panel hover:bg-gray-800 text-gray-300 hover:text-cyan-400 transition-colors flex items-center justify-center">
+                <i class="fa-solid fa-chart-simple text-base"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mode & Grid Selector Bar -->
+    <nav class="w-full max-w-xl mx-auto px-4 pt-3">
+        <div class="glass-panel p-1 rounded-xl flex items-center justify-between gap-1 text-xs">
+            <button id="tab-daily" class="flex-1 py-1.5 rounded-lg font-bold text-center transition-all bg-cyan-600 text-white shadow-glow-cyan">
+                Daily Level
+            </button>
+            <button id="tab-comp" class="flex-1 py-1.5 rounded-lg font-bold text-center transition-all text-gray-400 hover:text-amber-300 flex items-center justify-center gap-1">
+                <i class="fa-solid fa-trophy text-amber-400"></i> Triathlon
+            </button>
+            <button id="tab-practice" class="flex-1 py-1.5 rounded-lg font-bold text-center transition-all text-gray-400 hover:text-purple-300">
+                Practice
+            </button>
+        </div>
+
+        <!-- Difficulty Sub-Bar (Standard Mode) -->
+        <div id="diff-selector" class="flex items-center justify-center gap-2 mt-2">
+            <span class="text-[11px] text-gray-400 font-semibold uppercase tracking-wider">Grid:</span>
+            <button data-grid="5" class="btn-diff-select px-3 py-1 rounded-lg text-xs font-bold bg-cyan-950/80 text-cyan-400 border border-cyan-500/50 shadow-sm">
+                5x5 Easy
+            </button>
+            <button data-grid="6" class="btn-diff-select px-3 py-1 rounded-lg text-xs font-bold bg-gray-900 text-gray-400 border border-gray-800 hover:text-gray-200">
+                6x6 Med
+            </button>
+            <button data-grid="7" class="btn-diff-select px-3 py-1 rounded-lg text-xs font-bold bg-gray-900 text-gray-400 border border-gray-800 hover:text-gray-200">
+                7x7 Hard
+            </button>
+        </div>
+
+        <!-- Competition Stage Progress Bar (Hidden by default) -->
+        <div id="comp-stage-bar" class="hidden flex items-center justify-between gap-2 mt-2 px-2 py-1.5 rounded-xl bg-amber-950/30 border border-amber-500/30">
+            <span class="text-xs font-bold text-amber-400 flex items-center gap-1">
+                <i class="fa-solid fa-bolt"></i> Competition Stages:
+            </span>
+            <div class="flex items-center gap-1.5 text-xs font-mono font-bold">
+                <span id="comp-stage-1" class="px-2 py-0.5 rounded bg-amber-500 text-gray-950">5x5</span>
+                <i class="fa-solid fa-angle-right text-gray-600 text-[10px]"></i>
+                <span id="comp-stage-2" class="px-2 py-0.5 rounded bg-gray-900 text-gray-500">6x6</span>
+                <i class="fa-solid fa-angle-right text-gray-600 text-[10px]"></i>
+                <span id="comp-stage-3" class="px-2 py-0.5 rounded bg-gray-900 text-gray-500">7x7</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Game Area -->
+    <main class="w-full max-w-xl mx-auto px-4 py-2 flex-1 flex flex-col items-center justify-center">
+        
+        <!-- Status Bar / Game Metrics -->
+        <div class="w-full flex items-center justify-between my-2 px-3 py-2 rounded-xl glass-panel text-sm">
+            <div class="flex items-center gap-2">
+                <span class="text-gray-400 text-xs uppercase tracking-wider font-semibold" id="timer-label">Time</span>
+                <span id="game-timer" class="mono text-lg font-bold text-cyan-400">00:00</span>
+            </div>
+
+            <div id="mode-badge" class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-cyan-950/80 text-cyan-300 border border-cyan-800/50">
+                DAILY 5x5
+            </div>
+
+            <div class="flex items-center gap-2">
+                <button id="btn-reset-puzzle" class="text-xs text-gray-400 hover:text-rose-400 transition-colors flex items-center gap-1 px-2 py-1 rounded hover:bg-rose-950/30">
+                    <i class="fa-solid fa-rotate-left"></i> Reset
+                </button>
+            </div>
+        </div>
+
+        <!-- Canvas Game Grid Container -->
+        <div id="canvas-container" class="relative w-full aspect-square max-w-[440px] rounded-2xl p-2 glass-panel shadow-2xl flex items-center justify-center">
+            <canvas id="game-canvas" class="w-full h-full rounded-xl cursor-crosshair"></canvas>
+            
+            <!-- Toast / Message Box (Floating) -->
+            <div id="toast-msg" class="absolute bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 rounded-lg bg-gray-900/90 text-white text-xs font-semibold border border-cyan-500/40 shadow-xl opacity-0 transition-opacity duration-300 pointer-events-none">
+                Paths Connected!
+            </div>
+        </div>
+
+        <!-- Legend / Active Color Paths -->
+        <div id="color-legend" class="w-full max-w-[440px] flex items-center justify-around flex-wrap gap-1 my-3 px-2 py-2 rounded-xl glass-panel text-xs">
+            <!-- Dynamically Populated Node Badges -->
+        </div>
+
+    </main>
+
+    <!-- Footer / Bottom Bar -->
+    <footer class="w-full max-w-xl mx-auto px-4 py-3 text-center text-xs text-gray-500 border-t border-gray-800/60">
+        <p>Connect matching power nodes without crossing paths. Fill every grid tile!</p>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- MODAL: HOW TO PLAY                         -->
+    <!-- ========================================== -->
+    <div id="modal-help" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="glass-panel w-full max-w-md rounded-2xl p-6 relative border border-gray-700 shadow-2xl max-h-[90vh] overflow-y-auto">
+            <button class="close-modal absolute top-4 right-4 text-gray-400 hover:text-white text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h2 class="text-xl font-bold text-cyan-400 mb-3 flex items-center gap-2">
+                <i class="fa-solid fa-circle-info"></i> How to Play
+            </h2>
+            
+            <div class="space-y-3 text-sm text-gray-300">
+                <p><strong class="text-white">Objective:</strong> Connect matching colored power nodes to construct continuous circuits across the matrix.</p>
+                <div class="space-y-2 bg-gray-900/50 p-3 rounded-xl border border-gray-800 text-xs">
+                    <div class="flex items-start gap-2">
+                        <span class="text-cyan-400 font-bold">•</span>
+                        <span>Drag or tap from one node to its matching color target.</span>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <span class="text-cyan-400 font-bold">•</span>
+                        <span>Paths cannot overlap or cross each other.</span>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <span class="text-cyan-400 font-bold">•</span>
+                        <span><strong class="text-emerald-400">Full Coverage Rule:</strong> Every single tile on the grid must be covered by a circuit line to complete the level.</span>
+                    </div>
+                </div>
+
+                <h3 class="font-bold text-amber-400 text-xs uppercase tracking-wider mt-4">🏆 Competition Mode</h3>
+                <p class="text-xs text-gray-300">Play all 3 grid levels (5x5 Easy → 6x6 Medium → 7x7 Hard) continuously in a single timed daily triathlon!</p>
+            </div>
+            <button class="close-modal mt-5 w-full py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 font-bold text-white shadow-lg hover:opacity-95 transition-opacity">
+                Got it, Let's Play!
+            </button>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- MODAL: STATS & PROGRESS                    -->
+    <!-- ========================================== -->
+    <div id="modal-stats" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="glass-panel w-full max-w-md rounded-2xl p-6 relative border border-gray-700 shadow-2xl">
+            <button class="close-modal absolute top-4 right-4 text-gray-400 hover:text-white text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h2 class="text-xl font-bold text-cyan-400 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-chart-column"></i> Player Statistics
+            </h2>
+
+            <!-- Metric Grid -->
+            <div class="grid grid-cols-3 gap-3 mb-4">
+                <div class="bg-gray-900/70 p-3 rounded-xl border border-gray-800 text-center">
+                    <p class="text-2xl font-black text-white mono" id="stat-played">0</p>
+                    <p class="text-[10px] uppercase text-gray-400 font-semibold tracking-wider">Played</p>
+                </div>
+                <div class="bg-gray-900/70 p-3 rounded-xl border border-gray-800 text-center">
+                    <p class="text-2xl font-black text-cyan-400 mono" id="stat-win-rate">0%</p>
+                    <p class="text-[10px] uppercase text-gray-400 font-semibold tracking-wider">Win Rate</p>
+                </div>
+                <div class="bg-gray-900/70 p-3 rounded-xl border border-gray-800 text-center">
+                    <p class="text-2xl font-black text-rose-500 mono" id="stat-current-streak">0</p>
+                    <p class="text-[10px] uppercase text-gray-400 font-semibold tracking-wider">Streak</p>
+                </div>
+            </div>
+
+            <!-- Competition Stats Panel -->
+            <div class="bg-amber-950/20 border border-amber-500/30 rounded-xl p-3.5 mb-5 space-y-2">
+                <h3 class="text-xs font-bold text-amber-400 uppercase tracking-wider flex items-center gap-1.5">
+                    <i class="fa-solid fa-trophy"></i> Daily Competition Triathlon
+                </h3>
+                <div class="flex justify-between items-center text-xs">
+                    <span class="text-gray-400">Triathlons Completed:</span>
+                    <span id="stat-comp-count" class="mono font-bold text-white">0</span>
+                </div>
+                <div class="flex justify-between items-center text-xs">
+                    <span class="text-gray-400">Best Triathlon Time:</span>
+                    <span id="stat-comp-best" class="mono font-bold text-amber-300">--:--</span>
+                </div>
+            </div>
+
+            <div id="stats-share-container">
+                <button id="btn-share-stats" class="w-full py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 font-bold text-white shadow-lg hover:opacity-95 transition-all flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-share-nodes"></i> Share Today's Stats
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- MODAL: SINGLE VICTORY                      -->
+    <!-- ========================================== -->
+    <div id="modal-victory" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+        <div class="glass-panel w-full max-w-md rounded-2xl p-6 text-center relative border border-cyan-500/50 shadow-glow-cyan">
+            <div class="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 mx-auto flex items-center justify-center text-3xl mb-3 border border-emerald-500/40">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            
+            <h2 class="text-2xl font-black text-white mb-1">LEVEL COMPLETE!</h2>
+            <p id="victory-subtitle" class="text-xs text-gray-400 mb-4">You solved today's grid.</p>
+            
+            <div class="bg-gray-900/80 rounded-xl p-4 border border-gray-800 mb-5 space-y-2">
+                <div class="flex justify-between items-center text-sm">
+                    <span class="text-gray-400">Completion Time:</span>
+                    <span id="victory-time" class="mono font-bold text-cyan-400 text-base">00:00</span>
+                </div>
+                <div class="flex justify-between items-center text-sm">
+                    <span class="text-gray-400">Daily Streak:</span>
+                    <span id="victory-streak" class="mono font-bold text-amber-400 text-base">🔥 0 Days</span>
+                </div>
+                <div class="flex justify-between items-center text-sm border-t border-gray-800 pt-2 mt-2">
+                    <span class="text-gray-400">Next Daily Reset:</span>
+                    <span id="victory-countdown" class="mono font-semibold text-purple-400">00:00:00</span>
+                </div>
+            </div>
+
+            <div class="space-y-3">
+                <button id="btn-victory-share" class="w-full py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 font-bold text-white shadow-lg hover:opacity-95 transition-opacity flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-share-nodes"></i> Share Score
+                </button>
+                <button id="btn-victory-continue" class="close-modal w-full py-2.5 rounded-xl bg-gray-800 hover:bg-gray-700 font-semibold text-gray-300 text-sm transition-colors">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- MODAL: COMPETITION VICTORY                 -->
+    <!-- ========================================== -->
+    <div id="modal-comp-victory" class="fixed inset-0 bg-black/85 backdrop-blur-md z-50 hidden flex items-center justify-center p-4">
+        <div class="glass-panel w-full max-w-md rounded-2xl p-6 text-center relative border border-amber-500/50 shadow-glow-amber">
+            <div class="w-16 h-16 rounded-full bg-amber-500/20 text-amber-400 mx-auto flex items-center justify-center text-3xl mb-3 border border-amber-500/40">
+                <i class="fa-solid fa-trophy"></i>
+            </div>
+            
+            <h2 class="text-2xl font-black text-white mb-1">TRIATHLON COMPLETE!</h2>
+            <p class="text-xs text-amber-300 font-semibold mb-4">Mastered all 3 daily stages!</p>
+            
+            <div class="bg-gray-900/90 rounded-xl p-4 border border-gray-800 mb-5 space-y-2 text-left">
+                <div class="flex justify-between items-center text-sm border-b border-gray-800 pb-2 mb-2">
+                    <span class="text-gray-400 font-bold">TOTAL TIME:</span>
+                    <span id="comp-total-time" class="mono font-black text-amber-400 text-lg">00:00</span>
+                </div>
+                <div class="flex justify-between items-center text-xs">
+                    <span class="text-gray-400 flex items-center gap-1.5">🟢 5x5 Easy:</span>
+                    <span id="comp-time-5" class="mono font-bold text-gray-200">00:00</span>
+                </div>
+                <div class="flex justify-between items-center text-xs">
+                    <span class="text-gray-400 flex items-center gap-1.5">🟡 6x6 Medium:</span>
+                    <span id="comp-time-6" class="mono font-bold text-gray-200">00:00</span>
+                </div>
+                <div class="flex justify-between items-center text-xs">
+                    <span class="text-gray-400 flex items-center gap-1.5">🔴 7x7 Hard:</span>
+                    <span id="comp-time-7" class="mono font-bold text-gray-200">00:00</span>
+                </div>
+            </div>
+
+            <div class="space-y-3">
+                <button id="btn-comp-share" class="w-full py-3 rounded-xl bg-gradient-to-r from-amber-500 to-orange-600 font-bold text-white shadow-lg hover:opacity-95 transition-opacity flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-share-nodes"></i> Share Competition Score
+                </button>
+                <button class="close-modal w-full py-2.5 rounded-xl bg-gray-800 hover:bg-gray-700 font-semibold text-gray-300 text-sm transition-colors">
+                    Back to Home
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        (function() {
+            // Extended Palette Definitions (Up to 6 colors for 7x7 hard grid)
+            const PALETTE = [
+                { id: 1, name: 'Rose', hex: '#f43f5e', glow: 'rgba(244,63,94,0.4)' },
+                { id: 2, name: 'Cyan', hex: '#06b6d4', glow: 'rgba(6,182,212,0.4)' },
+                { id: 3, name: 'Amber', hex: '#eab308', glow: 'rgba(234,179,8,0.4)' },
+                { id: 4, name: 'Purple', hex: '#a855f7', glow: 'rgba(168,85,247,0.4)' },
+                { id: 5, name: 'Emerald', hex: '#22c55e', glow: 'rgba(34,197,94,0.4)' },
+                { id: 6, name: 'Orange', hex: '#f97316', glow: 'rgba(249,115,22,0.4)' }
+            ];
+
+            // Deterministic Seed PRNG
+            class MathPRNG {
+                constructor(seed) {
+                    this.m = 0x80000000;
+                    this.a = 1103515245;
+                    this.c = 12345;
+                    this.state = seed ? seed : Math.floor(Math.random() * (this.m - 1));
+                }
+                nextInt() {
+                    this.state = (this.a * this.state + this.c) % this.m;
+                    return this.state;
+                }
+                nextFloat() {
+                    return this.nextInt() / (this.m - 1);
+                }
+                range(min, max) {
+                    return Math.floor(this.nextFloat() * (max - min + 1)) + min;
+                }
+            }
+
+            // App State
+            const state = {
+                mode: 'daily', // 'daily', 'competition', 'practice'
+                gridSize: 5,
+                nodes: [],
+                grid: [],
+                paths: {},
+                activeColor: null,
+                isDrawing: false,
+                puzzleDateStr: '',
+                puzzleNumber: 0,
+                startTime: 0,
+                elapsedSeconds: 0,
+                timerInterval: null,
+                isSolved: false,
+
+                // Competition specific state
+                compStageIndex: 0, // 0: 5x5, 1: 6x6, 2: 7x7
+                compStageTimes: [0, 0, 0], // Seconds for each stage
+                compTotalSeconds: 0,
+
+                stats: {
+                    played: 0,
+                    wins: 0,
+                    currentStreak: 0,
+                    maxStreak: 0,
+                    totalTimeSeconds: 0,
+                    lastSolvedDate: '',
+                    compCount: 0,
+                    compBestSeconds: null,
+                    compLastSolvedDate: ''
+                }
+            };
+
+            // DOM Elements
+            const canvas = document.getElementById('game-canvas');
+            const ctx = canvas.getContext('2d');
+            const canvasContainer = document.getElementById('canvas-container');
+            const timerEl = document.getElementById('game-timer');
+            const modeBadge = document.getElementById('mode-badge');
+            const dailyPuzzleNumEl = document.getElementById('daily-puzzle-num');
+            const legendEl = document.getElementById('color-legend');
+            const toastEl = document.getElementById('toast-msg');
+
+            const tabDaily = document.getElementById('tab-daily');
+            const tabComp = document.getElementById('tab-comp');
+            const tabPractice = document.getElementById('tab-practice');
+            const diffSelector = document.getElementById('diff-selector');
+            const compStageBar = document.getElementById('comp-stage-bar');
+
+            const modalHelp = document.getElementById('modal-help');
+            const modalStats = document.getElementById('modal-stats');
+            const modalVictory = document.getElementById('modal-victory');
+            const modalCompVictory = document.getElementById('modal-comp-victory');
+
+            function init() {
+                loadStats();
+                setupEventListeners();
+                setupPWA();
+                
+                const today = getTodayDateStr();
+                state.puzzleDateStr = today;
+                state.puzzleNumber = calculatePuzzleNumber(today);
+                dailyPuzzleNumEl.innerText = `DAILY #${state.puzzleNumber}`;
+
+                setTab('daily');
+                
+                resizeCanvas();
+                window.addEventListener('resize', resizeCanvas);
+                setInterval(updateCountdownClock, 1000);
+            }
+
+            function getTodayDateStr() {
+                const now = new Date();
+                return now.toISOString().split('T')[0];
+            }
+
+            function calculatePuzzleNumber(dateStr) {
+                const start = new Date('2025-01-01');
+                const curr = new Date(dateStr);
+                const diffTime = Math.abs(curr - start);
+                return Math.ceil(diffTime / (1000 * 60 * 60 * 24)) + 100;
+            }
+
+            function loadStats() {
+                const saved = localStorage.getItem('circuit_weaver_stats_v2');
+                if (saved) {
+                    try {
+                        state.stats = Object.assign(state.stats, JSON.parse(saved));
+                    } catch (e) { console.error('Error loading stats', e); }
+                }
+            }
+
+            function saveStats() {
+                localStorage.setItem('circuit_weaver_stats_v2', JSON.stringify(state.stats));
+            }
+
+            // Solvable Hamiltonian path Generator adapted to variable sizes
+            function generateSolvableGrid(seedValue, size) {
+                const prng = new MathPRNG(seedValue);
+                const totalCells = size * size;
+                
+                // Color pair counts per grid size
+                const colorPairsCount = size === 5 ? 3 : (size === 6 ? 4 : 5);
+
+                let attempts = 0;
+                while (attempts < 300) {
+                    attempts++;
+                    const visited = Array(size).fill(false).map(() => Array(size).fill(false));
+                    const fullPath = [];
+                    
+                    const startX = prng.range(0, size - 1);
+                    const startY = prng.range(0, size - 1);
+                    
+                    function walk(x, y) {
+                        visited[y][x] = true;
+                        fullPath.push({x, y});
+                        if (fullPath.length === totalCells) return true;
+
+                        const neighbors = getNeighbors(x, y, size).filter(n => !visited[n.y][n.x]);
+                        for (let i = neighbors.length - 1; i > 0; i--) {
+                            const j = prng.range(0, i);
+                            [neighbors[i], neighbors[j]] = [neighbors[j], neighbors[i]];
+                        }
+
+                        for (const n of neighbors) {
+                            if (walk(n.x, n.y)) return true;
+                        }
+
+                        visited[y][x] = false;
+                        fullPath.pop();
+                        return false;
+                    }
+
+                    const pathFound = walk(startX, startY);
+
+                    if (pathFound && fullPath.length === totalCells) {
+                        const splitIndices = [0];
+                        let remaining = totalCells;
+                        
+                        for (let p = 0; p < colorPairsCount - 1; p++) {
+                            const minLen = 3;
+                            const maxLen = remaining - (colorPairsCount - 1 - p) * 3;
+                            if (maxLen <= minLen) break;
+                            const segmentLen = prng.range(minLen, Math.min(maxLen, Math.floor(totalCells / colorPairsCount) + 2));
+                            const nextIdx = splitIndices[splitIndices.length - 1] + segmentLen;
+                            splitIndices.push(nextIdx);
+                            remaining -= segmentLen;
+                        }
+                        splitIndices.push(totalCells);
+
+                        if (splitIndices.length === colorPairsCount + 1) {
+                            const nodes = [];
+                            for (let i = 0; i < colorPairsCount; i++) {
+                                const colorId = i + 1;
+                                const segStart = fullPath[splitIndices[i]];
+                                const segEnd = fullPath[splitIndices[i + 1] - 1];
+
+                                nodes.push({ x: segStart.x, y: segStart.y, colorId });
+                                nodes.push({ x: segEnd.x, y: segEnd.y, colorId });
+                            }
+                            return { nodes, gridSize: size };
+                        }
+                    }
+                }
+
+                return getFallbackPuzzle(size);
+            }
+
+            function getNeighbors(x, y, size) {
+                const list = [];
+                if (x > 0) list.push({x: x - 1, y});
+                if (x < size - 1) list.push({x: x + 1, y});
+                if (y > 0) list.push({x, y: y - 1});
+                if (y < size - 1) list.push({x, y: y + 1});
+                return list;
+            }
+
+            function getFallbackPuzzle(size) {
+                if (size === 6) {
+                    return {
+                        gridSize: 6,
+                        nodes: [
+                            { x: 0, y: 0, colorId: 1 }, { x: 5, y: 0, colorId: 1 },
+                            { x: 5, y: 1, colorId: 2 }, { x: 0, y: 5, colorId: 2 },
+                            { x: 1, y: 5, colorId: 3 }, { x: 5, y: 5, colorId: 3 },
+                            { x: 4, y: 5, colorId: 4 }, { x: 2, y: 2, colorId: 4 }
+                        ]
+                    };
+                }
+                return {
+                    gridSize: 5,
+                    nodes: [
+                        { x: 0, y: 0, colorId: 1 }, { x: 4, y: 0, colorId: 1 },
+                        { x: 4, y: 1, colorId: 2 }, { x: 0, y: 4, colorId: 2 },
+                        { x: 1, y: 4, colorId: 3 }, { x: 4, y: 4, colorId: 3 }
+                    ]
+                };
+            }
+
+            function setTab(tabName) {
+                state.mode = tabName;
+                
+                // Active Button UI
+                [tabDaily, tabComp, tabPractice].forEach(btn => {
+                    btn.className = "flex-1 py-1.5 rounded-lg font-bold text-center transition-all text-gray-400";
+                });
+
+                if (tabName === 'daily') {
+                    tabDaily.className = "flex-1 py-1.5 rounded-lg font-bold text-center transition-all bg-cyan-600 text-white shadow-glow-cyan";
+                    diffSelector.classList.remove('hidden');
+                    compStageBar.classList.add('hidden');
+                    startNewGame('daily', state.gridSize);
+                } else if (tabName === 'competition') {
+                    tabComp.className = "flex-1 py-1.5 rounded-lg font-bold text-center transition-all bg-amber-600 text-white shadow-glow-amber";
+                    diffSelector.classList.add('hidden');
+                    compStageBar.classList.remove('hidden');
+                    
+                    // Reset Competition session
+                    state.compStageIndex = 0;
+                    state.compStageTimes = [0, 0, 0];
+                    state.compTotalSeconds = 0;
+                    updateCompStageUI();
+                    startNewGame('competition', 5);
+                } else if (tabName === 'practice') {
+                    tabPractice.className = "flex-1 py-1.5 rounded-lg font-bold text-center transition-all bg-purple-600 text-white shadow-glow-purple";
+                    diffSelector.classList.remove('hidden');
+                    compStageBar.classList.add('hidden');
+                    startNewGame('practice', state.gridSize);
+                }
+            }
+
+            function updateCompStageUI() {
+                const stages = [
+                    document.getElementById('comp-stage-1'),
+                    document.getElementById('comp-stage-2'),
+                    document.getElementById('comp-stage-3')
+                ];
+
+                stages.forEach((el, idx) => {
+                    if (idx < state.compStageIndex) {
+                        el.className = "px-2 py-0.5 rounded bg-emerald-500 text-gray-950 font-bold";
+                    } else if (idx === state.compStageIndex) {
+                        el.className = "px-2 py-0.5 rounded bg-amber-500 text-gray-950 font-bold animate-pulse";
+                    } else {
+                        el.className = "px-2 py-0.5 rounded bg-gray-900 text-gray-500 font-bold";
+                    }
+                });
+            }
+
+            function startNewGame(mode, size = 5) {
+                state.gridSize = size;
+                state.isSolved = false;
+                state.activeColor = null;
+                state.isDrawing = false;
+
+                // Update Diff buttons highlight
+                document.querySelectorAll('.btn-diff-select').forEach(btn => {
+                    if (parseInt(btn.getAttribute('data-grid')) === size) {
+                        btn.className = "btn-diff-select px-3 py-1 rounded-lg text-xs font-bold bg-cyan-950/80 text-cyan-400 border border-cyan-500/50 shadow-sm";
+                    } else {
+                        btn.className = "btn-diff-select px-3 py-1 rounded-lg text-xs font-bold bg-gray-900 text-gray-400 border border-gray-800 hover:text-gray-200";
+                    }
+                });
+
+                if (mode === 'daily') {
+                    modeBadge.innerText = `DAILY ${size}x${size}`;
+                    modeBadge.className = 'px-2.5 py-0.5 rounded-full text-xs font-bold bg-cyan-950/80 text-cyan-300 border border-cyan-800/50';
+                    const dateSeed = parseInt(state.puzzleDateStr.replace(/-/g, '')) + (size * 1000);
+                    const puzzleData = generateSolvableGrid(dateSeed, size);
+                    state.nodes = puzzleData.nodes;
+                } else if (mode === 'competition') {
+                    modeBadge.innerText = `TRIATHLON ${size}x${size}`;
+                    modeBadge.className = 'px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-950/80 text-amber-300 border border-amber-800/50';
+                    const compSeed = parseInt(state.puzzleDateStr.replace(/-/g, '')) + (state.compStageIndex * 777);
+                    const puzzleData = generateSolvableGrid(compSeed, size);
+                    state.nodes = puzzleData.nodes;
+                } else {
+                    modeBadge.innerText = `PRACTICE ${size}x${size}`;
+                    modeBadge.className = 'px-2.5 py-0.5 rounded-full text-xs font-bold bg-purple-950/80 text-purple-300 border border-purple-800/50';
+                    const randomSeed = Math.floor(Math.random() * 999999);
+                    const puzzleData = generateSolvableGrid(randomSeed, size);
+                    state.nodes = puzzleData.nodes;
+                }
+
+                state.grid = Array(state.gridSize).fill(0).map(() => Array(state.gridSize).fill(0));
+                state.paths = {};
+                
+                const activeColorIds = [...new Set(state.nodes.map(n => n.colorId))];
+                activeColorIds.forEach(id => {
+                    state.paths[id] = [];
+                });
+
+                // Reset timer only if non-competition OR start of stage 0
+                if (mode !== 'competition' || state.compStageIndex === 0) {
+                    clearInterval(state.timerInterval);
+                    state.elapsedSeconds = 0;
+                    state.startTime = Date.now();
+                    state.timerInterval = setInterval(() => {
+                        if (!state.isSolved) {
+                            state.elapsedSeconds++;
+                            updateTimerDisplay();
+                        }
+                    }, 1000);
+                }
+
+                updateTimerDisplay();
+                renderLegend();
+                draw();
+            }
+
+            function updateTimerDisplay() {
+                const m = Math.floor(state.elapsedSeconds / 60).toString().padStart(2, '0');
+                const s = (state.elapsedSeconds % 60).toString().padStart(2, '0');
+                timerEl.innerText = `${m}:${s}`;
+            }
+
+            function formatTime(totalSecs) {
+                const m = Math.floor(totalSecs / 60).toString().padStart(2, '0');
+                const s = (totalSecs % 60).toString().padStart(2, '0');
+                return `${m}:${s}`;
+            }
+
+            function renderLegend() {
+                legendEl.innerHTML = '';
+                const activeColorIds = [...new Set(state.nodes.map(n => n.colorId))];
+                
+                activeColorIds.forEach(id => {
+                    const colorData = PALETTE.find(p => p.id === id);
+                    const isConnected = isPathConnected(id);
+
+                    const badge = document.createElement('div');
+                    badge.className = `flex items-center gap-1.5 px-2 py-1 rounded-lg border text-[11px] font-semibold transition-all ${
+                        isConnected ? 'bg-emerald-950/40 border-emerald-500/50 text-emerald-300' : 'bg-gray-900/60 border-gray-800 text-gray-400'
+                    }`;
+                    
+                    badge.innerHTML = `
+                        <span class="w-2.5 h-2.5 rounded-full shadow-sm" style="background-color: ${colorData.hex}"></span>
+                        <span>${colorData.name}</span>
+                        ${isConnected ? '<i class="fa-solid fa-check text-[10px] ml-0.5"></i>' : ''}
+                    `;
+                    legendEl.appendChild(badge);
+                });
+            }
+
+            function isPathConnected(colorId) {
+                const path = state.paths[colorId];
+                if (!path || path.length < 2) return false;
+                const endpoints = state.nodes.filter(n => n.colorId === colorId);
+                if (endpoints.length !== 2) return false;
+
+                const first = path[0];
+                const last = path[path.length - 1];
+
+                const connectsNormal = (first.x === endpoints[0].x && first.y === endpoints[0].y && last.x === endpoints[1].x && last.y === endpoints[1].y);
+                const connectsReverse = (first.x === endpoints[1].x && first.y === endpoints[1].y && last.x === endpoints[0].x && last.y === endpoints[0].y);
+
+                return connectsNormal || connectsReverse;
+            }
+
+            function resizeCanvas() {
+                const rect = canvasContainer.getBoundingClientRect();
+                const dpr = window.devicePixelRatio || 1;
+                canvas.width = rect.width * dpr;
+                canvas.height = rect.height * dpr;
+                ctx.scale(dpr, dpr);
+                draw();
+            }
+
+            function draw() {
+                const rect = canvasContainer.getBoundingClientRect();
+                const width = rect.width;
+                const height = rect.height;
+                const tileSize = width / state.gridSize;
+
+                ctx.clearRect(0, 0, width, height);
+
+                // 1. Draw Grid Lines
+                ctx.strokeStyle = '#1e293b';
+                ctx.lineWidth = 1.5;
+                for (let i = 0; i <= state.gridSize; i++) {
+                    ctx.beginPath();
+                    ctx.moveTo(i * tileSize, 0);
+                    ctx.lineTo(i * tileSize, height);
+                    ctx.stroke();
+
+                    ctx.beginPath();
+                    ctx.moveTo(0, i * tileSize);
+                    ctx.lineTo(width, i * tileSize);
+                    ctx.stroke();
+                }
+
+                // 2. Draw Paths
+                Object.keys(state.paths).forEach(colorIdStr => {
+                    const colorId = parseInt(colorIdStr);
+                    const path = state.paths[colorId];
+                    if (!path || path.length === 0) return;
+
+                    const colorData = PALETTE.find(p => p.id === colorId);
+
+                    ctx.strokeStyle = colorData.hex;
+                    ctx.lineWidth = tileSize * 0.3;
+                    ctx.lineCap = 'round';
+                    ctx.lineJoin = 'round';
+                    ctx.shadowColor = colorData.hex;
+                    ctx.shadowBlur = 8;
+
+                    ctx.beginPath();
+                    path.forEach((pt, index) => {
+                        const cx = pt.x * tileSize + tileSize / 2;
+                        const cy = pt.y * tileSize + tileSize / 2;
+                        if (index === 0) ctx.moveTo(cx, cy);
+                        else ctx.lineTo(cx, cy);
+                    });
+                    ctx.stroke();
+                    ctx.shadowBlur = 0;
+                });
+
+                // 3. Draw Endpoint Nodes
+                state.nodes.forEach(node => {
+                    const colorData = PALETTE.find(p => p.id === node.colorId);
+                    const cx = node.x * tileSize + tileSize / 2;
+                    const cy = node.y * tileSize + tileSize / 2;
+                    const radius = tileSize * 0.26;
+
+                    ctx.beginPath();
+                    ctx.arc(cx, cy, radius + 2, 0, Math.PI * 2);
+                    ctx.fillStyle = colorData.glow;
+                    ctx.fill();
+
+                    ctx.beginPath();
+                    ctx.arc(cx, cy, radius, 0, Math.PI * 2);
+                    ctx.fillStyle = colorData.hex;
+                    ctx.fill();
+
+                    ctx.beginPath();
+                    ctx.arc(cx, cy, radius * 0.35, 0, Math.PI * 2);
+                    ctx.fillStyle = '#ffffff';
+                    ctx.fill();
+                });
+            }
+
+            function setupEventListeners() {
+                const getGridPos = (e) => {
+                    const rect = canvas.getBoundingClientRect();
+                    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+                    const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+                    const x = Math.floor(((clientX - rect.left) / rect.width) * state.gridSize);
+                    const y = Math.floor(((clientY - rect.top) / rect.height) * state.gridSize);
+                    return { x: Math.max(0, Math.min(state.gridSize - 1, x)), y: Math.max(0, Math.min(state.gridSize - 1, y)) };
+                };
+
+                const handlePointerDown = (e) => {
+                    if (state.isSolved) return;
+                    e.preventDefault();
+                    const pos = getGridPos(e);
+                    
+                    const node = state.nodes.find(n => n.x === pos.x && n.y === pos.y);
+                    if (node) {
+                        state.isDrawing = true;
+                        state.activeColor = node.colorId;
+                        state.paths[node.colorId] = [{ x: node.x, y: node.y }];
+                        draw();
+                        renderLegend();
+                    } else {
+                        Object.keys(state.paths).forEach(cId => {
+                            const path = state.paths[cId];
+                            const idx = path.findIndex(p => p.x === pos.x && p.y === pos.y);
+                            if (idx !== -1) {
+                                state.isDrawing = true;
+                                state.activeColor = parseInt(cId);
+                                state.paths[cId] = path.slice(0, idx + 1);
+                                draw();
+                                renderLegend();
+                            }
+                        });
+                    }
+                };
+
+                const handlePointerMove = (e) => {
+                    if (!state.isDrawing || !state.activeColor || state.isSolved) return;
+                    e.preventDefault();
+                    const pos = getGridPos(e);
+                    const path = state.paths[state.activeColor];
+                    if (!path || path.length === 0) return;
+
+                    const lastPt = path[path.length - 1];
+                    const dx = Math.abs(pos.x - lastPt.x);
+                    const dy = Math.abs(pos.y - lastPt.y);
+
+                    if ((dx === 1 && dy === 0) || (dx === 0 && dy === 1)) {
+                        let occupiedByOther = false;
+                        Object.keys(state.paths).forEach(cId => {
+                            if (parseInt(cId) !== state.activeColor) {
+                                if (state.paths[cId].some(p => p.x === pos.x && p.y === pos.y)) {
+                                    occupiedByOther = true;
+                                }
+                            }
+                        });
+                        if (occupiedByOther) return;
+
+                        const otherNode = state.nodes.find(n => n.x === pos.x && n.y === pos.y && n.colorId !== state.activeColor);
+                        if (otherNode) return;
+
+                        if (path.length > 1 && path[path.length - 2].x === pos.x && path[path.length - 2].y === pos.y) {
+                            path.pop();
+                            draw();
+                            renderLegend();
+                            return;
+                        }
+
+                        if (path.some(p => p.x === pos.x && p.y === pos.y)) return;
+
+                        path.push(pos);
+                        draw();
+                        renderLegend();
+                        checkWinCondition();
+                    }
+                };
+
+                const handlePointerUp = () => {
+                    state.isDrawing = false;
+                };
+
+                canvas.addEventListener('mousedown', handlePointerDown);
+                canvas.addEventListener('mousemove', handlePointerMove);
+                window.addEventListener('mouseup', handlePointerUp);
+
+                canvas.addEventListener('touchstart', handlePointerDown, { passive: false });
+                canvas.addEventListener('touchmove', handlePointerMove, { passive: false });
+                window.addEventListener('touchend', handlePointerUp);
+
+                // Tab Listeners
+                tabDaily.addEventListener('click', () => setTab('daily'));
+                tabComp.addEventListener('click', () => setTab('competition'));
+                tabPractice.addEventListener('click', () => setTab('practice'));
+
+                // Grid Size selector listeners
+                document.querySelectorAll('.btn-diff-select').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const size = parseInt(e.currentTarget.getAttribute('data-grid'));
+                        startNewGame(state.mode, size);
+                    });
+                });
+
+                // Top Actions
+                document.getElementById('btn-help').addEventListener('click', () => modalHelp.classList.remove('hidden'));
+                document.getElementById('btn-stats').addEventListener('click', showStatsModal);
+                document.getElementById('btn-reset-puzzle').addEventListener('click', () => startNewGame(state.mode, state.gridSize));
+
+                // Modals Close
+                document.querySelectorAll('.close-modal').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        modalHelp.classList.add('hidden');
+                        modalStats.classList.add('hidden');
+                        modalVictory.classList.add('hidden');
+                        modalCompVictory.classList.add('hidden');
+                    });
+                });
+
+                // Share Handlers
+                document.getElementById('btn-victory-share').addEventListener('click', shareSingleResults);
+                document.getElementById('btn-comp-share').addEventListener('click', shareCompResults);
+                document.getElementById('btn-share-stats').addEventListener('click', shareCompResults);
+            }
+
+            function checkWinCondition() {
+                const activeColorIds = [...new Set(state.nodes.map(n => n.colorId))];
+                const allConnected = activeColorIds.every(id => isPathConnected(id));
+                if (!allConnected) return;
+
+                let totalCoveredTiles = 0;
+                Object.values(state.paths).forEach(path => {
+                    totalCoveredTiles += path.length;
+                });
+
+                const totalGridTiles = state.gridSize * state.gridSize;
+
+                if (totalCoveredTiles === totalGridTiles) {
+                    onLevelVictory();
+                } else {
+                    showToast(`Connected! Cover ${totalGridTiles - totalCoveredTiles} remaining empty tiles.`);
+                }
+            }
+
+            function showToast(msg) {
+                toastEl.innerText = msg;
+                toastEl.classList.remove('opacity-0');
+                setTimeout(() => toastEl.classList.add('opacity-0'), 2500);
+            }
+
+            function onLevelVictory() {
+                state.isSolved = true;
+
+                if (state.mode === 'competition') {
+                    // Record stage time
+                    const prevStageTime = state.compStageIndex === 0 ? 0 : (state.compStageTimes[0] + (state.compStageTimes[1] || 0));
+                    state.compStageTimes[state.compStageIndex] = state.elapsedSeconds - prevStageTime;
+
+                    if (state.compStageIndex < 2) {
+                        // Progress to next Triathlon stage!
+                        state.compStageIndex++;
+                        updateCompStageUI();
+                        showToast(`Stage ${state.compStageIndex} Solved! Next Grid...`);
+                        setTimeout(() => {
+                            const nextSizes = [5, 6, 7];
+                            startNewGame('competition', nextSizes[state.compStageIndex]);
+                        }, 1200);
+                    } else {
+                        // Completed all 3 stages!
+                        clearInterval(state.timerInterval);
+                        state.compTotalSeconds = state.elapsedSeconds;
+
+                        // Save Comp Stats
+                        const todayStr = getTodayDateStr();
+                        if (state.stats.compLastSolvedDate !== todayStr) {
+                            state.stats.compCount++;
+                            if (!state.stats.compBestSeconds || state.compTotalSeconds < state.stats.compBestSeconds) {
+                                state.stats.compBestSeconds = state.compTotalSeconds;
+                            }
+                            state.stats.compLastSolvedDate = todayStr;
+                            saveStats();
+                        }
+
+                        // Show Competition Victory Screen
+                        document.getElementById('comp-total-time').innerText = formatTime(state.compTotalSeconds);
+                        document.getElementById('comp-time-5').innerText = formatTime(state.compStageTimes[0]);
+                        document.getElementById('comp-time-6').innerText = formatTime(state.compStageTimes[1]);
+                        document.getElementById('comp-time-7').innerText = formatTime(state.compStageTimes[2]);
+                        modalCompVictory.classList.remove('hidden');
+                    }
+
+                } else {
+                    clearInterval(state.timerInterval);
+
+                    if (state.mode === 'daily') {
+                        const todayStr = getTodayDateStr();
+                        if (state.stats.lastSolvedDate !== todayStr) {
+                            state.stats.played++;
+                            state.stats.wins++;
+                            
+                            const yesterday = new Date();
+                            yesterday.setDate(yesterday.getDate() - 1);
+                            const yesterdayStr = yesterday.toISOString().split('T')[0];
+
+                            if (state.stats.lastSolvedDate === yesterdayStr) {
+                                state.stats.currentStreak++;
+                            } else {
+                                state.stats.currentStreak = 1;
+                            }
+
+                            if (state.stats.currentStreak > state.stats.maxStreak) {
+                                state.stats.maxStreak = state.stats.currentStreak;
+                            }
+
+                            state.stats.totalTimeSeconds += state.elapsedSeconds;
+                            state.stats.lastSolvedDate = todayStr;
+                            saveStats();
+                        }
+                    }
+
+                    document.getElementById('victory-time').innerText = formatTime(state.elapsedSeconds);
+                    document.getElementById('victory-streak').innerText = `🔥 ${state.stats.currentStreak} Day${state.stats.currentStreak === 1 ? '' : 's'}`;
+                    updateCountdownClock();
+                    modalVictory.classList.remove('hidden');
+                }
+            }
+
+            function updateCountdownClock() {
+                const now = new Date();
+                const midnight = new Date();
+                midnight.setUTCHours(24, 0, 0, 0);
+                const diff = midnight - now;
+
+                const hrs = Math.floor(diff / (1000 * 60 * 60)).toString().padStart(2, '0');
+                const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
+                const secs = Math.floor((diff % (1000 * 60)) / 1000).toString().padStart(2, '0');
+
+                const countdownEl = document.getElementById('victory-countdown');
+                if (countdownEl) countdownEl.innerText = `${hrs}:${mins}:${secs}`;
+            }
+
+            function showStatsModal() {
+                document.getElementById('stat-played').innerText = state.stats.played;
+                const winRate = state.stats.played > 0 ? Math.round((state.stats.wins / state.stats.played) * 100) : 0;
+                document.getElementById('stat-win-rate').innerText = `${winRate}%`;
+                document.getElementById('stat-current-streak').innerText = state.stats.currentStreak;
+                document.getElementById('stat-comp-count').innerText = state.stats.compCount;
+                document.getElementById('stat-comp-best').innerText = state.stats.compBestSeconds ? formatTime(state.stats.compBestSeconds) : '--:--';
+
+                modalStats.classList.remove('hidden');
+            }
+
+            function shareSingleResults() {
+                const shareText = `🧩 Circuit Weaver Daily #${state.puzzleNumber} (${state.gridSize}x${state.gridSize})\n⏱️ Time: ${formatTime(state.elapsedSeconds)}\n🔥 Daily Streak: ${state.stats.currentStreak} days\n⚡ Solved!`;
+                triggerShare(shareText);
+            }
+
+            function shareCompResults() {
+                const total = state.compTotalSeconds ? formatTime(state.compTotalSeconds) : (state.stats.compBestSeconds ? formatTime(state.stats.compBestSeconds) : '00:00');
+                const t5 = formatTime(state.compStageTimes[0] || 0);
+                const t6 = formatTime(state.compStageTimes[1] || 0);
+                const t7 = formatTime(state.compStageTimes[2] || 0);
+
+                const shareText = `⚡ Circuit Weaver Daily Triathlon ${state.puzzleDateStr} ⚡\n⏱️ Total Time: ${total}\n🟢 Easy (5x5): ${t5}\n🟡 Medium (6x6): ${t6}\n🔴 Hard (7x7): ${t7}\n🔥 Streak: ${state.stats.currentStreak} days`;
+                triggerShare(shareText);
+            }
+
+            function triggerShare(text) {
+                if (navigator.share) {
+                    navigator.share({
+                        title: 'Circuit Weaver Daily',
+                        text: text
+                    }).catch(() => copyToClipboard(text));
+                } else {
+                    copyToClipboard(text);
+                }
+            }
+
+            function copyToClipboard(text) {
+                const textArea = document.createElement("textarea");
+                textArea.value = text;
+                document.body.appendChild(textArea);
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                    showToast('Results copied to clipboard!');
+                } catch (err) {
+                    showToast('Failed to copy');
+                }
+                document.body.removeChild(textArea);
+            }
+
+            function setupPWA() {
+                const manifest = {
+                    name: "Circuit Weaver Daily",
+                    short_name: "CircuitWeaver",
+                    start_url: ".",
+                    display: "standalone",
+                    background_color: "#0a0f1d",
+                    theme_color: "#0a0f1d",
+                    icons: [{
+                        src: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230a0f1d'/><circle cx='30' cy='30' r='12' fill='%2306b6d4'/><circle cx='70' cy='70' r='12' fill='%2306b6d4'/><path d='M30 30 L70 70' stroke='%2306b6d4' stroke-width='8' stroke-linecap='round'/></svg>",
+                        sizes: "192x192 512x512",
+                        type: "image/svg+xml"
+                    }]
+                };
+
+                const blob = new Blob([JSON.stringify(manifest)], {type: 'application/json'});
+                const link = document.createElement('link');
+                link.rel = 'manifest';
+                link.href = URL.createObjectURL(blob);
+                document.head.appendChild(link);
+
+                if ('serviceWorker' in navigator) {
+                    const swCode = `
+                        self.addEventListener('install', (e) => self.skipWaiting());
+                        self.addEventListener('activate', (e) => self.clients.claim());
+                        self.addEventListener('fetch', (e) => {
+                            e.respondWith(fetch(e.request).catch(() => caches.match(e.request)));
+                        });
+                    `;
+                    const swBlob = new Blob([swCode], { type: 'text/javascript' });
+                    navigator.serviceWorker.register(URL.createObjectURL(swBlob)).catch(() => {});
+                }
+            }
+
+            window.onload = init;
+        })();
+    </script>
+</body>
+</html>
