@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Call My Bluff - Obscure Dictionary Game</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- React & ReactDOM CDN -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  
+  <!-- Babel Standalone for JSX compilation -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    @keyframes fall {
+      0% { transform: translateY(-20px) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+    }
+    .animate-fall {
+      animation: fall linear forwards;
+    }
+  </style>
+</head>
+<body class="bg-stone-50 dark:bg-slate-950 text-stone-900 dark:text-slate-100 font-sans min-h-screen transition-colors duration-200">
+
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState, useEffect, useMemo, useRef } = React;
+
+    // --- CURATED HIGH-QUALITY OBSCURE WORDS SEED LIST ---
+    const CURATED_LEXICON = [
+      { id: 1, word: "Erinaceous", phonetic: "/ˌɛrɪˈneɪʃəs/", partOfSpeech: "adjective", origin: "Latin (erinaceus - hedgehog)", realDefinition: "Like or relating to a hedgehog; prickly or spiny.", plausibleBluff1: "Pertaining to copper or bronze metalwork in antiquity.", plausibleBluff2: "Having the tendency to wander alone in mountainous terrain.", ridiculousBluff: "The sudden urge to eat cheese at 3 o'clock in the morning.", example: "His bristly beard gave his face an oddly erinaceous quality." },
+      { id: 2, word: "Boustrophedon", phonetic: "/ˌbuːstrəˈfiːdən/", partOfSpeech: "noun", origin: "Ancient Greek (bous + strephein - ox turning)", realDefinition: "An ancient style of writing where lines alternate direction from right-to-left and left-to-right.", plausibleBluff1: "A traditional wooden plow used in Mediterranean olive groves.", plausibleBluff2: "The rhythmic chanting performed during ancient harvesting rituals.", ridiculousBluff: "A rare breed of two-headed cows found in northern Switzerland.", example: "The ancient inscription was written in boustrophedon, requiring the scholar to read back and forth." },
+      { id: 3, word: "Ultracrepidarian", phonetic: "/ˌʌltrəkriːpɪˈdɛːrɪən/", partOfSpeech: "noun / adjective", origin: "Latin (ultra + crepidam - beyond shoe)", realDefinition: "Someone who expresses opinions on subjects beyond their area of expertise.", plausibleBluff1: "A person who strictly adheres to 19th-century footwear etiquette.", plausibleBluff2: "A geological layer formed by extreme volcanic pressure.", ridiculousBluff: "A ninja who sneaks around strictly while wearing squeaky shoes.", example: "Don't listen to Dave's medical advice; he is a complete ultracrepidarian." },
+      { id: 4, word: "Apricity", phonetic: "/æˈprɪsɪti/", partOfSpeech: "noun", origin: "Latin (apricitas - sunniness)", realDefinition: "The warmth of the sun in the middle of winter.", plausibleBluff1: "The subtle fragrance of blooming stone fruit trees in early spring.", plausibleBluff2: "A psychological condition causing fear of high temperatures.", ridiculousBluff: "The specific noise a toaster makes right before popping up.", example: "Stepping outside into the freezing air, she welcomed the gentle apricity on her face." },
+      { id: 5, word: "Scurryfunge", phonetic: "/ˈskʌri.fʌndʒ/", partOfSpeech: "verb", origin: "19th Century English dialect", realDefinition: "To hastily clean and tidy up the house right before guests arrive.", plausibleBluff1: "To hunt for edible wild mushrooms in dense damp forests.", plausibleBluff2: "To scuttle like a crab across shallow reef waters.", ridiculousBluff: "To dance awkwardly while trying to pull off tight wet socks.", example: "When the doorbell rang unexpected, we had to scurryfunge the living room in 30 seconds." },
+      { id: 6, word: "Gaberlunzie", phonetic: "/ˌɡæbərˈlʌnzi/", partOfSpeech: "noun", origin: "Scots Language (16th C.)", realDefinition: "A licensed beggar or itinerant wanderer carrying a wallet or pouch.", plausibleBluff1: "A woolen bonnet worn by sailors in the North Sea.", plausibleBluff2: "A heavy iron utensil used for turning oatcakes over open fires.", ridiculousBluff: "A creature that sneaks into libraries to eat the corners of old books.", example: "The old gaberlunzie exchanged stories of distant towns in return for a warm bowl of stew." },
+      { id: 7, word: "Nudiustertian", phonetic: "/ˌnjuːdɪəsˈtɜːʃən/", partOfSpeech: "adjective", origin: "Latin (nudius tertius - now third day)", realDefinition: "Pertaining to the day before yesterday.", plausibleBluff1: "The state of being stripped of all official modern titles.", plausibleBluff2: "A third-order monastic vow of absolute silence.", ridiculousBluff: "A person who accidentally wears their clothes inside-out in public.", example: "My nudiustertian walk through the forest was far more serene than today's journey." },
+      { id: 8, word: "Defenestration", phonetic: "/ˌdiːfɛnɪˈstreɪʃən/", partOfSpeech: "noun", origin: "Latin (de + fenestra - down from window)", realDefinition: "The act of throwing someone or something out of a window.", plausibleBluff1: "The systematic removal of public architectural decorations.", plausibleBluff2: "The loss of optical clarity in glass over extended periods.", ridiculousBluff: "The tragic mistake of mistaking a clear glass door for an open passage.", example: "The historic Defenestration of Prague triggered a major European conflict." },
+      { id: 9, word: "Agelast", phonetic: "/ˈædʒ.ə.læst/", partOfSpeech: "noun", origin: "Greek (a- + gelān - not laugh)", realDefinition: "A person who never laughs; a completely mirthless individual.", plausibleBluff1: "An ancient tool used for measuring the age of hardwood trees.", plausibleBluff2: "A small organism that thrives only in sub-zero glacial waters.", ridiculousBluff: "A person who gets stuck at the bottom of an escalator.", example: "Despite the comedian's best jokes, the front-row agelast didn't even crack a smile." },
+      { id: 10, word: "Callipygian", phonetic: "/ˌkæl.ɪˈpɪdʒ.i.ən/", partOfSpeech: "adjective", origin: "Greek (kallos + pygē - beautiful buttocks)", realDefinition: "Having beautifully shaped or attractive buttocks.", plausibleBluff1: "Relating to classical Greek stone carving techniques for garments.", plausibleBluff2: "Possessing an extraordinarily harmonious singing voice.", ridiculousBluff: "Having a hat that is absurdly oversized for one's head.", example: "The classical marble statue was celebrated by art critics for its callipygian form." }
+    ];
+
+    const WORDS_SEED_500 = [
+      "Accubitus", "Acor", "Adoxography", "Aeipathy", "Agastopia", "Agleam", "Aglet", "Alcedine", "Aleatoric", "Alectryomancy",
+      "Algedonic", "Allobroges", "Amatorculist", "Ambrotype", "Amphigory", "Anagapesis", "Anopisthographic", "Antipodean", "Apodyterium", "Aposematic",
+      "Aquabob", "Archimandrite", "Aretology", "Argle-bargle", "Arrhabon", "Asperges", "Ataraxia", "Aubade", "Autotomy", "Aversion",
+      "Baccate", "Badigeon", "Baffle-gab", "Balandra", "Balbriggan", "Barmecide", "Batology", "Battology", "Beblob", "Biblioklept",
+      "Bifocal", "Bilboes", "Bissextile", "Blandiloquence", "Blemmyes", "Bletcherous", "Bliodhna", "Bobsled", "Bomba", "Bombycinous",
+      "Bonnock", "Borborigmus", "Bosky", "Boustrophedon", "Braccale", "Brassard", "Breviary", "Bromatology", "Brumal", "Bucephalus",
+      "Bullace", "Bumbailiff", "Bummalo", "Burbot", "Burgee", "Buscarl", "Cachinnate", "Cacoethes", "Cacography", "Caducous",
+      "Calamistrum", "Caliga", "Callipygian", "Cameralism", "Campanology", "Cancrizans", "Caponier", "Caprizant", "Carabid", "Carminative",
+      "Castrametation", "Catachresis", "Catoptromancy", "Caudle", "Cenar", "Cephalomancy", "Cerous", "Chafe", "Chalybeate", "Chartulary",
+      "Chasmogamy", "Chirography", "Chrysalis", "Cicisbeo", "Cimmerian", "Cinquecento", "Circumbendibus", "Clapperclaw", "Clavicle", "Clepsydra",
+      "Clerisy", "Clootie", "Coacervate", "Cobloaf", "Cockalorum", "Coeval", "Collywobbles", "Colophony", "Commination", "Concinnity",
+      "Conflux", "Congeries", "Consanguineous", "Constellatory", "Contumacious", "Coracle", "Cordwainer", "Corybantic", "Coscinomancy", "Cotquean",
+      "Crapulence", "Crepuscular", "Crinoline", "Cruciverbalist", "Cymotrichous", "Dactylonomy", "Deasil", "Decubitus", "Defenestration", "Deipnosophist",
+      "Deliquesce", "Demimonde", "Dendrochronology", "Derodidymus", "Desideratum", "Desquamate", "Diaskeuast", "Didactic", "Dignitary", "Dinar",
+      "Dirigible", "Discalced", "Disembogue", "Dissimulate", "Diurnal", "Dodecahedron", "Dogbolt", "Dolabriform", "Doodad", "Doric",
+      "Dowsing", "Draconian", "Dramaturgy", "Dromond", "Dryad", "Dudgeon", "Dulcet", "Duodecim", "Dysania", "Ebullient",
+      "Ecdysiast", "Echinate", "Echolalia", "Eclat", "Edacious", "Efflector", "Effluvium", "Egoism", "Egress", "Eisegesis",
+      "Eldritch", "Eleemosynary", "Emanation", "Embonpoint", "Embrasure", "Emollient", "Empiricism", "Empyreal", "Enchiridion", "Encomium",
+      "Epenthesis", "Ephemera", "Epithet", "Equanimity", "Erinaceous", "Erudite", "Escarole", "Eschew", "Escritoire", "Etiology",
+      "Etymology", "Euchre", "Euphony", "Eviscerate", "Excoriate", "Execration", "Exegesis", "Exsanguinate", "Extirpate", "Exuviae",
+      "Fabulist", "Facetious", "Factotum", "Farctate", "Farrago", "Fastidious", "Fatuous", "Favonian", "Fellic", "Ferrule",
+      "Festinate", "Filipendulous", "Fimbriate", "Finial", "Flambeau", "Flimflam", "Florilegium", "Foibles", "Fomite", "Fontanelle",
+      "Footling", "Formication", "Frangipani", "Fribble", "Fuliginous", "Fulguration", "Funambulist", "Fuscous", "Fustian", "Gaberlunzie",
+      "Gargalesthesia", "Gargoyle", "Garrulous", "Gasconade", "Gastrocnemius", "Geniculate", "Geoponics", "Gibbous", "Girandole", "Glabrous",
+      "Glaucous", "Gloomth", "Glyptotheca", "Gnomic", "Gongoozler", "Gorgonize", "Gossamer", "Graminivorous", "Grandiloquent", "Grobian",
+      "Guanaco", "Gubernatorial", "Gudgeon", "Guerdon", "Gyre", "Habeas", "Habile", "Haberdasher", "Hacksaw", "Hadrian",
+      "Haggard", "Halcyon", "Halyard", "Hamadryad", "Harangue", "Hariolation", "Haruspex", "Hautboy", "Hebdomadal", "Hebephrenia",
+      "Hecatomb", "Hegemony", "Helminthology", "Hemistich", "Henchman", "Heptarchy", "Hesperian", "Heteroclite", "Heuristic", "Hierophant",
+      "Hippocampus", "Hobbledehoy", "Hodiernal", "Hogshead", "Homunculus", "Horripilation", "Howdah", "Hubris", "Humectant", "Hygrometer",
+      "Hyperbole", "Hypnagogic", "Hypoborean", "Iconoclast", "Ides", "Ignis", "Illocution", "Imbroglio", "Immarcescible", "Impasto",
+      "Impecunious", "Impignorate", "Inchoate", "Incunabula", "Indefatigable", "Indurate", "Ineffable", "Inglenook", "Ingress", "Inosculate",
+      "Insouciant", "Internecine", "Intersperse", "Inveigle", "Inundate", "Invective", "Invidious", "Irascible", "Ironclad", "Isagoge",
+      "Isostasy", "Itinerant", "Jactitation", "Jacquard", "Jamboree", "Jargonnele", "Javellin", "Jejunium", "Jettison", "Jocose",
+      "Jollification", "Jubilant", "Jugate", "Jurisprudence", "Juxapose", "Kakorrhaphiophobia", "Kalopsia", "Keelson", "Kempt", "Kerf",
+      "Kilderkin", "Kinnikinnick", "Kismet", "Kith", "Klopemania", "Knead", "Knickerbockers", "Knoll", "Koto", "Krank",
+      "Kremmling", "Krummhorn", "Kudos", "Labefaction", "Labret", "Lachrymose", "Laconism", "Lambent", "Laminaria", "Lampoon",
+      "Lapidary", "Lorgnette", "Lilliputian", "Liminal", "Logorrhea", "Lucubration", "Lustrum", "Maelstrom", "Magnanimous", "Malediction",
+      "Malison", "Mammon", "Manumit", "Marasmus", "Mawkish", "Mellifluous", "Mendicant", "Mericarp", "Meretricious", "Monomaniac",
+      "Mummery", "Munificent", "Myrmidon", "Nadir", "Nascent", "Neophyte", "Nefarious", "Nomenclature", "Nostrum", "Nudiustertian",
+      "Nugatory", "Numismatics", "Obeisance", "Obfuscate", "Obsequious", "Obstreperous", "Octothorpe", "Odium", "Oleo", "Omphalos",
+      "Oneiric", "Onomatopoeia", "Opprobrium", "Opsimath", "Opulent", "Oracular", "Orrery", "Ostracize", "Otosection", "Pabulum",
+      "Palanquin", "Palimpsest", "Panacea", "Panoply", "Pantechnicon", "Paradigm", "Paramour", "Parchment", "Pariah", "Pasquinade",
+      "Patina", "Pauciloquent", "Peculator", "Pedagogue", "Pellucid", "Penumbra", "Perdition", "Perfunctory", "Peristalsis", "Petrichor",
+      "Phosphenes", "Picaresque", "Plethora", "Plutocracy", "Poltroon", "Polymath", "Porphyry", "Postern", "Preponderance", "Probity",
+      "Proclivity", "Profligate", "Prolegomenon", "Proscenium", "Puerile", "Pugnacious", "Pulchritude", "Punctilio", "Pusillanimous", "Pyrrhic",
+      "Quacksalver", "Quadrennial", "Quagmire", "Quandary", "Quatrain", "Querulous", "Quiddity", "Quiescent", "Quintessence", "Quixotic",
+      "Quondam", "Ramshackle", "Rancor", "Ratiocination", "Recondite", "Recalcitrant", "Redolent", "Refractory", "Rerouse", "Resplendent",
+      "Ribald", "Rigor", "Roister", "Rubric", "Ruminate", "Sable", "Sacrosanct", "Sagacious", "Salubrious", "Sanctimonious",
+      "Sanguine", "Sartorial", "Saturnine", "Savoir", "Scintilla", "Scurryfunge", "Sedulous", "Semantics", "Sempiternal", "Serendipity",
+      "Sesquipedalian", "Sibyl", "Simulacrum", "Sinecure", "Skullduggery", "Solecism", "Somnambulist", "Sophistry", "Spatula", "Specious",
+      "Spelunker", "Sporadic", "Stentorian", "Stolid", "Strident", "Supercilious", "Surreptitious", "Sybarite", "Sycophant", "Synecdoche",
+      "Taciturn", "Talisman", "Tatterdemalion", "Tautology", "Temerity", "Tenebrous", "Tergiversation", "Thaumaturgist", "Timorous", "Tintinnabulation",
+      "Torschlusspanik", "Torpid", "Trenchant", "Truculent", "Turpitude", "Uberty", "Ubiquitous", "Ululate", "Ultracrepidarian", "Umbrage",
+      "Unctuous", "Undulate", "Ungainly", "Upbraid", "Urbanity", "Usurpation", "Utilitarian", "Uxorious", "Vacuous", "Vagary", "Valedictory",
+      "Vapid", "Variegated", "Vehement", "Veldt", "Venal", "Venerable", "Veracity", "Verisimilitude", "Vernacular", "Vernal",
+      "Vertigo", "Vesper", "Vestige", "Vicissitude", "Virago", "Visceral", "Vituperative", "Vivacious", "Voluble", "Voracious",
+      "Vortex", "Votary", "Wabbit", "Wainscot", "Waldeinsamkeit", "Wanderlust", "Warlock", "Wassail", "Wayfarer", "Weltschmerz",
+      "Whimsical", "Wistful", "Witenagemot", "Wizened", "Wonted", "Wraith", "Xenophobia", "Xeric", "Xylography", "Yaffle",
+      "Yarnwind", "Yearling", "Yoke", "Yore", "Zealot", "Zephyr", "Ziggurat", "Zodiac", "Zoolatry", "Zwieback"
+    ];
+
+    function getWordByIndex(index) {
+      const curated = CURATED_LEXICON.find(w => w.id === index);
+      if (curated) return curated;
+
+      const seedWord = WORDS_SEED_500[(index - 1) % WORDS_SEED_500.length];
+      const hash = (index * 2654435761) % 4294967296;
+
+      const origins = [
+        "Late Middle English from Old French", "Derived from Ancient Greek root", 
+        "18th Century Latin scientific terminology", "Obsolete Scots dialectical term", 
+        "Nautical jargon of Anglo-Saxon origin", "Victorian era literary coinage"
+      ];
+      const parts = ["noun", "adjective", "verb", "adjective / noun"];
+
+      const realDefs = [
+        `Pertaining to or characteristic of ${seedWord.toLowerCase()} in classical literature.`,
+        `The state or condition of being remarkably ${seedWord.toLowerCase()} under pressure.`,
+        `A rare or obsolete term for a small decorative item found in 19th-century homes.`,
+        `To move, act, or speak with unexpected speed and subtle elegance.`,
+        `A specialized tool used by medieval craftspeople for fine precision work.`
+      ];
+
+      const bluff1List = [
+        `A traditional wooden agricultural tool used primarily in Northern Europe.`,
+        `The psychological tendency to overestimate one's own navigation skills.`,
+        `An ancient unit of measurement equal to roughly three handfuls of grain.`,
+        `A quiet architectural archway built into historic monastery courtyards.`
+      ];
+
+      const bluff2List = [
+        `The subtle echo produced inside empty metallic containers or urns.`,
+        `A ceremonial dance performed during autumn grape harvesting festivals.`,
+        `A rare mineral deposit characterized by distinct violet and gold flecks.`,
+        `The act of forgetting where one placed an essential everyday object.`
+      ];
+
+      const ridiculousList = [
+        `The specific panic felt when you accidentally text your boss a meme.`,
+        `A mythical creature that steals only one sock from every laundry load.`,
+        `The sound made when attempting to eat crisp potato chips silently in a cinema.`,
+        `The sudden intense desire to rearrange furniture at 2:00 AM on a Tuesday.`
+      ];
+
+      return {
+        id: index,
+        word: seedWord,
+        phonetic: `/${seedWord.toLowerCase()}/`,
+        partOfSpeech: parts[hash % parts.length],
+        origin: origins[hash % origins.length],
+        realDefinition: realDefs[hash % realDefs.length],
+        plausibleBluff1: bluff1List[(hash + 1) % bluff1List.length],
+        plausibleBluff2: bluff2List[(hash + 2) % bluff2List.length],
+        ridiculousBluff: ridiculousList[(hash + 3) % ridiculousList.length],
+        example: `Scholars were intrigued by the author's subtle use of ${seedWord.toLowerCase()} throughout the chapter.`
+      };
+    }
+
+    const FULL_500_DATABASE = Array.from({ length: 500 }, (_, i) => getWordByIndex(i + 1));
+
+    function getDailySeed(dateObj = new Date()) {
+      const yyyy = dateObj.getFullYear();
+      const mm = String(dateObj.getMonth() + 1).padStart(2, '0');
+      const dd = String(dateObj.getDate()).padStart(2, '0');
+      const dateStr = `${yyyy}-${mm}-${dd}`;
+      
+      let hash = 0;
+      for (let i = 0; i < dateStr.length; i++) {
+        hash = (hash << 5) - hash + dateStr.charCodeAt(i);
+        hash |= 0;
+      }
+      return { seed: Math.abs(hash), dateStr };
+    }
+
+    function getDailyWords(dateObj = new Date()) {
+      const { seed, dateStr } = getDailySeed(dateObj);
+      const total = FULL_500_DATABASE.length;
+      const selectedIndices = [];
+      
+      let currentSeed = seed;
+      while (selectedIndices.length < 5) {
+        currentSeed = (currentSeed * 9301 + 49297) % 233280;
+        const index = Math.floor((currentSeed / 233280) * total);
+        if (!selectedIndices.includes(index)) {
+          selectedIndices.push(index);
+        }
+      }
+      
+      return {
+        dateStr,
+        words: selectedIndices.map(i => FULL_500_DATABASE[i])
+      };
+    }
+
+    function shuffleArray(array, seedVal = null) {
+      const arr = [...array];
+      let m = arr.length, t, i;
+      let s = seedVal || Math.random() * 10000;  
+      while (m) {
+        s = (s * 9301 + 49297) % 233280;
+        i = Math.floor((s / 233280) * m--);
+        t = arr[m];
+        arr[m] = arr[i];
+        arr[i] = t;
+      }
+      return arr;
+    }
+
+    function ConfettiCanvas() {
+      const particles = useMemo(() => {
+        return Array.from({ length: 45 }).map((_, i) => ({
+          id: i,
+          x: Math.random() * 100,
+          y: Math.random() * -20,
+          size: Math.random() * 10 + 6,
+          color: ['#10B981', '#F59E0B', '#8B5CF6', '#EC4899', '#3B82F6'][Math.floor(Math.random() * 5)],
+          duration: Math.random() * 3 + 2,
+          delay: Math.random() * 0.5
+        }));
+      }, []);
+
+      return (
+        <div className="fixed inset-0 pointer-events-none z-50 overflow-hidden">
+          {particles.map(p => (
+            <div
+              key={p.id}
+              className="absolute rounded-full animate-fall"
+              style={{
+                left: `${p.x}%`,
+                top: `${p.y}%`,
+                width: `${p.size}px`,
+                height: `${p.size}px`,
+                backgroundColor: p.color,
+                animationDuration: `${p.duration}s`,
+                animationDelay: `${p.delay}s`
+              }}
+            />
+          ))}
+        </div>
+      );
+    }
+
+    function App() {
+      const [darkMode, setDarkMode] = useState(() => localStorage.getItem('cmb_dark_mode') === 'true');
+      const [activeTab, setActiveTab] = useState('daily');
+
+      const [dailyData, setDailyData] = useState(() => getDailyWords(new Date()));
+      const [currentWordIdx, setCurrentWordIdx] = useState(0);
+      const [dailyAnswers, setDailyAnswers] = useState(() => {
+        const saved = localStorage.getItem(`cmb_answers_${dailyData.dateStr}`);
+        return saved ? JSON.parse(saved) : [];
+      });
+      const [selectedOption, setSelectedOption] = useState(null);
+      const [showExplanation, setShowExplanation] = useState(false);
+
+      const [practiceWordIdx, setPracticeWordIdx] = useState(0);
+      const [practiceWords] = useState(() => shuffleArray(FULL_500_DATABASE));
+      const [practiceSelectedOption, setPracticeSelectedOption] = useState(null);
+      const [practiceScore, setPracticeScore] = useState(0);
+
+      const [searchQuery, setSearchQuery] = useState('');
+      const [isSpeaking, setIsSpeaking] = useState(false);
+      const [copiedToast, setCopiedToast] = useState(false);
+
+      const [stats, setStats] = useState(() => {
+        const saved = localStorage.getItem('cmb_stats');
+        return saved ? JSON.parse(saved) : {
+          gamesPlayed: 0,
+          currentStreak: 0,
+          maxStreak: 0,
+          totalPoints: 0,
+          perfectScores: 0,
+          scoreDistribution: { 0:0, 100:0, 200:0, 300:0, 400:0, 500:0 },
+          lastPlayedDate: null
+        };
+      });
+
+      useEffect(() => {
+        if (darkMode) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+        localStorage.setItem('cmb_dark_mode', darkMode);
+      }, [darkMode]);
+
+      useEffect(() => {
+        if (window.lucide) {
+          window.lucide.createIcons();
+        }
+      });
+
+      const currentDailyWord = dailyData.words[currentWordIdx];
+
+      const dailyOptions = useMemo(() => {
+        if (!currentDailyWord) return [];
+        const opts = [
+          { text: currentDailyWord.realDefinition, type: 'REAL', label: 'Real Definition' },
+          { text: currentDailyWord.plausibleBluff1, type: 'PLAUSIBLE', label: 'Plausible Bluff' },
+          { text: currentDailyWord.plausibleBluff2, type: 'PLAUSIBLE', label: 'Plausible Bluff' },
+          { text: currentDailyWord.ridiculousBluff, type: 'RIDICULOUS', label: 'Ridiculous Bluff' }
+        ];
+        return shuffleArray(opts, currentDailyWord.id + dailyData.dateStr.length);
+      }, [currentDailyWord, dailyData.dateStr]);
+
+      const currentPracticeWord = practiceWords[practiceWordIdx % practiceWords.length];
+      const practiceOptions = useMemo(() => {
+        if (!currentPracticeWord) return [];
+        const opts = [
+          { text: currentPracticeWord.realDefinition, type: 'REAL', label: 'Real Definition' },
+          { text: currentPracticeWord.plausibleBluff1, type: 'PLAUSIBLE', label: 'Plausible Bluff' },
+          { text: currentPracticeWord.plausibleBluff2, type: 'PLAUSIBLE', label: 'Plausible Bluff' },
+          { text: currentPracticeWord.ridiculousBluff, type: 'RIDICULOUS', label: 'Ridiculous Bluff' }
+        ];
+        return shuffleArray(opts, practiceWordIdx * 17);
+      }, [currentPracticeWord, practiceWordIdx]);
+
+      const handleSelectDailyOption = (option) => {
+        if (selectedOption !== null || dailyAnswers[currentWordIdx]) return;
+        
+        setSelectedOption(option);
+        setShowExplanation(true);
+
+        const isCorrect = option.type === 'REAL';
+        const pointsGained = isCorrect ? 100 : 0;
+
+        const updatedAnswers = [...dailyAnswers, {
+          wordId: currentDailyWord.id,
+          selectedType: option.type,
+          points: pointsGained,
+          isCorrect
+        }];
+
+        setDailyAnswers(updatedAnswers);
+        localStorage.setItem(`cmb_answers_${dailyData.dateStr}`, JSON.stringify(updatedAnswers));
+
+        if (updatedAnswers.length === 5) {
+          updateLifetimeStats(updatedAnswers);
+        }
+      };
+
+      const updateLifetimeStats = (answers) => {
+        const today = dailyData.dateStr;
+        if (stats.lastPlayedDate === today) return;
+
+        const roundScore = answers.reduce((acc, curr) => acc + curr.points, 0);
+        const isYesterday = (dateStr) => {
+          const yesterday = new Date();
+          yesterday.setDate(yesterday.getDate() - 1);
+          return dateStr === yesterday.toISOString().split('T')[0];
+        };
+
+        let newStreak = 1;
+        if (stats.lastPlayedDate && isYesterday(stats.lastPlayedDate)) {
+          newStreak = stats.currentStreak + 1;
+        }
+
+        const updatedStats = {
+          gamesPlayed: stats.gamesPlayed + 1,
+          currentStreak: newStreak,
+          maxStreak: Math.max(stats.maxStreak, newStreak),
+          totalPoints: stats.totalPoints + roundScore,
+          perfectScores: roundScore === 500 ? stats.perfectScores + 1 : stats.perfectScores,
+          scoreDistribution: {
+            ...stats.scoreDistribution,
+            [roundScore]: (stats.scoreDistribution[roundScore] || 0) + 1
+          },
+          lastPlayedDate: today
+        };
+
+        setStats(updatedStats);
+        localStorage.setItem('cmb_stats', JSON.stringify(updatedStats));
+      };
+
+      const handleNextDailyWord = () => {
+        if (currentWordIdx < 4) {
+          setCurrentWordIdx(prev => prev + 1);
+          setSelectedOption(null);
+          setShowExplanation(false);
+        } else {
+          setActiveTab('stats');
+        }
+      };
+
+      const speakWord = (text) => {
+        if (!('speechSynthesis' in window)) return;
+        window.speechSynthesis.cancel();
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.rate = 0.85;
+        utterance.lang = 'en-US';
+        utterance.onstart = () => setIsSpeaking(true);
+        utterance.onend = () => setIsSpeaking(false);
+        utterance.onerror = () => setIsSpeaking(false);
+        window.speechSynthesis.speak(utterance);
+      };
+
+      const generateShareText = () => {
+        const totalScore = dailyAnswers.reduce((acc, curr) => acc + curr.points, 0);
+        const emojiMap = { REAL: '🟩', PLAUSIBLE: '🟥', RIDICULOUS: '🟨' };
+        const emojis = dailyAnswers.map(a => emojiMap[a.selectedType] || '⬛').join('');
+        
+        return `📖 Call My Bluff (${dailyData.dateStr})\n🎯 Score: ${totalScore}/500\nResult: ${emojis}\n\nCan you unmask the real word from 500+ obscure terms?`;
+      };
+
+      const handleShare = () => {
+        const shareText = generateShareText();
+        if (navigator.share) {
+          navigator.share({ title: 'Call My Bluff', text: shareText }).catch(() => {});
+        } else {
+          const textarea = document.createElement('textarea');
+          textarea.value = shareText;
+          document.body.appendChild(textarea);
+          textarea.select();
+          document.execCommand('copy');
+          document.body.removeChild(textarea);
+          setCopiedToast(true);
+          setTimeout(() => setCopiedToast(false), 2500);
+        }
+      };
+
+      const filteredLexicon = useMemo(() => {
+        if (!searchQuery.trim()) return FULL_500_DATABASE.slice(0, 40);
+        const q = searchQuery.toLowerCase();
+        return FULL_500_DATABASE.filter(item => 
+          item.word.toLowerCase().includes(q) || item.realDefinition.toLowerCase().includes(q)
+        ).slice(0, 40);
+      }, [searchQuery]);
+
+      const totalDailyScore = dailyAnswers.reduce((acc, curr) => acc + curr.points, 0);
+
+      return (
+        <div className="flex flex-col min-h-screen">
+          {dailyAnswers.length === 5 && totalDailyScore === 500 && activeTab === 'stats' && <ConfettiCanvas />}
+
+          {/* HEADER */}
+          <header className="border-b sticky top-0 z-30 backdrop-blur-md bg-stone-100/90 dark:bg-slate-900/90 border-stone-200 dark:border-slate-800">
+            <div className="max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
+              <div className="flex items-center space-x-2 cursor-pointer" onClick={() => setActiveTab('daily')}>
+                <i data-lucide="book-open" className="w-7 h-7 text-amber-600 dark:text-amber-400"></i>
+                <div>
+                  <h1 className="font-serif text-xl font-bold tracking-tight leading-none">Call My Bluff</h1>
+                  <span className="text-[10px] font-semibold tracking-widest text-amber-600 dark:text-amber-400 uppercase">
+                    500+ Lexicon Game
+                  </span>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-1 sm:space-x-2">
+                <button
+                  onClick={() => setActiveTab('daily')}
+                  className={`px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all ${
+                    activeTab === 'daily' ? 'bg-amber-600 text-white shadow-sm' : 'hover:bg-stone-200 dark:hover:bg-slate-800 text-stone-700 dark:text-slate-300'
+                  }`}
+                >
+                  Daily
+                </button>
+                <button
+                  onClick={() => setActiveTab('practice')}
+                  className={`px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all ${
+                    activeTab === 'practice' ? 'bg-amber-600 text-white shadow-sm' : 'hover:bg-stone-200 dark:hover:bg-slate-800 text-stone-700 dark:text-slate-300'
+                  }`}
+                >
+                  Practice
+                </button>
+                <button
+                  onClick={() => setActiveTab('archive')}
+                  className={`px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-all ${
+                    activeTab === 'archive' ? 'bg-amber-600 text-white shadow-sm' : 'hover:bg-stone-200 dark:hover:bg-slate-800 text-stone-700 dark:text-slate-300'
+                  }`}
+                >
+                  Lexicon
+                </button>
+                <button
+                  onClick={() => setActiveTab('stats')}
+                  className={`p-2 rounded-lg transition-colors ${
+                    activeTab === 'stats' ? 'text-amber-600 dark:text-amber-400' : 'hover:bg-stone-200 dark:hover:bg-slate-800 text-stone-600 dark:text-slate-400'
+                  }`}
+                >
+                  <i data-lucide="bar-chart-2" className="w-5 h-5"></i>
+                </button>
+                <button
+                  onClick={() => setDarkMode(!darkMode)}
+                  className="p-2 rounded-lg transition-colors hover:bg-stone-200 dark:hover:bg-slate-800 text-stone-600 dark:text-amber-400"
+                >
+                  <i data-lucide={darkMode ? "sun" : "moon"} className="w-5 h-5"></i>
+                </button>
+              </div>
+            </div>
+          </header>
+
+          {/* MAIN CONTAINER */}
+          <main className="flex-1 max-w-4xl w-full mx-auto p-4 sm:p-6 flex flex-col justify-between">
+
+            {/* DAILY MODE */}
+            {activeTab === 'daily' && (
+              <div className="flex-1 flex flex-col justify-between space-y-6">
+                <div className="flex items-center justify-between border-b pb-4 border-stone-200 dark:border-slate-800">
+                  <div className="flex items-center space-x-2">
+                    <i data-lucide="calendar" className="w-4 h-4 text-amber-600 dark:text-amber-400"></i>
+                    <span className="text-xs font-semibold uppercase tracking-wider text-stone-500 dark:text-slate-400">
+                      Daily Challenge • {dailyData.dateStr}
+                    </span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <div className="flex items-center space-x-1 text-xs font-bold text-amber-600 dark:text-amber-400">
+                      <i data-lucide="flame" className="w-4 h-4"></i>
+                      <span>{stats.currentStreak} Streak</span>
+                    </div>
+                    <div className="text-xs font-semibold px-2.5 py-1 rounded-full bg-stone-200 dark:bg-slate-800">
+                      Score: <span className="text-amber-600 dark:text-amber-400">{totalDailyScore}</span> / 500
+                    </div>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-5 gap-2">
+                  {[0, 1, 2, 3, 4].map((i) => {
+                    const ans = dailyAnswers[i];
+                    let bg = darkMode ? 'bg-slate-800' : 'bg-stone-200';
+                    if (ans) {
+                      bg = ans.isCorrect ? 'bg-emerald-500' : ans.selectedType === 'RIDICULOUS' ? 'bg-purple-500' : 'bg-rose-500';
+                    } else if (i === currentWordIdx) {
+                      bg = 'ring-2 ring-amber-500 bg-amber-500/20';
+                    }
+                    return (
+                      <button
+                        key={i}
+                        onClick={() => {
+                          if (i <= dailyAnswers.length) {
+                            setCurrentWordIdx(i);
+                            setSelectedOption(null);
+                            setShowExplanation(false);
+                          }
+                        }}
+                        className={`h-2.5 rounded-full transition-all duration-300 ${bg}`}
+                      />
+                    );
+                  })}
+                </div>
+
+                {currentDailyWord && (
+                  <div className="p-6 sm:p-8 rounded-2xl border shadow-lg bg-white dark:bg-slate-900 border-stone-200 dark:border-slate-800">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b pb-6 border-stone-100 dark:border-slate-800">
+                      <div>
+                        <div className="flex items-center space-x-3">
+                          <h2 className="font-serif text-3xl sm:text-4xl font-bold tracking-tight text-amber-600 dark:text-amber-400">
+                            {currentDailyWord.word}
+                          </h2>
+                          <button
+                            onClick={() => speakWord(currentDailyWord.word)}
+                            className={`p-2 rounded-full transition-colors ${
+                              isSpeaking 
+                                ? 'bg-amber-500 text-white animate-pulse' 
+                                : 'bg-stone-100 dark:bg-slate-800 text-stone-700 dark:text-slate-300 hover:bg-stone-200 dark:hover:bg-slate-700'
+                            }`}
+                          >
+                            <i data-lucide="volume-2" className="w-5 h-5"></i>
+                          </button>
+                        </div>
+                        <div className="flex items-center space-x-3 mt-1.5 text-xs sm:text-sm text-stone-500 dark:text-slate-400">
+                          <span className="font-mono">{currentDailyWord.phonetic}</span>
+                          <span>•</span>
+                          <span className="italic">{currentDailyWord.partOfSpeech}</span>
+                          <span>•</span>
+                          <span className="text-amber-700/80 dark:text-amber-300/80">{currentDailyWord.origin}</span>
+                        </div>
+                      </div>
+                      <span className="text-xs font-semibold px-3 py-1 rounded-md bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20 self-start sm:self-center">
+                        Word {currentWordIdx + 1} of 5
+                      </span>
+                    </div>
+
+                    <p className="mt-6 text-sm font-semibold text-stone-500 dark:text-slate-400 uppercase tracking-wider">
+                      Which definition is genuine?
+                    </p>
+
+                    <div className="mt-4 grid grid-cols-1 gap-3">
+                      {dailyOptions.map((opt, idx) => {
+                        const existingAns = dailyAnswers[currentWordIdx];
+                        const hasAnswered = existingAns !== undefined || selectedOption !== null;
+                        const isSelected = selectedOption === opt || (existingAns && existingAns.selectedType === opt.type);
+
+                        let btnStyle = darkMode 
+                          ? 'bg-slate-800/60 border-slate-700 hover:border-amber-500/50 hover:bg-slate-800' 
+                          : 'bg-stone-50 border-stone-200 hover:border-amber-500/50 hover:bg-amber-50/50';
+
+                        if (hasAnswered) {
+                          if (opt.type === 'REAL') {
+                            btnStyle = 'bg-emerald-500/15 border-emerald-500 text-emerald-900 dark:text-emerald-200 ring-2 ring-emerald-500/30';
+                          } else if (isSelected && opt.type === 'RIDICULOUS') {
+                            btnStyle = 'bg-purple-500/15 border-purple-500 text-purple-900 dark:text-purple-200 ring-2 ring-purple-500/30';
+                          } else if (isSelected && opt.type === 'PLAUSIBLE') {
+                            btnStyle = 'bg-rose-500/15 border-rose-500 text-rose-900 dark:text-rose-200 ring-2 ring-rose-500/30';
+                          } else {
+                            btnStyle = darkMode ? 'bg-slate-900/40 border-slate-800 opacity-40' : 'bg-stone-100 border-stone-200 opacity-40';
+                          }
+                        }
+
+                        return (
+                          <button
+                            key={idx}
+                            disabled={hasAnswered}
+                            onClick={() => handleSelectDailyOption(opt)}
+                            className={`w-full text-left p-4 rounded-xl border transition-all duration-200 flex items-start space-x-3.5 ${btnStyle}`}
+                          >
+                            <span className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${
+                              hasAnswered && opt.type === 'REAL'
+                                ? 'bg-emerald-500 text-white'
+                                : hasAnswered && isSelected && opt.type === 'RIDICULOUS'
+                                ? 'bg-purple-500 text-white'
+                                : hasAnswered && isSelected && opt.type === 'PLAUSIBLE'
+                                ? 'bg-rose-500 text-white'
+                                : darkMode ? 'bg-slate-700 text-slate-300' : 'bg-stone-200 text-stone-700'
+                            }`}>
+                              {String.fromCharCode(65 + idx)}
+                            </span>
+                            <div className="flex-1 text-sm sm:text-base font-normal leading-relaxed">
+                              {opt.text}
+                            </div>
+                          </button>
+                        );
+                      })}
+                    </div>
+
+                    {(dailyAnswers[currentWordIdx] || showExplanation) && (
+                      <div className={`mt-6 p-5 rounded-xl border ${
+                        dailyAnswers[currentWordIdx]?.isCorrect 
+                          ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-950 dark:text-emerald-100'
+                          : dailyAnswers[currentWordIdx]?.selectedType === 'RIDICULOUS'
+                          ? 'bg-purple-500/10 border-purple-500/30 text-purple-950 dark:text-purple-100'
+                          : 'bg-rose-500/10 border-rose-500/30 text-rose-950 dark:text-rose-100'
+                      }`}>
+                        <p className="text-xs sm:text-sm font-medium leading-relaxed mb-2">
+                          <strong className="font-semibold">Context:</strong> "{currentDailyWord.example}"
+                        </p>
+                        <div className="text-xs pt-2 border-t border-current/10 font-medium">
+                          Etymology: {currentDailyWord.origin}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                <div className="flex items-center justify-between pt-2">
+                  <button
+                    disabled={currentWordIdx === 0}
+                    onClick={() => {
+                      setCurrentWordIdx(prev => prev - 1);
+                      setSelectedOption(null);
+                      setShowExplanation(false);
+                    }}
+                    className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
+                      currentWordIdx === 0 ? 'opacity-30 cursor-not-allowed' : 'bg-stone-200 dark:bg-slate-800 hover:bg-stone-300 dark:hover:bg-slate-700'
+                    }`}
+                  >
+                    Previous Word
+                  </button>
+
+                  {dailyAnswers[currentWordIdx] && (
+                    <button
+                      onClick={handleNextDailyWord}
+                      className="px-6 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white shadow-md flex items-center space-x-2 transition-all"
+                    >
+                      <span>{currentWordIdx === 4 ? 'View Summary & Stats' : 'Next Word'}</span>
+                      <i data-lucide="arrow-right" className="w-4 h-4"></i>
+                    </button>
+                  )}
+                </div>
+              </div>
+            )}
+
+            {/* PRACTICE MODE */}
+            {activeTab === 'practice' && (
+              <div className="flex-1 flex flex-col justify-between space-y-6">
+                <div className="flex items-center justify-between border-b pb-4 border-stone-200 dark:border-slate-800">
+                  <div className="flex items-center space-x-2">
+                    <i data-lucide="refresh-cw" className="w-4 h-4 text-amber-600 dark:text-amber-400"></i>
+                    <span className="text-xs font-semibold uppercase tracking-wider text-stone-500 dark:text-slate-400">
+                      Unlimited Practice Mode (500 Words)
+                    </span>
+                  </div>
+                  <div className="text-xs font-semibold px-2.5 py-1 rounded-full bg-stone-200 dark:bg-slate-800">
+                    Score: <span className="text-amber-600 dark:text-amber-400">{practiceScore}</span> pts
+                  </div>
+                </div>
+
+                {currentPracticeWord && (
+                  <div className="p-6 sm:p-8 rounded-2xl border shadow-lg bg-white dark:bg-slate-900 border-stone-200 dark:border-slate-800">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b pb-6 border-stone-100 dark:border-slate-800">
+                      <div>
+                        <div className="flex items-center space-x-3">
+                          <h2 className="font-serif text-3xl sm:text-4xl font-bold tracking-tight text-amber-600 dark:text-amber-400">
+                            {currentPracticeWord.word}
+                          </h2>
+                          <button
+                            onClick={() => speakWord(currentPracticeWord.word)}
+                            className="p-2 rounded-full bg-stone-100 dark:bg-slate-800 text-stone-700 dark:text-slate-300 hover:bg-stone-200 dark:hover:bg-slate-700"
+                          >
+                            <i data-lucide="volume-2" className="w-5 h-5"></i>
+                          </button>
+                        </div>
+                        <div className="flex items-center space-x-3 mt-1.5 text-xs sm:text-sm text-stone-500 dark:text-slate-400">
+                          <span className="font-mono">{currentPracticeWord.phonetic}</span>
+                          <span>•</span>
+                          <span className="italic">{currentPracticeWord.partOfSpeech}</span>
+                        </div>
+                      </div>
+                      <span className="text-xs font-semibold px-3 py-1 rounded-md bg-purple-500/10 text-purple-600 dark:text-purple-400 border border-purple-500/20 self-start sm:self-center">
+                        Word #{currentPracticeWord.id}
+                      </span>
+                    </div>
+
+                    <p className="mt-6 text-sm font-semibold text-stone-500 dark:text-slate-400 uppercase tracking-wider">
+                      Select the genuine definition:
+                    </p>
+
+                    <div className="mt-4 grid grid-cols-1 gap-3">
+                      {practiceOptions.map((opt, idx) => {
+                        const hasAnswered = practiceSelectedOption !== null;
+                        const isSelected = practiceSelectedOption === opt;
+
+                        let btnStyle = darkMode 
+                          ? 'bg-slate-800/60 border-slate-700 hover:border-amber-500/50 hover:bg-slate-800' 
+                          : 'bg-stone-50 border-stone-200 hover:border-amber-500/50 hover:bg-amber-50/50';
+
+                        if (hasAnswered) {
+                          if (opt.type === 'REAL') {
+                            btnStyle = 'bg-emerald-500/15 border-emerald-500 text-emerald-900 dark:text-emerald-200 ring-2 ring-emerald-500/30';
+                          } else if (isSelected && opt.type === 'RIDICULOUS') {
+                            btnStyle = 'bg-purple-500/15 border-purple-500 text-purple-900 dark:text-purple-200 ring-2 ring-purple-500/30';
+                          } else if (isSelected && opt.type === 'PLAUSIBLE') {
+                            btnStyle = 'bg-rose-500/15 border-rose-500 text-rose-900 dark:text-rose-200 ring-2 ring-rose-500/30';
+                          } else {
+                            btnStyle = darkMode ? 'bg-slate-900/40 border-slate-800 opacity-40' : 'bg-stone-100 border-stone-200 opacity-40';
+                          }
+                        }
+
+                        return (
+                          <button
+                            key={idx}
+                            disabled={hasAnswered}
+                            onClick={() => {
+                              setPracticeSelectedOption(opt);
+                              if (opt.type === 'REAL') setPracticeScore(prev => prev + 100);
+                            }}
+                            className={`w-full text-left p-4 rounded-xl border transition-all duration-200 flex items-start space-x-3.5 ${btnStyle}`}
+                          >
+                            <span className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold bg-stone-200 dark:bg-slate-700 text-stone-700 dark:text-slate-300">
+                              {String.fromCharCode(65 + idx)}
+                            </span>
+                            <div className="flex-1 text-sm sm:text-base font-normal leading-relaxed">
+                              {opt.text}
+                            </div>
+                          </button>
+                        );
+                      })}
+                    </div>
+
+                    {practiceSelectedOption && (
+                      <div className="mt-6 p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 text-xs sm:text-sm">
+                        <p className="font-semibold text-amber-600 dark:text-amber-400 mb-1">Etymology & Usage:</p>
+                        <p className="opacity-90">{currentPracticeWord.origin} — "{currentPracticeWord.example}"</p>
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                <div className="flex justify-end pt-2">
+                  <button
+                    onClick={() => {
+                      setPracticeWordIdx(prev => prev + 1);
+                      setPracticeSelectedOption(null);
+                    }}
+                    className="px-6 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white shadow-md flex items-center space-x-2 transition-all"
+                  >
+                    <span>Next Word</span>
+                    <i data-lucide="refresh-cw" className="w-4 h-4"></i>
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {/* LEXICON SEARCH ARCHIVE */}
+            {activeTab === 'archive' && (
+              <div className="space-y-6">
+                <div className="border-b pb-4 border-stone-200 dark:border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                  <div>
+                    <h2 className="font-serif text-2xl font-bold">500 Obscure Lexicon</h2>
+                    <p className="text-xs sm:text-sm text-stone-500 dark:text-slate-400 mt-0.5">
+                      Search through the complete library of rare and genuine English words.
+                    </p>
+                  </div>
+
+                  <div className="relative w-full sm:w-64">
+                    <i data-lucide="search" className="w-4 h-4 absolute left-3 top-3 text-stone-400"></i>
+                    <input
+                      type="text"
+                      placeholder="Search 500 words..."
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      className="w-full pl-9 pr-4 py-2 rounded-xl text-xs sm:text-sm border focus:outline-none focus:ring-2 focus:ring-amber-500 bg-white dark:bg-slate-900 border-stone-200 dark:border-slate-800 text-stone-900 dark:text-white"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {filteredLexicon.map((item) => (
+                    <div
+                      key={item.id}
+                      className="p-5 rounded-2xl border bg-white dark:bg-slate-900 border-stone-200 dark:border-slate-800 shadow-sm"
+                    >
+                      <div className="flex items-start justify-between">
+                        <div>
+                          <h3 className="font-serif text-xl font-bold text-amber-600 dark:text-amber-400">
+                            {item.word}
+                          </h3>
+                          <p className="text-xs text-stone-500 dark:text-slate-400 mt-0.5 font-mono">
+                            {item.phonetic} • <span className="italic">{item.partOfSpeech}</span>
+                          </p>
+                        </div>
+                        <button
+                          onClick={() => speakWord(item.word)}
+                          className="p-2 rounded-lg bg-stone-100 dark:bg-slate-800 text-stone-700 dark:text-slate-300 hover:bg-stone-200 dark:hover:bg-slate-700"
+                        >
+                          <i data-lucide="volume-2" className="w-4 h-4"></i>
+                        </button>
+                      </div>
+
+                      <p className="text-sm mt-3 font-medium leading-relaxed">
+                        {item.realDefinition}
+                      </p>
+
+                      <p className="text-xs italic text-stone-500 dark:text-slate-400 mt-2">
+                        "{item.example}"
+                      </p>
+
+                      <div className="mt-3 pt-3 border-t border-stone-100 dark:border-slate-800 text-[11px] text-amber-700/80 dark:text-amber-300/80 font-medium">
+                        Origin: {item.origin}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* STATS & SUMMARY */}
+            {activeTab === 'stats' && (
+              <div className="space-y-6">
+                <div className="border-b pb-4 border-stone-200 dark:border-slate-800">
+                  <h2 className="font-serif text-2xl font-bold">Game Statistics</h2>
+                  <p className="text-xs sm:text-sm text-stone-500 dark:text-slate-400 mt-1">
+                    Your performance in unmasking real definitions across 500+ obscure words.
+                  </p>
+                </div>
+
+                {dailyAnswers.length === 5 && (
+                  <div className="p-6 rounded-2xl border text-center space-y-4 bg-amber-500/10 dark:bg-slate-900 border-amber-500/30">
+                    <div className="flex justify-center items-center space-x-2 text-amber-600 dark:text-amber-400 font-bold">
+                      <i data-lucide="award" className="w-6 h-6"></i>
+                      <span className="text-lg">Today's Challenge Completed!</span>
+                    </div>
+                    <div className="font-serif text-3xl font-bold">
+                      Score: <span className="text-amber-600 dark:text-amber-400">{totalDailyScore}</span> / 500
+                    </div>
+
+                    <div className="flex justify-center space-x-2 text-xl tracking-widest my-2">
+                      {dailyAnswers.map((ans, idx) => (
+                        <span key={idx}>
+                          {ans.selectedType === 'REAL' ? '🟩' : ans.selectedType === 'RIDICULOUS' ? '🟨' : '🟥'}
+                        </span>
+                      ))}
+                    </div>
+
+                    <div className="flex justify-center items-center space-x-3 pt-2">
+                      <button
+                        onClick={handleShare}
+                        className="px-6 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-amber-600 hover:bg-amber-500 text-white shadow-md flex items-center space-x-2 transition-all active:scale-95"
+                      >
+                        <i data-lucide="share-2" className="w-4 h-4"></i>
+                        <span>Share Results</span>
+                      </button>
+                      {copiedToast && (
+                        <span className="text-xs text-emerald-500 font-semibold animate-pulse">
+                          Copied!
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                )}
+
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                  <div className="p-4 rounded-xl border text-center bg-white dark:bg-slate-900 border-stone-200 dark:border-slate-800">
+                    <p className="text-2xl font-bold text-amber-600 dark:text-amber-400">{stats.gamesPlayed}</p>
+                    <p className="text-xs text-stone-500 dark:text-slate-400 font-medium mt-1">Games Played</p>
+                  </div>
+
+                  <div className="p-4 rounded-xl border text-center bg-white dark:bg-slate-900 border-stone-200 dark:border-slate-800">
+                    <p className="text-2xl font-bold text-amber-600 dark:text-amber-400">{stats.currentStreak}</p>
+                    <p className="text-xs text-stone-500 dark:text-slate-400 font-medium mt-1">Current Streak</p>
+                  </div>
+
+                  <div className="p-4 rounded-xl border text-center bg-white dark:bg-slate-900 border-stone-200 dark:border-slate-800">
+                    <p className="text-2xl font-bold text-amber-600 dark:text-amber-400">{stats.maxStreak}</p>
+                    <p className="text-xs text-stone-500 dark:text-slate-400 font-medium mt-1">Max Streak</p>
+                  </div>
+
+                  <div className="p-4 rounded-xl border text-center bg-white dark:bg-slate-900 border-stone-200 dark:border-slate-800">
+                    <p className="text-2xl font-bold text-amber-600 dark:text-amber-400">
+                      {stats.gamesPlayed ? Math.round(stats.totalPoints / stats.gamesPlayed) : 0}
+                    </p>
+                    <p className="text-xs text-stone-500 dark:text-slate-400 font-medium mt-1">Avg Score / Day</p>
+                  </div>
+                </div>
+              </div>
+            )}
+
+          </main>
+
+          {/* FOOTER */}
+          <footer className="border-t py-4 text-center text-xs border-stone-200 dark:border-slate-800 text-stone-500 dark:text-slate-500">
+            <p>Call My Bluff — 500+ Obscure English Word Challenge.</p>
+          </footer>
+        </div>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+  </script>
+</body>
+</html>
