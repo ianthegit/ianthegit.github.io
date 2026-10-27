@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Gridle - Dynamic Word Grid Puzzle</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                        }
+                    },
+                    animation: {
+                        'pop': 'pop 0.15s ease-in-out',
+                        'pulse-glow': 'pulseGlow 2s infinite',
+                        'shake': 'shake 0.3s ease-in-out'
+                    },
+                    keyframes: {
+                        pop: {
+                            '0%': { transform: 'scale(0.85)', opacity: '0' },
+                            '100%': { transform: 'scale(1)', opacity: '1' }
+                        },
+                        pulseGlow: {
+                            '0%, 100%': { boxShadow: '0 0 10px rgba(34, 197, 94, 0.4)' },
+                            '50%': { boxShadow: '0 0 22px rgba(34, 197, 94, 0.8)' }
+                        },
+                        shake: {
+                            '0%, 100%': { transform: 'translateX(0)' },
+                            '20%, 60%': { transform: 'translateX(-4px)' },
+                            '40%, 80%': { transform: 'translateX(4px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Canvas Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <style>
+        body {
+            touch-action: manipulation;
+            user-select: none;
+            -webkit-user-select: none;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .tile {
+            transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.2s ease, border-color 0.2s ease;
+            cursor: grab;
+            touch-action: none;
+        }
+
+        .tile:active, .tile.dragging {
+            cursor: grabbing;
+            transform: scale(1.1);
+            z-index: 50;
+            box-shadow: 0 12px 28px -5px rgba(0, 0, 0, 0.35);
+        }
+
+        .slot {
+            transition: all 0.2s ease;
+        }
+
+        .slot.drag-over {
+            border-color: #3b82f6 !important;
+            background-color: rgba(59, 130, 246, 0.2) !important;
+            transform: scale(1.06);
+        }
+
+        .core-3x3-bg {
+            background-color: rgba(34, 197, 94, 0.08);
+            border: 2px dashed rgba(34, 197, 94, 0.35);
+        }
+
+        .dark .core-3x3-bg {
+            background-color: rgba(34, 197, 94, 0.12);
+            border: 2px dashed rgba(34, 197, 94, 0.4);
+        }
+
+        .modal-backdrop {
+            background-color: rgba(15, 23, 42, 0.65);
+            backdrop-filter: blur(5px);
+        }
+
+        /* Custom scrollbar for game board wrapper */
+        .board-scroll::-webkit-scrollbar {
+            height: 6px;
+            width: 6px;
+        }
+        .board-scroll::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 9999px;
+        }
+        .dark .board-scroll::-webkit-scrollbar-thumb {
+            background: #475569;
+        }
+    </style>
+</head>
+<body class="bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-slate-100 min-h-screen flex flex-col transition-colors duration-300">
+
+    <!-- Header Navigation -->
+    <header class="w-full max-w-2xl mx-auto px-4 py-3 flex items-center justify-between border-b border-slate-200 dark:border-slate-800">
+        <div class="flex items-center space-x-1.5">
+            <button id="btn-help" class="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition" title="How to Play">
+                <i class="fa-solid fa-circle-question text-xl"></i>
+            </button>
+            <button id="btn-stats" class="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition" title="Statistics">
+                <i class="fa-solid fa-chart-simple text-xl"></i>
+            </button>
+        </div>
+
+        <div class="text-center">
+            <h1 class="text-2xl sm:text-3xl font-extrabold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-teal-600 dark:from-emerald-400 dark:to-teal-300">
+                GRIDLE
+            </h1>
+            <span id="mode-badge" class="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400">Daily Puzzle</span>
+        </div>
+
+        <div class="flex items-center space-x-1.5">
+            <button id="btn-sound" class="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition" title="Toggle Sound">
+                <i id="icon-sound" class="fa-solid fa-volume-high text-xl"></i>
+            </button>
+            <button id="btn-theme" class="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition" title="Toggle Theme">
+                <i id="icon-theme" class="fa-solid fa-moon text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Game Container -->
+    <main class="flex-1 max-w-xl w-full mx-auto px-3 py-3 flex flex-col items-center justify-between">
+        
+        <!-- Game Status & Controls Bar -->
+        <div class="w-full flex items-center justify-between bg-white dark:bg-slate-800 px-3.5 py-2 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 text-xs sm:text-sm mb-3">
+            <div class="flex items-center space-x-1.5 text-slate-600 dark:text-slate-300">
+                <i class="fa-regular fa-clock text-slate-400"></i>
+                <span id="timer-display" class="font-mono font-bold">00:00</span>
+            </div>
+
+            <div class="flex items-center space-x-1 text-slate-600 dark:text-slate-300">
+                <span class="text-slate-400">Moves:</span>
+                <span id="moves-display" class="font-bold text-slate-800 dark:text-slate-100">0</span>
+            </div>
+
+            <button id="btn-mode-toggle" class="text-xs font-bold px-2.5 py-1 rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-500/20 transition">
+                Practice Mode
+            </button>
+        </div>
+
+        <!-- Clues List Bar -->
+        <div id="words-clue-bar" class="w-full mb-3 flex flex-wrap justify-center gap-1.5">
+            <!-- Dynamic word badges injected here -->
+        </div>
+
+        <!-- Dynamic Grid Viewport Wrapper -->
+        <div class="w-full board-scroll overflow-x-auto flex items-center justify-center py-1 mb-3">
+            <div id="board-viewport" class="relative bg-slate-200/90 dark:bg-slate-800/90 p-2 sm:p-3 rounded-2xl shadow-inner border-2 border-slate-300 dark:border-slate-700 transition-all duration-300 min-w-[320px]">
+                <!-- Dynamic grid structure injected by JS -->
+                <div id="grid-container" class="grid gap-1 sm:gap-1.5 relative"></div>
+            </div>
+        </div>
+
+        <!-- Quick Action Toolbar -->
+        <div class="w-full flex items-center justify-between gap-2 mb-3 max-w-[420px]">
+            <button id="btn-hint" class="flex-1 py-2 px-2.5 bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/30 rounded-xl font-bold text-xs flex items-center justify-center space-x-1 hover:bg-amber-500/20 active:scale-95 transition">
+                <i class="fa-solid fa-lightbulb"></i>
+                <span>Hint (<span id="hint-count">3</span>)</span>
+            </button>
+            <button id="btn-recall" class="flex-1 py-2 px-2.5 bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-xl font-bold text-xs flex items-center justify-center space-x-1 hover:bg-slate-300 dark:hover:bg-slate-600 active:scale-95 transition">
+                <i class="fa-solid fa-arrow-rotate-left"></i>
+                <span>Recall</span>
+            </button>
+            <button id="btn-shuffle" class="flex-1 py-2 px-2.5 bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-xl font-bold text-xs flex items-center justify-center space-x-1 hover:bg-slate-300 dark:hover:bg-slate-600 active:scale-95 transition">
+                <i class="fa-solid fa-shuffle"></i>
+                <span>Shuffle</span>
+            </button>
+        </div>
+
+        <!-- Unplaced Tiles Rack -->
+        <div class="w-full bg-white dark:bg-slate-800 p-3 rounded-2xl shadow-md border border-slate-200 dark:border-slate-700 min-h-[110px] flex flex-col justify-center max-w-[480px]">
+            <div class="flex items-center justify-between mb-2 px-1">
+                <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Unplaced Tile Pool</span>
+                <span id="pool-counter" class="text-[11px] font-bold text-slate-500 dark:text-slate-400">0 tiles left</span>
+            </div>
+            <div id="pool-container" class="flex flex-wrap justify-center items-center gap-1.5 max-h-[140px] overflow-y-auto">
+                <!-- Tiles rendered here -->
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Floating Toast Notification -->
+    <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 px-4 py-2 rounded-full bg-slate-900 text-white dark:bg-white dark:text-slate-900 text-xs font-semibold shadow-lg transition-all duration-300 opacity-0 pointer-events-none translate-y-4 flex items-center space-x-2">
+        <span id="toast-text">Toast notification</span>
+    </div>
+
+    <!-- Modals -->
+
+    <!-- How to Play Modal -->
+    <div id="modal-help" class="fixed inset-0 z-50 flex items-center justify-center p-4 modal-backdrop hidden">
+        <div class="bg-white dark:bg-slate-800 rounded-2xl max-w-md w-full p-5 shadow-2xl border border-slate-200 dark:border-slate-700 max-h-[90vh] overflow-y-auto">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-200 dark:border-slate-700 mb-3">
+                <h3 class="text-lg font-extrabold text-slate-800 dark:text-slate-100">How to Play Gridle</h3>
+                <button class="btn-close-modal text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            <div class="space-y-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                <p>Gridle is a dynamic daily word puzzle built around a central <strong>3x3 core</strong>!</p>
+                
+                <div class="bg-slate-100 dark:bg-slate-700/50 p-3 rounded-xl border border-slate-200 dark:border-slate-700 space-y-2">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-6 h-6 bg-emerald-500 text-white font-bold rounded flex items-center justify-center text-xs">E</div>
+                        <span>The <strong>center letter</strong> is pre-locked as your starting anchor.</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <div class="w-6 h-6 bg-emerald-500/10 border-2 border-emerald-500/40 rounded flex items-center justify-center text-xs text-emerald-600 font-bold">4</div>
+                        <span>The green dashed area highlights the <strong>3x3 central core</strong>.</span>
+                    </div>
+                </div>
+
+                <p><strong>Rules & Goals:</strong></p>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li>Words stretch across rows (left to right) and columns (top to bottom).</li>
+                    <li>Word lengths vary dynamically from <strong>4 to 8 letters</strong> (e.g. 5-letter horizontal word, 7-letter vertical word).</li>
+                    <li>Drag & drop or tap tiles to fill empty grid slots.</li>
+                    <li>When a complete row or column forms a valid English word, its tiles light up green!</li>
+                </ul>
+            </div>
+            <button class="btn-close-modal w-full mt-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm rounded-xl shadow transition">Play Now</button>
+        </div>
+    </div>
+
+    <!-- Stats Modal -->
+    <div id="modal-stats" class="fixed inset-0 z-50 flex items-center justify-center p-4 modal-backdrop hidden">
+        <div class="bg-white dark:bg-slate-800 rounded-2xl max-w-md w-full p-5 shadow-2xl border border-slate-200 dark:border-slate-700">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-200 dark:border-slate-700 mb-4">
+                <h3 class="text-lg font-extrabold text-slate-800 dark:text-slate-100">Statistics</h3>
+                <button class="btn-close-modal text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            <div class="grid grid-cols-4 gap-2 text-center my-4">
+                <div class="bg-slate-100 dark:bg-slate-700/50 p-2 rounded-xl">
+                    <div id="stat-played" class="text-xl font-black text-slate-800 dark:text-slate-100">0</div>
+                    <div class="text-[9px] uppercase font-bold text-slate-400">Played</div>
+                </div>
+                <div class="bg-slate-100 dark:bg-slate-700/50 p-2 rounded-xl">
+                    <div id="stat-winrate" class="text-xl font-black text-slate-800 dark:text-slate-100">0%</div>
+                    <div class="text-[9px] uppercase font-bold text-slate-400">Win %</div>
+                </div>
+                <div class="bg-slate-100 dark:bg-slate-700/50 p-2 rounded-xl">
+                    <div id="stat-streak" class="text-xl font-black text-emerald-500">0</div>
+                    <div class="text-[9px] uppercase font-bold text-slate-400">Streak</div>
+                </div>
+                <div class="bg-slate-100 dark:bg-slate-700/50 p-2 rounded-xl">
+                    <div id="stat-max-streak" class="text-xl font-black text-emerald-500">0</div>
+                    <div class="text-[9px] uppercase font-bold text-slate-400">Max</div>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-200 dark:border-slate-700 pt-4 flex items-center justify-between">
+                <div>
+                    <span class="text-[11px] text-slate-400 font-medium">Avg Solve Time</span>
+                    <div id="stat-avg-time" class="text-sm font-bold text-slate-700 dark:text-slate-200">--:--</div>
+                </div>
+                <button id="btn-share-stats" class="py-2 px-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-xl shadow flex items-center space-x-1.5 transition">
+                    <i class="fa-solid fa-share-nodes"></i>
+                    <span>Share Stats</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Completion Victory Modal -->
+    <div id="modal-win" class="fixed inset-0 z-50 flex items-center justify-center p-4 modal-backdrop hidden">
+        <div class="bg-white dark:bg-slate-800 rounded-2xl max-w-md w-full p-5 shadow-2xl border border-slate-200 dark:border-slate-700 text-center animate-pop">
+            <div class="w-14 h-14 bg-emerald-100 dark:bg-emerald-900/40 text-emerald-500 rounded-full flex items-center justify-center text-2xl mx-auto mb-2">
+                <i class="fa-solid fa-trophy"></i>
+            </div>
+            <h2 class="text-2xl font-black text-slate-800 dark:text-slate-100 mb-0.5">Gridle Solved!</h2>
+            <p id="win-subtitle" class="text-xs text-slate-500 dark:text-slate-400 mb-3">All dynamic word paths completed successfully.</p>
+
+            <div class="bg-slate-50 dark:bg-slate-700/40 rounded-xl p-3 border border-slate-200 dark:border-slate-700 mb-4 text-left">
+                <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Words Discovered</div>
+                <div id="win-words-list" class="grid grid-cols-2 gap-x-2 gap-y-1 text-xs">
+                    <!-- Solved words list inserted here -->
+                </div>
+            </div>
+
+            <div class="flex items-center justify-around bg-slate-100 dark:bg-slate-700/60 p-2.5 rounded-xl mb-4 text-xs">
+                <div>
+                    <div class="text-[10px] text-slate-400 uppercase font-bold">Time</div>
+                    <div id="win-time" class="text-sm font-extrabold text-slate-700 dark:text-slate-200">00:00</div>
+                </div>
+                <div class="w-px h-6 bg-slate-300 dark:bg-slate-600"></div>
+                <div>
+                    <div class="text-[10px] text-slate-400 uppercase font-bold">Moves</div>
+                    <div id="win-moves" class="text-sm font-extrabold text-slate-700 dark:text-slate-200">0</div>
+                </div>
+                <div class="w-px h-6 bg-slate-300 dark:bg-slate-600"></div>
+                <div>
+                    <div class="text-[10px] text-slate-400 uppercase font-bold">Streak</div>
+                    <div id="win-streak" class="text-sm font-extrabold text-emerald-500">1 🔥</div>
+                </div>
+            </div>
+
+            <div class="flex space-x-2">
+                <button id="btn-share-win" class="flex-1 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-xl shadow flex items-center justify-center space-x-1.5 transition active:scale-95">
+                    <i class="fa-solid fa-share-nodes"></i>
+                    <span>Share Result</span>
+                </button>
+                <button id="btn-next-puzzle" class="hidden py-2.5 px-4 bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-100 font-bold text-xs rounded-xl hover:bg-slate-300 dark:hover:bg-slate-600 transition">
+                    Next
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Game Engine -->
+    <script>
+        /**
+         * GRIDLE ENGINE - Dynamic-length words (4 to 8 characters) intersecting over a 3x3 core
+         */
+
+        // Pre-verified Oxford English dictionary word puzzles with varied lengths (4 to 8 letters)
+        // All words are common English nouns, verbs, adjectives, or valid plurals (no proper nouns).
+        const DYNAMIC_PUZZLE_BANK = [
+            {
+                // Dynamic grid dimension: 5x5 layout (Central 3x3 from row 1..3, col 1..3)
+                rows: 5,
+                cols: 5,
+                centerAnchor: { r: 2, c: 2, letter: 'O' },
+                horizontalWords: [
+                    { word: "STARK", r: 1, cStart: 0, length: 5 }, // 5 letters
+                    { word: "CROWDS", r: 2, cStart: 0, length: 6 }, // 6 letters
+                    { word: "PLANT", r: 3, cStart: 0, length: 5 }   // 5 letters
+                ],
+                verticalWords: [
+                    { word: "ESCAPES", c: 1, rStart: 0, length: 7 }, // 7 letters
+                    { word: "TROWEL", c: 2, rStart: 0, length: 6 },  // 6 letters
+                    { word: "ARMS", c: 3, rStart: 1, length: 4 }     // 4 letters
+                ]
+            },
+            {
+                // 6x6 layout with 4 to 7 letter words
+                rows: 6,
+                cols: 6,
+                centerAnchor: { r: 2, c: 2, letter: 'E' },
+                horizontalWords: [
+                    { word: "GARDENS", r: 1, cStart: 0, length: 7 }, // 7 letters
+                    { word: "SHEETS", r: 2, cStart: 0, length: 6 },  // 6 letters
+                    { word: "TRAIN", r: 3, cStart: 1, length: 5 }    // 5 letters
+                ],
+                verticalWords: [
+                    { word: "RATHER", c: 1, rStart: 0, length: 6 },  // 6 letters
+                    { word: "DEER", c: 2, rStart: 1, length: 4 },    // 4 letters
+                    { word: "PLANETS", c: 3, rStart: 0, length: 7 }  // 7 letters
+                ]
+            },
+            {
+                // 7x7 layout with 4 to 8 letter words
+                rows: 7,
+                cols: 7,
+                centerAnchor: { r: 3, c: 3, letter: 'A' },
+                horizontalWords: [
+                    { word: "FLIGHTS", r: 2, cStart: 0, length: 7 }, // 7 letters
+                    { word: "TRACKERS", r: 3, cStart: 0, length: 8 },// 8 letters
+                    { word: "STORM", r: 4, cStart: 1, length: 5 }    // 5 letters
+                ],
+                verticalWords: [
+                    { word: "LIGHTS", c: 2, rStart: 1, length: 6 },  // 6 letters
+                    { word: "STATION", c: 3, rStart: 0, length: 7 }, // 7 letters
+                    { word: "PARK", c: 4, rStart: 2, length: 4 }     // 4 letters
+                ]
+            },
+            {
+                // 6x6 layout with mixed word lengths
+                rows: 6,
+                cols: 6,
+                centerAnchor: { r: 2, c: 2, letter: 'I' },
+                horizontalWords: [
+                    { word: "CLIMB", r: 1, cStart: 0, length: 5 },  // 5 letters
+                    { word: "SPRINT", r: 2, cStart: 0, length: 6 }, // 6 letters
+                    { word: "BOARDS", r: 3, cStart: 1, length: 6 }  // 6 letters
+                ],
+                verticalWords: [
+                    { word: "LISTEN", c: 1, rStart: 0, length: 6 }, // 6 letters
+                    { word: "PRINTS", c: 2, rStart: 0, length: 6 }, // 6 letters
+                    { word: "IRON", c: 3, rStart: 1, length: 4 }    // 4 letters
+                ]
+            }
+        ];
+
+        // Synthesizer Audio FX
+        class SoundFX {
+            constructor() {
+                this.ctx = null;
+                this.muted = false;
+            }
+
+            init() {
+                if (!this.ctx) {
+                    const AudioCtx = window.AudioContext || window.webkitAudioContext;
+                    if (AudioCtx) this.ctx = new AudioCtx();
+                }
+            }
+
+            play(type) {
+                if (this.muted) return;
+                this.init();
+                if (!this.ctx) return;
+
+                const now = this.ctx.currentTime;
+                const osc = this.ctx.createOscillator();
+                const gain = this.ctx.createGain();
+                osc.connect(gain);
+                gain.connect(this.ctx.destination);
+
+                if (type === 'pickup') {
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(350, now);
+                    osc.frequency.exponentialRampToValueAtTime(480, now + 0.07);
+                    gain.gain.setValueAtTime(0.12, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.07);
+                    osc.start(now);
+                    osc.stop(now + 0.07);
+                } else if (type === 'drop') {
+                    osc.type = 'triangle';
+                    osc.frequency.setValueAtTime(460, now);
+                    osc.frequency.exponentialRampToValueAtTime(240, now + 0.08);
+                    gain.gain.setValueAtTime(0.15, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.08);
+                    osc.start(now);
+                    osc.stop(now + 0.08);
+                } else if (type === 'word-valid') {
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(523.25, now); // C5
+                    osc.frequency.setValueAtTime(659.25, now + 0.08); // E5
+                    gain.gain.setValueAtTime(0.15, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.2);
+                    osc.start(now);
+                    osc.stop(now + 0.2);
+                } else if (type === 'hint') {
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(587.33, now);
+                    osc.frequency.setValueAtTime(880, now + 0.09);
+                    gain.gain.setValueAtTime(0.15, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.2);
+                    osc.start(now);
+                    osc.stop(now + 0.2);
+                } else if (type === 'win') {
+                    const notes = [523.25, 659.25, 783.99, 1046.50];
+                    notes.forEach((freq, idx) => {
+                        const noteOsc = this.ctx.createOscillator();
+                        const noteGain = this.ctx.createGain();
+                        noteOsc.connect(noteGain);
+                        noteGain.connect(this.ctx.destination);
+                        
+                        noteOsc.type = 'triangle';
+                        noteOsc.frequency.setValueAtTime(freq, now + idx * 0.09);
+                        noteGain.gain.setValueAtTime(0.18, now + idx * 0.09);
+                        noteGain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.09 + 0.28);
+                        
+                        noteOsc.start(now + idx * 0.09);
+                        noteOsc.stop(now + idx * 0.09 + 0.28);
+                    });
+                }
+            }
+        }
+
+        const audio = new SoundFX();
+
+        // State variables
+        let isDailyMode = true;
+        let activePuzzle = null;
+        let boardGrid = []; // 2D matrix of cells: { letter, isFixed, isCore, active }
+        let targetBoard = []; // 2D matrix storing exact solution letters
+        let unplacedPool = []; // Array of tile objects: { id, letter }
+        let selectedTileId = null;
+        let movesCount = 0;
+        let hintsRemaining = 3;
+        let timerInterval = null;
+        let secondsElapsed = 0;
+        let isPuzzleSolved = false;
+
+        let userStats = {
+            played: 0,
+            wins: 0,
+            currentStreak: 0,
+            maxStreak: 0,
+            totalTime: 0,
+            lastPlayedDate: null
+        };
+
+        // DOM Elements
+        const gridContainer = document.getElementById('grid-container');
+        const poolContainer = document.getElementById('pool-container');
+        const timerDisplay = document.getElementById('timer-display');
+        const movesDisplay = document.getElementById('moves-display');
+        const modeBadge = document.getElementById('mode-badge');
+        const hintCountDisplay = document.getElementById('hint-count');
+        const wordsClueBar = document.getElementById('words-clue-bar');
+        const poolCounter = document.getElementById('pool-counter');
+
+        // Modals
+        const modalHelp = document.getElementById('modal-help');
+        const modalStats = document.getElementById('modal-stats');
+        const modalWin = document.getElementById('modal-win');
+        
+        const btnHelp = document.getElementById('btn-help');
+        const btnStats = document.getElementById('btn-stats');
+        const btnSound = document.getElementById('btn-sound');
+        const btnTheme = document.getElementById('btn-theme');
+        const btnModeToggle = document.getElementById('btn-mode-toggle');
+        const btnHint = document.getElementById('btn-hint');
+        const btnRecall = document.getElementById('btn-recall');
+        const btnShuffle = document.getElementById('btn-shuffle');
+        const btnShareWin = document.getElementById('btn-share-win');
+        const btnShareStats = document.getElementById('btn-share-stats');
+        const btnNextPuzzle = document.getElementById('btn-next-puzzle');
+
+        // Init App
+        window.addEventListener('DOMContentLoaded', () => {
+            loadStatsFromStorage();
+            initTheme();
+            setupEventListeners();
+            startPuzzle(true);
+        });
+
+        function getDailyDateString() {
+            const today = new Date();
+            return `${today.getUTCFullYear()}-${String(today.getUTCMonth() + 1).padStart(2, '0')}-${String(today.getUTCDate()).padStart(2, '0')}`;
+        }
+
+        function seededRandom(seedStr) {
+            let hash = 0;
+            for (let i = 0; i < seedStr.length; i++) {
+                hash = seedStr.charCodeAt(i) + ((hash << 5) - hash);
+            }
+            const x = Math.sin(hash++) * 10000;
+            return x - Math.floor(x);
+        }
+
+        function getDailyPuzzle() {
+            const dateStr = getDailyDateString();
+            const rand = seededRandom(dateStr);
+            const index = Math.floor(rand * DYNAMIC_PUZZLE_BANK.length);
+            return DYNAMIC_PUZZLE_BANK[index];
+        }
+
+        function getRandomPuzzle() {
+            const index = Math.floor(Math.random() * DYNAMIC_PUZZLE_BANK.length);
+            return DYNAMIC_PUZZLE_BANK[index];
+        }
+
+        // Start / Reset Puzzle State
+        function startPuzzle(daily = true) {
+            isDailyMode = daily;
+            isPuzzleSolved = false;
+            movesCount = 0;
+            secondsElapsed = 0;
+            hintsRemaining = 3;
+            selectedTileId = null;
+
+            clearInterval(timerInterval);
+            timerDisplay.textContent = "00:00";
+            movesDisplay.textContent = "0";
+            hintCountDisplay.textContent = hintsRemaining;
+
+            modeBadge.textContent = isDailyMode ? "Daily Puzzle" : "Practice Mode";
+            btnModeToggle.textContent = isDailyMode ? "Practice Mode" : "Daily Mode";
+
+            activePuzzle = isDailyMode ? getDailyPuzzle() : getRandomPuzzle();
+
+            buildPuzzleMatrices();
+            renderWordsClues();
+            renderBoard();
+            renderPool();
+
+            if (!isPuzzleSolved) {
+                startTimer();
+            }
+        }
+
+        // Build target board matrix and active board from puzzle specification
+        function buildPuzzleMatrices() {
+            const { rows, cols, centerAnchor, horizontalWords, verticalWords } = activePuzzle;
+
+            targetBoard = Array(rows).fill(null).map(() => Array(cols).fill(null));
+            boardGrid = Array(rows).fill(null).map(() => Array(cols).fill(null));
+
+            // Populate target words
+            horizontalWords.forEach(hw => {
+                for (let i = 0; i < hw.length; i++) {
+                    targetBoard[hw.r][hw.cStart + i] = hw.word[i];
+                }
+            });
+
+            verticalWords.forEach(vw => {
+                for (let i = 0; i < vw.length; i++) {
+                    targetBoard[vw.rStart + i][vw.c] = vw.word[i];
+                }
+            });
+
+            // Calculate core 3x3 boundaries around centerAnchor
+            const coreRMin = centerAnchor.r - 1;
+            const coreRMax = centerAnchor.r + 1;
+            const coreCMin = centerAnchor.c - 1;
+            const coreCMax = centerAnchor.c + 1;
+
+            unplacedPool = [];
+            let tileIdCounter = 1;
+
+            for (let r = 0; r < rows; r++) {
+                for (let c = 0; c < cols; c++) {
+                    const targetChar = targetBoard[r][c];
+                    if (targetChar) {
+                        const isCenter = (r === centerAnchor.r && c === centerAnchor.c);
+                        const isCore = (r >= coreRMin && r <= coreRMax && c >= coreCMin && c <= coreCMax);
+
+                        if (isCenter) {
+                            boardGrid[r][c] = {
+                                letter: targetChar,
+                                isFixed: true,
+                                isCore: true,
+                                active: true
+                            };
+                        } else {
+                            boardGrid[r][c] = {
+                                letter: null,
+                                isFixed: false,
+                                isCore: isCore,
+                                active: true
+                            };
+                            unplacedPool.push({
+                                id: `tile-${tileIdCounter++}`,
+                                letter: targetChar
+                            });
+                        }
+                    } else {
+                        boardGrid[r][c] = { active: false };
+                    }
+                }
+            }
+
+            shuffleArray(unplacedPool);
+        }
+
+        // Timer
+        function startTimer() {
+            clearInterval(timerInterval);
+            timerInterval = setInterval(() => {
+                secondsElapsed++;
+                timerDisplay.textContent = formatTime(secondsElapsed);
+            }, 1000);
+        }
+
+        function formatTime(secs) {
+            const m = Math.floor(secs / 60);
+            const s = secs % 60;
+            return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+        }
+
+        function shuffleArray(arr) {
+            for (let i = arr.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+        }
+
+        // Render Word Badges (horizontal & vertical length indicators)
+        function renderWordsClues() {
+            wordsClueBar.innerHTML = '';
+            
+            const allWords = [
+                ...activePuzzle.horizontalWords.map(w => ({ dir: 'H', length: w.length })),
+                ...activePuzzle.verticalWords.map(w => ({ dir: 'V', length: w.length }))
+            ];
+
+            allWords.forEach(w => {
+                const badge = document.createElement('div');
+                badge.className = 'text-[11px] font-bold px-2 py-0.5 rounded-full bg-slate-200 dark:bg-slate-700/70 text-slate-600 dark:text-slate-300 flex items-center space-x-1 border border-slate-300/50 dark:border-slate-600/50';
+                badge.innerHTML = `<i class="fa-solid fa-${w.dir === 'H' ? 'arrows-left-right' : 'arrows-up-down'} text-[9px] opacity-70"></i> <span>${w.length} Letters</span>`;
+                wordsClueBar.appendChild(badge);
+            });
+        }
+
+        // Render Game Grid Canvas Board
+        function renderBoard() {
+            const { rows, cols } = activePuzzle;
+            gridContainer.innerHTML = '';
+            gridContainer.style.gridTemplateColumns = `repeat(${cols}, minmax(0, 1fr))`;
+
+            // Calculate active solved word rows/cols to highlight valid lines
+            const validLines = getValidWordLines();
+
+            for (let r = 0; r < rows; r++) {
+                for (let c = 0; c < cols; c++) {
+                    const cell = boardGrid[r][c];
+                    const slot = document.createElement('div');
+                    slot.dataset.row = r;
+                    slot.dataset.col = c;
+
+                    // Inactive non-playable cell
+                    if (!cell.active) {
+                        slot.className = 'w-9 h-9 sm:w-11 sm:h-11 rounded-lg opacity-0 pointer-events-none';
+                        gridContainer.appendChild(slot);
+                        continue;
+                    }
+
+                    const isLineValid = isCellInValidLine(r, c, validLines);
+
+                    slot.className = `slot w-9 h-9 sm:w-11 sm:h-11 rounded-xl flex items-center justify-center font-black text-lg sm:text-2xl border-2 transition-all duration-200 relative select-none`;
+
+                    // Style 3x3 central core visually
+                    if (cell.isCore) {
+                        slot.classList.add('bg-emerald-50/50', 'dark:bg-emerald-950/20');
+                    }
+
+                    if (cell.letter) {
+                        if (cell.isFixed) {
+                            slot.className += ` bg-emerald-500 border-emerald-600 text-white shadow-sm`;
+                            slot.innerHTML = `<span>${cell.letter}</span><span class="absolute top-0.5 right-1 text-[8px] opacity-60"><i class="fa-solid fa-lock"></i></span>`;
+                        } else if (isLineValid) {
+                            slot.className += ` bg-emerald-100 dark:bg-emerald-900/60 border-emerald-500 text-emerald-800 dark:text-emerald-200 shadow-sm animate-pop`;
+                            slot.innerHTML = `<span>${cell.letter}</span>`;
+                        } else {
+                            slot.className += ` bg-white dark:bg-slate-700 border-slate-300 dark:border-slate-600 text-slate-800 dark:text-white shadow-sm hover:border-emerald-400 cursor-pointer`;
+                            slot.innerHTML = `<span>${cell.letter}</span>`;
+                        }
+
+                        if (!isPuzzleSolved && !cell.isFixed) {
+                            slot.addEventListener('click', () => handleSlotClick(r, c));
+                        }
+                    } else {
+                        // Empty slot
+                        slot.className += ` bg-white/40 dark:bg-slate-800/40 border-dashed border-slate-300 dark:border-slate-700 hover:border-emerald-400/80 cursor-pointer`;
+                        if (!isPuzzleSolved) {
+                            slot.addEventListener('click', () => handleSlotClick(r, c));
+                        }
+                    }
+
+                    // HTML5 Drag-and-drop listener on slot
+                    if (!isPuzzleSolved) {
+                        slot.addEventListener('dragover', handleDragOver);
+                        slot.addEventListener('dragenter', handleDragEnter);
+                        slot.addEventListener('dragleave', handleDragLeave);
+                        slot.addEventListener('drop', handleDrop);
+                    }
+
+                    gridContainer.appendChild(slot);
+                }
+            }
+        }
+
+        // Render Unplaced Tile Pool Rack
+        function renderPool() {
+            poolContainer.innerHTML = '';
+            poolCounter.textContent = `${unplacedPool.length} tiles left`;
+
+            if (unplacedPool.length === 0 && !isPuzzleSolved) {
+                const msg = document.createElement('div');
+                msg.className = 'text-xs text-slate-400 italic py-2';
+                msg.textContent = 'All tiles placed on grid!';
+                poolContainer.appendChild(msg);
+                return;
+            }
+
+            unplacedPool.forEach(tile => {
+                const tileElem = document.createElement('div');
+                tileElem.id = tile.id;
+                tileElem.draggable = !isPuzzleSolved;
+                tileElem.className = `tile w-9 h-9 sm:w-11 sm:h-11 bg-white dark:bg-slate-700 border-2 border-slate-300 dark:border-slate-600 rounded-xl flex items-center justify-center font-extrabold text-lg sm:text-xl text-slate-800 dark:text-white shadow-sm hover:border-emerald-400 ${selectedTileId === tile.id ? 'ring-2 ring-emerald-500 scale-105 border-emerald-500' : ''}`;
+                tileElem.textContent = tile.letter;
+
+                if (!isPuzzleSolved) {
+                    tileElem.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        handleTileClick(tile.id);
+                    });
+
+                    tileElem.addEventListener('dragstart', handleDragStart);
+                    tileElem.addEventListener('dragend', handleDragEnd);
+                }
+
+                poolContainer.appendChild(tileElem);
+            });
+        }
+
+        // Handle Pool Tile Tap
+        function handleTileClick(tileId) {
+            audio.play('pickup');
+            if (selectedTileId === tileId) {
+                selectedTileId = null;
+            } else {
+                selectedTileId = tileId;
+            }
+            renderPool();
+        }
+
+        // Handle Slot Tap / Placement
+        function handleSlotClick(r, c) {
+            const cell = boardGrid[r][c];
+            if (cell.isFixed) return;
+
+            // If tile selected from pool, place it
+            if (selectedTileId) {
+                const poolIndex = unplacedPool.findIndex(t => t.id === selectedTileId);
+                if (poolIndex !== -1) {
+                    const tile = unplacedPool[poolIndex];
+
+                    // If slot already occupied by non-fixed tile, return existing back to pool
+                    if (cell.letter) {
+                        unplacedPool.push({
+                            id: `tile-${Date.now()}`,
+                            letter: cell.letter
+                        });
+                    }
+
+                    cell.letter = tile.letter;
+                    unplacedPool.splice(poolIndex, 1);
+                    selectedTileId = null;
+                    movesCount++;
+                    movesDisplay.textContent = movesCount;
+                    audio.play('drop');
+
+                    renderBoard();
+                    renderPool();
+                    checkSolution();
+                    return;
+                }
+            }
+
+            // If tapping on occupied non-fixed cell, return letter back to pool
+            if (cell.letter && !cell.isFixed) {
+                const letterToReturn = cell.letter;
+                cell.letter = null;
+                unplacedPool.push({
+                    id: `tile-${Date.now()}`,
+                    letter: letterToReturn
+                });
+                movesCount++;
+                movesDisplay.textContent = movesCount;
+                audio.play('drop');
+
+                renderBoard();
+                renderPool();
+                checkSolution();
+            }
+        }
+
+        // Drag & Drop Handling
+        let draggedTileId = null;
+
+        function handleDragStart(e) {
+            draggedTileId = this.id;
+            this.classList.add('dragging');
+            e.dataTransfer.setData('text/plain', this.id);
+            audio.play('pickup');
+        }
+
+        function handleDragEnd() {
+            this.classList.remove('dragging');
+            draggedTileId = null;
+        }
+
+        function handleDragOver(e) { e.preventDefault(); }
+        function handleDragEnter(e) {
+            e.preventDefault();
+            this.classList.add('drag-over');
+        }
+        function handleDragLeave() {
+            this.classList.remove('drag-over');
+        }
+
+        function handleDrop(e) {
+            e.preventDefault();
+            this.classList.remove('drag-over');
+
+            const r = parseInt(this.dataset.row);
+            const c = parseInt(this.dataset.col);
+            const cell = boardGrid[r][c];
+
+            if (!cell || cell.isFixed || !cell.active) return;
+
+            const tileId = e.dataTransfer.getData('text/plain') || draggedTileId;
+            if (!tileId) return;
+
+            const poolIndex = unplacedPool.findIndex(t => t.id === tileId);
+            if (poolIndex !== -1) {
+                const tile = unplacedPool[poolIndex];
+
+                if (cell.letter) {
+                    unplacedPool.push({
+                        id: `tile-${Date.now()}`,
+                        letter: cell.letter
+                    });
+                }
+
+                cell.letter = tile.letter;
+                unplacedPool.splice(poolIndex, 1);
+                selectedTileId = null;
+                movesCount++;
+                movesDisplay.textContent = movesCount;
+                audio.play('drop');
+
+                renderBoard();
+                renderPool();
+                checkSolution();
+            }
+        }
+
+        // Recall Placed Tiles Back to Pool
+        function recallTiles() {
+            if (isPuzzleSolved) return;
+
+            let recalled = false;
+            const { rows, cols } = activePuzzle;
+
+            for (let r = 0; r < rows; r++) {
+                for (let c = 0; c < cols; c++) {
+                    const cell = boardGrid[r][c];
+                    if (cell.active && cell.letter && !cell.isFixed) {
+                        unplacedPool.push({
+                            id: `tile-${Date.now()}-${r}-${c}`,
+                            letter: cell.letter
+                        });
+                        cell.letter = null;
+                        recalled = true;
+                    }
+                }
+            }
+
+            if (recalled) {
+                selectedTileId = null;
+                audio.play('drop');
+                renderBoard();
+                renderPool();
+            }
+        }
+
+        function shufflePool() {
+            if (unplacedPool.length <= 1) return;
+            shuffleArray(unplacedPool);
+            audio.play('pickup');
+            renderPool();
+        }
+
+        // Hint: Finds an unplaced or incorrect tile and locks it into correct position
+        function giveHint() {
+            if (isPuzzleSolved || hintsRemaining <= 0) {
+                showToast("No hints remaining!");
+                return;
+            }
+
+            const candidates = [];
+            const { rows, cols } = activePuzzle;
+
+            for (let r = 0; r < rows; r++) {
+                for (let c = 0; c < cols; c++) {
+                    if (boardGrid[r][c].active && !boardGrid[r][c].isFixed) {
+                        const targetChar = targetBoard[r][c];
+                        if (boardGrid[r][c].letter !== targetChar) {
+                            candidates.push({ r, c, targetChar });
+                        }
+                    }
+                }
+            }
+
+            if (candidates.length === 0) {
+                showToast("Board is already correct!");
+                return;
+            }
+
+            const target = candidates[Math.floor(Math.random() * candidates.length)];
+            
+            // Remove target letter from pool or current incorrect slot
+            const poolIdx = unplacedPool.findIndex(t => t.letter === target.targetChar);
+            if (poolIdx !== -1) {
+                unplacedPool.splice(poolIdx, 1);
+            } else {
+                // Return letter from another slot if found
+                for (let r = 0; r < rows; r++) {
+                    for (let c = 0; c < cols; c++) {
+                        const cell = boardGrid[r][c];
+                        if (cell.active && !cell.isFixed && cell.letter === target.targetChar) {
+                            cell.letter = null;
+                            break;
+                        }
+                    }
+                }
+            }
+
+            // Return current wrong letter in target slot back to pool
+            if (boardGrid[target.r][target.c].letter) {
+                unplacedPool.push({
+                    id: `tile-${Date.now()}`,
+                    letter: boardGrid[target.r][target.c].letter
+                });
+            }
+
+            boardGrid[target.r][target.c].letter = target.targetChar;
+            boardGrid[target.r][target.c].isFixed = true; // Lock hint tile
+
+            hintsRemaining--;
+            hintCountDisplay.textContent = hintsRemaining;
+
+            audio.play('hint');
+            renderBoard();
+            renderPool();
+            checkSolution();
+            showToast("Hint applied!");
+        }
+
+        // Valid Word Line Detectors for Real-time Visual Highlights
+        function getValidWordLines() {
+            const valid = [];
+            
+            // Horizontal words
+            activePuzzle.horizontalWords.forEach(hw => {
+                let match = true;
+                for (let i = 0; i < hw.length; i++) {
+                    const char = boardGrid[hw.r][hw.cStart + i].letter;
+                    if (char !== hw.word[i]) {
+                        match = false;
+                        break;
+                    }
+                }
+                if (match) valid.push({ type: 'H', ...hw });
+            });
+
+            // Vertical words
+            activePuzzle.verticalWords.forEach(vw => {
+                let match = true;
+                for (let i = 0; i < vw.length; i++) {
+                    const char = boardGrid[vw.rStart + i][vw.c].letter;
+                    if (char !== vw.word[i]) {
+                        match = false;
+                        break;
+                    }
+                }
+                if (match) valid.push({ type: 'V', ...vw });
+            });
+
+            return valid;
+        }
+
+        function isCellInValidLine(r, c, validLines) {
+            return validLines.some(line => {
+                if (line.type === 'H') {
+                    return line.r === r && c >= line.cStart && c < line.cStart + line.length;
+                } else {
+                    return line.c === c && r >= line.rStart && r < line.rStart + line.length;
+                }
+            });
+        }
+
+        // Full Puzzle Solution Check
+        function checkSolution() {
+            const { rows, cols } = activePuzzle;
+
+            for (let r = 0; r < rows; r++) {
+                for (let c = 0; c < cols; c++) {
+                    if (boardGrid[r][c].active) {
+                        if (boardGrid[r][c].letter !== targetBoard[r][c]) {
+                            return false;
+                        }
+                    }
+                }
+            }
+
+            onPuzzleSolved();
+            return true;
+        }
+
+        function onPuzzleSolved() {
+            isPuzzleSolved = true;
+            clearInterval(timerInterval);
+
+            audio.play('win');
+
+            if (typeof confetti === 'function') {
+                confetti({
+                    particleCount: 85,
+                    spread: 75,
+                    origin: { y: 0.6 }
+                });
+            }
+
+            if (isDailyMode) {
+                const dateStr = getDailyDateString();
+                if (userStats.lastPlayedDate !== dateStr) {
+                    userStats.played++;
+                    userStats.wins++;
+                    userStats.totalTime += secondsElapsed;
+
+                    const yesterday = new Date();
+                    yesterday.setUTCDate(yesterday.getUTCDate() - 1);
+                    const yestStr = `${yesterday.getUTCFullYear()}-${String(yesterday.getUTCMonth() + 1).padStart(2, '0')}-${String(yesterday.getUTCDate()).padStart(2, '0')}`;
+
+                    if (userStats.lastPlayedDate === yestStr) {
+                        userStats.currentStreak++;
+                    } else {
+                        userStats.currentStreak = 1;
+                    }
+
+                    if (userStats.currentStreak > userStats.maxStreak) {
+                        userStats.maxStreak = userStats.currentStreak;
+                    }
+
+                    userStats.lastPlayedDate = dateStr;
+                    saveStatsToStorage();
+                }
+            }
+
+            document.getElementById('win-time').textContent = formatTime(secondsElapsed);
+            document.getElementById('win-moves').textContent = movesCount;
+            document.getElementById('win-streak').textContent = `${userStats.currentStreak} 🔥`;
+
+            const winWordsList = document.getElementById('win-words-list');
+            winWordsList.innerHTML = '';
+
+            const allWords = [
+                ...activePuzzle.horizontalWords,
+                ...activePuzzle.verticalWords
+            ];
+
+            allWords.forEach(w => {
+                const item = document.createElement('div');
+                item.className = 'flex items-center justify-between text-slate-700 dark:text-slate-200 font-bold bg-slate-100 dark:bg-slate-700/50 px-2 py-1 rounded-lg';
+                item.innerHTML = `<span class="text-emerald-600 dark:text-emerald-400">${w.word}</span> <span class="text-[10px] text-slate-400 font-normal">${w.length}L</span>`;
+                winWordsList.appendChild(item);
+            });
+
+            btnNextPuzzle.style.display = isDailyMode ? 'none' : 'block';
+
+            setTimeout(() => {
+                modalWin.classList.remove('hidden');
+            }, 400);
+        }
+
+        // Social Emoji Summary Generator
+        function generateShareText() {
+            const dateStr = getDailyDateString();
+            const timeStr = formatTime(secondsElapsed);
+            
+            let text = "🧩 GRIDLE " + (isDailyMode ? dateStr : "Practice") + "\n";
+            text += `⏱️ ${timeStr} | 🎯 Moves: ${movesCount} | 🔥 Streak: ${userStats.currentStreak}\n\n`;
+
+            text += "🟩🟩🟩\n🟩🟩🟩\n🟩🟩🟩\n\n";
+            text += "Play Gridle Daily Word Grid!";
+            return text;
+        }
+
+        function copyShareToClipboard() {
+            const text = generateShareText();
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(text).then(() => {
+                    showToast("Results copied to clipboard!");
+                }).catch(() => fallbackCopy(text));
+            } else {
+                fallbackCopy(text);
+            }
+        }
+
+        function fallbackCopy(text) {
+            const textarea = document.createElement("textarea");
+            textarea.value = text;
+            textarea.style.position = "fixed";
+            document.body.appendChild(textarea);
+            textarea.focus();
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                showToast("Results copied to clipboard!");
+            } catch (err) {
+                showToast("Failed to copy results.");
+            }
+            document.body.removeChild(textarea);
+        }
+
+        // Toast Messages
+        let toastTimeout;
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-text').textContent = msg;
+
+            toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+            toast.classList.add('opacity-100', 'translate-y-0');
+
+            clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
+                toast.classList.remove('opacity-100', 'translate-y-0');
+                toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+            }, 2500);
+        }
+
+        // Stats Storage
+        function loadStatsFromStorage() {
+            const stored = localStorage.getItem('gridle_user_stats_v2');
+            if (stored) {
+                try { userStats = { ...userStats, ...JSON.parse(stored) }; } catch(e) {}
+            }
+            updateStatsUI();
+        }
+
+        function saveStatsToStorage() {
+            localStorage.setItem('gridle_user_stats_v2', JSON.stringify(userStats));
+            updateStatsUI();
+        }
+
+        function updateStatsUI() {
+            document.getElementById('stat-played').textContent = userStats.played;
+            const winRate = userStats.played > 0 ? Math.round((userStats.wins / userStats.played) * 100) : 0;
+            document.getElementById('stat-winrate').textContent = `${winRate}%`;
+            document.getElementById('stat-streak').textContent = userStats.currentStreak;
+            document.getElementById('stat-max-streak').textContent = userStats.maxStreak;
+
+            const avgSecs = userStats.wins > 0 ? Math.round(userStats.totalTime / userStats.wins) : 0;
+            document.getElementById('stat-avg-time').textContent = formatTime(avgSecs);
+        }
+
+        function initTheme() {
+            if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+                document.getElementById('icon-theme').className = 'fa-solid fa-sun text-xl';
+            } else {
+                document.documentElement.classList.remove('dark');
+                document.getElementById('icon-theme').className = 'fa-solid fa-moon text-xl';
+            }
+        }
+
+        function toggleTheme() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+                document.getElementById('icon-theme').className = 'fa-solid fa-moon text-xl';
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+                document.getElementById('icon-theme').className = 'fa-solid fa-sun text-xl';
+            }
+        }
+
+        function setupEventListeners() {
+            btnHelp.addEventListener('click', () => modalHelp.classList.remove('hidden'));
+            btnStats.addEventListener('click', () => {
+                updateStatsUI();
+                modalStats.classList.remove('hidden');
+            });
+
+            btnSound.addEventListener('click', () => {
+                audio.muted = !audio.muted;
+                const icon = document.getElementById('icon-sound');
+                icon.className = audio.muted ? 'fa-solid fa-volume-xmark text-xl text-slate-400' : 'fa-solid fa-volume-high text-xl';
+                showToast(audio.muted ? "Sound Muted" : "Sound Enabled");
+            });
+
+            btnTheme.addEventListener('click', toggleTheme);
+            btnModeToggle.addEventListener('click', () => startPuzzle(!isDailyMode));
+
+            btnRecall.addEventListener('click', recallTiles);
+            btnShuffle.addEventListener('click', shufflePool);
+            btnHint.addEventListener('click', giveHint);
+
+            document.querySelectorAll('.btn-close-modal').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    modalHelp.classList.add('hidden');
+                    modalStats.classList.add('hidden');
+                    modalWin.classList.add('hidden');
+                });
+            });
+
+            btnShareWin.addEventListener('click', copyShareToClipboard);
+            btnShareStats.addEventListener('click', copyShareToClipboard);
+
+            btnNextPuzzle.addEventListener('click', () => {
+                modalWin.classList.add('hidden');
+                startPuzzle(false);
+            });
+        }
+    </script>
+</body>
+</html>
