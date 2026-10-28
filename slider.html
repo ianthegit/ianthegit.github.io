@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Word-Art Slider Puzzle</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Canvas Confetti for victory effect -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Outfit:wght@400;600;700;800&display=swap');
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        .title-font {
+            font-family: 'Fredoka One', cursive;
+        }
+
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .glass-button {
+            background: rgba(51, 65, 85, 0.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: all 0.2s ease;
+        }
+
+        .glass-button:hover {
+            background: rgba(71, 85, 105, 0.9);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .glass-button:active {
+            transform: translateY(0);
+        }
+
+        .puzzle-board-container {
+            position: relative;
+            width: 100%;
+            max-width: 580px;
+            aspect-ratio: 1 / 1;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(99, 102, 241, 0.25);
+            border-radius: 1rem;
+            overflow: hidden;
+            background: #020617;
+        }
+
+        .puzzle-tile {
+            position: absolute;
+            box-sizing: border-box;
+            transition: transform 0.18s cubic-bezier(0.2, 0.8, 0.2, 1);
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.3), inset 0 -2px 4px rgba(0, 0, 0, 0.5);
+            border-radius: 6px;
+            overflow: hidden;
+            will-change: transform;
+        }
+
+        .puzzle-tile:hover {
+            z-index: 10;
+            filter: brightness(1.12);
+        }
+
+        #toast {
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between items-center p-3 md:p-6 overflow-x-hidden">
+
+    <!-- Top Header Bar -->
+    <header class="w-full max-w-2xl flex flex-col sm:flex-row justify-between items-center gap-3 mb-2">
+        <div class="text-center sm:text-left">
+            <h1 class="title-font text-3xl sm:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-400 tracking-wide">
+                WordArt Slider 🧩
+            </h1>
+            <p id="daily-date-label" class="text-xs sm:text-sm text-slate-400 font-medium">
+                Loading Daily Puzzle...
+            </p>
+        </div>
+
+        <!-- Dynamic Grid Size Selector -->
+        <div id="difficulty-badge" class="glass-panel px-3 py-1.5 rounded-full flex items-center gap-2 border-indigo-500/30 shadow-md">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            <label for="grid-size-select" class="text-xs font-bold uppercase tracking-wider text-indigo-300">Grid Size:</label>
+            <select id="grid-size-select" class="bg-slate-800 text-amber-300 font-bold text-xs sm:text-sm px-2 py-1 rounded-lg border border-indigo-400/40 focus:outline-none focus:ring-2 focus:ring-indigo-400 cursor-pointer">
+                <option value="5" selected>5 x 5 (Default)</option>
+                <option value="6">6 x 6 (Medium)</option>
+                <option value="7">7 x 7 (Challenging)</option>
+                <option value="8">8 x 8 (Hard)</option>
+                <option value="9">9 x 9 (Expert)</option>
+                <option value="10">10 x 10 (Master)</option>
+            </select>
+        </div>
+    </header>
+
+    <!-- Custom Image Options Toolbar -->
+    <div class="w-full max-w-2xl flex flex-wrap justify-center items-center gap-2 mb-3">
+        <button id="open-custom-img-btn" class="glass-button px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-semibold flex items-center gap-2 text-indigo-300 hover:text-white border-indigo-500/40">
+            <i class="fa-solid fa-image text-pink-400"></i>
+            <span>Custom Image / Share Link</span>
+        </button>
+        <button id="restore-default-img-btn" class="glass-button px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-semibold flex items-center gap-2 text-slate-300 hover:text-white hidden">
+            <i class="fa-solid fa-font text-amber-400"></i>
+            <span>Restore WordArt Puzzle</span>
+        </button>
+    </div>
+
+    <!-- Main Game Container -->
+    <main class="w-full max-w-2xl flex flex-col items-center gap-4 my-auto">
+        
+        <!-- Game Stats Dashboard -->
+        <div class="w-full max-w-lg glass-panel rounded-2xl p-3 sm:p-4 grid grid-cols-3 gap-2 text-center shadow-lg">
+            <div class="flex flex-col items-center justify-center">
+                <span class="text-xs text-slate-400 font-semibold uppercase tracking-wider">Time</span>
+                <span id="timer-display" class="title-font text-xl sm:text-2xl text-amber-400">00:00</span>
+            </div>
+            <div class="flex flex-col items-center justify-center border-x border-slate-700/50 px-2">
+                <span class="text-xs text-slate-400 font-semibold uppercase tracking-wider">Moves</span>
+                <span id="moves-display" class="title-font text-xl sm:text-2xl text-cyan-400">0</span>
+            </div>
+            <div class="flex flex-col items-center justify-center">
+                <span class="text-xs text-slate-400 font-semibold uppercase tracking-wider">Puzzle Mode</span>
+                <span id="puzzle-mode-label" class="text-xs text-slate-300 font-bold leading-tight mt-1 truncate max-w-[120px]">
+                    Daily WordArt
+                </span>
+            </div>
+        </div>
+
+        <!-- Puzzle Canvas Container -->
+        <div class="puzzle-board-container p-1 border-2 border-slate-700/50 bg-slate-950">
+            <div id="puzzle-board" class="w-full h-full relative"></div>
+
+            <!-- Target Image Preview Overlay -->
+            <div id="preview-overlay" class="absolute inset-0 z-30 opacity-0 pointer-events-none transition-opacity duration-300 bg-slate-950 flex flex-col items-center justify-center p-2">
+                <canvas id="preview-canvas" class="w-full h-full object-contain rounded-lg"></canvas>
+                <div class="absolute top-3 left-3 bg-slate-900/90 backdrop-blur-md px-3 py-1.5 rounded-lg border border-slate-700 text-xs text-indigo-300 font-semibold shadow">
+                    Target Image Preview
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="w-full max-w-lg flex flex-wrap justify-center items-center gap-2 sm:gap-3">
+            <button id="preview-btn" class="glass-button px-4 py-2.5 rounded-xl font-semibold text-sm flex items-center gap-2 text-slate-200">
+                <i class="fa-solid fa-eye text-indigo-400"></i>
+                <span>Hold Preview</span>
+            </button>
+            
+            <button id="reset-btn" class="glass-button px-4 py-2.5 rounded-xl font-semibold text-sm flex items-center gap-2 text-slate-200">
+                <i class="fa-solid fa-rotate-left text-amber-400"></i>
+                <span>Reset Board</span>
+            </button>
+
+            <button id="sound-btn" class="glass-button px-4 py-2.5 rounded-xl font-semibold text-sm flex items-center gap-2 text-slate-200">
+                <i id="sound-icon" class="fa-solid fa-volume-high text-emerald-400"></i>
+                <span id="sound-text">Audio On</span>
+            </button>
+        </div>
+    </main>
+
+    <!-- Custom Image Modal -->
+    <div id="custom-img-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="glass-panel max-w-md w-full rounded-3xl p-6 text-left flex flex-col border border-indigo-500/30 shadow-2xl relative">
+            <button id="close-custom-modal-btn" class="absolute top-4 right-4 text-slate-400 hover:text-white p-2 text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <h3 class="title-font text-2xl text-white mb-1 flex items-center gap-2">
+                <i class="fa-solid fa-wand-magic-sparkles text-pink-400"></i>
+                <span>Custom Image Puzzle</span>
+            </h3>
+            <p class="text-xs text-slate-400 mb-5">Upload a picture or enter an image URL to play or create a shareable puzzle link!</p>
+
+            <!-- Option 1: Local File Upload -->
+            <div class="mb-5 p-4 bg-slate-900/80 rounded-2xl border border-slate-800">
+                <label class="block text-xs font-bold uppercase tracking-wider text-indigo-300 mb-2">
+                    Option A: Local Image Upload
+                </label>
+                <input type="file" id="local-file-input" accept="image/*" class="block w-full text-xs text-slate-400 file:mr-3 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-semibold file:bg-indigo-600 file:text-white hover:file:bg-indigo-500 cursor-pointer">
+            </div>
+
+            <!-- Option 2: Image URL Input -->
+            <div class="mb-6 p-4 bg-slate-900/80 rounded-2xl border border-slate-800 flex flex-col gap-3">
+                <label for="url-image-input" class="block text-xs font-bold uppercase tracking-wider text-indigo-300">
+                    Option B: Image URL & Share Link
+                </label>
+                <input type="url" id="url-image-input" placeholder="https://example.com/image.jpg" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-400">
+                
+                <div class="flex gap-2">
+                    <button id="load-url-btn" class="flex-1 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-3 rounded-xl text-xs transition">
+                        Load Image
+                    </button>
+                    <button id="generate-link-btn" class="flex-1 bg-gradient-to-r from-pink-500 to-purple-600 hover:opacity-95 text-white font-semibold py-2 px-3 rounded-xl text-xs transition flex items-center justify-center gap-1.5">
+                        <i class="fa-solid fa-link"></i>
+                        <span>Copy Game Link</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-4 text-center text-xs text-slate-500">
+        <p>Daily Sync Seed • Same daily challenge across all devices worldwide</p>
+    </footer>
+
+    <!-- Toast Notification Popup -->
+    <div id="toast" class="fixed bottom-6 z-50 transform translate-y-20 opacity-0 bg-indigo-600 text-white px-5 py-2.5 rounded-full shadow-2xl font-semibold text-sm flex items-center gap-2 border border-indigo-400/30 pointer-events-none">
+        <i class="fa-solid fa-info-circle"></i>
+        <span id="toast-message">Notification</span>
+    </div>
+
+    <!-- Victory Modal Overlay -->
+    <div id="victory-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="glass-panel max-w-md w-full rounded-3xl p-6 sm:p-8 text-center flex flex-col items-center border border-indigo-500/30 shadow-2xl transform scale-95 transition-transform duration-300" id="victory-card">
+            <div class="w-16 h-16 bg-gradient-to-tr from-amber-400 to-pink-500 rounded-2xl flex items-center justify-center text-3xl shadow-lg mb-4 text-slate-900 font-bold">
+                🏆
+            </div>
+            <h2 class="title-font text-3xl text-white mb-1">Puzzle Completed!</h2>
+            <p class="text-sm text-slate-400 mb-6">You solved today's daily slider challenge!</p>
+
+            <div class="w-full bg-slate-900/70 rounded-2xl p-4 grid grid-cols-2 gap-4 mb-6 border border-slate-800">
+                <div>
+                    <span class="block text-xs text-slate-500 font-bold uppercase tracking-wider">Completion Time</span>
+                    <span id="win-time" class="title-font text-2xl text-amber-400">00:00</span>
+                </div>
+                <div>
+                    <span class="block text-xs text-slate-500 font-bold uppercase tracking-wider">Total Moves</span>
+                    <span id="win-moves" class="title-font text-2xl text-cyan-400">0</span>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-3 w-full">
+                <button id="share-btn" class="w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:opacity-95 text-white font-bold py-3.5 px-6 rounded-2xl shadow-lg transition flex items-center justify-center gap-2 text-base">
+                    <i class="fa-solid fa-share-nodes"></i>
+                    <span>Share Result</span>
+                </button>
+                <button id="close-modal-btn" class="w-full glass-button text-slate-300 font-semibold py-3 px-6 rounded-2xl text-sm">
+                    Inspect Board
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN SCRIPT -->
+    <script>
+        const NAMES = ["Alice", "Lucy", "Will", "Charlie", "Sam", "Ted"];
+        const COLOR_PALETTES = [
+            '#f43f5e', '#ec4899', '#d946ef', '#a855f7', 
+            '#8b5cf6', '#6366f1', '#3b82f6', '#0ea5e9', 
+            '#06b6d4', '#14b8a6', '#10b981', '#84cc16', 
+            '#eab308', '#f97316', '#ef4444'
+        ];
+
+        let gridSize = 5;
+        let totalTiles = 25;
+        let tileSizePx = 0;
+        let seedValue = 0;
+
+        let puzzleState = [];
+        let initialShuffleState = [];
+        let blankIndex = 0;
+
+        let moveCount = 0;
+        let timerSeconds = 0;
+        let timerInterval = null;
+        let gameStarted = false;
+        let gameCompleted = false;
+        let soundEnabled = true;
+
+        let customImageLoaded = false;
+        let customImageUrl = '';
+        let customImageObj = null;
+
+        let targetCanvas = document.createElement('canvas');
+        let targetCtx = targetCanvas.getContext('2d');
+        let audioCtx = null;
+
+        let rng = Math.random;
+
+        function getDailySeedString() {
+            const now = new Date();
+            const year = now.getUTCFullYear();
+            const month = String(now.getUTCMonth() + 1).padStart(2, '0');
+            const day = String(now.getUTCDate()).padStart(2, '0');
+            return `${year}-${month}-${day}`;
+        }
+
+        function hashString(str) {
+            let hash = 0;
+            for (let i = 0; i < str.length; i++) {
+                hash = Math.imul(31, hash) + str.charCodeAt(i) | 0;
+            }
+            return hash;
+        }
+
+        function createPRNG(seed) {
+            let s = seed >>> 0;
+            return function() {
+                let t = s += 0x6D2B79F5;
+                t = Math.imul(t ^ t >>> 15, t | 1);
+                t ^= t + Math.imul(t ^ t >>> 7, t | 61);
+                return ((t ^ t >>> 14) >>> 0) / 4294967296;
+            };
+        }
+
+        function initAudio() {
+            if (!audioCtx) {
+                const AudioContext = window.AudioContext || window.webkitAudioContext;
+                if (AudioContext) {
+                    audioCtx = new AudioContext();
+                }
+            }
+            if (audioCtx && audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+        }
+
+        function playTileSound() {
+            if (!soundEnabled) return;
+            initAudio();
+            if (!audioCtx) return;
+
+            try {
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(320, audioCtx.currentTime);
+                osc.frequency.exponentialRampToValueAtTime(140, audioCtx.currentTime + 0.06);
+
+                gain.gain.setValueAtTime(0.15, audioCtx.currentTime);
+                gain.gain.linearRampToValueAtTime(0.01, audioCtx.currentTime + 0.06);
+
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+
+                osc.start();
+                osc.stop(audioCtx.currentTime + 0.06);
+            } catch (e) {}
+        }
+
+        function playWinFanfare() {
+            if (!soundEnabled) return;
+            initAudio();
+            if (!audioCtx) return;
+
+            const notes = [261.63, 329.63, 392.00, 523.25, 659.25, 783.99];
+            notes.forEach((freq, idx) => {
+                setTimeout(() => {
+                    try {
+                        const osc = audioCtx.createOscillator();
+                        const gain = audioCtx.createGain();
+                        osc.type = 'triangle';
+                        osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+
+                        gain.gain.setValueAtTime(0.2, audioCtx.currentTime);
+                        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.4);
+
+                        osc.connect(gain);
+                        gain.connect(audioCtx.destination);
+
+                        osc.start();
+                        osc.stop(audioCtx.currentTime + 0.4);
+                    } catch (e) {}
+                }, idx * 100);
+            });
+        }
+
+        function drawCustomImageToCanvas(img) {
+            const size = 1000;
+            targetCanvas.width = size;
+            targetCanvas.height = size;
+            const ctx = targetCtx;
+
+            ctx.fillStyle = '#020617';
+            ctx.fillRect(0, 0, size, size);
+
+            // Aspect Ratio Preserving Cover Crop
+            const imgRatio = img.width / img.height;
+            let drawW = size;
+            let drawH = size;
+            let offsetX = 0;
+            let offsetY = 0;
+
+            if (imgRatio > 1) {
+                drawW = size * imgRatio;
+                offsetX = -(drawW - size) / 2;
+            } else {
+                drawH = size / imgRatio;
+                offsetY = -(drawH - size) / 2;
+            }
+
+            ctx.drawImage(img, offsetX, offsetY, drawW, drawH);
+
+            // Sync with preview canvas
+            const previewCanvas = document.getElementById('preview-canvas');
+            previewCanvas.width = size;
+            previewCanvas.height = size;
+            const pCtx = previewCanvas.getContext('2d');
+            pCtx.drawImage(targetCanvas, 0, 0);
+        }
+
+        function generateArtwork() {
+            if (customImageLoaded && customImageObj) {
+                drawCustomImageToCanvas(customImageObj);
+                return;
+            }
+
+            const size = 1000;
+            targetCanvas.width = size;
+            targetCanvas.height = size;
+            const ctx = targetCtx;
+
+            // Base Background Gradient
+            const bgGrad = ctx.createLinearGradient(0, 0, size, size);
+            const hue1 = Math.floor(rng() * 360);
+            const hue2 = (hue1 + 120 + Math.floor(rng() * 120)) % 360;
+            bgGrad.addColorStop(0, `hsl(${hue1}, 65%, 12%)`);
+            bgGrad.addColorStop(0.5, `hsl(${(hue1 + 60) % 360}, 75%, 18%)`);
+            bgGrad.addColorStop(1, `hsl(${hue2}, 70%, 10%)`);
+            ctx.fillStyle = bgGrad;
+            ctx.fillRect(0, 0, size, size);
+
+            // Procedural Background Patterns
+            const numShapes = 45 + Math.floor(rng() * 25);
+            for (let i = 0; i < numShapes; i++) {
+                ctx.save();
+                ctx.translate(rng() * size, rng() * size);
+                ctx.rotate(rng() * Math.PI * 2);
+
+                const shapeType = Math.floor(rng() * 4);
+                const color = COLOR_PALETTES[Math.floor(rng() * COLOR_PALETTES.length)];
+                ctx.fillStyle = color;
+                ctx.strokeStyle = color;
+                ctx.globalAlpha = 0.12 + rng() * 0.18;
+
+                if (shapeType === 0) {
+                    const r = 30 + rng() * 120;
+                    ctx.beginPath();
+                    ctx.arc(0, 0, r, 0, Math.PI * 2);
+                    if (rng() > 0.5) ctx.fill(); else { ctx.lineWidth = 4 + rng() * 12; ctx.stroke(); }
+                } else if (shapeType === 1) {
+                    const r = 25 + rng() * 110;
+                    ctx.fillRect(-r/2, -r/2, r, r);
+                } else if (shapeType === 2) {
+                    ctx.lineWidth = 3 + rng() * 10;
+                    ctx.beginPath();
+                    ctx.moveTo(-180, 0);
+                    ctx.lineTo(180, 0);
+                    ctx.stroke();
+                } else {
+                    ctx.lineWidth = 3 + rng() * 8;
+                    ctx.beginPath();
+                    ctx.arc(0, 0, 40 + rng() * 90, 0, Math.PI * (0.5 + rng()));
+                    ctx.stroke();
+                }
+                ctx.restore();
+            }
+
+            // Grid line overlay
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.05)';
+            ctx.lineWidth = 2;
+            const step = size / gridSize;
+            for (let i = 0; i <= size; i += step / 2) {
+                ctx.beginPath();
+                ctx.moveTo(i, 0); ctx.lineTo(i, size);
+                ctx.moveTo(0, i); ctx.lineTo(size, i);
+                ctx.stroke();
+            }
+
+            // DOMINANT BIG NAMES Artwork
+            const fontFamilies = ['Fredoka One', 'Outfit', 'Impact', 'Arial Black', 'Trebuchet MS'];
+            const shuffledNames = [...NAMES].sort(() => rng() - 0.5);
+
+            const gridPositions = [
+                { x: size * 0.3, y: size * 0.22 },
+                { x: size * 0.72, y: size * 0.28 },
+                { x: size * 0.5, y: size * 0.5 },
+                { x: size * 0.25, y: size * 0.75 },
+                { x: size * 0.78, y: size * 0.78 },
+                { x: size * 0.5, y: size * 0.85 }
+            ];
+
+            shuffledNames.forEach((name, idx) => {
+                ctx.save();
+                
+                const basePos = gridPositions[idx % gridPositions.length];
+                const cx = Math.max(size * 0.15, Math.min(size * 0.85, basePos.x + (rng() - 0.5) * (size * 0.2)));
+                const cy = Math.max(size * 0.15, Math.min(size * 0.85, basePos.y + (rng() - 0.5) * (size * 0.2)));
+                ctx.translate(cx, cy);
+
+                const angleChoices = [0, Math.PI / 2, Math.PI, -Math.PI / 2, Math.PI / 4, -Math.PI / 4, Math.PI / 6, -Math.PI / 3];
+                const angle = angleChoices[Math.floor(rng() * angleChoices.length)];
+                ctx.rotate(angle);
+
+                const fontSize = Math.floor(130 + rng() * 110);
+                const font = fontFamilies[Math.floor(rng() * fontFamilies.length)];
+                ctx.font = `900 ${fontSize}px '${font}', sans-serif`;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+
+                const mainColor = COLOR_PALETTES[Math.floor(rng() * COLOR_PALETTES.length)];
+                const glowColor = COLOR_PALETTES[Math.floor(rng() * COLOR_PALETTES.length)];
+
+                ctx.shadowColor = glowColor;
+                ctx.shadowBlur = 35;
+                ctx.lineWidth = 18;
+                ctx.strokeStyle = '#020617';
+                ctx.strokeText(name, 0, 0);
+
+                ctx.shadowBlur = 15;
+                ctx.fillStyle = mainColor;
+                ctx.fillText(name, 0, 0);
+
+                ctx.shadowBlur = 0;
+                ctx.lineWidth = 4;
+                ctx.strokeStyle = '#ffffff';
+                ctx.strokeText(name, 0, 0);
+
+                ctx.restore();
+            });
+
+            // Sync with preview canvas
+            const previewCanvas = document.getElementById('preview-canvas');
+            previewCanvas.width = size;
+            previewCanvas.height = size;
+            const pCtx = previewCanvas.getContext('2d');
+            pCtx.drawImage(targetCanvas, 0, 0);
+        }
+
+        function isSolvable(arr, size) {
+            let inversions = 0;
+            const total = size * size;
+            const blankValue = total - 1;
+
+            for (let i = 0; i < total; i++) {
+                if (arr[i] === blankValue) continue;
+                for (let j = i + 1; j < total; j++) {
+                    if (arr[j] === blankValue) continue;
+                    if (arr[i] > arr[j]) {
+                        inversions++;
+                    }
+                }
+            }
+
+            if (size % 2 !== 0) {
+                return inversions % 2 === 0;
+            } else {
+                const bIdx = arr.indexOf(blankValue);
+                const blankRowFromBottom = size - Math.floor(bIdx / size);
+                return (blankRowFromBottom + inversions) % 2 === 0;
+            }
+        }
+
+        function generateSolvableShuffle() {
+            const total = totalTiles;
+            let arr = Array.from({ length: total }, (_, i) => i);
+
+            do {
+                for (let i = total - 1; i > 0; i--) {
+                    const j = Math.floor(rng() * (i + 1));
+                    [arr[i], arr[j]] = [arr[j], arr[i]];
+                }
+            } while (!isSolvable(arr, gridSize) || isAlreadySolved(arr));
+
+            return arr;
+        }
+
+        function isAlreadySolved(arr) {
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] !== i) return false;
+            }
+            return true;
+        }
+
+        function createBoardDOM() {
+            const boardContainer = document.getElementById('puzzle-board');
+            boardContainer.innerHTML = '';
+
+            let boardWidth = boardContainer.clientWidth;
+            if (!boardWidth || boardWidth === 0) {
+                const containerParent = boardContainer.parentElement;
+                boardWidth = containerParent.clientWidth || 400;
+            }
+            tileSizePx = boardWidth / gridSize;
+
+            for (let tileValue = 0; tileValue < totalTiles; tileValue++) {
+                if (tileValue === totalTiles - 1) continue;
+
+                const tileEl = document.createElement('div');
+                tileEl.className = 'puzzle-tile';
+                tileEl.id = `tile-${tileValue}`;
+
+                const targetRow = Math.floor(tileValue / gridSize);
+                const targetCol = tileValue % gridSize;
+
+                const canvasTileSize = targetCanvas.width / gridSize;
+                const srcX = targetCol * canvasTileSize;
+                const srcY = targetRow * canvasTileSize;
+
+                const tileCanvas = document.createElement('canvas');
+                tileCanvas.width = canvasTileSize;
+                tileCanvas.height = canvasTileSize;
+                tileCanvas.className = 'w-full h-full object-cover block pointer-events-none';
+                const tCtx = tileCanvas.getContext('2d');
+
+                tCtx.drawImage(
+                    targetCanvas,
+                    srcX, srcY, canvasTileSize, canvasTileSize,
+                    0, 0, canvasTileSize, canvasTileSize
+                );
+
+                tileEl.appendChild(tileCanvas);
+
+                tileEl.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    handleTileClick(tileValue);
+                });
+
+                boardContainer.appendChild(tileEl);
+            }
+
+            setupTouchAndDragSupport(boardContainer);
+            updateTilePositionsDOM(false);
+        }
+
+        function updateTilePositionsDOM(animate = true) {
+            const boardContainer = document.getElementById('puzzle-board');
+            let boardWidth = boardContainer.clientWidth;
+            if (!boardWidth || boardWidth === 0) {
+                boardWidth = boardContainer.parentElement.clientWidth || 400;
+            }
+            tileSizePx = boardWidth / gridSize;
+
+            for (let currentPos = 0; currentPos < totalTiles; currentPos++) {
+                const tileValue = puzzleState[currentPos];
+                if (tileValue === totalTiles - 1) {
+                    blankIndex = currentPos;
+                    continue;
+                }
+
+                const tileEl = document.getElementById(`tile-${tileValue}`);
+                if (!tileEl) continue;
+
+                const row = Math.floor(currentPos / gridSize);
+                const col = currentPos % gridSize;
+
+                const left = col * tileSizePx;
+                const top = row * tileSizePx;
+
+                tileEl.style.width = `${tileSizePx}px`;
+                tileEl.style.height = `${tileSizePx}px`;
+                
+                if (!animate) {
+                    tileEl.style.transition = 'none';
+                } else {
+                    tileEl.style.transition = 'transform 0.18s cubic-bezier(0.2, 0.8, 0.2, 1)';
+                }
+
+                tileEl.style.transform = `translate3d(${left}px, ${top}px, 0px)`;
+            }
+        }
+
+        function handleTileClick(tileValue) {
+            if (gameCompleted) return;
+
+            const currentPos = puzzleState.indexOf(tileValue);
+            if (currentPos === -1) return;
+
+            const tileRow = Math.floor(currentPos / gridSize);
+            const tileCol = currentPos % gridSize;
+            const blankRow = Math.floor(blankIndex / gridSize);
+            const blankCol = blankIndex % gridSize;
+
+            if (tileRow !== blankRow && tileCol !== blankCol) return;
+
+            const tilesToMove = [];
+
+            if (tileRow === blankRow) {
+                const step = tileCol < blankCol ? 1 : -1;
+                for (let c = blankCol - step; c !== tileCol - step; c -= step) {
+                    const idx = tileRow * gridSize + c;
+                    tilesToMove.push(idx);
+                }
+            } else if (tileCol === blankCol) {
+                const step = tileRow < blankRow ? 1 : -1;
+                for (let r = blankRow - step; r !== tileRow - step; r -= step) {
+                    const idx = r * gridSize + tileCol;
+                    tilesToMove.push(idx);
+                }
+            }
+
+            if (tilesToMove.length === 0) return;
+
+            if (!gameStarted) {
+                startTimer();
+                gameStarted = true;
+            }
+
+            let currentBlank = blankIndex;
+            tilesToMove.forEach((posToMove) => {
+                puzzleState[currentBlank] = puzzleState[posToMove];
+                currentBlank = posToMove;
+            });
+            puzzleState[currentBlank] = totalTiles - 1;
+            blankIndex = currentBlank;
+
+            moveCount++;
+            document.getElementById('moves-display').textContent = moveCount;
+
+            playTileSound();
+            updateTilePositionsDOM(true);
+
+            checkWinCondition();
+        }
+
+        function setupTouchAndDragSupport(container) {
+            let startX = 0;
+            let startY = 0;
+
+            container.ontouchstart = (e) => {
+                if (e.touches.length === 1) {
+                    startX = e.touches[0].clientX;
+                    startY = e.touches[0].clientY;
+                }
+            };
+
+            container.ontouchend = (e) => {
+                if (e.changedTouches.length === 1) {
+                    const endX = e.changedTouches[0].clientX;
+                    const endY = e.changedTouches[0].clientY;
+                    const diffX = endX - startX;
+                    const diffY = endY - startY;
+
+                    if (Math.max(Math.abs(diffX), Math.abs(diffY)) < 25) return;
+
+                    const blankRow = Math.floor(blankIndex / gridSize);
+                    const blankCol = blankIndex % gridSize;
+                    let targetPos = -1;
+
+                    if (Math.abs(diffX) > Math.abs(diffY)) {
+                        if (diffX > 0 && blankCol > 0) targetPos = blankRow * gridSize + (blankCol - 1);
+                        else if (diffX < 0 && blankCol < gridSize - 1) targetPos = blankRow * gridSize + (blankCol + 1);
+                    } else {
+                        if (diffY > 0 && blankRow > 0) targetPos = (blankRow - 1) * gridSize + blankCol;
+                        else if (diffY < 0 && blankRow < gridSize - 1) targetPos = (blankRow + 1) * gridSize + blankCol;
+                    }
+
+                    if (targetPos !== -1) {
+                        const tileVal = puzzleState[targetPos];
+                        if (tileVal !== totalTiles - 1) {
+                            handleTileClick(tileVal);
+                        }
+                    }
+                }
+            };
+        }
+
+        function resetToInitialState() {
+            puzzleState = [...initialShuffleState];
+            blankIndex = puzzleState.indexOf(totalTiles - 1);
+            moveCount = 0;
+            timerSeconds = 0;
+            gameStarted = false;
+            gameCompleted = false;
+
+            stopTimer();
+            document.getElementById('timer-display').textContent = '00:00';
+            document.getElementById('moves-display').textContent = '0';
+
+            const modal = document.getElementById('victory-modal');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+
+            createBoardDOM();
+        }
+
+        function checkWinCondition() {
+            for (let i = 0; i < totalTiles; i++) {
+                if (puzzleState[i] !== i) return false;
+            }
+
+            gameCompleted = true;
+            stopTimer();
+            playWinFanfare();
+
+            if (typeof confetti === 'function') {
+                confetti({
+                    particleCount: 120,
+                    spread: 80,
+                    origin: { y: 0.6 }
+                });
+            }
+
+            setTimeout(() => {
+                document.getElementById('win-time').textContent = formatTime(timerSeconds);
+                document.getElementById('win-moves').textContent = moveCount;
+
+                const modal = document.getElementById('victory-modal');
+                const card = document.getElementById('victory-card');
+                modal.classList.remove('opacity-0', 'pointer-events-none');
+                card.classList.remove('scale-95');
+                card.classList.add('scale-100');
+            }, 300);
+
+            return true;
+        }
+
+        function startTimer() {
+            stopTimer();
+            timerInterval = setInterval(() => {
+                timerSeconds++;
+                document.getElementById('timer-display').textContent = formatTime(timerSeconds);
+            }, 1000);
+        }
+
+        function stopTimer() {
+            if (timerInterval) {
+                clearInterval(timerInterval);
+                timerInterval = null;
+            }
+        }
+
+        function formatTime(sec) {
+            const mins = Math.floor(sec / 60);
+            const secs = sec % 60;
+            return `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-message').textContent = msg;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 2600);
+        }
+
+        function parseUrlParams() {
+            const params = new URLSearchParams(window.location.search);
+            const urlImg = params.get('img');
+            const urlGrid = params.get('grid');
+
+            if (urlGrid && !isNaN(parseInt(urlGrid, 10))) {
+                gridSize = Math.max(5, Math.min(10, parseInt(urlGrid, 10)));
+                document.getElementById('grid-size-select').value = String(gridSize);
+            }
+
+            if (urlImg) {
+                loadCustomImageFromUrl(urlImg, false);
+            }
+        }
+
+        function loadCustomImageFromUrl(url, showNotice = true) {
+            const img = new Image();
+            img.crossOrigin = 'anonymous';
+            img.onload = () => {
+                customImageObj = img;
+                customImageLoaded = true;
+                customImageUrl = url;
+
+                document.getElementById('puzzle-mode-label').textContent = 'Custom URL Image';
+                document.getElementById('restore-default-img-btn').classList.remove('hidden');
+
+                if (showNotice) showToast('Custom Image Loaded!');
+                initGame();
+            };
+
+            img.onerror = () => {
+                showToast('Failed to load image URL (CORS or broken link).');
+            };
+
+            img.src = url;
+        }
+
+        function initGame() {
+            const dateStr = getDailySeedString();
+            const selectEl = document.getElementById('grid-size-select');
+            gridSize = parseInt(selectEl.value, 10) || 5;
+            totalTiles = gridSize * gridSize;
+
+            const formattedDate = new Date().toLocaleDateString('en-US', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric'
+            });
+            document.getElementById('daily-date-label').textContent = `${formattedDate} • UTC Sync`;
+
+            seedValue = hashString(dateStr + (customImageLoaded ? customImageUrl : 'default'));
+            rng = createPRNG(seedValue);
+
+            document.fonts.ready.then(() => {
+                generateArtwork();
+                initialShuffleState = generateSolvableShuffle();
+                resetToInitialState();
+            }).catch(() => {
+                generateArtwork();
+                initialShuffleState = generateSolvableShuffle();
+                resetToInitialState();
+            });
+
+            if (!window.hasResizeHandler) {
+                window.addEventListener('resize', () => updateTilePositionsDOM(false));
+                window.hasResizeHandler = true;
+            }
+        }
+
+        // Custom Image Modal Handling
+        const customModal = document.getElementById('custom-img-modal');
+        document.getElementById('open-custom-img-btn').addEventListener('click', () => {
+            customModal.classList.remove('opacity-0', 'pointer-events-none');
+        });
+
+        document.getElementById('close-custom-modal-btn').addEventListener('click', () => {
+            customModal.classList.add('opacity-0', 'pointer-events-none');
+        });
+
+        // Option A: File Upload
+        document.getElementById('local-file-input').addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = (event) => {
+                const img = new Image();
+                img.onload = () => {
+                    customImageObj = img;
+                    customImageLoaded = true;
+                    customImageUrl = '';
+
+                    document.getElementById('puzzle-mode-label').textContent = 'Uploaded Local Image';
+                    document.getElementById('restore-default-img-btn').classList.remove('hidden');
+                    customModal.classList.add('opacity-0', 'pointer-events-none');
+
+                    showToast('Local image applied!');
+                    initGame();
+                };
+                img.src = event.target.result;
+            };
+            reader.readAsDataURL(file);
+        });
+
+        // Option B: Load URL Button
+        document.getElementById('load-url-btn').addEventListener('click', () => {
+            const urlInput = document.getElementById('url-image-input').value.trim();
+            if (!urlInput) {
+                showToast('Please enter a valid image URL');
+                return;
+            }
+            loadCustomImageFromUrl(urlInput);
+            customModal.classList.add('opacity-0', 'pointer-events-none');
+        });
+
+        // Option B: Generate & Copy Share Link
+        document.getElementById('generate-link-btn').addEventListener('click', () => {
+            const urlInput = document.getElementById('url-image-input').value.trim();
+            if (!urlInput) {
+                showToast('Please enter an image URL first');
+                return;
+            }
+
+            const currentBase = window.location.origin + window.location.pathname;
+            const shareableUrl = `${currentBase}?img=${encodeURIComponent(urlInput)}&grid=${gridSize}`;
+
+            fallbackCopy(shareableUrl);
+            showToast('Game Link copied to clipboard!');
+        });
+
+        // Restore Default WordArt
+        document.getElementById('restore-default-img-btn').addEventListener('click', () => {
+            customImageLoaded = false;
+            customImageUrl = '';
+            customImageObj = null;
+
+            document.getElementById('puzzle-mode-label').textContent = 'Daily WordArt';
+            document.getElementById('restore-default-img-btn').classList.add('hidden');
+
+            showToast('Restored default WordArt puzzle');
+            initGame();
+        });
+
+        // Grid Size Selector
+        const gridSizeSelect = document.getElementById('grid-size-select');
+        gridSizeSelect.addEventListener('change', (e) => {
+            gridSize = parseInt(e.target.value, 10);
+            totalTiles = gridSize * gridSize;
+            initGame();
+            showToast(`Grid changed to ${gridSize}x${gridSize}`);
+        });
+
+        document.getElementById('reset-btn').addEventListener('click', () => {
+            resetToInitialState();
+            showToast('Reset board!');
+        });
+
+        // Hold / Preview Target Overlay
+        const previewBtn = document.getElementById('preview-btn');
+        const previewOverlay = document.getElementById('preview-overlay');
+
+        const showPreview = () => previewOverlay.classList.remove('opacity-0', 'pointer-events-none');
+        const hidePreview = () => previewOverlay.classList.add('opacity-0', 'pointer-events-none');
+
+        previewBtn.addEventListener('mousedown', showPreview);
+        previewBtn.addEventListener('mouseup', hidePreview);
+        previewBtn.addEventListener('mouseleave', hidePreview);
+        previewBtn.addEventListener('touchstart', (e) => { e.preventDefault(); showPreview(); });
+        previewBtn.addEventListener('touchend', (e) => { e.preventDefault(); hidePreview(); });
+
+        // Sound Toggle
+        document.getElementById('sound-btn').addEventListener('click', () => {
+            soundEnabled = !soundEnabled;
+            const soundIcon = document.getElementById('sound-icon');
+            const soundText = document.getElementById('sound-text');
+            if (soundEnabled) {
+                soundIcon.className = 'fa-solid fa-volume-high text-emerald-400';
+                soundText.textContent = 'Audio On';
+                showToast('Sound Effects Enabled');
+            } else {
+                soundIcon.className = 'fa-solid fa-volume-xmark text-slate-400';
+                soundText.textContent = 'Muted';
+                showToast('Sound Muted');
+            }
+        });
+
+        // Close Victory Overlay
+        document.getElementById('close-modal-btn').addEventListener('click', () => {
+            const modal = document.getElementById('victory-modal');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+        });
+
+        // Share Results Button
+        document.getElementById('share-btn').addEventListener('click', () => {
+            const dateStr = getDailySeedString();
+            const gridLabel = `${gridSize}x${gridSize}`;
+            const timeStr = formatTime(timerSeconds);
+            const mode = customImageLoaded ? 'Custom Image' : 'Daily WordArt';
+
+            let shareText = `Slider Puzzle 🧩 (${mode})\nGrid: ${gridLabel}\nTime: ${timeStr} | Moves: ${moveCount}`;
+            if (customImageUrl) {
+                shareText += `\nPlay this custom puzzle: ${window.location.origin}${window.location.pathname}?img=${encodeURIComponent(customImageUrl)}&grid=${gridSize}`;
+            }
+
+            fallbackCopy(shareText);
+        });
+
+        function fallbackCopy(text) {
+            const textArea = document.createElement('textarea');
+            textArea.value = text;
+            textArea.style.position = 'fixed';
+            textArea.style.left = '-9999px';
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                showToast('Copied to clipboard!');
+            } catch (err) {
+                showToast('Failed to copy.');
+            }
+            document.body.removeChild(textArea);
+        }
+
+        window.onload = function() {
+            parseUrlParams();
+            initGame();
+        };
+    </script>
+</body>
+</html>
