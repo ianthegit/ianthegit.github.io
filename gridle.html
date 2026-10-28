@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Gridle: Overhanging Frame Edition</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                        }
+                    },
+                    animation: {
+                        'pop': 'pop 0.22s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+                        'pulse-glow': 'pulseGlow 2s infinite',
+                        'shimmer': 'shimmer 2.5s infinite linear'
+                    },
+                    keyframes: {
+                        pop: {
+                            '0%': { transform: 'scale(0.82)', opacity: '0' },
+                            '100%': { transform: 'scale(1)', opacity: '1' }
+                        },
+                        pulseGlow: {
+                            '0%, 100%': { boxShadow: '0 0 12px rgba(234, 179, 8, 0.5), inset 0 0 8px rgba(250, 204, 21, 0.4)' },
+                            '50%': { boxShadow: '0 0 24px rgba(234, 179, 8, 0.95), inset 0 0 14px rgba(250, 204, 21, 0.7)' }
+                        },
+                        shimmer: {
+                            '0%': { backgroundPosition: '-200% 0' },
+                            '100%': { backgroundPosition: '200% 0' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Canvas Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <style>
+        body {
+            touch-action: manipulation;
+            user-select: none;
+            -webkit-user-select: none;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .tile {
+            transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.2s ease, border-color 0.2s ease;
+            cursor: grab;
+            touch-action: none;
+        }
+
+        .tile:active, .tile.dragging {
+            cursor: grabbing;
+            transform: scale(1.12);
+            z-index: 50;
+            box-shadow: 0 12px 28px -5px rgba(0, 0, 0, 0.35);
+        }
+
+        .slot {
+            transition: all 0.2s ease;
+        }
+
+        .slot.drag-over {
+            border-color: #3b82f6 !important;
+            background-color: rgba(59, 130, 246, 0.25) !important;
+            transform: scale(1.06);
+        }
+
+        /* Valid word glowing ribbons */
+        .valid-word-tile-gold {
+            background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%) !important;
+            border-color: #facc15 !important;
+            color: #ffffff !important;
+            box-shadow: 0 0 16px rgba(234, 179, 8, 0.8), inset 0 1px 2px rgba(255, 255, 255, 0.5);
+            animation: shimmer 3s infinite linear;
+            background-size: 200% 100% !important;
+        }
+
+        .modal-backdrop {
+            background-color: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(6px);
+        }
+
+        .board-scroll::-webkit-scrollbar {
+            height: 6px;
+            width: 6px;
+        }
+        .board-scroll::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 9999px;
+        }
+        .dark .board-scroll::-webkit-scrollbar-thumb {
+            background: #475569;
+        }
+    </style>
+</head>
+<body class="bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-slate-100 min-h-screen flex flex-col transition-colors duration-300">
+
+    <!-- Top Navigation Bar -->
+    <header class="w-full max-w-2xl mx-auto px-4 py-3 flex items-center justify-between border-b border-slate-200 dark:border-slate-800">
+        <div class="flex items-center space-x-1.5">
+            <button id="btn-help" class="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition" title="How to Play">
+                <i class="fa-solid fa-circle-question text-xl"></i>
+            </button>
+            <button id="btn-stats" class="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition" title="Statistics">
+                <i class="fa-solid fa-chart-simple text-xl"></i>
+            </button>
+        </div>
+
+        <div class="text-center">
+            <h1 class="text-2xl sm:text-3xl font-extrabold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-emerald-400 to-amber-300 dark:from-cyan-300 dark:via-emerald-300 dark:to-amber-200">
+                GRIDLE
+            </h1>
+            <div class="flex items-center justify-center space-x-1">
+                <span id="mode-badge" class="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-cyan-500 dark:text-cyan-400">Overhanging Frame Edition</span>
+            </div>
+        </div>
+
+        <div class="flex items-center space-x-1.5">
+            <button id="btn-sound" class="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition" title="Toggle Sound">
+                <i id="icon-sound" class="fa-solid fa-volume-high text-xl"></i>
+            </button>
+            <button id="btn-theme" class="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition" title="Toggle Theme">
+                <i id="icon-theme" class="fa-solid fa-sun text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Game Workspace -->
+    <main class="flex-1 max-w-xl w-full mx-auto px-3 py-3 flex flex-col items-center justify-between">
+        
+        <!-- Game Status & Timer Header -->
+        <div class="w-full flex items-center justify-between bg-white dark:bg-slate-800 px-3.5 py-2 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 text-xs sm:text-sm mb-2">
+            <div class="flex items-center space-x-1.5 text-slate-600 dark:text-slate-300">
+                <i class="fa-regular fa-clock text-slate-400"></i>
+                <span id="timer-display" class="font-mono font-bold">00:00</span>
+            </div>
+
+            <div class="flex items-center space-x-1 text-slate-600 dark:text-slate-300">
+                <span class="text-slate-400">Moves:</span>
+                <span id="moves-display" class="font-bold text-slate-800 dark:text-slate-100">0</span>
+            </div>
+
+            <button id="btn-mode-toggle" class="text-xs font-bold px-2.5 py-1 rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-500/20 transition">
+                Practice Mode
+            </button>
+        </div>
+
+        <!-- Daily Theme Hint Banner -->
+        <div id="theme-banner" class="w-full mb-2 bg-gradient-to-r from-amber-500/10 via-emerald-500/10 to-teal-500/10 dark:from-amber-500/20 dark:via-emerald-500/20 dark:to-teal-500/20 py-2 px-3.5 rounded-xl border border-amber-500/30 text-center flex items-center justify-center space-x-2">
+            <i class="fa-solid fa-lightbulb text-amber-500 text-sm"></i>
+            <span class="text-xs font-semibold text-slate-700 dark:text-slate-200">Theme: <strong id="theme-title" class="text-amber-600 dark:text-amber-400">General Vocabulary</strong></span>
+        </div>
+
+        <!-- Practice Mode Word Length Filter Selectors (ONLY SHOWN IN PRACTICE MODE) -->
+        <div id="practice-length-selectors" class="w-full mb-2 hidden flex-col items-center gap-1.5 bg-slate-200/60 dark:bg-slate-800/60 p-2 rounded-xl border border-slate-300/50 dark:border-slate-700/50">
+            <span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Practice Grid Dimensions</span>
+            <div class="flex flex-wrap justify-center gap-1.5">
+                <button data-size="all" class="btn-size-filter text-[11px] font-bold px-2.5 py-1 rounded-lg bg-emerald-600 text-white shadow-sm transition">All Sizes</button>
+                <button data-size="5" class="btn-size-filter text-[11px] font-bold px-2.5 py-1 rounded-lg bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-600 transition">5x5 Frame</button>
+                <button data-size="6" class="btn-size-filter text-[11px] font-bold px-2.5 py-1 rounded-lg bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-600 transition">6x6 Frame</button>
+                <button data-size="7" class="btn-size-filter text-[11px] font-bold px-2.5 py-1 rounded-lg bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-600 transition">7x7 Frame</button>
+            </div>
+        </div>
+
+        <!-- Clue/Word Badges Bar -->
+        <div id="words-clue-bar" class="w-full mb-2 flex flex-wrap justify-center gap-1.5">
+            <!-- Dynamic word status badges inserted here -->
+        </div>
+
+        <!-- Visual Legend Bar -->
+        <div class="w-full mb-2 flex items-center justify-center gap-3 text-[11px] font-semibold text-slate-500 dark:text-slate-400 bg-slate-200/50 dark:bg-slate-800/50 py-1 px-3 rounded-lg border border-slate-200 dark:border-slate-700/60">
+            <div class="flex items-center space-x-1">
+                <span class="w-3 h-3 rounded bg-cyan-600 border border-cyan-700 shadow-sm inline-block"></span>
+                <span>4 Corner Anchors</span>
+            </div>
+            <div class="flex items-center space-x-1">
+                <span class="w-3 h-3 rounded bg-amber-400 border border-amber-300 shadow-sm inline-block"></span>
+                <span class="text-amber-600 dark:text-amber-400 font-bold">Valid Word</span>
+            </div>
+            <div class="flex items-center space-x-1">
+                <span class="w-3 h-3 rounded bg-indigo-100 dark:bg-indigo-900/60 border border-indigo-300 inline-block"></span>
+                <span>Vowel Tint</span>
+            </div>
+        </div>
+
+        <!-- Interactive Board Grid Viewport -->
+        <div class="w-full board-scroll overflow-x-auto flex items-center justify-center py-1 mb-2">
+            <div id="board-viewport" class="relative bg-slate-200/90 dark:bg-slate-800/90 p-3 sm:p-4 rounded-2xl shadow-inner border-2 border-slate-300 dark:border-slate-700 transition-all duration-300 min-w-[280px]">
+                <div id="grid-container" class="grid gap-1.5 relative"></div>
+            </div>
+        </div>
+
+        <!-- Toolbar Buttons -->
+        <div class="w-full flex items-center justify-between gap-2 mb-2 max-w-[440px]">
+            <button id="btn-check" class="flex-1 py-2 px-2 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 rounded-xl font-bold text-xs flex items-center justify-center space-x-1 hover:bg-emerald-500/20 active:scale-95 transition">
+                <i class="fa-solid fa-spell-check"></i>
+                <span>Check Words</span>
+            </button>
+            <button id="btn-hint" class="flex-1 py-2 px-2 bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/30 rounded-xl font-bold text-xs flex items-center justify-center space-x-1 hover:bg-amber-500/20 active:scale-95 transition">
+                <i class="fa-solid fa-lightbulb"></i>
+                <span>Hint (<span id="hint-count">3</span>)</span>
+            </button>
+            <button id="btn-undo" class="flex-1 py-2 px-2 bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-xl font-bold text-xs flex items-center justify-center space-x-1 hover:bg-slate-300 dark:hover:bg-slate-600 active:scale-95 transition disabled:opacity-40 disabled:cursor-not-allowed">
+                <i class="fa-solid fa-rotate-left"></i>
+                <span>Undo</span>
+            </button>
+            <button id="btn-shuffle" class="flex-1 py-2 px-2 bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-xl font-bold text-xs flex items-center justify-center space-x-1 hover:bg-slate-300 dark:hover:bg-slate-600 active:scale-95 transition">
+                <i class="fa-solid fa-shuffle"></i>
+                <span>Shuffle</span>
+            </button>
+        </div>
+
+        <!-- Unplaced Jumbled Letter Tray -->
+        <div id="pool-drop-zone" class="w-full bg-white dark:bg-slate-800 p-3 rounded-2xl shadow-md border-2 border-slate-200 dark:border-slate-700 min-h-[100px] flex flex-col justify-center max-w-[480px] transition-colors">
+            <div class="flex items-center justify-between mb-1.5 px-1">
+                <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Unplaced Letter Pool (Drop here to return)</span>
+                <span id="pool-counter" class="text-[11px] font-bold text-slate-500 dark:text-slate-400">0 tiles left</span>
+            </div>
+            <div id="pool-container" class="flex flex-wrap justify-center items-center gap-1.5 max-h-[120px] overflow-y-auto">
+                <!-- Letter tiles rendered here -->
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 px-4 py-2 rounded-full bg-slate-900 text-white dark:bg-white dark:text-slate-900 text-xs font-semibold shadow-lg transition-all duration-300 opacity-0 pointer-events-none translate-y-4 flex items-center space-x-2">
+        <span id="toast-text">Notification message</span>
+    </div>
+
+    <!-- Modals -->
+
+    <!-- How to Play Modal -->
+    <div id="modal-help" class="fixed inset-0 z-50 flex items-center justify-center p-4 modal-backdrop hidden">
+        <div class="bg-white dark:bg-slate-800 rounded-2xl max-w-md w-full p-5 shadow-2xl border border-slate-200 dark:border-slate-700 max-h-[90vh] overflow-y-auto">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-200 dark:border-slate-700 mb-3">
+                <h3 class="text-lg font-extrabold text-slate-800 dark:text-slate-100">How to Play Gridle</h3>
+                <button class="btn-close-modal text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            <div class="space-y-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
+                <p>Welcome to <strong>Gridle: Overhanging Frame Edition</strong>! Solve the 4-word frame where words intersect and overhang past corners.</p>
+                
+                <div class="bg-slate-100 dark:bg-slate-700/50 p-3 rounded-xl border border-slate-200 dark:border-slate-700 space-y-2">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-6 h-6 bg-cyan-600 text-white font-bold rounded flex items-center justify-center text-xs shadow-sm"><i class="fa-solid fa-shield text-[10px]"></i></div>
+                        <span>The <strong>4 Corner Anchors</strong> are locked in place as given anchor letters!</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <div class="w-6 h-6 bg-emerald-600 border border-amber-300 text-white font-bold rounded flex items-center justify-center text-xs shadow-sm">W</div>
+                        <span><strong>Valid Words</strong> light up with glowing golden-emerald ribbons when complete!</span>
+                    </div>
+                </div>
+
+                <p><strong>Overhanging Mechanics & Rules:</strong></p>
+                <ul class="list-disc pl-5 space-y-1.5">
+                    <li>The 4 words (Top, Bottom, Left, Right) form a frame, but <strong>words can overhang past the intersection points</strong>! The anchors do not need to be at the start or end of the words.</li>
+                    <li>Drag tiles from the tray to grid slots, between grid slots, or drag placed tiles back to the tray to return them.</li>
+                    <li>Tap a tile to select and place it, or tap a placed tile on the grid to instantly return it to your tray.</li>
+                    <li>Use the <strong>Undo</strong> button to rewind your moves step-by-step.</li>
+                    <li>Complete all 4 words simultaneously with valid Oxford dictionary words to win!</li>
+                </ul>
+            </div>
+            <button class="btn-close-modal w-full mt-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm rounded-xl shadow transition">Play Gridle</button>
+        </div>
+    </div>
+
+    <!-- Stats Modal -->
+    <div id="modal-stats" class="fixed inset-0 z-50 flex items-center justify-center p-4 modal-backdrop hidden">
+        <div class="bg-white dark:bg-slate-800 rounded-2xl max-w-md w-full p-5 shadow-2xl border border-slate-200 dark:border-slate-700">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-200 dark:border-slate-700 mb-4">
+                <h3 class="text-lg font-extrabold text-slate-800 dark:text-slate-100">Statistics</h3>
+                <button class="btn-close-modal text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            <div class="grid grid-cols-4 gap-2 text-center my-4">
+                <div class="bg-slate-100 dark:bg-slate-700/50 p-2 rounded-xl">
+                    <div id="stat-played" class="text-xl font-black text-slate-800 dark:text-slate-100">0</div>
+                    <div class="text-[9px] uppercase font-bold text-slate-400">Played</div>
+                </div>
+                <div class="bg-slate-100 dark:bg-slate-700/50 p-2 rounded-xl">
+                    <div id="stat-winrate" class="text-xl font-black text-slate-800 dark:text-slate-100">0%</div>
+                    <div class="text-[9px] uppercase font-bold text-slate-400">Win %</div>
+                </div>
+                <div class="bg-slate-100 dark:bg-slate-700/50 p-2 rounded-xl">
+                    <div id="stat-streak" class="text-xl font-black text-emerald-500">0</div>
+                    <div class="text-[9px] uppercase font-bold text-slate-400">Streak</div>
+                </div>
+                <div class="bg-slate-100 dark:bg-slate-700/50 p-2 rounded-xl">
+                    <div id="stat-max-streak" class="text-xl font-black text-emerald-500">0</div>
+                    <div class="text-[9px] uppercase font-bold text-slate-400">Max</div>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-200 dark:border-slate-700 pt-4 flex items-center justify-between">
+                <div>
+                    <span class="text-[11px] text-slate-400 font-medium">Avg Solve Time</span>
+                    <div id="stat-avg-time" class="text-sm font-bold text-slate-700 dark:text-slate-200">--:--</div>
+                </div>
+                <button id="btn-share-stats" class="py-2 px-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-xl shadow flex items-center space-x-1.5 transition">
+                    <i class="fa-solid fa-share-nodes"></i>
+                    <span>Share Stats</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Win Modal -->
+    <div id="modal-win" class="fixed inset-0 z-50 flex items-center justify-center p-4 modal-backdrop hidden">
+        <div class="bg-white dark:bg-slate-800 rounded-2xl max-w-md w-full p-5 shadow-2xl border border-slate-200 dark:border-slate-700 text-center animate-pop">
+            <div class="w-14 h-14 bg-amber-100 dark:bg-amber-900/40 text-amber-500 rounded-full flex items-center justify-center text-2xl mx-auto mb-2">
+                <i class="fa-solid fa-trophy"></i>
+            </div>
+            <h2 class="text-2xl font-black text-slate-800 dark:text-slate-100 mb-0.5">Frame Solved!</h2>
+            <p id="win-subtitle" class="text-xs text-slate-500 dark:text-slate-400 mb-3">All 4 overhanging frame words successfully formed.</p>
+
+            <div class="bg-slate-50 dark:bg-slate-700/40 rounded-xl p-3 border border-slate-200 dark:border-slate-700 mb-4 text-left">
+                <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">Words Formed</div>
+                <div id="win-words-list" class="grid grid-cols-2 gap-1.5 text-xs">
+                    <!-- Solved words list inserted here -->
+                </div>
+            </div>
+
+            <div class="flex items-center justify-around bg-slate-100 dark:bg-slate-700/60 p-2.5 rounded-xl mb-4 text-xs">
+                <div>
+                    <div class="text-[10px] text-slate-400 uppercase font-bold">Time</div>
+                    <div id="win-time" class="text-sm font-extrabold text-slate-700 dark:text-slate-200">00:00</div>
+                </div>
+                <div class="w-px h-6 bg-slate-300 dark:bg-slate-600"></div>
+                <div>
+                    <div class="text-[10px] text-slate-400 uppercase font-bold">Moves</div>
+                    <div id="win-moves" class="text-sm font-extrabold text-slate-700 dark:text-slate-200">0</div>
+                </div>
+                <div class="w-px h-6 bg-slate-300 dark:bg-slate-600"></div>
+                <div>
+                    <div class="text-[10px] text-slate-400 uppercase font-bold">Streak</div>
+                    <div id="win-streak" class="text-sm font-extrabold text-emerald-500">1 🔥</div>
+                </div>
+            </div>
+
+            <div class="flex space-x-2">
+                <button id="btn-share-win" class="flex-1 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-xl shadow flex items-center justify-center space-x-1.5 transition active:scale-95">
+                    <i class="fa-solid fa-share-nodes"></i>
+                    <span>Share Result</span>
+                </button>
+                <button id="btn-next-puzzle" class="hidden py-2.5 px-4 bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-100 font-bold text-xs rounded-xl hover:bg-slate-300 dark:hover:bg-slate-600 transition">
+                    Next
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Engine -->
+    <script>
+        // Oxford dictionary subset of common 4 to 6 letter words
+        const VALID_DICTIONARY = new Set([
+            "PLANT", "PLANTS", "PLANET", "STARK", "SPARK", "SPARKS", "STONE", "STONES", "STORM", "STORMS",
+            "CROWD", "CROWN", "CROWNS", "TRAIN", "TRAINS", "TRACK", "TRACKS", "LIGHT", "LIGHTS", "SIGHT", "SIGHTS",
+            "SHEET", "SHEETS", "PRINT", "PRINTS", "PRINTER", "SPRINT", "CLIMB", "CLIMBS", "BOARD", "BOARDS",
+            "ESCAPE", "DREAM", "DREAMS", "STEAM", "STEAMS", "STREAM", "STREAMS", "BREAD", "BREADS", "BEACH", "REACH",
+            "PEACH", "CHAIR", "CHAIRS", "CHAIN", "CHAINS", "TRAIL", "TRAILS", "BRAIN", "BRAINS", "GRAIN", "GRAINS",
+            "SHINE", "SHINES", "SHARE", "SHARES", "SHAPE", "SHAPES", "SHORE", "SHORES", "STORE", "STORES", "SMILE",
+            "SPACE", "SPACES", "SPICE", "SPICES", "SWEET", "SWEETS", "SMART", "SMARTS", "STAND", "STANDS", "WATER",
+            "WAVE", "WAVES", "RIVER", "RIVERS", "OCEAN", "OCEANS", "CLOUD", "CLOUDS", "FLOWER", "FLOWERS", "SPOON",
+            "PLATE", "PLATES", "KNIFE", "KNIVES", "GLASS", "GLASSES", "FRUIT", "FRUITS", "APPLE", "APPLES", "GRAPE",
+            "LEMON", "LEMONS", "MELON", "MELONS", "BERRY", "ROAST", "ROASTS", "PLANE", "PLANES", "WORLD", "WORLDS",
+            "SEEDS", "SCALE", "SCALES", "SCORE", "SCORES", "SHELF", "SHIRT", "SHIRTS", "SHOE", "SHOES", "SLATE",
+            "STARS", "START", "STARTS", "TOWER", "TOWERS", "POWER", "POWERS", "HONEY", "MONEY", "NOTES", "PARKS",
+            "KITES", "KNEES", "KEPT", "KEEPS", "KINGS", "KILTS", "KINDS", "KNACK", "KNOTS", "KNOWS"
+        ]);
+
+        // Verifiable overhang puzzles strictly generated where ALL FOUR words exist in VALID_DICTIONARY
+        const VERIFIED_OVERHANG_PUZZLES = [
+            {
+                id: 101,
+                theme: "Flora & Nature",
+                rows: 6, cols: 6,
+                top: { word: "PLANT", r: 1, cStart: 1 },    // (1,1)='P', (1,4)='N'
+                bottom: { word: "KITES", r: 4, cStart: 1 },  // (4,1)='K', (4,4)='E' (Replaced KESEE with KITES!)
+                left: { word: "PARKS", c: 1, rStart: 1 },   // (1,1)='P', (4,1)='K'
+                right: { word: "NOTES", c: 4, rStart: 1 }    // (1,4)='N', (4,4)='E'
+            },
+            {
+                id: 102,
+                theme: "Nature & Outdoors",
+                rows: 6, cols: 6,
+                top: { word: "STREAM", r: 1, cStart: 0 },   // (1,1)='T', (1,4)='A'
+                bottom: { word: "STORMS", r: 4, cStart: 0 }, // (4,1)='T', (4,4)='R'
+                left: { word: "TRAIN", c: 1, rStart: 1 },   // (1,1)='T', (4,1)='I'
+                right: { word: "CHAIR", c: 4, rStart: 0 }   // (1,4)='A', (4,4)='R'
+            },
+            {
+                id: 103,
+                theme: "Garden Paths",
+                rows: 7, cols: 7,
+                top: { word: "PLANTS", r: 2, cStart: 0 },   // (2,1)='L', (2,5)='S'
+                bottom: { word: "BREADS", r: 5, cStart: 0 }, // (5,1)='R', (5,5)='S'
+                left: { word: "SLATE", c: 1, rStart: 1 },   // (2,1)='L', (5,1)='R'
+                right: { word: "STORM", c: 5, rStart: 1 }   // (2,5)='T', (5,5)='M'
+            }
+        ];
+
+        class SoundFX {
+            constructor() { this.ctx = null; this.muted = false; }
+            init() {
+                if (!this.ctx) {
+                    const AudioCtx = window.AudioContext || window.webkitAudioContext;
+                    if (AudioCtx) this.ctx = new AudioCtx();
+                }
+            }
+            play(type) {
+                if (this.muted) return;
+                this.init();
+                if (!this.ctx) return;
+
+                const now = this.ctx.currentTime;
+                const osc = this.ctx.createOscillator();
+                const gain = this.ctx.createGain();
+                osc.connect(gain);
+                gain.connect(this.ctx.destination);
+
+                if (type === 'pickup') {
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(340, now);
+                    osc.frequency.exponentialRampToValueAtTime(460, now + 0.07);
+                    gain.gain.setValueAtTime(0.12, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.07);
+                    osc.start(now); osc.stop(now + 0.07);
+                } else if (type === 'drop') {
+                    osc.type = 'triangle';
+                    osc.frequency.setValueAtTime(450, now);
+                    osc.frequency.exponentialRampToValueAtTime(220, now + 0.08);
+                    gain.gain.setValueAtTime(0.15, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.08);
+                    osc.start(now); osc.stop(now + 0.08);
+                } else if (type === 'word_complete') {
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(587.33, now);
+                    osc.frequency.setValueAtTime(739.99, now + 0.08);
+                    osc.frequency.setValueAtTime(880.00, now + 0.16);
+                    gain.gain.setValueAtTime(0.16, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.28);
+                    osc.start(now); osc.stop(now + 0.28);
+                } else if (type === 'hint') {
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(587.33, now);
+                    osc.frequency.setValueAtTime(880, now + 0.09);
+                    gain.gain.setValueAtTime(0.15, now);
+                    gain.gain.exponentialRampToValueAtTime(0.01, now + 0.2);
+                    osc.start(now); osc.stop(now + 0.2);
+                } else if (type === 'win') {
+                    const notes = [523.25, 659.25, 783.99, 1046.50];
+                    notes.forEach((freq, idx) => {
+                        const noteOsc = this.ctx.createOscillator();
+                        const noteGain = this.ctx.createGain();
+                        noteOsc.connect(noteGain);
+                        noteOsc.connect(this.ctx.destination);
+                        noteOsc.type = 'triangle';
+                        noteOsc.frequency.setValueAtTime(freq, now + idx * 0.09);
+                        noteGain.gain.setValueAtTime(0.18, now + idx * 0.09);
+                        noteGain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.09 + 0.28);
+                        noteOsc.start(now + idx * 0.09);
+                        noteOsc.stop(now + idx * 0.09 + 0.28);
+                    });
+                }
+            }
+        }
+
+        const audio = new SoundFX();
+
+        let isDailyMode = true;
+        let activePuzzle = null;
+        let boardGrid = [];
+        let targetBoard = [];
+        let unplacedPool = [];
+        let selectedTileId = null;
+        let movesCount = 0;
+        let hintsRemaining = 3;
+        let timerInterval = null;
+        let secondsElapsed = 0;
+        let isPuzzleSolved = false;
+        let prevValidSides = new Set();
+        let selectedPracticeSize = 'all';
+        let historyStack = [];
+
+        let touchDraggedTileId = null;
+        let touchDraggedBoardPos = null;
+        let touchGhostEl = null;
+
+        let userStats = {
+            played: 0,
+            wins: 0,
+            currentStreak: 0,
+            maxStreak: 0,
+            totalTime: 0,
+            lastPlayedDate: null
+        };
+
+        const gridContainer = document.getElementById('grid-container');
+        const poolContainer = document.getElementById('pool-container');
+        const poolDropZone = document.getElementById('pool-drop-zone');
+        const timerDisplay = document.getElementById('timer-display');
+        const movesDisplay = document.getElementById('moves-display');
+        const modeBadge = document.getElementById('mode-badge');
+        const themeTitle = document.getElementById('theme-title');
+        const hintCountDisplay = document.getElementById('hint-count');
+        const wordsClueBar = document.getElementById('words-clue-bar');
+        const poolCounter = document.getElementById('pool-counter');
+        const practiceLengthSelectors = document.getElementById('practice-length-selectors');
+
+        const modalHelp = document.getElementById('modal-help');
+        const modalStats = document.getElementById('modal-stats');
+        const modalWin = document.getElementById('modal-win');
+        
+        const btnHelp = document.getElementById('btn-help');
+        const btnStats = document.getElementById('btn-stats');
+        const btnSound = document.getElementById('btn-sound');
+        const btnTheme = document.getElementById('btn-theme');
+        const btnModeToggle = document.getElementById('btn-mode-toggle');
+        const btnCheck = document.getElementById('btn-check');
+        const btnHint = document.getElementById('btn-hint');
+        const btnUndo = document.getElementById('btn-undo');
+        const btnShuffle = document.getElementById('btn-shuffle');
+        const btnShareWin = document.getElementById('btn-share-win');
+        const btnShareStats = document.getElementById('btn-share-stats');
+        const btnNextPuzzle = document.getElementById('btn-next-puzzle');
+
+        window.addEventListener('DOMContentLoaded', () => {
+            loadStatsFromStorage();
+            initTheme();
+            setupEventListeners();
+
+            if (!localStorage.getItem('gridle_visited_overhang')) {
+                modalHelp.classList.remove('hidden');
+                localStorage.setItem('gridle_visited_overhang', 'true');
+            }
+
+            startPuzzle(true);
+        });
+
+        function getDailyDateString() {
+            const today = new Date();
+            return `${today.getUTCFullYear()}-${String(today.getUTCMonth() + 1).padStart(2, '0')}-${String(today.getUTCDate()).padStart(2, '0')}`;
+        }
+
+        function seededRandom(seedStr) {
+            let hash = 0;
+            for (let i = 0; i < seedStr.length; i++) {
+                hash = seedStr.charCodeAt(i) + ((hash << 5) - hash);
+            }
+            const x = Math.sin(hash++) * 10000;
+            return x - Math.floor(x);
+        }
+
+        function getDailyPuzzle() {
+            const dateStr = getDailyDateString();
+            const rand = seededRandom(dateStr);
+            const index = Math.floor(rand * VERIFIED_OVERHANG_PUZZLES.length);
+            return VERIFIED_OVERHANG_PUZZLES[index];
+        }
+
+        function getRandomPuzzle() {
+            let pool = VERIFIED_OVERHANG_PUZZLES;
+            if (selectedPracticeSize !== 'all') {
+                const targetSize = parseInt(selectedPracticeSize);
+                const filtered = VERIFIED_OVERHANG_PUZZLES.filter(p => p.rows === targetSize);
+                if (filtered.length > 0) pool = filtered;
+            }
+            const index = Math.floor(Math.random() * pool.length);
+            return pool[index];
+        }
+
+        function buildOverhangFrameMatrix() {
+            const p = activePuzzle;
+            const rows = p.rows;
+            const cols = p.cols;
+
+            boardGrid = Array.from({ length: rows }, () => 
+                Array.from({ length: cols }, () => ({ active: false, letter: null, isCornerAnchor: false }))
+            );
+            targetBoard = Array.from({ length: rows }, () => Array(cols).fill(null));
+
+            // Top
+            for (let i = 0; i < p.top.word.length; i++) {
+                const r = p.top.r, c = p.top.cStart + i;
+                boardGrid[r][c].active = true;
+                targetBoard[r][c] = p.top.word[i];
+            }
+            // Bottom
+            for (let i = 0; i < p.bottom.word.length; i++) {
+                const r = p.bottom.r, c = p.bottom.cStart + i;
+                boardGrid[r][c].active = true;
+                targetBoard[r][c] = p.bottom.word[i];
+            }
+            // Left
+            for (let i = 0; i < p.left.word.length; i++) {
+                const r = p.left.rStart + i, c = p.left.c;
+                boardGrid[r][c].active = true;
+                targetBoard[r][c] = p.left.word[i];
+            }
+            // Right
+            for (let i = 0; i < p.right.word.length; i++) {
+                const r = p.right.rStart + i, c = p.right.c;
+                boardGrid[r][c].active = true;
+                targetBoard[r][c] = p.right.word[i];
+            }
+
+            // Set Corner Anchors
+            const anchors = [
+                { r: p.top.r, c: p.left.c },
+                { r: p.top.r, c: p.right.c },
+                { r: p.bottom.r, c: p.left.c },
+                { r: p.bottom.r, c: p.right.c }
+            ];
+
+            const poolLetters = [];
+
+            anchors.forEach(anc => {
+                if (anc.r >= 0 && anc.r < rows && anc.c >= 0 && anc.c < cols) {
+                    boardGrid[anc.r][anc.c].isCornerAnchor = true;
+                    boardGrid[anc.r][anc.c].letter = targetBoard[anc.r][anc.c];
+                }
+            });
+
+            for (let r = 0; r < rows; r++) {
+                for (let c = 0; c < cols; c++) {
+                    if (boardGrid[r][c].active && !boardGrid[r][c].isCornerAnchor) {
+                        poolLetters.push(targetBoard[r][c]);
+                    }
+                }
+            }
+
+            for (let i = poolLetters.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [poolLetters[i], poolLetters[j]] = [poolLetters[j], poolLetters[i]];
+            }
+
+            unplacedPool = poolLetters.map((char, index) => ({
+                id: `tile-${index}-${Date.now()}`,
+                letter: char
+            }));
+        }
+
+        function startPuzzle(daily = true) {
+            isDailyMode = daily;
+            isPuzzleSolved = false;
+            movesCount = 0;
+            secondsElapsed = 0;
+            hintsRemaining = 3;
+            selectedTileId = null;
+            historyStack = [];
+            prevValidSides.clear();
+
+            clearInterval(timerInterval);
+            timerDisplay.textContent = "00:00";
+            movesDisplay.textContent = "0";
+            hintCountDisplay.textContent = hintsRemaining;
+
+            modeBadge.textContent = isDailyMode ? "Daily Overhanging Frame" : "Practice Mode";
+            btnModeToggle.textContent = isDailyMode ? "Practice Mode" : "Daily Mode";
+
+            if (isDailyMode) {
+                practiceLengthSelectors.classList.add('hidden');
+                practiceLengthSelectors.classList.remove('flex');
+            } else {
+                practiceLengthSelectors.classList.remove('hidden');
+                practiceLengthSelectors.classList.add('flex');
+            }
+
+            activePuzzle = isDailyMode ? getDailyPuzzle() : getRandomPuzzle();
+            themeTitle.textContent = activePuzzle.theme;
+
+            buildOverhangFrameMatrix();
+            renderWordsClues();
+            renderBoard();
+            renderPool();
+            updateUndoButtonState();
+
+            startTimer();
+        }
+
+        function recordStateForUndo() {
+            const boardSnapshot = boardGrid.map(row => row.map(cell => ({ ...cell })));
+            const poolSnapshot = unplacedPool.map(tile => ({ ...tile }));
+            historyStack.push({ board: boardSnapshot, pool: poolSnapshot, moves: movesCount });
+            updateUndoButtonState();
+        }
+
+        function undoLastMove() {
+            if (historyStack.length === 0 || isPuzzleSolved) return;
+            const previousState = historyStack.pop();
+            boardGrid = previousState.board;
+            unplacedPool = previousState.pool;
+            movesCount = previousState.moves;
+            movesDisplay.textContent = movesCount;
+            selectedTileId = null;
+            audio.play('drop');
+            onStateChanged();
+            updateUndoButtonState();
+        }
+
+        function updateUndoButtonState() {
+            if (btnUndo) {
+                btnUndo.disabled = historyStack.length === 0 || isPuzzleSolved;
+            }
+        }
+
+        function getCurrentFormedSides() {
+            const t = activePuzzle.top;
+            const b = activePuzzle.bottom;
+            const l = activePuzzle.left;
+            const rW = activePuzzle.right;
+
+            let topStr = "", bottomStr = "", leftStr = "", rightStr = "";
+
+            for (let i = 0; i < t.word.length; i++) {
+                const char = boardGrid[t.r][t.cStart + i].letter;
+                topStr += char || "?";
+            }
+            for (let i = 0; i < b.word.length; i++) {
+                const char = boardGrid[b.r][b.cStart + i].letter;
+                bottomStr += char || "?";
+            }
+            for (let i = 0; i < l.word.length; i++) {
+                const char = boardGrid[l.rStart + i][l.c].letter;
+                leftStr += char || "?";
+            }
+            for (let i = 0; i < rW.word.length; i++) {
+                const char = boardGrid[rW.rStart + i][rW.c].letter;
+                rightStr += char || "?";
+            }
+
+            return {
+                topStr, bottomStr, leftStr, rightStr,
+                topValid: !topStr.includes("?") && VALID_DICTIONARY.has(topStr),
+                bottomValid: !bottomStr.includes("?") && VALID_DICTIONARY.has(bottomStr),
+                leftValid: !leftStr.includes("?") && VALID_DICTIONARY.has(leftStr),
+                rightValid: !rightStr.includes("?") && VALID_DICTIONARY.has(rightStr)
+            };
+        }
+
+        function renderWordsClues() {
+            wordsClueBar.innerHTML = '';
+            const sides = getCurrentFormedSides();
+
+            const items = [
+                { label: `Top: ${sides.topStr}`, valid: sides.topValid },
+                { label: `Bottom: ${sides.bottomStr}`, valid: sides.bottomValid },
+                { label: `Left: ${sides.leftStr}`, valid: sides.leftValid },
+                { label: `Right: ${sides.rightStr}`, valid: sides.rightValid }
+            ];
+
+            items.forEach(item => {
+                const badge = document.createElement('div');
+                badge.className = `text-[11px] font-bold px-2.5 py-1 rounded-lg border flex items-center space-x-1.5 transition-all ${
+                    item.valid 
+                        ? 'bg-amber-500/10 border-amber-500/40 text-amber-600 dark:text-amber-400' 
+                        : 'bg-slate-200/60 dark:bg-slate-800/60 border-slate-300 dark:border-slate-700 text-slate-500'
+                }`;
+                badge.innerHTML = `
+                    <i class="fa-solid ${item.valid ? 'fa-star text-amber-500' : 'fa-circle-dot text-slate-400'} text-[10px]"></i>
+                    <span>${item.label}</span>
+                `;
+                wordsClueBar.appendChild(badge);
+            });
+        }
+
+        function renderBoard() {
+            gridContainer.innerHTML = '';
+            const rows = activePuzzle.rows;
+            const cols = activePuzzle.cols;
+            const sides = getCurrentFormedSides();
+
+            gridContainer.style.gridTemplateColumns = `repeat(${cols}, minmax(0, 1fr))`;
+
+            const t = activePuzzle.top;
+            const b = activePuzzle.bottom;
+            const l = activePuzzle.left;
+            const rW = activePuzzle.right;
+
+            for (let r = 0; r < rows; r++) {
+                for (let c = 0; c < cols; c++) {
+                    const slotData = boardGrid[r][c];
+                    const slotDiv = document.createElement('div');
+                    slotDiv.dataset.row = r;
+                    slotDiv.dataset.col = c;
+
+                    if (!slotData.active) {
+                        slotDiv.className = 'w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-transparent border border-dashed border-slate-300/20 dark:border-slate-700/20';
+                        gridContainer.appendChild(slotDiv);
+                        continue;
+                    }
+
+                    const isCorner = slotData.isCornerAnchor;
+                    const isTop = (r === t.r && c >= t.cStart && c < t.cStart + t.word.length) && sides.topValid;
+                    const isBottom = (r === b.r && c >= b.cStart && c < b.cStart + b.word.length) && sides.bottomValid;
+                    const isLeft = (c === l.c && r >= l.rStart && r < l.rStart + l.word.length) && sides.leftValid;
+                    const isRight = (c === rW.c && r >= rW.rStart && r < rW.rStart + rW.word.length) && sides.rightValid;
+                    const isValidTile = isTop || isBottom || isLeft || isRight;
+
+                    let baseClasses = "slot w-9 h-9 sm:w-11 sm:h-11 rounded-xl flex items-center justify-center font-extrabold text-sm sm:text-base border-2 shadow-sm relative ";
+
+                    if (isCorner) {
+                        baseClasses += "bg-cyan-600 border-cyan-700 text-white shadow-md cursor-not-allowed ";
+                    } else if (isValidTile) {
+                        baseClasses += "valid-word-tile-gold ";
+                    } else if (slotData.letter) {
+                        baseClasses += "bg-white dark:bg-slate-700 border-slate-300 dark:border-slate-600 text-slate-800 dark:text-slate-100 tile ";
+                    } else {
+                        baseClasses += "bg-slate-100/70 dark:bg-slate-800/70 border-dashed border-slate-300 dark:border-slate-600 ";
+                    }
+
+                    slotDiv.className = baseClasses;
+
+                    if (isCorner) {
+                        slotDiv.innerHTML = `<span>${slotData.letter}</span><i class="fa-solid fa-shield text-[8px] absolute top-0.5 right-0.5 text-cyan-200"></i>`;
+                    } else if (slotData.letter) {
+                        slotDiv.textContent = slotData.letter;
+                        slotDiv.draggable = true;
+
+                        slotDiv.addEventListener('dragstart', (e) => onBoardTileDragStart(e, r, c));
+                        slotDiv.addEventListener('click', () => onBoardTileClick(r, c));
+                        slotDiv.addEventListener('touchstart', (e) => onBoardTouchStart(e, r, c), { passive: false });
+                    }
+
+                    if (!isCorner) {
+                        slotDiv.addEventListener('dragover', (e) => e.preventDefault());
+                        slotDiv.addEventListener('dragenter', (e) => {
+                            e.preventDefault();
+                            slotDiv.classList.add('drag-over');
+                        });
+                        slotDiv.addEventListener('dragleave', () => slotDiv.classList.remove('drag-over'));
+                        slotDiv.addEventListener('drop', (e) => onSlotDrop(e, r, c));
+                        slotDiv.addEventListener('click', () => onEmptySlotClick(r, c));
+                    }
+
+                    gridContainer.appendChild(slotDiv);
+                }
+            }
+        }
+
+        function renderPool() {
+            poolContainer.innerHTML = '';
+            poolCounter.textContent = `${unplacedPool.length} tiles left`;
+
+            unplacedPool.forEach(tile => {
+                const isVowel = "AEIOU".includes(tile.letter);
+                const isSelected = selectedTileId === tile.id;
+
+                const tileDiv = document.createElement('div');
+                tileDiv.dataset.id = tile.id;
+                tileDiv.draggable = true;
+
+                let classes = "tile w-9 h-9 sm:w-11 sm:h-11 rounded-xl flex items-center justify-center font-extrabold text-sm sm:text-base border-2 shadow-sm transition transform active:scale-105 ";
+
+                if (isSelected) {
+                    classes += "bg-cyan-500 border-cyan-400 text-white ring-4 ring-cyan-300/50 dark:ring-cyan-500/50 scale-105 ";
+                } else if (isVowel) {
+                    classes += "bg-indigo-50 dark:bg-indigo-900/40 border-indigo-200 dark:border-indigo-700 text-indigo-900 dark:text-indigo-200 hover:border-indigo-400 ";
+                } else {
+                    classes += "bg-slate-100 dark:bg-slate-700 border-slate-300 dark:border-slate-600 text-slate-800 dark:text-slate-100 hover:border-slate-400 ";
+                }
+
+                tileDiv.className = classes;
+                tileDiv.textContent = tile.letter;
+
+                tileDiv.addEventListener('dragstart', (e) => onPoolTileDragStart(e, tile.id));
+                tileDiv.addEventListener('click', () => onPoolTileClick(tile.id));
+                tileDiv.addEventListener('touchstart', (e) => onPoolTouchStart(e, tile.id), { passive: false });
+
+                poolContainer.appendChild(tileDiv);
+            });
+        }
+
+        function setupTrayDropZone() {
+            if (!poolDropZone) return;
+            poolDropZone.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                poolDropZone.classList.add('border-emerald-500', 'bg-emerald-50/40', 'dark:bg-emerald-950/20');
+            });
+            poolDropZone.addEventListener('dragleave', () => {
+                poolDropZone.classList.remove('border-emerald-500', 'bg-emerald-50/40', 'dark:bg-emerald-950/20');
+            });
+            poolDropZone.addEventListener('drop', (e) => {
+                e.preventDefault();
+                poolDropZone.classList.remove('border-emerald-500', 'bg-emerald-50/40', 'dark:bg-emerald-950/20');
+                const rawData = e.dataTransfer.getData('text/plain');
+                if (!rawData) return;
+                const data = JSON.parse(rawData);
+                if (data.type === 'board') {
+                    recordStateForUndo();
+                    const fromR = data.row;
+                    const fromC = data.col;
+                    if (boardGrid[fromR][fromC].letter) {
+                        unplacedPool.push({ id: `tile-${Date.now()}`, letter: boardGrid[fromR][fromC].letter });
+                        boardGrid[fromR][fromC].letter = null;
+                        movesCount++;
+                        movesDisplay.textContent = movesCount;
+                        audio.play('drop');
+                        onStateChanged();
+                    }
+                }
+            });
+        }
+
+        function onPoolTileDragStart(e, tileId) {
+            audio.play('pickup');
+            e.dataTransfer.setData('text/plain', JSON.stringify({ type: 'pool', id: tileId }));
+        }
+
+        function onBoardTileDragStart(e, r, c) {
+            if (boardGrid[r][c].isCornerAnchor || !boardGrid[r][c].letter) return;
+            audio.play('pickup');
+            e.dataTransfer.setData('text/plain', JSON.stringify({ type: 'board', row: r, col: c }));
+        }
+
+        function onPoolTouchStart(e, tileId) {
+            e.preventDefault();
+            touchDraggedTileId = tileId;
+            touchDraggedBoardPos = null;
+            audio.play('pickup');
+            createTouchGhost(e.touches[0], unplacedPool.find(t => t.id === tileId)?.letter || '');
+            document.addEventListener('touchmove', onTouchMove, { passive: false });
+            document.addEventListener('touchend', onTouchEnd, { passive: false });
+        }
+
+        function onBoardTouchStart(e, r, c) {
+            if (boardGrid[r][c].isCornerAnchor || !boardGrid[r][c].letter) return;
+            e.preventDefault();
+            touchDraggedTileId = null;
+            touchDraggedBoardPos = { r, c };
+            audio.play('pickup');
+            createTouchGhost(e.touches[0], boardGrid[r][c].letter);
+            document.addEventListener('touchmove', onTouchMove, { passive: false });
+            document.addEventListener('touchend', onTouchEnd, { passive: false });
+        }
+
+        function createTouchGhost(touch, letter) {
+            if (touchGhostEl) touchGhostEl.remove();
+            touchGhostEl = document.createElement('div');
+            touchGhostEl.className = 'fixed pointer-events-none w-11 h-11 bg-cyan-500 text-white font-extrabold text-base rounded-xl flex items-center justify-center shadow-2xl z-50 transform -translate-x-1/2 -translate-y-1/2 opacity-90';
+            touchGhostEl.textContent = letter;
+            touchGhostEl.style.left = `${touch.clientX}px`;
+            touchGhostEl.style.top = `${touch.clientY}px`;
+            document.body.appendChild(touchGhostEl);
+        }
+
+        function onTouchMove(e) {
+            if (!touchGhostEl) return;
+            e.preventDefault();
+            const touch = e.touches[0];
+            touchGhostEl.style.left = `${touch.clientX}px`;
+            touchGhostEl.style.top = `${touch.clientY}px`;
+        }
+
+        function onSlotDrop(e, r, c) {
+            e.preventDefault();
+            const targetSlot = document.querySelector(`[data-row="${r}"][data-col="${c}"]`);
+            if (targetSlot) targetSlot.classList.remove('drag-over');
+
+            if (boardGrid[r][c].isCornerAnchor) return;
+
+            const data = JSON.parse(e.dataTransfer.getData('text/plain'));
+            recordStateForUndo();
+            audio.play('drop');
+            movesCount++;
+            movesDisplay.textContent = movesCount;
+
+            if (data.type === 'pool') {
+                const poolIndex = unplacedPool.findIndex(t => t.id === data.id);
+                if (poolIndex > -1) {
+                    const tile = unplacedPool.splice(poolIndex, 1)[0];
+                    if (boardGrid[r][c].letter) {
+                        unplacedPool.push({ id: `tile-${Date.now()}`, letter: boardGrid[r][c].letter });
+                    }
+                    boardGrid[r][c].letter = tile.letter;
+                }
+            } else if (data.type === 'board') {
+                const fromR = data.row;
+                const fromC = data.col;
+                const temp = boardGrid[r][c].letter;
+                boardGrid[r][c].letter = boardGrid[fromR][fromC].letter;
+                boardGrid[fromR][fromC].letter = temp;
+            }
+
+            selectedTileId = null;
+            onStateChanged();
+        }
+
+        function onTouchEnd(e) {
+            if (!touchGhostEl) return;
+            e.preventDefault();
+
+            const touch = e.changedTouches[0];
+            const targetEl = document.elementFromPoint(touch.clientX, touch.clientY);
+
+            if (touchGhostEl && touchGhostEl.parentNode) {
+                touchGhostEl.parentNode.removeChild(touchGhostEl);
+            }
+            touchGhostEl = null;
+
+            document.removeEventListener('touchmove', onTouchMove);
+            document.removeEventListener('touchend', onTouchEnd);
+
+            if (!targetEl) return;
+
+            const slotEl = targetEl.closest('.slot');
+            if (slotEl) {
+                const r = parseInt(slotEl.dataset.row);
+                const c = parseInt(slotEl.dataset.col);
+                if (!isNaN(r) && !isNaN(c) && !boardGrid[r][c].isCornerAnchor) {
+                    recordStateForUndo();
+                    audio.play('drop');
+                    movesCount++;
+                    movesDisplay.textContent = movesCount;
+
+                    if (touchDraggedTileId) {
+                        const poolIndex = unplacedPool.findIndex(t => t.id === touchDraggedTileId);
+                        if (poolIndex > -1) {
+                            const tile = unplacedPool.splice(poolIndex, 1)[0];
+                            if (boardGrid[r][c].letter) {
+                                unplacedPool.push({ id: `tile-${Date.now()}`, letter: boardGrid[r][c].letter });
+                            }
+                            boardGrid[r][c].letter = tile.letter;
+                        }
+                    } else if (touchDraggedBoardPos) {
+                        const fromR = touchDraggedBoardPos.r;
+                        const fromC = touchDraggedBoardPos.c;
+                        const temp = boardGrid[r][c].letter;
+                        boardGrid[r][c].letter = boardGrid[fromR][fromC].letter;
+                        boardGrid[fromR][fromC].letter = temp;
+                    }
+                    onStateChanged();
+                }
+            } else if (touchDraggedBoardPos && targetEl.closest('#pool-drop-zone')) {
+                recordStateForUndo();
+                audio.play('drop');
+                const fromR = touchDraggedBoardPos.r;
+                const fromC = touchDraggedBoardPos.c;
+                unplacedPool.push({ id: `tile-${Date.now()}`, letter: boardGrid[fromR][fromC].letter });
+                boardGrid[fromR][fromC].letter = null;
+                movesCount++;
+                movesDisplay.textContent = movesCount;
+                onStateChanged();
+            }
+
+            touchDraggedTileId = null;
+            touchDraggedBoardPos = null;
+        }
+
+        function onPoolTileClick(tileId) {
+            audio.play('pickup');
+            selectedTileId = (selectedTileId === tileId) ? null : tileId;
+            renderPool();
+        }
+
+        function onEmptySlotClick(r, c) {
+            if (boardGrid[r][c].isCornerAnchor) return;
+
+            if (selectedTileId) {
+                recordStateForUndo();
+                audio.play('drop');
+                const poolIndex = unplacedPool.findIndex(t => t.id === selectedTileId);
+                if (poolIndex > -1) {
+                    const tile = unplacedPool.splice(poolIndex, 1)[0];
+                    if (boardGrid[r][c].letter) {
+                        unplacedPool.push({ id: `tile-${Date.now()}`, letter: boardGrid[r][c].letter });
+                    }
+                    boardGrid[r][c].letter = tile.letter;
+                    movesCount++;
+                    movesDisplay.textContent = movesCount;
+                }
+                selectedTileId = null;
+                onStateChanged();
+            }
+        }
+
+        function onBoardTileClick(r, c) {
+            if (boardGrid[r][c].isCornerAnchor || !boardGrid[r][c].letter) return;
+
+            recordStateForUndo();
+            audio.play('drop');
+            unplacedPool.push({ id: `tile-${Date.now()}`, letter: boardGrid[r][c].letter });
+            boardGrid[r][c].letter = null;
+            movesCount++;
+            movesDisplay.textContent = movesCount;
+
+            onStateChanged();
+        }
+
+        function onStateChanged() {
+            renderWordsClues();
+            renderBoard();
+            renderPool();
+            checkWordCompletionSounds();
+            checkPuzzleVictory();
+        }
+
+        function checkWordCompletionSounds() {
+            const sides = getCurrentFormedSides();
+            const currentValid = new Set();
+            if (sides.topValid) currentValid.add('top');
+            if (sides.bottomValid) currentValid.add('bottom');
+            if (sides.leftValid) currentValid.add('left');
+            if (sides.rightValid) currentValid.add('right');
+
+            currentValid.forEach(side => {
+                if (!prevValidSides.has(side)) {
+                    audio.play('word_complete');
+                }
+            });
+            prevValidSides = currentValid;
+        }
+
+        function checkPuzzleVictory() {
+            const sides = getCurrentFormedSides();
+            if (sides.topValid && sides.bottomValid && sides.leftValid && sides.rightValid && unplacedPool.length === 0) {
+                if (!isPuzzleSolved) {
+                    isPuzzleSolved = true;
+                    clearInterval(timerInterval);
+                    audio.play('win');
+                    triggerConfetti();
+                    saveVictoryStats();
+                    showWinModal(sides);
+                }
+            }
+        }
+
+        function checkBoardWords() {
+            const sides = getCurrentFormedSides();
+            let validCount = 0;
+            if (sides.topValid) validCount++;
+            if (sides.bottomValid) validCount++;
+            if (sides.leftValid) validCount++;
+            if (sides.rightValid) validCount++;
+
+            showToast(`${validCount} of 4 frame words are valid!`);
+        }
+
+        function giveHint() {
+            if (hintsRemaining <= 0) {
+                showToast("No hints remaining!");
+                return;
+            }
+
+            const rows = activePuzzle.rows;
+            const cols = activePuzzle.cols;
+            const wrongSlots = [];
+
+            for (let r = 0; r < rows; r++) {
+                for (let c = 0; c < cols; c++) {
+                    if (boardGrid[r][c].active && !boardGrid[r][c].isCornerAnchor) {
+                        const targetLetter = targetBoard[r][c];
+                        if (boardGrid[r][c].letter !== targetLetter) {
+                            wrongSlots.push({ r, c, targetLetter });
+                        }
+                    }
+                }
+            }
+
+            if (wrongSlots.length === 0) {
+                showToast("All current tiles are correct!");
+                return;
+            }
+
+            recordStateForUndo();
+            hintsRemaining--;
+            hintCountDisplay.textContent = hintsRemaining;
+            audio.play('hint');
+
+            const pick = wrongSlots[Math.floor(Math.random() * wrongSlots.length)];
+            const targetChar = pick.targetLetter;
+
+            if (boardGrid[pick.r][pick.c].letter) {
+                unplacedPool.push({ id: `tile-${Date.now()}`, letter: boardGrid[pick.r][pick.c].letter });
+            }
+
+            const poolIndex = unplacedPool.findIndex(t => t.letter === targetChar);
+            if (poolIndex > -1) {
+                unplacedPool.splice(poolIndex, 1);
+            }
+
+            boardGrid[pick.r][pick.c].letter = targetChar;
+            showToast(`Hint placed at Row ${pick.r + 1}, Col ${pick.c + 1}`);
+
+            onStateChanged();
+        }
+
+        function shufflePool() {
+            recordStateForUndo();
+            for (let i = unplacedPool.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [unplacedPool[i], unplacedPool[j]] = [unplacedPool[j], unplacedPool[i]];
+            }
+            audio.play('drop');
+            renderPool();
+        }
+
+        function startTimer() {
+            clearInterval(timerInterval);
+            timerInterval = setInterval(() => {
+                secondsElapsed++;
+                const mins = String(Math.floor(secondsElapsed / 60)).padStart(2, '0');
+                const secs = String(secondsElapsed % 60).padStart(2, '0');
+                timerDisplay.textContent = `${mins}:${secs}`;
+            }, 1000);
+        }
+
+        function triggerConfetti() {
+            if (typeof confetti === 'function') {
+                confetti({ particleCount: 90, spread: 70, origin: { y: 0.6 } });
+            }
+        }
+
+        function saveVictoryStats() {
+            userStats.played++;
+            userStats.wins++;
+            userStats.totalTime += secondsElapsed;
+
+            const dateStr = getDailyDateString();
+            if (userStats.lastPlayedDate) {
+                const prev = new Date(userStats.lastPlayedDate);
+                const curr = new Date(dateStr);
+                const diffDays = Math.round((curr - prev) / (1000 * 60 * 60 * 24));
+
+                if (diffDays === 1) {
+                    userStats.currentStreak++;
+                } else if (diffDays > 1) {
+                    userStats.currentStreak = 1;
+                }
+            } else {
+                userStats.currentStreak = 1;
+            }
+
+            userStats.lastPlayedDate = dateStr;
+            if (userStats.currentStreak > userStats.maxStreak) {
+                userStats.maxStreak = userStats.currentStreak;
+            }
+
+            saveStatsToStorage();
+        }
+
+        function showWinModal(sides) {
+            document.getElementById('win-time').textContent = timerDisplay.textContent;
+            document.getElementById('win-moves').textContent = movesCount;
+            document.getElementById('win-streak').textContent = `${userStats.currentStreak} 🔥`;
+
+            const winWordsList = document.getElementById('win-words-list');
+            winWordsList.innerHTML = `
+                <div class="bg-emerald-500/10 p-1.5 rounded text-emerald-600 dark:text-emerald-400 font-bold">Top: ${sides.topStr}</div>
+                <div class="bg-emerald-500/10 p-1.5 rounded text-emerald-600 dark:text-emerald-400 font-bold">Bottom: ${sides.bottomStr}</div>
+                <div class="bg-emerald-500/10 p-1.5 rounded text-emerald-600 dark:text-emerald-400 font-bold">Left: ${sides.leftStr}</div>
+                <div class="bg-emerald-500/10 p-1.5 rounded text-emerald-600 dark:text-emerald-400 font-bold">Right: ${sides.rightStr}</div>
+            `;
+
+            if (!isDailyMode) {
+                btnNextPuzzle.classList.remove('hidden');
+            } else {
+                btnNextPuzzle.classList.add('hidden');
+            }
+
+            modalWin.classList.remove('hidden');
+        }
+
+        function copyShareToClipboard() {
+            const timeStr = timerDisplay.textContent;
+            const streakStr = userStats.currentStreak;
+            const modeStr = isDailyMode ? `Daily ${getDailyDateString()}` : "Practice Round";
+
+            const shareText = `Gridle: Overhanging Frame (${modeStr})\n` +
+                              `⏱️ Time: ${timeStr} | 🎯 Moves: ${movesCount}\n` +
+                              `🔥 Streak: ${streakStr}\n` +
+                              `🟩🟩🟩🟩\n` +
+                              `🟩⬜⬜🟩\n` +
+                              `🟩🟩🟩🟩\n` +
+                              `Play Gridle Frame Edition!`;
+
+            const tempInput = document.createElement('textarea');
+            tempInput.value = shareText;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            showToast("Copied result grid to clipboard!");
+        }
+
+        function loadStatsFromStorage() {
+            const data = localStorage.getItem('gridle_overhang_stats');
+            if (data) {
+                try { userStats = JSON.parse(data); } catch (e) {}
+            }
+        }
+
+        function saveStatsToStorage() {
+            localStorage.setItem('gridle_overhang_stats', JSON.stringify(userStats));
+        }
+
+        function updateStatsUI() {
+            document.getElementById('stat-played').textContent = userStats.played;
+            const winRate = userStats.played > 0 ? Math.round((userStats.wins / userStats.played) * 100) : 0;
+            document.getElementById('stat-winrate').textContent = `${winRate}%`;
+            document.getElementById('stat-streak').textContent = userStats.currentStreak;
+            document.getElementById('stat-max-streak').textContent = userStats.maxStreak;
+
+            if (userStats.wins > 0) {
+                const avgSecs = Math.round(userStats.totalTime / userStats.wins);
+                const mins = String(Math.floor(avgSecs / 60)).padStart(2, '0');
+                const secs = String(avgSecs % 60).padStart(2, '0');
+                document.getElementById('stat-avg-time').textContent = `${mins}:${secs}`;
+            } else {
+                document.getElementById('stat-avg-time').textContent = "--:--";
+            }
+        }
+
+        function initTheme() {
+            const isDark = localStorage.getItem('gridle_theme') !== 'light';
+            if (isDark) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+            updateThemeIcon();
+        }
+
+        function toggleTheme() {
+            const isDark = document.documentElement.classList.toggle('dark');
+            localStorage.setItem('gridle_theme', isDark ? 'dark' : 'light');
+            updateThemeIcon();
+        }
+
+        function updateThemeIcon() {
+            const icon = document.getElementById('icon-theme');
+            if (document.documentElement.classList.contains('dark')) {
+                icon.className = 'fa-solid fa-sun text-xl text-amber-400';
+            } else {
+                icon.className = 'fa-solid fa-moon text-xl text-slate-600';
+            }
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-text').textContent = msg;
+            toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+            toast.classList.add('opacity-100', 'translate-y-0');
+
+            setTimeout(() => {
+                toast.classList.remove('opacity-100', 'translate-y-0');
+                toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+            }, 2200);
+        }
+
+        function setupEventListeners() {
+            setupTrayDropZone();
+            btnHelp.addEventListener('click', () => modalHelp.classList.remove('hidden'));
+            btnStats.addEventListener('click', () => {
+                updateStatsUI();
+                modalStats.classList.remove('hidden');
+            });
+
+            btnSound.addEventListener('click', () => {
+                audio.muted = !audio.muted;
+                const icon = document.getElementById('icon-sound');
+                icon.className = audio.muted ? 'fa-solid fa-volume-xmark text-xl text-slate-400' : 'fa-solid fa-volume-high text-xl';
+                showToast(audio.muted ? "Sound Muted" : "Sound Enabled");
+            });
+
+            btnTheme.addEventListener('click', toggleTheme);
+            btnModeToggle.addEventListener('click', () => startPuzzle(!isDailyMode));
+
+            document.querySelectorAll('.btn-size-filter').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    document.querySelectorAll('.btn-size-filter').forEach(b => {
+                        b.classList.remove('bg-emerald-600', 'text-white');
+                        b.classList.add('bg-white', 'dark:bg-slate-700', 'text-slate-700', 'dark:text-slate-200');
+                    });
+                    e.target.classList.remove('bg-white', 'dark:bg-slate-700', 'text-slate-700', 'dark:text-slate-200');
+                    e.target.classList.add('bg-emerald-600', 'text-white');
+
+                    selectedPracticeSize = e.target.dataset.size;
+                    if (!isDailyMode) {
+                        startPuzzle(false);
+                    }
+                });
+            });
+
+            btnCheck.addEventListener('click', checkBoardWords);
+            btnUndo.addEventListener('click', undoLastMove);
+            btnShuffle.addEventListener('click', shufflePool);
+            btnHint.addEventListener('click', giveHint);
+
+            document.querySelectorAll('.btn-close-modal').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    modalHelp.classList.add('hidden');
+                    modalStats.classList.add('hidden');
+                    modalWin.classList.add('hidden');
+                });
+            });
+
+            btnShareWin.addEventListener('click', copyShareToClipboard);
+            btnShareStats.addEventListener('click', copyShareToClipboard);
+
+            btnNextPuzzle.addEventListener('click', () => {
+                modalWin.classList.add('hidden');
+                startPuzzle(false);
+            });
+        }
+    </script>
+</body>
+</html>
