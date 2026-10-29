@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>CornerHop & MathsHop: Daily Frame Puzzles</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Canvas Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                        }
+                    },
+                    animation: {
+                        'pop': 'pop 0.2s ease-out forwards',
+                        'bounce-short': 'bounceShort 0.3s ease-in-out'
+                    },
+                    keyframes: {
+                        pop: {
+                            '0%': { transform: 'scale(0.8)', opacity: '0' },
+                            '100%': { transform: 'scale(1)', opacity: '1' }
+                        },
+                        bounceShort: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-6px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        .tile-grab {
+            cursor: grab;
+            touch-action: none;
+        }
+        .tile-grab:active {
+            cursor: grabbing;
+        }
+
+        .grid-cell {
+            transition: all 0.15s ease-in-out;
+        }
+
+        .modal-backdrop {
+            background-color: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(4px);
+        }
+
+        .dragging-ghost {
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%) scale(1.1);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+            opacity: 0.9;
+        }
+
+        /* Custom Scrollbars */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 9999px;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #475569;
+        }
+    </style>
+</head>
+<body class="bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-slate-100 min-h-screen flex flex-col justify-between overflow-x-hidden antialiased transition-colors duration-200">
+
+    <!-- Top Navigation Header -->
+    <header class="w-full bg-white dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700/60 shadow-sm sticky top-0 z-30 px-3 py-2.5">
+        <div class="max-w-md mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-1.5">
+                <button id="btn-help" class="p-2 text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-100 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700/50 transition" title="How to Play">
+                    <i class="fa-solid fa-circle-question text-lg"></i>
+                </button>
+                <button id="btn-stats" class="p-2 text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-100 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700/50 transition" title="Statistics">
+                    <i class="fa-solid fa-chart-column text-lg"></i>
+                </button>
+            </div>
+
+            <!-- Logo Title & Game Type Switcher -->
+            <div class="text-center flex flex-col items-center">
+                <h1 id="app-title-logo" class="text-lg sm:text-xl font-black tracking-tight text-emerald-600 dark:text-emerald-400 flex items-center justify-center space-x-1">
+                    <span id="header-logo-text">CORNERHOP</span>
+                    <span id="header-type-badge" class="text-[10px] font-bold uppercase tracking-widest px-1.5 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-300 ml-1">WORD</span>
+                </h1>
+                
+                <!-- Word vs Maths Mode Switcher -->
+                <div class="flex items-center bg-slate-200 dark:bg-slate-700 p-0.5 rounded-lg mt-1 space-x-0.5 text-[10px] font-extrabold">
+                    <button id="tab-word-mode" class="px-2.5 py-0.5 rounded-md bg-emerald-600 text-white shadow-xs transition">WORD</button>
+                    <button id="tab-maths-mode" class="px-2.5 py-0.5 rounded-md text-slate-600 dark:text-slate-300 hover:text-emerald-500 transition">MATHS</button>
+                </div>
+            </div>
+
+            <div class="flex items-center space-x-1">
+                <button id="btn-sound" class="p-2 text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-100 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700/50 transition" title="Toggle Sound">
+                    <i id="icon-sound" class="fa-solid fa-volume-high text-lg"></i>
+                </button>
+                <button id="btn-theme" class="p-2 text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-100 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700/50 transition" title="Toggle Theme">
+                    <i id="icon-theme" class="fa-solid fa-moon text-lg"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Game Container -->
+    <main class="flex-1 w-full max-w-md mx-auto px-3 py-2 flex flex-col justify-between items-center">
+        
+        <!-- Status Bar & Mode Switcher -->
+        <div class="w-full flex items-center justify-between mb-2 px-1">
+            <div class="flex items-center space-x-2">
+                <button id="btn-mode-toggle" class="text-xs font-bold px-2.5 py-1.5 rounded-lg bg-emerald-600 text-white shadow-sm hover:bg-emerald-700 transition flex items-center space-x-1">
+                    <i class="fa-solid fa-calendar-day text-[10px]"></i>
+                    <span id="label-mode-toggle">Daily</span>
+                </button>
+            </div>
+
+            <!-- Game Timer & Moves -->
+            <div class="flex items-center space-x-3 text-xs font-semibold text-slate-500 dark:text-slate-400">
+                <div class="flex items-center space-x-1">
+                    <i class="fa-regular fa-clock text-slate-400"></i>
+                    <span id="timer-display" class="font-mono">00:00</span>
+                </div>
+                <div class="flex items-center space-x-1">
+                    <i class="fa-solid fa-arrows-rotate text-slate-400"></i>
+                    <span id="moves-display">0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Central Overhanging Frame Board -->
+        <div class="w-full flex-1 flex items-center justify-center py-2">
+            <div id="grid-board-container" class="relative bg-slate-200/80 dark:bg-slate-800/80 p-3 rounded-2xl shadow-inner border border-slate-300/60 dark:border-slate-700/60">
+                <div id="grid-board" class="grid gap-1.5 sm:gap-2">
+                    <!-- Dynamic Grid Cells Rendered via JS -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls Toolbar & Letter Tray Area -->
+        <div class="w-full space-y-2 mt-auto">
+            
+            <!-- Action Toolbar (Directly Above Bottom Letter Tray) -->
+            <div class="grid grid-cols-4 gap-2">
+                <button id="btn-check" class="py-2.5 px-2 bg-emerald-600 hover:bg-emerald-700 active:scale-95 text-white font-bold text-xs rounded-xl shadow-sm transition flex flex-col items-center justify-center space-y-0.5">
+                    <i class="fa-solid fa-spell-check text-sm"></i>
+                    <span>Check</span>
+                </button>
+                <button id="btn-hint" class="py-2.5 px-2 bg-amber-500 hover:bg-amber-600 active:scale-95 text-white font-bold text-xs rounded-xl shadow-sm transition flex flex-col items-center justify-center space-y-0.5">
+                    <i class="fa-solid fa-lightbulb text-sm"></i>
+                    <span id="hint-btn-text">Hint (3/3)</span>
+                </button>
+                <button id="btn-undo" class="py-2.5 px-2 bg-slate-600 hover:bg-slate-700 active:scale-95 text-white font-bold text-xs rounded-xl shadow-sm transition flex flex-col items-center justify-center space-y-0.5">
+                    <i class="fa-solid fa-rotate-left text-sm"></i>
+                    <span>Undo</span>
+                </button>
+                <button id="btn-shuffle" class="py-2.5 px-2 bg-indigo-600 hover:bg-indigo-700 active:scale-95 text-white font-bold text-xs rounded-xl shadow-sm transition flex flex-col items-center justify-center space-y-0.5">
+                    <i class="fa-solid fa-shuffle text-sm"></i>
+                    <span>Shuffle</span>
+                </button>
+            </div>
+
+            <!-- Letter/Tile Tray (Bottom Zone) -->
+            <div class="bg-slate-200/90 dark:bg-slate-800/90 p-3 rounded-2xl border border-slate-300/70 dark:border-slate-700/70 shadow-md">
+                <div class="flex items-center justify-between mb-1.5 px-1">
+                    <span class="text-[11px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Unplaced Tiles</span>
+                    <span id="tray-count-badge" class="text-[10px] font-extrabold px-1.5 py-0.5 rounded-full bg-slate-300 dark:bg-slate-700 text-slate-600 dark:text-slate-300">0 left</span>
+                </div>
+                <div id="letter-tray" class="flex flex-wrap gap-1.5 sm:gap-2 justify-center items-center min-h-[52px] p-1 bg-white/50 dark:bg-slate-900/50 rounded-xl border border-dashed border-slate-300 dark:border-slate-700">
+                    <!-- Letter/Operator Tiles Rendered via JS -->
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Notification Toast Float -->
+    <div id="toast" class="fixed top-16 left-1/2 -translate-x-1/2 z-50 px-4 py-2 bg-slate-900/90 dark:bg-slate-100/90 text-white dark:text-slate-900 text-xs font-bold rounded-full shadow-lg transition-all duration-300 opacity-0 pointer-events-none transform -translate-y-2">
+        Notification Message
+    </div>
+
+    <!-- MODAL: How to Play -->
+    <div id="modal-help" class="fixed inset-0 z-50 flex items-center justify-center p-4 modal-backdrop hidden">
+        <div class="bg-white dark:bg-slate-800 rounded-2xl max-w-sm w-full p-5 shadow-2xl border border-slate-200 dark:border-slate-700 text-left animate-pop relative max-h-[85vh] overflow-y-auto">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-200 dark:border-slate-700 mb-3">
+                <h3 class="text-base font-extrabold text-slate-800 dark:text-slate-100 flex items-center space-x-2">
+                    <i class="fa-solid fa-circle-question text-emerald-500"></i>
+                    <span>How to Play</span>
+                </h3>
+                <button class="btn-close-modal text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 p-1 transition">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            <div class="space-y-3 text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+                <p><strong class="text-slate-800 dark:text-slate-100">Objective:</strong> Complete all 4 overhanging frame edges with valid words (CornerHop) or arithmetic equations (MathsHop).</p>
+                
+                <div class="space-y-2 pt-1">
+                    <div class="flex items-start space-x-2">
+                        <span class="w-5 h-5 rounded bg-emerald-600 text-white flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">1</span>
+                        <p><strong>Corner Intersections:</strong> The 4 corner tiles are pre-locked anchors that serve as the intersection points for both connected edges.</p>
+                    </div>
+                    <div class="flex items-start space-x-2">
+                        <span class="w-5 h-5 rounded bg-emerald-600 text-white flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">2</span>
+                        <p><strong>Maths Mode (BODMAS):</strong> Pre-placed '=' sign anchors divide the equation. Operations follow strict order of operations (* and / before + and -).</p>
+                    </div>
+                    <div class="flex items-start space-x-2">
+                        <span class="w-5 h-5 rounded bg-emerald-600 text-white flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">3</span>
+                        <p><strong>Drag or Tap:</strong> Drag tiles directly from the bottom tray into empty slots or tap a tile and tap a slot to place it.</p>
+                    </div>
+                </div>
+
+                <div class="bg-amber-50 dark:bg-amber-950/40 p-2.5 rounded-xl border border-amber-200 dark:border-amber-900/50 text-amber-800 dark:text-amber-200 text-[11px] mt-2">
+                    <i class="fa-solid fa-lightbulb text-amber-500 mr-1"></i>
+                    <strong>Hints:</strong> You get a maximum of 3 hints per puzzle. Hinted tiles are marked yellow on your final share grid.
+                </div>
+            </div>
+            <button class="btn-close-modal w-full mt-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-xl shadow transition">
+                Got It!
+            </button>
+        </div>
+    </div>
+
+    <!-- MODAL: Game Statistics -->
+    <div id="modal-stats" class="fixed inset-0 z-50 flex items-center justify-center p-4 modal-backdrop hidden">
+        <div class="bg-white dark:bg-slate-800 rounded-2xl max-w-sm w-full p-5 shadow-2xl border border-slate-200 dark:border-slate-700 text-center animate-pop relative">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-200 dark:border-slate-700 mb-4">
+                <h3 class="text-base font-extrabold text-slate-800 dark:text-slate-100 flex items-center space-x-2">
+                    <i class="fa-solid fa-chart-column text-emerald-500"></i>
+                    <span>Statistics</span>
+                </h3>
+                <button class="btn-close-modal text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 p-1 transition">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <div class="grid grid-cols-3 gap-2 mb-4">
+                <div class="bg-slate-100 dark:bg-slate-700/50 p-2.5 rounded-xl">
+                    <span id="stat-played" class="block text-xl font-black text-slate-800 dark:text-slate-100">0</span>
+                    <span class="text-[10px] font-semibold text-slate-400 dark:text-slate-400 uppercase">Played</span>
+                </div>
+                <div class="bg-slate-100 dark:bg-slate-700/50 p-2.5 rounded-xl">
+                    <span id="stat-wins" class="block text-xl font-black text-emerald-600 dark:text-emerald-400">0</span>
+                    <span class="text-[10px] font-semibold text-slate-400 dark:text-slate-400 uppercase">Solved</span>
+                </div>
+                <div class="bg-slate-100 dark:bg-slate-700/50 p-2.5 rounded-xl">
+                    <span id="stat-streak" class="block text-xl font-black text-amber-500">0</span>
+                    <span class="text-[10px] font-semibold text-slate-400 dark:text-slate-400 uppercase">Streak</span>
+                </div>
+            </div>
+
+            <button id="btn-share-stats" class="w-full py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-xl shadow transition flex items-center justify-center space-x-1.5">
+                <i class="fa-solid fa-share-nodes"></i>
+                <span>Share Stats</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- MODAL: Puzzle Victory -->
+    <div id="modal-win" class="fixed inset-0 z-50 flex items-center justify-center p-4 modal-backdrop hidden">
+        <div class="bg-white dark:bg-slate-800 rounded-2xl max-w-sm w-full p-5 shadow-2xl border border-slate-200 dark:border-slate-700 text-center animate-pop relative">
+            <div class="w-12 h-12 bg-emerald-100 dark:bg-emerald-950/80 text-emerald-600 dark:text-emerald-400 rounded-full flex items-center justify-center mx-auto mb-3 text-2xl shadow-inner">
+                <i class="fa-solid fa-trophy"></i>
+            </div>
+            <h3 class="text-lg font-black text-slate-800 dark:text-slate-100 mb-1">Puzzle Solved!</h3>
+            <p id="win-subtitle" class="text-xs text-slate-500 dark:text-slate-400 mb-4">Excellent work! You completed the frame.</p>
+
+            <div class="bg-slate-100 dark:bg-slate-900/60 p-3 rounded-xl mb-4 text-xs space-y-1 font-medium text-slate-600 dark:text-slate-300">
+                <div class="flex justify-between">
+                    <span>Time Taken:</span>
+                    <strong id="win-time" class="text-slate-800 dark:text-slate-100 font-mono">00:00</strong>
+                </div>
+                <div class="flex justify-between">
+                    <span>Moves Made:</span>
+                    <strong id="win-moves" class="text-slate-800 dark:text-slate-100">0</strong>
+                </div>
+            </div>
+
+            <div class="space-y-2">
+                <button id="btn-share-win" class="w-full py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-xl shadow transition flex items-center justify-center space-x-1.5">
+                    <i class="fa-solid fa-share-nodes"></i>
+                    <span>Share Results</span>
+                </button>
+                <button id="btn-next-puzzle" class="w-full py-2 bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 font-bold text-xs rounded-xl hover:bg-slate-300 dark:hover:bg-slate-600 transition">
+                    Play Practice Round
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: Custom Share Modal Overlay -->
+    <div id="modal-share" class="fixed inset-0 z-[10000] flex items-center justify-center p-4 modal-backdrop hidden">
+        <div class="bg-white dark:bg-slate-800 rounded-2xl max-w-sm w-full p-5 shadow-2xl border border-slate-200 dark:border-slate-700 text-center animate-pop relative">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-200 dark:border-slate-700 mb-3">
+                <h3 class="text-base font-extrabold text-slate-800 dark:text-slate-100 flex items-center space-x-1.5">
+                    <i class="fa-solid fa-share-nodes text-emerald-500"></i>
+                    <span>Share Results</span>
+                </h3>
+                <button id="btn-close-share-x" class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 p-1 transition" title="Close">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <p class="text-xs text-slate-500 dark:text-slate-400 mb-3">Copy your spoiler-free grid result to share with friends!</p>
+
+            <div class="bg-slate-100 dark:bg-slate-900/80 p-3 rounded-xl border border-slate-200 dark:border-slate-700 font-mono text-xs text-left text-slate-700 dark:text-slate-200 mb-4 whitespace-pre-wrap select-all overflow-x-auto shadow-inner" id="share-preview-text">
+                <!-- Share Preview Text -->
+            </div>
+
+            <div class="flex flex-col space-y-2">
+                <button id="btn-copy-share-modal" class="w-full py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-xl shadow flex items-center justify-center space-x-1.5 transition active:scale-95">
+                    <i class="fa-regular fa-copy"></i>
+                    <span id="btn-copy-text">Copy to Clipboard</span>
+                </button>
+                <button id="btn-close-share-bottom" class="w-full py-2 bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200 font-bold text-xs rounded-xl hover:bg-slate-300 dark:hover:bg-slate-600 transition">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Application Engine -->
+    <script>
+        // --- 1. Audio Synthesizer ---
+        class SoundEngine {
+            constructor() {
+                this.ctx = null;
+                this.muted = false;
+            }
+            init() {
+                if (!this.ctx) {
+                    const AudioCtx = window.AudioContext || window.webkitAudioContext;
+                    if (AudioCtx) this.ctx = new AudioCtx();
+                }
+            }
+            playTone(freq, duration, type = 'sine') {
+                if (this.muted) return;
+                this.init();
+                if (!this.ctx) return;
+                try {
+                    const osc = this.ctx.createOscillator();
+                    const gain = this.ctx.createGain();
+                    osc.type = type;
+                    osc.frequency.setValueAtTime(freq, this.ctx.currentTime);
+                    gain.gain.setValueAtTime(0.1, this.ctx.currentTime);
+                    gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + duration);
+                    osc.connect(gain);
+                    gain.connect(this.ctx.destination);
+                    osc.start();
+                    osc.stop(this.ctx.currentTime + duration);
+                } catch(e) {}
+            }
+            placeTile() { this.playTone(440, 0.08, 'triangle'); }
+            removeTile() { this.playTone(330, 0.08, 'sine'); }
+            success() { 
+                this.playTone(523.25, 0.1, 'sine');
+                setTimeout(() => this.playTone(659.25, 0.1, 'sine'), 100);
+                setTimeout(() => this.playTone(783.99, 0.2, 'sine'), 200);
+            }
+            error() { this.playTone(220, 0.15, 'sawtooth'); }
+        }
+        const audio = new SoundEngine();
+
+        // --- 2. Deterministic Seed PRNG ---
+        function cyrb128(str) {
+            let h1 = 1779033703, h2 = 3144134277, h3 = 1013904242, h4 = 2773480762;
+            for (let i = 0, ch; i < str.length; i++) {
+                ch = str.charCodeAt(i);
+                h1 = h2 ^ Math.imul(h1 ^ ch, 597399067);
+                h2 = h3 ^ Math.imul(h2 ^ ch, 286986023);
+                h3 = h4 ^ Math.imul(h4 ^ ch, 951274213);
+                h4 = h1 ^ Math.imul(h4 ^ ch, 271604417);
+            }
+            h1 = Math.imul(h3 ^ (h1 >>> 18), 597399067);
+            h2 = Math.imul(h4 ^ (h2 >>> 22), 286986023);
+            h3 = Math.imul(h1 ^ (h3 >>> 17), 951274213);
+            h4 = Math.imul(h2 ^ (h4 >>> 19), 271604417);
+            return [(h1^h2^h3^h4)>>>0, (h2^h1)>>>0, (h3^h1)>>>0, (h4^h1)>>>0];
+        }
+
+        function sfc32(a, b, c, d) {
+            return function() {
+                a >>>= 0; b >>>= 0; c >>>= 0; d >>>= 0; 
+                var t = (a + b | 0) + d | 0;
+                d = d + 1 | 0;
+                a = b ^ b >>> 9;
+                b = c + (c << 3) | 0;
+                c = c << 21 | c >>> 11;
+                c = c + t | 0;
+                return (t >>> 0) / 4294967296;
+            }
+        }
+
+        function getSeededRandom(seedStr) {
+            const seed = cyrb128(seedStr);
+            return sfc32(seed[0], seed[1], seed[2], seed[3]);
+        }
+
+        function getDailyDateString() {
+            const now = new Date();
+            const year = now.getUTCFullYear();
+            const month = String(now.getUTCMonth() + 1).padStart(2, '0');
+            const day = String(now.getUTCDate()).padStart(2, '0');
+            return `${year}-${month}-${day}`;
+        }
+
+        // --- 3. Comprehensive English Dictionary Pool ---
+        const COMMON_DICTIONARY = [
+            "ABOUT","ABOVE","ACTOR","ACUTE","ADAPT","ADMIT","ADOPT","ADULT","AFTER","AGAIN","AGREE","AHEAD","ALARM","ALBUM","ALERT","ALIEN","ALIGN","ALIKE","ALIVE","ALLOW","ALONG","ALTER","AMONG","ANGEL","ANGER","ANGLE","ANGRY","APART","APPLE","APPLY","ARENA","ARGUE","ARISE","ARMOR","ARRAY","ARROW","ASIDE","ASSET","AUDIO","AUDIT","AVOID","AWAKE","AWARE","BADGE","BASIC","BASIS","BEACH","BEGIN","BEING","BELOW","BENCH","BLACK","BLADE","BLAME","BLANK","BLAST","BLEED","BLEND","BLESS","BLIND","BLOCK","BLOOD","BLOOM","BOARD","BOAST","BOOST","BOUND","BRAIN","BRAND","BREAD","BREAK","BREED","BRICK","BRIDE","BRIEF","BRING","BROAD","BROWN","BUILD","BUNCH","BUYER","CABLE","CANDY","CRAFT","CRANE","CRASH","CRAWL","CRAZY","CREAM","CREEK","CRIME","CRISP","CROWN","DANCE","DEATH","DELAY","DEPTH","DIRTY","DRAFT","DREAM","DRESS","DRIVE","EAGER","EAGLE","EARLY","EARTH","EIGHT","ELITE","EMPTY","ENEMY","ENJOY","ENTER","EQUAL","ERROR","EVENT","EVERY","EXACT","FAITH","FALSE","FATAL","FIELD","FIFTH","FIGHT","FINAL","FIRST","FLAME","FLASH","FLEET","FLOAT","FLOOD","FLOOR","FLOUR","FLUID","FOCUS","FORCE","FORTH","FORTY","FORUM","FOUND","FRAME","FRESH","FRONT","FRUIT","GIANT","GIVEN","GLASS","GLOBE","GLOVE","GRACE","GRADE","GRAIN","GRAND","GRANT","GRAPE","GRASP","GRASS","GRAVE","GREAT","GREEN","GREET","GROSS","GROUP","GUARD","GUESS","GUIDE","HAPPY","HARSH","HEART","HEAVY","HELLO","HONOR","HORSE","HOTEL","HOUSE","HUMAN","HUMOR","IDEAL","IMAGE","INDEX","INNER","INPUT","ISSUE","JEWEL","JOINT","JUDGE","JUICE","JUMP1","KNIFE","KNOCK","LABEL","LABOR","LARGE","LATCH","LATER","LAUGH","LAYER","LEARN","LEASE","LEAST","LEAVE","LEGAL","LEMON","LEVEL","LIGHT","LIMIT","LOCAL","LOGIC","LOOSE","LOWER","LUCKY","LUNCH","MAGIC","MAJOR","MAKER","MARCH","MATCH","MAYOR","MEDAL","MEDIA","METAL","METER","MIDST","MIGHT","MINOR","MODEL","MONEY","MONTH","MORAL","MOTOR","MOUNT","MOUSE","MOUTH","MOVIE","MUSIC","NEEDS","NERVE","NEVER","NIGHT","NOBLE","NOISE","NORTH","NOTED","NOVEL","NURSE","OCEAN","OFFER","OFTEN","ORDER","OTHER","OUTER","OWNER","PANEL","PAPER","PARTY","PEACE","PHASE","PHONE","PIANO","PIECE","PILOT","PITCH","PLACE","PLAIN","PLANE","PLANT","PLATE","POINT","POWER","PRESS","PRICE","PRIDE","PRIME","PRINT","PRIZE","PROOF","PROUD","PROVE","PULSE","PUNCH","PUPIL","PURSE","QUEEN","QUICK","QUIET","QUITE","RADAR","RADIO","RAISE","RALLY","RANCH","RANGE","RAPID","RATIO","REACH","REACT","READY","REALM","REBEL","REFER","RELAX","REPLY","RESET","RIDGE","RIGHT","RIVAL","RIVER","ROBOT","ROUGH","ROUND","ROUTE","ROYAL","RURAL","SCALE","SCENE","SCOPE","SCORE","SENSE","SERVE","SEVEN","SHADE","SHAKE","SHARE","SHARP","SHEET","SHELF","SHELL","SHIFT","SHINE","SHIRT","SHOCK","SHOOT","SHORT","SHOWN","SIGHT","SIGNAL","SILENT","SILVER","SIMPLE","SINGLE","SISTER","SIXTH","SKILL","SLEEP","SLIDE","SMART","SMILE","SMOKE","SOLID","SOLVE","SORRY","SOUND","SOUTH","SPACE","SPARE","SPEAK","SPEED","SPEND","SPLIT","SPOKE","SPORT","STAFF","STAGE","STAND","STARE","START","STATE","STEAM","STEEL","STEEP","STICK","STILL","STOCK","STONE","STORE","STORM","STORY","STRIP","STUDY","STUFF","STYLE","SUGAR","SUITE","SUPER","SWEET","TABLE","TASTE","TEACH","THANK","THEME","THERE","THESE","THICK","THING","THINK","THIRD","THOSE","THREE","THROW","TIGHT","TITLE","TODAY","TOPIC","TOTAL","TOUCH","TOWER","TRACK","TRADE","TRAIN","TREAT","TREND","TRIAL","TRIBE","TRICK","TRUST","TRUTH","TWICE","UNDER","UNION","UNITE","UNTIL","UPPER","UPSET","URBAN","USUAL","VALUE","VAPOR","VIDEO","VIRUS","VISIT","VITAL","VOICE","WASTE","WATCH","WATER","WHEEL","WHERE","WHICH","WHITE","WHOLE","WHOSE","WOMAN","WORLD","WORRY","WORTH","WOULD","WOUND","WRITE","WRONG","YOUTH",
+            "ACTION","ACTIVE","ACTUAL","ADVICE","ADVISE","AFFECT","AFFORD","AGENCY","AGENDA","ALMOST","ALWAYS","AMOUNT","ANIMAL","ANNUAL","ANSWER","ANYONE","ANYWAY","APPEAL","APPEAR","AUTHOR","BAKERY","BALLOT","BANKER","BARGAIN","BEAUTY","BEFORE","BEHIND","BELIEF","BELONG","BESIDE","BETTER","BEYOND","BISHOP","BORDER","BOTTLE","BOTTOM","BOUGHT","BRANCH","BRIDGE","BRIGHT","BROKEN","BUDGET","BURDEN","BUREAU","BUTTON","CAMERA","CAMPUS","CANDLE","CANNON","CANVAS","CAPITAL","CARBON","CAREER","CARPET","CASTLE","CASUAL","CENTER","CENTURY","CHANCE","CHANGE","CHARGE","CHARM","CHARTER","CHOOSE","CHURCH","CIRCLE","CLIENT","CLIMATE","CLINIC","CLOSED","CLOSER","COFFEE","COLUMN","COMBAT","COMEDY","COMFORT","COMMON","COMPLY","COPPER","CORNER","COSTLY","COUNTY","COUPLE","COURT","COUSIN","CREDIT","CRIME","CRISIS","CUSTOM","DAMAGE","DANGER","DEBATE","DECIDE","DEFEAT","DEFEND","DEFINE","DEGREE","DEMAND","DEPEND","DEPUTY","DESERT","DESIGN","DESIRE","DETAIL","DETECT","DEVICE","DIRECT","DOCTOR","DOMAIN","DOUBLE","DRIVEN","DRIVER","DURING","EASILY","EFFECT","EFFORT","EIGHTH","EITHER","ELEVEN","EMPIRE","EMPLOY","ENERGY","ENGINE","ENOUGH","ENSURE","ENTIRE","ESCAPE","ESTATE","ETHICS","EXPENSE","EXPORT","FABRIC","FACIAL","FACTOR","FACTORY","FAMILY","FAMOUS","FARMER","FASTEN","FATHER","FELLOW","FEMALE","FIGURE","FINISH","FLIGHT","FLOWER","FLYING","FOLLOW","FORGIVE","FORMER","FOSTER","FOURTH","FRIEND","FUTURE","GARDEN","GATHER","GENDER","GENTLE","GLOBAL","GOLDEN","GOVERN","GRANT","GROUND","GROWTH","GUILTY","HANDLE","HAPPEN","HARBOR","HARDLY","HEALTH","HEAVEN","HEIGHT","HELMET","HIDDEN","HOLDER","HONEST","HORIZON","HOSPITAL","HUNTER","IGNORE","IMPACT","IMPORT","INCOME","INCREASE","INDIAN","INJURY","INSIDE","INTENT","INVEST","ISLAND","ITSELF","JACKET","JOURNAL","JUNGLE","JUNIOR","KEEPER","KINDLY","KNIGHT","LABOR","LANDSCAPE","LATTER","LAUGH","LAWYER","LEADER","LEAGUE","LEGEND","LENGTH","LESSON","LETTER","LIABLE","LIBERTY","LIBRARY","LIQUID","LISTEN","LITTLE","LIVING","LOCATE","LONELY","LUMBER","LUXURY","MAGNET","MANAGE","MANNER","MANUAL","MARGIN","MARKET","MASTER","MATTER","MATURE","MAXIMUM","MEADOW","MEDIUM","MEMBER","MEMORY","MENTAL","METHOD","MIDDLE","MIDNIGHT","MINUTE","MIRROR","MOBILE","MODERN","MODEST","MODULE","MOMENT","MONSTER","MONTHLY","MORNING","MOTHER","MOTION","MOUNTAIN","MUSEUM","MUTUAL","NATION","NATIVE","NATURE","NEARBY","NEIGHBOR","NEITHER","NERVOUS","NETWORK","NEUTRAL","NORMAL","NOTICE","NOTION","NUMBER","OBJECT","OBTAIN","OFFICE","OFFSET","ONLINE","OPENING","OPERATE","OPPOSE","OPTION","ORANGE","ORIGIN","OUTPUT","PACKET","PALACE","PARENT","PARTNER","PARTY","PASSAGE","PASSION","PATIENT","PATTERN","PAYMENT","PENCIL","PEOPLE","PERIOD","PERMIT","PERSON","PHASE","PHONE","PHOTO","PHRASE","PHYSIC","PICKET","PICTURE","PLANET","PLASTIC","POCKET","POLICE","POLICY","POLISH","PORTION","POTATO","POWDER","POWER","PRAISE","PRAYER","PREFER","PRESERVE","PREVENT","PRIEST","PRINCE","PRISON","PROFIT","PROMPT","PROPER","PUBLIC","PUNISH","PURPLE","PURPOSE","PUZZLE","QUALITY","QUARTER","RABBIT","RATING","READER","REASON","RECEIPT","RECORD","REDUCE","REFORM","REFUSE","REGION","REGRET","REJECT","RELATE","RELIEF","REMAIN","REMEDY","REMOVE","REPAIR","REPEAT","REPORT","RESCUE","RESORT","RESULT","RETAIN","RETURN","REVEAL","REVIEW","REWARD","RHYTHM","RIBBON","RIDING","ROCKET","ROLLED","ROUTINE","RUNNER","SAFETY","SALARY","SAMPLE","SAVING","SCHEME","SCHOOL","SCREEN","SEASON","SECOND","SECRET","SECTOR","SECURE","SEEL0","SELECT","SENIOR","SENSE","SERIES","SERVER","SETTLE","SEVERE","SHADOW","SHARED","SHELTER","SHERIFF","SHIELD","SIGNAL","SILENT","SILVER","SIMPLE","SINGLE","SISTER","SKETCH","SLIGHT","SMOOTH","SOCIAL","SOLIDAR","SOURCE","SOVIET","SPEECH","SPIRIT","SPRING","SQUARE","STABLE","STANDARD","STATION","STATUS","STATUE","STEADY","STEREO","STICKER","STREET","STRIKE","STRING","STRONG","STUDIO","SUBMIT","SUDDEN","SUFFER","SUMMER","SUNDAY","SUPERB","SUPPLY","SURFACE","SURVEY","SYMBOL","SYSTEM","TARGET","TASTE","TEACHER","TEAM","TEMPLE","TENNIS","TENSION","TERRITORY","THEORY","THIRTY","THREAT","TICKET","TIMBER","TISSUE","TOBACCO","TODAY","TONIGHT","TOPIC","TORCH","TOWARD","TOWER","TRAFFIC","TRAVEL","TREATY","TREND","TRIBAL","TUNNEL","TWELVE","TWENTY","UNIONS","UNIQUE","UNIT","UNITED","UPDATE","URGENT","VACANT","VALLEY","VALUABLE","VARIETY","VECTOR","VEHICLE","VERBAL","VERSION","VICTIM","VICTORY","VILLAGE","VIRTUE","VISION","VOLUME","WALKER","WARMTH","WEALTH","WEAPON","WEATHER","WEEKLY","WEIGHT","WINDOW","WINTER","WISDOM","WITHIN","WITHOUT","WONDER","WORKER","WORTHY","WRITER","YELLOW"
+        ];
+
+        // --- 4. Game Engine State ---
+        let gameCategory = 'word'; // 'word' or 'maths'
+        let isDailyMode = true;
+        let currentPuzzle = null;
+        let boardState = {}; // cellKey -> tileObj
+        let trayState = [];  // Array of tileObj
+        let selectedTile = null;
+        let moveHistory = [];
+        let movesCount = 0;
+        let hintsUsed = 0;
+        const MAX_HINTS = 3;
+        let timerSeconds = 0;
+        let timerInterval = null;
+        let gameActive = false;
+
+        let userStats = {
+            played: 0,
+            wins: 0,
+            currentStreak: 0,
+            lastPlayedDate: null
+        };
+
+        // --- 5. Frame & Math Generator Engine ---
+        function generatePuzzle(size = 5, seedString = null) {
+            const prng = seedString ? getSeededRandom(seedString) : Math.random;
+            const gridDim = parseInt(size, 10);
+
+            const corners = {
+                TL: `0-0`,
+                TR: `0-${gridDim - 1}`,
+                BL: `${gridDim - 1}-0`,
+                BR: `${gridDim - 1}-${gridDim - 1}`
+            };
+
+            const topCells = [];
+            for (let c = 0; c < gridDim; c++) topCells.push(`0-${c}`);
+
+            const bottomCells = [];
+            for (let c = 0; c < gridDim; c++) bottomCells.push(`${gridDim - 1}-${c}`);
+
+            const leftCells = [];
+            for (let r = 0; r < gridDim; r++) leftCells.push(`${r}-0`);
+
+            const rightCells = [];
+            for (let r = 0; r < gridDim; r++) rightCells.push(`${r}-${gridDim - 1}`);
+
+            const frameCellsSet = new Set([...topCells, ...bottomCells, ...leftCells, ...rightCells]);
+            const frameCells = Array.from(frameCellsSet);
+            const solutionLetters = {};
+
+            let preset = null;
+
+            if (gameCategory === 'word') {
+                let attempts = 0;
+                while (!preset && attempts < 500) {
+                    attempts++;
+                    const topWord = COMMON_DICTIONARY[Math.floor(prng() * COMMON_DICTIONARY.length)];
+                    if (topWord.length !== gridDim) continue;
+
+                    const btmWord = COMMON_DICTIONARY[Math.floor(prng() * COMMON_DICTIONARY.length)];
+                    if (btmWord.length !== gridDim) continue;
+
+                    const cTL = topWord[0];
+                    const cTR = topWord[topWord.length - 1];
+                    const cBL = btmWord[0];
+                    const cBR = btmWord[btmWord.length - 1];
+
+                    const leftCandidates = COMMON_DICTIONARY.filter(w => w.length === gridDim && w[0] === cTL && w[w.length - 1] === cBL);
+                    const rightCandidates = COMMON_DICTIONARY.filter(w => w.length === gridDim && w[0] === cTR && w[w.length - 1] === cBR);
+
+                    if (leftCandidates.length > 0 && rightCandidates.length > 0) {
+                        preset = {
+                            top: [topWord[0], topWord[1], topWord[2], topWord[3], topWord[4]],
+                            bottom: [btmWord[0], btmWord[1], btmWord[2], btmWord[3], btmWord[4]],
+                            left: [leftCandidates[0][0], leftCandidates[0][1], leftCandidates[0][2], leftCandidates[0][3], leftCandidates[0][4]],
+                            right: [rightCandidates[0][0], rightCandidates[0][1], rightCandidates[0][2], rightCandidates[0][3], rightCandidates[0][4]]
+                        };
+                    }
+                }
+
+                if (!preset) {
+                    preset = {
+                        top: ["P","L","A","N","T"],
+                        bottom: ["K","I","T","E","S"],
+                        left: ["P","A","R","K","S"],
+                        right: ["T","O","T","E","S"]
+                    };
+                }
+
+                for (let i = 0; i < gridDim; i++) {
+                    solutionLetters[topCells[i]] = preset.top[i];
+                    solutionLetters[bottomCells[i]] = preset.bottom[i];
+                    solutionLetters[leftCells[i]] = preset.left[i];
+                    solutionLetters[rightCells[i]] = preset.right[i];
+                }
+
+                var anchors = [corners.TL, corners.TR, corners.BL, corners.BR];
+
+            } else {
+                // Procedural BODMAS Equations with 5-cell fixed structure:
+                // [Op1] [Op] [Op2] [=] [Result]
+                let attempts = 0;
+                const ops = ['+', '-', '*', '/'];
+
+                function evalExpr(num1, op, num2) {
+                    num1 = Number(num1);
+                    num2 = Number(num2);
+                    if (op === '+') return num1 + num2;
+                    if (op === '-') return num1 - num2;
+                    if (op === '*') return num1 * num2;
+                    if (op === '/') {
+                        if (num2 === 0 || num1 % num2 !== 0) return null;
+                        return num1 / num2;
+                    }
+                    return null;
+                }
+
+                while (!preset && attempts < 1000) {
+                    attempts++;
+
+                    const A = Math.floor(prng() * 50) + 1; // Top-Left
+                    const X = Math.floor(prng() * 20) + 1; // Top Op2
+                    const opT = ops[Math.floor(prng() * ops.length)];
+                    const B = evalExpr(A, opT, X); // Top-Right
+
+                    if (B === null || B < 1 || B > 99) continue;
+
+                    const Y = Math.floor(prng() * 20) + 1; // Left Op2
+                    const opL = ops[Math.floor(prng() * ops.length)];
+                    const C = evalExpr(A, opL, Y); // Bottom-Left
+
+                    if (C === null || C < 1 || C > 99) continue;
+
+                    const Z = Math.floor(prng() * 20) + 1; // Bottom Op2
+                    const opB = ops[Math.floor(prng() * ops.length)];
+                    const D = evalExpr(C, opB, Z); // Bottom-Right
+
+                    if (D === null || D < 1 || D > 99) continue;
+
+                    // Find opR and W such that B opR W = D
+                    let validW = [];
+                    for (let opR of ops) {
+                        for (let W = 1; W <= 50; W++) {
+                            if (evalExpr(B, opR, W) === D) {
+                                validW.push({ opR, W });
+                            }
+                        }
+                    }
+
+                    if (validW.length > 0) {
+                        const chosen = validW[Math.floor(prng() * validW.length)];
+                        preset = {
+                            top: [A, opT, X, '=', B],
+                            bottom: [C, opB, Z, '=', D],
+                            left: [A, opL, Y, '=', C],
+                            right: [B, chosen.opR, chosen.W, '=', D]
+                        };
+                    }
+                }
+
+                if (!preset) {
+                    preset = {
+                        top: [12, '+', 35, '=', 47],
+                        bottom: [48, '/', 12, '=', 4],
+                        left: [12, '*', 4, '=', 48],
+                        right: [47, '-', 43, '=', 4]
+                    };
+                }
+
+                // Map preset to grid cells
+                for (let i = 0; i < gridDim; i++) {
+                    solutionLetters[topCells[i]] = String(preset.top[i]);
+                    solutionLetters[bottomCells[i]] = String(preset.bottom[i]);
+                    solutionLetters[leftCells[i]] = String(preset.left[i]);
+                    solutionLetters[rightCells[i]] = String(preset.right[i]);
+                }
+
+                // Locked Anchors: Corners + Fixed '=' positions at row/col index 3
+                var anchors = [
+                    corners.TL, corners.TR, corners.BL, corners.BR,
+                    `0-3`, // Top row '='
+                    `3-0`, // Left col '='
+                    `4-3`, // Bottom row '='
+                    `3-4`  // Right col '='
+                ];
+            }
+
+            const trayLetters = [];
+            let tileIdCounter = 1;
+
+            frameCells.forEach(cellKey => {
+                if (!anchors.includes(cellKey)) {
+                    trayLetters.push({
+                        id: `tile-${tileIdCounter++}`,
+                        letter: solutionLetters[cellKey],
+                        targetCell: cellKey,
+                        isHinted: false
+                    });
+                }
+            });
+
+            // Fisher-Yates Shuffle
+            for (let i = trayLetters.length - 1; i > 0; i--) {
+                const j = Math.floor(prng() * (i + 1));
+                [trayLetters[i], trayLetters[j]] = [trayLetters[j], trayLetters[i]];
+            }
+
+            return {
+                size: gridDim,
+                preset: preset,
+                solution: solutionLetters,
+                anchors: anchors,
+                frameCells: frameCells,
+                trayTiles: trayLetters
+            };
+        }
+
+        // --- 6. Initialization & Setup ---
+        document.addEventListener('DOMContentLoaded', () => {
+            loadStats();
+            setupEventListeners();
+            initTheme();
+            setupDragAndDrop();
+            startPuzzle(true);
+        });
+
+        function switchCategory(newCategory) {
+            if (gameCategory === newCategory) return;
+            gameCategory = newCategory;
+
+            const wordTab = document.getElementById('tab-word-mode');
+            const mathsTab = document.getElementById('tab-maths-mode');
+            const logoText = document.getElementById('header-logo-text');
+            const typeBadge = document.getElementById('header-type-badge');
+
+            if (gameCategory === 'word') {
+                wordTab.className = "px-2.5 py-0.5 rounded-md bg-emerald-600 text-white shadow-xs transition";
+                mathsTab.className = "px-2.5 py-0.5 rounded-md text-slate-600 dark:text-slate-300 hover:text-emerald-500 transition";
+                logoText.textContent = "CORNERHOP";
+                typeBadge.textContent = "WORD";
+                typeBadge.className = "text-[10px] font-bold uppercase tracking-widest px-1.5 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-300 ml-1";
+            } else {
+                mathsTab.className = "px-2.5 py-0.5 rounded-md bg-indigo-600 text-white shadow-xs transition";
+                wordTab.className = "px-2.5 py-0.5 rounded-md text-slate-600 dark:text-slate-300 hover:text-indigo-500 transition";
+                logoText.textContent = "MATHSHOP";
+                typeBadge.textContent = "MATHS";
+                typeBadge.className = "text-[10px] font-bold uppercase tracking-widest px-1.5 py-0.5 rounded bg-indigo-100 dark:bg-indigo-950/80 text-indigo-700 dark:text-indigo-300 ml-1";
+            }
+
+            startPuzzle(isDailyMode);
+        }
+
+        function startPuzzle(dailyMode = true) {
+            isDailyMode = dailyMode;
+            moveHistory = [];
+            movesCount = 0;
+            hintsUsed = 0;
+            selectedTile = null;
+            boardState = {};
+
+            updateHintButtonUI();
+
+            document.getElementById('label-mode-toggle').textContent = isDailyMode ? "Daily" : "Practice";
+
+            const dateStr = getDailyDateString();
+            const seed = isDailyMode ? `${gameCategory}-${dateStr}` : null;
+            currentPuzzle = generatePuzzle(5, seed);
+
+            currentPuzzle.anchors.forEach(cellKey => {
+                boardState[cellKey] = {
+                    id: `anchor-${cellKey}`,
+                    letter: currentPuzzle.solution[cellKey],
+                    isAnchor: true
+                };
+            });
+
+            trayState = [...currentPuzzle.trayTiles];
+
+            renderBoard();
+            renderTray();
+            updateMovesDisplay();
+            startTimer();
+            gameActive = true;
+        }
+
+        // --- 7. Board & Tray Rendering ---
+        function renderBoard() {
+            const board = document.getElementById('grid-board');
+            if (!board || !currentPuzzle) return;
+
+            const dim = currentPuzzle.size;
+            board.style.gridTemplateColumns = `repeat(${dim}, minmax(0, 1fr))`;
+            board.innerHTML = '';
+
+            for (let r = 0; r < dim; r++) {
+                for (let c = 0; c < dim; c++) {
+                    const cellKey = `${r}-${c}`;
+                    const isFrame = currentPuzzle.frameCells.includes(cellKey);
+                    const isAnchor = currentPuzzle.anchors.includes(cellKey);
+                    const tile = boardState[cellKey];
+
+                    const cellEl = document.createElement('div');
+                    cellEl.dataset.cellKey = cellKey;
+
+                    let baseClasses = "w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center font-black text-sm sm:text-base transition-all duration-150 grid-cell relative ";
+
+                    if (!isFrame) {
+                        baseClasses += "bg-transparent border-none pointer-events-none";
+                        cellEl.className = baseClasses;
+                    } else if (isAnchor) {
+                        const anchorBg = gameCategory === 'word' ? "bg-emerald-700 border-emerald-600" : "bg-indigo-700 border-indigo-600";
+                        baseClasses += `${anchorBg} text-white shadow-md border-2 cursor-default`;
+                        cellEl.className = baseClasses;
+                        cellEl.textContent = tile ? tile.letter : '';
+                        const star = document.createElement('i');
+                        star.className = "fa-solid fa-lock text-[8px] absolute top-1 right-1 opacity-60";
+                        cellEl.appendChild(star);
+                    } else if (tile) {
+                        if (tile.isHinted) {
+                            baseClasses += "bg-amber-500 text-slate-900 border-2 border-amber-400 shadow-md cursor-pointer animate-pop";
+                        } else {
+                            const tileBg = gameCategory === 'word' ? "bg-emerald-500 dark:bg-emerald-600 border-emerald-400 dark:border-emerald-500" : "bg-indigo-500 dark:bg-indigo-600 border-indigo-400 dark:border-indigo-500";
+                            baseClasses += `${tileBg} text-white border-2 shadow-md cursor-pointer animate-pop`;
+                        }
+                        cellEl.className = baseClasses;
+                        cellEl.textContent = tile.letter;
+
+                        cellEl.addEventListener('click', () => handleBoardCellClick(cellKey));
+                    } else {
+                        baseClasses += "bg-white/80 dark:bg-slate-700/80 border-2 border-dashed border-slate-300 dark:border-slate-600 text-slate-400 hover:border-emerald-400 cursor-pointer";
+                        cellEl.className = baseClasses;
+
+                        if (selectedTile) {
+                            cellEl.classList.add('ring-2', 'ring-emerald-400', 'ring-offset-1');
+                        }
+
+                        cellEl.addEventListener('click', () => handleBoardCellClick(cellKey));
+                    }
+
+                    board.appendChild(cellEl);
+                }
+            }
+        }
+
+        function renderTray() {
+            const tray = document.getElementById('letter-tray');
+            tray.innerHTML = '';
+
+            document.getElementById('tray-count-badge').textContent = `${trayState.length} left`;
+
+            trayState.forEach((tileObj) => {
+                const tileEl = document.createElement('div');
+                tileEl.dataset.tileId = tileObj.id;
+                
+                let classes = "w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-white dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-extrabold text-sm sm:text-base flex items-center justify-center shadow hover:shadow-md transition active:scale-95 tile-grab ";
+
+                if (selectedTile && selectedTile.id === tileObj.id) {
+                    const activeRing = gameCategory === 'word' ? "ring-emerald-500 border-emerald-500 bg-emerald-50 dark:bg-emerald-950/50" : "ring-indigo-500 border-indigo-500 bg-indigo-50 dark:bg-indigo-950/50";
+                    classes += `ring-4 ${activeRing}`;
+                }
+
+                tileEl.className = classes;
+                tileEl.textContent = tileObj.letter;
+
+                tileEl.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    handleTrayTileClick(tileObj);
+                });
+
+                tray.appendChild(tileEl);
+            });
+        }
+
+        // --- 8. Interactions & Placement Mechanics ---
+        function handleTrayTileClick(tileObj) {
+            if (!gameActive) return;
+
+            if (selectedTile && selectedTile.id === tileObj.id) {
+                selectedTile = null;
+            } else {
+                selectedTile = tileObj;
+                audio.placeTile();
+            }
+            renderBoard();
+            renderTray();
+        }
+
+        function handleBoardCellClick(cellKey) {
+            if (!gameActive) return;
+            if (currentPuzzle.anchors.includes(cellKey)) return;
+
+            const existingTile = boardState[cellKey];
+
+            if (selectedTile) {
+                if (existingTile) {
+                    trayState.push(existingTile);
+                }
+
+                trayState = trayState.filter(t => t.id !== selectedTile.id);
+                boardState[cellKey] = selectedTile;
+
+                moveHistory.push({ action: 'place', tile: selectedTile, cellKey });
+                movesCount++;
+                selectedTile = null;
+
+                audio.placeTile();
+                updateMovesDisplay();
+                renderBoard();
+                renderTray();
+
+                if (trayState.length === 0) {
+                    checkBoardWords();
+                }
+            } else if (existingTile) {
+                delete boardState[cellKey];
+                trayState.push(existingTile);
+
+                moveHistory.push({ action: 'remove', tile: existingTile, cellKey });
+                movesCount++;
+
+                audio.removeTile();
+                updateMovesDisplay();
+                renderBoard();
+                renderTray();
+            }
+        }
+
+        function setupDragAndDrop() {
+            let activeGhost = null;
+            let draggedTileId = null;
+
+            document.addEventListener('pointerdown', (e) => {
+                const target = e.target.closest('.tile-grab');
+                if (!target || !gameActive) return;
+
+                draggedTileId = target.dataset.tileId;
+                const tileObj = trayState.find(t => t.id === draggedTileId);
+                if (!tileObj) return;
+
+                activeGhost = target.cloneNode(true);
+                activeGhost.classList.add('dragging-ghost');
+                document.body.appendChild(activeGhost);
+
+                activeGhost.style.left = `${e.clientX}px`;
+                activeGhost.style.top = `${e.clientY}px`;
+            });
+
+            document.addEventListener('pointermove', (e) => {
+                if (!activeGhost) return;
+                activeGhost.style.left = `${e.clientX}px`;
+                activeGhost.style.top = `${e.clientY}px`;
+            });
+
+            document.addEventListener('pointerup', (e) => {
+                if (!activeGhost) return;
+
+                activeGhost.remove();
+                activeGhost = null;
+
+                const dropElement = document.elementFromPoint(e.clientX, e.clientY);
+                if (dropElement) {
+                    const cell = dropElement.closest('.grid-cell');
+                    if (cell && cell.dataset.cellKey) {
+                        const cellKey = cell.dataset.cellKey;
+                        const tileObj = trayState.find(t => t.id === draggedTileId);
+                        if (tileObj && !currentPuzzle.anchors.includes(cellKey)) {
+                            selectedTile = tileObj;
+                            handleBoardCellClick(cellKey);
+                        }
+                    }
+                }
+                draggedTileId = null;
+            });
+        }
+
+        function checkBoardWords() {
+            if (!gameActive) return;
+
+            let allCorrect = true;
+            let filledCount = 0;
+
+            currentPuzzle.frameCells.forEach(cellKey => {
+                if (boardState[cellKey]) {
+                    filledCount++;
+                    if (boardState[cellKey].letter !== currentPuzzle.solution[cellKey]) {
+                        allCorrect = false;
+                    }
+                } else {
+                    allCorrect = false;
+                }
+            });
+
+            if (filledCount < currentPuzzle.frameCells.length) {
+                showToast("Fill all frame spots before checking!");
+                return;
+            }
+
+            if (allCorrect) {
+                triggerWin();
+            } else {
+                audio.error();
+                showToast("Some entries are incorrect. Try again!");
+            }
+        }
+
+        function triggerWin() {
+            gameActive = false;
+            stopTimer();
+            audio.success();
+
+            userStats.played++;
+            userStats.wins++;
+            userStats.currentStreak++;
+            saveStats();
+
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+
+            document.getElementById('win-time').textContent = document.getElementById('timer-display').textContent;
+            document.getElementById('win-moves').textContent = movesCount;
+
+            setTimeout(() => {
+                document.getElementById('modal-win').classList.remove('hidden');
+            }, 600);
+        }
+
+        function undoLastMove() {
+            if (!gameActive || moveHistory.length === 0) return;
+
+            const lastMove = moveHistory.pop();
+            if (lastMove.action === 'place') {
+                delete boardState[lastMove.cellKey];
+                trayState.push(lastMove.tile);
+            } else if (lastMove.action === 'remove') {
+                boardState[lastMove.cellKey] = lastMove.tile;
+                trayState = trayState.filter(t => t.id !== lastMove.tile.id);
+            }
+
+            movesCount++;
+            updateMovesDisplay();
+            audio.removeTile();
+            renderBoard();
+            renderTray();
+        }
+
+        function shufflePool() {
+            if (!gameActive || trayState.length === 0) return;
+
+            for (let i = trayState.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [trayState[i], trayState[j]] = [trayState[j], trayState[i]];
+            }
+
+            audio.placeTile();
+            renderTray();
+        }
+
+        // --- 9. Hint Logic ---
+        function updateHintButtonUI() {
+            const hintBtn = document.getElementById('btn-hint');
+            const hintText = document.getElementById('hint-btn-text');
+            const remaining = MAX_HINTS - hintsUsed;
+
+            if (remaining > 0) {
+                hintText.textContent = `Hint (${remaining}/${MAX_HINTS})`;
+                hintBtn.disabled = false;
+                hintBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+            } else {
+                hintText.textContent = "No Hints";
+                hintBtn.disabled = true;
+                hintBtn.classList.add('opacity-50', 'cursor-not-allowed');
+            }
+        }
+
+        function giveHint() {
+            if (!gameActive) return;
+
+            if (hintsUsed >= MAX_HINTS) {
+                showToast("Maximum of 3 hints reached!");
+                return;
+            }
+
+            const incorrectOrEmptyCells = currentPuzzle.frameCells.filter(k => {
+                if (currentPuzzle.anchors.includes(k)) return false;
+                if (!boardState[k]) return true;
+                return boardState[k].letter !== currentPuzzle.solution[k];
+            });
+
+            if (incorrectOrEmptyCells.length === 0) {
+                showToast("All current tiles are correct!");
+                return;
+            }
+
+            const targetCell = incorrectOrEmptyCells[0];
+            const correctLetter = currentPuzzle.solution[targetCell];
+
+            if (boardState[targetCell]) {
+                const wrongTile = boardState[targetCell];
+                delete boardState[targetCell];
+                trayState.push(wrongTile);
+            }
+
+            let matchingTileIndex = trayState.findIndex(t => t.letter === correctLetter);
+            let matchingTile = null;
+
+            if (matchingTileIndex !== -1) {
+                matchingTile = trayState.splice(matchingTileIndex, 1)[0];
+            } else {
+                const misplacedKey = Object.keys(boardState).find(k => 
+                    !currentPuzzle.anchors.includes(k) && 
+                    boardState[k].letter === correctLetter && 
+                    boardState[k].letter !== currentPuzzle.solution[k]
+                );
+                if (misplacedKey) {
+                    matchingTile = boardState[misplacedKey];
+                    delete boardState[misplacedKey];
+                }
+            }
+
+            if (matchingTile) {
+                matchingTile.isHinted = true;
+                boardState[targetCell] = matchingTile;
+                moveHistory.push({ action: 'place', tile: matchingTile, cellKey: targetCell });
+                movesCount++;
+                hintsUsed++;
+                updateHintButtonUI();
+                updateMovesDisplay();
+                audio.placeTile();
+                showToast(`Hint applied! (${MAX_HINTS - hintsUsed} remaining)`);
+
+                renderBoard();
+                renderTray();
+
+                if (trayState.length === 0) {
+                    checkBoardWords();
+                }
+            }
+        }
+
+        // --- 10. Timer & Utilities ---
+        function startTimer() {
+            stopTimer();
+            timerSeconds = 0;
+            updateTimerDisplay();
+            timerInterval = setInterval(() => {
+                timerSeconds++;
+                updateTimerDisplay();
+            }, 1000);
+        }
+
+        function stopTimer() {
+            if (timerInterval) clearInterval(timerInterval);
+        }
+
+        function updateTimerDisplay() {
+            const mins = String(Math.floor(timerSeconds / 60)).padStart(2, '0');
+            const secs = String(timerSeconds % 60).padStart(2, '0');
+            document.getElementById('timer-display').textContent = `${mins}:${secs}`;
+        }
+
+        function updateMovesDisplay() {
+            document.getElementById('moves-display').textContent = movesCount;
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            toast.textContent = msg;
+            toast.classList.remove('opacity-0', 'pointer-events-none', '-translate-y-2');
+            toast.classList.add('opacity-100', 'translate-y-0');
+
+            setTimeout(() => {
+                toast.classList.remove('opacity-100', 'translate-y-0');
+                toast.classList.add('opacity-0', 'pointer-events-none', '-translate-y-2');
+            }, 2500);
+        }
+
+        // --- 11. Modal Controls & Result Sharing ---
+        function openShareModal() {
+            const timeStr = document.getElementById('timer-display').textContent;
+            const titleName = gameCategory === 'word' ? "CornerHop" : "MathsHop";
+            const modeStr = isDailyMode ? `Daily ${getDailyDateString()}` : "Practice Round";
+
+            const dim = currentPuzzle.size;
+            let gridVisual = "";
+
+            for (let r = 0; r < dim; r++) {
+                let rowStr = "";
+                for (let c = 0; c < dim; c++) {
+                    const key = `${r}-${c}`;
+                    if (!currentPuzzle.frameCells.includes(key)) {
+                        rowStr += "⬛";
+                    } else if (currentPuzzle.anchors.includes(key)) {
+                        rowStr += "🟩";
+                    } else {
+                        const tile = boardState[key];
+                        if (tile && tile.isHinted) {
+                            rowStr += "🟨";
+                        } else {
+                            rowStr += "🟩";
+                        }
+                    }
+                }
+                gridVisual += rowStr + "\n";
+            }
+
+            const shareText = `${titleName}: Frame Edition (${modeStr})\n` +
+                              `⏱️ Time: ${timeStr} | 🎯 Moves: ${movesCount}\n` +
+                              `💡 Hints Used: ${hintsUsed}/${MAX_HINTS}\n` +
+                              `🔥 Streak: ${userStats.currentStreak}\n\n` +
+                              gridVisual + `\n` +
+                              `Play CornerHop & MathsHop Frame Edition!`;
+
+            document.getElementById('share-preview-text').textContent = shareText;
+            document.getElementById('btn-copy-text').textContent = "Copy to Clipboard";
+            document.getElementById('modal-share').classList.remove('hidden');
+        }
+
+        function copyShareText() {
+            const shareText = document.getElementById('share-preview-text').textContent;
+
+            const tempInput = document.createElement('textarea');
+            tempInput.value = shareText;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            document.getElementById('btn-copy-text').textContent = "Copied to Clipboard! ✓";
+            showToast("Copied result grid to clipboard!");
+        }
+
+        // --- 12. Persistence & Event Listener Bindings ---
+        function setupEventListeners() {
+            const modalHelp = document.getElementById('modal-help');
+            const modalStats = document.getElementById('modal-stats');
+            const modalWin = document.getElementById('modal-win');
+            const modalShare = document.getElementById('modal-share');
+
+            document.getElementById('tab-word-mode').addEventListener('click', () => switchCategory('word'));
+            document.getElementById('tab-maths-mode').addEventListener('click', () => switchCategory('maths'));
+
+            document.getElementById('btn-help').addEventListener('click', () => modalHelp.classList.remove('hidden'));
+            document.getElementById('btn-stats').addEventListener('click', () => {
+                updateStatsUI();
+                modalStats.classList.remove('hidden');
+            });
+
+            document.getElementById('btn-sound').addEventListener('click', () => {
+                audio.muted = !audio.muted;
+                const icon = document.getElementById('icon-sound');
+                icon.className = audio.muted ? 'fa-solid fa-volume-xmark text-lg text-slate-400' : 'fa-solid fa-volume-high text-lg';
+                showToast(audio.muted ? "Sound Muted" : "Sound Enabled");
+            });
+
+            document.getElementById('btn-theme').addEventListener('click', toggleTheme);
+            document.getElementById('btn-mode-toggle').addEventListener('click', () => startPuzzle(!isDailyMode));
+
+            document.getElementById('btn-check').addEventListener('click', checkBoardWords);
+            document.getElementById('btn-undo').addEventListener('click', undoLastMove);
+            document.getElementById('btn-shuffle').addEventListener('click', shufflePool);
+            document.getElementById('btn-hint').addEventListener('click', giveHint);
+
+            document.querySelectorAll('.btn-close-modal').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    modalHelp.classList.add('hidden');
+                    modalStats.classList.add('hidden');
+                    modalWin.classList.add('hidden');
+                    modalShare.classList.add('hidden');
+                });
+            });
+
+            document.getElementById('btn-close-share-x').addEventListener('click', () => modalShare.classList.add('hidden'));
+            document.getElementById('btn-close-share-bottom').addEventListener('click', () => modalShare.classList.add('hidden'));
+
+            [modalHelp, modalStats, modalWin, modalShare].forEach(modal => {
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) modal.classList.add('hidden');
+                });
+            });
+
+            document.getElementById('btn-share-win').addEventListener('click', openShareModal);
+            document.getElementById('btn-share-stats').addEventListener('click', openShareModal);
+            document.getElementById('btn-copy-share-modal').addEventListener('click', copyShareText);
+
+            document.getElementById('btn-next-puzzle').addEventListener('click', () => {
+                modalWin.classList.add('hidden');
+                modalShare.classList.add('hidden');
+                startPuzzle(false);
+            });
+        }
+
+        function loadStats() {
+            const saved = localStorage.getItem('cornerhop_stats');
+            if (saved) {
+                try { userStats = JSON.parse(saved); } catch(e) {}
+            }
+        }
+
+        function saveStats() {
+            localStorage.setItem('cornerhop_stats', JSON.stringify(userStats));
+        }
+
+        function updateStatsUI() {
+            document.getElementById('stat-played').textContent = userStats.played;
+            document.getElementById('stat-wins').textContent = userStats.wins;
+            document.getElementById('stat-streak').textContent = userStats.currentStreak;
+        }
+
+        function initTheme() {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.documentElement.classList.add('dark');
+            }
+        }
+
+        function toggleTheme() {
+            const isDark = document.documentElement.classList.toggle('dark');
+            const icon = document.getElementById('icon-theme');
+            icon.className = isDark ? 'fa-solid fa-moon text-lg' : 'fa-solid fa-sun text-lg text-amber-500';
+            showToast(isDark ? "Dark Theme" : "Light Theme");
+        }
+    </script>
+</body>
+</html>
