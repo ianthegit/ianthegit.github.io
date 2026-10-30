@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>CornerHop & MathsHop: Frame Edition</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Canvas Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    animation: {
+                        'pop': 'pop 0.2s ease-out forwards',
+                    },
+                    keyframes: {
+                        pop: {
+                            '0%': { transform: 'scale(0.8)', opacity: '0' },
+                            '100%': { transform: 'scale(1)', opacity: '1' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            height: 100dvh;
+            overflow: hidden;
+        }
+
+        .tile-grab {
+            cursor: grab;
+            touch-action: none;
+        }
+        .tile-grab:active {
+            cursor: grabbing;
+        }
+
+        .modal-backdrop {
+            background-color: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(4px);
+        }
+
+        .dragging-ghost {
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%) scale(1.1);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+            opacity: 0.95;
+        }
+
+        /* Custom Scrollbars for Tile Tray */
+        #tile-tray::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+        }
+        #tile-tray::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        #tile-tray::-webkit-scrollbar-thumb {
+            background: #475569;
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 flex flex-col justify-between font-sans antialiased">
+
+    <!-- Header Navigation -->
+    <header class="w-full bg-slate-800/90 backdrop-blur border-b border-slate-700 px-3 py-2 z-40 shrink-0">
+        <div class="max-w-md mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-1.5">
+                <button id="btn-help" class="w-7 h-7 flex items-center justify-center rounded-lg bg-slate-700 hover:bg-slate-600 text-slate-200 text-xs font-bold transition" title="How to Play">
+                    <i class="fa-solid fa-question"></i>
+                </button>
+                <button id="btn-stats" class="w-7 h-7 flex items-center justify-center rounded-lg bg-slate-700 hover:bg-slate-600 text-slate-200 text-xs font-bold transition" title="Statistics">
+                    <i class="fa-solid fa-chart-column"></i>
+                </button>
+            </div>
+
+            <!-- Logo Title & Mode Selector -->
+            <div class="text-center flex items-center space-x-2">
+                <h1 id="app-logo-text" class="text-base sm:text-lg font-black tracking-wider bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">
+                    CORNER<span class="text-indigo-400">HOP</span>
+                </h1>
+                <div class="bg-slate-950 p-0.5 rounded-lg border border-slate-700 flex text-[10px] font-extrabold">
+                    <button id="tab-mode-word" class="px-2 py-0.5 rounded transition-all bg-amber-500 text-slate-950">WORD</button>
+                    <button id="tab-mode-maths" class="px-2 py-0.5 rounded transition-all text-slate-400 hover:text-slate-200">MATHS</button>
+                </div>
+            </div>
+
+            <div class="flex items-center space-x-1">
+                <span id="date-badge" class="text-[10px] font-mono px-2 py-1 rounded bg-slate-800 border border-slate-700 text-slate-400"></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Game Viewport -->
+    <main class="max-w-md w-full mx-auto px-3 py-1 flex-1 flex flex-col justify-between items-center overflow-hidden">
+        
+        <!-- Status Bar -->
+        <div class="w-full flex items-center justify-between px-1 shrink-0 my-0.5">
+            <div class="flex items-center space-x-2">
+                <button id="btn-eddie-toggle" class="text-[10px] font-bold px-2 py-1 rounded-lg border transition-all bg-purple-600 border-purple-400 text-white shadow-lg shadow-purple-950/40 flex items-center space-x-1">
+                    <i class="fa-solid fa-bolt text-[9px]"></i>
+                    <span id="label-eddie-toggle">Eddie ON</span>
+                </button>
+            </div>
+
+            <div class="flex items-center space-x-2 text-[11px] font-semibold text-slate-400">
+                <span id="eddie-status-indicator" class="text-purple-400 font-bold">⚡ Eddie Mode Active (TL Only)</span>
+            </div>
+        </div>
+
+        <!-- 5x5 Grid Board (Scaled to fit mobile screen cleanly) -->
+        <div id="grid-container" class="relative w-[70vw] h-[70vw] max-w-[280px] max-h-[280px] sm:w-72 sm:h-72 bg-slate-800/90 rounded-2xl p-2 border-2 border-slate-700 shadow-2xl grid grid-cols-5 grid-rows-5 gap-1.5 shrink-0 my-auto">
+            <!-- Grid cells rendered dynamically via JS -->
+        </div>
+
+        <!-- Action Control Bar -->
+        <div class="w-full grid grid-cols-4 gap-1.5 px-1 shrink-0 my-1">
+            <button id="btn-shuffle" class="py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-[11px] font-bold text-slate-300 transition active:scale-95 flex items-center justify-center space-x-1">
+                <i class="fa-solid fa-shuffle text-[10px]"></i>
+                <span>Shuffle</span>
+            </button>
+            <button id="btn-undo" class="py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-[11px] font-bold text-slate-300 transition active:scale-95 flex items-center justify-center space-x-1">
+                <i class="fa-solid fa-rotate-left text-[10px]"></i>
+                <span>Undo</span>
+            </button>
+            <button id="btn-hint" class="py-1.5 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 border border-amber-500/40 text-[11px] font-bold text-amber-300 transition active:scale-95 flex items-center justify-center space-x-1">
+                <i class="fa-solid fa-lightbulb text-[10px]"></i>
+                <span id="hint-btn-text">Hint (3/3)</span>
+            </button>
+            <button id="btn-check" class="py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 border border-indigo-400 text-[11px] font-bold text-white transition active:scale-95 shadow-lg shadow-indigo-950/50 flex items-center justify-center space-x-1">
+                <i class="fa-solid fa-check text-[10px]"></i>
+                <span>Check</span>
+            </button>
+        </div>
+
+        <!-- Bottom Unplaced Tile Tray (Ensured non-collapsing view even with 1 row left) -->
+        <div class="w-full bg-slate-800/90 border border-slate-700/80 rounded-2xl p-2 min-h-[110px] max-h-[125px] flex flex-wrap items-center justify-center gap-1.5 shadow-inner overflow-y-auto shrink-0 mb-1" id="tile-tray">
+            <!-- Unplaced drag tiles rendered dynamically -->
+        </div>
+
+    </main>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed top-12 left-1/2 -translate-x-1/2 z-50 px-3 py-1.5 bg-slate-800 text-white border border-slate-700 text-xs font-bold rounded-full shadow-xl transition-all duration-300 opacity-0 pointer-events-none transform -translate-y-2">
+        Notification
+    </div>
+
+    <!-- MODAL: Share Results & Win -->
+    <div id="modal-share" class="fixed inset-0 z-50 flex items-center justify-center p-4 modal-backdrop hidden">
+        <div class="bg-slate-900 border border-slate-700 rounded-2xl p-5 max-w-sm w-full text-center shadow-2xl relative animate-pop">
+            <button id="btn-close-share-x" class="absolute top-3 right-3 text-slate-400 hover:text-white text-base font-bold w-7 h-7 flex items-center justify-center rounded-lg hover:bg-slate-800 transition">✕</button>
+
+            <div id="modal-icon" class="text-3xl mb-1">🎉</div>
+            <h2 id="modal-title" class="text-lg font-black text-amber-400 mb-0.5">Puzzle Solved!</h2>
+            <p id="modal-subtitle" class="text-[11px] text-slate-400 mb-3">You completed today's daily frame.</p>
+
+            <div id="modal-grid-preview" class="bg-slate-950 p-2.5 rounded-xl border border-slate-800 font-mono text-xs leading-relaxed mb-3 select-all whitespace-pre-wrap text-left shadow-inner">
+                <!-- Emoji Grid Preview -->
+            </div>
+
+            <div class="flex flex-col gap-1.5">
+                <button id="btn-copy-share" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 font-black text-xs hover:brightness-110 active:scale-95 transition shadow-lg shadow-orange-950/50 flex items-center justify-center space-x-1.5">
+                    <i class="fa-regular fa-copy"></i>
+                    <span id="copy-btn-text">Copy Result to Clipboard</span>
+                </button>
+                <button id="btn-close-share-bottom" class="w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold text-xs border border-slate-700 transition">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: Help / Instructions -->
+    <div id="modal-help" class="fixed inset-0 z-50 flex items-center justify-center p-4 modal-backdrop hidden">
+        <div class="bg-slate-900 border border-slate-700 rounded-2xl p-5 max-w-sm w-full shadow-2xl relative text-left text-xs text-slate-300 animate-pop">
+            <button id="btn-close-help-x" class="absolute top-3 right-3 text-slate-400 hover:text-white text-base font-bold w-7 h-7 flex items-center justify-center rounded-lg hover:bg-slate-800">✕</button>
+            
+            <h2 class="text-base font-black text-amber-400 mb-2 flex items-center space-x-1.5">
+                <i class="fa-solid fa-circle-question"></i>
+                <span>How to Play CornerHop</span>
+            </h2>
+            <ul class="list-disc list-inside space-y-1.5 text-[11px] text-slate-300 mb-3">
+                <li><strong>Goal:</strong> Drag or tap tiles from the bottom tray to form 4 valid intersecting words (or BODMAS equations) along the 5x5 outer frame.</li>
+                <li><strong>Corners:</strong> Corner tiles intersect both horizontal and vertical lines.</li>
+                <li><strong>MathsHop:</strong> Equations use numbers 1-99 and strictly follow BODMAS/PEMDAS.</li>
+                <li><strong>⚡ Eddie Mode:</strong> Enabled by default! Only the top-left tile is revealed at start. Turning it OFF locks it off for that attempt.</li>
+                <li><strong>Daily Lock:</strong> Solved puzzles are locked per date and mode. Refreshing will bring up your completed daily result!</li>
+            </ul>
+
+            <button id="btn-close-help-bottom" class="w-full py-2 rounded-xl bg-amber-500 text-slate-950 font-bold text-xs hover:bg-amber-400 transition">
+                Got It!
+            </button>
+        </div>
+    </div>
+
+    <!-- MODAL: Stats -->
+    <div id="modal-stats" class="fixed inset-0 z-50 flex items-center justify-center p-4 modal-backdrop hidden">
+        <div class="bg-slate-900 border border-slate-700 rounded-2xl p-5 max-w-sm w-full text-center shadow-2xl relative animate-pop">
+            <button id="btn-close-stats-x" class="absolute top-3 right-3 text-slate-400 hover:text-white text-base font-bold w-7 h-7 flex items-center justify-center rounded-lg hover:bg-slate-800">✕</button>
+
+            <h2 class="text-base font-black text-amber-400 mb-3">Your Statistics</h2>
+            
+            <div class="grid grid-cols-3 gap-2 mb-4">
+                <div class="bg-slate-800 p-2 rounded-xl border border-slate-700">
+                    <span id="stat-played" class="block text-lg font-black text-white">0</span>
+                    <span class="text-[9px] font-bold text-slate-400 uppercase">Played</span>
+                </div>
+                <div class="bg-slate-800 p-2 rounded-xl border border-slate-700">
+                    <span id="stat-solved" class="block text-lg font-black text-emerald-400">0</span>
+                    <span class="text-[9px] font-bold text-slate-400 uppercase">Solved</span>
+                </div>
+                <div class="bg-slate-800 p-2 rounded-xl border border-slate-700">
+                    <span id="stat-streak" class="block text-lg font-black text-amber-400">0</span>
+                    <span class="text-[9px] font-bold text-slate-400 uppercase">Streak</span>
+                </div>
+            </div>
+
+            <button id="btn-close-stats-bottom" class="w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold text-xs border border-slate-700 transition">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript Engine -->
+    <script>
+        // --- 1. DICTIONARY POOL ---
+        const DICTIONARY_5 = [
+            "ABOUT","ABOVE","ACTOR","ACUTE","ADAPT","ADMIT","ADOPT","ADULT","AFTER","AGAIN","AGREE","AHEAD","ALARM","ALBUM","ALERT","ALIEN","ALIGN","ALIKE","ALIVE","ALLOW","ALONG","ALTER","AMONG","ANGEL","ANGER","ANGLE","ANGRY","APART","APPLE","APPLY","ARENA","ARGUE","ARISE","ARMOR","ARRAY","ARROW","ASIDE","ASSET","AUDIO","AUDIT","AVOID","AWAKE","AWARE","BADGE","BASIC","BASIS","BEACH","BEGIN","BEING","BELOW","BENCH","BLACK","BLADE","BLAME","BLANK","BLAST","BLEED","BLEND","BLESS","BLIND","BLOCK","BLOOD","BLOOM","BOARD","BOAST","BOOST","BOUND","BRAIN","BRAND","BREAD","BREAK","BREED","BRICK","BRIDE","BRIEF","BRING","BROAD","BROWN","BUILD","BUNCH","BUYER","CABLE","CANDY","CRAFT","CRANE","CRASH","CRAWL","CRAZY","CREAM","CREEK","CRIME","CRISP","CROWN","DANCE","DEATH","DELAY","DEPTH","DIRTY","DRAFT","DREAM","DRESS","DRIVE","EAGER","EAGLE","EARLY","EARTH","EIGHT","ELITE","EMPTY","ENEMY","ENJOY","ENTER","EQUAL","ERROR","EVENT","EVERY","EXACT","FAITH","FALSE","FATAL","FIELD","FIFTH","FIGHT","FINAL","FIRST","FLAME","FLASH","FLEET","FLOAT","FLOOD","FLOOR","FLOUR","FLUID","FOCUS","FORCE","FORTH","FORTY","FORUM","FOUND","FRAME","FRESH","FRONT","FRUIT","GIANT","GIVEN","GLASS","GLOBE","GLOVE","GRACE","GRADE","GRAIN","GRAND","GRANT","GRAPE","GRASP","GRASS","GRAVE","GREAT","GREEN","GREET","GROSS","GROUP","GUARD","GUESS","GUIDE","HAPPY","HARSH","HEART","HEAVY","HELLO","HONOR","HORSE","HOTEL","HOUSE","HUMAN","HUMOR","IDEAL","IMAGE","INDEX","INNER","INPUT","ISSUE","JEWEL","JOINT","JUDGE","JUICE","KNIFE","KNOCK","LABEL","LABOR","LARGE","LATCH","LATER","LAUGH","LAYER","LEARN","LEASE","LEAST","LEAVE","LEGAL","LEMON","LEVEL","LIGHT","LIMIT","LOCAL","LOGIC","LOOSE","LOWER","LUCKY","LUNCH","MAGIC","MAJOR","MAKER","MARCH","MATCH","MAYOR","MEDAL","MEDIA","METAL","METER","MIDST","MIGHT","MINOR","MODEL","MONEY","MONTH","MORAL","MOTOR","MOUNT","MOUSE","MOUTH","MOVIE","MUSIC","NEEDS","NERVE","NEVER","NIGHT","NOBLE","NOISE","NORTH","NOTED","NOVEL","NURSE","OCEAN","OFFER","OFTEN","ORDER","OTHER","OUTER","OWNER","PANEL","PAPER","PARTY","PEACE","PHASE","PHONE","PIANO","PIECE","PILOT","PITCH","PLACE","PLAIN","PLANE","PLANT","PLATE","POINT","POWER","PRESS","PRICE","PRIDE","PRIME","PRINT","PRIZE","PROOF","PROUD","PROVE","PULSE","PUNCH","PUPIL","PURSE","QUEEN","QUICK","QUIET","QUITE","RADAR","RADIO","RAISE","RALLY","RANCH","RANGE","RAPID","RATIO","REACH","REACT","READY","REALM","REBEL","REFER","RELAX","REPLY","RESET","RIDGE","RIGHT","RIVAL","RIVER","ROBOT","ROUGH","ROUND","ROUTE","ROYAL","RURAL","SCALE","SCENE","SCOPE","SCORE","SENSE","SERVE","SEVEN","SHADE","SHAKE","SHARE","SHARP","SHEET","SHELF","SHELL","SHIFT","SHINE","SHIRT","SHOCK","SHOOT","SHORT","SHOWN","SIGHT","SIGNAL","SILENT","SILVER","SIMPLE","SINGLE","SISTER","SIXTH","SKILL","SLEEP","SLIDE","SMART","SMILE","SMOKE","SOLID","SOLVE","SORRY","SOUND","SOUTH","SPACE","SPARE","SPEAK","SPEED","SPEND","SPLIT","SPOKE","SPORT","STAFF","STAGE","STAND","STARE","START","STATE","STEAM","STEEL","STEEP","STICK","STILL","STOCK","STONE","STORE","STORM","STORY","STRIP","STUDY","STUFF","STYLE","SUGAR","SUITE","SUPER","SWEET","TABLE","TASTE","TEACH","THANK","THEME","THERE","THESE","THICK","THING","THINK","THIRD","THOSE","THREE","THROW","TIGHT","TITLE","TODAY","TOPIC","TOTAL","TOUCH","TOWER","TRACK","TRADE","TRAIN","TREAT","TREND","TRIBAL","TUNNEL","TWELVE","TWENTY","UNDER","UNION","UNITE","UNTIL","UPPER","UPSET","URBAN","USUAL","VALUE","VAPOR","VIDEO","VIRUS","VISIT","VITAL","VOICE","WASTE","WATCH","WATER","WHEEL","WHERE","WHICH","WHITE","WHOLE","WHOSE","WOMAN","WORLD","WORRY","WORTH","WOULD","WOUND","WRITE","WRONG","YOUTH"
+        ];
+
+        // --- 2. GAME STATE ---
+        let currentMode = 'WORD'; // 'WORD' or 'MATHS'
+        let isEddieMode = true;
+        let isEddieDisabled = false;
+        let dateSeedStr = "";
+        let rngSeed = 0;
+
+        let gridCells = Array(25).fill(null);
+        let trayTiles = [];
+        let moveHistory = [];
+        let remainingHints = 3;
+        let isSolved = false;
+
+        const TOP_INDICES = [0, 1, 2, 3, 4];
+        const RIGHT_INDICES = [4, 9, 14, 19, 24];
+        const BOTTOM_INDICES = [24, 23, 22, 21, 20];
+        const LEFT_INDICES = [20, 15, 10, 5, 0];
+        const FRAME_INDICES = Array.from(new Set([...TOP_INDICES, ...RIGHT_INDICES, ...BOTTOM_INDICES, ...LEFT_INDICES]));
+
+        let userStats = { played: 0, solved: 0, streak: 0 };
+
+        // --- 3. SEEDED PRNG ---
+        function initSeed() {
+          const now = new Date();
+          dateSeedStr = `${now.getUTCFullYear()}-${String(now.getUTCMonth()+1).padStart(2,'0')}-${String(now.getUTCDate()).padStart(2,'0')}`;
+          document.getElementById('date-badge').innerText = dateSeedStr;
+          
+          let hash = 0;
+          for (let i = 0; i < dateSeedStr.length; i++) {
+            hash = (hash << 5) - hash + dateSeedStr.charCodeAt(i);
+            hash |= 0;
+          }
+          rngSeed = Math.abs(hash);
+        }
+
+        function seededRandom() {
+          let x = Math.sin(rngSeed++) * 10000;
+          return x - Math.floor(x);
+        }
+
+        function seededShuffle(arr) {
+          let a = [...arr];
+          for (let i = a.length - 1; i > 0; i--) {
+            const j = Math.floor(seededRandom() * (i + 1));
+            [a[i], a[j]] = [a[j], a[i]];
+          }
+          return a;
+        }
+
+        // --- 4. GENERATORS ---
+        function generateWordPuzzle() {
+          let shuffled = seededShuffle(DICTIONARY_5);
+
+          for (let i = 0; i < shuffled.length; i++) {
+            let top = shuffled[i];
+            for (let j = 0; j < shuffled.length; j++) {
+              if (i === j) continue;
+              let left = shuffled[j];
+              if (left[0] !== top[0]) continue;
+
+              for (let k = 0; k < shuffled.length; k++) {
+                if (k === i || k === j) continue;
+                let right = shuffled[k];
+                if (right[0] !== top[4]) continue;
+
+                for (let l = 0; l < shuffled.length; l++) {
+                  if (l === i || l === j || l === k) continue;
+                  let bottom = shuffled[l];
+                  if (bottom[0] === left[4] && bottom[4] === right[4]) {
+                    return { top, right, bottom, left };
+                  }
+                }
+              }
+            }
+          }
+          return { top: "FRAME", right: "EQUAL", bottom: "LOGIC", left: "FINAL" };
+        }
+
+        function generateMathsPuzzle() {
+          const ops = ['+', '-', '*'];
+          
+          for (let attempt = 0; attempt < 5000; attempt++) {
+            let A = Math.floor(seededRandom() * 20) + 1;
+            let X = Math.floor(seededRandom() * 10) + 1;
+            let op1 = ops[Math.floor(seededRandom() * ops.length)];
+            let B = evalOp(A, op1, X);
+            if (B <= 0 || B > 99) continue;
+
+            let Y = Math.floor(seededRandom() * 10) + 1;
+            let op2 = ops[Math.floor(seededRandom() * ops.length)];
+            let C = evalOp(A, op2, Y);
+            if (C <= 0 || C > 99) continue;
+
+            let Z = Math.floor(seededRandom() * 10) + 1;
+            let op3 = ops[Math.floor(seededRandom() * ops.length)];
+            let D = evalOp(B, op3, Z);
+            if (D <= 0 || D > 99) continue;
+
+            let W = Math.floor(seededRandom() * 10) + 1;
+            let op4 = ops[Math.floor(seededRandom() * ops.length)];
+            if (evalOp(C, op4, W) === D) {
+              return {
+                top: [String(A), op1, String(X), '=', String(B)],
+                right: [String(B), op3, String(Z), '=', String(D)],
+                bottom: [String(C), op4, String(W), '=', String(D)],
+                left: [String(A), op2, String(Y), '=', String(C)]
+              };
+            }
+          }
+
+          return {
+            top: ['8', '+', '7', '=', '15'],
+            right: ['15', '-', '6', '=', '9'],
+            bottom: ['3', '*', '3', '=', '9'],
+            left: ['8', '-', '5', '=', '3']
+          };
+        }
+
+        function evalOp(a, op, b) {
+          if (op === '+') return a + b;
+          if (op === '-') return a - b;
+          if (op === '*') return a * b;
+          return 0;
+        }
+
+        // --- 5. PERSISTENCE ---
+        function getStorageKey() {
+          return `cornerhop_solved_${dateSeedStr}_${currentMode}`;
+        }
+
+        function checkDailyCompletion() {
+          const saved = localStorage.getItem(getStorageKey());
+          if (saved) {
+            try { return JSON.parse(saved); } catch(e) { return null; }
+          }
+          return null;
+        }
+
+        function saveDailyCompletion() {
+          const completionData = {
+            gridCells: gridCells,
+            isEddieMode: isEddieMode
+          };
+          localStorage.setItem(getStorageKey(), JSON.stringify(completionData));
+        }
+
+        // --- 6. INITIALIZATION ---
+        function startNewGame() {
+          initSeed();
+          moveHistory = [];
+          remainingHints = 3;
+          isSolved = false;
+
+          document.getElementById('hint-btn-text').innerText = `Hint (${remainingHints}/3)`;
+
+          let fullSolution = Array(25).fill(null);
+
+          if (currentMode === 'WORD') {
+            const frame = generateWordPuzzle();
+            for (let i = 0; i < 5; i++) fullSolution[TOP_INDICES[i]] = frame.top[i];
+            for (let i = 0; i < 5; i++) fullSolution[RIGHT_INDICES[i]] = frame.right[i];
+            for (let i = 0; i < 5; i++) fullSolution[BOTTOM_INDICES[i]] = frame.bottom[4 - i];
+            for (let i = 0; i < 5; i++) fullSolution[LEFT_INDICES[i]] = frame.left[4 - i];
+          } else {
+            const frame = generateMathsPuzzle();
+            for (let i = 0; i < 5; i++) fullSolution[TOP_INDICES[i]] = frame.top[i];
+            for (let i = 0; i < 5; i++) fullSolution[RIGHT_INDICES[i]] = frame.right[i];
+            for (let i = 0; i < 5; i++) fullSolution[BOTTOM_INDICES[i]] = frame.bottom[4 - i];
+            for (let i = 0; i < 5; i++) fullSolution[LEFT_INDICES[i]] = frame.left[4 - i];
+          }
+
+          window.targetSolution = fullSolution;
+
+          // Check persistence lock
+          const previousCompletion = checkDailyCompletion();
+          if (previousCompletion) {
+            isSolved = true;
+            gridCells = previousCompletion.gridCells;
+            isEddieMode = previousCompletion.isEddieMode;
+            isEddieDisabled = true;
+            trayTiles = [];
+            renderBoard();
+            renderTray();
+            updateEddieUI();
+            showWinModal();
+            return;
+          }
+
+          gridCells = Array(25).fill(null);
+          trayTiles = [];
+          
+          FRAME_INDICES.forEach(idx => {
+            const val = fullSolution[idx];
+            if (isEddieMode) {
+              if (idx === 0) {
+                gridCells[idx] = { value: val, isLocked: true, isHinted: false };
+              } else {
+                trayTiles.push({ id: Math.random().toString(36).substr(2, 9), value: val });
+              }
+            } else {
+              if (currentMode === 'WORD') {
+                if ([0, 4, 20, 24].includes(idx)) {
+                  gridCells[idx] = { value: val, isLocked: true, isHinted: false };
+                } else {
+                  trayTiles.push({ id: Math.random().toString(36).substr(2, 9), value: val });
+                }
+              } else {
+                const isEquals = val === '=';
+                const isCorner = [0, 4, 20, 24].includes(idx);
+                if (isCorner || isEquals) {
+                  gridCells[idx] = { value: val, isLocked: true, isHinted: false };
+                } else {
+                  trayTiles.push({ id: Math.random().toString(36).substr(2, 9), value: val });
+                }
+              }
+            }
+          });
+
+          trayTiles = seededShuffle(trayTiles);
+
+          renderBoard();
+          renderTray();
+          updateEddieUI();
+        }
+
+        // --- 7. RENDERING ---
+        function renderBoard() {
+          const container = document.getElementById('grid-container');
+          container.innerHTML = '';
+
+          for (let r = 0; r < 5; r++) {
+            for (let c = 0; c < 5; c++) {
+              const idx = r * 5 + c;
+              const isFrame = FRAME_INDICES.includes(idx);
+              const cellData = gridCells[idx];
+
+              const cellEl = document.createElement('div');
+              cellEl.dataset.index = idx;
+
+              if (!isFrame) {
+                cellEl.className = 'bg-slate-900/40 rounded-xl border border-slate-800/40';
+              } else {
+                cellEl.className = 'relative flex items-center justify-center rounded-xl font-black text-sm sm:text-lg transition-all border-2 ';
+                
+                if (cellData) {
+                  if (cellData.isLocked || isSolved) {
+                    cellEl.className += 'bg-slate-700 border-slate-500 text-slate-100 shadow-inner cursor-not-allowed';
+                    cellEl.innerHTML = `${cellData.value} ${!isSolved && cellData.isLocked ? '<span class="absolute top-0.5 right-1 text-[8px] opacity-40">🔒</span>' : ''}`;
+                  } else {
+                    if (cellData.isHinted) {
+                      cellEl.className += 'bg-amber-500/20 border-amber-400 text-amber-300 shadow-md cursor-pointer';
+                    } else {
+                      cellEl.className += currentMode === 'WORD' 
+                        ? 'bg-amber-500 border-amber-300 text-slate-950 shadow-md cursor-pointer' 
+                        : 'bg-indigo-600 border-indigo-400 text-white shadow-md cursor-pointer';
+                    }
+                    cellEl.innerText = cellData.value;
+                    cellEl.onclick = () => returnTileToTray(idx);
+                  }
+                } else {
+                  cellEl.className += 'bg-slate-800/60 border-slate-700/80 border-dashed hover:border-slate-500 cursor-pointer';
+                }
+              }
+
+              container.appendChild(cellEl);
+            }
+          }
+        }
+
+        function renderTray() {
+          const tray = document.getElementById('tile-tray');
+          tray.innerHTML = '';
+
+          if (isSolved) {
+            tray.innerHTML = `<span class="text-xs text-slate-400 font-semibold italic">Puzzle completed for today!</span>`;
+            return;
+          }
+
+          trayTiles.forEach((tile) => {
+            const tileEl = document.createElement('div');
+            tileEl.dataset.id = tile.id;
+            tileEl.innerText = tile.value;
+            tileEl.className = currentMode === 'WORD'
+              ? 'w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-xl bg-amber-500 border-2 border-amber-300 text-slate-950 font-black text-sm sm:text-base shadow-lg cursor-grab active:cursor-grabbing hover:scale-105 transition-transform'
+              : 'w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-xl bg-indigo-600 border-2 border-indigo-400 text-white font-black text-sm sm:text-base shadow-lg cursor-grab active:cursor-grabbing hover:scale-105 transition-transform';
+
+            attachDragEvents(tileEl, tile);
+            tray.appendChild(tileEl);
+          });
+        }
+
+        // --- 8. TOUCH & POINTER ENGINE ---
+        let activeDragTile = null;
+        let ghostEl = null;
+
+        function attachDragEvents(element, tile) {
+          if (isSolved) return;
+          element.onpointerdown = (e) => {
+            e.preventDefault();
+            activeDragTile = tile;
+
+            ghostEl = element.cloneNode(true);
+            ghostEl.classList.add('dragging-ghost');
+            document.body.appendChild(ghostEl);
+
+            moveGhost(e.clientX, e.clientY);
+
+            window.onpointermove = (ev) => {
+              if (ghostEl) moveGhost(ev.clientX, ev.clientY);
+            };
+
+            window.onpointerup = (ev) => {
+              window.onpointermove = null;
+              window.onpointerup = null;
+
+              if (ghostEl) {
+                ghostEl.remove();
+                ghostEl = null;
+              }
+
+              const dropTarget = document.elementFromPoint(ev.clientX, ev.clientY);
+              const cell = dropTarget ? dropTarget.closest('[data-index]') : null;
+
+              if (cell) {
+                const idx = parseInt(cell.dataset.index);
+                if (FRAME_INDICES.includes(idx) && (!gridCells[idx] || !gridCells[idx].isLocked)) {
+                  placeTileOnBoard(tile, idx);
+                }
+              }
+              activeDragTile = null;
+            };
+          };
+        }
+
+        function moveGhost(x, y) {
+          if (ghostEl) {
+            ghostEl.style.left = `${x}px`;
+            ghostEl.style.top = `${y}px`;
+          }
+        }
+
+        function placeTileOnBoard(tile, idx) {
+          if (isSolved) return;
+          moveHistory.push({
+            type: 'PLACE',
+            tile: tile,
+            targetIdx: idx,
+            prevTile: gridCells[idx] ? gridCells[idx] : null
+          });
+
+          if (gridCells[idx] && !gridCells[idx].isLocked) {
+            trayTiles.push({ id: Math.random().toString(36).substr(2, 9), value: gridCells[idx].value });
+          }
+
+          trayTiles = trayTiles.filter(t => t.id !== tile.id);
+          gridCells[idx] = { value: tile.value, isLocked: false, isHinted: false };
+
+          renderBoard();
+          renderTray();
+          checkAutoWin();
+        }
+
+        function returnTileToTray(idx) {
+          if (isSolved) return;
+          const cell = gridCells[idx];
+          if (!cell || cell.isLocked) return;
+
+          moveHistory.push({
+            type: 'REMOVE',
+            tile: { value: cell.value },
+            fromIdx: idx
+          });
+
+          trayTiles.push({ id: Math.random().toString(36).substr(2, 9), value: cell.value });
+          gridCells[idx] = null;
+
+          renderBoard();
+          renderTray();
+        }
+
+        // --- 9. CONTROLS ---
+        document.getElementById('btn-undo').onclick = () => {
+          if (isSolved || moveHistory.length === 0) return;
+          const lastMove = moveHistory.pop();
+
+          if (lastMove.type === 'PLACE') {
+            gridCells[lastMove.targetIdx] = lastMove.prevTile;
+            trayTiles.push(lastMove.tile);
+          } else if (lastMove.type === 'REMOVE') {
+            gridCells[lastMove.fromIdx] = { value: lastMove.tile.value, isLocked: false, isHinted: false };
+            const trayIdx = trayTiles.findIndex(t => t.value === lastMove.tile.value);
+            if (trayIdx !== -1) trayTiles.splice(trayIdx, 1);
+          }
+
+          renderBoard();
+          renderTray();
+        };
+
+        document.getElementById('btn-shuffle').onclick = () => {
+          if (isSolved) return;
+          trayTiles = seededShuffle(trayTiles);
+          renderTray();
+        };
+
+        document.getElementById('btn-hint').onclick = () => {
+          if (isSolved || remainingHints <= 0) return;
+
+          const targetSol = window.targetSolution;
+          let emptyIndices = FRAME_INDICES.filter(i => !gridCells[i] || (gridCells[i].value !== targetSol[i] && !gridCells[i].isLocked));
+
+          if (emptyIndices.length === 0) return;
+
+          const targetIdx = emptyIndices[0];
+          const correctVal = targetSol[targetIdx];
+
+          const trayIdx = trayTiles.findIndex(t => t.value === correctVal);
+          if (trayIdx !== -1) {
+            trayTiles.splice(trayIdx, 1);
+          } else {
+            const wrongIdx = FRAME_INDICES.find(i => gridCells[i] && !gridCells[i].isLocked && gridCells[i].value === correctVal);
+            if (wrongIdx !== undefined) gridCells[wrongIdx] = null;
+          }
+
+          gridCells[targetIdx] = { value: correctVal, isLocked: false, isHinted: true };
+
+          remainingHints--;
+          document.getElementById('hint-btn-text').innerText = remainingHints > 0 ? `Hint (${remainingHints}/3)` : `No Hints`;
+
+          renderBoard();
+          renderTray();
+          checkAutoWin();
+        };
+
+        // --- 10. EDDIE MODE ---
+        const eddieBtn = document.getElementById('btn-eddie-toggle');
+        eddieBtn.onclick = () => {
+          if (isEddieDisabled || isSolved) return;
+
+          if (isEddieMode) {
+            isEddieMode = false;
+            isEddieDisabled = true;
+            updateEddieUI();
+            startNewGame();
+          }
+        };
+
+        function updateEddieUI() {
+          const eddieIndicator = document.getElementById('eddie-status-indicator');
+          if (isEddieDisabled || isSolved) {
+            eddieBtn.innerText = 'Eddie Locked';
+            eddieBtn.className = 'text-[10px] font-bold px-2 py-1 rounded-lg border transition-all bg-slate-800 border-slate-700 text-slate-500 cursor-not-allowed';
+            eddieIndicator.innerText = isSolved ? 'Puzzle Solved' : 'Standard Mode';
+            eddieIndicator.className = 'text-slate-500 font-bold';
+          } else if (isEddieMode) {
+            eddieBtn.innerText = 'Eddie ON';
+            eddieBtn.className = 'text-[10px] font-bold px-2 py-1 rounded-lg border transition-all bg-purple-600 border-purple-400 text-white shadow-lg shadow-purple-950/40';
+            eddieIndicator.innerText = '⚡ Eddie Mode Active (TL Only)';
+            eddieIndicator.className = 'text-purple-400 font-bold';
+          }
+        }
+
+        // --- 11. WIN LOGIC & SHARE ---
+        document.getElementById('btn-check').onclick = () => checkAutoWin(true);
+
+        function checkAutoWin(isManualCheck = false) {
+          if (isSolved) return;
+          const targetSol = window.targetSolution;
+          let allCorrect = true;
+
+          for (let idx of FRAME_INDICES) {
+            if (!gridCells[idx] || gridCells[idx].value !== targetSol[idx]) {
+              allCorrect = false;
+              break;
+            }
+          }
+
+          if (allCorrect) {
+            isSolved = true;
+            saveDailyCompletion();
+            renderBoard();
+            renderTray();
+            updateEddieUI();
+            
+            userStats.played++;
+            userStats.solved++;
+            userStats.streak++;
+            localStorage.setItem('cornerhop_stats', JSON.stringify(userStats));
+
+            confetti({ particleCount: 80, spread: 60, origin: { y: 0.6 } });
+            showWinModal();
+          } else if (isManualCheck) {
+            showToast("Not quite right! Check your tiles.");
+          }
+        }
+
+        function showWinModal() {
+          const overlay = document.getElementById('modal-share');
+          const gridPreview = document.getElementById('modal-grid-preview');
+
+          let emojiRows = [];
+          for (let r = 0; r < 5; r++) {
+            let rowStr = "";
+            for (let c = 0; c < 5; c++) {
+              const idx = r * 5 + c;
+              if (!FRAME_INDICES.includes(idx)) {
+                rowStr += "⬛";
+              } else {
+                const cell = gridCells[idx];
+                if (cell && cell.isHinted) {
+                  rowStr += "🟨";
+                } else {
+                  rowStr += "🟩";
+                }
+              }
+            }
+            emojiRows.push(rowStr);
+          }
+
+          const eddieBadge = isEddieMode ? "⚡ Eddie Mode [TL Only]" : "Standard Mode";
+          const shareText = `${currentMode === 'WORD' ? 'CornerHop' : 'MathsHop'} ${dateSeedStr}\n${eddieBadge}\n\n${emojiRows.join('\n')}`;
+
+          gridPreview.innerText = shareText;
+          overlay.classList.remove('hidden');
+
+          document.getElementById('btn-copy-share').onclick = () => {
+            navigator.clipboard.writeText(shareText).then(() => {
+              showToast("Result copied to clipboard!");
+              document.getElementById('copy-btn-text').innerText = "Copied!";
+              setTimeout(() => { document.getElementById('copy-btn-text').innerText = "Copy Result to Clipboard"; }, 2000);
+            });
+          };
+        }
+
+        function showToast(msg) {
+          const toast = document.getElementById('toast');
+          toast.innerText = msg;
+          toast.classList.remove('opacity-0', 'pointer-events-none', '-translate-y-2');
+          toast.classList.add('opacity-100', 'translate-y-0');
+
+          setTimeout(() => {
+            toast.classList.remove('opacity-100', 'translate-y-0');
+            toast.classList.add('opacity-0', 'pointer-events-none', '-translate-y-2');
+          }, 2000);
+        }
+
+        // --- 12. MODALS & TAB LISTENERS ---
+        document.getElementById('btn-close-share-x').onclick = () => document.getElementById('modal-share').classList.add('hidden');
+        document.getElementById('btn-close-share-bottom').onclick = () => document.getElementById('modal-share').classList.add('hidden');
+
+        document.getElementById('btn-help').onclick = () => document.getElementById('modal-help').classList.remove('hidden');
+        document.getElementById('btn-close-help-x').onclick = () => document.getElementById('modal-help').classList.add('hidden');
+        document.getElementById('btn-close-help-bottom').onclick = () => document.getElementById('modal-help').classList.add('hidden');
+
+        document.getElementById('btn-stats').onclick = () => {
+          document.getElementById('stat-played').innerText = userStats.played;
+          document.getElementById('stat-solved').innerText = userStats.solved;
+          document.getElementById('stat-streak').innerText = userStats.streak;
+          document.getElementById('modal-stats').classList.remove('hidden');
+        };
+        document.getElementById('btn-close-stats-x').onclick = () => document.getElementById('modal-stats').classList.add('hidden');
+        document.getElementById('btn-close-stats-bottom').onclick = () => document.getElementById('modal-stats').classList.add('hidden');
+
+        document.getElementById('tab-mode-word').onclick = () => {
+          if (currentMode === 'WORD') return;
+          currentMode = 'WORD';
+          isEddieDisabled = false;
+          isEddieMode = true;
+          document.getElementById('tab-mode-word').className = 'px-2 py-0.5 rounded transition-all bg-amber-500 text-slate-950 font-bold';
+          document.getElementById('tab-mode-maths').className = 'px-2 py-0.5 rounded transition-all text-slate-400 hover:text-slate-200';
+          startNewGame();
+        };
+
+        document.getElementById('tab-mode-maths').onclick = () => {
+          if (currentMode === 'MATHS') return;
+          currentMode = 'MATHS';
+          isEddieDisabled = false;
+          isEddieMode = true;
+          document.getElementById('tab-mode-maths').className = 'px-2 py-0.5 rounded transition-all bg-indigo-600 text-white font-bold';
+          document.getElementById('tab-mode-word').className = 'px-2 py-0.5 rounded transition-all text-slate-400 hover:text-slate-200';
+          startNewGame();
+        };
+
+        // Load stats
+        try {
+          const savedStats = localStorage.getItem('cornerhop_stats');
+          if (savedStats) userStats = JSON.parse(savedStats);
+        } catch(e) {}
+
+        // Boot application
+        startNewGame();
+    </script>
+</body>
+</html>
