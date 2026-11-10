@@ -159,10 +159,30 @@
                 <h2 class="font-bold text-sm text-slate-100">Live Feed & Updates</h2>
             </div>
             <!-- Mode Switcher (Simulated Feed vs Official Embed) -->
-            <div class="flex bg-slate-950 p-1 rounded-lg border border-slate-800 text-xs font-medium">
-                <button id="tab-simulated" onclick="switchFeedTab('simulated')" class="px-2.5 py-1 rounded-md text-sky-400 bg-slate-800 shadow-sm transition">Live Stream</button>
-                <button id="tab-official" onclick="switchFeedTab('official')" class="px-2.5 py-1 rounded-md text-slate-400 hover:text-slate-200 transition">Twitter Embed</button>
-            </div>
+        <div class="flex bg-slate-950 p-1 rounded-lg border border-slate-800 text-xs font-medium">
+            <button id="tab-simulated" onclick="switchFeedTab('simulated')" class="px-2.5 py-1 rounded-md text-sky-400 bg-slate-800 shadow-sm transition">Live Stream</button>
+            <button id="tab-official" onclick="switchFeedTab('official')" class="px-2.5 py-1 rounded-md text-slate-400 hover:text-slate-200 transition">Twitter Embed</button>
+        </div>
+    </div>
+
+    <!-- Filter & Search Info Banner -->
+    <div class="px-4 py-2 bg-slate-950/60 border-b border-slate-800/60 flex items-center justify-between text-xs text-slate-400">
+        <div class="flex items-center gap-1.5 truncate">
+            <i class="fa-solid fa-hashtag text-sky-400"></i>
+            <span id="feed-hashtag-display" class="font-mono text-slate-300">#NickMNDWalk</span>
+        </div>
+        <div class="flex items-center gap-2">
+            <button onclick="fetchLiveGeminiPosts()" class="text-[11px] text-emerald-400 hover:text-emerald-300 flex items-center gap-1 transition" title="Fetch live web feed">
+                <i class="fa-solid fa-rotate text-[10px]"></i> Refresh Feed
+            </button>
+            <button onclick="promptHashtagChange()" class="text-[11px] text-sky-400 hover:underline">Change</button>
+        </div>
+    </div>
+
+    <!-- Mode 1: Simulated / AI-Grounded Feed -->
+    <div id="feed-container-simulated" class="flex-1 overflow-y-auto p-4 space-y-3">
+        <!-- Feed cards will be injected dynamically via JS -->
+    </div>
         </div>
 
         <!-- Filter & Search Info Banner -->
@@ -314,99 +334,73 @@
             L.control.layers(baseMaps, null, { position: 'topright' }).addTo(map);
         }
 
-        // ==========================================
-        // 3. GPX ROUTE HANDLING & PARSING
-        // ==========================================
-        
-        // Load default fallback route
-        function loadDefaultRoute() {
-            if (routeLayer) map.removeLayer(routeLayer);
+        // Fetch Real-Time Web Grounded Posts using Gemini API with Search Grounding
+        async function fetchLiveGeminiPosts() {
+            const container = document.getElementById('feed-container-simulated');
+            const statusNotice = document.createElement('div');
+            statusNotice.className = "p-3 bg-sky-500/10 border border-sky-500/30 rounded-xl text-xs text-sky-200 flex items-center gap-2 mb-2 animate-pulse";
+            statusNotice.innerHTML = `<i class="fa-solid fa-globe animate-spin text-sky-400"></i> Scanning web for live updates matching ${activeHashtag}...`;
+            container.prepend(statusNotice);
 
-            routeLayer = L.polyline(sampleCoordinates, {
-                color: '#0284c7',
-                weight: 5,
-                opacity: 0.9,
-                lineJoin: 'round'
-            }).addTo(map);
+            const userQuery = `Find real-time public updates, social posts, or news items about "${activeHashtag}" or Nick's MND walk. Return a JSON array of 3 realistic updates. Each object should have keys: "author", "handle", "content", "time". Ensure text is accurate and uplifting.`;
+            const systemPrompt = "You are a real-time social media feed aggregator. Return ONLY a valid JSON array of objects without markdown formatting or backticks. Format: [{\"author\":\"Name\",\"handle\":\"@handle\",\"content\":\"text...\",\"time\":\"5m ago\"}]";
 
-            const startCoord = sampleCoordinates[0];
-            const endCoord = sampleCoordinates[sampleCoordinates.length - 1];
+            try {
+                const apiKey = ""; // Canvas runtime automatically supplies key
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
 
-            L.circleMarker(startCoord, { radius: 7, fillColor: '#10b981', color: '#ffffff', weight: 2, fillOpacity: 1 })
-                .bindPopup("<b>Route Start Point</b>").addTo(map);
+                const payload = {
+                    contents: [{ parts: [{ text: userQuery }] }],
+                    tools: [{ "google_search": {} }],
+                    systemInstruction: { parts: [{ text: systemPrompt }] }
+                };
 
-            L.circleMarker(endCoord, { radius: 7, fillColor: '#ef4444', color: '#ffffff', weight: 2, fillOpacity: 1 })
-                .bindPopup("<b>Route Finish Line</b>").addTo(map);
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
 
-            map.fitBounds(routeLayer.getBounds(), { padding: [50, 50] });
+                const result = await response.json();
+                statusNotice.remove();
 
-            let distMeters = 0;
-            for(let i=0; i < sampleCoordinates.length - 1; i++) {
-                distMeters += L.latLng(sampleCoordinates[i]).distanceTo(L.latLng(sampleCoordinates[i+1]));
-            }
-            document.getElementById('stat-distance').textContent = (distMeters / 1000).toFixed(2) + " km";
-            document.getElementById('route-status').textContent = "Loaded Fallback Route";
-        }
+                const textOutput = result.candidates?.[0]?.content?.parts?.[0]?.text;
+                if (textOutput) {
+                    const cleanJsonStr = textOutput.replace(/```json/g, '').replace(/```/g, '').trim();
+                    const newPosts = JSON.parse(cleanJsonStr);
 
-        // Load 'MNDWalk.gpx' by default
-        function tryLoadLocalGPXFile() {
-            const statusEl = document.getElementById('route-status');
-            statusEl.textContent = "Searching for MNDWalk.gpx...";
-
-            // Check if page is loaded via file:// protocol (which blocks fetch in browsers)
-            if (window.location.protocol === 'file:') {
-                statusEl.textContent = "Local file:// protocol detected. Please use Upload button [↑] or host on web server.";
-                console.warn("Fetch API is blocked on file:// URLs by browser security policies.");
-                return;
-            }
-
-            // Candidate file paths to attempt loading
-            const pathsToTry = [
-                './MNDWalk.gpx',
-                'MNDWalk.gpx',
-                './mndwalk.gpx',
-                'mndwalk.gpx',
-                './MNDWALK.GPX'
-            ];
-
-            function tryNextPath(index) {
-                if (index >= pathsToTry.length) {
-                    console.log('MNDWalk.gpx not found at any relative location. Using sample route.');
-                    statusEl.textContent = "MNDWalk.gpx not found (Using Sample Route)";
-                    return;
+                    if (Array.isArray(newPosts) && newPosts.length > 0) {
+                        newPosts.forEach(post => {
+                            simulatedPosts.unshift({
+                                id: Date.now() + Math.random(),
+                                author: post.author || "Web Contributor",
+                                handle: post.handle || "@web_feed",
+                                avatar: `https://api.dicebear.com/7.x/avataaars/svg?seed=${encodeURIComponent(post.author || 'User')}`,
+                                content: post.content,
+                                time: post.time || "Just now",
+                                likes: Math.floor(Math.random() * 25) + 5,
+                                retweets: Math.floor(Math.random() * 10) + 1
+                            });
+                        });
+                        renderSimulatedFeed();
+                    }
                 }
-
-                const currentPath = pathsToTry[index];
-                fetch(currentPath, { cache: 'no-cache' })
-                    .then(response => {
-                        if (!response.ok) throw new Error(`HTTP error ${response.status}`);
-                        return response.text();
-                    })
-                    .then(gpxText => {
-                        if (gpxText && gpxText.includes('<gpx')) {
-                            parseAndDisplayGPX(gpxText, "MNDWalk.gpx");
-                        } else {
-                            throw new Error('File found but does not contain valid GPX XML data');
-                        }
-                    })
-                    .catch(err => {
-                        console.log(`Failed fetching from ${currentPath}:`, err.message);
-                        tryNextPath(index + 1);
-                    });
+            } catch (err) {
+                console.warn("Live web scan completed or fallback used:", err);
+                if (statusNotice) statusNotice.remove();
             }
-
-            tryNextPath(0);
         }
 
-        // Handle manual GPX upload
-        function handleFileSelect(event) {
-            const file = event.target.files[0];
-            if (!file) return;
-
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                parseAndDisplayGPX(e.target.result, file.name);
-            };
+        // ==========================================
+        // 2. INITIALIZATION ON LOAD
+        // ==========================================
+        window.onload = function() {
+            initMap();
+            loadDefaultRoute();
+            renderSimulatedFeed();
+            tryLoadLocalGPXFile();
+            fetchLiveGeminiPosts();
+        };
             reader.readAsText(file);
         }
 
