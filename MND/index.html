@@ -350,16 +350,65 @@
             }
         }
 
-        // ==========================================
-        // 2. INITIALIZATION ON LOAD
-        // ==========================================
-        window.onload = function() {
-            initMap();
-            loadDefaultRoute();
-            renderSimulatedFeed();
-            tryLoadLocalGPXFile();
-            fetchLiveGeminiPosts();
-        };
+        // Load Default GPX Route or fallback
+        async function loadDefaultRoute() {
+            const possiblePaths = ['MNDWalk.gpx', './MNDWalk.gpx', 'mndwalk.gpx', './mndwalk.gpx', 'MNDWalk.GPX'];
+            let loadedSuccessfully = false;
+
+            for (const path of possiblePaths) {
+                try {
+                    const response = await fetch(path, { cache: 'no-store' });
+                    if (response.ok) {
+                        const gpxText = await response.text();
+                        parseAndDisplayGPX(gpxText, path);
+                        loadedSuccessfully = true;
+                        break;
+                    }
+                } catch (e) {
+                    // Try next path candidate
+                }
+            }
+
+            if (!loadedSuccessfully) {
+                if (window.location.protocol === 'file:') {
+                    document.getElementById('route-status').textContent = "Opened via file:// (CORS blocks local GPX fetch)";
+                } else {
+                    document.getElementById('route-status').textContent = "MNDWalk.gpx not found (Using Felixstowe Sample)";
+                }
+                loadSampleRoute();
+            }
+        }
+
+        function loadSampleRoute() {
+            if (routeLayer) map.removeLayer(routeLayer);
+            routeLayer = L.polyline(sampleCoordinates, {
+                color: '#0284c7',
+                weight: 5,
+                opacity: 0.9,
+                lineCap: 'round'
+            }).addTo(map);
+
+            map.fitBounds(routeLayer.getBounds(), { padding: [50, 50] });
+
+            let totalMeters = 0;
+            for (let i = 0; i < sampleCoordinates.length - 1; i++) {
+                totalMeters += L.latLng(sampleCoordinates[i]).distanceTo(L.latLng(sampleCoordinates[i + 1]));
+            }
+            document.getElementById('stat-distance').textContent = (totalMeters / 1000).toFixed(2) + " km";
+        }
+
+        function tryLoadLocalGPXFile() {
+            // Function placeholder for initial file check if needed
+        }
+
+        function handleFileSelect(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                parseAndDisplayGPX(e.target.result, file.name);
+            };
             reader.readAsText(file);
         }
 
