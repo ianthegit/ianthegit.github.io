@@ -228,17 +228,17 @@
         let watchId = null;
         let activeHashtag = "#NickMNDWalk";
         
-        // Sample GPX Coordinate Fallback Data
+        // Sample GPX Coordinate Fallback Data (Felixstowe Ferry Coastal Walk)
         const sampleCoordinates = [
-            [51.505, -0.09],
-            [51.507, -0.087],
-            [51.51, -0.08],
-            [51.513, -0.075],
-            [51.512, -0.065],
-            [51.508, -0.062],
-            [51.503, -0.07],
-            [51.501, -0.082],
-            [51.505, -0.09]
+            [51.9808, 1.3986],
+            [51.9825, 1.3960],
+            [51.9850, 1.3942],
+            [51.9890, 1.3910],
+            [51.9930, 1.3885],
+            [51.9960, 1.3860],
+            [51.9910, 1.3840],
+            [51.9840, 1.3920],
+            [51.9808, 1.3986]
         ];
 
         // Sample Social Posts Data
@@ -279,7 +279,7 @@
         function initMap() {
             map = L.map('map', {
                 zoomControl: false
-            }).setView([51.505, -0.09], 13);
+            }).setView([51.9808, 1.3986], 14);
 
             // Re-add Zoom Control to Top Right
             L.control.zoom({ position: 'topright' }).addTo(map);
