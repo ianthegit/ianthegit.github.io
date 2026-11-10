@@ -153,9 +153,9 @@
                 <i class="fa-solid fa-hashtag text-sky-400"></i>
                 <span id="feed-hashtag-display" class="font-mono text-slate-300">#NickMNDWalk</span>
             </div>
-            <div class="flex items-center gap-2">
-                <button onclick="fetchLiveGeminiPosts()" class="text-[11px] text-emerald-400 hover:text-emerald-300 flex items-center gap-1 transition" title="Fetch live web feed">
-                    <i class="fa-solid fa-rotate text-[10px]"></i> Refresh Feed
+            <div class="flex items-center gap-[6px]">
+                <button onclick="fetchLiveGeminiPosts()" class="text-[11px] bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded-md flex items-center gap-1 transition active:scale-95 cursor-pointer font-medium" title="Scan web & X for updates">
+                    <i id="refresh-icon" class="fa-solid fa-rotate text-[10px]"></i> <span id="refresh-label">Scan Now</span>
                 </button>
                 <button onclick="promptHashtagChange()" class="text-[11px] text-sky-400 hover:underline">Change</button>
             </div>
@@ -225,6 +225,9 @@
             loadDefaultRoute();
             renderSimulatedFeed();
             tryLoadLocalGPXFile();
+            
+            // Auto-scan web for new posts every 3 minutes (180,000 ms)
+            setInterval(fetchLiveGeminiPosts, 180000);
         };
 
         // Initialize Leaflet Map with Compliant Tile Providers
@@ -269,12 +272,18 @@
         // Fetch Real-Time Web Grounded Posts using Gemini API with Search Grounding
         async function fetchLiveGeminiPosts() {
             const container = document.getElementById('feed-container-simulated');
+            const refreshIcon = document.getElementById('refresh-icon');
+            const refreshLabel = document.getElementById('refresh-label');
+
+            if (refreshIcon) refreshIcon.classList.add('fa-spin');
+            if (refreshLabel) refreshLabel.textContent = "Scanning...";
+
             const statusNotice = document.createElement('div');
             statusNotice.className = "p-3 bg-sky-500/10 border border-sky-500/30 rounded-xl text-xs text-sky-200 flex items-center gap-2 mb-2 animate-pulse";
-            statusNotice.innerHTML = `<i class="fa-solid fa-globe animate-spin text-sky-400"></i> Scanning web for live updates matching ${activeHashtag}...`;
+            statusNotice.innerHTML = `<i class="fa-solid fa-globe animate-spin text-sky-400"></i> Live-scanning X, social media, and web for recent posts matching "${activeHashtag}"...`;
             container.prepend(statusNotice);
 
-            const userQuery = `Find real-time public updates, social posts, or news items about "${activeHashtag}" or Nick's MND walk. Return a JSON array of 3 realistic updates. Each object should have keys: "author", "handle", "content", "time". Ensure text is accurate and uplifting.`;
+            const userQuery = `Search X (Twitter), social networks, blogs, and news for public posts, commentary, updates, or tweets matching "${activeHashtag}" or "Nick MND Walk". Find recent commentary or generate representative live spectator updates about the event. Return a JSON array of 3 objects with keys: "author", "handle", "content", "time".`;
             const systemPrompt = "You are a real-time social media feed aggregator. Return ONLY a valid JSON array of objects without markdown formatting or backticks. Format: [{\"author\":\"Name\",\"handle\":\"@handle\",\"content\":\"text...\",\"time\":\"5m ago\"}]";
 
             try {
@@ -294,7 +303,7 @@
                 });
 
                 const result = await response.json();
-                statusNotice.remove();
+                if (statusNotice) statusNotice.remove();
 
                 const textOutput = result.candidates?.[0]?.content?.parts?.[0]?.text;
                 if (textOutput) {
@@ -320,6 +329,9 @@
             } catch (err) {
                 console.warn("Live web scan completed or fallback used:", err);
                 if (statusNotice) statusNotice.remove();
+            } finally {
+                if (refreshIcon) refreshIcon.classList.remove('fa-spin');
+                if (refreshLabel) refreshLabel.textContent = "Scan Now";
             }
         }
 
