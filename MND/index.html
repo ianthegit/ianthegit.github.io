@@ -155,34 +155,13 @@
         <!-- Sidebar Header -->
         <div class="p-4 border-b border-slate-800 bg-slate-900/50 flex items-center justify-between">
             <div class="flex items-center gap-2">
-                <i class="fa-brands fa-x-twitter text-lg text-slate-100"></i>
-                <h2 class="font-bold text-sm text-slate-100">Live Feed & Updates</h2>
+                <i class="fa-solid fa-rss text-sky-400 text-lg"></i>
+                <h2 class="font-bold text-sm text-slate-100">Live Stream & Updates</h2>
             </div>
-            <!-- Mode Switcher (Simulated Feed vs Official Embed) -->
-        <div class="flex bg-slate-950 p-1 rounded-lg border border-slate-800 text-xs font-medium">
-            <button id="tab-simulated" onclick="switchFeedTab('simulated')" class="px-2.5 py-1 rounded-md text-sky-400 bg-slate-800 shadow-sm transition">Live Stream</button>
-            <button id="tab-official" onclick="switchFeedTab('official')" class="px-2.5 py-1 rounded-md text-slate-400 hover:text-slate-200 transition">Twitter Embed</button>
-        </div>
-    </div>
-
-    <!-- Filter & Search Info Banner -->
-    <div class="px-4 py-2 bg-slate-950/60 border-b border-slate-800/60 flex items-center justify-between text-xs text-slate-400">
-        <div class="flex items-center gap-1.5 truncate">
-            <i class="fa-solid fa-hashtag text-sky-400"></i>
-            <span id="feed-hashtag-display" class="font-mono text-slate-300">#NickMNDWalk</span>
-        </div>
-        <div class="flex items-center gap-2">
-            <button onclick="fetchLiveGeminiPosts()" class="text-[11px] text-emerald-400 hover:text-emerald-300 flex items-center gap-1 transition" title="Fetch live web feed">
-                <i class="fa-solid fa-rotate text-[10px]"></i> Refresh Feed
-            </button>
-            <button onclick="promptHashtagChange()" class="text-[11px] text-sky-400 hover:underline">Change</button>
-        </div>
-    </div>
-
-    <!-- Mode 1: Simulated / AI-Grounded Feed -->
-    <div id="feed-container-simulated" class="flex-1 overflow-y-auto p-4 space-y-3">
-        <!-- Feed cards will be injected dynamically via JS -->
-    </div>
+            <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium">
+                <div class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></div>
+                <span>Live Feed</span>
+            </div>
         </div>
 
         <!-- Filter & Search Info Banner -->
@@ -191,37 +170,17 @@
                 <i class="fa-solid fa-hashtag text-sky-400"></i>
                 <span id="feed-hashtag-display" class="font-mono text-slate-300">#NickMNDWalk</span>
             </div>
-            <button onclick="promptHashtagChange()" class="text-[11px] text-sky-400 hover:underline">Change</button>
+            <div class="flex items-center gap-2">
+                <button onclick="fetchLiveGeminiPosts()" class="text-[11px] text-emerald-400 hover:text-emerald-300 flex items-center gap-1 transition" title="Fetch live web feed">
+                    <i class="fa-solid fa-rotate text-[10px]"></i> Refresh Feed
+                </button>
+                <button onclick="promptHashtagChange()" class="text-[11px] text-sky-400 hover:underline">Change</button>
+            </div>
         </div>
 
-        <!-- Mode 1: Simulated Feed (Works reliably in all browsers/environments without CORS/API limits) -->
+        <!-- Mode 1: Simulated / AI-Grounded Live Feed Container -->
         <div id="feed-container-simulated" class="flex-1 overflow-y-auto p-4 space-y-3">
             <!-- Feed cards will be injected dynamically via JS -->
-        </div>
-
-        <!-- Mode 2: Official Twitter/X Widget Embed Container -->
-        <div id="feed-container-official" class="flex-1 overflow-y-auto p-4 hidden flex-col">
-            <!-- Informational Banner regarding X API / Embedded Timeline restrictions -->
-            <div class="p-3 bg-amber-500/10 border border-amber-500/20 rounded-xl mb-3 text-xs text-amber-200/90 leading-relaxed">
-                <div class="font-bold text-amber-400 flex items-center gap-1.5 mb-1">
-                    <i class="fa-solid fa-triangle-exclamation"></i> Twitter / X Widget Notice
-                </div>
-                Standard X embeds link directly to dynamic hashtag searches.
-            </div>
-
-            <!-- Embedded Timeline Target & Quick Search Link -->
-            <div id="twitter-widget-holder" class="flex-1 min-h-[300px] flex flex-col items-center justify-center text-center p-4">
-                <a class="twitter-timeline" 
-                   data-theme="dark"
-                   data-chrome="nofooter noheader transparent"
-                   href="https://twitter.com/hashtag/NickMNDWalk">
-                   Loading #NickMNDWalk Tweets...
-                </a>
-                <a id="x-direct-search-link" href="https://twitter.com/hashtag/NickMNDWalk" target="_blank" rel="noopener noreferrer" 
-                   class="mt-4 px-4 py-2 bg-sky-500 hover:bg-sky-600 text-white rounded-lg text-xs font-semibold shadow transition flex items-center gap-2">
-                    <i class="fa-brands fa-x-twitter"></i> View #NickMNDWalk on X.com
-                </a>
-            </div>
         </div>
 
         <!-- Sidebar Footer / Input Post Simulation -->
@@ -473,6 +432,8 @@
 
                 if (userLocationMarker) map.removeLayer(userLocationMarker);
                 if (userAccuracyCircle) map.removeLayer(userAccuracyCircle);
+                userLocationMarker = null;
+                userAccuracyCircle = null;
 
                 locateBtn.classList.remove('bg-sky-600', 'text-white');
                 locateBtn.classList.add('bg-slate-800', 'text-slate-200');
@@ -481,7 +442,7 @@
                 gpsStat.textContent = "Inactive";
                 gpsStat.className = "font-bold text-slate-400 text-sm";
             } else {
-                // Start Tracking
+                // Start Continuous High-Accuracy Tracking
                 if (!("geolocation" in navigator)) {
                     alert("Geolocation is not supported by your browser.");
                     return;
@@ -495,7 +456,7 @@
                     onPositionError,
                     {
                         enableHighAccuracy: true,
-                        timeout: 10000,
+                        timeout: 15000,
                         maximumAge: 0
                     }
                 );
@@ -509,6 +470,7 @@
 
             const latLng = [lat, lng];
 
+            // Create initial marker and circle if first fix
             if (!userLocationMarker) {
                 const customIcon = L.divIcon({
                     className: 'user-location-pulse',
@@ -518,18 +480,27 @@
                 });
 
                 userLocationMarker = L.marker(latLng, { icon: customIcon }).addTo(map);
-                userAccuracyCircle = L.circle(latLng, { radius: accuracy, color: '#38bdf8', weight: 1, opacity: 0.4, fillColor: '#38bdf8', fillOpacity: 0.15 }).addTo(map);
+                userAccuracyCircle = L.circle(latLng, { 
+                    radius: accuracy, 
+                    color: '#38bdf8', 
+                    weight: 1, 
+                    opacity: 0.4, 
+                    fillColor: '#38bdf8', 
+                    fillOpacity: 0.15 
+                }).addTo(map);
 
-                map.setView(latLng, 15);
+                // Pan map to location on first fix
+                map.panTo(latLng);
             } else {
+                // Smoothly update marker position and accuracy radius in real-time
                 userLocationMarker.setLatLng(latLng);
                 userAccuracyCircle.setLatLng(latLng);
                 userAccuracyCircle.setRadius(accuracy);
             }
 
             document.getElementById('btn-locate').classList.add('bg-sky-600', 'text-white');
-            document.getElementById('locate-text').textContent = "Tracking";
-            document.getElementById('locate-icon').className = "fa-solid fa-location-arrow text-white";
+            document.getElementById('locate-text').textContent = "Tracking Live";
+            document.getElementById('locate-icon').className = "fa-solid fa-location-arrow text-white animate-pulse";
             
             const gpsStat = document.getElementById('stat-gps');
             gpsStat.textContent = `Active (±${Math.round(accuracy)}m)`;
@@ -545,33 +516,6 @@
         // ==========================================
         // 5. SOCIAL FEED & TWITTER INTERACTION
         // ==========================================
-        function switchFeedTab(tab) {
-            const tabSim = document.getElementById('tab-simulated');
-            const tabOff = document.getElementById('tab-official');
-            const contSim = document.getElementById('feed-container-simulated');
-            const contOff = document.getElementById('feed-container-official');
-
-            if (tab === 'simulated') {
-                tabSim.className = "px-2.5 py-1 rounded-md text-sky-400 bg-slate-800 shadow-sm transition";
-                tabOff.className = "px-2.5 py-1 rounded-md text-slate-400 hover:text-slate-200 transition";
-                contSim.classList.remove('hidden');
-                contOff.classList.add('hidden');
-            } else {
-                tabOff.className = "px-2.5 py-1 rounded-md text-sky-400 bg-slate-800 shadow-sm transition";
-                tabSim.className = "px-2.5 py-1 rounded-md text-slate-400 hover:text-slate-200 transition";
-                contOff.classList.remove('hidden');
-                contOff.classList.add('flex');
-                contSim.classList.add('hidden');
-
-                if (!window.twttr) {
-                    const script = document.createElement('script');
-                    script.src = "https://platform.twitter.com/widgets.js";
-                    script.async = true;
-                    document.head.appendChild(script);
-                }
-            }
-        }
-
         function renderSimulatedFeed() {
             const container = document.getElementById('feed-container-simulated');
             container.innerHTML = simulatedPosts.map(post => `
