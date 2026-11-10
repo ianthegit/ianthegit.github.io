@@ -183,16 +183,6 @@
             <!-- Feed cards will be injected dynamically via JS -->
         </div>
 
-        <!-- Sidebar Footer / Input Post Simulation -->
-        <div class="p-3 border-t border-slate-800 bg-slate-950/90 flex gap-2 items-center">
-            <input type="text" id="simulated-input" placeholder="Post a live update to feed..." 
-                   class="flex-1 bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-xs text-slate-200 focus:outline-none focus:border-sky-500 transition">
-            <button onclick="postSimulatedTweet()" 
-                    class="bg-sky-500 hover:bg-sky-600 text-white font-semibold text-xs px-3.5 py-2 rounded-lg transition active:scale-95 flex items-center gap-1.5">
-                <span>Post</span>
-                <i class="fa-solid fa-paper-plane text-[10px]"></i>
-            </button>
-        </div>
     </aside>
 
     <!-- JavaScript Logic -->
@@ -597,27 +587,6 @@
 
         function highlightHashtags(text) {
             return text.replace(/(#[a-zA-Z0-9_]+)/g, '<span class="text-sky-400 font-medium">$1</span>');
-        }
-
-        function postSimulatedTweet() {
-            const input = document.getElementById('simulated-input');
-            const text = input.value.trim();
-            if (!text) return;
-
-            const newPost = {
-                id: Date.now(),
-                author: "You (Live User)",
-                handle: "@spectator_live",
-                avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=You",
-                content: text.includes('#') ? text : `${text} ${activeHashtag}`,
-                time: "Just now",
-                likes: 0,
-                retweets: 0
-            };
-
-            simulatedPosts.unshift(newPost);
-            renderSimulatedFeed();
-            input.value = '';
         }
 
         function promptHashtagChange() {
