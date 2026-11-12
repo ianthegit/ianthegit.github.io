@@ -1,0 +1,355 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 880" width="100%" height="100%">
+  <defs>
+    <!-- Sky Gradient -->
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#194d96" />
+      <stop offset="55%" stop-color="#3b74b8" />
+      <stop offset="100%" stop-color="#87b2dc" />
+    </linearGradient>
+
+    <!-- Sea Gradient -->
+    <linearGradient id="seaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a5782" />
+      <stop offset="60%" stop-color="#4e7999" />
+      <stop offset="100%" stop-color="#7693a6" />
+    </linearGradient>
+
+    <!-- Sand Gradient -->
+    <linearGradient id="sandGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8e8379" />
+      <stop offset="100%" stop-color="#6b6259" />
+    </linearGradient>
+
+    <!-- Turquoise Shirt Gradient -->
+    <linearGradient id="shirtGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#11c5e8" />
+      <stop offset="60%" stop-color="#05a9cf" />
+      <stop offset="100%" stop-color="#0288ab" />
+    </linearGradient>
+
+    <linearGradient id="shirtGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#12bee0" />
+      <stop offset="70%" stop-color="#049ec4" />
+      <stop offset="100%" stop-color="#027e9e" />
+    </linearGradient>
+
+    <!-- Skin Tones -->
+    <linearGradient id="manSkin" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d99682" />
+      <stop offset="50%" stop-color="#c47c68" />
+      <stop offset="100%" stop-color="#9e5a49" />
+    </linearGradient>
+
+    <linearGradient id="womanSkin" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#eab099" />
+      <stop offset="55%" stop-color="#d48e76" />
+      <stop offset="100%" stop-color="#ad6752" />
+    </linearGradient>
+
+    <!-- Hat Gradient -->
+    <linearGradient id="hatCrown" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4d4c54" />
+      <stop offset="50%" stop-color="#35353d" />
+      <stop offset="100%" stop-color="#222229" />
+    </linearGradient>
+
+    <!-- Blonde Hair Gradient -->
+    <linearGradient id="hairGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f2eadc" />
+      <stop offset="50%" stop-color="#d4c6ad" />
+      <stop offset="100%" stop-color="#9c8e78" />
+    </linearGradient>
+  </defs>
+
+  <!-- BACKGROUND: SKY, SEA, BEACH -->
+  <rect x="0" y="0" width="1000" height="515" fill="url(#skyGrad)" />
+  <rect x="0" y="515" width="1000" height="125" fill="url(#seaGrad)" />
+  <rect x="0" y="640" width="1000" height="240" fill="url(#sandGrad)" />
+
+  <!-- Distant Island / Spit on Left -->
+  <path d="M 10 515 Q 65 508 125 513 L 135 517 L 5 517 Z" fill="#3a4c5e" />
+
+  <!-- Ocean Waves & Foam -->
+  <path d="M 0 538 Q 250 535 500 540 T 1000 538" stroke="#8eb1cc" stroke-width="2" fill="none" opacity="0.6" />
+  <path d="M 0 568 Q 300 564 600 570 T 1000 566" stroke="#c8dce8" stroke-width="3" fill="none" opacity="0.7" />
+  <path d="M 0 595 Q 200 592 550 598 T 1000 594" stroke="#e6f0f5" stroke-width="4" fill="none" opacity="0.8" />
+  <path d="M 0 622 Q 400 618 700 625 T 1000 620" stroke="#ffffff" stroke-width="3.5" fill="none" opacity="0.75" />
+
+  <!-- ========================================== -->
+  <!-- MAN ON THE LEFT                            -->
+  <!-- ========================================== -->
+  <g id="man">
+    <!-- Hat Back Brim Under-Shadow -->
+    <path d="M 75 330 C 70 250, 150 205, 330 215 C 510 225, 600 245, 592 295 C 588 335, 540 385, 480 390 L 450 320 L 180 310 L 105 340 Z" fill="#14161f" />
+
+    <!-- Man's Neck & Chin Shadow -->
+    <path d="M 185 415 L 200 530 L 345 625 L 435 480 L 420 400 Z" fill="#8f4f40" />
+
+    <!-- Man's Face Base -->
+    <path d="M 182 250 C 175 330, 195 435, 245 485 C 295 535, 385 520, 428 455 C 465 395, 480 305, 468 250 Z" fill="url(#manSkin)" />
+
+    <!-- Grey Side Hair / Temples -->
+    <path d="M 178 265 C 170 295, 175 330, 188 345 L 195 280 Z" fill="#b8b5b0" />
+    <path d="M 468 265 C 478 295, 475 330, 462 345 L 458 280 Z" fill="#9c9994" />
+
+    <!-- Ear (Left side of image) -->
+    <path d="M 183 300 C 165 295, 165 355, 188 375 Z" fill="#a85e4c" />
+    <path d="M 178 312 C 172 315, 172 345, 183 358" stroke="#7a3d2e" stroke-width="3" fill="none" />
+
+    <!-- Hat Strap Under Brim -->
+    <path d="M 122 325 L 205 262 L 212 268 L 132 330 Z" fill="#948c7e" />
+
+    <!-- Forehead & Cheek Highlights -->
+    <ellipse cx="265" cy="395" rx="45" ry="30" fill="#e6a693" opacity="0.45" />
+    <ellipse cx="395" cy="405" rx="35" ry="25" fill="#d99480" opacity="0.35" />
+
+    <!-- Eyebrows -->
+    <path d="M 255 305 Q 295 292 332 308" stroke="#6e5a50" stroke-width="7" stroke-linecap="round" fill="none" />
+    <path d="M 382 314 Q 418 304 448 318" stroke="#5c4a42" stroke-width="6.5" stroke-linecap="round" fill="none" />
+
+    <!-- Eyes -->
+    <!-- Left Eye -->
+    <ellipse cx="298" cy="336" rx="18" ry="9" fill="#e8e4e1" />
+    <circle cx="298" cy="336" r="7.5" fill="#4f6b70" />
+    <circle cx="298" cy="336" r="3.5" fill="#141414" />
+    <circle cx="296" cy="334" r="1.5" fill="#ffffff" />
+    <path d="M 278 334 Q 298 322 318 335" stroke="#593329" stroke-width="2.5" fill="none" />
+
+    <!-- Right Eye -->
+    <ellipse cx="412" cy="346" rx="16" ry="8.5" fill="#dedad7" />
+    <circle cx="411" cy="346" r="7" fill="#4a6368" />
+    <circle cx="411" cy="346" r="3.2" fill="#141414" />
+    <circle cx="409" cy="344" r="1.5" fill="#ffffff" />
+    <path d="M 394 344 Q 412 333 430 346" stroke="#593329" stroke-width="2.5" fill="none" />
+
+    <!-- Nose -->
+    <path d="M 352 330 L 342 385 C 335 398, 355 408, 378 402 C 392 398, 392 385, 382 375" fill="#c77b67" />
+    <path d="M 332 392 Q 358 412 390 398" stroke="#8c4738" stroke-width="3" fill="none" />
+    <ellipse cx="358" cy="382" rx="14" ry="10" fill="#e6a693" opacity="0.5" />
+
+    <!-- Nasolabial Folds (Smile Lines) -->
+    <path d="M 295 385 Q 272 415 275 445" stroke="#964e3e" stroke-width="3" fill="none" opacity="0.7" />
+    <path d="M 412 395 Q 425 422 418 448" stroke="#854233" stroke-width="3" fill="none" opacity="0.7" />
+
+    <!-- Smiling Mouth & Teeth -->
+    <path d="M 288 422 Q 352 435 410 428 Q 395 458 348 456 Q 302 454 288 422 Z" fill="#521d18" />
+    <!-- Upper Teeth -->
+    <path d="M 296 426 Q 350 436 402 431 Q 395 446 348 445 Q 305 444 296 426 Z" fill="#ebe3d5" />
+    <path d="M 322 429 L 322 443 M 338 431 L 338 445 M 354 432 L 354 445 M 370 432 L 370 444 M 385 432 L 385 442" stroke="#b8a892" stroke-width="1.2" />
+    <!-- Lower Lip -->
+    <path d="M 296 446 Q 350 468 402 446 Q 352 458 296 446 Z" fill="#b86758" />
+
+    <!-- Chin Stubble / Texture -->
+    <path d="M 295 478 Q 348 505 395 480" stroke="#8f5549" stroke-width="3" stroke-dasharray="2,4" fill="none" opacity="0.6" />
+
+    <!-- Glasses (Rectangular Thin Frames) -->
+    <g id="glasses">
+      <!-- Temple arm -->
+      <path d="M 205 305 L 258 322" stroke="#24201e" stroke-width="4" />
+      <!-- Left Lens Frame -->
+      <rect x="256" y="312" width="88" height="44" rx="8" fill="#ffffff" fill-opacity="0.06" stroke="#26211f" stroke-width="3.5" />
+      <!-- Bridge -->
+      <path d="M 344 328 Q 360 324 374 332" stroke="#26211f" stroke-width="4" fill="none" />
+      <!-- Right Lens Frame -->
+      <rect x="374" y="324" width="82" height="42" rx="8" fill="#ffffff" fill-opacity="0.06" stroke="#26211f" stroke-width="3.5" />
+      <!-- Right Temple hinge -->
+      <path d="M 456 336 L 474 332" stroke="#26211f" stroke-width="4" />
+    </g>
+
+    <!-- Hat Crown & Top Brim -->
+    <g id="hat">
+      <!-- Crown -->
+      <path d="M 185 235 L 168 158 C 165 135, 210 128, 255 122 C 295 105, 345 105, 395 125 C 440 132, 472 142, 468 168 L 478 242 Z" fill="url(#hatCrown)" />
+      <!-- Crown Creases & Highlights -->
+      <path d="M 178 175 Q 290 158 465 182" stroke="#63616b" stroke-width="4" fill="none" opacity="0.6" />
+      <path d="M 182 195 Q 310 185 470 205" stroke="#1c1c22" stroke-width="5" fill="none" opacity="0.7" />
+      <!-- Hat Band -->
+      <path d="M 184 222 Q 325 238 477 232 L 479 250 Q 325 258 182 240 Z" fill="#2b2b33" />
+      <!-- Front Brim -->
+      <path d="M 75 330 C 72 265, 115 215, 185 235 C 285 262, 415 265, 480 245 C 545 255, 595 265, 592 295 C 585 275, 535 268, 475 262 C 390 278, 275 272, 185 248 C 125 232, 85 275, 82 338 Z" fill="#3b3b45" />
+      <!-- Brim Stitching Detail -->
+      <path d="M 190 242 Q 330 268 472 254" stroke="#5c5c69" stroke-width="1.5" stroke-dasharray="4,3" fill="none" />
+    </g>
+
+    <!-- Man's Turquoise Polo Shirt -->
+    <g id="man-shirt">
+      <!-- Main Torso & Left Sleeve -->
+      <path d="M 0 560 L 135 510 L 185 435 L 348 615 L 430 475 L 495 575 L 515 880 L 0 880 Z" fill="url(#shirtGrad1)" />
+      <!-- Shirt Wrinkles & Shading -->
+      <path d="M 65 650 Q 175 720 265 880" stroke="#027b9c" stroke-width="12" fill="none" opacity="0.45" />
+      <path d="M 110 565 Q 235 675 345 880" stroke="#2ad8fa" stroke-width="8" fill="none" opacity="0.4" />
+      <path d="M 380 650 Q 435 760 445 880" stroke="#016985" stroke-width="16" fill="none" opacity="0.5" />
+
+      <!-- Popped Left Collar -->
+      <path d="M 178 430 L 145 535 L 325 635 L 345 612 L 195 445 Z" fill="#17cff2" />
+      <path d="M 178 430 L 145 535 L 156 540 L 186 438 Z" fill="#0387a8" />
+
+      <!-- Popped Right Collar -->
+      <path d="M 432 465 L 465 555 L 372 642 L 345 612 L 420 478 Z" fill="#0eb8db" />
+
+      <!-- Placket & Button -->
+      <path d="M 325 635 L 368 638 L 352 775 L 315 768 Z" fill="#069ec4" />
+      <circle cx="338" cy="705" r="8" fill="#026c87" stroke="#18d2f5" stroke-width="1.5" />
+
+      <!-- Chest Logo ("Suffolk to Sennen" Sun Graphic) -->
+      <g transform="translate(450, 680) rotate(-8)">
+        <ellipse cx="14" cy="22" rx="11" ry="15" fill="#fff36b" />
+        <!-- Sun Rays -->
+        <line x1="14" y1="0" x2="14" y2="-8" stroke="#fff36b" stroke-width="3" stroke-linecap="round" />
+        <line x1="3" y1="5" x2="-3" y2="-2" stroke="#fff36b" stroke-width="3" stroke-linecap="round" />
+        <line x1="-4" y1="16" x2="-11" y2="14" stroke="#fff36b" stroke-width="3" stroke-linecap="round" />
+        <line x1="-2" y1="28" x2="-9" y2="32" stroke="#fff36b" stroke-width="3" stroke-linecap="round" />
+        <!-- Blue Wave Accent -->
+        <path d="M 0 42 Q 16 34 32 45 L 32 54 Q 16 44 0 52 Z" fill="#4682b4" />
+      </g>
+    </g>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- WOMAN ON THE RIGHT                         -->
+  <!-- ========================================== -->
+  <g id="woman">
+    <!-- Back Hair Layer -->
+    <path d="M 555 375 C 525 465, 515 615, 520 715 L 875 705 C 865 595, 845 455, 795 370 Z" fill="#8f8370" />
+
+    <!-- Woman's Neck & Chest -->
+    <path d="M 605 555 L 605 695 L 705 795 L 775 685 L 755 555 Z" fill="#b8735e" />
+    <!-- Neck Highlight -->
+    <path d="M 635 585 L 635 725 L 715 745 L 725 585 Z" fill="#d68f78" />
+
+    <!-- Woman's Face Base -->
+    <path d="M 562 395 C 552 465, 568 552, 622 595 C 668 632, 725 628, 765 585 C 805 540, 815 455, 798 390 C 782 345, 582 345, 562 395 Z" fill="url(#womanSkin)" />
+
+    <!-- Cheek & Forehead Highlights -->
+    <ellipse cx="622" cy="495" rx="34" ry="22" fill="#f7c3ad" opacity="0.55" />
+    <ellipse cx="745" cy="492" rx="32" ry="22" fill="#f7c3ad" opacity="0.55" />
+    <ellipse cx="678" cy="415" rx="52" ry="25" fill="#f5bfa8" opacity="0.4" />
+
+    <!-- Eyebrows -->
+    <path d="M 588 452 Q 620 438 652 448" stroke="#9e8775" stroke-width="4" stroke-linecap="round" fill="none" />
+    <path d="M 702 445 Q 735 434 768 446" stroke="#9e8775" stroke-width="4" stroke-linecap="round" fill="none" />
+
+    <!-- Eyes (Smiling Squint) -->
+    <!-- Left Eye -->
+    <path d="M 594 472 Q 622 458 648 472 Q 622 480 594 472 Z" fill="#f2efed" />
+    <circle cx="621" cy="471" r="6" fill="#475c63" />
+    <circle cx="621" cy="471" r="2.8" fill="#141414" />
+    <path d="M 590 472 Q 622 455 650 472" stroke="#5c352a" stroke-width="2.5" fill="none" />
+    <!-- Crow's feet -->
+    <path d="M 588 474 L 576 470 M 588 478 L 578 482" stroke="#9e5c49" stroke-width="1.5" />
+
+    <!-- Right Eye -->
+    <path d="M 706 468 Q 734 454 762 468 Q 734 476 706 468 Z" fill="#f2efed" />
+    <circle cx="734" cy="467" r="6" fill="#475c63" />
+    <circle cx="734" cy="467" r="2.8" fill="#141414" />
+    <path d="M 704 468 Q 734 451 764 468" stroke="#5c352a" stroke-width="2.5" fill="none" />
+    <!-- Crow's feet -->
+    <path d="M 766 470 L 778 466 M 766 474 L 776 478" stroke="#9e5c49" stroke-width="1.5" />
+
+    <!-- Nose -->
+    <path d="M 676 455 L 664 505 C 658 516, 675 524, 694 518 C 705 514, 704 504, 695 495" fill="#d98e77" />
+    <path d="M 658 512 Q 680 526 702 512" stroke="#9c5643" stroke-width="2.5" fill="none" />
+    <ellipse cx="680" cy="502" rx="10" ry="7" fill="#fad0be" opacity="0.6" />
+
+    <!-- Nasolabial Folds (Smile Lines) -->
+    <path d="M 632 505 Q 608 532 612 562" stroke="#a65c49" stroke-width="2.5" fill="none" opacity="0.7" />
+    <path d="M 728 502 Q 752 530 748 560" stroke="#a65c49" stroke-width="2.5" fill="none" opacity="0.7" />
+
+    <!-- Broad Smiling Mouth & Teeth -->
+    <path d="M 624 536 Q 680 546 736 534 Q 724 574 680 574 Q 636 574 624 536 Z" fill="#471612" />
+    <!-- Upper Teeth -->
+    <path d="M 632 540 Q 680 548 728 538 Q 720 558 680 558 Q 640 558 632 540 Z" fill="#f5efe4" />
+    <path d="M 650 542 L 650 556 M 665 544 L 665 558 M 680 545 L 680 558 M 695 544 L 695 558 M 710 542 L 710 556" stroke="#c7b8a3" stroke-width="1.2" />
+    <!-- Lower Lip -->
+    <path d="M 630 558 Q 680 584 730 558 Q 680 572 630 558 Z" fill="#c46658" />
+
+    <!-- Chin Highlight -->
+    <ellipse cx="680" cy="596" rx="18" ry="10" fill="#f2baa3" opacity="0.45" />
+
+    <!-- Blonde Hair (Center-Parted Shoulder Length) -->
+    <g id="woman-hair">
+      <!-- Left Curtain of Hair -->
+      <path d="M 655 322 C 585 325, 545 385, 535 485 C 525 575, 515 655, 525 715 C 555 715, 575 705, 595 695 C 578 625, 568 535, 572 455 C 578 395, 615 358, 655 342 Z" fill="url(#hairGrad)" />
+      <!-- Right Curtain of Hair -->
+      <path d="M 655 322 C 735 322, 795 375, 818 475 C 838 565, 855 645, 845 705 C 815 715, 785 705, 765 690 C 788 615, 802 525, 792 445 C 782 385, 725 352, 655 342 Z" fill="url(#hairGrad)" />
+
+      <!-- Fine Hair Strands & Highlights -->
+      <path d="M 648 330 C 595 355, 558 435, 548 695" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.65" />
+      <path d="M 635 345 C 582 385, 545 485, 535 705" stroke="#b5a58d" stroke-width="2.5" fill="none" opacity="0.6" />
+      <path d="M 662 330 C 735 355, 795 435, 825 695" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.65" />
+      <path d="M 675 345 C 755 385, 805 485, 835 695" stroke="#a6967e" stroke-width="2.5" fill="none" opacity="0.6" />
+      <!-- Flyaway Wisps at Top -->
+      <path d="M 635 325 Q 625 295 605 288 M 655 322 Q 655 285 672 278 M 675 325 Q 705 292 732 295" stroke="#e8e2d5" stroke-width="1.2" fill="none" opacity="0.7" />
+    </g>
+
+    <!-- Woman's Necklace -->
+    <path d="M 622 655 Q 685 745 745 655" stroke="#616e75" stroke-width="1.5" fill="none" />
+    <circle cx="688" cy="706" r="5" fill="#9bc4d4" stroke="#4a5861" stroke-width="1" />
+
+    <!-- Woman's Turquoise Polo Shirt -->
+    <g id="woman-shirt">
+      <path d="M 495 695 L 595 675 L 705 785 L 775 675 L 915 715 L 965 880 L 485 880 Z" fill="url(#shirtGrad2)" />
+
+      <!-- Shirt Folds & Shading -->
+      <path d="M 535 745 Q 615 805 645 880" stroke="#02728f" stroke-width="10" fill="none" opacity="0.45" />
+      <path d="M 835 745 Q 785 815 765 880" stroke="#02728f" stroke-width="10" fill="none" opacity="0.45" />
+
+      <!-- Folded Left Collar -->
+      <path d="M 595 668 L 575 715 L 685 775 L 705 755 L 605 668 Z" fill="#19cef2" />
+      <!-- Folded Right Collar -->
+      <path d="M 775 668 L 795 715 L 718 775 L 705 755 L 765 668 Z" fill="#0fb9db" />
+
+      <!-- Placket & Button -->
+      <path d="M 692 765 L 722 765 L 720 880 L 690 880 Z" fill="#069bc2" />
+      <circle cx="706" cy="765" r="7" fill="#026c87" stroke="#18d2f5" stroke-width="1.5" />
+
+      <!-- Chest Logo ("Suffolk to Sennen" Sun & Text) -->
+      <g transform="translate(780, 825)">
+        <!-- Yellow Sun -->
+        <circle cx="18" cy="24" r="14" fill="#fff36b" />
+        <!-- Sun Rays -->
+        <line x1="18" y1="4" x2="18" y2="-4" stroke="#fff36b" stroke-width="3" stroke-linecap="round" />
+        <line x1="5" y1="9" x2="-1" y2="3" stroke="#fff36b" stroke-width="3" stroke-linecap="round" />
+        <line x1="-2" y1="22" x2="-10" y2="20" stroke="#fff36b" stroke-width="3" stroke-linecap="round" />
+        <line x1="2" y1="35" x2="-5" y2="40" stroke="#fff36b" stroke-width="3" stroke-linecap="round" />
+        <!-- Blue Wave -->
+        <path d="M 2 45 Q 20 38 38 48 L 38 56 Q 20 46 2 54 Z" fill="#3a6ea5" />
+        <!-- Text -->
+        <text x="38" y="16" font-family="sans-serif" font-weight="bold" font-size="22" fill="#214975">S</text>
+        <text x="53" y="16" font-family="sans-serif" font-size="14" fill="#214975">uffolk</text>
+        <text x="48" y="29" font-family="sans-serif" font-size="10" fill="#214975">to</text>
+        <text x="42" y="45" font-family="sans-serif" font-weight="bold" font-size="20" fill="#214975">S</text>
+        <text x="56" y="47" font-family="sans-serif" font-size="13" fill="#214975" transform="rotate(15, 56, 47)">ennen</text>
+      </g>
+    </g>
+
+    <!-- ========================================== -->
+    <!-- MAN'S HAND & WALKING POLE HANDLES (RIGHT)  -->
+    <!-- ========================================== -->
+    <g id="hand-and-poles" transform="translate(825, 550)">
+      <!-- Black Strap & Grip Base -->
+      <path d="M 15 45 L 25 115 L 85 105 L 75 40 Z" fill="#1d1e24" />
+      <!-- Hanging Strap -->
+      <path d="M 82 85 L 155 135 L 148 145 L 75 95 Z" fill="#18191f" />
+
+      <!-- Cork Pole Handle 1 (Left) -->
+      <g transform="rotate(-18, 25, 30)">
+        <rect x="8" y="8" width="34" height="58" rx="14" fill="#b89468" stroke="#24201c" stroke-width="3" />
+        <ellipse cx="25" cy="18" rx="13" ry="9" fill="#d4b287" />
+        <circle cx="25" cy="18" r="4" fill="#3b332b" />
+      </g>
+
+      <!-- Cork Pole Handle 2 (Right) -->
+      <g transform="rotate(-12, 65, 35)">
+        <rect x="48" y="12" width="34" height="58" rx="14" fill="#a88459" stroke="#24201c" stroke-width="3" />
+        <ellipse cx="65" cy="22" rx="13" ry="9" fill="#c7a479" />
+        <circle cx="65" cy="22" r="4" fill="#3b332b" />
+      </g>
+
+      <!-- Man's Hand Gripping Shoulder / Poles -->
+      <path d="M 48 65 C 72 62, 95 75, 92 98 C 90 118, 72 128, 52 124 L 42 85 Z" fill="#c77e6b" />
+      <!-- Finger Creases -->
+      <path d="M 65 82 Q 82 84 88 92 M 62 98 Q 80 100 86 108" stroke="#8c4b3b" stroke-width="2.5" fill="none" />
+    </g>
+  </g>
+</svg>
