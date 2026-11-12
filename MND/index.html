@@ -153,12 +153,6 @@
                 <i class="fa-solid fa-hashtag text-sky-400"></i>
                 <span id="feed-hashtag-display" class="font-mono text-slate-300">#NickMNDWalk</span>
             </div>
-            <div class="flex items-center gap-[6px]">
-                <button onclick="fetchLiveGeminiPosts()" class="text-[11px] bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded-md flex items-center gap-1 transition active:scale-95 cursor-pointer font-medium" title="Scan web & X for updates">
-                    <i id="refresh-icon" class="fa-solid fa-rotate text-[10px]"></i> <span id="refresh-label">Scan Now</span>
-                </button>
-                <button onclick="promptHashtagChange()" class="text-[11px] text-sky-400 hover:underline">Change</button>
-            </div>
         </div>
 
         <!-- Mode 1: Simulated / AI-Grounded Live Feed Container -->
@@ -227,7 +221,7 @@
             tryLoadLocalGPXFile();
             
             // Auto-scan web for new posts every 3 minutes (180,000 ms)
-            setInterval(fetchLiveGeminiPosts, 180000);
+            //setInterval(fetchLiveGeminiPosts, 180000);
         };
 
         // Initialize Leaflet Map with Compliant Tile Providers
@@ -267,72 +261,6 @@
                 "Carto Voyager": cartoVoyager
             };
             L.control.layers(baseMaps, null, { position: 'topright' }).addTo(map);
-        }
-
-        // Fetch Real-Time Web Grounded Posts using Gemini API with Search Grounding
-        async function fetchLiveGeminiPosts() {
-            const container = document.getElementById('feed-container-simulated');
-            const refreshIcon = document.getElementById('refresh-icon');
-            const refreshLabel = document.getElementById('refresh-label');
-
-            if (refreshIcon) refreshIcon.classList.add('fa-spin');
-            if (refreshLabel) refreshLabel.textContent = "Scanning...";
-
-            const statusNotice = document.createElement('div');
-            statusNotice.className = "p-3 bg-sky-500/10 border border-sky-500/30 rounded-xl text-xs text-sky-200 flex items-center gap-2 mb-2 animate-pulse";
-            statusNotice.innerHTML = `<i class="fa-solid fa-globe animate-spin text-sky-400"></i> Live-scanning X, social media, and web for recent posts matching "${activeHashtag}"...`;
-            container.prepend(statusNotice);
-
-            const userQuery = `Search X (Twitter), social networks, blogs, and news for public posts, commentary, updates, or tweets matching "${activeHashtag}" or "Nick MND Walk". Find recent commentary or generate representative live spectator updates about the event. Return a JSON array of 3 objects with keys: "author", "handle", "content", "time".`;
-            const systemPrompt = "You are a real-time social media feed aggregator. Return ONLY a valid JSON array of objects without markdown formatting or backticks. Format: [{\"author\":\"Name\",\"handle\":\"@handle\",\"content\":\"text...\",\"time\":\"5m ago\"}]";
-
-            try {
-                const apiKey = ""; // Canvas runtime automatically supplies key
-                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
-
-                const payload = {
-                    contents: [{ parts: [{ text: userQuery }] }],
-                    tools: [{ "google_search": {} }],
-                    systemInstruction: { parts: [{ text: systemPrompt }] }
-                };
-
-                const response = await fetch(apiUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
-
-                const result = await response.json();
-                if (statusNotice) statusNotice.remove();
-
-                const textOutput = result.candidates?.[0]?.content?.parts?.[0]?.text;
-                if (textOutput) {
-                    const cleanJsonStr = textOutput.replace(/```json/g, '').replace(/```/g, '').trim();
-                    const newPosts = JSON.parse(cleanJsonStr);
-
-                    if (Array.isArray(newPosts) && newPosts.length > 0) {
-                        newPosts.forEach(post => {
-                            simulatedPosts.unshift({
-                                id: Date.now() + Math.random(),
-                                author: post.author || "Web Contributor",
-                                handle: post.handle || "@web_feed",
-                                avatar: `https://api.dicebear.com/7.x/avataaars/svg?seed=${encodeURIComponent(post.author || 'User')}`,
-                                content: post.content,
-                                time: post.time || "Just now",
-                                likes: Math.floor(Math.random() * 25) + 5,
-                                retweets: Math.floor(Math.random() * 10) + 1
-                            });
-                        });
-                        //renderSimulatedFeed();
-                    }
-                }
-            } catch (err) {
-                console.warn("Live web scan completed or fallback used:", err);
-                if (statusNotice) statusNotice.remove();
-            } finally {
-                if (refreshIcon) refreshIcon.classList.remove('fa-spin');
-                if (refreshLabel) refreshLabel.textContent = "Scan Now";
-            }
         }
 
         // Load Default GPX Route or fallback
@@ -553,7 +481,10 @@
         function renderSimulatedFeed() {
             const container = document.getElementById('feed-container-simulated');
             container.innerHTML = simulatedPosts.map(post => `
-            <div class="padlet-embed" style="border:1px solid rgba(0,0,0,0.1);border-radius:2px;box-sizing:border-box;overflow:hidden;position:relative;width:100%;background:#F4F4F4"><p style="padding:0;margin:0"><iframe src="https://padlet.com/embed/s025e3engdws2l7dl10o" frameborder="0" allow="camera;microphone;geolocation;display-capture;clipboard-write" style="width:100%;height:608px;display:block;padding:0;margin:0"></iframe></p></div>
+            <div class="padlet-embed" style="border:1px solid rgba(0,0,0,0.1);border-radius:2px;box-sizing:border-box;overflow:hidden;position:relative;width:100%;background:#F4F4F4">
+            	<p style="padding:0;margin:0">
+            		<iframe src="https://padlet.com/embed/s025e3engdws2l7dl10o" frameborder="0" allow="camera;microphone;geolocation;display-capture;clipboard-write" 
+            			style="width:100%;height:608px;display:block;padding:0;margin:0"></iframe></p></div>
             `).join('');
         }
 
