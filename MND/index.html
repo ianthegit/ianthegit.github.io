@@ -323,7 +323,7 @@
                                 retweets: Math.floor(Math.random() * 10) + 1
                             });
                         });
-                        renderSimulatedFeed();
+                        //renderSimulatedFeed();
                     }
                 }
             } catch (err) {
@@ -553,30 +553,7 @@
         function renderSimulatedFeed() {
             const container = document.getElementById('feed-container-simulated');
             container.innerHTML = simulatedPosts.map(post => `
-                <div class="bg-slate-950/70 border border-slate-800/80 rounded-xl p-3.5 space-y-2 hover:border-slate-700 transition">
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center gap-2.5">
-                            <img src="${post.avatar}" alt="${post.author}" class="w-8 h-8 rounded-full bg-slate-800 border border-slate-700">
-                            <div>
-                                <h4 class="text-xs font-bold text-slate-200 leading-tight">${post.author}</h4>
-                                <span class="text-[11px] text-slate-400">${post.handle}</span>
-                            </div>
-                        </div>
-                        <span class="text-[10px] text-slate-400">${post.time}</span>
-                    </div>
-                    <p class="text-xs text-slate-300 leading-relaxed">${highlightHashtags(post.content)}</p>
-                    <div class="flex items-center gap-4 text-slate-400 text-[11px] pt-1">
-                        <button class="hover:text-rose-400 flex items-center gap-1 transition">
-                            <i class="fa-regular fa-heart"></i> <span>${post.likes}</span>
-                        </button>
-                        <button class="hover:text-emerald-400 flex items-center gap-1 transition">
-                            <i class="fa-solid fa-retweet"></i> <span>${post.retweets}</span>
-                        </button>
-                        <button onclick="sharePost('${post.id}')" class="hover:text-sky-400 flex items-center gap-1 transition ml-auto">
-                            <i class="fa-solid fa-share-nodes"></i>
-                        </button>
-                    </div>
-                </div>
+            <iframe allowfullscreen id="wallsio-iframe" src="https://my.walls.io/j3raa?nobackground=1&show_header=0&show_post_info=1&accessibility=0" style="border:0;height:800px;width:100%" loading="lazy" allow="camera" title="A feed of social media posts by Walls.io" aria-label="A feed of social media posts by Walls.io"></iframe>
             `).join('');
         }
 
