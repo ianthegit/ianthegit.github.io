@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Live Event Route Tracker & Social Feed</title>
     
-      <!-- PWA Specific Tags -->
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#1e3a8a">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Nick's MND Walk">
-  <link rel="icon" type="image/svg+xml" href="mnd.svg">
-  <link rel="apple-touch-icon" href="mnd.svg">
+    <!-- PWA Specific Tags -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1e3a8a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Nick's MND Walk">
+    <link rel="icon" type="image/svg+xml" href="mnd.svg">
+    <link rel="apple-touch-icon" href="mnd.svg">
   
     <!-- Tailwind CSS CDN (Using jsDelivr CDN to prevent 403 restrictions) -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -149,9 +149,9 @@
             </div>
         </div>
 
-         <!-- Mode 1: Simulated / AI-Grounded Live Feed Container -->
-        <div id="feed-container-simulated" class="flex-1 overflow-y-auto p-4 space-y-3">
-            <!-- Feed cards will be injected dynamically via JS -->
+        <!-- Padlet Live Feed Container -->
+        <div id="feed-container-simulated" class="flex-1 overflow-y-auto p-4 flex flex-col">
+            <!-- Feed injected dynamically via JS -->
         </div>
 
     </aside>
@@ -166,7 +166,6 @@
         let userLocationMarker = null;
         let userAccuracyCircle = null;
         let watchId = null;
-        let activeHashtag = "#NickMNDWalk";
         
         // Sample GPX Coordinate Fallback Data (Felixstowe Ferry Coastal Walk)
         const sampleCoordinates = [
@@ -181,30 +180,6 @@
             [51.9808, 1.3986]
         ];
 
-        // Sample Social Posts Data
-        let simulatedPosts = [
-            {
-                id: 1,
-                author: "MND Walk Official",
-                handle: "@MNDWalk",
-                avatar: "https://api.dicebear.com/7.x/bottts/svg?seed=MNDWalk",
-                content: `Welcome to the live tracker! Share your photos and support updates using ${activeHashtag} to appear on the feed!`,
-                time: "10m ago",
-                likes: 38,
-                retweets: 9
-            },
-            {
-                id: 2,
-                author: "Walk Support Crew",
-                handle: "@mnd_support",
-                avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Crew",
-                content: `Cheering on Nick & team on today's route! Stay hydrated and keep pushing! ${activeHashtag} 🏃‍♂️💪`,
-                time: "20m ago",
-                likes: 19,
-                retweets: 4
-            }
-        ];
-
         // ==========================================
         // 2. INITIALIZATION ON LOAD
         // ==========================================
@@ -212,10 +187,6 @@
             initMap();
             loadDefaultRoute();
             renderSimulatedFeed();
-            tryLoadLocalGPXFile();
-            
-            // Auto-scan web for new posts every 3 minutes (180,000 ms)
-            //setInterval(fetchLiveGeminiPosts, 180000);
         };
 
         // Initialize Leaflet Map with Compliant Tile Providers
@@ -230,19 +201,19 @@
             // Free & Open Tile Providers (Strictly Zero API Key Requirements)
             const esriWorldTopo = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
                 maxZoom: 18,
-                attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, IGN, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community'
+                attribution: 'Tiles © Esri — Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, IGN, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community'
             });
 
             const cartoDarkMatter = L.tileLayer('https://basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png', {
                 maxZoom: 19,
                 subdomains: 'abcd',
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+                attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>'
             });
 
             const cartoVoyager = L.tileLayer('https://basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png', {
                 maxZoom: 19,
                 subdomains: 'abcd',
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+                attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>'
             });
 
             // Set Default Tile Layer
@@ -304,21 +275,6 @@
             document.getElementById('stat-distance').textContent = (totalMeters / 1000).toFixed(2) + " km";
         }
 
-        function tryLoadLocalGPXFile() {
-            // Function placeholder for initial file check if needed
-        }
-
-        function handleFileSelect(event) {
-            const file = event.target.files[0];
-            if (!file) return;
-
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                parseAndDisplayGPX(e.target.result, file.name);
-            };
-            reader.readAsText(file);
-        }
-
         // In-Browser GPX Parser
         function parseAndDisplayGPX(gpxXmlString, sourceName) {
             try {
@@ -373,7 +329,7 @@
         }
 
         // ==========================================
-        // 4. LIVE GEOLOCATION LOGIC
+        // 3. LIVE GEOLOCATION LOGIC
         // ==========================================
         function toggleGeolocation() {
             const locateBtn = document.getElementById('btn-locate');
@@ -470,42 +426,19 @@
         }
 
         // ==========================================
-        // 5. SOCIAL FEED & TWITTER INTERACTION
+        // 4. SINGLE PADLET EMBED RENDERER
         // ==========================================
         function renderSimulatedFeed() {
             const container = document.getElementById('feed-container-simulated');
-            container.innerHTML = simulatedPosts.map(post => `
-            <div class="padlet-embed" style="border:1px solid rgba(0,0,0,0.1);border-radius:2px;box-sizing:border-box;overflow:hidden;position:relative;width:100%;background:#F4F4F4">
-            	<p style="padding:0;margin:0">
-            		<iframe src="https://padlet.com/embed/s025e3engdws2l7dl10o" frameborder="0" allow="camera;microphone;geolocation;display-capture;clipboard-write" 
-            			style="width:100%;height:608px;display:block;padding:0;margin:0"></iframe></p></div>
-            `).join('');
-        }
-
-        function highlightHashtags(text) {
-            return text.replace(/(#[a-zA-Z0-9_]+)/g, '<span class="text-sky-400 font-medium">$1</span>');
-        }
-
-        function promptHashtagChange() {
-            const newTag = prompt("Enter hashtag or keyword to filter:", activeHashtag);
-            if (newTag && newTag.trim() !== "") {
-                activeHashtag = newTag.startsWith('#') ? newTag.trim() : `#${newTag.trim()}`;
-                document.getElementById('feed-hashtag-display').textContent = activeHashtag;
-            }
-        }
-
-        function sharePost(id) {
-            const post = simulatedPosts.find(p => p.id == id);
-            if (post) {
-                const dummyText = `"${post.content}" - shared from Live Route Tracker`;
-                if (navigator.clipboard) {
-                    navigator.clipboard.writeText(dummyText);
-                    alert("Post copied to clipboard!");
-                } else {
-                    document.execCommand('copy');
-                    alert("Post copied to clipboard!");
-                }
-            }
+            container.innerHTML = `
+                <div class="padlet-embed w-full h-full rounded-lg overflow-hidden border border-slate-700/60 bg-[#F4F4F4]">
+                    <iframe src="https://padlet.com/embed/s025e3engdws2l7dl10o" 
+                            frameborder="0" 
+                            allow="camera;microphone;geolocation;display-capture;clipboard-write" 
+                            style="width:100%;height:100%;min-height:608px;display:block;padding:0;margin:0">
+                    </iframe>
+                </div>
+            `;
         }
     </script>
 </body>
