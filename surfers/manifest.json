@@ -1,6 +1,6 @@
 {
-  "name": "Trail & Tide — Routes & Activities",
-  "short_name": "Trail & Tide",
+  "name": "Surfers",
+  "short_name": "Surfers",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#f8fafc",
