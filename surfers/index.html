@@ -1311,14 +1311,14 @@ self.addEventListener('fetch', (event) => {
      * 9. UI UTILITIES, TAB NAVIGATION & INITIALIZATION
      * =========================================================================
      */
-    function escapeHTML(str) {
-      return String(str)
-        .replace(/&/g, '&')
-        .replace(/</g, '<')
-        .replace(/>/g, '>')
-        .replace(/"/g, '"')
-        .replace(/'/g, ''');
-    }
+     function escapeHTML(str) {
+         return String(str)
+           .replace(/&/g, '&')
+           .replace(/</g, '<')
+           .replace(/>/g, '>')
+           .replace(/"/g, '"')
+           .replace(/'/g, "\x27");
+       }
 
     function showToast(message, type = 'info') {
       const container = document.getElementById('toast-container');
