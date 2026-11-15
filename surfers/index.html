@@ -911,27 +911,28 @@
      * Parses a point .csv ("latitude", "longitude", "name", "description", "URL")
      * and renders each row as a clickable dot marker with a popup.
      */
-    function renderPointCSVLayer(csvText, colour) {
-      const rows = parseCSV(csvText);
-      if (rows.length === 0) return;
+     function renderPointCSVLayer(csvText, colour) {
+         const rows = parseCSV(csvText);
+         if (rows.length === 0) return;
 
-      let startIdx = 0;
-      const firstCell = rows[0][0].toLowerCase();
-      if (firstCell === 'latitude' || firstCell === 'lat') {
-        startIdx = 1;
-      }
+         let startIdx = 0;
+         const h0 = rows[0][0].toLowerCase();
+         if (h0 === 'latitude' || h0 === 'lat' || h0 === '"latitude"') {
+           startIdx = 1;
+         }
 
-      const dotColor = colour || '#2563eb';
+         const dotColor = colour || '#2563eb';
 
-      for (let i = startIdx; i < rows.length; i++) {
-        const [latStr, lonStr, name, description, url] = rows[i];
-        const lat = parseFloat(latStr);
-        const lon = parseFloat(lonStr);
-        if (isNaN(lat) || isNaN(lon)) continue;
+         for (let i = startIdx; i < rows.length; i++) {
+           const row = rows[i];
+           if (row.length < 2) continue;
+           const lat = parseFloat(row[0]);
+           const lon = parseFloat(row[1]);
+           if (isNaN(lat) || isNaN(lon)) continue;
 
-        const cleanName = (name || 'Point of Interest').trim();
-        const cleanDesc = (description || '').trim();
-        const cleanUrl = (url || '').trim();
+           const cleanName = (row[2] || 'Point of Interest').trim();
+           const cleanDesc = (row[3] || '').trim();
+           const cleanUrl = (row[4] || '').trim();
 
         const marker = L.circleMarker([lat, lon], {
           radius: 8,
