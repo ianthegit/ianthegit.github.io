@@ -1,5 +1,5 @@
 const CACHE_NAME = 'trail-tide-v1';
-const ASSETS = ['./', './index.html', './manifest.json', './surfers.svg', './control.csv', './activity.csv','./EdaleCircularWalk.gpx', './NCN_10_Reivers_Route.gpx','./Hadrian_s_Cycleway.gpx', './WhitehavenTynemouth.gpx'];
+const ASSETS = ['./', './index.html', './manifest.json', './surfers.svg', './control.csv', './spots.csv', './activity.csv','./EdaleCircularWalk.gpx', './NCN_10_Reivers_Route.gpx','./Hadrian_s_Cycleway.gpx', './WhitehavenTynemouth.gpx'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
