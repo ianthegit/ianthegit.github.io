@@ -1,0 +1,5 @@
+"fileName", "dateValidFrom", "dateValidTo", "lineColour"
+"sample_trail.gpx", "2025-01-01", "", "#ea580c"
+"surf_paddle_route.gpx", "2025-01-01", "2029-12-31", "#0d9488"
+"spots.csv", "2025-01-01", "", "#2563eb"
+"expired_winter_loop.gpx", "2023-01-01", "2023-03-31", "#9333ea"

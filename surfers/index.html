@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#0f766e" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="description" content="Surfers plans." />
+  <title>Trail & Tide — Routes & Activities</title>
+
+  <!-- Dynamic Inline PWA Manifest & Transparent SVG App Icon -->
+  <link id="pwa-manifest-link" rel="manifest" href="" />
+  <link id="pwa-icon-link" rel="icon" type="image/svg+xml" href="" />
+  <link id="pwa-apple-icon" rel="apple-touch-icon" href="" />
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Leaflet CSS with Automatic CDN Fallback -->
+  <link id="leaflet-css" rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        onerror="this.onerror=null;this.href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css';" />
+
+  <style>
+    * {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #f8fafc;
+    }
+
+    /* Explicit Full-Viewport Map Sizing so Leaflet never initializes at 0px height */
+    #panel-map {
+      position: relative;
+      width: 100%;
+      height: calc(100vh - 106px);
+      height: calc(100dvh - 106px);
+      min-height: 400px;
+      background-color: #e2e8f0;
+    }
+
+    #panel-map.hidden {
+      display: none !important;
+    }
+
+    #map {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background-color: #e2e8f0;
+    }
+
+    /* Prevent broken tile outline artifacts */
+    .leaflet-tile-container img {
+      outline: none !important;
+    }
+
+    /* Pulsing User GPS Location Marker */
+    .user-location-pulse {
+      position: relative;
+      width: 24px;
+      height: 24px;
+    }
+    .user-location-dot {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      width: 14px;
+      height: 14px;
+      background: #2563eb;
+      border: 2.5px solid #ffffff;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.65);
+      z-index: 2;
+    }
+    .user-location-ring {
+      position: absolute;
+      top: -4px;
+      left: -4px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(37, 99, 235, 0.32);
+      animation: pulseRing 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+      z-index: 1;
+    }
+    @keyframes pulseRing {
+      0% { transform: scale(0.5); opacity: 0.9; }
+      80%, 100% { transform: scale(1.75); opacity: 0; }
+    }
+
+    /* Clean Leaflet Popup Styling */
+    .leaflet-popup-content-wrapper {
+      border-radius: 14px !important;
+      box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.18), 0 8px 10px -6px rgba(15, 23, 42, 0.1) !important;
+      padding: 2px !important;
+    }
+    .leaflet-popup-content {
+      margin: 12px 14px !important;
+      line-height: 1.45 !important;
+    }
+
+    /* Custom Scrollbars */
+    .custom-scroll::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scroll::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 9999px;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+  </style>
+</head>
+<body class="flex flex-col h-full text-slate-800 antialiased select-none sm:select-auto">
+
+  <!-- ==================== TOP APPLICATION HEADER ==================== -->
+  <header class="bg-white border-b border-slate-200 px-3 sm:px-5 py-2.5 flex items-center justify-between gap-2 shrink-0 z-30 shadow-xs">
+    <!-- Custom Transparent Surfboard & Mountain Bike 'X' SVG Logo + Title -->
+    <div class="flex items-center gap-2.5 min-w-0">
+      <div class="w-10 h-10 rounded-xl bg-slate-100/80 border border-slate-200/80 flex items-center justify-center p-1 shrink-0" title="Trail & Tide — Surfboard & Mountain Bike X">
+        <!-- Transparent-background SVG: Surfboard (Top-Left to Bottom-Right) crossing Mountain Bike (Top-Right to Bottom-Left) -->
+        <svg id="app-svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%" fill="none">
+          <!-- 1. SURFBOARD: Diagonal from Top-Left to Bottom-Right -->
+          <g transform="translate(60, 60) rotate(-45) translate(-60, -60)">
+            <!-- Surfboard Fin -->
+            <path d="M60 95 L66 105 L60 103 Z" fill="#0f766e" />
+            <!-- Surfboard Hull -->
+            <path d="M60 10 C71 26, 73 56, 68 96 L60 101 L52 96 C47 56, 49 26, 60 10 Z"
+                  fill="#14b8a6" stroke="#0f766e" stroke-width="2.5" stroke-linejoin="round" />
+            <!-- Center Stringer -->
+            <line x1="60" y1="13" x2="60" y2="99" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.9" />
+            <!-- Deck Stripes -->
+            <path d="M51 38 Q60 42 69 38" stroke="#f59e0b" stroke-width="3" stroke-linecap="round" />
+            <path d="M50 45 Q60 49 70 45" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.85" />
+          </g>
+
+          <!-- 2. MOUNTAIN BIKE: Diagonal from Top-Right to Bottom-Left -->
+          <g transform="translate(60, 60) rotate(-45) translate(-60, -60)">
+            <!-- Rear Wheel (Bottom-Left after rotation) -->
+            <circle cx="27" cy="66" r="14" stroke="#1e293b" stroke-width="3.5" fill="none" />
+            <circle cx="27" cy="66" r="10.5" stroke="#64748b" stroke-width="1" stroke-dasharray="2 3" fill="none" />
+            <circle cx="27" cy="66" r="2.2" fill="#1e293b" />
+
+            <!-- Front Wheel (Top-Right after rotation) -->
+            <circle cx="93" cy="66" r="14" stroke="#1e293b" stroke-width="3.5" fill="none" />
+            <circle cx="93" cy="66" r="10.5" stroke="#64748b" stroke-width="1" stroke-dasharray="2 3" fill="none" />
+            <circle cx="93" cy="66" r="2.2" fill="#1e293b" />
+
+            <!-- MTB Frame -->
+            <path d="M27 66 L48 66 L69 47 L45 47 Z" stroke="#ea580c" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round" fill="none" />
+            <!-- Seat Tube & Post -->
+            <line x1="48" y1="66" x2="42" y2="39" stroke="#ea580c" stroke-width="3.2" stroke-linecap="round" />
+            <!-- Saddle -->
+            <line x1="36" y1="39" x2="47" y2="39" stroke="#1e293b" stroke-width="3.2" stroke-linecap="round" />
+            <!-- Front Fork -->
+            <line x1="67" y1="41" x2="93" y2="66" stroke="#1e293b" stroke-width="3.2" stroke-linecap="round" />
+            <!-- Handlebars -->
+            <path d="M62 40 L71 40 L74 37" stroke="#1e293b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+            <!-- Bottom Bracket / Crank -->
+            <circle cx="48" cy="66" r="3.5" fill="#1e293b" />
+          </g>
+        </svg>
+      </div>
+
+      <div class="min-w-0">
+        <div class="flex items-center gap-2">
+          <h1 class="text-base sm:text-lg font-bold tracking-tight text-slate-900 truncate">Trail & Tide</h1>
+          <span id="data-source-badge" class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium bg-amber-100 text-amber-800 border border-amber-200 whitespace-nowrap">
+            Loading...
+          </span>
+        </div>
+        <p id="today-date-label" class="text-xs text-slate-500 truncate">Checking active routes & schedule</p>
+      </div>
+    </div>
+
+    <!-- Clean 'PWA & Setup' Button -->
+    <div class="flex items-center shrink-0">
+      <button id="btn-pwa-modal" type="button"
+        class="inline-flex items-center gap-1.5 px-3 sm:px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold text-white bg-teal-700 hover:bg-teal-800 active:scale-[0.98] transition shadow-xs cursor-pointer"
+        title="PWA Setup, Local File Uploader & Downloadable Files">
+        <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+        </svg>
+        <span>PWA & Setup</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==================== 2-TAB NAVIGATION BAR ==================== -->
+  <nav class="bg-white border-b border-slate-200 px-3 sm:px-5 flex items-center justify-between shrink-0 z-20" aria-label="Primary Tabs">
+    <div class="flex gap-1 sm:gap-2 w-full sm:w-auto">
+      <button id="tab-btn-map" type="button" role="tab" aria-selected="true"
+        class="flex-1 sm:flex-initial flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold border-b-2 border-teal-700 text-teal-800 transition cursor-pointer">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+        </svg>
+        <span>Map & Routes</span>
+        <span id="badge-map-layers" class="px-1.5 py-0.5 text-[11px] rounded-full bg-teal-100 text-teal-800 font-bold">0</span>
+      </button>
+
+      <button id="tab-btn-activities" type="button" role="tab" aria-selected="false"
+        class="flex-1 sm:flex-initial flex items-center justify-center gap-2 px-4 py-3 text-sm font-medium border-b-2 border-transparent text-slate-500 hover:text-slate-800 transition cursor-pointer">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        </svg>
+        <span>Activities</span>
+        <span id="badge-activities-count" class="px-1.5 py-0.5 text-[11px] rounded-full bg-slate-100 text-slate-600 font-bold">0</span>
+      </button>
+    </div>
+
+    <button id="btn-refresh-data" type="button"
+      class="hidden sm:inline-flex items-center gap-1.5 text-xs font-medium text-slate-500 hover:text-teal-700 py-1.5 px-2.5 rounded-lg hover:bg-slate-100 transition cursor-pointer"
+      title="Re-fetch control.csv and activity.csv">
+      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+      </svg>
+      <span>Refresh CSVs</span>
+    </button>
+  </nav>
+
+  <!-- ==================== MAIN WORKSPACE ==================== -->
+  <main class="flex-1 relative overflow-hidden">
+
+    <!-- ==================== TAB 1: MAP & ROUTES (control.csv) ==================== -->
+    <section id="panel-map" class="w-full h-full relative">
+      <!-- Full-Viewport Leaflet Map Container -->
+      <div id="map"></div>
+
+      <!-- Offline / Sandboxed Tile Notice (Hidden unless both OSM & Voyager fail) -->
+      <div id="map-offline-banner" class="hidden absolute top-3 left-1/2 -translate-x-1/2 z-[600] px-3.5 py-2 rounded-xl bg-amber-900/90 text-white text-xs font-medium shadow-lg backdrop-blur">
+        Map tiles unreachable (offline or restricted network) — GPX routes & markers remain active.
+      </div>
+
+      <!-- Clean Bottom-Left Geolocation & Fit Controls -->
+      <div class="absolute bottom-5 left-3 z-[500] flex flex-wrap items-center gap-2 pointer-events-none">
+        <button id="btn-center-user" type="button"
+          class="pointer-events-auto inline-flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 active:scale-[0.98] text-white text-xs sm:text-sm font-semibold shadow-lg transition cursor-pointer">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm8.94 3A8.994 8.994 0 0013 3.06V1h-2v2.06A8.994 8.994 0 003.06 11H1v2h2.06A8.994 8.994 0 0011 20.94V23h2v-2.06A8.994 8.994 0 0020.94 13H23v-2h-2.06z" />
+          </svg>
+          <span>My Location</span>
+        </button>
+
+        <button id="btn-fit-routes" type="button"
+          class="pointer-events-auto inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-white/95 hover:bg-white text-slate-800 border border-slate-200 text-xs sm:text-sm font-semibold shadow-lg transition cursor-pointer">
+          <svg class="w-4 h-4 text-teal-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+          </svg>
+          <span>Fit Routes</span>
+        </button>
+
+        <div id="geo-status-pill" class="pointer-events-auto px-3 py-2 rounded-xl bg-slate-900/85 backdrop-blur text-white text-[11px] font-medium shadow-md">
+          Locating GPS...
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 2: ACTIVITIES (activity.csv) ==================== -->
+    <section id="panel-activities" class="hidden w-full h-full overflow-y-auto custom-scroll bg-slate-50">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 py-6 space-y-5">
+        <!-- Section Header & Date Filter Toggle -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-white p-4 rounded-2xl border border-slate-200/90 shadow-xs">
+          <div>
+            <h2 class="text-lg font-bold text-slate-900">Activities & Schedule</h2>
+            <p class="text-xs text-slate-500 mt-0.5">Loaded from <code class="px-1.5 py-0.5 bg-slate-100 rounded text-slate-700 font-mono">activity.csv</code></p>
+          </div>
+          <label class="inline-flex items-center gap-2.5 text-xs sm:text-sm font-medium text-slate-700 cursor-pointer select-none bg-slate-100 px-3 py-2 rounded-xl">
+            <input id="toggle-all-activities" type="checkbox" class="w-4 h-4 rounded text-teal-700 focus:ring-teal-600 cursor-pointer" />
+            <span>Show all dates</span>
+          </label>
+        </div>
+
+        <!-- Activity Cards List -->
+        <div id="activities-list" class="space-y-3 pb-10">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== TOAST / NOTIFICATION BANNER ==================== -->
+  <div id="toast-container" class="fixed bottom-16 right-4 z-[1200] flex flex-col gap-2 max-w-sm pointer-events-none"></div>
+
+  <!-- ==================== PWA & SETUP MODAL (Install, Upload Custom Files, Download Bundle) ==================== -->
+  <div id="modal-pwa" class="hidden fixed inset-0 z-[1000] bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-xl w-full shadow-2xl border border-slate-200 overflow-hidden flex flex-col max-h-[90vh]">
+      <div class="px-5 py-4 border-b border-slate-100 flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <div class="w-7 h-7" id="modal-icon-preview"></div>
+          <h3 class="text-base font-bold text-slate-900">PWA & Setup</h3>
+        </div>
+        <button type="button" data-close-modal="modal-pwa" class="p-1.5 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-100 cursor-pointer">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="p-5 overflow-y-auto custom-scroll space-y-5 text-sm text-slate-600">
+        <!-- Native PWA Install Prompt Box -->
+        <div id="pwa-install-banner" class="hidden p-4 rounded-xl bg-teal-50 border border-teal-200 flex items-center justify-between gap-3">
+          <div>
+            <p class="font-semibold text-teal-900 text-sm">Install App on This Device</p>
+            <p class="text-xs text-teal-700">Add Trail & Tide to your home screen for offline use.</p>
+          </div>
+          <button id="btn-trigger-install" type="button" class="px-4 py-2 rounded-xl bg-teal-700 hover:bg-teal-800 text-white text-xs font-semibold shrink-0 cursor-pointer">
+            Install Now
+          </button>
+        </div>
+
+        <!-- Local CSV / GPX File Override Uploader -->
+        <div class="space-y-2.5">
+          <div class="flex items-center justify-between">
+            <h4 class="font-bold text-slate-900 text-xs uppercase tracking-wider">1. Test Local CSV & GPX Files</h4>
+            <button id="btn-reset-demo" type="button" class="text-xs font-semibold text-teal-700 hover:text-teal-900 underline cursor-pointer">
+              Reset to Default
+            </button>
+          </div>
+          <p class="text-xs text-slate-500 leading-relaxed">
+            When hosted on a server, this app automatically reads <code class="font-mono bg-slate-100 px-1 rounded">control.csv</code>, <code class="font-mono bg-slate-100 px-1 rounded">activity.csv</code>, and referenced <code class="font-mono bg-slate-100 px-1 rounded">.gpx</code> / <code class="font-mono bg-slate-100 px-1 rounded">.csv</code> files. To test local files right now, select multiple files below:
+          </p>
+          <label class="flex flex-col items-center justify-center border-2 border-dashed border-teal-300 bg-teal-50/40 hover:bg-teal-50 rounded-2xl p-4 cursor-pointer transition text-center">
+            <svg class="w-7 h-7 text-teal-600 mb-1" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+            </svg>
+            <span class="font-semibold text-teal-900 text-xs sm:text-sm">Select Local CSV & GPX Files</span>
+            <span class="text-[11px] text-teal-700 mt-0.5">Select control.csv, activity.csv, .gpx, and point .csv together</span>
+            <input id="local-file-input" type="file" multiple accept=".csv,.gpx,.xml,text/csv,application/gpx+xml" class="hidden" />
+          </label>
+          <div id="uploaded-files-summary" class="hidden bg-slate-50 rounded-xl p-3 border border-slate-200 text-xs space-y-1"></div>
+        </div>
+
+        <!-- Standalone PWA Deployment & Sample Files -->
+        <div class="space-y-2.5 pt-2 border-t border-slate-100">
+          <div class="flex items-center justify-between">
+            <h4 class="font-bold text-slate-900 text-xs uppercase tracking-wider">2. Download PWA & Template Files</h4>
+            <span id="sw-status-badge" class="px-2 py-0.5 rounded-full text-[11px] font-medium bg-emerald-100 text-emerald-800">Manifest Active</span>
+          </div>
+          <p class="text-xs text-slate-500 leading-relaxed">
+            Download these standalone files to host Trail & Tide as an installable PWA on any static web server:
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <button type="button" onclick="downloadAsset('index.html')" class="flex items-center justify-between p-3 rounded-xl border border-slate-200 hover:border-teal-500 hover:bg-teal-50/40 transition text-left cursor-pointer">
+              <div>
+                <div class="font-semibold text-slate-900 text-xs">index.html</div>
+                <div class="text-[11px] text-slate-500">Complete PWA App HTML</div>
+              </div>
+              <span class="text-teal-700 font-bold text-xs">Download</span>
+            </button>
+
+            <button type="button" onclick="downloadAsset('icon.svg')" class="flex items-center justify-between p-3 rounded-xl border border-slate-200 hover:border-teal-500 hover:bg-teal-50/40 transition text-left cursor-pointer">
+              <div>
+                <div class="font-semibold text-slate-900 text-xs">icon.svg</div>
+                <div class="text-[11px] text-slate-500">Transparent Surf & MTB 'X'</div>
+              </div>
+              <span class="text-teal-700 font-bold text-xs">Download</span>
+            </button>
+
+            <button type="button" onclick="downloadAsset('manifest.json')" class="flex items-center justify-between p-3 rounded-xl border border-slate-200 hover:border-teal-500 hover:bg-teal-50/40 transition text-left cursor-pointer">
+              <div>
+                <div class="font-semibold text-slate-900 text-xs">manifest.json</div>
+                <div class="text-[11px] text-slate-500">Web App Manifest</div>
+              </div>
+              <span class="text-teal-700 font-bold text-xs">Download</span>
+            </button>
+
+            <button type="button" onclick="downloadAsset('sw.js')" class="flex items-center justify-between p-3 rounded-xl border border-slate-200 hover:border-teal-500 hover:bg-teal-50/40 transition text-left cursor-pointer">
+              <div>
+                <div class="font-semibold text-slate-900 text-xs">sw.js</div>
+                <div class="text-[11px] text-slate-500">Offline Service Worker</div>
+              </div>
+              <span class="text-teal-700 font-bold text-xs">Download</span>
+            </button>
+
+            <button type="button" onclick="downloadAsset('control.csv')" class="flex items-center justify-between p-3 rounded-xl border border-slate-200 hover:border-teal-500 hover:bg-teal-50/40 transition text-left cursor-pointer">
+              <div>
+                <div class="font-semibold text-slate-900 text-xs">control.csv</div>
+                <div class="text-[11px] text-slate-500">Map Control CSV Template</div>
+              </div>
+              <span class="text-teal-700 font-bold text-xs">Download</span>
+            </button>
+
+            <button type="button" onclick="downloadAsset('activity.csv')" class="flex items-center justify-between p-3 rounded-xl border border-slate-200 hover:border-teal-500 hover:bg-teal-50/40 transition text-left cursor-pointer">
+              <div>
+                <div class="font-semibold text-slate-900 text-xs">activity.csv</div>
+                <div class="text-[11px] text-slate-500">Activities CSV Template</div>
+              </div>
+              <span class="text-teal-700 font-bold text-xs">Download</span>
+            </button>
+
+            <button type="button" onclick="downloadAsset('sample_trail.gpx')" class="flex items-center justify-between p-3 rounded-xl border border-slate-200 hover:border-teal-500 hover:bg-teal-50/40 transition text-left cursor-pointer">
+              <div>
+                <div class="font-semibold text-slate-900 text-xs">sample_trail.gpx</div>
+                <div class="text-[11px] text-slate-500">Sample GPX Route File</div>
+              </div>
+              <span class="text-teal-700 font-bold text-xs">Download</span>
+            </button>
+
+            <button type="button" onclick="downloadAsset('spots.csv')" class="flex items-center justify-between p-3 rounded-xl border border-slate-200 hover:border-teal-500 hover:bg-teal-50/40 transition text-left cursor-pointer">
+              <div>
+                <div class="font-semibold text-slate-900 text-xs">spots.csv</div>
+                <div class="text-[11px] text-slate-500">Sample Map Pins CSV</div>
+              </div>
+              <span class="text-teal-700 font-bold text-xs">Download</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="px-5 py-3.5 bg-slate-50 border-t border-slate-100 flex justify-end">
+        <button type="button" data-close-modal="modal-pwa" class="px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800 text-white hover:bg-slate-900 transition cursor-pointer">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- LEAFLET JS WITH AUTOMATIC CDN FALLBACK -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          onerror="this.onerror=null;this.src='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js';"></script>
+
+  <!-- ==================== APPLICATION LOGIC ==================== -->
+  <script>
+    /**
+     * =========================================================================
+     * 1. BUILT-IN FALLBACK DEMO FILES (Used when ./control.csv is not hosted)
+     * =========================================================================
+     */
+    const DEMO_FILES = {
+      'control.csv': `"fileName", "dateValidFrom", "dateValidTo", "lineColour"
+"sample_trail.gpx", "2025-01-01", "", "#ea580c"
+"surf_paddle_route.gpx", "2025-01-01", "2029-12-31", "#0d9488"
+"spots.csv", "2025-01-01", "", "#2563eb"
+"expired_winter_loop.gpx", "2023-01-01", "2023-03-31", "#9333ea"`,
+
+      'sample_trail.gpx': `<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="TrailAndTide">
+  <metadata><name>Forest & Estuary MTB Loop</name></metadata>
+  <trk>
+    <name>Forest & Estuary MTB Loop</name>
+    <trkseg>
+      <trkpt lat="52.0932" lon="1.3145"></trkpt>
+      <trkpt lat="52.0968" lon="1.3210"></trkpt>
+      <trkpt lat="52.1012" lon="1.3265"></trkpt>
+      <trkpt lat="52.1045" lon="1.3190"></trkpt>
+      <trkpt lat="52.1008" lon="1.3095"></trkpt>
+      <trkpt lat="52.0955" lon="1.3082"></trkpt>
+      <trkpt lat="52.0932" lon="1.3145"></trkpt>
+    </trkseg>
+  </trk>
+</gpx>`,
+
+      'surf_paddle_route.gpx': `<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="TrailAndTide">
+  <metadata><name>Estuary & Coast Surf Run</name></metadata>
+  <rte>
+    <name>Estuary & Coast Surf Run</name>
+    <rtept lat="52.0890" lon="1.3160"></rtept>
+    <rtept lat="52.0852" lon="1.3215"></rtept>
+    <rtept lat="52.0805" lon="1.3280"></rtept>
+    <rtept lat="52.0750" lon="1.3355"></rtept>
+  </rte>
+</gpx>`,
+
+      'spots.csv': `"latitude", "longitude", "name", "description", "URL"
+"52.0932", "1.3145", "MTB Trailhead & Bike Wash", "Main gravel parking area, tire pump station, and coffee van.", "https://www.openstreetmap.org"
+"52.1012", "1.3265", "Ridge Lookout Point", "Panoramic views across the estuary. Watch for loose sand on descent.", ""
+"52.0890", "1.3160", "Board Launch Slipway", "Best launched 2 hours either side of high tide. Rinse shower available.", "https://www.surfline.com"`,
+
+      'activity.csv': `validDateFrom, validDateTo, title, description, URL
+2025-01-01, , Morning Dawn Patrol Surf Session, Meet at the south slipway 30 minutes after sunrise. All board sizes welcome; check swell forecast before paddling out., https://www.surfline.com
+2025-01-01, 2029-12-31, Weekend Singletrack MTB Social Ride, Intermediate 18km loop through sandy pine singletrack followed by coffee and pastries at the trailhead., https://www.trailforks.com
+2025-01-01, , Trail & Beach Clean-Up Volunteer Morning, Gloves and bags provided. Help keep our local coastlines and forest tracks spotless., `
+    };
+
+    /**
+     * =========================================================================
+     * 2. APPLICATION STATE
+     * =========================================================================
+     */
+    const state = {
+      map: null,
+      osmLayer: null,
+      voyagerFallbackLayer: null,
+      usingFallbackTiles: false,
+      tileLoadedCount: 0,
+      tileErrorCount: 0,
+      routeLayerGroup: null,
+      userMarker: null,
+      userAccuracyCircle: null,
+      userLatLng: null,
+      hasCenteredOnUserOnce: false,
+      uploadedFilesMap: new Map(),
+      activitiesRaw: [],
+      deferredInstallPrompt: null
+    };
+
+    /**
+     * =========================================================================
+     * 3. DATE PARSING & RANGE VALIDATION
+     * =========================================================================
+     */
+    function parseFlexibleDate(str) {
+      if (!str || typeof str !== 'string') return null;
+      const clean = str.trim();
+      if (!clean) return null;
+
+      // YYYY-MM-DD or YYYY/MM/DD
+      const isoMatch = clean.match(/^(\d{4})[-/](\d{1,2})[-/](\d{1,2})$/);
+      if (isoMatch) {
+        return new Date(
+          parseInt(isoMatch[1], 10),
+          parseInt(isoMatch[2], 10) - 1,
+          parseInt(isoMatch[3], 10)
+        );
+      }
+
+      // DD-MM-YYYY or DD/MM/YYYY
+      const dmyMatch = clean.match(/^(\d{1,2})[-/](\d{1,2})[-/](\d{4})$/);
+      if (dmyMatch) {
+        return new Date(
+          parseInt(dmyMatch[3], 10),
+          parseInt(dmyMatch[2], 10) - 1,
+          parseInt(dmyMatch[1], 10)
+        );
+      }
+
+      const fallback = new Date(clean);
+      if (!isNaN(fallback.getTime())) {
+        return new Date(fallback.getFullYear(), fallback.getMonth(), fallback.getDate());
+      }
+      return null;
+    }
+
+    function getTodayMidnight() {
+      const now = new Date();
+      return new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    }
+
+    /**
+     * Checks if today's date falls within [validFrom, validTo].
+     * An empty validTo means valid indefinitely after validFrom.
+     */
+    function isDateCurrentlyValid(validFromStr, validToStr) {
+      const today = getTodayMidnight();
+      const start = parseFlexibleDate(validFromStr);
+      const end = parseFlexibleDate(validToStr);
+
+      if (start && today < start) return false;
+      if (end && today > end) return false;
+      return true;
+    }
+
+    function formatDisplayDate(str) {
+      if (!str || !str.trim()) return '';
+      const dt = parseFlexibleDate(str);
+      if (!dt) return str.trim();
+      return dt.toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' });
+    }
+
+    /**
+     * =========================================================================
+     * 4. ROBUST CSV PARSER (Handles quoted fields, embedded commas & CRLF)
+     * =========================================================================
+     */
+    function parseCSV(csvText) {
+      const rows = [];
+      let currentRow = [];
+      let currentVal = '';
+      let inQuotes = false;
+      const text = (csvText || '').replace(/^\uFEFF/, '');
+
+      for (let i = 0; i < text.length; i++) {
+        const char = text[i];
+        const nextChar = text[i + 1];
+
+        if (char === '"') {
+          if (inQuotes && nextChar === '"') {
+            currentVal += '"';
+            i++;
+          } else {
+            inQuotes = !inQuotes;
+          }
+        } else if (char === ',' && !inQuotes) {
+          currentRow.push(currentVal.trim());
+          currentVal = '';
+        } else if ((char === '\n' || (char === '\r' && nextChar === '\n')) && !inQuotes) {
+          if (char === '\r') i++;
+          currentRow.push(currentVal.trim());
+          if (currentRow.some(cell => cell !== '')) {
+            rows.push(currentRow);
+          }
+          currentRow = [];
+          currentVal = '';
+        } else if (char !== '\r') {
+          currentVal += char;
+        }
+      }
+
+      if (currentVal.length > 0 || currentRow.length > 0) {
+        currentRow.push(currentVal.trim());
+        if (currentRow.some(cell => cell !== '')) {
+          rows.push(currentRow);
+        }
+      }
+
+      return rows;
+    }
+
+    /**
+     * =========================================================================
+     * 5. RESOURCE LOADER (Uploaded Local Files -> Live Fetch -> Built-in Demo)
+     * =========================================================================
+     */
+    async function loadTextResource(fileName) {
+      const cleanName = fileName.trim();
+      const lowerName = cleanName.toLowerCase();
+
+      // 1. User-uploaded local files override everything
+      if (state.uploadedFilesMap.has(lowerName)) {
+        return { text: state.uploadedFilesMap.get(lowerName), source: 'uploaded' };
+      }
+
+      // 2. Live HTTP fetch from same folder
+      try {
+        const response = await fetch(`./${encodeURI(cleanName)}`, { cache: 'no-store' });
+        if (response.ok) {
+          const text = await response.text();
+          if (text && !text.trim().toLowerCase().startsWith('<!doctype html')) {
+            return { text, source: 'live' };
+          }
+        }
+      } catch (err) {
+        // Fallback to demo data when opened standalone or without hosted CSVs
+      }
+
+      // 3. Built-in demo data fallback
+      if (Object.prototype.hasOwnProperty.call(DEMO_FILES, cleanName)) {
+        return { text: DEMO_FILES[cleanName], source: 'demo' };
+      }
+      const demoKey = Object.keys(DEMO_FILES).find(k => k.toLowerCase() === lowerName);
+      if (demoKey) {
+        return { text: DEMO_FILES[demoKey], source: 'demo' };
+      }
+
+      return null;
+    }
+
+    /**
+     * =========================================================================
+     * 6. LEAFLET MAP INITIALIZATION (Default OpenStreetMap + Voyager Fallback)
+     * =========================================================================
+     */
+    function switchToVoyagerFallback() {
+      if (state.usingFallbackTiles || !state.map) return;
+      state.usingFallbackTiles = true;
+
+      if (state.osmLayer && state.map.hasLayer(state.osmLayer)) {
+        state.map.removeLayer(state.osmLayer);
+      }
+
+      state.voyagerFallbackLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+        attribution: '© OpenStreetMap © CARTO',
+        subdomains: 'abcd',
+        maxZoom: 19
+      });
+
+      state.voyagerFallbackLayer.on('tileload', () => {
+        state.tileLoadedCount++;
+        const banner = document.getElementById('map-offline-banner');
+        if (banner) banner.classList.add('hidden');
+      });
+
+      state.voyagerFallbackLayer.on('tileerror', () => {
+        if (state.tileLoadedCount === 0) {
+          const banner = document.getElementById('map-offline-banner');
+          if (banner) banner.classList.remove('hidden');
+        }
+      });
+
+      state.voyagerFallbackLayer.addTo(state.map);
+    }
+
+    function initMap() {
+      if (typeof L === 'undefined') {
+        setTimeout(initMap, 120);
+        return;
+      }
+
+      // Default to OpenStreetMap tiles (with explicit referrerPolicy for OSM tile server compliance)
+      state.osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        maxZoom: 19,
+        crossOrigin: false,
+        referrerPolicy: 'origin'
+      });
+
+      state.osmLayer.on('tileload', () => {
+        state.tileLoadedCount++;
+        const banner = document.getElementById('map-offline-banner');
+        if (banner) banner.classList.add('hidden');
+      });
+
+      state.osmLayer.on('tileerror', () => {
+        state.tileErrorCount++;
+        // Only fall back if multiple tiles fail AND zero tiles have succeeded
+        if (state.tileLoadedCount === 0 && state.tileErrorCount >= 4) {
+          switchToVoyagerFallback();
+        }
+      });
+
+      state.map = L.map('map', {
+        center: [52.094, 1.320],
+        zoom: 13,
+        zoomControl: false,
+        layers: [state.osmLayer]
+      });
+
+      L.control.zoom({ position: 'topright' }).addTo(state.map);
+      state.routeLayerGroup = L.layerGroup().addTo(state.map);
+
+      // Keep Leaflet synchronized whenever the container or Tailwind finishes layout
+      const mapPanel = document.getElementById('panel-map');
+      if (window.ResizeObserver && mapPanel) {
+        const ro = new ResizeObserver(() => {
+          if (state.map && !mapPanel.classList.contains('hidden')) {
+            state.map.invalidateSize();
+          }
+        });
+        ro.observe(mapPanel);
+      }
+
+      state.map.invalidateSize();
+      setTimeout(() => state.map && state.map.invalidateSize(), 150);
+      setTimeout(() => state.map && state.map.invalidateSize(), 600);
+
+      // Watchdog: if OSM is blocked (e.g. file:// protocol with no Referer), fall back after 7s
+      setTimeout(() => {
+        if (state.tileLoadedCount === 0 && !state.usingFallbackTiles) {
+          switchToVoyagerFallback();
+        }
+      }, 7000);
+
+      // Locate user via GPS and center map on their position
+      locateUser(true);
+    }
+
+    function updateUserLocationOnMap(lat, lng, accuracy, shouldCenter) {
+      const latlng = [lat, lng];
+      state.userLatLng = latlng;
+
+      if (!state.userMarker) {
+        const pulseIcon = L.divIcon({
+          className: '',
+          html: '<div class="user-location-pulse"><div class="user-location-ring"></div><div class="user-location-dot"></div></div>',
+          iconSize: [24, 24],
+          iconAnchor: [12, 12]
+        });
+
+        state.userMarker = L.marker(latlng, { icon: pulseIcon, zIndexOffset: 1000 })
+          .addTo(state.map)
+          .bindPopup('<div class="font-semibold text-slate-900 text-sm">You are here</div><div class="text-xs text-slate-500 mt-0.5">Live device location</div>');
+
+        state.userAccuracyCircle = L.circle(latlng, {
+          radius: Math.min(accuracy || 30, 500),
+          color: '#2563eb',
+          fillColor: '#3b82f6',
+          fillOpacity: 0.12,
+          weight: 1
+        }).addTo(state.map);
+      } else {
+        state.userMarker.setLatLng(latlng);
+        if (state.userAccuracyCircle) {
+          state.userAccuracyCircle.setLatLng(latlng);
+          state.userAccuracyCircle.setRadius(Math.min(accuracy || 30, 500));
+        }
+      }
+
+      if (shouldCenter) {
+        state.map.setView(latlng, Math.max(state.map.getZoom(), 14), { animate: true });
+        state.hasCenteredOnUserOnce = true;
+      }
+
+      const statusPill = document.getElementById('geo-status-pill');
+      if (statusPill) {
+        statusPill.textContent = `GPS: ${lat.toFixed(4)}, ${lng.toFixed(4)}`;
+      }
+    }
+
+    function locateUser(forceCenter = false) {
+      const statusPill = document.getElementById('geo-status-pill');
+
+      if (!('geolocation' in navigator)) {
+        if (statusPill) statusPill.textContent = 'GPS unavailable';
+        fitMapToRoutes();
+        return;
+      }
+
+      navigator.geolocation.getCurrentPosition(
+        (pos) => {
+          const { latitude, longitude, accuracy } = pos.coords;
+          updateUserLocationOnMap(latitude, longitude, accuracy, forceCenter || !state.hasCenteredOnUserOnce);
+        },
+        () => {
+          if (statusPill) statusPill.textContent = 'GPS off — showing active routes';
+          fitMapToRoutes();
+        },
+        { enableHighAccuracy: true, timeout: 8000, maximumAge: 15000 }
+      );
+
+      navigator.geolocation.watchPosition(
+        (pos) => {
+          const { latitude, longitude, accuracy } = pos.coords;
+          updateUserLocationOnMap(latitude, longitude, accuracy, !state.hasCenteredOnUserOnce);
+        },
+        () => {},
+        { enableHighAccuracy: true, maximumAge: 10000 }
+      );
+    }
+
+    /**
+     * Parses a .gpx file (<trkpt> and <rtept>) and draws it on the map in lineColour.
+     */
+    function renderGPXLayer(gpxText, colour, fileName, validLabel) {
+      try {
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(gpxText, 'application/xml');
+        if (xmlDoc.querySelector('parsererror')) {
+          console.warn(`Invalid GPX XML in ${fileName}`);
+          return;
+        }
+
+        const routeTitleNode = xmlDoc.querySelector('trk > name, rte > name, metadata > name');
+        const routeTitle = routeTitleNode ? routeTitleNode.textContent.trim() : fileName;
+        const segments = [];
+
+        // 1. Parse <trkseg> -> <trkpt>
+        xmlDoc.querySelectorAll('trkseg').forEach(seg => {
+          const pts = [];
+          seg.querySelectorAll('trkpt').forEach(pt => {
+            const lat = parseFloat(pt.getAttribute('lat'));
+            const lon = parseFloat(pt.getAttribute('lon'));
+            if (!isNaN(lat) && !isNaN(lon)) pts.push([lat, lon]);
+          });
+          if (pts.length > 0) segments.push(pts);
+        });
+
+        // 2. Parse <rte> -> <rtept>
+        xmlDoc.querySelectorAll('rte').forEach(rte => {
+          const pts = [];
+          rte.querySelectorAll('rtept').forEach(pt => {
+            const lat = parseFloat(pt.getAttribute('lat'));
+            const lon = parseFloat(pt.getAttribute('lon'));
+            if (!isNaN(lat) && !isNaN(lon)) pts.push([lat, lon]);
+          });
+          if (pts.length > 0) segments.push(pts);
+        });
+
+        // 3. Fallback for flat <trkpt> or <rtept>
+        if (segments.length === 0) {
+          const pts = [];
+          xmlDoc.querySelectorAll('trkpt, rtept').forEach(pt => {
+            const lat = parseFloat(pt.getAttribute('lat'));
+            const lon = parseFloat(pt.getAttribute('lon'));
+            if (!isNaN(lat) && !isNaN(lon)) pts.push([lat, lon]);
+          });
+          if (pts.length > 0) segments.push(pts);
+        }
+
+        segments.forEach(latlngs => {
+          const polyline = L.polyline(latlngs, {
+            color: colour || '#0f766e',
+            weight: 5,
+            opacity: 0.9,
+            lineCap: 'round',
+            lineJoin: 'round'
+          });
+
+          polyline.bindPopup(`
+            <div class="min-w-[180px]">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="w-3 h-3 rounded-full inline-block shrink-0" style="background:${escapeHTML(colour)}"></span>
+                <span class="font-bold text-slate-900 text-sm">${escapeHTML(routeTitle)}</span>
+              </div>
+              <div class="text-xs text-slate-500">File: <span class="font-mono">${escapeHTML(fileName)}</span></div>
+              <div class="text-xs text-slate-500 mt-0.5">Valid: ${escapeHTML(validLabel)}</div>
+            </div>
+          `);
+
+          polyline.addTo(state.routeLayerGroup);
+        });
+      } catch (err) {
+        console.error(`Error rendering GPX ${fileName}:`, err);
+      }
+    }
+
+    /**
+     * Parses a point .csv ("latitude", "longitude", "name", "description", "URL")
+     * and renders each row as a clickable dot marker with a popup.
+     */
+    function renderPointCSVLayer(csvText, colour) {
+      const rows = parseCSV(csvText);
+      if (rows.length === 0) return;
+
+      let startIdx = 0;
+      const firstCell = rows[0][0].toLowerCase();
+      if (firstCell === 'latitude' || firstCell === 'lat') {
+        startIdx = 1;
+      }
+
+      const dotColor = colour || '#2563eb';
+
+      for (let i = startIdx; i < rows.length; i++) {
+        const [latStr, lonStr, name, description, url] = rows[i];
+        const lat = parseFloat(latStr);
+        const lon = parseFloat(lonStr);
+        if (isNaN(lat) || isNaN(lon)) continue;
+
+        const cleanName = (name || 'Point of Interest').trim();
+        const cleanDesc = (description || '').trim();
+        const cleanUrl = (url || '').trim();
+
+        const marker = L.circleMarker([lat, lon], {
+          radius: 8,
+          fillColor: dotColor,
+          color: '#ffffff',
+          weight: 2.5,
+          opacity: 1,
+          fillOpacity: 0.95
+        });
+
+        let linkHtml = '';
+        if (cleanUrl) {
+          const safeHref = /^https?:\/\//i.test(cleanUrl) ? cleanUrl : `https://${cleanUrl}`;
+          linkHtml = `
+            <div class="mt-2.5 pt-2 border-t border-slate-100">
+              <a href="${escapeHTML(safeHref)}" target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center gap-1 text-xs font-semibold text-teal-700 hover:text-teal-900 underline underline-offset-2">
+                <span>Open Link</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>`;
+        }
+
+        marker.bindPopup(`
+          <div class="min-w-[200px] max-w-[260px]">
+            <div class="font-bold text-slate-900 text-sm">${escapeHTML(cleanName)}</div>
+            ${cleanDesc ? `<p class="text-xs text-slate-600 mt-1 leading-relaxed">${escapeHTML(cleanDesc)}</p>` : ''}
+            ${linkHtml}
+          </div>
+        `);
+
+        marker.addTo(state.routeLayerGroup);
+      }
+    }
+
+    function fitMapToRoutes() {
+      if (!state.map || !state.routeLayerGroup) return;
+      const bounds = L.latLngBounds([]);
+      state.routeLayerGroup.eachLayer(layer => {
+        if (layer.getBounds) {
+          bounds.extend(layer.getBounds());
+        } else if (layer.getLatLng) {
+          bounds.extend(layer.getLatLng());
+        }
+      });
+      if (bounds.isValid()) {
+        state.map.fitBounds(bounds, { padding: [45, 45], maxZoom: 15 });
+      }
+    }
+
+    /**
+     * Reads control.csv ("fileName", "dateValidFrom", "dateValidTo", "lineColour"),
+     * checks today's date range, and displays valid .gpx and .csv layers on the map.
+     */
+    async function processControlCSV() {
+      if (!state.routeLayerGroup) return 'none';
+      state.routeLayerGroup.clearLayers();
+
+      const controlRes = await loadTextResource('control.csv');
+      if (!controlRes) {
+        showToast('Could not find control.csv', 'error');
+        return 'none';
+      }
+
+      const rows = parseCSV(controlRes.text);
+      if (rows.length === 0) return controlRes.source;
+
+      let startIdx = 0;
+      const firstCell = rows[0][0].toLowerCase();
+      if (firstCell === 'filename' || firstCell === 'file_name' || firstCell === 'file') {
+        startIdx = 1;
+      }
+
+      let validLayerCount = 0;
+
+      for (let i = startIdx; i < rows.length; i++) {
+        const [fileName, dateValidFrom, dateValidTo, lineColour] = rows[i];
+        if (!fileName) continue;
+
+        if (!isDateCurrentlyValid(dateValidFrom, dateValidTo)) {
+          continue;
+        }
+
+        const trimmedFile = fileName.trim();
+        const colour = (lineColour || '#0f766e').trim();
+        const lowerFile = trimmedFile.toLowerCase();
+        const validLabel = dateValidTo
+          ? `${dateValidFrom || 'Start'} → ${dateValidTo}`
+          : (dateValidFrom ? `From ${dateValidFrom}` : 'Always valid');
+
+        const targetRes = await loadTextResource(trimmedFile);
+        if (!targetRes) {
+          console.warn(`Referenced file not found: ${trimmedFile}`);
+          continue;
+        }
+
+        if (lowerFile.endsWith('.gpx')) {
+          renderGPXLayer(targetRes.text, colour, trimmedFile, validLabel);
+          validLayerCount++;
+        } else if (lowerFile.endsWith('.csv')) {
+          renderPointCSVLayer(targetRes.text, colour);
+          validLayerCount++;
+        }
+      }
+
+      document.getElementById('badge-map-layers').textContent = validLayerCount;
+
+      if (!state.userLatLng) {
+        fitMapToRoutes();
+      }
+
+      return controlRes.source;
+    }
+
+    /**
+     * =========================================================================
+     * 7. TAB 2 — ACTIVITIES (activity.csv)
+     * =========================================================================
+     */
+    async function processActivityCSV() {
+      const actRes = await loadTextResource('activity.csv');
+      if (!actRes) {
+        state.activitiesRaw = [];
+        renderActivitiesList();
+        return 'none';
+      }
+
+      const rows = parseCSV(actRes.text);
+      let startIdx = 0;
+      if (rows.length > 0) {
+        const h0 = rows[0][0].toLowerCase();
+        if (h0.includes('valid') || h0.includes('date') || h0.includes('from')) {
+          startIdx = 1;
+        }
+      }
+
+      const parsed = [];
+      for (let i = startIdx; i < rows.length; i++) {
+        const [validDateFrom, validDateTo, title, description, url] = rows[i];
+        if (!title && !description) continue;
+        parsed.push({
+          validDateFrom: (validDateFrom || '').trim(),
+          validDateTo: (validDateTo || '').trim(),
+          title: (title || 'Untitled Activity').trim(),
+          description: (description || '').trim(),
+          url: (url || '').trim(),
+          isValidToday: isDateCurrentlyValid(validDateFrom, validDateTo)
+        });
+      }
+
+      state.activitiesRaw = parsed;
+      renderActivitiesList();
+      return actRes.source;
+    }
+
+    function renderActivitiesList() {
+      const listEl = document.getElementById('activities-list');
+      const showAll = document.getElementById('toggle-all-activities').checked;
+
+      const items = showAll
+        ? state.activitiesRaw
+        : state.activitiesRaw.filter(item => item.isValidToday);
+
+      document.getElementById('badge-activities-count').textContent = items.length;
+
+      if (items.length === 0) {
+        listEl.innerHTML = `
+          <div class="bg-white rounded-2xl border border-slate-200 p-8 text-center">
+            <p class="text-slate-700 font-semibold">No active events for today</p>
+            <p class="text-xs text-slate-500 mt-1">Toggle "Show all dates" above or update <code class="font-mono">activity.csv</code>.</p>
+          </div>`;
+        return;
+      }
+
+      listEl.innerHTML = items.map(item => {
+        const fromStr = formatDisplayDate(item.validDateFrom);
+        const toStr = formatDisplayDate(item.validDateTo);
+        let dateRangeLabel = 'Ongoing';
+        if (fromStr && toStr) dateRangeLabel = `${fromStr} – ${toStr}`;
+        else if (fromStr) dateRangeLabel = `From ${fromStr}`;
+        else if (toStr) dateRangeLabel = `Until ${toStr}`;
+
+        const statusBadge = item.isValidToday
+          ? '<span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-100 text-emerald-800">Active Today</span>'
+          : '<span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-slate-100 text-slate-600">Inactive Date</span>';
+
+        let actionButton = '';
+        if (item.url) {
+          const safeHref = /^https?:\/\//i.test(item.url) ? item.url : `https://${item.url}`;
+          actionButton = `
+            <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+              <a href="${escapeHTML(safeHref)}" target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-teal-50 hover:bg-teal-100 text-teal-800 text-xs font-semibold transition">
+                <span>Open Link</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>`;
+        }
+
+        return `
+          <article class="bg-white rounded-2xl border border-slate-200/90 p-5 shadow-xs hover:shadow-md transition">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+              <span class="inline-flex items-center gap-1.5 text-xs font-medium text-slate-500">
+                <svg class="w-3.5 h-3.5 text-teal-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                ${escapeHTML(dateRangeLabel)}
+              </span>
+              ${statusBadge}
+            </div>
+            <h3 class="text-base sm:text-lg font-bold text-slate-900 leading-snug">${escapeHTML(item.title)}</h3>
+            ${item.description ? `<p class="text-sm text-slate-600 mt-1.5 leading-relaxed">${escapeHTML(item.description)}</p>` : ''}
+            ${actionButton}
+          </article>`;
+      }).join('');
+    }
+
+    /**
+     * =========================================================================
+     * 8. PWA REGISTRATION (INLINE MANIFEST + SERVICE WORKER + ASSET DOWNLOADS)
+     * =========================================================================
+     */
+    function getTransparentIconSVG() {
+      const svgEl = document.getElementById('app-svg-icon');
+      return svgEl ? svgEl.outerHTML : '';
+    }
+
+    function getServiceWorkerCode() {
+      return `const CACHE_NAME = 'trail-tide-v1';
+const ASSETS = ['./', './index.html', './manifest.json', './icon.svg', './control.csv', './activity.csv'];
+
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME).then((cache) => cache.addAll(ASSETS).catch(() => {}))
+  );
+  self.skipWaiting();
+});
+
+self.addEventListener('activate', (event) => {
+  event.waitUntil(self.clients.claim());
+});
+
+self.addEventListener('fetch', (event) => {
+  if (event.request.method !== 'GET') return;
+  event.respondWith(
+    fetch(event.request)
+      .then((response) => {
+        const clone = response.clone();
+        caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
+        return response;
+      })
+      .catch(() => caches.match(event.request))
+  );
+});`;
+    }
+
+    function setupPWA() {
+      const svgCode = getTransparentIconSVG();
+      const svgDataUri = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgCode);
+
+      document.getElementById('pwa-icon-link').href = svgDataUri;
+      document.getElementById('pwa-apple-icon').href = svgDataUri;
+
+      const modalPreview = document.getElementById('modal-icon-preview');
+      if (modalPreview) {
+        modalPreview.innerHTML = svgCode;
+      }
+
+      const manifestObj = {
+        name: 'Trail & Tide — Routes & Activities',
+        short_name: 'Trail & Tide',
+        description: 'Outdoor GPX routes, trail markers, and active schedule.',
+        start_url: './index.html',
+        display: 'standalone',
+        background_color: '#f8fafc',
+        theme_color: '#0f766e',
+        icons: [
+          {
+            src: svgDataUri,
+            sizes: 'any',
+            type: 'image/svg+xml',
+            purpose: 'any maskable'
+          }
+        ]
+      };
+
+      const manifestBlob = new Blob([JSON.stringify(manifestObj, null, 2)], { type: 'application/manifest+json' });
+      document.getElementById('pwa-manifest-link').href = URL.createObjectURL(manifestBlob);
+
+      // Register Service Worker over HTTP/HTTPS (trying ./sw.js first, falling back to inline Blob SW)
+      if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
+        navigator.serviceWorker.register('./sw.js')
+          .then(() => {
+            const badge = document.getElementById('sw-status-badge');
+            if (badge) badge.textContent = 'Service Worker Active';
+          })
+          .catch(() => {
+            try {
+              const swBlob = new Blob([getServiceWorkerCode()], { type: 'application/javascript' });
+              const swUrl = URL.createObjectURL(swBlob);
+              navigator.serviceWorker.register(swUrl)
+                .then(() => {
+                  const badge = document.getElementById('sw-status-badge');
+                  if (badge) badge.textContent = 'Inline SW Active';
+                })
+                .catch(() => {});
+            } catch (e) {}
+          });
+      }
+
+      window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        state.deferredInstallPrompt = e;
+        const banner = document.getElementById('pwa-install-banner');
+        if (banner) banner.classList.remove('hidden');
+      });
+    }
+
+    function downloadAsset(filename) {
+      let content = '';
+      let mime = 'text/plain;charset=utf-8';
+
+      if (filename === 'index.html') {
+        content = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+        mime = 'text/html;charset=utf-8';
+      } else if (filename === 'icon.svg') {
+        content = getTransparentIconSVG();
+        mime = 'image/svg+xml;charset=utf-8';
+      } else if (filename === 'manifest.json') {
+        content = JSON.stringify({
+          name: 'Trail & Tide — Routes & Activities',
+          short_name: 'Trail & Tide',
+          start_url: './index.html',
+          display: 'standalone',
+          background_color: '#f8fafc',
+          theme_color: '#0f766e',
+          icons: [{ src: 'icon.svg', sizes: 'any', type: 'image/svg+xml', purpose: 'any maskable' }]
+        }, null, 2);
+        mime = 'application/manifest+json;charset=utf-8';
+      } else if (filename === 'sw.js') {
+        content = getServiceWorkerCode();
+        mime = 'application/javascript;charset=utf-8';
+      } else if (DEMO_FILES[filename]) {
+        content = DEMO_FILES[filename];
+        mime = filename.endsWith('.gpx') ? 'application/gpx+xml;charset=utf-8' : 'text/csv;charset=utf-8';
+      }
+
+      const blob = new Blob([content], { type: mime });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      showToast(`Downloaded ${filename}`, 'success');
+    }
+
+    /**
+     * =========================================================================
+     * 9. UI UTILITIES, TAB NAVIGATION & INITIALIZATION
+     * =========================================================================
+     */
+    function escapeHTML(str) {
+      return String(str)
+        .replace(/&/g, '&')
+        .replace(/</g, '<')
+        .replace(/>/g, '>')
+        .replace(/"/g, '"')
+        .replace(/'/g, ''');
+    }
+
+    function showToast(message, type = 'info') {
+      const container = document.getElementById('toast-container');
+      const el = document.createElement('div');
+      const bg = type === 'error' ? 'bg-red-700' : type === 'success' ? 'bg-teal-800' : 'bg-slate-800';
+      el.className = `${bg} text-white text-xs font-medium px-3.5 py-2.5 rounded-xl shadow-lg pointer-events-auto transition-opacity duration-300`;
+      el.textContent = message;
+      container.appendChild(el);
+      setTimeout(() => {
+        el.style.opacity = '0';
+        setTimeout(() => el.remove(), 300);
+      }, 2800);
+    }
+
+    function updateSourceBadge(source) {
+      const badge = document.getElementById('data-source-badge');
+      if (source === 'live') {
+        badge.textContent = 'Live CSVs';
+        badge.className = 'inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium bg-emerald-100 text-emerald-800 border border-emerald-200 whitespace-nowrap';
+      } else if (source === 'uploaded') {
+        badge.textContent = 'Local Files';
+        badge.className = 'inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium bg-blue-100 text-blue-800 border border-blue-200 whitespace-nowrap';
+      } else {
+        badge.textContent = 'Demo Data';
+        badge.className = 'inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium bg-amber-100 text-amber-800 border border-amber-200 whitespace-nowrap';
+      }
+    }
+
+    async function loadAllData() {
+      const mapSource = await processControlCSV();
+      const actSource = await processActivityCSV();
+      const effectiveSource = mapSource !== 'none' ? mapSource : actSource;
+      updateSourceBadge(effectiveSource);
+    }
+
+    function switchTab(tabName) {
+      const tabMapBtn = document.getElementById('tab-btn-map');
+      const tabActBtn = document.getElementById('tab-btn-activities');
+      const panelMap = document.getElementById('panel-map');
+      const panelAct = document.getElementById('panel-activities');
+
+      if (tabName === 'map') {
+        panelMap.classList.remove('hidden');
+        panelAct.classList.add('hidden');
+        tabMapBtn.setAttribute('aria-selected', 'true');
+        tabActBtn.setAttribute('aria-selected', 'false');
+        tabMapBtn.className = 'flex-1 sm:flex-initial flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold border-b-2 border-teal-700 text-teal-800 transition cursor-pointer';
+        tabActBtn.className = 'flex-1 sm:flex-initial flex items-center justify-center gap-2 px-4 py-3 text-sm font-medium border-b-2 border-transparent text-slate-500 hover:text-slate-800 transition cursor-pointer';
+        if (state.map) {
+          state.map.invalidateSize();
+          setTimeout(() => state.map.invalidateSize(), 120);
+        }
+      } else {
+        panelMap.classList.add('hidden');
+        panelAct.classList.remove('hidden');
+        tabMapBtn.setAttribute('aria-selected', 'false');
+        tabActBtn.setAttribute('aria-selected', 'true');
+        tabActBtn.className = 'flex-1 sm:flex-initial flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold border-b-2 border-teal-700 text-teal-800 transition cursor-pointer';
+        tabMapBtn.className = 'flex-1 sm:flex-initial flex items-center justify-center gap-2 px-4 py-3 text-sm font-medium border-b-2 border-transparent text-slate-500 hover:text-slate-800 transition cursor-pointer';
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', async () => {
+      const todayStr = new Date().toLocaleDateString(undefined, { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' });
+      document.getElementById('today-date-label').textContent = `Active for ${todayStr}`;
+
+      setupPWA();
+      initMap();
+      await loadAllData();
+
+      // Tab buttons
+      document.getElementById('tab-btn-map').addEventListener('click', () => switchTab('map'));
+      document.getElementById('tab-btn-activities').addEventListener('click', () => switchTab('activities'));
+
+      // Map action buttons
+      document.getElementById('btn-center-user').addEventListener('click', () => {
+        if (state.userLatLng && state.map) {
+          state.map.setView(state.userLatLng, 15, { animate: true });
+        }
+        locateUser(true);
+      });
+
+      document.getElementById('btn-fit-routes').addEventListener('click', () => {
+        fitMapToRoutes();
+      });
+
+      document.getElementById('btn-refresh-data').addEventListener('click', async () => {
+        await loadAllData();
+        showToast('Reloaded control.csv & activity.csv', 'success');
+      });
+
+      // Activity filter checkbox
+      document.getElementById('toggle-all-activities').addEventListener('change', renderActivitiesList);
+
+      // PWA & Setup modal handlers
+      document.getElementById('btn-pwa-modal').addEventListener('click', () => {
+        document.getElementById('modal-pwa').classList.remove('hidden');
+      });
+      document.querySelectorAll('[data-close-modal]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const targetId = btn.getAttribute('data-close-modal');
+          document.getElementById(targetId).classList.add('hidden');
+        });
+      });
+
+      // Local multi-file loader inside PWA & Setup modal
+      document.getElementById('local-file-input').addEventListener('change', async (e) => {
+        const files = Array.from(e.target.files || []);
+        if (files.length === 0) return;
+
+        for (const file of files) {
+          const text = await file.text();
+          state.uploadedFilesMap.set(file.name.toLowerCase(), text);
+        }
+
+        const summaryEl = document.getElementById('uploaded-files-summary');
+        summaryEl.classList.remove('hidden');
+        summaryEl.innerHTML = `<div class="font-semibold text-slate-800">Loaded ${state.uploadedFilesMap.size} local file(s):</div>` +
+          Array.from(state.uploadedFilesMap.keys()).map(k => `<div class="font-mono text-teal-800">• ${escapeHTML(k)}</div>`).join('');
+
+        await loadAllData();
+        fitMapToRoutes();
+        showToast(`Loaded ${files.length} local file(s)`, 'success');
+      });
+
+      document.getElementById('btn-reset-demo').addEventListener('click', async () => {
+        state.uploadedFilesMap.clear();
+        document.getElementById('uploaded-files-summary').classList.add('hidden');
+        document.getElementById('local-file-input').value = '';
+        await loadAllData();
+        fitMapToRoutes();
+        showToast('Reset to default files', 'info');
+      });
+
+      // PWA native install prompt
+      const installBtn = document.getElementById('btn-trigger-install');
+      if (installBtn) {
+        installBtn.addEventListener('click', async () => {
+          if (!state.deferredInstallPrompt) return;
+          state.deferredInstallPrompt.prompt();
+          await state.deferredInstallPrompt.userChoice;
+          state.deferredInstallPrompt = null;
+          document.getElementById('pwa-install-banner').classList.add('hidden');
+        });
+      }
+
+      // Keep Leaflet map sized properly on window resize
+      window.addEventListener('resize', () => {
+        if (state.map) state.map.invalidateSize();
+      });
+    });
+  </script>
+</body>
+</html>
