@@ -7,7 +7,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="description" content="Surfers plans." />
-  <title>Trail & Tide — Routes & Activities</title>
+  <title>Surfers</title>
 
   <!-- Dynamic Inline PWA Manifest & Transparent SVG App Icon -->
   <link id="pwa-manifest-link" rel="manifest" href="" />
@@ -140,7 +140,7 @@
   <header class="bg-white border-b border-slate-200 px-3 sm:px-5 py-2.5 flex items-center justify-between gap-2 shrink-0 z-30 shadow-xs">
     <!-- Custom Transparent Surfboard & Mountain Bike 'X' SVG Logo + Title -->
     <div class="flex items-center gap-2.5 min-w-0">
-      <div class="w-10 h-10 rounded-xl bg-slate-100/80 border border-slate-200/80 flex items-center justify-center p-1 shrink-0" title="Trail & Tide — Surfboard & Mountain Bike X">
+      <div class="w-10 h-10 rounded-xl bg-slate-100/80 border border-slate-200/80 flex items-center justify-center p-1 shrink-0" title="Surfers">
         <!-- Transparent-background SVG: Surfboard (Top-Left to Bottom-Right) crossing Mountain Bike (Top-Right to Bottom-Left) -->
         <svg id="app-svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%" fill="none">
           <!-- 1. SURFBOARD: Diagonal from Top-Left to Bottom-Right -->
@@ -187,7 +187,7 @@
 
       <div class="min-w-0">
         <div class="flex items-center gap-2">
-          <h1 class="text-base sm:text-lg font-bold tracking-tight text-slate-900 truncate">Trail & Tide</h1>
+          <h1 class="text-base sm:text-lg font-bold tracking-tight text-slate-900 truncate">Surfers</h1>
           <span id="data-source-badge" class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium bg-amber-100 text-amber-800 border border-amber-200 whitespace-nowrap">
             Loading...
           </span>
@@ -316,7 +316,7 @@
         <div id="pwa-install-banner" class="hidden p-4 rounded-xl bg-teal-50 border border-teal-200 flex items-center justify-between gap-3">
           <div>
             <p class="font-semibold text-teal-900 text-sm">Install App on This Device</p>
-            <p class="text-xs text-teal-700">Add Trail & Tide to your home screen for offline use.</p>
+            <p class="text-xs text-teal-700">Add Surfers to your home screen for offline use.</p>
           </div>
           <button id="btn-trigger-install" type="button" class="px-4 py-2 rounded-xl bg-teal-700 hover:bg-teal-800 text-white text-xs font-semibold shrink-0 cursor-pointer">
             Install Now
@@ -364,9 +364,9 @@
               <span class="text-teal-700 font-bold text-xs">Download</span>
             </button>
 
-            <button type="button" onclick="downloadAsset('icon.svg')" class="flex items-center justify-between p-3 rounded-xl border border-slate-200 hover:border-teal-500 hover:bg-teal-50/40 transition text-left cursor-pointer">
+            <button type="button" onclick="downloadAsset('surfers.svg')" class="flex items-center justify-between p-3 rounded-xl border border-slate-200 hover:border-teal-500 hover:bg-teal-50/40 transition text-left cursor-pointer">
               <div>
-                <div class="font-semibold text-slate-900 text-xs">icon.svg</div>
+                <div class="font-semibold text-slate-900 text-xs">surfers.svg</div>
                 <div class="text-[11px] text-slate-500">Transparent Surf & MTB 'X'</div>
               </div>
               <span class="text-teal-700 font-bold text-xs">Download</span>
@@ -1165,8 +1165,8 @@
     }
 
     function getServiceWorkerCode() {
-      return `const CACHE_NAME = 'trail-tide-v1';
-const ASSETS = ['./', './index.html', './manifest.json', './icon.svg', './control.csv', './activity.csv'];
+      return `const CACHE_NAME = 'surfers-v1';
+const ASSETS = ['./', './index.html', './manifest.json', './surfers.svg', './control.csv', './spots.csv', './activity.csv','./EdaleCircularWalk.gpx', './NCN_10_Reivers_Route.gpx','./Hadrian_s_Cycleway.gpx', './WhitehavenTynemouth.gpx'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
@@ -1206,8 +1206,8 @@ self.addEventListener('fetch', (event) => {
       }
 
       const manifestObj = {
-        name: 'Trail & Tide — Routes & Activities',
-        short_name: 'Trail & Tide',
+        name: 'Surfers',
+        short_name: 'Surfers',
         description: 'Outdoor GPX routes, trail markers, and active schedule.',
         start_url: './index.html',
         display: 'standalone',
@@ -1262,18 +1262,18 @@ self.addEventListener('fetch', (event) => {
       if (filename === 'index.html') {
         content = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
         mime = 'text/html;charset=utf-8';
-      } else if (filename === 'icon.svg') {
+      } else if (filename === 'surfers.svg') {
         content = getTransparentIconSVG();
         mime = 'image/svg+xml;charset=utf-8';
       } else if (filename === 'manifest.json') {
         content = JSON.stringify({
-          name: 'Trail & Tide — Routes & Activities',
-          short_name: 'Trail & Tide',
+          name: 'Surfers',
+          short_name: 'Surfers',
           start_url: './index.html',
           display: 'standalone',
           background_color: '#f8fafc',
           theme_color: '#0f766e',
-          icons: [{ src: 'icon.svg', sizes: 'any', type: 'image/svg+xml', purpose: 'any maskable' }]
+          icons: [{ src: 'surfers.svg', sizes: 'any', type: 'image/svg+xml', purpose: 'any maskable' }]
         }, null, 2);
         mime = 'application/manifest+json;charset=utf-8';
       } else if (filename === 'sw.js') {
