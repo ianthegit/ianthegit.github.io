@@ -1301,12 +1301,9 @@ self.addEventListener('fetch', (event) => {
      * =========================================================================
      */
      function escapeHTML(str) {
-         return String(str)
-           .replace(/&/g, "&")
-           .replace(/</g, "<")
-           .replace(/>/g, ">")
-  //         .replace(/"/g, """)
-           .replace(/'/g, "\x27");
+         const div = document.createElement('div');
+         div.textContent = String(str);
+         return div.innerHTML.replace(/"/g, '"');
        }
 
     function showToast(message, type = 'info') {
