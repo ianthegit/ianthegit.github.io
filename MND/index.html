@@ -129,13 +129,6 @@
 
             <!-- Quick Action Buttons -->
             <div class="flex items-center gap-2 bg-slate-900/90 backdrop-blur-md border border-slate-700/60 p-1.5 rounded-xl shadow-xl">
-                <!-- Locate Me Button -->
-                <button id="btn-locate" onclick="toggleGeolocation()" title="Track My Location" 
-                        class="flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 transition-all border border-slate-700 active:scale-95 cursor-pointer">
-                    <i id="locate-icon" class="fa-solid fa-location-crosshairs text-sky-400"></i>
-                    <span id="locate-text">Find Me</span>
-                </button>
-
                 <!-- Fit Route Button -->
                 <button onclick="fitMapToRoute()" title="Recenter Route" 
                         class="p-2 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 transition-all border border-slate-700 active:scale-95 cursor-pointer">
@@ -153,7 +146,7 @@
             <div class="w-px bg-slate-800"></div>
             <div class="flex flex-col">
                 <span class="text-[10px] uppercase font-bold text-slate-400">Live GPS</span>
-                <span id="stat-gps" class="font-bold text-slate-400 text-sm">Inactive</span>
+                <span id="stat-gps" class="font-bold text-slate-400 text-sm">Starting...</span>
             </div>
         </div>
     </main>
@@ -171,11 +164,14 @@
         // ==========================================
         // 1. GLOBAL STATE & CONFIGURATION
         // ==========================================
+        const POSITION_UPDATE_INTERVAL_MS = 60 * 1000; // Every 1 minute
+
         let map;
         let routeLayer = null;
         let userLocationMarker = null;
         let userAccuracyCircle = null;
-        let watchId = null;
+        let locationIntervalId = null;
+        let hasCenteredOnUser = false;
         
         // Sample GPX Coordinate Fallback Data (Felixstowe Ferry Coastal Walk)
         const sampleCoordinates = [
@@ -235,6 +231,7 @@
             initMap();
             loadDefaultRoute();
             renderSimulatedFeed();
+            startPeriodicGeolocation();
         };
 
         // Initialize Leaflet Map with Compliant Tile Providers
@@ -377,50 +374,37 @@
         }
 
         // ==========================================
-        // 4. LIVE GEOLOCATION LOGIC
+        // 4. AUTOMATIC PERIODIC GEOLOCATION LOGIC
         // ==========================================
-        function toggleGeolocation() {
-            const locateBtn = document.getElementById('btn-locate');
-            const locateText = document.getElementById('locate-text');
-            const locateIcon = document.getElementById('locate-icon');
+        function startPeriodicGeolocation() {
             const gpsStat = document.getElementById('stat-gps');
 
-            if (watchId !== null) {
-                // Stop Tracking
-                navigator.geolocation.clearWatch(watchId);
-                watchId = null;
-
-                if (userLocationMarker) map.removeLayer(userLocationMarker);
-                if (userAccuracyCircle) map.removeLayer(userAccuracyCircle);
-                userLocationMarker = null;
-                userAccuracyCircle = null;
-
-                locateBtn.classList.remove('bg-sky-600', 'text-white');
-                locateBtn.classList.add('bg-slate-800', 'text-slate-200');
-                locateText.textContent = "Find Me";
-                locateIcon.className = "fa-solid fa-location-crosshairs text-sky-400";
-                gpsStat.textContent = "Inactive";
-                gpsStat.className = "font-bold text-slate-400 text-sm";
-            } else {
-                // Start Continuous High-Accuracy Tracking
-                if (!("geolocation" in navigator)) {
-                    alert("Geolocation is not supported by your browser.");
-                    return;
-                }
-
-                locateText.textContent = "Locating...";
-                locateIcon.className = "fa-solid fa-spinner fa-spin text-sky-400";
-
-                watchId = navigator.geolocation.watchPosition(
-                    onPositionSuccess,
-                    onPositionError,
-                    {
-                        enableHighAccuracy: true,
-                        timeout: 15000,
-                        maximumAge: 0
-                    }
-                );
+            if (!("geolocation" in navigator)) {
+                gpsStat.textContent = "Unsupported";
+                gpsStat.className = "font-bold text-rose-400 text-sm";
+                return;
             }
+
+            // Request immediately on startup so the browser prompts for permission
+            requestPositionUpdate();
+
+            // Poll every minute thereafter
+            if (locationIntervalId !== null) {
+                clearInterval(locationIntervalId);
+            }
+            locationIntervalId = setInterval(requestPositionUpdate, POSITION_UPDATE_INTERVAL_MS);
+        }
+
+        function requestPositionUpdate() {
+            navigator.geolocation.getCurrentPosition(
+                onPositionSuccess,
+                onPositionError,
+                {
+                    enableHighAccuracy: true,
+                    timeout: 15000,
+                    maximumAge: 0
+                }
+            );
         }
 
         function onPositionSuccess(position) {
@@ -430,7 +414,6 @@
 
             const latLng = [lat, lng];
 
-            // Create initial marker and circle if first fix
             if (!userLocationMarker) {
                 const customIcon = L.divIcon({
                     className: 'user-location-pulse',
@@ -449,19 +432,16 @@
                     fillOpacity: 0.15 
                 }).addTo(map);
 
-                // Pan map to location on first fix
-                map.panTo(latLng);
+                if (!hasCenteredOnUser) {
+                    map.panTo(latLng);
+                    hasCenteredOnUser = true;
+                }
             } else {
-                // Smoothly update marker position and accuracy radius in real-time
                 userLocationMarker.setLatLng(latLng);
                 userAccuracyCircle.setLatLng(latLng);
                 userAccuracyCircle.setRadius(accuracy);
             }
 
-            document.getElementById('btn-locate').classList.add('bg-sky-600', 'text-white');
-            document.getElementById('locate-text').textContent = "Tracking Live";
-            document.getElementById('locate-icon').className = "fa-solid fa-location-arrow text-white animate-pulse";
-            
             const gpsStat = document.getElementById('stat-gps');
             gpsStat.textContent = `Active (±${Math.round(accuracy)}m)`;
             gpsStat.className = "font-bold text-emerald-400 text-sm";
@@ -469,8 +449,14 @@
 
         function onPositionError(err) {
             console.warn(`Geolocation Error (${err.code}): ${err.message}`);
-            alert(`Unable to retrieve location: ${err.message}`);
-            toggleGeolocation();
+            const gpsStat = document.getElementById('stat-gps');
+            if (err.code === err.PERMISSION_DENIED) {
+                gpsStat.textContent = "Denied";
+                gpsStat.className = "font-bold text-amber-400 text-sm";
+            } else {
+                gpsStat.textContent = "Unavailable";
+                gpsStat.className = "font-bold text-slate-400 text-sm";
+            }
         }
 
         // ==========================================
