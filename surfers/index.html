@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#0f766e" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Surfers" />
   <meta name="description" content="Surfers plans." />
   <title>Surfers</title>
 
@@ -13,7 +14,7 @@
   <link id="pwa-manifest-link" rel="manifest" href="manifest.json" />
   <link id="pwa-icon-link" rel="icon" type="image/svg+xml" href="surfers.svg" />
   <link id="pwa-apple-icon" rel="apple-touch-icon" href="surfers.svg" />
-    
+
   <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -141,45 +142,32 @@
     <!-- Custom Transparent Surfboard & Mountain Bike 'X' SVG Logo + Title -->
     <div class="flex items-center gap-2.5 min-w-0">
       <div class="w-10 h-10 rounded-xl bg-slate-100/80 border border-slate-200/80 flex items-center justify-center p-1 shrink-0" title="Surfers">
-        <!-- Transparent-background SVG: Surfboard (Top-Left to Bottom-Right) crossing Mountain Bike (Top-Right to Bottom-Left) -->
         <svg id="app-svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%" fill="none">
           <!-- 1. SURFBOARD: Diagonal from Top-Left to Bottom-Right -->
           <g transform="translate(60, 60) rotate(-45) translate(-60, -60)">
-            <!-- Surfboard Fin -->
             <path d="M60 95 L66 105 L60 103 Z" fill="#0f766e" />
-            <!-- Surfboard Hull -->
             <path d="M60 10 C71 26, 73 56, 68 96 L60 101 L52 96 C47 56, 49 26, 60 10 Z"
                   fill="#14b8a6" stroke="#0f766e" stroke-width="2.5" stroke-linejoin="round" />
-            <!-- Center Stringer -->
             <line x1="60" y1="13" x2="60" y2="99" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.9" />
-            <!-- Deck Stripes -->
             <path d="M51 38 Q60 42 69 38" stroke="#f59e0b" stroke-width="3" stroke-linecap="round" />
             <path d="M50 45 Q60 49 70 45" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.85" />
           </g>
 
           <!-- 2. MOUNTAIN BIKE: Diagonal from Top-Right to Bottom-Left -->
           <g transform="translate(60, 60) rotate(-45) translate(-60, -60)">
-            <!-- Rear Wheel (Bottom-Left after rotation) -->
             <circle cx="27" cy="66" r="14" stroke="#1e293b" stroke-width="3.5" fill="none" />
             <circle cx="27" cy="66" r="10.5" stroke="#64748b" stroke-width="1" stroke-dasharray="2 3" fill="none" />
             <circle cx="27" cy="66" r="2.2" fill="#1e293b" />
 
-            <!-- Front Wheel (Top-Right after rotation) -->
             <circle cx="93" cy="66" r="14" stroke="#1e293b" stroke-width="3.5" fill="none" />
             <circle cx="93" cy="66" r="10.5" stroke="#64748b" stroke-width="1" stroke-dasharray="2 3" fill="none" />
             <circle cx="93" cy="66" r="2.2" fill="#1e293b" />
 
-            <!-- MTB Frame -->
             <path d="M27 66 L48 66 L69 47 L45 47 Z" stroke="#ea580c" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round" fill="none" />
-            <!-- Seat Tube & Post -->
             <line x1="48" y1="66" x2="42" y2="39" stroke="#ea580c" stroke-width="3.2" stroke-linecap="round" />
-            <!-- Saddle -->
             <line x1="36" y1="39" x2="47" y2="39" stroke="#1e293b" stroke-width="3.2" stroke-linecap="round" />
-            <!-- Front Fork -->
             <line x1="67" y1="41" x2="93" y2="66" stroke="#1e293b" stroke-width="3.2" stroke-linecap="round" />
-            <!-- Handlebars -->
             <path d="M62 40 L71 40 L74 37" stroke="#1e293b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" />
-            <!-- Bottom Bracket / Crank -->
             <circle cx="48" cy="66" r="3.5" fill="#1e293b" />
           </g>
         </svg>
@@ -198,7 +186,14 @@
 
     <!-- Clean 'PWA & Setup' Button -->
     <div class="flex items-center shrink-0">
- 
+      <button id="btn-pwa-modal" type="button"
+        class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 text-xs font-semibold transition cursor-pointer">
+        <svg class="w-3.5 h-3.5 text-teal-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+        <span>PWA & Setup</span>
+      </button>
     </div>
   </header>
 
@@ -225,12 +220,12 @@
     </div>
 
     <button id="btn-refresh-data" type="button"
-      class="hidden sm:inline-flex items-center gap-1.5 text-xs font-medium text-slate-500 hover:text-teal-700 py-1.5 px-2.5 rounded-lg hover:bg-slate-100 transition cursor-pointer"
+      class="inline-flex items-center gap-1.5 text-xs font-medium text-slate-500 hover:text-teal-700 py-1.5 px-2.5 rounded-lg hover:bg-slate-100 transition cursor-pointer"
       title="Re-fetch control.csv and activity.csv">
       <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
       </svg>
-      <span>Refresh CSVs</span>
+      <span class="hidden sm:inline">Refresh CSVs</span>
     </button>
   </nav>
 
@@ -239,15 +234,12 @@
 
     <!-- ==================== TAB 1: MAP & ROUTES (control.csv) ==================== -->
     <section id="panel-map" class="w-full h-full relative">
-      <!-- Full-Viewport Leaflet Map Container -->
       <div id="map"></div>
 
-      <!-- Offline / Sandboxed Tile Notice (Hidden unless both OSM & Voyager fail) -->
       <div id="map-offline-banner" class="hidden absolute top-3 left-1/2 -translate-x-1/2 z-[600] px-3.5 py-2 rounded-xl bg-amber-900/90 text-white text-xs font-medium shadow-lg backdrop-blur">
         Map tiles unreachable (offline or restricted network) — GPX routes & markers remain active.
       </div>
 
-      <!-- Clean Bottom-Left Fit Control & GPS Status Pill -->
       <div class="absolute bottom-5 left-3 z-[500] flex flex-wrap items-center gap-2 pointer-events-none">
         <button id="btn-center-user" type="button"
           class="pointer-events-auto inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-teal-700 hover:bg-teal-800 text-white border border-teal-800 text-xs sm:text-sm font-semibold shadow-lg transition cursor-pointer"
@@ -275,7 +267,6 @@
     <!-- ==================== TAB 2: ACTIVITIES (activity.csv) ==================== -->
     <section id="panel-activities" class="hidden w-full h-full overflow-y-auto custom-scroll bg-slate-50">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 py-6 space-y-5">
-        <!-- Section Header & Date Filter Toggle -->
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-white p-4 rounded-2xl border border-slate-200/90 shadow-xs">
           <div>
             <h2 class="text-lg font-bold text-slate-900">Activities & Schedule</h2>
@@ -287,10 +278,7 @@
           </label>
         </div>
 
-        <!-- Activity Cards List -->
-        <div id="activities-list" class="space-y-3 pb-10">
-          <!-- Populated dynamically via JS -->
-        </div>
+        <div id="activities-list" class="space-y-3 pb-10"></div>
       </div>
     </section>
   </main>
@@ -298,7 +286,7 @@
   <!-- ==================== TOAST / NOTIFICATION BANNER ==================== -->
   <div id="toast-container" class="fixed bottom-16 right-4 z-[1200] flex flex-col gap-2 max-w-sm pointer-events-none"></div>
 
-  <!-- ==================== PWA & SETUP MODAL (Install, Upload Custom Files, Download Bundle) ==================== -->
+  <!-- ==================== PWA & SETUP MODAL ==================== -->
   <div id="modal-pwa" class="hidden fixed inset-0 z-[1000] bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
     <div class="bg-white rounded-2xl max-w-xl w-full shadow-2xl border border-slate-200 overflow-hidden flex flex-col max-h-[90vh]">
       <div class="px-5 py-4 border-b border-slate-100 flex items-center justify-between">
@@ -314,7 +302,6 @@
       </div>
 
       <div class="p-5 overflow-y-auto custom-scroll space-y-5 text-sm text-slate-600">
-        <!-- Native PWA Install Prompt Box -->
         <div id="pwa-install-banner" class="hidden p-4 rounded-xl bg-teal-50 border border-teal-200 flex items-center justify-between gap-3">
           <div>
             <p class="font-semibold text-teal-900 text-sm">Install App on This Device</p>
@@ -325,7 +312,6 @@
           </button>
         </div>
 
-        <!-- Local CSV / GPX File Override Uploader -->
         <div class="space-y-2.5">
           <div class="flex items-center justify-between">
             <h4 class="font-bold text-slate-900 text-xs uppercase tracking-wider">1. Test Local CSV & GPX Files</h4>
@@ -334,7 +320,7 @@
             </button>
           </div>
           <p class="text-xs text-slate-500 leading-relaxed">
-            When hosted on a server, this app automatically reads <code class="font-mono bg-slate-100 px-1 rounded">control.csv</code>, <code class="font-mono bg-slate-100 px-1 rounded">activity.csv</code>, and referenced <code class="font-mono bg-slate-100 px-1 rounded">.gpx</code> / <code class="font-mono bg-slate-100 px-1 rounded">.csv</code> files. To test local files right now, select multiple files below:
+            When hosted on a server, this app automatically reads <code class="font-mono bg-slate-100 px-1 rounded">control.csv</code>, <code class="font-mono bg-slate-100 px-1 rounded">activity.csv</code>, and referenced <code class="font-mono bg-slate-100 px-1 rounded">.gpx</code> / <code class="font-mono bg-slate-100 px-1 rounded">.csv</code> files.
           </p>
           <label class="flex flex-col items-center justify-center border-2 border-dashed border-teal-300 bg-teal-50/40 hover:bg-teal-50 rounded-2xl p-4 cursor-pointer transition text-center">
             <svg class="w-7 h-7 text-teal-600 mb-1" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
@@ -347,14 +333,13 @@
           <div id="uploaded-files-summary" class="hidden bg-slate-50 rounded-xl p-3 border border-slate-200 text-xs space-y-1"></div>
         </div>
 
-        <!-- Standalone PWA Deployment & Sample Files -->
         <div class="space-y-2.5 pt-2 border-t border-slate-100">
           <div class="flex items-center justify-between">
             <h4 class="font-bold text-slate-900 text-xs uppercase tracking-wider">2. Download PWA & Template Files</h4>
             <span id="sw-status-badge" class="px-2 py-0.5 rounded-full text-[11px] font-medium bg-emerald-100 text-emerald-800">Manifest Active</span>
           </div>
           <p class="text-xs text-slate-500 leading-relaxed">
-            Download these standalone files to host Trail & Tide as an installable PWA on any static web server:
+            Host <code class="font-mono">index.html</code>, <code class="font-mono">surfers.svg</code>, <code class="font-mono">manifest.json</code>, and <code class="font-mono">sw.js</code> in the same directory:
           </p>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -437,13 +422,7 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
           onerror="this.onerror=null;this.src='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js';"></script>
 
-  <!-- ==================== APPLICATION LOGIC ==================== -->
   <script>
-    /**
-     * =========================================================================
-     * 1. BUILT-IN FALLBACK DEMO FILES (Used when ./control.csv is not hosted)
-     * =========================================================================
-     */
     const DEMO_FILES = {
       'control.csv': `"fileName", "dateValidFrom", "dateValidTo", "lineColour"
 "sample_trail.gpx", "2025-01-01", "", "#ea580c"
@@ -452,7 +431,7 @@
 "expired_winter_loop.gpx", "2023-01-01", "2023-03-31", "#9333ea"`,
 
       'sample_trail.gpx': `<?xml version="1.0" encoding="UTF-8"?>
-<gpx version="1.1" creator="TrailAndTide">
+<gpx version="1.1" creator="Surfers">
   <metadata><name>Forest & Estuary MTB Loop</name></metadata>
   <trk>
     <name>Forest & Estuary MTB Loop</name>
@@ -469,7 +448,7 @@
 </gpx>`,
 
       'surf_paddle_route.gpx': `<?xml version="1.0" encoding="UTF-8"?>
-<gpx version="1.1" creator="TrailAndTide">
+<gpx version="1.1" creator="Surfers">
   <metadata><name>Estuary & Coast Surf Run</name></metadata>
   <rte>
     <name>Estuary & Coast Surf Run</name>
@@ -481,21 +460,13 @@
 </gpx>`,
 
       'spots.csv': `"latitude", "longitude", "name", "description", "URL", "postcode", "waze hyperlink"
-"53.38091428862385", "-1.4696777131288765", "The Fargate", "Pretentious shite.", "https://www.openstreetmap.org", "S1 2HE", "https://waze.com/ul?ll=53.380914,-1.469678&navigate=yes"
-"53.37920296170911", "-1.4727504424712212", "Cambridge Street Collective", "More pretentious shite.", "", "S1 4HP", ""
-"53.38060885413929", "-1.4694791132666865", "Public", "Pretentious Shite", "https://www.publicpublic.co.uk/", "S1 2PN", "https://waze.com/ul?ll=53.380609,-1.469479&navigate=yes"`,
+"52.0915", "1.3185", "Woodbridge Quay", "Riverside meeting point.", "https://www.openstreetmap.org", "IP12 1AL", "https://waze.com/ul?ll=52.091500,1.318500&navigate=yes"`,
 
       'activity.csv': `validDateFrom, validDateTo, title, description, URL
-2025-01-01, , Morning Dawn Patrol Surf Session, Meet at the south slipway 30 minutes after sunrise. All board sizes welcome; check swell forecast before paddling out., https://www.surfline.com
-2025-01-01, 2029-12-31, Weekend Singletrack MTB Social Ride, Intermediate 18km loop through sandy pine singletrack followed by coffee and pastries at the trailhead., https://www.trailforks.com
-2025-01-01, , Trail & Beach Clean-Up Volunteer Morning, Gloves and bags provided. Help keep our local coastlines and forest tracks spotless., `
+2025-01-01, , Morning Dawn Patrol Surf Session, Meet at the slipway after sunrise. Check swell forecast before heading out., https://www.surfline.com
+2025-01-01, 2029-12-31, Weekend Singletrack MTB Social Ride, Intermediate loop through sandy pine tracks followed by coffee., https://www.trailforks.com`
     };
 
-    /**
-     * =========================================================================
-     * 2. APPLICATION STATE
-     * =========================================================================
-     */
     const state = {
       map: null,
       osmLayer: null,
@@ -515,34 +486,36 @@
       locationIntervalTimer: null
     };
 
-    /**
-     * =========================================================================
-     * 3. DATE PARSING & RANGE VALIDATION
-     * =========================================================================
-     */
+    function escapeHTML(str) {
+      return String(str ?? '')
+        .replace(/&/g, '&')
+        .replace(/</g, '<')
+        .replace(/>/g, '>')
+        .replace(/"/g, '"')
+  //      .replace(/'/g, ''')
+  ;
+    }
+
+    function normalizeHref(rawUrl) {
+      const trimmed = (rawUrl || '').trim();
+      if (!trimmed) return '';
+      if (/^(javascript|data|vbscript):/i.test(trimmed)) return '';
+      return /^https?:\/\//i.test(trimmed) ? trimmed : `https://${trimmed}`;
+    }
+
     function parseFlexibleDate(str) {
       if (!str || typeof str !== 'string') return null;
       const clean = str.trim();
       if (!clean) return null;
 
-      // YYYY-MM-DD or YYYY/MM/DD
       const isoMatch = clean.match(/^(\d{4})[-/](\d{1,2})[-/](\d{1,2})$/);
       if (isoMatch) {
-        return new Date(
-          parseInt(isoMatch[1], 10),
-          parseInt(isoMatch[2], 10) - 1,
-          parseInt(isoMatch[3], 10)
-        );
+        return new Date(parseInt(isoMatch[1], 10), parseInt(isoMatch[2], 10) - 1, parseInt(isoMatch[3], 10));
       }
 
-      // DD-MM-YYYY or DD/MM/YYYY
       const dmyMatch = clean.match(/^(\d{1,2})[-/](\d{1,2})[-/](\d{4})$/);
       if (dmyMatch) {
-        return new Date(
-          parseInt(dmyMatch[3], 10),
-          parseInt(dmyMatch[2], 10) - 1,
-          parseInt(dmyMatch[1], 10)
-        );
+        return new Date(parseInt(dmyMatch[3], 10), parseInt(dmyMatch[2], 10) - 1, parseInt(dmyMatch[1], 10));
       }
 
       const fallback = new Date(clean);
@@ -557,15 +530,10 @@
       return new Date(now.getFullYear(), now.getMonth(), now.getDate());
     }
 
-    /**
-     * Checks if today's date falls within [validFrom, validTo].
-     * An empty validTo means valid indefinitely after validFrom.
-     */
     function isDateCurrentlyValid(validFromStr, validToStr) {
       const today = getTodayMidnight();
       const start = parseFlexibleDate(validFromStr);
       const end = parseFlexibleDate(validToStr);
-
       if (start && today < start) return false;
       if (end && today > end) return false;
       return true;
@@ -578,11 +546,6 @@
       return dt.toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' });
     }
 
-    /**
-     * =========================================================================
-     * 4. ROBUST CSV PARSER (Handles quoted fields, embedded commas & CRLF)
-     * =========================================================================
-     */
     function parseCSV(csvText) {
       const rows = [];
       let currentRow = [];
@@ -607,9 +570,7 @@
         } else if ((char === '\n' || (char === '\r' && nextChar === '\n')) && !inQuotes) {
           if (char === '\r') i++;
           currentRow.push(currentVal.trim());
-          if (currentRow.some(cell => cell !== '')) {
-            rows.push(currentRow);
-          }
+          if (currentRow.some(cell => cell !== '')) rows.push(currentRow);
           currentRow = [];
           currentVal = '';
         } else if (char !== '\r') {
@@ -619,29 +580,19 @@
 
       if (currentVal.length > 0 || currentRow.length > 0) {
         currentRow.push(currentVal.trim());
-        if (currentRow.some(cell => cell !== '')) {
-          rows.push(currentRow);
-        }
+        if (currentRow.some(cell => cell !== '')) rows.push(currentRow);
       }
-
       return rows;
     }
 
-    /**
-     * =========================================================================
-     * 5. RESOURCE LOADER (Uploaded Local Files -> Live Fetch -> Built-in Demo)
-     * =========================================================================
-     */
     async function loadTextResource(fileName) {
       const cleanName = fileName.trim();
       const lowerName = cleanName.toLowerCase();
 
-      // 1. User-uploaded local files override everything
       if (state.uploadedFilesMap.has(lowerName)) {
         return { text: state.uploadedFilesMap.get(lowerName), source: 'uploaded' };
       }
 
-      // 2. Live HTTP fetch from same folder
       try {
         const response = await fetch(`./${encodeURI(cleanName)}`, { cache: 'no-store' });
         if (response.ok) {
@@ -650,11 +601,8 @@
             return { text, source: 'live' };
           }
         }
-      } catch (err) {
-        // Fallback to demo data when opened standalone or without hosted CSVs
-      }
+      } catch (err) {}
 
-      // 3. Built-in demo data fallback
       if (Object.prototype.hasOwnProperty.call(DEMO_FILES, cleanName)) {
         return { text: DEMO_FILES[cleanName], source: 'demo' };
       }
@@ -666,11 +614,6 @@
       return null;
     }
 
-    /**
-     * =========================================================================
-     * 6. LEAFLET MAP INITIALIZATION (Default OpenStreetMap + Voyager Fallback)
-     * =========================================================================
-     */
     function switchToVoyagerFallback() {
       if (state.usingFallbackTiles || !state.map) return;
       state.usingFallbackTiles = true;
@@ -707,7 +650,6 @@
         return;
       }
 
-      // Default to OpenStreetMap tiles (with explicit referrerPolicy for OSM tile server compliance)
       state.osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
         maxZoom: 19,
@@ -723,7 +665,6 @@
 
       state.osmLayer.on('tileerror', () => {
         state.tileErrorCount++;
-        // Only fall back if multiple tiles fail AND zero tiles have succeeded
         if (state.tileLoadedCount === 0 && state.tileErrorCount >= 4) {
           switchToVoyagerFallback();
         }
@@ -736,10 +677,16 @@
         layers: [state.osmLayer]
       });
 
+      state.map.on('dragstart', () => {
+        if (state.autoCenterUser) {
+          state.autoCenterUser = false;
+          syncAutoCenterButtonUI();
+        }
+      });
+
       L.control.zoom({ position: 'topright' }).addTo(state.map);
       state.routeLayerGroup = L.layerGroup().addTo(state.map);
 
-      // Keep Leaflet synchronized whenever the container or Tailwind finishes layout
       const mapPanel = document.getElementById('panel-map');
       if (window.ResizeObserver && mapPanel) {
         const ro = new ResizeObserver(() => {
@@ -754,14 +701,12 @@
       setTimeout(() => state.map && state.map.invalidateSize(), 150);
       setTimeout(() => state.map && state.map.invalidateSize(), 600);
 
-      // Watchdog: if OSM is blocked (e.g. file:// protocol with no Referer), fall back after 7s
       setTimeout(() => {
         if (state.tileLoadedCount === 0 && !state.usingFallbackTiles) {
           switchToVoyagerFallback();
         }
       }, 7000);
 
-      // Automatically request location on startup and start 1-minute update interval
       requestAndTrackLocation(true);
       state.locationIntervalTimer = setInterval(() => {
         requestAndTrackLocation(false);
@@ -831,7 +776,6 @@
 
     function requestAndTrackLocation(shouldCenter = false) {
       const statusPill = document.getElementById('geo-status-pill');
-
       if (!('geolocation' in navigator)) {
         if (statusPill) statusPill.textContent = 'GPS unavailable';
         fitMapToRoutes();
@@ -845,31 +789,22 @@
         },
         () => {
           if (statusPill) statusPill.textContent = 'GPS permission denied or off';
-          if (!state.userLatLng) {
-            fitMapToRoutes();
-          }
+          if (!state.userLatLng) fitMapToRoutes();
         },
         { enableHighAccuracy: true, timeout: 10000, maximumAge: 10000 }
       );
     }
 
-    /**
-     * Parses a .gpx file (<trkpt> and <rtept>) and draws it on the map in lineColour.
-     */
     function renderGPXLayer(gpxText, colour, fileName, validLabel) {
       try {
         const parser = new DOMParser();
         const xmlDoc = parser.parseFromString(gpxText, 'application/xml');
-        if (xmlDoc.querySelector('parsererror')) {
-          console.warn(`Invalid GPX XML in ${fileName}`);
-          return;
-        }
+        if (xmlDoc.querySelector('parsererror')) return;
 
         const routeTitleNode = xmlDoc.querySelector('trk > name, rte > name, metadata > name');
         const routeTitle = routeTitleNode ? routeTitleNode.textContent.trim() : fileName;
         const segments = [];
 
-        // 1. Parse <trkseg> -> <trkpt>
         xmlDoc.querySelectorAll('trkseg').forEach(seg => {
           const pts = [];
           seg.querySelectorAll('trkpt').forEach(pt => {
@@ -880,7 +815,6 @@
           if (pts.length > 0) segments.push(pts);
         });
 
-        // 2. Parse <rte> -> <rtept>
         xmlDoc.querySelectorAll('rte').forEach(rte => {
           const pts = [];
           rte.querySelectorAll('rtept').forEach(pt => {
@@ -891,7 +825,6 @@
           if (pts.length > 0) segments.push(pts);
         });
 
-        // 3. Fallback for flat <trkpt> or <rtept>
         if (segments.length === 0) {
           const pts = [];
           xmlDoc.querySelectorAll('trkpt, rtept').forEach(pt => {
@@ -929,9 +862,6 @@
       }
     }
 
-    /**
-     * Copies text to the clipboard with an execCommand fallback.
-     */
     async function copyTextToClipboard(text, buttonEl) {
       if (!text) return;
       let copied = false;
@@ -971,60 +901,36 @@
             </svg>
             <span class="text-emerald-800">Copied</span>
           `;
-          setTimeout(() => {
-            buttonEl.innerHTML = originalHTML;
-          }, 1800);
+          setTimeout(() => { buttonEl.innerHTML = originalHTML; }, 1800);
         }
       } else {
         showToast('Could not copy to clipboard', 'error');
       }
     }
 
-    function normalizeHref(rawUrl) {
-      const trimmed = (rawUrl || '').trim();
-      if (!trimmed) return '';
-      return /^https?:\/\//i.test(trimmed) ? trimmed : `https://${trimmed}`;
-    }
-
-    /**
-     * Parses a point .csv ("latitude", "longitude", "name", "description", "URL", "postcode", "waze hyperlink")
-     * using header-aware column lookup and renders each row as a clickable marker with a popup.
-     */
     function renderPointCSVLayer(csvText, colour) {
       const rows = parseCSV(csvText);
       if (rows.length === 0) return 0;
 
-      let colMap = {
-        lat: 0,
-        lon: 1,
-        name: 2,
-        desc: 3,
-        url: 4,
-        postcode: 5,
-        waze: 6
-      };
-
+      let colMap = { lat: 0, lon: 1, name: 2, desc: 3, url: 4, postcode: 5, waze: 6 };
       let startIdx = 0;
       const headerLower = rows[0].map(h => h.toLowerCase().replace(/^["']|["']$/g, '').trim());
-      const hasHeader = headerLower.some(h =>
-        h === 'latitude' || h === 'lat' || h === 'longitude' || h === 'lon' || h === 'lng'
-      );
+      const hasHeader = headerLower.some(h => ['latitude', 'lat', 'longitude', 'lon', 'lng'].includes(h));
 
       if (hasHeader) {
         startIdx = 1;
         colMap = {
           lat: headerLower.findIndex(h => h === 'latitude' || h === 'lat'),
-          lon: headerLower.findIndex(h => h === 'longitude' || h === 'lon' || h === 'lng' || h === 'long'),
-          name: headerLower.findIndex(h => h === 'name' || h === 'title' || h === 'spot'),
-          desc: headerLower.findIndex(h => h === 'description' || h === 'desc' || h === 'notes'),
-          url: headerLower.findIndex(h => h === 'url' || h === 'link' || h === 'website' || h === 'web'),
-          postcode: headerLower.findIndex(h => h === 'postcode' || h === 'post code' || h === 'post_code' || h === 'zip'),
+          lon: headerLower.findIndex(h => ['longitude', 'lon', 'lng', 'long'].includes(h)),
+          name: headerLower.findIndex(h => ['name', 'title', 'spot'].includes(h)),
+          desc: headerLower.findIndex(h => ['description', 'desc', 'notes'].includes(h)),
+          url: headerLower.findIndex(h => ['url', 'link', 'website', 'web'].includes(h)),
+          postcode: headerLower.findIndex(h => ['postcode', 'post code', 'post_code', 'zip'].includes(h)),
           waze: headerLower.findIndex(h => h.includes('waze'))
         };
       }
 
       if (colMap.lat < 0 || colMap.lon < 0) return 0;
-
       const dotColor = colour || '#2563eb';
       let renderedCount = 0;
 
@@ -1067,12 +973,11 @@
         if (cleanPostcode) {
           const pcRow = document.createElement('div');
           pcRow.className = 'mt-2 flex items-center justify-between gap-2 bg-slate-100 border border-slate-200 rounded-lg px-2.5 py-1.5';
-
-          const pcTextWrap = document.createElement('div');
-          pcTextWrap.className = 'flex items-center gap-1.5 min-w-0';
-          pcTextWrap.innerHTML = `
-            <span class="text-[11px] font-medium text-slate-500">Postcode:</span>
-            <span class="text-xs font-mono font-bold text-slate-800 truncate">${escapeHTML(cleanPostcode)}</span>
+          pcRow.innerHTML = `
+            <div class="flex items-center gap-1.5 min-w-0">
+              <span class="text-[11px] font-medium text-slate-500">Postcode:</span>
+              <span class="text-xs font-mono font-bold text-slate-800 truncate">${escapeHTML(cleanPostcode)}</span>
+            </div>
           `;
 
           const copyBtn = document.createElement('button');
@@ -1091,45 +996,33 @@
             copyTextToClipboard(cleanPostcode, copyBtn);
           });
 
-          pcRow.appendChild(pcTextWrap);
           pcRow.appendChild(copyBtn);
           popupContainer.appendChild(pcRow);
         }
 
-        if (cleanUrl || cleanWaze) {
+        const safeUrl = normalizeHref(cleanUrl);
+        const safeWazeUrl = normalizeHref(cleanWaze);
+        if (safeUrl || safeWazeUrl) {
           const linksWrap = document.createElement('div');
           linksWrap.className = 'mt-2.5 pt-2 border-t border-slate-100 flex flex-col gap-1.5';
 
-          if (cleanUrl) {
-            const safeUrl = normalizeHref(cleanUrl);
+          if (safeUrl) {
             const urlLink = document.createElement('a');
             urlLink.href = safeUrl;
             urlLink.target = '_blank';
             urlLink.rel = 'noopener noreferrer';
             urlLink.className = 'inline-flex items-center gap-1 text-xs font-semibold text-teal-700 hover:text-teal-900 underline underline-offset-2 break-all';
-            urlLink.innerHTML = `
-              <span>${escapeHTML(cleanUrl)}</span>
-              <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg>
-            `;
+            urlLink.textContent = cleanUrl;
             linksWrap.appendChild(urlLink);
           }
 
-          if (cleanWaze) {
-            const safeWazeUrl = normalizeHref(cleanWaze);
+          if (safeWazeUrl) {
             const wazeLink = document.createElement('a');
             wazeLink.href = safeWazeUrl;
             wazeLink.target = '_blank';
             wazeLink.rel = 'noopener noreferrer';
             wazeLink.className = 'inline-flex items-center gap-1 text-xs font-semibold text-sky-700 hover:text-sky-900 underline underline-offset-2';
-            wazeLink.innerHTML = `
-              <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-              <span>Open in Waze</span>
-            `;
+            wazeLink.textContent = 'Open in Waze';
             linksWrap.appendChild(wazeLink);
           }
 
@@ -1148,29 +1041,21 @@
       if (!state.map || !state.routeLayerGroup) return;
       const bounds = L.latLngBounds([]);
       state.routeLayerGroup.eachLayer(layer => {
-        if (layer.getBounds) {
-          bounds.extend(layer.getBounds());
-        } else if (layer.getLatLng) {
-          bounds.extend(layer.getLatLng());
-        }
+        if (layer.getBounds) bounds.extend(layer.getBounds());
+        else if (layer.getLatLng) bounds.extend(layer.getLatLng());
       });
       if (bounds.isValid()) {
         state.map.fitBounds(bounds, { padding: [45, 45], maxZoom: 15 });
       }
     }
 
-    /**
-     * Reads control.csv ("fileName", "dateValidFrom", "dateValidTo", "lineColour"),
-     * checks today's date range, and displays valid .gpx and .csv layers on the map.
-     * Also ensures spots.csv is loaded if present on the server and not already loaded.
-     */
     async function processControlCSV() {
       if (!state.routeLayerGroup) return 'none';
       state.routeLayerGroup.clearLayers();
 
       const controlRes = await loadTextResource('control.csv');
       let validLayerCount = 0;
-      let loadedCsvFiles = new Set();
+      const loadedCsvFiles = new Set();
 
       if (controlRes) {
         const rows = parseCSV(controlRes.text);
@@ -1179,10 +1064,10 @@
           let startIdx = 0;
           let colMap = { file: 0, from: 1, to: 2, colour: 3 };
 
-          if (headerLower.some(h => h === 'filename' || h === 'file_name' || h === 'file')) {
+          if (headerLower.some(h => ['filename', 'file_name', 'file'].includes(h))) {
             startIdx = 1;
             colMap = {
-              file: headerLower.findIndex(h => h === 'filename' || h === 'file_name' || h === 'file'),
+              file: headerLower.findIndex(h => ['filename', 'file_name', 'file'].includes(h)),
               from: headerLower.findIndex(h => h.includes('from') || h.includes('start')),
               to: headerLower.findIndex(h => h.includes('to') || h.includes('end')),
               colour: headerLower.findIndex(h => h.includes('col'))
@@ -1198,9 +1083,7 @@
             const dateValidTo = colMap.to >= 0 ? row[colMap.to] : '';
             const lineColour = colMap.colour >= 0 ? row[colMap.colour] : '';
 
-            if (!isDateCurrentlyValid(dateValidFrom, dateValidTo)) {
-              continue;
-            }
+            if (!isDateCurrentlyValid(dateValidFrom, dateValidTo)) continue;
 
             const trimmedFile = fileName.trim();
             const colour = (lineColour || '#0f766e').trim();
@@ -1210,10 +1093,7 @@
               : (dateValidFrom ? `From ${dateValidFrom}` : 'Always valid');
 
             const targetRes = await loadTextResource(trimmedFile);
-            if (!targetRes) {
-              console.warn(`Referenced file not found: ${trimmedFile}`);
-              continue;
-            }
+            if (!targetRes) continue;
 
             if (lowerFile.endsWith('.gpx')) {
               renderGPXLayer(targetRes.text, colour, trimmedFile, validLabel);
@@ -1229,18 +1109,17 @@
         }
       }
 
-      // Fallback: if spots.csv exists (live or uploaded) and wasn't already loaded via control.csv, load it automatically
       if (!loadedCsvFiles.has('spots.csv')) {
         const spotsRes = await loadTextResource('spots.csv');
         if (spotsRes && (spotsRes.source === 'live' || spotsRes.source === 'uploaded' || !controlRes)) {
           const pts = renderPointCSVLayer(spotsRes.text, '#2563eb');
-          if (pts > 0) {
-            validLayerCount++;
-          }
+          if (pts > 0) validLayerCount++;
         }
       }
 
-      document.getElementById('badge-map-layers').textContent = validLayerCount;
+      const badge = document.getElementById('badge-map-layers');
+      if (badge) badge.textContent = validLayerCount;
+
       if (state.autoCenterUser && state.userLatLng) {
         centerMapOnUser(14);
       } else if (!state.userLatLng) {
@@ -1250,19 +1129,15 @@
       return controlRes ? controlRes.source : 'none';
     }
 
-    /**
-     * =========================================================================
-     * 7. TAB 2 — ACTIVITIES (activity.csv)
-     * =========================================================================
-     */
     function formatTextWithLinks(text) {
       if (!text) return '';
       const urlRegex = /(https?:\/\/[^\s<>"']+)/gi;
-      const parts = String(text).split(urlRegex);
-      return parts.map(part => {
+      return String(text).split(urlRegex).map(part => {
         if (/^https?:\/\//i.test(part)) {
           const safeHref = normalizeHref(part);
-          return `<a href="${escapeHTML(safeHref)}" target="_blank" rel="noopener noreferrer" class="text-teal-700 hover:text-teal-900 underline underline-offset-2 font-medium break-all">${escapeHTML(part)}</a>`;
+          if (safeHref) {
+            return `<a href="${escapeHTML(safeHref)}" target="_blank" rel="noopener noreferrer" class="text-teal-700 hover:text-teal-900 underline underline-offset-2 font-medium break-all">${escapeHTML(part)}</a>`;
+          }
         }
         return escapeHTML(part);
       }).join('');
@@ -1278,27 +1153,19 @@
 
       const rows = parseCSV(actRes.text);
       let startIdx = 0;
-      let colMap = {
-        from: 0,
-        to: 1,
-        title: 2,
-        desc: 3,
-        url: 4
-      };
+      let colMap = { from: 0, to: 1, title: 2, desc: 3, url: 4 };
 
       if (rows.length > 0) {
         const headerLower = rows[0].map(h => h.toLowerCase().replace(/^["']|["']$/g, '').trim());
-        const hasHeader = headerLower.some(h =>
-          h.includes('valid') || h.includes('date') || h.includes('from') || h === 'title' || h === 'url' || h === 'link'
-        );
+        const hasHeader = headerLower.some(h => ['title', 'url', 'link'].includes(h) || h.includes('valid') || h.includes('date') || h.includes('from'));
 
         if (hasHeader) {
           startIdx = 1;
           const idxFrom = headerLower.findIndex(h => h.includes('from') || h.includes('start'));
           const idxTo = headerLower.findIndex(h => h.includes('to') || h.includes('end'));
-          const idxTitle = headerLower.findIndex(h => h.includes('title') || h.includes('name') || h.includes('activity') || h.includes('event'));
-          const idxDesc = headerLower.findIndex(h => h.includes('desc') || h.includes('detail') || h.includes('note'));
-          const idxUrl = headerLower.findIndex(h => h === 'url' || h.includes('url') || h.includes('link') || h.includes('web') || h.includes('href'));
+          const idxTitle = headerLower.findIndex(h => ['title', 'name', 'activity', 'event'].some(k => h.includes(k)));
+          const idxDesc = headerLower.findIndex(h => ['desc', 'detail', 'note'].some(k => h.includes(k)));
+          const idxUrl = headerLower.findIndex(h => ['url', 'link', 'web', 'href'].some(k => h.includes(k)));
 
           colMap = {
             from: idxFrom >= 0 ? idxFrom : 0,
@@ -1319,15 +1186,12 @@
         const description = (colMap.desc >= 0 && row[colMap.desc] ? row[colMap.desc] : '').trim();
         let url = (colMap.url >= 0 && row[colMap.url] ? row[colMap.url] : '').trim();
 
-        // Fallback: if url column was empty or shifted, check any extra columns for a URL
         if (!url) {
           const extraUrlCell = row.find((cell, idx) =>
             idx !== colMap.from && idx !== colMap.to && idx !== colMap.title && idx !== colMap.desc &&
             /^(https?:\/\/|www\.)/i.test((cell || '').trim())
           );
-          if (extraUrlCell) {
-            url = extraUrlCell.trim();
-          }
+          if (extraUrlCell) url = extraUrlCell.trim();
         }
 
         if (!title && !description && !url) continue;
@@ -1349,12 +1213,10 @@
     function renderActivitiesList() {
       const listEl = document.getElementById('activities-list');
       const showAll = document.getElementById('toggle-all-activities').checked;
+      const items = showAll ? state.activitiesRaw : state.activitiesRaw.filter(item => item.isValidToday);
 
-      const items = showAll
-        ? state.activitiesRaw
-        : state.activitiesRaw.filter(item => item.isValidToday);
-
-      document.getElementById('badge-activities-count').textContent = items.length;
+      const badge = document.getElementById('badge-activities-count');
+      if (badge) badge.textContent = items.length;
 
       if (items.length === 0) {
         listEl.innerHTML = `
@@ -1377,28 +1239,20 @@
           ? '<span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-100 text-emerald-800">Active Today</span>'
           : '<span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-slate-100 text-slate-600">Inactive Date</span>';
 
-        let linkSection = '';
-        if (item.url) {
-          const safeHref = normalizeHref(item.url);
-          linkSection = `
-            <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
-              <a href="${escapeHTML(safeHref)}" target="_blank" rel="noopener noreferrer"
-                 class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-teal-700 hover:text-teal-900 underline underline-offset-2 break-all transition">
-                <span>${escapeHTML(item.url)}</span>
-                <svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
-              </a>
-            </div>`;
-        }
+        const safeHref = normalizeHref(item.url);
+        const linkSection = safeHref
+          ? `<div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
+               <a href="${escapeHTML(safeHref)}" target="_blank" rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-teal-700 hover:text-teal-900 underline underline-offset-2 break-all transition">
+                 <span>${escapeHTML(item.url)}</span>
+               </a>
+             </div>`
+          : '';
 
         return `
           <article class="bg-white rounded-2xl border border-slate-200/90 p-5 shadow-xs hover:shadow-md transition">
             <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
               <span class="inline-flex items-center gap-1.5 text-xs font-medium text-slate-500">
-                <svg class="w-3.5 h-3.5 text-teal-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
                 ${escapeHTML(dateRangeLabel)}
               </span>
               ${statusBadge}
@@ -1410,19 +1264,14 @@
       }).join('');
     }
 
-    /**
-     * =========================================================================
-     * 8. PWA REGISTRATION (INLINE MANIFEST + SERVICE WORKER + ASSET DOWNLOADS)
-     * =========================================================================
-     */
     function getTransparentIconSVG() {
       const svgEl = document.getElementById('app-svg-icon');
       return svgEl ? svgEl.outerHTML : '';
     }
 
     function getServiceWorkerCode() {
-      return `const CACHE_NAME = 'surfers';
-const ASSETS = ['./', './index.html', './manifest.json', './surfers.svg', './control.csv', './spots.csv', './activity.csv','./EdaleCircularWalk.gpx', './NCN_10_Reivers_Route.gpx','./blakeney.gpx'];
+      return `const CACHE_NAME = 'surfers-v1';
+const ASSETS = ['./', './index.html', './manifest.json', './surfers.svg', './control.csv', './spots.csv', './activity.csv'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
@@ -1449,87 +1298,18 @@ self.addEventListener('fetch', (event) => {
 });`;
     }
 
-    function renderSvgToPngDataUrl(svgString, size = 180) {
-      return new Promise((resolve) => {
-        try {
-          // Ensure explicit width/height attributes on root <svg> so WebKit rasterizes cleanly
-          let sizedSvg = svgString
-            .replace(/width="100%"/i, `width="${size}"`)
-            .replace(/height="100%"/i, `height="${size}"`);
-
-          const svgBlob = new Blob([sizedSvg], { type: 'image/svg+xml;charset=utf-8' });
-          const url = URL.createObjectURL(svgBlob);
-          const img = new Image();
-
-          img.onload = () => {
-            try {
-              const canvas = document.createElement('canvas');
-              canvas.width = size;
-              canvas.height = size;
-              const ctx = canvas.getContext('2d');
-
-              // Solid light slate background (iOS fills transparent areas with black otherwise)
-              ctx.fillStyle = '#f8fafc';
-              ctx.fillRect(0, 0, size, size);
-
-              const pad = Math.round(size * 0.1);
-              ctx.drawImage(img, pad, pad, size - pad * 2, size - pad * 2);
-              URL.revokeObjectURL(url);
-              resolve(canvas.toDataURL('image/png'));
-            } catch (e) {
-              URL.revokeObjectURL(url);
-              resolve(null);
-            }
-          };
-
-          img.onerror = () => {
-            URL.revokeObjectURL(url);
-            resolve(null);
-          };
-
-          img.src = url;
-        } catch (err) {
-          resolve(null);
-        }
-      });
-    }
-
-    async function setupPWA() {
+    function setupPWA() {
       const svgCode = getTransparentIconSVG();
-      const svgDataUri = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgCode);
-
-      // Point favicon & apple-touch-icon directly at surfers.svg over HTTP(S) (matching index_2.html), with data URI fallback for file://
-      const isHttp = location.protocol === 'http:' || location.protocol === 'https:';
-      const iconHref = isHttp ? 'surfers.svg' : svgDataUri;
-      const iconLink = document.getElementById('pwa-icon-link');
-      const appleIconLink = document.getElementById('pwa-apple-icon');
-      if (iconLink) iconLink.href = iconHref;
-      if (appleIconLink) appleIconLink.href = iconHref;
-
       const modalPreview = document.getElementById('modal-icon-preview');
-      if (modalPreview) {
-        modalPreview.innerHTML = svgCode;
-      }
+      if (modalPreview) modalPreview.innerHTML = svgCode;
 
-      // Register Service Worker over HTTP/HTTPS (trying ./sw.js first, falling back to inline Blob SW)
       if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
         navigator.serviceWorker.register('./sw.js')
           .then(() => {
             const badge = document.getElementById('sw-status-badge');
             if (badge) badge.textContent = 'Service Worker Active';
           })
-          .catch(() => {
-            try {
-              const swBlob = new Blob([getServiceWorkerCode()], { type: 'application/javascript' });
-              const swUrl = URL.createObjectURL(swBlob);
-              navigator.serviceWorker.register(swUrl)
-                .then(() => {
-                  const badge = document.getElementById('sw-status-badge');
-                  if (badge) badge.textContent = 'Inline SW Active';
-                })
-                .catch(() => {});
-            } catch (e) {}
-          });
+          .catch(() => {});
       }
 
       window.addEventListener('beforeinstallprompt', (e) => {
@@ -1581,17 +1361,6 @@ self.addEventListener('fetch', (event) => {
       showToast(`Downloaded ${filename}`, 'success');
     }
 
-    /**
-     * =========================================================================
-     * 9. UI UTILITIES, TAB NAVIGATION & INITIALIZATION
-     * =========================================================================
-     */
-     function escapeHTML(str) {
-         const div = document.createElement('div');
-         div.textContent = String(str);
-         return div.innerHTML.replace(/"/g, '"');
-       }
-
     function showToast(message, type = 'info') {
       const container = document.getElementById('toast-container');
       const el = document.createElement('div');
@@ -1607,6 +1376,7 @@ self.addEventListener('fetch', (event) => {
 
     function updateSourceBadge(source) {
       const badge = document.getElementById('data-source-badge');
+      if (!badge) return;
       if (source === 'live') {
         badge.textContent = 'Live CSVs';
         badge.className = 'inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-medium bg-emerald-100 text-emerald-800 border border-emerald-200 whitespace-nowrap';
@@ -1657,15 +1427,13 @@ self.addEventListener('fetch', (event) => {
       const todayStr = new Date().toLocaleDateString(undefined, { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' });
       document.getElementById('today-date-label').textContent = `Active for ${todayStr}`;
 
-      await setupPWA();
+      setupPWA();
       initMap();
       await loadAllData();
 
-      // Tab buttons
       document.getElementById('tab-btn-map').addEventListener('click', () => switchTab('map'));
       document.getElementById('tab-btn-activities').addEventListener('click', () => switchTab('activities'));
 
-      // Map action buttons
       document.getElementById('btn-center-user').addEventListener('click', () => {
         if (!state.userLatLng) {
           state.autoCenterUser = true;
@@ -1690,30 +1458,17 @@ self.addEventListener('fetch', (event) => {
         fitMapToRoutes();
       });
 
-      if (state.map) {
-        state.map.on('dragstart', () => {
-          if (state.autoCenterUser) {
-            state.autoCenterUser = false;
-            syncAutoCenterButtonUI();
-          }
-        });
-      }
-
       document.getElementById('btn-refresh-data').addEventListener('click', async () => {
         await loadAllData();
         showToast('Reloaded control.csv & activity.csv', 'success');
       });
 
-      // Activity filter checkbox
       document.getElementById('toggle-all-activities').addEventListener('change', renderActivitiesList);
 
-      // PWA & Setup modal handlers
-      const pwaModalBtn = document.getElementById('btn-pwa-modal');
-      if (pwaModalBtn) {
-        pwaModalBtn.addEventListener('click', () => {
-          document.getElementById('modal-pwa').classList.remove('hidden');
-        });
-      }
+      document.getElementById('btn-pwa-modal').addEventListener('click', () => {
+        document.getElementById('modal-pwa').classList.remove('hidden');
+      });
+
       document.querySelectorAll('[data-close-modal]').forEach(btn => {
         btn.addEventListener('click', () => {
           const targetId = btn.getAttribute('data-close-modal');
@@ -1721,7 +1476,6 @@ self.addEventListener('fetch', (event) => {
         });
       });
 
-      // Local multi-file loader inside PWA & Setup modal
       document.getElementById('local-file-input').addEventListener('change', async (e) => {
         const files = Array.from(e.target.files || []);
         if (files.length === 0) return;
@@ -1750,7 +1504,6 @@ self.addEventListener('fetch', (event) => {
         showToast('Reset to default files', 'info');
       });
 
-      // PWA native install prompt
       const installBtn = document.getElementById('btn-trigger-install');
       if (installBtn) {
         installBtn.addEventListener('click', async () => {
@@ -1762,7 +1515,6 @@ self.addEventListener('fetch', (event) => {
         });
       }
 
-      // Keep Leaflet map sized properly on window resize
       window.addEventListener('resize', () => {
         if (state.map) state.map.invalidateSize();
       });
