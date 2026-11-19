@@ -9,11 +9,10 @@
   <meta name="description" content="Surfers plans." />
   <title>Surfers</title>
 
-  <!-- PWA Manifest & App Icons (SVG + iOS PNG Canvas Fallback) -->
+  <!-- PWA Manifest & App Icons -->
   <link id="pwa-manifest-link" rel="manifest" href="manifest.json" />
   <link id="pwa-icon-link" rel="icon" type="image/svg+xml" href="surfers.svg" />
-  <link id="pwa-apple-icon" rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,<...180x180 PNG base64...>" />
-  <link id="pwa-apple-icon-precomposed" rel="apple-touch-icon-precomposed" sizes="180x180" href="data:image/png;base64,<...180x180 PNG base64...>" />
+  <link id="pwa-apple-icon" rel="apple-touch-icon" href="surfers.svg" />
     
   <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -1499,57 +1498,18 @@ self.addEventListener('fetch', (event) => {
       const svgCode = getTransparentIconSVG();
       const svgDataUri = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgCode);
 
-      // Keep favicon as crisp SVG (or data URI when opened locally)
+      // Point favicon & apple-touch-icon directly at surfers.svg over HTTP(S) (matching index_2.html), with data URI fallback for file://
       const isHttp = location.protocol === 'http:' || location.protocol === 'https:';
-      document.getElementById('pwa-icon-link').href = isHttp ? 'surfers.svg' : svgDataUri;
-
-      // Rasterize surfers.svg to a 180x180 PNG so iOS Safari "Add to Home Screen" renders the SVG artwork reliably
-      const png180DataUrl = await renderSvgToPngDataUrl(svgCode, 180);
-      const png512DataUrl = await renderSvgToPngDataUrl(svgCode, 512);
+      const iconHref = isHttp ? 'surfers.svg' : svgDataUri;
+      const iconLink = document.getElementById('pwa-icon-link');
+      const appleIconLink = document.getElementById('pwa-apple-icon');
+      if (iconLink) iconLink.href = iconHref;
+      if (appleIconLink) appleIconLink.href = iconHref;
 
       const modalPreview = document.getElementById('modal-icon-preview');
       if (modalPreview) {
         modalPreview.innerHTML = svgCode;
       }
-
-      const manifestIcons = [
-        {
-          src: isHttp ? 'surfers.svg' : svgDataUri,
-          sizes: 'any',
-          type: 'image/svg+xml',
-          purpose: 'any'
-        }
-      ];
-      if (png180DataUrl) {
-        manifestIcons.push({
-          src: png180DataUrl,
-          sizes: '180x180',
-          type: 'image/png',
-          purpose: 'any'
-        });
-      }
-      if (png512DataUrl) {
-        manifestIcons.push({
-          src: png512DataUrl,
-          sizes: '512x512',
-          type: 'image/png',
-          purpose: 'any maskable'
-        });
-      }
-
-      const manifestObj = {
-        name: 'Surfers',
-        short_name: 'Surfers',
-        description: 'Outdoor GPX routes, trail markers, and active schedule.',
-        start_url: './index.html',
-        display: 'standalone',
-        background_color: '#f8fafc',
-        theme_color: '#0f766e',
-        icons: manifestIcons
-      };
-
-      const manifestBlob = new Blob([JSON.stringify(manifestObj, null, 2)], { type: 'application/manifest+json' });
-      document.getElementById('pwa-manifest-link').href = URL.createObjectURL(manifestBlob);
 
       // Register Service Worker over HTTP/HTTPS (trying ./sw.js first, falling back to inline Blob SW)
       if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
@@ -1629,7 +1589,7 @@ self.addEventListener('fetch', (event) => {
      function escapeHTML(str) {
          const div = document.createElement('div');
          div.textContent = String(str);
-         return div.innerHTML.replace(/"/g, '&quot;');
+         return div.innerHTML.replace(/"/g, '"');
        }
 
     function showToast(message, type = 'info') {
@@ -1688,8 +1648,8 @@ self.addEventListener('fetch', (event) => {
         panelAct.classList.remove('hidden');
         tabMapBtn.setAttribute('aria-selected', 'false');
         tabActBtn.setAttribute('aria-selected', 'true');
-        tabActBtn.className = 'flex-1 sm:flex-initial flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold border-b-2 border-teal-700 text-teal-800 transition cursor-pointer';
-        tabMapBtn.className = 'flex-1 sm:flex-initial flex items-center justify-center gap-2 px-4 py-3 text-sm font-medium border-b-2 border-transparent text-slate-500 hover:text-slate-800 transition cursor-pointer';
+        tabMapBtn.className = 'flex-1 sm:flex-initial flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold border-b-2 border-teal-700 text-teal-800 transition cursor-pointer';
+        tabActBtn.className = 'flex-1 sm:flex-initial flex items-center justify-center gap-2 px-4 py-3 text-sm font-medium border-b-2 border-transparent text-slate-500 hover:text-slate-800 transition cursor-pointer';
       }
     }
 
