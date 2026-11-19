@@ -12,8 +12,8 @@
   <!-- PWA Manifest & App Icons (SVG + iOS PNG Canvas Fallback) -->
   <link id="pwa-manifest-link" rel="manifest" href="manifest.json" />
   <link id="pwa-icon-link" rel="icon" type="image/svg+xml" href="surfers.svg" />
-  <link id="pwa-apple-icon" rel="apple-touch-icon" sizes="180x180" href="surfers.svg" />
-  <link id="pwa-apple-icon-precomposed" rel="apple-touch-icon-precomposed" sizes="180x180" href="surfers.svg" />
+  <link id="pwa-apple-icon" rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,<...180x180 PNG base64...>" />
+  <link id="pwa-apple-icon-precomposed" rel="apple-touch-icon-precomposed" sizes="180x180" href="data:image/png;base64,<...180x180 PNG base64...>" />
     
   <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -1506,16 +1506,6 @@ self.addEventListener('fetch', (event) => {
       // Rasterize surfers.svg to a 180x180 PNG so iOS Safari "Add to Home Screen" renders the SVG artwork reliably
       const png180DataUrl = await renderSvgToPngDataUrl(svgCode, 180);
       const png512DataUrl = await renderSvgToPngDataUrl(svgCode, 512);
-
-      const appleIconEl = document.getElementById('pwa-apple-icon');
-      const applePrecomposedEl = document.getElementById('pwa-apple-icon-precomposed');
-      if (png180DataUrl) {
-        if (appleIconEl) appleIconEl.href = png180DataUrl;
-        if (applePrecomposedEl) applePrecomposedEl.href = png180DataUrl;
-      } else if (!isHttp) {
-        if (appleIconEl) appleIconEl.href = svgDataUri;
-        if (applePrecomposedEl) applePrecomposedEl.href = svgDataUri;
-      }
 
       const modalPreview = document.getElementById('modal-icon-preview');
       if (modalPreview) {
