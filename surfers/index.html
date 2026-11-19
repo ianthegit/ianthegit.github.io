@@ -9,8 +9,7 @@
   <meta name="description" content="Surfers plans." />
   <title>Surfers</title>
 
-  <!-- Dynamic Inline PWA Manifest & Transparent SVG App Icon -->
-<!-- PWA Manifest & App Icons (SVG + iOS PNG Canvas Fallback) -->
+  <!-- PWA Manifest & App Icons (SVG + iOS PNG Canvas Fallback) -->
   <link id="pwa-manifest-link" rel="manifest" href="manifest.json" />
   <link id="pwa-icon-link" rel="icon" type="image/svg+xml" href="surfers.svg" />
   <link id="pwa-apple-icon" rel="apple-touch-icon" sizes="180x180" href="surfers.svg" />
@@ -251,6 +250,15 @@
 
       <!-- Clean Bottom-Left Fit Control & GPS Status Pill -->
       <div class="absolute bottom-5 left-3 z-[500] flex flex-wrap items-center gap-2 pointer-events-none">
+        <button id="btn-center-user" type="button"
+          class="pointer-events-auto inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-teal-700 hover:bg-teal-800 text-white border border-teal-800 text-xs sm:text-sm font-semibold shadow-lg transition cursor-pointer"
+          title="Auto-centre map on your GPS location">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm8.94 3A8.994 8.994 0 0013 3.06V1h-2v2.06A8.994 8.994 0 003.06 11H1v2h2.06A8.994 8.994 0 0011 20.94V23h2v-2.06A8.994 8.994 0 0020.94 13H23v-2h-2.06z" />
+          </svg>
+          <span id="btn-center-user-label">Auto-Centre: On</span>
+        </button>
+
         <button id="btn-fit-routes" type="button"
           class="pointer-events-auto inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-white/95 hover:bg-white text-slate-800 border border-slate-200 text-xs sm:text-sm font-semibold shadow-lg transition cursor-pointer">
           <svg class="w-4 h-4 text-teal-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -501,6 +509,7 @@
       userAccuracyCircle: null,
       userLatLng: null,
       hasCenteredOnUserOnce: false,
+      autoCenterUser: true,
       uploadedFilesMap: new Map(),
       activitiesRaw: [],
       deferredInstallPrompt: null,
@@ -760,6 +769,26 @@
       }, 60000);
     }
 
+    function syncAutoCenterButtonUI() {
+      const btn = document.getElementById('btn-center-user');
+      const label = document.getElementById('btn-center-user-label');
+      if (!btn || !label) return;
+      if (state.autoCenterUser) {
+        btn.className = 'pointer-events-auto inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-teal-700 hover:bg-teal-800 text-white border border-teal-800 text-xs sm:text-sm font-semibold shadow-lg transition cursor-pointer';
+        label.textContent = 'Auto-Centre: On';
+      } else {
+        btn.className = 'pointer-events-auto inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-white/95 hover:bg-white text-slate-700 border border-slate-200 text-xs sm:text-sm font-semibold shadow-lg transition cursor-pointer';
+        label.textContent = 'Auto-Centre: Off';
+      }
+    }
+
+    function centerMapOnUser(zoomLevel = 14) {
+      if (!state.map || !state.userLatLng) return false;
+      state.map.setView(state.userLatLng, Math.max(state.map.getZoom(), zoomLevel), { animate: true });
+      state.hasCenteredOnUserOnce = true;
+      return true;
+    }
+
     function updateUserLocationOnMap(lat, lng, accuracy, shouldCenter) {
       const latlng = [lat, lng];
       state.userLatLng = latlng;
@@ -791,9 +820,8 @@
         }
       }
 
-      if (shouldCenter && !state.hasCenteredOnUserOnce) {
-        state.map.setView(latlng, Math.max(state.map.getZoom(), 14), { animate: true });
-        state.hasCenteredOnUserOnce = true;
+      if (state.autoCenterUser && (shouldCenter || !state.hasCenteredOnUserOnce)) {
+        centerMapOnUser(14);
       }
 
       const statusPill = document.getElementById('geo-status-pill');
@@ -816,7 +844,7 @@
           const { latitude, longitude, accuracy } = pos.coords;
           updateUserLocationOnMap(latitude, longitude, accuracy, shouldCenter);
         },
-        (err) => {
+        () => {
           if (statusPill) statusPill.textContent = 'GPS permission denied or off';
           if (!state.userLatLng) {
             fitMapToRoutes();
@@ -1214,7 +1242,11 @@
       }
 
       document.getElementById('badge-map-layers').textContent = validLayerCount;
-      fitMapToRoutes();
+      if (state.autoCenterUser && state.userLatLng) {
+        centerMapOnUser(14);
+      } else if (!state.userLatLng) {
+        fitMapToRoutes();
+      }
 
       return controlRes ? controlRes.source : 'none';
     }
@@ -1418,16 +1450,101 @@ self.addEventListener('fetch', (event) => {
 });`;
     }
 
-    function setupPWA() {
+    function renderSvgToPngDataUrl(svgString, size = 180) {
+      return new Promise((resolve) => {
+        try {
+          // Ensure explicit width/height attributes on root <svg> so WebKit rasterizes cleanly
+          let sizedSvg = svgString
+            .replace(/width="100%"/i, `width="${size}"`)
+            .replace(/height="100%"/i, `height="${size}"`);
+
+          const svgBlob = new Blob([sizedSvg], { type: 'image/svg+xml;charset=utf-8' });
+          const url = URL.createObjectURL(svgBlob);
+          const img = new Image();
+
+          img.onload = () => {
+            try {
+              const canvas = document.createElement('canvas');
+              canvas.width = size;
+              canvas.height = size;
+              const ctx = canvas.getContext('2d');
+
+              // Solid light slate background (iOS fills transparent areas with black otherwise)
+              ctx.fillStyle = '#f8fafc';
+              ctx.fillRect(0, 0, size, size);
+
+              const pad = Math.round(size * 0.1);
+              ctx.drawImage(img, pad, pad, size - pad * 2, size - pad * 2);
+              URL.revokeObjectURL(url);
+              resolve(canvas.toDataURL('image/png'));
+            } catch (e) {
+              URL.revokeObjectURL(url);
+              resolve(null);
+            }
+          };
+
+          img.onerror = () => {
+            URL.revokeObjectURL(url);
+            resolve(null);
+          };
+
+          img.src = url;
+        } catch (err) {
+          resolve(null);
+        }
+      });
+    }
+
+    async function setupPWA() {
       const svgCode = getTransparentIconSVG();
       const svgDataUri = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgCode);
 
-      document.getElementById('pwa-icon-link').href = svgDataUri;
-      document.getElementById('pwa-apple-icon').href = svgDataUri;
+      // Keep favicon as crisp SVG (or data URI when opened locally)
+      const isHttp = location.protocol === 'http:' || location.protocol === 'https:';
+      document.getElementById('pwa-icon-link').href = isHttp ? 'surfers.svg' : svgDataUri;
+
+      // Rasterize surfers.svg to a 180x180 PNG so iOS Safari "Add to Home Screen" renders the SVG artwork reliably
+      const png180DataUrl = await renderSvgToPngDataUrl(svgCode, 180);
+      const png512DataUrl = await renderSvgToPngDataUrl(svgCode, 512);
+
+      const appleIconEl = document.getElementById('pwa-apple-icon');
+      const applePrecomposedEl = document.getElementById('pwa-apple-icon-precomposed');
+      if (png180DataUrl) {
+        if (appleIconEl) appleIconEl.href = png180DataUrl;
+        if (applePrecomposedEl) applePrecomposedEl.href = png180DataUrl;
+      } else if (!isHttp) {
+        if (appleIconEl) appleIconEl.href = svgDataUri;
+        if (applePrecomposedEl) applePrecomposedEl.href = svgDataUri;
+      }
 
       const modalPreview = document.getElementById('modal-icon-preview');
       if (modalPreview) {
         modalPreview.innerHTML = svgCode;
+      }
+
+      const manifestIcons = [
+        {
+          src: isHttp ? 'surfers.svg' : svgDataUri,
+          sizes: 'any',
+          type: 'image/svg+xml',
+          purpose: 'any'
+        }
+      ];
+      if (png180DataUrl) {
+        manifestIcons.push({
+          src: png180DataUrl,
+          sizes: '180x180',
+          type: 'image/png',
+          purpose: 'any'
+        });
+      }
+      if (png512DataUrl) {
+        manifestIcons.push({
+          src: png512DataUrl,
+          sizes: '512x512',
+          type: 'image/png',
+          purpose: 'any maskable'
+        });
       }
 
       const manifestObj = {
@@ -1438,14 +1555,7 @@ self.addEventListener('fetch', (event) => {
         display: 'standalone',
         background_color: '#f8fafc',
         theme_color: '#0f766e',
-        icons: [
-          {
-            src: svgDataUri,
-            sizes: 'any',
-            type: 'image/svg+xml',
-            purpose: 'any maskable'
-          }
-        ]
+        icons: manifestIcons
       };
 
       const manifestBlob = new Blob([JSON.stringify(manifestObj, null, 2)], { type: 'application/manifest+json' });
@@ -1597,7 +1707,7 @@ self.addEventListener('fetch', (event) => {
       const todayStr = new Date().toLocaleDateString(undefined, { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' });
       document.getElementById('today-date-label').textContent = `Active for ${todayStr}`;
 
-      setupPWA();
+      await setupPWA();
       initMap();
       await loadAllData();
 
@@ -1606,9 +1716,38 @@ self.addEventListener('fetch', (event) => {
       document.getElementById('tab-btn-activities').addEventListener('click', () => switchTab('activities'));
 
       // Map action buttons
+      document.getElementById('btn-center-user').addEventListener('click', () => {
+        if (!state.userLatLng) {
+          state.autoCenterUser = true;
+          syncAutoCenterButtonUI();
+          requestAndTrackLocation(true);
+          showToast('Checking GPS location...', 'info');
+          return;
+        }
+        state.autoCenterUser = !state.autoCenterUser;
+        syncAutoCenterButtonUI();
+        if (state.autoCenterUser) {
+          centerMapOnUser(14);
+          showToast('Auto-centred on your location', 'success');
+        } else {
+          showToast('Auto-centre paused', 'info');
+        }
+      });
+
       document.getElementById('btn-fit-routes').addEventListener('click', () => {
+        state.autoCenterUser = false;
+        syncAutoCenterButtonUI();
         fitMapToRoutes();
       });
+
+      if (state.map) {
+        state.map.on('dragstart', () => {
+          if (state.autoCenterUser) {
+            state.autoCenterUser = false;
+            syncAutoCenterButtonUI();
+          }
+        });
+      }
 
       document.getElementById('btn-refresh-data').addEventListener('click', async () => {
         await loadAllData();
