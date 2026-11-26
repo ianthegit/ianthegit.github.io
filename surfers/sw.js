@@ -1,5 +1,5 @@
 const CACHE_NAME = 'surfers';
-const ASSETS = ['./', './index.html', './manifest.json', './surfers.svg', './control.csv', './spots.csv', './activity.csv','./EdaleCircularWalk.gpx', './NCN_10_Reivers_Route.gpx','./blakeney.gpx'];
+const ASSETS = ['./', './index.html', './manifest.json', './surfers.svg', './control.csv', './spots.csv', './activity.csv','./EdaleCircularWalk.gpx', './NCN_10_Surfers_2026.gpx','./blakeney.gpx'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
