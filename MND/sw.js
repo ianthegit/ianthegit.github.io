@@ -4,6 +4,7 @@ const ASSETS_TO_CACHE = [
   './index.html',
   './manifest.json',
   './MNDWalk.gpx',
+  './NicksMNDHighTideDiversion.gpx',
   './mnd.svg'
 ];
 
